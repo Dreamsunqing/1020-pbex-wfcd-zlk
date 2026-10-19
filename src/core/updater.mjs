@@ -5,6 +5,7 @@ import { fetch, EnvHttpProxyAgent, ProxyAgent } from 'undici';
 import { atomicJson, blobSha1, mapLimit, readJson, sha256, withLock } from './io.mjs';
 import { allowedText, parseDocument, readLibraryFile, scanLibrary } from './library.mjs';
 import { changesBetween, Store } from './store.mjs';
+import { parseIncursions } from './browse.mjs';
 
 const envAgent = new EnvHttpProxyAgent();
 const proxies = new Map();
@@ -42,6 +43,7 @@ export function parseIndex(text) {
 const pathUrl = name => name.split('/').map(encodeURIComponent).join('/');
 function validateBytes(bytes, name) {
   if (/\.jsonc?$/i.test(name)) parseDocument(bytes.toString('utf8'), name);
+  if (/(?:^|\/)sp-incursions\.txt$/.test(name)) parseIncursions(bytes.toString('utf8'));
   if (/arbys(?:-old)?\.txt$/.test(name)) {
     const rows = bytes.toString('utf8').trim().split(/\r?\n/); let previous;
     for (const row of rows) { const match = /^(\d+),([A-Za-z0-9_]+)$/.exec(row); if (!match || (previous !== undefined && Number(match[1]) !== previous + 3600)) throw new Error('仲裁排期不是连续逐小时数据'); previous = Number(match[1]); }

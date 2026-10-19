@@ -36,3 +36,107 @@
 #data-view td.key,#data-view td.type,#data-view th:nth-child(-n+2){padding-left:10px;padding-right:8px}
 .tree-row .tree-key{min-width:0;flex:0 0 16%;overflow-wrap:anywhere}.tree-row .type{flex:0 0 9%;overflow-wrap:anywhere}.tree-row .tree-preview{flex:1;min-width:0}
 @media(max-width:1150px){:root aside{flex-basis:300px;max-width:300px}#document{padding-left:22px;padding-right:22px}}
+/* browse.wf lab */
+.lab-tabs { align-self:flex-start; margin-bottom:18px; }
+.browse-toolbar { display:flex; align-items:flex-end; gap:12px; flex-wrap:wrap; margin-bottom:18px; }
+.browse-toolbar label { display:flex; flex-direction:column; gap:7px; color:var(--muted); font-size:12px; }
+.browse-toolbar input,.browse-toolbar select { height:38px; }
+.browse-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:18px; }
+.browse-grid>.card { min-width:0; }
+.browse-cycles-card,.browse-incursions-card { grid-column:1/-1; }
+.browse-grid .card h2 { margin:6px 0 10px; }
+.browse-grid .section-heading { margin:0; align-items:center; }
+.browse-grid .section-heading h2 { margin-bottom:0; }
+.cycle-tiles { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.cycle-tile { border:1px solid var(--line); border-radius:9px; padding:15px; display:flex; flex-direction:column; gap:9px; }
+.cycle-tile strong { font-size:22px; margin:0; color:var(--accent); }
+.cycle-tile span { font-size:12px; line-height:1.7; }
+.cycle-tile small { line-height:1.7; }
+.cycle-tile.unavailable strong { color:var(--muted); }
+.browse-grid .browse-meta { font-size:11px; color:var(--muted); overflow-wrap:anywhere; line-height:1.7; margin:10px 0 0; }
+.rotation-list { max-height:385px; overflow:auto; }
+.rotation-row { padding:12px 0; border-bottom:1px solid var(--line); }
+.rotation-row time { display:block; font-size:11px; color:var(--muted); margin-bottom:9px; }
+.rotation-row strong { font-size:16px; margin:0; }
+.circuit-options { display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin:8px 0; }
+.rotation-item { font-size:12px; padding:3px 6px; border-radius:4px; background:#ffffff07; overflow-wrap:anywhere; }
+.incursion-days { max-height:500px; overflow:auto; }
+.incursion-day { border-bottom:1px solid var(--line); padding:12px 0; }
+.incursion-day summary { cursor:pointer; font-size:12px; color:#253348; }
+.incursion-nodes { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-top:13px; }
+.incursion-node { padding:12px; background:#ffffff04; border:1px solid var(--line); border-radius:6px; display:flex; flex-direction:column; gap:7px; }
+.incursion-node strong { font-size:13px; margin:0; }
+.incursion-node span,.incursion-node code { font-size:11px; color:var(--muted); overflow-wrap:anywhere; }
+@media(max-width:1150px) { .cycle-tiles { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+/* Oracle's five modules */
+.oracle-shortcuts { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0; }
+.oracle-shortcuts button { font-size:12px; padding:7px 12px; }
+#oracle-legacy .oracle-grid>.card { min-width:0; scroll-margin-top:12px; }
+.oracle-wide { grid-column:1/-1; }
+.oracle-wide .section-heading { margin:0; }
+.oracle-wide .section-heading h2 { margin:7px 0 0; }
+.oracle-zone-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.oracle-group { min-width:0; border:1px solid var(--line); border-radius:7px; }
+.oracle-group summary { cursor:pointer; padding:12px; color:#386f68; background:#f5faf8; font-size:12px; }
+.oracle-group-list { padding:0 12px; max-height:440px; overflow:auto; }
+.oracle-bounty-row,.oracle-location-row { padding:14px 0; border-bottom:1px solid var(--line); overflow-wrap:anywhere; }
+.oracle-bounty-row:last-child,.oracle-location-row:last-child { border-bottom:0; }
+.oracle-bounty-row strong,.oracle-location-row strong { font-size:14px; margin:8px 0; }
+.oracle-bounty-row small { letter-spacing:.7px; }
+.oracle-mission { font-size:11px; color:var(--muted); }
+.card .oracle-bounty-row .oracle-challenge-name { color:#386f68; font-size:12px; margin:9px 0 4px; }
+.card .oracle-bounty-row .oracle-challenge-desc { font-size:11px; margin:4px 0 0; white-space:pre-line; }
+.card .oracle-job { font-size:12px; color:#516479; padding-left:10px; border-left:2px solid #e0eee7; margin:8px 0; }
+.oracle-rotation-stats { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 14px; }
+.oracle-reward-table { margin:10px 0; border:1px solid #d8e5df; border-radius:5px; }
+.oracle-reward-table>summary { padding:9px; background:#edf5f1; }
+.oracle-reward-body { padding:0 9px 9px; }
+.oracle-reward-body h5 { margin:12px 0 6px; color:#386f68; font-size:12px; }
+.oracle-reward-item { padding:8px 0; border-bottom:1px solid #e5ece9; }
+.oracle-reward-heading { display:flex; justify-content:space-between; gap:8px; font-size:12px; line-height:1.6; }
+.oracle-reward-chance { white-space:nowrap; color:#087f75; font-variant-numeric:tabular-nums; }
+.oracle-reward-source>summary { padding:5px 0; background:transparent; color:#77858a; font-size:10px; }
+.oracle-reward-source pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:10px; max-height:200px; overflow:auto; }
+.card .oracle-reward-note { font-size:11px; line-height:1.7; color:#738078; margin:8px 0; }
+.card .oracle-reward-status { font-size:12px; color:#386f68; margin:10px 0; }
+.oracle-location-rewards { border-bottom:1px solid var(--line); padding-bottom:12px; }
+.oracle-location-rewards h4 { font-size:13px; margin:14px 0 8px; }
+.oracle-reward-picker { display:flex; flex-direction:column; gap:6px; font-size:11px; }
+.oracle-reward-picker select { width:100%; min-width:0; font-size:12px; }
+.oracle-wide .oracle-meta,.oracle-wide .browse-meta { font-size:11px; overflow-wrap:anywhere; margin:12px 0 0; }
+.oracle-invasion-list { max-height:550px; overflow:auto; }
+.oracle-invasion-row { border:1px solid var(--line); padding:14px; border-radius:6px; margin-bottom:12px; }
+.oracle-invasion-row strong { font-size:14px; margin:0 0 8px; }
+.oracle-invasion-steps { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.oracle-invasion-step { display:flex; flex-direction:column; gap:8px; background:#f4f8f6; padding:10px; border-radius:4px; }
+.oracle-invasion-step small { font-size:10px; letter-spacing:0; }
+.oracle-invasion-step span { color:#087f75; font-size:12px; }
+@media(max-width:1150px) { .oracle-group-list { padding:0 10px; } }
+
+/* Oracle weekly: separate Lab and Hex descriptions, with original identifiers. */
+.oracle-weekly-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.oracle-weekly-section{min-width:0;padding:16px;border:1px solid var(--line);border-radius:8px;overflow-wrap:anywhere}
+.oracle-weekly-section h3{margin:0 0 8px}.oracle-weekly-section h4{margin:0 0 8px}
+.oracle-weekly-mission{border-top:1px solid var(--line);padding:16px 0}
+.oracle-field-label{display:block;font-size:11px;color:var(--muted);margin:12px 0 6px}
+.oracle-weekly-risk,.oracle-weekly-variable,.oracle-weekly-variant{margin:8px 0;padding:10px 12px;background:#f4f6f8;border-radius:6px}
+.oracle-raw{display:block;font-family:ui-monospace,monospace;font-size:10px;color:var(--muted);margin-top:4px;overflow-wrap:anywhere}
+.oracle-weekly-variable{border-left:3px solid var(--accent)}
+@media(max-width:1120px){.oracle-weekly-grid{grid-template-columns:1fr}}
+.oracle-source-details{margin-top:8px;color:var(--muted);font-size:10px}
+.oracle-source-details summary{cursor:pointer;list-style-position:inside;font-weight:400}
+.oracle-source-details[open]{padding-top:6px;border-top:1px solid var(--line)}
+.oracle-source-details .oracle-raw{letter-spacing:0;line-height:1.6}
+.oracle-translation-badge{display:inline-block;margin-left:8px;padding:2px 5px;border-radius:4px;background:#e5f2ef;color:#087f75;font-size:10px;vertical-align:middle}
+
+/* JSON cards use text nodes only; image fields never become media elements. */
+.json-card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;padding:16px;background:#f7f9fb;align-items:start}
+.json-preview-card{min-width:0;padding:18px;border:1px solid var(--line);border-radius:8px;background:#fff;overflow-wrap:anywhere}
+.json-card-key{display:block;font:10px/1.6 ui-monospace,monospace;color:#8b98a7;max-height:48px;overflow:auto}
+.json-card-title{font-size:18px;line-height:1.5;color:#176d66;margin:10px 0 6px}.json-card-original{font:11px/1.6 ui-monospace,monospace;color:#8290a0;margin-bottom:8px;max-height:54px;overflow:auto}
+.translation-details{font:10px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#708496;white-space:normal;overflow-wrap:anywhere}.translation-details summary{cursor:pointer;color:#27796d}.translation-details code{display:block;margin-top:6px;white-space:pre-wrap;font:10px/1.7 ui-monospace,monospace}.title-missing{font-size:10px;color:#9a8764}
+.json-card-fields{display:grid;grid-template-columns:minmax(75px,28%) minmax(0,1fr);gap:8px 10px;margin:16px 0;font-size:11px;line-height:1.65}.json-card-fields dt{color:#8793a2}.json-card-fields dd{margin:0;color:#4e6075;white-space:pre-wrap;max-height:116px;overflow:auto}.json-card-open{width:100%;color:#167568}.json-row-title{display:block;font:600 13px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#176d66;margin-bottom:6px}.view-toolbar{flex-wrap:wrap}.view-toolbar input{min-width:180px}
+
+/* One primary refresh action per lab; detailed inputs live inside their module. */
+.lab-toolbar{margin-bottom:8px;gap:16px}.lab-toolbar .primary{background:#086b57;border-color:#086b57;min-height:38px;min-width:126px}.lab-toolbar .primary:hover{background:#075644;border-color:#075644}
+.lab-time-note{font-size:11px;color:var(--muted);margin:0 0 18px}.module-controls{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px;margin:14px 0}.module-controls label{display:flex;flex-direction:column;gap:7px;color:#708198;font-size:12px}.module-controls input,.module-controls select{min-width:150px;max-width:100%;height:38px}.module-controls .muted{align-self:center}.oracle-form .form-row{margin-top:12px}.oracle-form .form-row label{margin-top:0}#oracle-state-info{overflow-wrap:anywhere;font-size:11px}

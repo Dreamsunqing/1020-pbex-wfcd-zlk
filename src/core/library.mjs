@@ -34,7 +34,7 @@ function brief(value) { const text = typeof value === 'string' ? value : JSON.st
 export function describe(value) {
   return { type: value === null ? 'null' : Array.isArray(value) ? 'array' : typeof value, count: value && typeof value === 'object' ? Object.keys(value).length : undefined };
 }
-export function preview(value, { pointer = '', query = '', offset = 0, limit = 80 } = {}) {
+export function preview(value, { pointer = '', query = '', offset = 0, limit = 80, titleFor, fieldsFor } = {}) {
   if (typeof query !== 'string' || query.length > 500 || !Number.isInteger(offset) || offset < 0 || !Number.isInteger(limit) || limit < 1 || limit > 200) throw new Error('预览参数无效');
   const node = pointerValue(value, pointer); const info = describe(node);
   if (node === null || typeof node !== 'object') return { ...info, rows: [], scalar: brief(node), hasMore: false, total: 0 };
@@ -43,11 +43,17 @@ export function preview(value, { pointer = '', query = '', offset = 0, limit = 8
   for (const key of Object.keys(node)) {
     scanned++;
     const item = node[key];
-    if (search && !key.toLocaleLowerCase().includes(search) && !JSON.stringify(item).toLocaleLowerCase().includes(search)) continue;
+    const itemPointer = `${pointer}/${escapePointer(key)}`;
+    let title;
+    if (search && !key.toLocaleLowerCase().includes(search) && !JSON.stringify(item).toLocaleLowerCase().includes(search)) {
+      title = titleFor?.(item, key, itemPointer);
+      if (!title?.text.toLocaleLowerCase().includes(search)) continue;
+    }
     matches++;
     if (matches <= offset) continue;
     if (rows.length === limit) return { ...info, rows, hasMore: true, total: info.count, scanned };
-    rows.push({ key, pointer: `${pointer}/${escapePointer(key)}`, ...describe(item), preview: brief(item), label: typeof item?.name === 'string' ? item.name : undefined });
+    rows.push({ key, pointer: itemPointer, ...describe(item), preview: brief(item), label: typeof item?.name === 'string' ? item.name : undefined,
+      ...(titleFor ? { title: title ?? titleFor(item, key, itemPointer) } : {}), ...(fieldsFor ? fieldsFor(item) : {}) });
   }
   return { ...info, rows, hasMore: false, total: info.count, matched: matches, scanned };
 }

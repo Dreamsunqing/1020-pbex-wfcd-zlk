@@ -1,0 +1,552 @@
+{
+  "source": "https://oracle.browse.wf",
+  "capturedAt": "2026-10-19T18:51:52.152Z",
+  "seed": 24091,
+  "queryAt": 1792435500000,
+  "worldState": {
+    "SyndicateMissions": [
+      {
+        "Tag": "CetusSyndicate",
+        "Seed": 24091,
+        "Activation": {
+          "$date": {
+            "$numberLong": "1792433579586"
+          }
+        },
+        "Expiry": {
+          "$date": {
+            "$numberLong": "1792442578460"
+          }
+        },
+        "Jobs": [
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/EidolonJobMissionRewards/TierATableCRewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/EidolonJobMissionRewards/TierBTableCRewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/EidolonJobMissionRewards/TierCTableCRewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/EidolonJobMissionRewards/TierDTableCRewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/EidolonJobMissionRewards/TierETableCRewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/EidolonJobMissionRewards/TierETableCRewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/EidolonJobMissionRewards/NarmerTableCRewards"
+          }
+        ]
+      },
+      {
+        "Tag": "EntratiSyndicate",
+        "Seed": 24091,
+        "Activation": {
+          "$date": {
+            "$numberLong": "1792433579586"
+          }
+        },
+        "Expiry": {
+          "$date": {
+            "$numberLong": "1792442578460"
+          }
+        },
+        "Jobs": [
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/DeimosMissionRewards/TierATableCRewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/DeimosMissionRewards/TierCTableCRewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/DeimosMissionRewards/TierBTableARewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/DeimosMissionRewards/TierDTableARewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/DeimosMissionRewards/TierETableARewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/DeimosMissionRewards/TierETableARewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/DeimosMissionRewards/VaultBountyTierATableARewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/DeimosMissionRewards/VaultBountyTierBTableARewards"
+          },
+          {
+            "rewards": "/Lotus/Types/Game/MissionDecks/DeimosMissionRewards/VaultBountyTierCTableARewards"
+          }
+        ]
+      },
+      {
+        "Tag": "HexSyndicate",
+        "Seed": 24091,
+        "Activation": {
+          "$date": {
+            "$numberLong": "1792433579586"
+          }
+        },
+        "Expiry": {
+          "$date": {
+            "$numberLong": "1792442578460"
+          }
+        }
+      }
+    ],
+    "Invasions": [
+      {
+        "Completed": false,
+        "_id": {
+          "$oid": "6ad5279a74995d72ee6aaa22"
+        },
+        "Node": "SolNode132",
+        "Faction": "FC_CORPUS",
+        "DefenderFaction": "FC_GRINEER",
+        "LocTag": "/Lotus/Language/Menu/CorpusInvasionGeneric",
+        "AttackerReward": {
+          "countedItems": [
+            {
+              "ItemType": "/Lotus/Types/Recipes/Weapons/SnipetronVandalBlueprint",
+              "ItemCount": 1
+            }
+          ]
+        },
+        "DefenderReward": {
+          "countedItems": [
+            {
+              "ItemType": "/Lotus/Types/Recipes/Weapons/WeaponParts/GrineerCombatKnifeHilt",
+              "ItemCount": 1
+            }
+          ]
+        },
+        "AttackerMissionInfo": {
+          "seed": 566949,
+          "faction": "FC_GRINEER"
+        },
+        "DefenderMissionInfo": {
+          "seed": 409443,
+          "faction": "FC_CORPUS"
+        }
+      },
+      {
+        "Completed": false,
+        "_id": {
+          "$oid": "6ad580aa1ec81c3eef905242"
+        },
+        "Node": "SolNode32",
+        "Faction": "FC_INFESTATION",
+        "DefenderFaction": "FC_GRINEER",
+        "LocTag": "/Lotus/Language/Menu/InfestedInvasionBoss",
+        "AttackerReward": [],
+        "DefenderReward": {
+          "countedItems": [
+            {
+              "ItemType": "/Lotus/Types/Items/Research/ChemComponent",
+              "ItemCount": 3
+            }
+          ]
+        },
+        "AttackerMissionInfo": {
+          "seed": 33028,
+          "faction": "FC_GRINEER"
+        },
+        "DefenderMissionInfo": {
+          "seed": 413846,
+          "faction": "FC_INFESTATION",
+          "missionReward": []
+        }
+      },
+      {
+        "Completed": true,
+        "_id": {
+          "$oid": "6ad579a2eb0400fbc586d44c"
+        },
+        "Node": "SolNode81",
+        "Faction": "FC_INFESTATION",
+        "DefenderFaction": "FC_CORPUS",
+        "LocTag": "/Lotus/Language/Menu/InfestedInvasionGeneric",
+        "AttackerReward": [],
+        "DefenderReward": {
+          "countedItems": [
+            {
+              "ItemType": "/Lotus/Types/Items/Research/BioComponent",
+              "ItemCount": 2
+            }
+          ]
+        },
+        "AttackerMissionInfo": {
+          "seed": 801783,
+          "faction": "FC_CORPUS"
+        },
+        "DefenderMissionInfo": {
+          "seed": 597466,
+          "faction": "FC_INFESTATION"
+        }
+      },
+      {
+        "Completed": false,
+        "_id": {
+          "$oid": "6ad5bb423219136c549bb173"
+        },
+        "Node": "SolNode51",
+        "Faction": "FC_INFESTATION",
+        "DefenderFaction": "FC_CORPUS",
+        "LocTag": "/Lotus/Language/Menu/InfestedInvasionBoss",
+        "AttackerReward": [],
+        "DefenderReward": {
+          "countedItems": [
+            {
+              "ItemType": "/Lotus/Types/Items/MiscItems/InfestedAladCoordinate",
+              "ItemCount": 1
+            }
+          ]
+        },
+        "AttackerMissionInfo": {
+          "seed": 119384,
+          "faction": "FC_CORPUS"
+        },
+        "DefenderMissionInfo": {
+          "seed": 605911,
+          "faction": "FC_INFESTATION",
+          "missionReward": []
+        }
+      },
+      {
+        "Completed": true,
+        "_id": {
+          "$oid": "6ad5bb423219136c549bb174"
+        },
+        "Node": "SolNode43",
+        "Faction": "FC_INFESTATION",
+        "DefenderFaction": "FC_CORPUS",
+        "LocTag": "/Lotus/Language/Menu/InfestedInvasionGeneric",
+        "AttackerReward": [],
+        "DefenderReward": {
+          "countedItems": [
+            {
+              "ItemType": "/Lotus/Types/Items/MiscItems/InfestedAladCoordinate",
+              "ItemCount": 1
+            }
+          ]
+        },
+        "AttackerMissionInfo": {
+          "seed": 297033,
+          "faction": "FC_CORPUS"
+        },
+        "DefenderMissionInfo": {
+          "seed": 920906,
+          "faction": "FC_INFESTATION"
+        }
+      },
+      {
+        "Completed": false,
+        "_id": {
+          "$oid": "6ad5aadaee3e65079d5017ea"
+        },
+        "Node": "SolNode214",
+        "Faction": "FC_GRINEER",
+        "DefenderFaction": "FC_CORPUS",
+        "LocTag": "/Lotus/Language/Menu/GrineerInvasionGeneric",
+        "AttackerReward": {
+          "countedItems": [
+            {
+              "ItemType": "/Lotus/Types/Items/Research/ChemComponent",
+              "ItemCount": 3
+            }
+          ]
+        },
+        "DefenderReward": {
+          "countedItems": [
+            {
+              "ItemType": "/Lotus/Types/Items/Research/EnergyComponent",
+              "ItemCount": 3
+            }
+          ]
+        },
+        "AttackerMissionInfo": {
+          "seed": 934250,
+          "faction": "FC_CORPUS"
+        },
+        "DefenderMissionInfo": {
+          "seed": 676950,
+          "faction": "FC_GRINEER"
+        }
+      }
+    ]
+  },
+  "cycle": {
+    "expiry": 1792442578460,
+    "rot": "C",
+    "vaultRot": "A",
+    "zarimanFaction": "FC_CORPUS",
+    "bounties": {
+      "ZarimanSyndicate": [
+        {
+          "node": "SolNode231",
+          "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanFindMelicaCacheChallenge"
+        },
+        {
+          "node": "SolNode230",
+          "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanCorruptionCollectOrbsEasyChallenge"
+        },
+        {
+          "node": "SolNode233",
+          "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanUseVoidRiftsChallenge"
+        },
+        {
+          "node": "SolNode232",
+          "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanSurvivalAbove50HardChallenge"
+        },
+        {
+          "node": "SolNode235",
+          "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanMobDefProtectShieldsChallenge"
+        }
+      ],
+      "EntratiLabSyndicate": [
+        {
+          "node": "SolNode716",
+          "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabActivateLohkSurgeEasyChallenge"
+        },
+        {
+          "node": "SolNode719",
+          "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabRangedMechWeakpointEasyChallenge"
+        },
+        {
+          "node": "SolNode715",
+          "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabLootCratesChallenge"
+        },
+        {
+          "node": "SolNode718",
+          "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabAlchemyGrenadeElectricHardChallenge"
+        },
+        {
+          "node": "SolNode721",
+          "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabActivateConduitsQuickChallenge"
+        }
+      ],
+      "HexSyndicate": [
+        {
+          "node": "SolNode858",
+          "challenge": "/Lotus/Types/Challenges/Vania/VaniaAbilityKillEasy",
+          "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/ArthurAllyAgent"
+        },
+        {
+          "node": "SolNode856",
+          "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyPropsEasy",
+          "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AmirAllyAgent"
+        },
+        {
+          "node": "SolNode850",
+          "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyPropsNormal",
+          "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AoiAllyAgent"
+        },
+        {
+          "node": "SolNode853",
+          "challenge": "/Lotus/Types/Challenges/Vania/VaniaInfestedCrossfire",
+          "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/LettieAllyAgent"
+        },
+        {
+          "node": "SolNode854",
+          "challenge": "/Lotus/Types/Challenges/Vania/VaniaExplodingInfested",
+          "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/EleanorAllyAgent"
+        },
+        {
+          "node": "SolNode851",
+          "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyVehiclesVeryHard",
+          "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/QuincyAllyAgent"
+        },
+        {
+          "node": "SolNode852",
+          "challenge": "/Lotus/Types/Challenges/Vania/Lich/LichVaniaHighKill"
+        }
+      ]
+    }
+  },
+  "locationSeed": "24091",
+  "locations": {
+    "CetusSyndicate": {
+      "TentA": [
+        "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyCap",
+        "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapOne",
+        "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapTwo"
+      ],
+      "TentB": [
+        "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyCap",
+        "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyExt",
+        "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCache"
+      ],
+      "TentC": [
+        "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountySab",
+        "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapOne",
+        "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapTwo"
+      ]
+    },
+    "SolarisSyndicate": {
+      "BountyNefsHead": [
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobAmbush",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobSpy",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobDefense"
+      ],
+      "BountyWarehouse": [
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobAssassinate",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobExterminate",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobCaches"
+      ],
+      "BountyRepairBay": [
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobResource",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobExcavation",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobDefense"
+      ],
+      "BountySunDial": [
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobRecovery",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobResource",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusWetworkJobSpy"
+      ],
+      "BountyPufferFarm": [
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobResource",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobAssassinate",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobRecovery"
+      ],
+      "BountyCoolantCoil": [
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobRecovery",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobExterminate",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobRecovery"
+      ],
+      "BountyDigSite": [
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobResource",
+        "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobSpy"
+      ]
+    },
+    "EntratiSyndicate": {
+      "ChamberA": [
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+      ],
+      "ChamberB": [
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty",
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+      ],
+      "ChamberC": [
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty",
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty"
+      ],
+      "TentA": [
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty"
+      ],
+      "TentB": [
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty",
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty",
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty"
+      ]
+    }
+  },
+  "invasions": {
+    "activation": 1792435500,
+    "expiry": 1792436400,
+    "invasions": [
+      {
+        "id": "6ad5279a74995d72ee6aaa22",
+        "node": "SolNode132",
+        "ally": "FC_CORPUS",
+        "allyPay": [
+          {
+            "ItemCount": 1,
+            "ItemType": "/Lotus/Types/Recipes/Weapons/SnipetronVandalBlueprint"
+          }
+        ],
+        "missions": [
+          "Territory",
+          "Sabotage"
+        ]
+      },
+      {
+        "id": "6ad5279a74995d72ee6aaa22",
+        "node": "SolNode132",
+        "ally": "FC_GRINEER",
+        "allyPay": [
+          {
+            "ItemCount": 1,
+            "ItemType": "/Lotus/Types/Recipes/Weapons/WeaponParts/GrineerCombatKnifeHilt"
+          }
+        ],
+        "missions": [
+          "Exterminate",
+          "Defense"
+        ]
+      },
+      {
+        "id": "6ad580aa1ec81c3eef905242",
+        "node": "SolNode32",
+        "ally": "FC_GRINEER",
+        "allyPay": [
+          {
+            "ItemCount": 3,
+            "ItemType": "/Lotus/Types/Items/Research/ChemComponent"
+          }
+        ],
+        "missions": [
+          "Assassination",
+          "Assassination"
+        ]
+      },
+      {
+        "id": "6ad5bb423219136c549bb173",
+        "node": "SolNode51",
+        "ally": "FC_CORPUS",
+        "allyPay": [
+          {
+            "ItemCount": 1,
+            "ItemType": "/Lotus/Types/Items/MiscItems/InfestedAladCoordinate"
+          }
+        ],
+        "missions": [
+          "Assassination",
+          "Assassination"
+        ]
+      },
+      {
+        "id": "6ad5aadaee3e65079d5017ea",
+        "node": "SolNode214",
+        "ally": "FC_GRINEER",
+        "allyPay": [
+          {
+            "ItemCount": 3,
+            "ItemType": "/Lotus/Types/Items/Research/ChemComponent"
+          }
+        ],
+        "missions": [
+          "Exterminate",
+          "Sabotage"
+        ]
+      },
+      {
+        "id": "6ad5aadaee3e65079d5017ea",
+        "node": "SolNode214",
+        "ally": "FC_CORPUS",
+        "allyPay": [
+          {
+            "ItemCount": 3,
+            "ItemType": "/Lotus/Types/Items/Research/EnergyComponent"
+          }
+        ],
+        "missions": [
+          "Defense",
+          "Survival"
+        ]
+      }
+    ]
+  }
+}

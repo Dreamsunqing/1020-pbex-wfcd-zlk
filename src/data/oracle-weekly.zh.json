@@ -1,0 +1,16 @@
+{
+  "version": "weekly-zh-1",
+  "locale": "zh-CN",
+  "kind": "supplemental-translation",
+  "source": "https://www.warframe.com/en/patch-notes/pc/44-0-0",
+  "sourceTitle": "官方更新 44：Additional Personal Modifiers",
+  "verifiedAt": "2026-10-20",
+  "entries": {
+    "/Lotus/Language/Conquest/PersonalMod_NoPets": "禁止携带同伴",
+    "/Lotus/Language/Conquest/PersonalMod_NoPets_Desc": "同伴被禁用；Khora 的 Venari 不受影响。",
+    "/Lotus/Language/Conquest/PersonalMod_RangeDebuff": "范围缩减",
+    "/Lotus/Language/Conquest/PersonalMod_RangeDebuff_Desc": "技能范围减少 50%。",
+    "/Lotus/Language/Conquest/PersonalMod_AnemicShields": "贫弱护盾",
+    "/Lotus/Language/Conquest/PersonalMod_AnemicShields_Desc": "最大护盾和过载护盾均不超过 500 点。"
+  }
+}

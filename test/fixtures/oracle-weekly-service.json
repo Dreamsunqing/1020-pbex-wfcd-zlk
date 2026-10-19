@@ -1,0 +1,246 @@
+{
+  "source": "https://oracle.browse.wf/weekly.php",
+  "capturedAt": "2026-10-19T19:13:08.557472+00:00",
+  "queryAt": 1792437188557,
+  "worldState": {
+    "Conquests": [
+      {
+        "Activation": {
+          "$date": {
+            "$numberLong": "1792368000000"
+          }
+        },
+        "Expiry": {
+          "$date": {
+            "$numberLong": "1792972800000"
+          }
+        },
+        "Type": "CT_LAB",
+        "Missions": [
+          {
+            "faction": "FC_MITW",
+            "missionType": "MT_EXTERMINATION",
+            "difficulties": [
+              {
+                "type": "CD_NORMAL",
+                "deviation": "FortifiedFoes",
+                "risks": [
+                  "AcceleratedEnemies"
+                ]
+              },
+              {
+                "type": "CD_HARD",
+                "deviation": "FortifiedFoes",
+                "risks": [
+                  "AcceleratedEnemies",
+                  "EMPBlackHole"
+                ]
+              }
+            ]
+          },
+          {
+            "faction": "FC_MITW",
+            "missionType": "MT_SURVIVAL",
+            "difficulties": [
+              {
+                "type": "CD_NORMAL",
+                "deviation": "NecramechActivation",
+                "risks": [
+                  "Deflectors"
+                ]
+              },
+              {
+                "type": "CD_HARD",
+                "deviation": "NecramechActivation",
+                "risks": [
+                  "Deflectors",
+                  "Voidburst"
+                ]
+              }
+            ]
+          },
+          {
+            "faction": "FC_MITW",
+            "missionType": "MT_ARTIFACT",
+            "difficulties": [
+              {
+                "type": "CD_NORMAL",
+                "deviation": "FragileNodes",
+                "risks": [
+                  "Quicksand"
+                ]
+              },
+              {
+                "type": "CD_HARD",
+                "deviation": "FragileNodes",
+                "risks": [
+                  "Quicksand",
+                  "AntiMaterialWeapons"
+                ]
+              }
+            ]
+          }
+        ],
+        "Variables": [
+          "NoPets",
+          "DullBlades",
+          "AntiGuard",
+          "ContactDamage"
+        ],
+        "RandomSeed": 702372
+      },
+      {
+        "Activation": {
+          "$date": {
+            "$numberLong": "1792368000000"
+          }
+        },
+        "Expiry": {
+          "$date": {
+            "$numberLong": "1792972800000"
+          }
+        },
+        "Type": "CT_HEX",
+        "Missions": [
+          {
+            "faction": "FC_SCALDRA",
+            "missionType": "MT_SURVIVAL",
+            "difficulties": [
+              {
+                "type": "CD_NORMAL",
+                "deviation": "TechrotConjunction",
+                "risks": [
+                  "InfectedTechrot"
+                ]
+              },
+              {
+                "type": "CD_HARD",
+                "deviation": "TechrotConjunction",
+                "risks": [
+                  "InfectedTechrot",
+                  "PointBlank"
+                ]
+              }
+            ]
+          },
+          {
+            "faction": "FC_SCALDRA",
+            "missionType": "MT_DEFENSE",
+            "difficulties": [
+              {
+                "type": "CD_NORMAL",
+                "deviation": "ExplosiveEnergy",
+                "risks": [
+                  "MiasmiteHive"
+                ]
+              },
+              {
+                "type": "CD_HARD",
+                "deviation": "ExplosiveEnergy",
+                "risks": [
+                  "MiasmiteHive",
+                  "ShieldedFoes"
+                ]
+              }
+            ]
+          },
+          {
+            "faction": "FC_SCALDRA",
+            "missionType": "MT_ASSASSINATION",
+            "difficulties": [
+              {
+                "type": "CD_NORMAL",
+                "deviation": "TankReinforcements",
+                "risks": [
+                  "HeavyWarfare"
+                ]
+              },
+              {
+                "type": "CD_HARD",
+                "deviation": "TankReinforcements",
+                "risks": [
+                  "HeavyWarfare",
+                  "CompetitionSpillover"
+                ]
+              }
+            ]
+          }
+        ],
+        "Variables": [
+          "RangeDebuff",
+          "NoPets",
+          "AnemicShields",
+          "DullBlades"
+        ],
+        "RandomSeed": 426222
+      }
+    ]
+  },
+  "expected": {
+    "expiry": 1792972800,
+    "labConquestMissions": [
+      {
+        "type": "Exterminate",
+        "variant": "FortifiedFoes",
+        "conditions": [
+          "AcceleratedEnemies",
+          "MagneticHounds"
+        ]
+      },
+      {
+        "type": "Survival",
+        "variant": "NecramechActivation",
+        "conditions": [
+          "Deflectors",
+          "Voidburst"
+        ]
+      },
+      {
+        "type": "Artifact",
+        "variant": "FragileNodes",
+        "conditions": [
+          "Quicksand",
+          "AntiMaterialWeapons"
+        ]
+      }
+    ],
+    "labConquestFrameVariables": [
+      "NoPets",
+      "ComboCountChance",
+      "AntiGuard",
+      "ContactDamage"
+    ],
+    "hexConquestMissions": [
+      {
+        "type": "Survival",
+        "variant": "TechrotConjunction",
+        "conditions": [
+          "InfectedTechrot",
+          "PointBlank"
+        ]
+      },
+      {
+        "type": "Defense",
+        "variant": "ExplosiveEnergy",
+        "conditions": [
+          "MiasmiteHive",
+          "ShieldedFoes"
+        ]
+      },
+      {
+        "type": "Assassination",
+        "variant": "TankReinforcements",
+        "conditions": [
+          "HeavyWarfare",
+          "CompetitionSpillover"
+        ]
+      }
+    ],
+    "hexConquestFrameVariables": [
+      "RangeDebuff",
+      "NoPets",
+      "AnemicShields",
+      "ComboCountChance"
+    ]
+  }
+}

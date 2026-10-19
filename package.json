@@ -1,6 +1,6 @@
 {
   "name": "world-state-source-workbench",
-  "version": "0.1.1",
+  "version": "0.6.0",
   "description": "Warframe 上游资料工作台：独立来源预览、快照更新与推算",
   "private": true,
   "type": "module",

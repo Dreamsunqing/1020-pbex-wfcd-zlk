@@ -10,8 +10,8 @@
 <body>
   <header>
     <div class="brand"><span class="brand-icon">◈</span><div>上游资料工作台<small>SOURCE WORKBENCH <b>01</b></small></div></div>
-    <nav aria-label="功能页面"><button class="nav active" data-panel="browser">资料浏览</button><button class="nav" data-panel="updates">更新与版本</button><button class="nav" data-panel="oracle">推算实验室</button><button class="nav" data-panel="settings">配置</button></nav>
-    <span class="version">v0.1.1 <i>本地工作台</i></span>
+    <nav aria-label="功能页面"><button class="nav active" data-panel="browser">资料浏览</button><button class="nav" data-panel="oracle">推算实验室</button><button class="nav" data-panel="updates">更新与版本</button><button class="nav" data-panel="settings">配置</button></nav>
+    <span class="version">v0.6.0 <i>本地工作台</i></span>
   </header>
   <div id="notice" role="status" hidden></div>
   <main>
@@ -31,7 +31,7 @@
         <div id="document" hidden>
           <div class="document-heading"><div><small id="file-source">SOURCE</small><h1 id="file-title"></h1><p id="file-path" class="muted"></p></div><div class="actions"><button id="copy" class="small">复制</button><button id="export" class="small">导出</button></div></div>
           <div class="document-stats" id="document-stats"></div>
-          <div class="view-toolbar"><div class="segmented"><button data-view="table" class="selected">表格</button><button data-view="tree">结构</button><button data-view="raw">原文</button></div><input id="content-filter" placeholder="搜索当前层级的键、名称或记录内容…" aria-label="搜索记录"></div>
+          <div class="view-toolbar"><div class="segmented"><button data-view="table" class="selected">表格</button><button data-view="tree">结构</button><button data-view="raw">原文</button><button data-view="cards">卡片</button></div><input id="content-filter" placeholder="搜索当前层级的键、名称或记录内容…" aria-label="搜索记录"></div>
           <div class="pointer-bar"><button id="parent" class="small">↑ 上一级</button><input id="pointer" placeholder="JSON Pointer：/ExportResources" aria-label="JSON 路径"><button id="go-pointer" class="small">跳转</button></div>
           <div id="doc-warning" class="hint" hidden></div>
           <div id="data-view" class="data-view"></div>
@@ -49,9 +49,32 @@
       <details class="log-card" open><summary>最近操作</summary><pre id="operation-log">等待操作。</pre></details>
     </section>
     <section id="oracle" class="panel page">
-      <div class="page-heading"><div><small>ORACLE / COMPATIBILITY</small><h1>推算实验室</h1><p>使用当前打开目录或所选快照中的资料；所有计算在本地完成。</p></div><span class="pill">规则版本 1</span></div>
-      <div class="oracle-grid"><div class="card oracle-form"><h2>活化战甲</h2><p>用户名区分大小写。输入目标周的上一周战甲，缺少历史时返回条件推算。</p><label>游戏名<input id="username" placeholder="CaseSensitiveName" autocomplete="off"></label><div class="form-row"><label>目标周<select id="target"><option value="current">本周</option><option value="next">下周</option></select></label><label>参考时间<input type="datetime-local" id="inv-time"></label></div><label id="observed-label">上一周已观察到的战甲（可选）</label><div id="observed"></div><button id="predict" class="primary">推算活化组合</button><div id="inv-result" class="result"></div></div>
-      <div class="card oracle-form"><h2>仲裁排期</h2><p>按缓存的逐小时排期查询，返回节点和任务类型。</p><div class="form-row"><label>查询时间<input type="datetime-local" id="arb-time"></label><label>未来小时数<select id="arb-count"><option value="12">12 小时</option><option value="24" selected>24 小时</option><option value="72">72 小时</option><option value="168">168 小时</option></select></label></div><button id="query-arb" class="primary">查询仲裁</button><div id="arb-result" class="result"></div></div></div>
+      <div class="page-heading"><div><small>ORACLE + BROWSE.WF / COMPATIBILITY</small><h1>推算实验室</h1><p>规则与排期取自当前目录或所选快照；刷新世界状态后，按参考时间查询本页全部模块。</p></div><span class="pill">本地计算 · UTC 排期</span></div>
+      <div class="segmented lab-tabs" role="group" aria-label="推算模块"><button data-lab="browse-lab" class="selected">周期与轮换 · browse.wf</button><button data-lab="oracle-legacy">推算与周常 · Oracle</button></div>
+      <div id="browse-lab">
+        <div class="browse-toolbar lab-toolbar"><label>参考时间（本地时区）<input type="datetime-local" id="browse-time" step="1"></label><button id="query-browse" class="primary">刷新并查询</button></div>
+        <p class="lab-time-note">默认当前时间；修改时间后按所选时间查询。细分条件在各模块内调整后自动查询。</p>
+        <div class="browse-grid">
+          <div class="card browse-cycles-card"><div class="section-heading"><div><small>01 / WORLD CYCLES</small><h2>世界周期</h2></div></div><p>双衍王境情绪、山谷温度、平原昼夜与火卫二。顶部“刷新并查询”从官方接口获取世界状态；离线时使用已有基准。</p><div id="cycles-result" class="result" aria-live="polite"></div></div>
+          <div id="browse-teshin-card" class="card"><small>02 / TESHIN</small><h2>Teshin 周商品</h2><p>按周轮换，周一 UTC 00:00 切换。</p><div class="module-controls"><label>查询周数<select id="browse-weeks"><option value="1">1 周</option><option value="4" selected>4 周</option><option value="12">12 周</option></select></label></div><div id="teshin-result" class="result" aria-live="polite"></div></div>
+          <div id="browse-circuit-card" class="card"><small>03 / THE CIRCUIT</small><h2>普通／钢铁回廊</h2><p>每周 3 个普通战甲、5 个钢铁之路武器选项。</p><div class="module-controls"><label>查询周数<select id="browse-circuit-weeks"><option value="1">1 周</option><option value="4" selected>4 周</option><option value="12">12 周</option></select></label></div><div id="circuit-result" class="result" aria-live="polite"></div></div>
+          <div class="card browse-incursions-card"><small>04 / STEEL PATH INCURSIONS</small><h2>钢铁之路每日突袭</h2><p>按 UTC 日期查询缓存的 6 节点排期，显示节点、星球、任务与等级。</p><div class="module-controls"><label>查询天数<select id="browse-days"><option value="1">1 天</option><option value="7" selected>7 天</option><option value="30">30 天</option></select></label></div><div id="incursions-result" class="result" aria-live="polite"></div></div>
+        </div>
+      </div>
+      <div id="oracle-legacy" hidden>
+        <div class="browse-toolbar lab-toolbar"><label>参考时间（本地时区）<input type="datetime-local" id="oracle-time" step="1"></label><button id="query-oracle" class="primary">刷新并查询</button></div>
+        <p class="lab-time-note">六个模块共用参考时间。默认当前时间；细分条件在各模块内调整后自动查询。</p>
+        <div id="oracle-state-info" class="hint">尚未读取世界状态。点击“刷新并查询”，或在周常模块中导入世界状态 JSON。</div>
+        <div class="oracle-shortcuts" aria-label="Oracle 推算与周常"><button data-oracle-card="oracle-cycle-card">01 赏金轮次</button><button data-oracle-card="oracle-locations-card">02 地区赏金</button><button data-oracle-card="oracle-invasions-card">03 入侵变化</button><button data-oracle-card="oracle-weekly-card">04 实验室／Hex 周常</button><button data-oracle-card="oracle-invig-card">05 活化战甲</button><button data-oracle-card="oracle-arb-card">06 仲裁排期</button></div>
+        <div class="oracle-grid">
+          <div id="oracle-cycle-card" class="card oracle-wide"><div class="section-heading"><div><small>01 / BOUNTY CYCLE</small><h2>赏金轮次</h2></div><button class="small" data-copy-oracle="cycle">复制 JSON</button></div><p>扎里曼、英择谛实验室与 1999 的节点、挑战、同伴及各档奖励。展开随机奖励查看物品、数量、概率与来源。</p><div class="module-controls"><label>Hex seed（可选，离线复算）<input id="oracle-cycle-seed" inputmode="numeric" placeholder="留空使用世界状态" autocomplete="off"></label></div><div id="oracle-cycle-result" class="result" aria-live="polite"></div></div>
+          <div id="oracle-locations-card" class="card oracle-wide"><div class="section-heading"><div><small>02 / LOCATION BOUNTIES</small><h2>地区赏金</h2></div><button class="small" data-copy-oracle="locations">复制 JSON</button></div><p>平原、山谷、火卫二各地区的赏金选项，使用 Cetus seed；保留任务原始路径。</p><div class="module-controls"><label>Cetus seed（可选，离线复算）<input id="oracle-locations-seed" inputmode="numeric" placeholder="留空使用世界状态" autocomplete="off"></label></div><div id="oracle-locations-result" class="result" aria-live="polite"></div></div>
+          <div id="oracle-invasions-card" class="card oracle-wide"><div class="section-heading"><div><small>03 / INVASION MISSIONS</small><h2>入侵任务变化</h2></div><button class="small" data-copy-oracle="invasions">复制 JSON</button></div><p>每 15 分钟一轮，分别推算支援进攻方与防守方的任务。后续轮次假定该入侵继续存在。</p><div class="module-controls"><label>入侵轮次<select id="oracle-invasion-count"><option value="2" selected>当前 + 下一轮</option><option value="4">4 轮 · 1 小时</option><option value="8">8 轮 · 2 小时</option></select></label></div><div id="oracle-invasions-result" class="result" aria-live="polite"></div></div>
+          <div id="oracle-weekly-card" class="card oracle-wide"><div class="section-heading"><div><small>04 / WEEKLY CONQUESTS</small><h2>实验室／Hex 周常</h2></div><button class="small" data-copy-oracle="weekly">复制 JSON</button></div><p>整理参考时间内有效的周常任务，使用第二档难度的变体与风险，展示个人限制及名称转换；不外推下周。</p><div class="module-controls"><button id="import-oracle-state" class="small">导入世界状态 JSON</button><span class="muted">按顶部参考时间记录采集时间；导入后重新查询全部六个模块。</span></div><div id="oracle-weekly-result" class="result" aria-live="polite"></div></div>
+          <div id="oracle-invig-card" class="card oracle-form"><small>05 / INVIGORATIONS</small><h2>活化战甲</h2><p>用户名区分大小写。Tenno 为可替换的示例名；输入目标周的上一周战甲，缺少历史时返回条件推算。</p><label>游戏名（默认示例，可修改）<input id="username" value="Tenno" placeholder="CaseSensitiveName" autocomplete="off"></label><div class="form-row"><label>目标周<select id="target"><option value="current">本周</option><option value="next">下周</option></select></label></div><label id="observed-label">上一周已观察到的战甲（可选）</label><div id="observed"></div><div id="inv-result" class="result"></div></div>
+          <div id="oracle-arb-card" class="card oracle-form"><small>06 / ARBITRATION</small><h2>仲裁排期</h2><p>按缓存的逐小时排期查询，返回节点和任务类型。</p><div class="form-row"><label>未来小时数<select id="arb-count"><option value="12">12 小时</option><option value="24" selected>24 小时</option><option value="72">72 小时</option><option value="168">168 小时</option></select></label></div><div id="arb-result" class="result"></div></div>
+        </div>
+      </div>
     </section>
     <section id="settings" class="panel page">
       <div class="page-heading"><div><small>WORKSPACE / SETTINGS</small><h1>来源配置</h1><p>配置只影响新检查；历史快照继续保留原有来源记录。</p></div><button id="save-config" class="primary">保存配置</button></div>

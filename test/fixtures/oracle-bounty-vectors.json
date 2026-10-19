@@ -1,0 +1,1539 @@
+{
+  "source": "Independent Python port of cached Oracle Pluto, 64-bit wrap, no application imports",
+  "cases": [
+    {
+      "seed": "0",
+      "challenges": {
+        "ZarimanJobManifest.json": [
+          {
+            "node": "SolNode232",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanFindMelicaCacheChallenge"
+          },
+          {
+            "node": "SolNode233",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanAssassinateUseAllTurretsChallenge"
+          },
+          {
+            "node": "SolNode230",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanUseVoidRiftsChallenge"
+          },
+          {
+            "node": "SolNode231",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanExterminateFastCompleteChallenge"
+          },
+          {
+            "node": "SolNode235",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanKillAsOperatorVeryHardChallenge"
+          }
+        ],
+        "EntratiLabsJobManifest.json": [
+          {
+            "node": "SolNode716",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabKillVoidRigEasyChallenge"
+          },
+          {
+            "node": "SolNode715",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabDestroyDecorationChallenge"
+          },
+          {
+            "node": "SolNode718",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabKillMurmurChallenge"
+          },
+          {
+            "node": "SolNode717",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabLootCratesChallenge"
+          },
+          {
+            "node": "SolNode721",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabActivateConduitsQuickChallenge"
+          }
+        ],
+        "WF1999JobManifest.json": [
+          {
+            "node": "SolNode852",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaMercyEasy",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/ArthurAllyAgent"
+          },
+          {
+            "node": "SolNode850",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaCaptureTargetsEasy",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/LettieAllyAgent"
+          },
+          {
+            "node": "SolNode858",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyBackpacksNormal",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AoiAllyAgent"
+          },
+          {
+            "node": "SolNode856",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyHazardsHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AmirAllyAgent"
+          },
+          {
+            "node": "SolNode851",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyVehiclesVeryHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/QuincyAllyAgent"
+          },
+          {
+            "node": "SolNode854",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaExplodingInfested",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/EleanorAllyAgent"
+          },
+          {
+            "node": "SolNode850",
+            "challenge": "/Lotus/Types/Challenges/Vania/Lich/LichVaniaHighKill"
+          }
+        ]
+      },
+      "locations": {
+        "EidolonJobManifest.json": [
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyCap",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCache",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/SabotageBountySab"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyCap",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCap",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/RescueBountyResc"
+            ]
+          },
+          {
+            "location": "TentC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyCap",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapTwo",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/RescueBountyResc"
+            ]
+          }
+        ],
+        "VenusJobManifest.json": [
+          {
+            "location": "BountyNefsHead",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobAssassinate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobResource"
+            ]
+          },
+          {
+            "location": "BountyWarehouse",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobAssassinate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusSpyJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobCaches"
+            ]
+          },
+          {
+            "location": "BountyRepairBay",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobRecovery"
+            ]
+          },
+          {
+            "location": "BountySunDial",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobExcavation"
+            ]
+          },
+          {
+            "location": "BountyPufferFarm",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobAssassinate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobRecovery"
+            ]
+          },
+          {
+            "location": "BountyCoolantCoil",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobExterminate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobAmbush",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobCaches"
+            ]
+          },
+          {
+            "location": "BountyDigSite",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusSpyJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobResource"
+            ]
+          }
+        ],
+        "MicroplanetJobManifest.json": [
+          {
+            "location": "ChamberA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty"
+            ]
+          },
+          {
+            "location": "ChamberB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          },
+          {
+            "location": "ChamberC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty"
+            ]
+          },
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "seed": "1",
+      "challenges": {
+        "ZarimanJobManifest.json": [
+          {
+            "node": "SolNode230",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanCorruptionKeepMeterLowEasyChallenge"
+          },
+          {
+            "node": "SolNode231",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanExterminateFastCompleteChallenge"
+          },
+          {
+            "node": "SolNode232",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanKillAsOperatorChallenge"
+          },
+          {
+            "node": "SolNode233",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanFindMelicaCacheChallenge"
+          },
+          {
+            "node": "SolNode235",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanDefeatVoidAngelChallenge"
+          }
+        ],
+        "EntratiLabsJobManifest.json": [
+          {
+            "node": "SolNode718",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabKillMurmurEasyChallenge"
+          },
+          {
+            "node": "SolNode717",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabSummonNecramechChallenge"
+          },
+          {
+            "node": "SolNode721",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabActivateLohkSurgeChallenge"
+          },
+          {
+            "node": "SolNode716",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabRangedMechWeakpointHardChallenge"
+          },
+          {
+            "node": "SolNode719",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabDestroyDecorationChallenge"
+          }
+        ],
+        "WF1999JobManifest.json": [
+          {
+            "node": "SolNode853",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaInfestedCrossfire",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/ArthurAllyAgent"
+          },
+          {
+            "node": "SolNode854",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaExplodingInfested",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/LettieAllyAgent"
+          },
+          {
+            "node": "SolNode858",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyBackpacksNormal",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AoiAllyAgent"
+          },
+          {
+            "node": "SolNode850",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaSafeCracker",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AmirAllyAgent"
+          },
+          {
+            "node": "SolNode856",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyPropsVeryHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/QuincyAllyAgent"
+          },
+          {
+            "node": "SolNode851",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaHighKillVeryHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/EleanorAllyAgent"
+          },
+          {
+            "node": "SolNode852",
+            "challenge": "/Lotus/Types/Challenges/Vania/Lich/LichVaniaSafeCracker"
+          }
+        ]
+      },
+      "locations": {
+        "EidolonJobManifest.json": [
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyAss",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyCap",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyCap"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountySab",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyExt",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCache"
+            ]
+          },
+          {
+            "location": "TentC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCap",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapTwo",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/RescueBountyResc"
+            ]
+          }
+        ],
+        "VenusJobManifest.json": [
+          {
+            "location": "BountyNefsHead",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusWetworkJobAssassinate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobDefense"
+            ]
+          },
+          {
+            "location": "BountyWarehouse",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobAssassinate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobAmbush"
+            ]
+          },
+          {
+            "location": "BountyRepairBay",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobRecovery",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobRecovery"
+            ]
+          },
+          {
+            "location": "BountySunDial",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusWetworkJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobExcavation"
+            ]
+          },
+          {
+            "location": "BountyPufferFarm",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobAssassinate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobAssassinate"
+            ]
+          },
+          {
+            "location": "BountyCoolantCoil",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobExterminate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobCaches",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusWetworkJobSpy"
+            ]
+          },
+          {
+            "location": "BountyDigSite",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobResource"
+            ]
+          }
+        ],
+        "MicroplanetJobManifest.json": [
+          {
+            "location": "ChamberA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          },
+          {
+            "location": "ChamberB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty"
+            ]
+          },
+          {
+            "location": "ChamberC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty"
+            ]
+          },
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "seed": "24091",
+      "challenges": {
+        "ZarimanJobManifest.json": [
+          {
+            "node": "SolNode231",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanFindMelicaCacheChallenge"
+          },
+          {
+            "node": "SolNode230",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanCorruptionCollectOrbsEasyChallenge"
+          },
+          {
+            "node": "SolNode233",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanUseVoidRiftsChallenge"
+          },
+          {
+            "node": "SolNode232",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanSurvivalAbove50HardChallenge"
+          },
+          {
+            "node": "SolNode235",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanMobDefProtectShieldsChallenge"
+          }
+        ],
+        "EntratiLabsJobManifest.json": [
+          {
+            "node": "SolNode716",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabActivateLohkSurgeEasyChallenge"
+          },
+          {
+            "node": "SolNode719",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabRangedMechWeakpointEasyChallenge"
+          },
+          {
+            "node": "SolNode715",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabLootCratesChallenge"
+          },
+          {
+            "node": "SolNode718",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabAlchemyGrenadeElectricHardChallenge"
+          },
+          {
+            "node": "SolNode721",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabActivateConduitsQuickChallenge"
+          }
+        ],
+        "WF1999JobManifest.json": [
+          {
+            "node": "SolNode858",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaAbilityKillEasy",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/ArthurAllyAgent"
+          },
+          {
+            "node": "SolNode856",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyPropsEasy",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AmirAllyAgent"
+          },
+          {
+            "node": "SolNode850",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyPropsNormal",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AoiAllyAgent"
+          },
+          {
+            "node": "SolNode853",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaInfestedCrossfire",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/LettieAllyAgent"
+          },
+          {
+            "node": "SolNode854",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaExplodingInfested",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/EleanorAllyAgent"
+          },
+          {
+            "node": "SolNode851",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyVehiclesVeryHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/QuincyAllyAgent"
+          },
+          {
+            "node": "SolNode852",
+            "challenge": "/Lotus/Types/Challenges/Vania/Lich/LichVaniaHighKill"
+          }
+        ]
+      },
+      "locations": {
+        "EidolonJobManifest.json": [
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyCap",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapOne",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapTwo"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyCap",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyExt",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCache"
+            ]
+          },
+          {
+            "location": "TentC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountySab",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapOne",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapTwo"
+            ]
+          }
+        ],
+        "VenusJobManifest.json": [
+          {
+            "location": "BountyNefsHead",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobAmbush",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobDefense"
+            ]
+          },
+          {
+            "location": "BountyWarehouse",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobAssassinate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobExterminate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobCaches"
+            ]
+          },
+          {
+            "location": "BountyRepairBay",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobDefense"
+            ]
+          },
+          {
+            "location": "BountySunDial",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobRecovery",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusWetworkJobSpy"
+            ]
+          },
+          {
+            "location": "BountyPufferFarm",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobAssassinate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobRecovery"
+            ]
+          },
+          {
+            "location": "BountyCoolantCoil",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobRecovery",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobExterminate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobRecovery"
+            ]
+          },
+          {
+            "location": "BountyDigSite",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobSpy"
+            ]
+          }
+        ],
+        "MicroplanetJobManifest.json": [
+          {
+            "location": "ChamberA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          },
+          {
+            "location": "ChamberB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          },
+          {
+            "location": "ChamberC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty"
+            ]
+          },
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "seed": "-1",
+      "challenges": {
+        "ZarimanJobManifest.json": [
+          {
+            "node": "SolNode230",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanFindMelicaCacheChallenge"
+          },
+          {
+            "node": "SolNode232",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanSurvivalAbove50EasyChallenge"
+          },
+          {
+            "node": "SolNode231",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanDefeatVoidAngelChallenge"
+          },
+          {
+            "node": "SolNode233",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanKeepBarracksAliveHardChallenge"
+          },
+          {
+            "node": "SolNode235",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanMobDefProtectShieldsChallenge"
+          }
+        ],
+        "EntratiLabsJobManifest.json": [
+          {
+            "node": "SolNode717",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabKillVialedEnemyChallenge"
+          },
+          {
+            "node": "SolNode715",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabCollectTearsChallenge"
+          },
+          {
+            "node": "SolNode721",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabDefeatDoppelgangerChallenge"
+          },
+          {
+            "node": "SolNode718",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabAlchemyGrenadeToxinHardChallenge"
+          },
+          {
+            "node": "SolNode719",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabDestroyDecorationChallenge"
+          }
+        ],
+        "WF1999JobManifest.json": [
+          {
+            "node": "SolNode856",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyVehiclesEasy",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/LettieAllyAgent"
+          },
+          {
+            "node": "SolNode854",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyPropsEasy",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AoiAllyAgent"
+          },
+          {
+            "node": "SolNode850",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaHighKillNormal",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/QuincyAllyAgent"
+          },
+          {
+            "node": "SolNode851",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyHazardsHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/EleanorAllyAgent"
+          },
+          {
+            "node": "SolNode858",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyBackpacksVeryHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AmirAllyAgent"
+          },
+          {
+            "node": "SolNode852",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaHighKillVeryHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/ArthurAllyAgent"
+          },
+          {
+            "node": "SolNode850",
+            "challenge": "/Lotus/Types/Challenges/Vania/Lich/LichVaniaSafeCracker"
+          }
+        ]
+      },
+      "locations": {
+        "EidolonJobManifest.json": [
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyLib",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapOne",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapTwo"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyLib",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyTheft",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapOne"
+            ]
+          },
+          {
+            "location": "TentC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyAss",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyExt",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCache"
+            ]
+          }
+        ],
+        "VenusJobManifest.json": [
+          {
+            "location": "BountyNefsHead",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobAssassinate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobDefense"
+            ]
+          },
+          {
+            "location": "BountyWarehouse",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobExterminate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobAmbush"
+            ]
+          },
+          {
+            "location": "BountyRepairBay",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobRecovery",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusWetworkJobAssassinate"
+            ]
+          },
+          {
+            "location": "BountySunDial",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobAmbush",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobResource"
+            ]
+          },
+          {
+            "location": "BountyPufferFarm",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobSpy"
+            ]
+          },
+          {
+            "location": "BountyCoolantCoil",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobRecovery",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobAmbush",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobResource"
+            ]
+          },
+          {
+            "location": "BountyDigSite",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusSpyJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobResource"
+            ]
+          }
+        ],
+        "MicroplanetJobManifest.json": [
+          {
+            "location": "ChamberA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          },
+          {
+            "location": "ChamberB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty"
+            ]
+          },
+          {
+            "location": "ChamberC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty"
+            ]
+          },
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "seed": "4294967296",
+      "challenges": {
+        "ZarimanJobManifest.json": [
+          {
+            "node": "SolNode231",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanUseVoidRiftsEasyChallenge"
+          },
+          {
+            "node": "SolNode230",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanCorruptionCollectOrbsEasyChallenge"
+          },
+          {
+            "node": "SolNode233",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanKeepBarracksAliveChallenge"
+          },
+          {
+            "node": "SolNode235",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanKillAsOperatorHardChallenge"
+          },
+          {
+            "node": "SolNode232",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanDefeatVoidAngelChallenge"
+          }
+        ],
+        "EntratiLabsJobManifest.json": [
+          {
+            "node": "SolNode715",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabLootCratesChallenge"
+          },
+          {
+            "node": "SolNode721",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabDestroyDecorationChallenge"
+          },
+          {
+            "node": "SolNode717",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabSummonNecramechChallenge"
+          },
+          {
+            "node": "SolNode718",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabRangedMechWeakpointHardChallenge"
+          },
+          {
+            "node": "SolNode719",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabDefenseActivatePillarVeryHardChallenge"
+          }
+        ],
+        "WF1999JobManifest.json": [
+          {
+            "node": "SolNode850",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaSafeCracker",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/QuincyAllyAgent"
+          },
+          {
+            "node": "SolNode851",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyVehiclesEasy",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/ArthurAllyAgent"
+          },
+          {
+            "node": "SolNode856",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyVehiclesNormal",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/LettieAllyAgent"
+          },
+          {
+            "node": "SolNode854",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaExplodingInfested",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AoiAllyAgent"
+          },
+          {
+            "node": "SolNode852",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaHighKillVeryHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/EleanorAllyAgent"
+          },
+          {
+            "node": "SolNode858",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyBackpacksVeryHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AmirAllyAgent"
+          },
+          {
+            "node": "SolNode850",
+            "challenge": "/Lotus/Types/Challenges/Vania/Lich/LichVaniaDestroyProps"
+          }
+        ]
+      },
+      "locations": {
+        "EidolonJobManifest.json": [
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCache",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapTwo",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/SabotageBountySab"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyCap",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyExt",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/RescueBountyResc"
+            ]
+          },
+          {
+            "location": "TentC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyExt",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCap",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCache"
+            ]
+          }
+        ],
+        "VenusJobManifest.json": [
+          {
+            "location": "BountyNefsHead",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobAmbush",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobAssassinate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobResource"
+            ]
+          },
+          {
+            "location": "BountyWarehouse",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobCaches"
+            ]
+          },
+          {
+            "location": "BountyRepairBay",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobRecovery",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusWetworkJobAssassinate"
+            ]
+          },
+          {
+            "location": "BountySunDial",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobAmbush",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobRecovery",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusWetworkJobSpy"
+            ]
+          },
+          {
+            "location": "BountyPufferFarm",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobAssassinate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobRecovery",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobSpy"
+            ]
+          },
+          {
+            "location": "BountyCoolantCoil",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobExterminate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusWetworkJobSpy"
+            ]
+          },
+          {
+            "location": "BountyDigSite",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusSpyJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobCaches"
+            ]
+          }
+        ],
+        "MicroplanetJobManifest.json": [
+          {
+            "location": "ChamberA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty"
+            ]
+          },
+          {
+            "location": "ChamberB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          },
+          {
+            "location": "ChamberC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty"
+            ]
+          },
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "seed": "9223372036854775807",
+      "challenges": {
+        "ZarimanJobManifest.json": [
+          {
+            "node": "SolNode230",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanFindMelicaCacheChallenge"
+          },
+          {
+            "node": "SolNode232",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanSurvivalAbove50EasyChallenge"
+          },
+          {
+            "node": "SolNode231",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanDefeatVoidAngelChallenge"
+          },
+          {
+            "node": "SolNode233",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanKeepBarracksAliveHardChallenge"
+          },
+          {
+            "node": "SolNode235",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanMobDefProtectShieldsChallenge"
+          }
+        ],
+        "EntratiLabsJobManifest.json": [
+          {
+            "node": "SolNode717",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabKillVialedEnemyChallenge"
+          },
+          {
+            "node": "SolNode715",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabCollectTearsChallenge"
+          },
+          {
+            "node": "SolNode721",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabDefeatDoppelgangerChallenge"
+          },
+          {
+            "node": "SolNode718",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabAlchemyGrenadeToxinHardChallenge"
+          },
+          {
+            "node": "SolNode719",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabDestroyDecorationChallenge"
+          }
+        ],
+        "WF1999JobManifest.json": [
+          {
+            "node": "SolNode856",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyVehiclesEasy",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/LettieAllyAgent"
+          },
+          {
+            "node": "SolNode854",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyPropsEasy",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AoiAllyAgent"
+          },
+          {
+            "node": "SolNode850",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaHighKillNormal",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/QuincyAllyAgent"
+          },
+          {
+            "node": "SolNode851",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyHazardsHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/EleanorAllyAgent"
+          },
+          {
+            "node": "SolNode858",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyBackpacksVeryHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AmirAllyAgent"
+          },
+          {
+            "node": "SolNode852",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaHighKillVeryHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/ArthurAllyAgent"
+          },
+          {
+            "node": "SolNode850",
+            "challenge": "/Lotus/Types/Challenges/Vania/Lich/LichVaniaSafeCracker"
+          }
+        ]
+      },
+      "locations": {
+        "EidolonJobManifest.json": [
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyLib",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapOne",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapTwo"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyLib",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyTheft",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapOne"
+            ]
+          },
+          {
+            "location": "TentC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyAss",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyExt",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCache"
+            ]
+          }
+        ],
+        "VenusJobManifest.json": [
+          {
+            "location": "BountyNefsHead",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobAssassinate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobDefense"
+            ]
+          },
+          {
+            "location": "BountyWarehouse",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobExterminate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobAmbush"
+            ]
+          },
+          {
+            "location": "BountyRepairBay",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobRecovery",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusWetworkJobAssassinate"
+            ]
+          },
+          {
+            "location": "BountySunDial",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobAmbush",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobResource"
+            ]
+          },
+          {
+            "location": "BountyPufferFarm",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobSpy"
+            ]
+          },
+          {
+            "location": "BountyCoolantCoil",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobRecovery",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobAmbush",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobResource"
+            ]
+          },
+          {
+            "location": "BountyDigSite",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusSpyJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobResource"
+            ]
+          }
+        ],
+        "MicroplanetJobManifest.json": [
+          {
+            "location": "ChamberA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          },
+          {
+            "location": "ChamberB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty"
+            ]
+          },
+          {
+            "location": "ChamberC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty"
+            ]
+          },
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "seed": "18446744073709551615",
+      "challenges": {
+        "ZarimanJobManifest.json": [
+          {
+            "node": "SolNode230",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanFindMelicaCacheChallenge"
+          },
+          {
+            "node": "SolNode232",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanSurvivalAbove50EasyChallenge"
+          },
+          {
+            "node": "SolNode231",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanDefeatVoidAngelChallenge"
+          },
+          {
+            "node": "SolNode233",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanKeepBarracksAliveHardChallenge"
+          },
+          {
+            "node": "SolNode235",
+            "challenge": "/Lotus/Types/Challenges/Zariman/ZarimanMobDefProtectShieldsChallenge"
+          }
+        ],
+        "EntratiLabsJobManifest.json": [
+          {
+            "node": "SolNode717",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabKillVialedEnemyChallenge"
+          },
+          {
+            "node": "SolNode715",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabCollectTearsChallenge"
+          },
+          {
+            "node": "SolNode721",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabDefeatDoppelgangerChallenge"
+          },
+          {
+            "node": "SolNode718",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabAlchemyGrenadeToxinHardChallenge"
+          },
+          {
+            "node": "SolNode719",
+            "challenge": "/Lotus/Types/Challenges/EntratiLab/EntratiLabDestroyDecorationChallenge"
+          }
+        ],
+        "WF1999JobManifest.json": [
+          {
+            "node": "SolNode856",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyVehiclesEasy",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/LettieAllyAgent"
+          },
+          {
+            "node": "SolNode854",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyPropsEasy",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AoiAllyAgent"
+          },
+          {
+            "node": "SolNode850",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaHighKillNormal",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/QuincyAllyAgent"
+          },
+          {
+            "node": "SolNode851",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyHazardsHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/EleanorAllyAgent"
+          },
+          {
+            "node": "SolNode858",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyBackpacksVeryHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AmirAllyAgent"
+          },
+          {
+            "node": "SolNode852",
+            "challenge": "/Lotus/Types/Challenges/Vania/VaniaHighKillVeryHard",
+            "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/ArthurAllyAgent"
+          },
+          {
+            "node": "SolNode850",
+            "challenge": "/Lotus/Types/Challenges/Vania/Lich/LichVaniaSafeCracker"
+          }
+        ]
+      },
+      "locations": {
+        "EidolonJobManifest.json": [
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyLib",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapOne",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapTwo"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyLib",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyTheft",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapOne"
+            ]
+          },
+          {
+            "location": "TentC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyAss",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyExt",
+              "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCache"
+            ]
+          }
+        ],
+        "VenusJobManifest.json": [
+          {
+            "location": "BountyNefsHead",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobAssassinate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobDefense"
+            ]
+          },
+          {
+            "location": "BountyWarehouse",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobExterminate",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobAmbush"
+            ]
+          },
+          {
+            "location": "BountyRepairBay",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobRecovery",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusWetworkJobAssassinate"
+            ]
+          },
+          {
+            "location": "BountySunDial",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobAmbush",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobResource"
+            ]
+          },
+          {
+            "location": "BountyPufferFarm",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobResource",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobSpy"
+            ]
+          },
+          {
+            "location": "BountyCoolantCoil",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobRecovery",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobAmbush",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobResource"
+            ]
+          },
+          {
+            "location": "BountyDigSite",
+            "jobs": [
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusSpyJobSpy",
+              "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobResource"
+            ]
+          }
+        ],
+        "MicroplanetJobManifest.json": [
+          {
+            "location": "ChamberA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          },
+          {
+            "location": "ChamberB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty"
+            ]
+          },
+          {
+            "location": "ChamberC",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty"
+            ]
+          },
+          {
+            "location": "TentA",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty"
+            ]
+          },
+          {
+            "location": "TentB",
+            "jobs": [
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty",
+              "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "partialAllies": {
+    "seed": "24091",
+    "allies": [
+      "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AmirAllyAgent",
+      "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AoiAllyAgent",
+      "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/ArthurAllyAgent",
+      "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/EleanorAllyAgent"
+    ],
+    "result": [
+      {
+        "node": "SolNode858",
+        "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyBackpacksEasy",
+        "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AmirAllyAgent"
+      },
+      {
+        "node": "SolNode856",
+        "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroyPropsEasy",
+        "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AoiAllyAgent"
+      },
+      {
+        "node": "SolNode850",
+        "challenge": "/Lotus/Types/Challenges/Vania/VaniaHighKillNormal",
+        "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/ArthurAllyAgent"
+      },
+      {
+        "node": "SolNode853",
+        "challenge": "/Lotus/Types/Challenges/Vania/VaniaInfestedCrossfire",
+        "ally": "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/EleanorAllyAgent"
+      },
+      {
+        "node": "SolNode850",
+        "challenge": "/Lotus/Types/Challenges/Vania/VaniaDestroySpeakersVeryHard"
+      },
+      {
+        "node": "SolNode854",
+        "challenge": "/Lotus/Types/Challenges/Vania/VaniaExplodingInfested"
+      },
+      {
+        "node": "SolNode852",
+        "challenge": "/Lotus/Types/Challenges/Vania/Lich/LichVaniaHighKill"
+      }
+    ]
+  }
+}

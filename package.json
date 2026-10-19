@@ -1,0 +1,59 @@
+{
+  "name": "world-state-source-workbench",
+  "version": "0.1.1",
+  "description": "Warframe 上游资料工作台：独立来源预览、快照更新与推算",
+  "private": true,
+  "type": "module",
+  "main": "src/desktop/main.mjs",
+  "author": "World State Workbench",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22.19"
+  },
+  "scripts": {
+    "start": "electron .",
+    "cli": "node src/cli.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "pack:mac": "electron-builder --mac zip --arm64 --x64",
+    "pack:win": "electron-builder --win zip --x64"
+  },
+  "build": {
+    "appId": "local.worldstate.sourceworkbench",
+    "productName": "Source Workbench",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "config/default.json",
+      "package.json",
+      "使用说明.md"
+    ],
+    "artifactName": "SourceWorkbench-${version}-${os}-${arch}.${ext}",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "identity": null,
+      "target": [
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "zip"
+      ],
+      "signAndEditExecutable": false
+    }
+  },
+  "dependencies": {
+    "jsonc-parser": "3.3.1",
+    "lzma": "2.3.2",
+    "undici": "8.12.3"
+  },
+  "devDependencies": {
+    "electron": "44.9.0",
+    "electron-builder": "26.15.3"
+  }
+}

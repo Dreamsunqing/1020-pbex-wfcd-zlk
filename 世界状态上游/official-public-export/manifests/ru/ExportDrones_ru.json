@@ -1,0 +1,112 @@
+{
+  "ExportDrones": [
+    {
+      "uniqueName": "/Lotus/Types/Ship/AdvancedResourceDrone",
+      "name": "Титановый экстрактор Прайм",
+      "description": "Установите экстрактор на планете, чтобы собирать с неё ресурсы.\r\n\r\nДля максимальной эффективности экстрактор должен регулярно освобождаться от содержимого и проверяться на повреждения.",
+      "binCount": 1,
+      "binCapacity": 2,
+      "fillRate": 4,
+      "durability": 100,
+      "repairRate": 10,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/AdvancedUcResourceDrone",
+      "name": "Дистиллирующий экстрактор Прайм",
+      "description": "Дистиллирующий экстрактор Прайм имеет увеличенный шанс на добычу необычных и редких ресурсов.\r\n\r\nРазверните этот экстрактор на планете для получения большого числа ресурсов. Для максимальной эффективности должен регулярно опустошаться и проверяться на повреждения.",
+      "binCount": 1,
+      "binCapacity": 2,
+      "fillRate": 8,
+      "durability": 200,
+      "repairRate": 20,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/BasicResourceDrone",
+      "name": "Титановый экстрактор",
+      "description": "Установите экстрактор на планете, чтобы собирать с неё ресурсы.\r\n\r\nДля максимальной эффективности экстрактор должен регулярно освобождаться от содержимого и проверяться на повреждения.",
+      "binCount": 1,
+      "binCapacity": 1,
+      "fillRate": 4,
+      "durability": 100,
+      "repairRate": 10,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/BasicUcResourceDrone",
+      "name": "Дистиллирующий экстрактор",
+      "description": "Дистиллирующий экстрактор имеет увеличенный шанс на добычу необычных и редких ресурсов.\r\n\r\nРазверните этот экстрактор на планете для сбора ресурсов. Для максимальной эффективности должен регулярно опустошаться и проверяться на повреждения.",
+      "binCount": 1,
+      "binCapacity": 1,
+      "fillRate": 8,
+      "durability": 200,
+      "repairRate": 20,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/LandscapeTrapLight",
+      "name": "Титановый экстрактор",
+      "description": "Установите экстрактор на планете, чтобы собирать с неё ресурсы.\r\n\r\nДля максимальной эффективности экстрактор должен регулярно освобождаться от содержимого и проверяться на повреждения.",
+      "binCount": 1,
+      "binCapacity": 20,
+      "fillRate": 0.1,
+      "durability": 100,
+      "repairRate": 0,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        4,
+        1,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/VoidTraderResourceDrone",
+      "name": "Экстрактор: Нирода Призма",
+      "description": "Благодаря уникальным технологиям Орокин, эта модель разработана для извлечения ресурсов в самых суровых условиях.",
+      "binCount": 1,
+      "binCapacity": 1,
+      "fillRate": 8,
+      "durability": 200,
+      "repairRate": 20,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    }
+  ]
+}

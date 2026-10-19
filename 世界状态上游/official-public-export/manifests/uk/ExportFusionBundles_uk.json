@@ -1,0 +1,310 @@
+{
+  "ExportFusionBundles": [
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/DeepSpaceCommonAvionicsEndo",
+      "description": "Використовується для поліпшення плекса рейкоджека й авіоніки.",
+      "codexSecret": false,
+      "fusionPoints": 150
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/DeepSpaceUncommonAvionicsEndo",
+      "description": "Використовується для поліпшення плекса рейкоджека й авіоніки.",
+      "codexSecret": false,
+      "fusionPoints": 300
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/EarthCommonAvionicsEndo",
+      "description": "Використовується для поліпшення плекса рейкоджека й авіоніки.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/EarthUncommonAvionicsEndo",
+      "description": "Використовується для поліпшення плекса рейкоджека й авіоніки.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/MarketTier1CrewShipFusionBundle",
+      "description": "Використовується для поліпшення плекса рейкоджека й авіоніки.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/MarketTier2CrewShipFusionBundle",
+      "description": "Використовується для поліпшення плекса рейкоджека й авіоніки.",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/MarketTier3CrewShipFusionBundle",
+      "description": "Використовується для поліпшення плекса рейкоджека й авіоніки.",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/SaturnCommonAvionicsEndo",
+      "description": "Використовується для поліпшення плекса рейкоджека й авіоніки.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/SaturnUncommonAvionicsEndo",
+      "description": "Використовується для поліпшення плекса рейкоджека й авіоніки.",
+      "codexSecret": false,
+      "fusionPoints": 200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertFusionBundleLarge",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 150
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertFusionBundleMedium",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertFusionBundleSmall",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 80
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertRewardFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 235
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierAEndoCommon",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 15
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierAEndoUncommon",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierBEndoCommon",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 15
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierBEndoUncommon",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierCEndoUncommon",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierDEndoUncommon",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitRepeatableNormalFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 250
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitRepeatableSteelPathFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitSilverNormalFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitSilverSteelPathFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 6000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CommonFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 15
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EliteAlertFusionBundleLarge",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 1500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EliteAlertFusionBundleMedium",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 1200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EliteAlertFusionBundleSmall",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 900
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EndoJackpotBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 15000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EvergreenLoginRewardFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 30000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/JunctionRewardNPFusionBundleA",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 2500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/JunctionRewardNPFusionBundleB",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 750
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/LoginRewardFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MPVDualPackFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 50000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MPVSinglePackFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 10000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MarketTier1FusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MarketTier2FusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MarketTier3FusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/NightwatchFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 1500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/PurgatoryBlackTokenFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 600
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/PurgatoryBlueTokenFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/PurgatoryGoldTokenFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierALarge",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 150
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierASmall",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierBLarge",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 300
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierBSmall",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierCLarge",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 450
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierCSmall",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 300
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierDLarge",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 600
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierDSmall",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RareFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 80
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/UncommonFusionBundle",
+      "description": "Поглинається в процесі злиття. Поліпшує характеристики модифікатора.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    }
+  ]
+}

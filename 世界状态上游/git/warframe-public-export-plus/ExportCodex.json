@@ -1,0 +1,3372 @@
+{
+    "objects": {
+        "/Lotus/Objects/Tenno/Props/TitaniaCodexEntryADeco": {
+            "name": "/Lotus/Language/G1Quests/FairyQuestCodexEntryATitle",
+            "description": "/Lotus/Language/G1Quests/FairyQuestCodexEntryABody",
+            "icon": "/Lotus/Interface/Icons/Objects/TitaniaCodexEntry.png",
+            "reqScans": 1,
+            "secret": false
+        },
+        "/Lotus/Objects/Tenno/Props/TitaniaCodexEntryBDeco": {
+            "name": "/Lotus/Language/G1Quests/FairyQuestCodexEntryBTitle",
+            "description": "/Lotus/Language/G1Quests/FairyQuestCodexEntryBBody",
+            "icon": "/Lotus/Interface/Icons/Objects/TitaniaCodexEntry.png",
+            "reqScans": 1,
+            "secret": false
+        },
+        "/Lotus/Objects/Tenno/Props/TitaniaCodexEntryCDeco": {
+            "name": "/Lotus/Language/G1Quests/FairyQuestCodexEntryCTitle",
+            "description": "/Lotus/Language/G1Quests/FairyQuestCodexEntryCBody",
+            "icon": "/Lotus/Interface/Icons/Objects/TitaniaCodexEntry.png",
+            "reqScans": 1,
+            "secret": false
+        },
+        "/Lotus/Types/Friendly/Agents/ExcavatorAvatar": {
+            "name": "/Lotus/Language/Game/ExcavatorObject",
+            "icon": "/Lotus/Interface/Icons/Objects/TennoExcavator.png",
+            "reqScans": 20,
+            "secret": false
+        },
+        "/Lotus/Types/Friendly/Agents/DefenseCorePipeAvatar": {
+            "name": "/Lotus/Language/Objectives/CoreSabotageCorePipe",
+            "icon": "/Lotus/Interface/Icons/Objects/CorePipe.png",
+            "reqScans": 20,
+            "secret": false
+        },
+        "/Lotus/Types/Friendly/Agents/DefenseComputerCorpusAvatar": {
+            "name": "/Lotus/Language/Game/HackCorpusComputer",
+            "icon": "/Lotus/Interface/Icons/Objects/CorpusSystems.png",
+            "reqScans": 20,
+            "secret": false
+        },
+        "/Lotus/Types/Gameplay/Race/CrpSpaceMine": {
+            "name": "/Lotus/Language/Game/CorpusStasisMine",
+            "icon": "/Lotus/Interface/Icons/Objects/CorpusStasisMine.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Friendly/Agents/DefenseCorePipeAvatarGrineer": {
+            "name": "/Lotus/Language/Objectives/CoreSabotageCorePipe",
+            "icon": "/Lotus/Interface/Icons/Objects/CorePipeGrineer.png",
+            "reqScans": 20,
+            "secret": false
+        },
+        "/Lotus/Types/LevelObjects/GrineerBreakableFan": {
+            "name": "/Lotus/Language/Game/DestructibleObject_Fan",
+            "icon": "/Lotus/Interface/Icons/Objects/Fan.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Gameplay/Grineer/GrineerShrapnelMine": {
+            "name": "/Lotus/Language/Game/ShrapnelMine",
+            "icon": "/Lotus/Interface/Icons/Objects/ShrapnelMine.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Weapons/Grineer/Emplacements/GrnEmplcmntStndng/GrineerFortressEmplacementStanding": {
+            "name": "/Lotus/Language/Game/GrnFortressStandingGunName",
+            "description": "/Lotus/Language/Game/GrineerStandingGunDesc",
+            "icon": "/Lotus/Interface/Icons/Npcs/Grineer/Fortress/FortressEmplacement.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/MediumLootCrateGrnFortA": {
+            "name": "/Lotus/Language/Scans/FortressLootCrateCommon",
+            "icon": "/Lotus/Interface/Icons/Objects/FortressLootCrateA.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/MediumLootCrateGrnFortB": {
+            "name": "/Lotus/Language/Scans/FortressLootCrateUncommon",
+            "icon": "/Lotus/Interface/Icons/Objects/FortressLootCrateB.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/LevelObjects/CorpusBreakableVent": {
+            "name": "/Lotus/Language/Game/DestructibleObject_Grate",
+            "icon": "/Lotus/Interface/Icons/Objects/CorpusGrate.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/LevelObjects/GrineerBreakableVent": {
+            "name": "/Lotus/Language/Game/DestructibleObject_Grate",
+            "icon": "/Lotus/Interface/Icons/Objects/GrineerGrate.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Friendly/Agents/DefenseComputerAvatar": {
+            "name": "/Lotus/Language/Game/HackComputer",
+            "icon": "/Lotus/Interface/Icons/Objects/GrineerSystems.png",
+            "reqScans": 20,
+            "secret": false
+        },
+        "/Lotus/Types/Friendly/Agents/OrokinMobileDefenseAvatar": {
+            "name": "/Lotus/Language/Game/OrokinMobileDefenseComputerName",
+            "icon": "/Lotus/Interface/Icons/Objects/OrokinSystems.png",
+            "reqScans": 20,
+            "secret": false
+        },
+        "/Lotus/Types/Gameplay/Grineer/DoorSensorDeco": {
+            "name": "/Lotus/Language/Game/DestructibleObject_SensorBar",
+            "icon": "/Lotus/Interface/Icons/Objects/SensorBar.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Gameplay/Race/SupplyShip": {
+            "name": "/Lotus/Language/Game/RaceSupplyShipName",
+            "icon": "/Lotus/Interface/Icons/Objects/CorpusSupplyShip.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Friendly/Agents/DefenseAvatar": {
+            "name": "/Lotus/Language/Game/DefenseArtifact",
+            "icon": "/Lotus/Interface/Icons/Objects/Cryopod.png",
+            "reqScans": 20,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/EntratiLootCrateCommon": {
+            "name": "/Lotus/Language/Entrati/EntratiLabLootCrateCommon",
+            "icon": "/Lotus/Interface/Objects/EntratiLab/EntratiLootCrateCommon.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/EntratiLootCrateUncommon": {
+            "name": "/Lotus/Language/Entrati/EntratiLabLootCrateUncommon",
+            "icon": "/Lotus/Interface/Objects/EntratiLab/EntratiLootCrateUncommon.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/EntratiLootCrateRare": {
+            "name": "/Lotus/Language/Entrati/EntratiLabLootCrateRare",
+            "icon": "/Lotus/Interface/Objects/EntratiLab/EntratiLootCrateRare.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/EntratiLootCrateUltraRare": {
+            "name": "/Lotus/Language/Entrati/EntratiLabLootCrateUltraRare",
+            "icon": "/Lotus/Interface/Icons/Objects/Deimos/OrokinRareCrateContainer.png",
+            "reqScans": 5,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/MITWLootCrate": {
+            "name": "/Lotus/Language/Entrati/MITWLootCrateName",
+            "icon": "/Lotus/Interface/Objects/EntratiLab/MITWLootCrate.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/DomestikDrone/GrineerOceanDomestikDroneMover": {
+            "name": "/Lotus/Language/Objects/GrineerOceanDomestikDrone",
+            "icon": "/Lotus/Interface/Icons/Objects/GrineerOceanDomestikDrone.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/GrnSuperMegaExplodingBarrel": {
+            "name": "/Lotus/Language/Game/GrnMegaExplodingBarrel",
+            "description": "/Lotus/Language/Game/ExplosiveBarrelDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/GrineerMegaExplodingBarrel.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/ExplodingBarrelFrozen": {
+            "name": "/Lotus/Language/Game/ExplosiveBarrelFrozen",
+            "description": "/Lotus/Language/Game/ExplosiveBarrelFrozenDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/CryoBarrel.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/CrpMegaExplodingBarrel": {
+            "name": "/Lotus/Language/Game/CrpMegaExplodingBarrel",
+            "description": "/Lotus/Language/Game/ExplosiveBarrelDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/CrpMegaExplodingBarrel.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/GrnExplodingBarrel": {
+            "name": "/Lotus/Language/Game/GrnExplodingBarrel",
+            "description": "/Lotus/Language/Game/ExplosiveBarrelDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/GrnExplodingBarrel.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/ExplodingBarrel": {
+            "name": "/Lotus/Language/Game/ExplosiveBarrel",
+            "description": "/Lotus/Language/Game/ExplosiveBarrelDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/ExplosiveBarrel.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/OrokinExplodingBarrel": {
+            "name": "/Lotus/Language/Game/OrokinExplodingBarrel",
+            "icon": "/Lotus/Interface/Icons/Objects/OrokinExplodingBarrel.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Guild/GasCityRemaster/Props/CrpExplodingBarrelGas": {
+            "name": "/Lotus/Language/CorpusGasCity/DestructableBarrelGasName",
+            "description": "/Lotus/Language/CorpusGasCity/DestructableBarrelGasDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/CrpExplodingBarrelGas.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Guild/GasCityRemaster/Props/CrpBarrelADynamicDeco": {
+            "name": "/Lotus/Language/CorpusGasCity/PhysicsBarrelName",
+            "description": "/Lotus/Language/CorpusGasCity/PhysicsBarrelDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/CrpBarrelADynamic.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Guild/GasCityRemaster/Props/CrpAnchorPointDeco": {
+            "name": "/Lotus/Language/CorpusGasCity/ParkourZiplineName",
+            "icon": "/Lotus/Interface/Icons/Objects/CrpAnchorPoint.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Guild/GasCityRemaster/Props/GasHazardDetonator": {
+            "name": "/Lotus/Language/CorpusGasCity/DestructablePipeName",
+            "icon": "/Lotus/Interface/Icons/Objects/GazHazardDetonator.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Weapons/Corpus/Emplacement/CrpDeployableCover/CrpDeployableCover": {
+            "name": "/Lotus/Language/Equipment/CorpusDeployableCoverName",
+            "description": "/Lotus/Language/Game/DeployableCoverDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/CorpusDeployableCover.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Weapons/Grineer/Emplacements/GrnDeployableCover/GrineerDeployableCover": {
+            "name": "/Lotus/Language/Game/DeployableCoverName",
+            "description": "/Lotus/Language/Game/DeployableCoverDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/GrineerDeployableCover.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Weapons/Grineer/Emplacements/GrnDeployableCover/AridGrnDeployableCover": {
+            "name": "/Lotus/Language/Game/AridDeployableCover",
+            "description": "/Lotus/Language/Game/DeployableCoverDesc",
+            "icon": "/Lotus/Interface/Icons/Npcs/Grineer/AridBlunt.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Weapons/Grineer/Emplacements/GrnDeployableCover/SeaLabGrnDeployableCover": {
+            "name": "/Lotus/Language/Game/SeaLabDeployableCover",
+            "description": "/Lotus/Language/Game/DeployableCoverDesc",
+            "icon": "/Lotus/Interface/Icons/Npcs/Grineer/SeaLabBlunt.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Weapons/Grineer/Emplacements/GrnEmplcmntStndng/GrineerEmplacementStanding": {
+            "name": "/Lotus/Language/Game/GrineerStandingGunName",
+            "description": "/Lotus/Language/Game/GrineerStandingGunDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/GrineerEmplacement.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Orokin/Props/OroCoverPropSphereACapADeco": {
+            "name": "/Lotus/Language/Game/OrokinOrbBase",
+            "icon": "/Lotus/Interface/Icons/Objects/OrokinLaserTrap.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Enemies/Corpus/Turrets/TurretAvatars/SecurityCameraAvatar": {
+            "name": "/Lotus/Language/Game/SecurityCamera",
+            "icon": "/Lotus/Interface/Icons/Objects/SecurityCamera.png",
+            "reqScans": 20,
+            "secret": false
+        },
+        "/Lotus/Types/Enemies/Corpus/Turrets/TurretAvatars/AutoTurretAvatar": {
+            "name": "/Lotus/Language/Game/AutoTurret",
+            "icon": "/Lotus/Interface/Icons/Objects/SecurityTurret.png",
+            "reqScans": 20,
+            "secret": false
+        },
+        "/Lotus/Types/Friendly/Agents/EventForestDefenseAvatar": {
+            "name": "/Lotus/Language/Items/ToxinInjectorDeviceName",
+            "icon": "/Lotus/Interface/Icons/Objects/CiceroInjector.png",
+            "reqScans": 3,
+            "secret": false
+        },
+        "/Lotus/Objects/Guild/Structural/CurvedGlassDeco": {
+            "name": "/Lotus/Language/Game/SpaceGlass",
+            "icon": "/Lotus/Interface/Icons/Objects/CurvedGlassDeco.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Guild/GasCityRemaster/Props/CrpCleanbotMover": {
+            "name": "/Lotus/Language/CorpusGasCity/RobotCleaningDroneName",
+            "icon": "/Lotus/Interface/Icons/Store/PlayerShip/Decorations/Theme/LisetPropCleaningDrone.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Guild/GasCityRemaster/Props/CrpWelderBotMover": {
+            "name": "/Lotus/Language/CorpusGasCity/RobotRepairDroneSmallName",
+            "icon": "/Lotus/Interface/Icons/Objects/CrpWelderBot.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Guild/GasCityRemaster/Props/GasRepairBotMover": {
+            "name": "/Lotus/Language/CorpusGasCity/RobotRepairDroneName",
+            "icon": "/Lotus/Interface/Icons/Objects/GasRepairBot.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/MediumLootCrateGrnA": {
+            "name": "/Lotus/Language/Game/GrineerLootCrateCommon",
+            "icon": "/Lotus/Interface/Icons/Objects/MediumLootCrateGrnA.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/MediumLootCrateGrnB": {
+            "name": "/Lotus/Language/Game/GrineerLootCrateUncommon",
+            "icon": "/Lotus/Interface/Icons/Objects/MediumLootCrateGrnB.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/OrokinLootCrate": {
+            "name": "/Lotus/Language/Game/OrokinLootCrate",
+            "icon": "/Lotus/Interface/Icons/Objects/OrokinLootCrate.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/DerelictOrokinLootCrate": {
+            "name": "/Lotus/Language/Game/DerelictOrokinLootCrate",
+            "icon": "/Lotus/Interface/Icons/Objects/DerelictOrokinLootCrate.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Grineer/Props/Computers/GrnPanelADeco": {
+            "name": "/Lotus/Language/Game/HackPanel",
+            "icon": "/Lotus/Interface/Icons/Objects/GrnPanelADeco.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Friendly/Agents/CoreDefenseAvatar": {
+            "name": "/Lotus/Language/Game/CoreDefenseArtifact",
+            "icon": "/Lotus/Interface/Icons/Objects/CoreDefenseAvatar.png",
+            "reqScans": 20,
+            "secret": false
+        },
+        "/Lotus/Types/Friendly/Agents/PedestalMachineDefenseAvatar": {
+            "name": "/Lotus/Language/Game/ArcaneMachine",
+            "icon": "/Lotus/Interface/Icons/Objects/ArcaneMachine.png",
+            "reqScans": 1,
+            "secret": false
+        },
+        "/Lotus/Types/Friendly/Agents/CoreDefenseBombAvatar": {
+            "name": "/Lotus/Language/G1Quests/IIQBombName",
+            "icon": "/Lotus/Interface/Icons/Objects/CoreDefenseAvatar.png",
+            "reqScans": 1,
+            "secret": false
+        },
+        "/Lotus/Objects/Guild/Props/Computers/PanelADeco": {
+            "name": "/Lotus/Language/Game/HackPanel",
+            "icon": "/Lotus/Interface/Icons/Objects/PanelADeco.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Game/Decorations/MiningMachineObjective": {
+            "name": "/Lotus/Language/Game/MiningMachineObjective",
+            "icon": "/Lotus/Interface/Icons/Objects/MiningMachineObjective.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/NeutralCreatures/Kubrow/KubrowDen": {
+            "name": "/Lotus/Language/Game/KubrowDen",
+            "description": "/Lotus/Language/Game/KubrowDenLongDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/KubrowDen.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Gameplay/InfestedHiveMode/InfestedTumorObjectiveDeco": {
+            "name": "/Lotus/Language/Objectives/InfestedTumour",
+            "icon": "/Lotus/Interface/Icons/Npcs/InfestedHiveTumorNode.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/RareCorpusLootCrate": {
+            "name": "/Lotus/Language/Game/RareCorpusLootCrate",
+            "icon": "/Lotus/Interface/Icons/Objects/CorpusRareLootCrate.png",
+            "reqScans": 5,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/RareGrineerForestLootCrate": {
+            "name": "/Lotus/Language/Game/RareGrineerForestLootCrate",
+            "icon": "/Lotus/Interface/Icons/Objects/GrineerRareForestLootCrate.png",
+            "reqScans": 5,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/RareGrineerLootCrate": {
+            "name": "/Lotus/Language/Game/RareGrineerLootCrate",
+            "icon": "/Lotus/Interface/Icons/Objects/GrineerRareLootCrate.png",
+            "reqScans": 5,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/RareOrokinLootCrate": {
+            "name": "/Lotus/Language/Game/RareOrokinLootCrate",
+            "icon": "/Lotus/Interface/Icons/Objects/OrokinRareLootCrate.png",
+            "reqScans": 5,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/UltraRareCorpusLootCrate": {
+            "name": "/Lotus/Language/Game/UltraRareCorpusLootCrate",
+            "icon": "/Lotus/Interface/Icons/Objects/CorpusRareUltraLootCrate.png",
+            "reqScans": 3,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/UltraRareGrineerLootCrate": {
+            "name": "/Lotus/Language/Game/UltraRareGrineerLootCrate",
+            "icon": "/Lotus/Interface/Icons/Objects/GrineerRareUltraLootCrate.png",
+            "reqScans": 3,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/UltraRareOrokinLootCrate": {
+            "name": "/Lotus/Language/Game/UltraRareOrokinLootCrate",
+            "icon": "/Lotus/Interface/Icons/Objects/OrokinRareUltraLootCrate.png",
+            "reqScans": 3,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/CorpusLootCrateCommon": {
+            "name": "/Lotus/Language/Game/CorpusLootCrateCommon",
+            "icon": "/Lotus/Interface/Icons/Objects/MediumLootCrate.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/CorpusLootCrateUncommon": {
+            "name": "/Lotus/Language/Game/CorpusLootCrateUncommon",
+            "icon": "/Lotus/Interface/Icons/Objects/MediumLootCrate.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Gameplay/Grineer/BrokenLight": {
+            "name": "/Lotus/Language/Game/DestructibleObject_ElecTrap",
+            "icon": "/Lotus/Interface/Icons/Objects/ArcTrap.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/EnvDangers/GrineerOcean/SharkMover": {
+            "name": "/Lotus/Language/Game/OceanSharkName",
+            "description": "/Lotus/Language/Game/OceanSharkDesc",
+            "icon": "/Lotus/Interface/Icons/Npcs/Shark.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/AlloyPlateContainer": {
+            "name": "/Lotus/Language/Game/AlloyPlateContainer",
+            "description": "/Lotus/Language/Game/AlloyPlateContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/AlloyPlateContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/ArgonCrystalContainer": {
+            "name": "/Lotus/Language/Game/ArgonCrystalContainer",
+            "description": "/Lotus/Language/Game/ArgonCrystalContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/ArgonCrystalContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/CircuitsContainer": {
+            "name": "/Lotus/Language/Game/CircuitsContainer",
+            "description": "/Lotus/Language/Game/CircuitsContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/CircuitsContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/ControlModuleContainer": {
+            "name": "/Lotus/Language/Game/ControlModuleContainer",
+            "description": "/Lotus/Language/Game/ControlModuleContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/ControlModuleContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/FerriteContainer": {
+            "name": "/Lotus/Language/Game/FerriteContainer",
+            "description": "/Lotus/Language/Game/FerriteContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/FerriteContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/GalliumContainer": {
+            "name": "/Lotus/Language/Game/GalliumContainer",
+            "description": "/Lotus/Language/Game/GalliumContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/GalliumContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/MorphicsContainer": {
+            "name": "/Lotus/Language/Game/MorphicsContainer",
+            "description": "/Lotus/Language/Game/MorphicsContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/MorphicsContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/NanoSporesContainer": {
+            "name": "/Lotus/Language/Game/NanoSporesContainer",
+            "description": "/Lotus/Language/Game/NanoSporesContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/NanoSporesContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/NeuralSensorContainer": {
+            "name": "/Lotus/Language/Game/NeuralSensorContainer",
+            "description": "/Lotus/Language/Game/NeuralSensorContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/NeuralSensorContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/NeurodesContainer": {
+            "name": "/Lotus/Language/Game/NeurodesContainer",
+            "description": "/Lotus/Language/Game/NeurodesContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/NeurodesContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/OrokinCellContainer": {
+            "name": "/Lotus/Language/Game/OrokinCellContainer",
+            "description": "/Lotus/Language/Game/OrokinCellContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/OrokinCellContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/PlastidsContainer": {
+            "name": "/Lotus/Language/Game/PlastidsContainer",
+            "description": "/Lotus/Language/Game/PlastidsContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/PlastidsContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/PolymerBundleContainer": {
+            "name": "/Lotus/Language/Game/PolymerBundleContainer",
+            "description": "/Lotus/Language/Game/PolymerBundleContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/PolymerBundleContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/RubedoContainer": {
+            "name": "/Lotus/Language/Game/RubedoContainer",
+            "description": "/Lotus/Language/Game/RubedoContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/RubedoContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/PickUps/ResourceContainers/SalvageContainer": {
+            "name": "/Lotus/Language/Game/SalvageContainer",
+            "description": "/Lotus/Language/Game/SalvageContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/SalvageContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/Gameplay/Eidolon/Resources/FruitTree": {
+            "name": "/Lotus/Language/EidolonPlains/FruitTree",
+            "description": "/Lotus/Language/EidolonPlains/FruitTreeDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Eidolon/FruitTree.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Types/Gameplay/Eidolon/Resources/GrokdrulContainer": {
+            "name": "/Lotus/Language/EidolonPlains/GrokdrulContainer",
+            "description": "/Lotus/Language/EidolonPlains/GrokdrulContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Eidolon/GrokdrulContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/Gameplay/Eidolon/Resources/IraditeContainer": {
+            "name": "/Lotus/Language/EidolonPlains/IraditeContainer",
+            "description": "/Lotus/Language/EidolonPlains/IraditeContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Eidolon/IraditeContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/Gameplay/Eidolon/Resources/Nistlebrush": {
+            "name": "/Lotus/Language/EidolonPlains/NistlepodContainer",
+            "description": "/Lotus/Language/EidolonPlains/NistlepodContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Eidolon/NistlepodContainer.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Types/Gameplay/Venus/Resources/VenusTreeContainer": {
+            "name": "/Lotus/Language/SolarisVenus/VenusTreeContainer",
+            "description": "/Lotus/Language/SolarisVenus/VenusTreeContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Venus/VenusTreeContainer.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Types/Gameplay/Venus/Resources/CoolantContainer": {
+            "name": "/Lotus/Language/SolarisVenus/CoolantContainer",
+            "description": "/Lotus/Language/SolarisVenus/CoolantContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Venus/CoolantContainer.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Types/Gameplay/Venus/Resources/SVFoliageFungusLargeContainer": {
+            "name": "/Lotus/Language/SolarisVenus/FungusHeartContainer",
+            "description": "/Lotus/Language/SolarisVenus/FungusHeartContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Venus/FungusHeartContainerLarge.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Types/Gameplay/Venus/Resources/SVFoliageFungusSmallContainer": {
+            "name": "/Lotus/Language/SolarisVenus/FungusHeartContainer",
+            "description": "/Lotus/Language/SolarisVenus/FungusHeartContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Venus/FungusHeartContainerSmall.png",
+            "reqScans": 5,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Natural/Foliage/SvMushroomFruitSheathedDeco": {
+            "name": "/Lotus/Language/SolarisVenus/VenusCoconutContainer",
+            "icon": "/Lotus/Interface/Icons/Objects/Venus/VenusCoconutSac.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/Gameplay/InfestedHiveMode/InfestedTumorObjectiveSpawnedDeco": {
+            "name": "/Lotus/Language/Objectives/InfestedTumour",
+            "icon": "/Lotus/Interface/Icons/Npcs/InfestedHiveTumorNode.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Types/Items/FusionTreasures/OroFusexA": {
+            "name": "/Lotus/Language/Items/FusionTreasureAName",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/MiscItems/Treasures/OroFusexA.png",
+            "reqScans": 1,
+            "secret": false
+        },
+        "/Lotus/Types/Items/FusionTreasures/OroFusexB": {
+            "name": "/Lotus/Language/Items/FusionTreasureBName",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/MiscItems/Treasures/OroFusexB.png",
+            "reqScans": 1,
+            "secret": false
+        },
+        "/Lotus/Types/Items/FusionTreasures/OroFusexC": {
+            "name": "/Lotus/Language/Items/FusionTreasureCName",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/MiscItems/Treasures/OroFusexC.png",
+            "reqScans": 1,
+            "secret": false
+        },
+        "/Lotus/Types/Items/FusionTreasures/OroFusexD": {
+            "name": "/Lotus/Language/Items/FusionTreasureDName",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/MiscItems/Treasures/OroFusexD.png",
+            "reqScans": 1,
+            "secret": false
+        },
+        "/Lotus/Types/Items/FusionTreasures/OroFusexE": {
+            "name": "/Lotus/Language/Items/FusionTreasureEName",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/MiscItems/Treasures/OroFusexE.png",
+            "reqScans": 1,
+            "secret": false
+        },
+        "/Lotus/Types/Items/FusionTreasures/OroFusexOrnamentA": {
+            "name": "/Lotus/Language/Items/FusionTreasureOrmanetAName",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/MiscItems/Treasures/OroFusexOrnamentA.png",
+            "reqScans": 5,
+            "secret": false
+        },
+        "/Lotus/Types/Items/FusionTreasures/OroFusexOrnamentB": {
+            "name": "/Lotus/Language/Items/FusionTreasureOrmanetBName",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/MiscItems/Treasures/OroFusexOrnamentB.png",
+            "reqScans": 5,
+            "secret": false
+        },
+        "/Lotus/Types/Items/FusionTreasures/OroFusexF": {
+            "name": "/Lotus/Language/Items/FusionTreasureFName",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/MiscItems/Treasures/OroFusexF.png",
+            "reqScans": 1,
+            "secret": true
+        },
+        "/Lotus/Types/LevelObjects/GamemodeLockers/EidolonStorageLockerCache": {
+            "name": "/Lotus/Language/EidolonPlains/EidolonCacheName",
+            "description": "/Lotus/Language/EidolonPlains/EidolonCacheDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/GrnAirDropLocker.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Ostron/Wildlife/EelFish": {
+            "name": "/Lotus/Language/Fish/DayCommonFishA",
+            "description": "/Lotus/Language/Fish/DayCommonFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/FishItemDayCommonA.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/Ostron/Wildlife/FatHeadFish": {
+            "name": "/Lotus/Language/Fish/NightRareFishA",
+            "description": "/Lotus/Language/Fish/NightRareFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/FishItemNightRareA.png",
+            "reqScans": 3,
+            "secret": true
+        },
+        "/Lotus/Objects/Ostron/Wildlife/MaskedFish": {
+            "name": "/Lotus/Language/Fish/DayUncommonFishB",
+            "description": "/Lotus/Language/Fish/DayUncommonFishBDesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/FishItemDayUncommonB.png",
+            "reqScans": 6,
+            "secret": true
+        },
+        "/Lotus/Objects/Ostron/Wildlife/OstronFishA": {
+            "name": "/Lotus/Language/Fish/DayUncommonFishA",
+            "description": "/Lotus/Language/Fish/DayUncommonFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/FishItemDayUncommonA.png",
+            "reqScans": 6,
+            "secret": true
+        },
+        "/Lotus/Objects/Ostron/Wildlife/OstronFishB": {
+            "name": "/Lotus/Language/Fish/DayCommonFishB",
+            "description": "/Lotus/Language/Fish/DayCommonFishBDesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/FishItemDayCommonB.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/Ostron/Wildlife/OstronFishC": {
+            "name": "/Lotus/Language/Fish/BothRareFishA",
+            "description": "/Lotus/Language/Fish/BothRareFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/FishItemBothRareA.png",
+            "reqScans": 3,
+            "secret": true
+        },
+        "/Lotus/Objects/Ostron/Wildlife/OstronFishD": {
+            "name": "/Lotus/Language/Fish/BothCommonFishA",
+            "description": "/Lotus/Language/Fish/BothCommonFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/FishItemBothCommonA.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/Ostron/Wildlife/OstronFishE": {
+            "name": "/Lotus/Language/Fish/NightLegendaryFishA",
+            "description": "/Lotus/Language/Fish/NightLegendaryFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/FishItemNightLegendaryFishA.png",
+            "reqScans": 1,
+            "secret": true
+        },
+        "/Lotus/Objects/Ostron/Wildlife/OstronFishF": {
+            "name": "/Lotus/Language/Fish/BothUncommonFishA",
+            "description": "/Lotus/Language/Fish/BothUncommonFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/FishItemBothUncommonA.png",
+            "reqScans": 6,
+            "secret": true
+        },
+        "/Lotus/Objects/Ostron/Wildlife/OstronFishG": {
+            "name": "/Lotus/Language/Fish/DayCommonFishC",
+            "description": "/Lotus/Language/Fish/DayCommonFishCDesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/FishItemDayCommonC.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/Ostron/Wildlife/OstronFishH": {
+            "name": "/Lotus/Language/Fish/BothUncommonFishB",
+            "description": "/Lotus/Language/Fish/BothUncommonFishBDesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/FishItemBothUncommonB.png",
+            "reqScans": 6,
+            "secret": true
+        },
+        "/Lotus/Objects/Ostron/Wildlife/OstronFishI": {
+            "name": "/Lotus/Language/Fish/BothCommonFishB",
+            "description": "/Lotus/Language/Fish/BothCommonFishBDesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/FishItemBothCommonB.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/Ostron/Wildlife/OstronFishJ": {
+            "name": "/Lotus/Language/Fish/NightRareFishB",
+            "description": "/Lotus/Language/Fish/NightRareFishBDesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/FishItemNightRareB.png",
+            "reqScans": 3,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Wildlife/OroRoboFishADeco": {
+            "name": "/Lotus/Language/SolarisVenus/OrokinBothRareFishA",
+            "description": "/Lotus/Language/SolarisVenus/OrokinBothRareFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/Venus/CodexOrokinBothRareFishA.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Wildlife/OroRoboFishBDeco": {
+            "name": "/Lotus/Language/SolarisVenus/OrokinBothLegendaryFishA",
+            "description": "/Lotus/Language/SolarisVenus/OrokinBothLegendaryFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/Venus/CodexOrokinBothLegendaryFishA.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Wildlife/OroRoboFishCDeco": {
+            "name": "/Lotus/Language/SolarisVenus/OrokinCoolRareFishA",
+            "description": "/Lotus/Language/SolarisVenus/OrokinCoolRareFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/Venus/CodexOrokinCoolRareFishA.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Wildlife/RobofishCorpusADeco": {
+            "name": "/Lotus/Language/SolarisVenus/CorpusCoolCommonFishA",
+            "description": "/Lotus/Language/SolarisVenus/CorpusCoolCommonFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/Venus/NewUI/CorpusCoolCommonFishALarge.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Wildlife/RobofishCorpusCDeco": {
+            "name": "/Lotus/Language/SolarisVenus/CorpusCoolUncommonFishA",
+            "description": "/Lotus/Language/SolarisVenus/CorpusCoolUncommonFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/Venus/NewUI/CorpusCoolUncommonFishALarge.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Wildlife/RobofishCorpusEV1Deco": {
+            "name": "/Lotus/Language/SolarisVenus/CorpusWarmCommonFishB",
+            "description": "/Lotus/Language/SolarisVenus/CorpusWarmCommonFishBDesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/Venus/NewUI/CorpusClearUncommonFishALarge.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Wildlife/RobofishCorpusFDeco": {
+            "name": "/Lotus/Language/SolarisVenus/CorpusWarmUncommonFishA",
+            "description": "/Lotus/Language/SolarisVenus/CorpusWarmUncommonFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/Venus/NewUI/CorpusStormUncommonFishALarge.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Wildlife/RobofishCorpusGDeco": {
+            "name": "/Lotus/Language/SolarisVenus/CorpusBothUncommonFishA",
+            "description": "/Lotus/Language/SolarisVenus/CorpusBothUncommonFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/Venus/NewUI/CorpusBothUncommonFishALarge.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Wildlife/RobofishCorpusStyleADeco": {
+            "name": "/Lotus/Language/SolarisVenus/CorpusWarmCommonFishA",
+            "description": "/Lotus/Language/SolarisVenus/CorpusWarmCommonFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/Venus/NewUI/CorpusWarmCommonFishALarge.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Wildlife/RobofishSolarisADeco": {
+            "name": "/Lotus/Language/SolarisVenus/SolarisWarmRareFishA",
+            "description": "/Lotus/Language/SolarisVenus/SolarisWarmRareFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/Venus/NewUI/TrophySolarisWarmRareFishA.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Wildlife/RobofishSolarisBDeco": {
+            "name": "/Lotus/Language/SolarisVenus/SolarisCoolUncommonFishA",
+            "description": "/Lotus/Language/SolarisVenus/SolarisCoolUncommonFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/Venus/SolarisClearRareFishALarge.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Wildlife/RobofishSolarisCDeco": {
+            "name": "/Lotus/Language/SolarisVenus/SolarisCoolCommonFishA",
+            "description": "/Lotus/Language/SolarisVenus/SolarisCoolCommonFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/Venus/SolarisStormUncommonFishALarge.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Objects/SolarisVenus/Wildlife/RobofishSolarisDDeco": {
+            "name": "/Lotus/Language/SolarisVenus/SolarisBothCommonFishA",
+            "description": "/Lotus/Language/SolarisVenus/SolarisBothCommonFishADesc",
+            "icon": "/Lotus/Interface/Icons/Store/Fish/Venus/NewUI/CorpusStormCommonFishALarge.png",
+            "reqScans": 12,
+            "secret": true
+        },
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/LootContainers/InfestedCommonCrateContainer": {
+            "name": "/Lotus/Language/InfestedMicroplanet/InfestedCrateCommon",
+            "icon": "/Lotus/Interface/Icons/Objects/Deimos/InfestedCommonCrateContainer.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/LootContainers/InfestedRareCrateContainer": {
+            "name": "/Lotus/Language/InfestedMicroplanet/InfestedCrateRare",
+            "icon": "/Lotus/Interface/Icons/Objects/Deimos/InfestedRareCrateContainer.png",
+            "reqScans": 5,
+            "secret": false
+        },
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/LootContainers/OrokinCommonCrateContainer": {
+            "name": "/Lotus/Language/InfestedMicroplanet/OrokinCrateCommon",
+            "icon": "/Lotus/Interface/Icons/Objects/Deimos/OrokinCommonCrateContainer.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/LootContainers/OrokinRareCrateContainer": {
+            "name": "/Lotus/Language/InfestedMicroplanet/OrokinCrateRare",
+            "icon": "/Lotus/Interface/Icons/Objects/Deimos/OrokinRareCrateContainer.png",
+            "reqScans": 5,
+            "secret": false
+        },
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/LootContainers/OrokinVaultCrateContainer": {
+            "name": "/Lotus/Language/InfestedMicroplanet/OrokinCrateVault",
+            "icon": "/Lotus/Interface/Icons/Objects/Deimos/OrokinVaultCrateContainer.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Infestation/InfestedMicroplanet/Wildlife/HybridRareADeco": {
+            "name": "/Lotus/Language/InfestedMicroplanet/FishHybridRareA",
+            "description": "/Lotus/Language/InfestedMicroplanet/FishHybridRareADesc",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/Fishing/Deimos/HybridRareA.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Infestation/InfestedMicroplanet/Wildlife/HybridUncommonADeco": {
+            "name": "/Lotus/Language/InfestedMicroplanet/FishHybridUncommonA",
+            "description": "/Lotus/Language/InfestedMicroplanet/FishHybridUncommonADesc",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/Fishing/Deimos/HybridUncommonA.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Infestation/InfestedMicroplanet/Wildlife/HybridUncommonBDeco": {
+            "name": "/Lotus/Language/InfestedMicroplanet/FishHybridUncommonB",
+            "description": "/Lotus/Language/InfestedMicroplanet/FishHybridUncommonBDesc",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/Fishing/Deimos/HybridUncommonB.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Infestation/InfestedMicroplanet/Wildlife/InfestedCommonADeco": {
+            "name": "/Lotus/Language/InfestedMicroplanet/FishInfestedCommonA",
+            "description": "/Lotus/Language/InfestedMicroplanet/FishInfestedCommonADesc",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/Fishing/Deimos/InfestedCommonA.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Infestation/InfestedMicroplanet/Wildlife/InfestedCommonBDeco": {
+            "name": "/Lotus/Language/InfestedMicroplanet/FishInfestedCommonB",
+            "description": "/Lotus/Language/InfestedMicroplanet/FishInfestedCommonBDesc",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/Fishing/Deimos/InfestedCommonB.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Infestation/InfestedMicroplanet/Wildlife/InfestedCommonCDeco": {
+            "name": "/Lotus/Language/InfestedMicroplanet/FishInfestedCommonC",
+            "description": "/Lotus/Language/InfestedMicroplanet/FishInfestedCommonCDesc",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/Fishing/Deimos/InfestedCommonC.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Infestation/InfestedMicroplanet/Wildlife/InfestedCommonDDeco": {
+            "name": "/Lotus/Language/InfestedMicroplanet/FishInfestedCommonD",
+            "description": "/Lotus/Language/InfestedMicroplanet/FishInfestedCommonDDesc",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/Fishing/Deimos/InfestedCommonD.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Infestation/InfestedMicroplanet/Wildlife/InfestedUncommonADeco": {
+            "name": "/Lotus/Language/InfestedMicroplanet/FishInfestedUncommonA",
+            "description": "/Lotus/Language/InfestedMicroplanet/FishInfestedUncommonADesc",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/Fishing/Deimos/InfestedUncommonA.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Infestation/InfestedMicroplanet/Wildlife/OrokinLegendaryADeco": {
+            "name": "/Lotus/Language/InfestedMicroplanet/FishOrokinLegendaryA",
+            "description": "/Lotus/Language/InfestedMicroplanet/FishOrokinLegendaryADesc",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/Fishing/Deimos/OrokinLegendaryA.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Infestation/InfestedMicroplanet/Wildlife/OrokinRareADeco": {
+            "name": "/Lotus/Language/InfestedMicroplanet/FishOrokinRareA",
+            "description": "/Lotus/Language/InfestedMicroplanet/FishOrokinRareADesc",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/Fishing/Deimos/OrokinRareA.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Infestation/InfestedMicroplanet/Wildlife/OrokinUncommonADeco": {
+            "name": "/Lotus/Language/InfestedMicroplanet/FishOrokinUncommonA",
+            "description": "/Lotus/Language/InfestedMicroplanet/FishOrokinUncommonADesc",
+            "icon": "/Lotus/Interface/Icons/StoreIcons/Fishing/Deimos/OrokinUncommonA.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Objects/Infestation/InfestedMicroplanet/Foliage/InfGorgaricusSacDeco": {
+            "name": "/Lotus/Language/InfestedMicroplanet/ResourceInfGorgaricusSeedContainer",
+            "description": "/Lotus/Language/InfestedMicroplanet/ResourceInfGorgaricusSeedContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Deimos/InfGorgaricusSacDeco.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/Resources/InfMapricoTree/InfMapricoTreeDeco": {
+            "name": "/Lotus/Language/InfestedMicroplanet/ResourceInfMapricoFruitContainer",
+            "description": "/Lotus/Language/InfestedMicroplanet/ResourceInfMapricoFruitContainerDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Deimos/InfMapricoTreeDeco.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Gameplay/InfestedMicroplanet/EncounterObjects/DoorKeyDevice": {
+            "name": "/Lotus/Language/InfestedMicroplanet/DoorKeyDeviceName",
+            "icon": "/Lotus/Interface/Icons/Objects/Deimos/DoorKeyDevice.png",
+            "reqScans": 5,
+            "secret": false
+        },
+        "/Lotus/Types/LevelObjects/Zariman/ZarLootCrateCommonA": {
+            "name": "/Lotus/Language/Zariman/ZarimanCommonLootCrateA",
+            "description": "/Lotus/Language/Zariman/ZarimanCommonLootCrateADesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Zariman/ZarLootCrateCommon.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/LevelObjects/Zariman/ZarLootCrateCommonB": {
+            "name": "/Lotus/Language/Zariman/ZarimanCommonLootCrateB",
+            "description": "/Lotus/Language/Zariman/ZarimanCommonLootCrateBDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Zariman/ZarLootCrateCommonB.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/LevelObjects/Zariman/ZarLootCrateUncommon": {
+            "name": "/Lotus/Language/Zariman/ZarimanUncommonLootCrate",
+            "description": "/Lotus/Language/Zariman/ZarimanUncommonLootCrateDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Zariman/ZarLootCrateUncommon.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/LevelObjects/Zariman/ZarLootCrateRare": {
+            "name": "/Lotus/Language/Zariman/ZarimanRareLootCrate",
+            "description": "/Lotus/Language/Zariman/ZarimanRareLootCrateDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Zariman/ZarLootCrateRare.png",
+            "reqScans": 3,
+            "secret": false
+        },
+        "/Lotus/Types/LevelObjects/Zariman/ZarLootCrateUltraRare": {
+            "name": "/Lotus/Language/Zariman/ZarimanUltraRareLootCrate",
+            "description": "/Lotus/Language/Zariman/ZarimanUltraRareLootCrateDesc",
+            "icon": "/Lotus/Interface/Icons/Objects/Zariman/ZarLootCrateUltraRare.png",
+            "reqScans": 3,
+            "secret": false
+        },
+        "/Lotus/Types/LevelObjects/ZarimanBreakableHatchDoorA": {
+            "name": "/Lotus/Language/Zariman/HatchCover",
+            "icon": "/Lotus/Interface/Icons/Objects/Zariman/ZarimanBreakableHatchDoorA.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Gameplay/1999Wf/Extermination/SupplyCrate": {
+            "name": "/Lotus/Language/1999/SupplyCrate",
+            "icon": "/Lotus/Interface/Icons/Objects/1999Wf/SupplyCrate.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/Tau/CoHLootCrateCommon": {
+            "name": "/Lotus/Language/TauPrequel/TauPrequelFinal/CoHLootCrateCommon",
+            "icon": "/Lotus/Interface/Icons/Objects/Tau/CoHLootCrateCommon.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/Tau/CoHLootCrateUncommon": {
+            "name": "/Lotus/Language/TauPrequel/TauPrequelFinal/CoHLootCrateUncommon",
+            "icon": "/Lotus/Interface/Icons/Objects/Tau/CoHLootCrateUncommon.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/Tau/CoHLootCrateRare": {
+            "name": "/Lotus/Language/TauPrequel/TauPrequelFinal/CoHLootCrateRare",
+            "icon": "/Lotus/Interface/Icons/Objects/Tau/CoHLootCrateRare.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/Tau/CoHLootCrateUltraRare": {
+            "name": "/Lotus/Language/TauPrequel/TauPrequelFinal/CoHLootCrateUltraRare",
+            "icon": "/Lotus/Interface/Icons/Objects/Tau/CoHLootCrateUltraRare.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/LevelObjects/Tau/TauOldPeaceOrokinStorageLocker": {
+            "name": "/Lotus/Language/TauPrequel/TauPrequelFinal/TauOldPeaceOrokinStorageLocker",
+            "icon": "/Lotus/Interface/Icons/Objects/Tau/TauOldPeaceOrokinStorageLocker.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/LevelObjects/Tau/TauOldPeaceStorageLocker": {
+            "name": "/Lotus/Language/TauPrequel/TauPrequelFinal/TauOldPeaceStorageLocker",
+            "icon": "/Lotus/Interface/Icons/Objects/Tau/TauOldPeaceStorageLocker.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/Tau/TMWLootCrateCommon": {
+            "name": "/Lotus/Language/TauPrequel/TauPrequelFinal/TNWLootCrateCommon",
+            "icon": "/Lotus/Interface/Icons/Objects/Tau/TMWLootCrateCommon.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/Tau/TMWLootCrateUncommon": {
+            "name": "/Lotus/Language/TauPrequel/TauPrequelFinal/TNWLootCrateUncommon",
+            "icon": "/Lotus/Interface/Icons/Objects/Tau/TMWLootCrateUncommon.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/Tau/TMWLootCrateRare": {
+            "name": "/Lotus/Language/TauPrequel/TauPrequelFinal/TNWLootCrateRare",
+            "icon": "/Lotus/Interface/Icons/Objects/Tau/TMWLootCrateRare.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/PickUps/LootContainers/Tau/TMWLootCrateUltraRare": {
+            "name": "/Lotus/Language/TauPrequel/TauPrequelFinal/TNWLootCrateUltraRare",
+            "icon": "/Lotus/Interface/Icons/Objects/Tau/TMWLootCrateUltraRare.png",
+            "reqScans": 12,
+            "secret": false
+        },
+        "/Lotus/Types/Enemies/Tau/Dax/TauDaxEmplacementTurret/TauDaxEmplacementTurret": {
+            "name": "/Lotus/Language/TauPrequel/TauPrequelFinal/TauDaxEmplacementTurretName",
+            "description": "/Lotus/Language/TauPrequel/TauPrequelFinal/TauDaxEmplacementTurretDesc",
+            "icon": "/Lotus/Interface/Icons/Npcs/Tau/TauDaxEmplacementTurret.png",
+            "reqScans": 0,
+            "secret": false
+        }
+    },
+    "loreFragments": {
+        "/Lotus/Types/Lore/Fragments/EarthFragmentA": {
+            "name": "/Lotus/Language/Fragments/Earth1",
+            "description": "/Lotus/Language/Fragments/Earth1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Earth1_6213x4142.png",
+            "reqScans": 3,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0010Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0010Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/WildlifeFragmentA": {
+            "name": "/Lotus/Language/Fragments/Wildlife1",
+            "description": "/Lotus/Language/Fragments/Wildlife1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Catbroconcepts_3072x2048.png",
+            "reqScans": 3,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0020Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0020Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EarthSettlementsFragmentA": {
+            "name": "/Lotus/Language/Fragments/EarthSettlements1",
+            "description": "/Lotus/Language/Fragments/EarthSettlements1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Earthforest5_1487x991.png",
+            "reqScans": 3,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0030Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0030Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/VenusFragmentA": {
+            "name": "/Lotus/Language/Fragments/Venus1",
+            "description": "/Lotus/Language/Fragments/Venus1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus1_3373x2249.png",
+            "reqScans": 3,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0040Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0040Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/DojoFragmentA": {
+            "name": "/Lotus/Language/Fragments/Dojo1",
+            "description": "/Lotus/Language/Fragments/Dojo1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Dojo1_4129x2753.png",
+            "reqScans": 3,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0050Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0050Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusCrewFragmentA": {
+            "name": "/Lotus/Language/Fragments/CorpusCrew1",
+            "description": "/Lotus/Language/Fragments/CorpusCrew1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Corpusmodularconcept_1536x1024.png",
+            "reqScans": 3,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0060Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0060Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/MercuryFragmentA": {
+            "name": "/Lotus/Language/Fragments/Mercury1",
+            "description": "/Lotus/Language/Fragments/Mercury1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Mercury1_1429x953.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0070Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0070Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerLeadershipFragmentA": {
+            "name": "/Lotus/Language/Fragments/GrineerLeadership1",
+            "description": "/Lotus/Language/Fragments/GrineerLeadership1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Grineerleadership1_2581x1721.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0080Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0080Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/ArchaicWeaponsFragmentA": {
+            "name": "/Lotus/Language/Fragments/ArchaicWeapons1",
+            "description": "/Lotus/Language/Fragments/ArchaicWeapons1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Archaicweapons1_3000x2000.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0090Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0090Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/MarsFragmentA": {
+            "name": "/Lotus/Language/Fragments/Phobos1",
+            "description": "/Lotus/Language/Fragments/Phobos1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Phobos1_1850x1233.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0100Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0100Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SentinelsFragmentA": {
+            "name": "/Lotus/Language/Fragments/Sentinels1",
+            "description": "/Lotus/Language/Fragments/Sentinels1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Sentinels_3000x2000.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0110Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0110Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusWeaponsFragmentA": {
+            "name": "/Lotus/Language/Fragments/PhobosSettlement1",
+            "description": "/Lotus/Language/Fragments/PhobosSettlement1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Phobos2_2157x1438.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0120Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0120Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/PhobosFragmentA": {
+            "name": "/Lotus/Language/Fragments/Mars1",
+            "description": "/Lotus/Language/Fragments/Mars1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Mars1_3063x2042.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0130Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0130Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerFragmentA": {
+            "name": "/Lotus/Language/Fragments/Grineer1",
+            "description": "/Lotus/Language/Fragments/Grineer1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Lechkrilconcept_2284x1523.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0140Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0140Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/PhobosSettlementFragmentA": {
+            "name": "/Lotus/Language/Fragments/CorpusWeapons1",
+            "description": "/Lotus/Language/Fragments/CorpusWeapons1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Corpusweapons_2520x1680.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0150Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0150Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CeresFragmentA": {
+            "name": "/Lotus/Language/Fragments/Ceres1",
+            "description": "/Lotus/Language/Fragments/Ceres1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ceres1_3414x2276.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0160Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0160Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerLabourFragmentA": {
+            "name": "/Lotus/Language/Fragments/GrineerLabour1",
+            "description": "/Lotus/Language/Fragments/GrineerLabour1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Grineerlabourerlineup_3000x2000.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0170Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0170Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/JupiterFragmentA": {
+            "name": "/Lotus/Language/Fragments/Jupiter1",
+            "description": "/Lotus/Language/Fragments/Jupiter1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Jupiter1_2236x1491.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0180Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0180Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/RoboticsFragmentA": {
+            "name": "/Lotus/Language/Fragments/Robotics1",
+            "description": "/Lotus/Language/Fragments/Robotics1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Zanukaconcept_2754x1836.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0190Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0190Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EuropaFragmentA": {
+            "name": "/Lotus/Language/Fragments/Europa1",
+            "description": "/Lotus/Language/Fragments/Europa1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Europa1_2936x1957.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0200Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0200Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusFragmentA": {
+            "name": "/Lotus/Language/Fragments/Corpus1",
+            "description": "/Lotus/Language/Fragments/Corpus1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Nefanyoportrait_3072x2048.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0210Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0210Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EuropaLandscapeFragmentA": {
+            "name": "/Lotus/Language/Fragments/EuropaLandscape1",
+            "description": "/Lotus/Language/Fragments/EuropaLandscape1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Europa5_1920x1280.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0220Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0220Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/VoidFragmentA": {
+            "name": "/Lotus/Language/Fragments/Void1",
+            "description": "/Lotus/Language/Fragments/Void1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Void1_3138x2092.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0230Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0230Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/OrokinFragmentA": {
+            "name": "/Lotus/Language/Fragments/Orokin1",
+            "description": "/Lotus/Language/Fragments/Orokin1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Orokin1_1669x1113.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0240Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0240Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SaturnFragmentA": {
+            "name": "/Lotus/Language/Fragments/Saturn1",
+            "description": "/Lotus/Language/Fragments/Saturn1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Saturn1_2912x1941.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0250Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0250Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CitizensFragmentA": {
+            "name": "/Lotus/Language/Fragments/Citizens1",
+            "description": "/Lotus/Language/Fragments/Citizens1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Citizens1_3000x2000.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0260Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0260Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/LandingCraftFragmentA": {
+            "name": "/Lotus/Language/Fragments/LandingCraft1",
+            "description": "/Lotus/Language/Fragments/LandingCraft1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Lisetconcept_1520x1013.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0270Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0270Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/UranusFragmentA": {
+            "name": "/Lotus/Language/Fragments/Uranus1",
+            "description": "/Lotus/Language/Fragments/Uranus1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Uranus2_4034x2689.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0280Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0280Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/OrbiterFragmentA": {
+            "name": "/Lotus/Language/Fragments/Orbiter1",
+            "description": "/Lotus/Language/Fragments/Orbiter1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Tennoorbiter_4827x3218.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0290Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0290Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/NeptuneFragmentA": {
+            "name": "/Lotus/Language/Fragments/Neptune1",
+            "description": "/Lotus/Language/Fragments/Neptune1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Neptune1_2215x1477.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0300Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0300Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/LotusFragmentA": {
+            "name": "/Lotus/Language/Fragments/Lotus1",
+            "description": "/Lotus/Language/Fragments/Lotus1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Lotusconcept_2327x1551.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0310Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0310Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/MoonFragmentA": {
+            "name": "/Lotus/Language/Fragments/Moon1",
+            "description": "/Lotus/Language/Fragments/Moon1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Moon1_2573x1715.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0320Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0320Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/WarframesFragmentB": {
+            "name": "/Lotus/Language/Fragments/Warframes2",
+            "description": "/Lotus/Language/Fragments/Warframes2Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Inarosconcept_3149x2099.png",
+            "reqScans": 5,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0330Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0330Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/PlutoFragmentA": {
+            "name": "/Lotus/Language/Fragments/Pluto1",
+            "description": "/Lotus/Language/Fragments/Pluto1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Pluto1_2168x1445.png",
+            "reqScans": 7,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0340Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0340Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/InfestedFragmentA": {
+            "name": "/Lotus/Language/Fragments/Infested1",
+            "description": "/Lotus/Language/Fragments/Infested1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Infestedconcepts_3072x2048.png",
+            "reqScans": 7,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0350Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0350Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/OrokinDerelictFragmentA": {
+            "name": "/Lotus/Language/Fragments/OrokinDerelict1",
+            "description": "/Lotus/Language/Fragments/OrokinDerelict1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Derelict1_1535x1023.png",
+            "reqScans": 7,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0360Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0360Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/TheCollapseFragmentA": {
+            "name": "/Lotus/Language/Fragments/TheCollapse1",
+            "description": "/Lotus/Language/Fragments/TheCollapse1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Thecollapse2_1159x773.png",
+            "reqScans": 7,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0370Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0370Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/LephantisFragmentA": {
+            "name": "/Lotus/Language/Fragments/Lephantis1",
+            "description": "/Lotus/Language/Fragments/Lephantis1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Lephantisconcept_3000x2000.png",
+            "reqScans": 7,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0380Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0380Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/ErisFragmentA": {
+            "name": "/Lotus/Language/Fragments/Eris1",
+            "description": "/Lotus/Language/Fragments/Eris1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eris1_1339x893.png",
+            "reqScans": 7,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0390Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0390Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/WarframesFragmentA": {
+            "name": "/Lotus/Language/Fragments/Warframes1",
+            "description": "/Lotus/Language/Fragments/Warframes1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Warframe3_1535x1023.png",
+            "reqScans": 7,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0400Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0400Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/InfestationFragmentA": {
+            "name": "/Lotus/Language/Fragments/Infestation1",
+            "description": "/Lotus/Language/Fragments/Infestation1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Infestation1_2148x1432.png",
+            "reqScans": 7,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0410Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0410Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SednaFragmentA": {
+            "name": "/Lotus/Language/Fragments/Sedna1",
+            "description": "/Lotus/Language/Fragments/Sedna1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Sedna1_6576x4384.png",
+            "reqScans": 7,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0420Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0420Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerTechnologyFragmentA": {
+            "name": "/Lotus/Language/Fragments/GrineerTechnology1",
+            "description": "/Lotus/Language/Fragments/GrineerTechnology1Desc",
+            "image": "/Lotus/Interface/FragmentArtwork/Mercury3_5796x3864.png",
+            "reqScans": 7,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/OrdisMemories/MemoryOne/DMemoryOne0430Ordis_en.wav",
+                "text": "/Lotus/Language/Subtitles/CephalonFragments/DMemoryOne0430Ordis"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusReliefFragments/CorpusReliefA": {
+            "name": "/Lotus/Language/Fragments/CorpusGreedReliefAName",
+            "description": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0010Parvos",
+            "image": "/Lotus/Objects/Corpus/CorpusShip/Materials/CrpGreedReliefA_d.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CorpusFounder/Reliefs/DReliefs0010Parvos_en.wav",
+                "text": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0010Parvos"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusReliefFragments/CorpusReliefB": {
+            "name": "/Lotus/Language/Fragments/CorpusGreedReliefBName",
+            "description": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0020Parvos",
+            "image": "/Lotus/Objects/Corpus/CorpusShip/Materials/CrpGreedReliefB_d.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CorpusFounder/Reliefs/DReliefs0020Parvos_en.wav",
+                "text": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0020Parvos"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusReliefFragments/CorpusReliefC": {
+            "name": "/Lotus/Language/Fragments/CorpusGreedReliefCName",
+            "description": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0030Parvos",
+            "image": "/Lotus/Objects/Corpus/CorpusShip/Materials/CrpGreedReliefC_d.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CorpusFounder/Reliefs/DReliefs0030Parvos_en.wav",
+                "text": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0030Parvos"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusReliefFragments/CorpusReliefD": {
+            "name": "/Lotus/Language/Fragments/CorpusGreedReliefDName",
+            "description": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0040Parvos",
+            "image": "/Lotus/Objects/Corpus/CorpusShip/Materials/CrpGreedReliefD_d.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CorpusFounder/Reliefs/DReliefs0040Parvos_en.wav",
+                "text": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0040Parvos"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusReliefFragments/CorpusReliefE": {
+            "name": "/Lotus/Language/Fragments/CorpusGreedReliefEName",
+            "description": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0050Parvos",
+            "image": "/Lotus/Objects/Corpus/CorpusShip/Materials/CrpGreedReliefE_d.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CorpusFounder/Reliefs/DReliefs0050Parvos_en.wav",
+                "text": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0050Parvos"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusReliefFragments/CorpusReliefF": {
+            "name": "/Lotus/Language/Fragments/CorpusGreedReliefFName",
+            "description": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0060Parvos",
+            "image": "/Lotus/Objects/Corpus/CorpusShip/Materials/CrpGreedReliefF_d.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CorpusFounder/Reliefs/DReliefs0060Parvos_en.wav",
+                "text": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0060Parvos"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusReliefFragments/CorpusReliefG": {
+            "name": "/Lotus/Language/Fragments/CorpusGreedReliefGName",
+            "description": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0070Parvos",
+            "image": "/Lotus/Objects/Corpus/CorpusShip/Materials/CrpGreedReliefG_d.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CorpusFounder/Reliefs/DReliefs0070Parvos_en.wav",
+                "text": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0070Parvos"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusReliefFragments/CorpusReliefH": {
+            "name": "/Lotus/Language/Fragments/CorpusGreedReliefHName",
+            "description": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0080Parvos",
+            "image": "/Lotus/Objects/Corpus/CorpusShip/Materials/CrpGreedReliefH_d.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CorpusFounder/Reliefs/DReliefs0080Parvos_en.wav",
+                "text": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0080Parvos"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusReliefFragments/CorpusReliefI": {
+            "name": "/Lotus/Language/Fragments/CorpusGreedReliefIName",
+            "description": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0090Parvos",
+            "image": "/Lotus/Objects/Corpus/CorpusShip/Materials/CrpGreedReliefI_d.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CorpusFounder/Reliefs/DReliefs0090Parvos_en.wav",
+                "text": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0090Parvos"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusReliefFragments/CorpusReliefJ": {
+            "name": "/Lotus/Language/Fragments/CorpusGreedReliefJName",
+            "description": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0100Parvos",
+            "image": "/Lotus/Objects/Corpus/CorpusShip/Materials/CrpGreedReliefJ_d.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CorpusFounder/Reliefs/DReliefs0100Parvos_en.wav",
+                "text": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0100Parvos"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/CorpusReliefFragments/CorpusReliefK": {
+            "name": "/Lotus/Language/Fragments/CorpusGreedReliefKName",
+            "description": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0110Parvos",
+            "image": "/Lotus/Objects/Corpus/CorpusShip/Materials/CrpGreedReliefK_d.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CorpusFounder/Reliefs/DReliefs0110Parvos_en.wav",
+                "text": "/Lotus/Language/Subtitles/CorpusFounder/DReliefs0110Parvos"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GasCityFragments/GasCityLoreFragmentA": {
+            "name": "/Lotus/Language/Fragments/GasCityFragmentA",
+            "description": "/Lotus/Language/Fragments/GasCityFragmentADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Jupiter/JupiterFragmentA_2048x1024.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CrpGasCity/AladV/DGCAladFrag1590AladV_en.wav",
+                "text": "/Lotus/Language/Subtitles/GasCity/DGCAladFrag1590AladV"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GasCityFragments/GasCityLoreFragmentB": {
+            "name": "/Lotus/Language/Fragments/GasCityFragmentB",
+            "description": "/Lotus/Language/Fragments/GasCityFragmentBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Jupiter/JupiterFragmentB_2048x1024.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CrpGasCity/AladV/DGCAladFrag1600AladV_en.wav",
+                "text": "/Lotus/Language/Subtitles/GasCity/DGCAladFrag1600AladV"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GasCityFragments/GasCityLoreFragmentC": {
+            "name": "/Lotus/Language/Fragments/GasCityFragmentC",
+            "description": "/Lotus/Language/Fragments/GasCityFragmentCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Jupiter/JupiterFragmentC_2048x1024.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CrpGasCity/AladV/DGCAladFrag1610AladV_en.wav",
+                "text": "/Lotus/Language/Subtitles/GasCity/DGCAladFrag1610AladV"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GasCityFragments/GasCityLoreFragmentD": {
+            "name": "/Lotus/Language/Fragments/GasCityFragmentD",
+            "description": "/Lotus/Language/Fragments/GasCityFragmentDDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Jupiter/JupiterFragmentD_2048x1024.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CrpGasCity/AladV/DGCAladFrag1620AladV_en.wav",
+                "text": "/Lotus/Language/Subtitles/GasCity/DGCAladFrag1620AladV"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GasCityFragments/GasCityLoreFragmentE": {
+            "name": "/Lotus/Language/Fragments/GasCityFragmentE",
+            "description": "/Lotus/Language/Fragments/GasCityFragmentEDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Jupiter/JupiterFragmentE_2048x1024.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CrpGasCity/AladV/DGCAladFrag1630AladV_en.wav",
+                "text": "/Lotus/Language/Subtitles/GasCity/DGCAladFrag1630AladV"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GasCityFragments/GasCityLoreFragmentF": {
+            "name": "/Lotus/Language/Fragments/GasCityFragmentF",
+            "description": "/Lotus/Language/Fragments/GasCityFragmentFDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Jupiter/JupiterFragmentF_2048x1024.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CrpGasCity/AladV/DGCAladFrag1640AladV_en.wav",
+                "text": "/Lotus/Language/Subtitles/GasCity/DGCAladFrag1640AladV"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GasCityFragments/GasCityLoreFragmentG": {
+            "name": "/Lotus/Language/Fragments/GasCityFragmentG",
+            "description": "/Lotus/Language/Fragments/GasCityFragmentGDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Jupiter/JupiterFragmentG_2048x1024.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CrpGasCity/AladV/DGCAladFrag1650AladV_en.wav",
+                "text": "/Lotus/Language/Subtitles/GasCity/DGCAladFrag1650AladV"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GasCityFragments/GasCityLoreFragmentH": {
+            "name": "/Lotus/Language/Fragments/GasCityFragmentH",
+            "description": "/Lotus/Language/Fragments/GasCityFragmentHDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Jupiter/JupiterFragmentH_2048x1024.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/CrpGasCity/AladV/DGCAladFrag1660AladV_en.wav",
+                "text": "/Lotus/Language/Subtitles/GasCity/DGCAladFrag1660AladV"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/TheBusinessLoreFragmentA": {
+            "name": "/Lotus/Language/Fragments/TheBusinessLoreFragmentA",
+            "description": "/Lotus/Language/Fragments/TheBusinessLoreFragmentADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/TheBusinessFragmentA.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Business/DLoreFrag1800TheBusiness_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag1800TheBusiness"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/TheBusinessLoreFragmentB": {
+            "name": "/Lotus/Language/Fragments/TheBusinessLoreFragmentB",
+            "description": "/Lotus/Language/Fragments/TheBusinessLoreFragmentBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/TheBusinessFragmentB.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Business/DLoreFrag1810TheBusiness_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag1810TheBusiness"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/TheBusinessLoreFragmentC": {
+            "name": "/Lotus/Language/Fragments/TheBusinessLoreFragmentC",
+            "description": "/Lotus/Language/Fragments/TheBusinessLoreFragmentCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/TheBusinessFragmentC.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Business/DLoreFrag1820TheBusiness_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag1820TheBusiness"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/TheBusinessLoreFragmentD": {
+            "name": "/Lotus/Language/Fragments/TheBusinessLoreFragmentD",
+            "description": "/Lotus/Language/Fragments/TheBusinessLoreFragmentDDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/TheBusinessFragmentD.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Business/DLoreFrag1830TheBusiness_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag1830TheBusiness"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/TheBusinessLoreFragmentE": {
+            "name": "/Lotus/Language/Fragments/TheBusinessLoreFragmentE",
+            "description": "/Lotus/Language/Fragments/TheBusinessLoreFragmentEDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/TheBusinessFragmentE.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Business/DLoreFrag1840TheBusiness_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag1840TheBusiness"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/EudicoLoreFragmentA": {
+            "name": "/Lotus/Language/Fragments/EudicoLoreFragmentA",
+            "description": "/Lotus/Language/Fragments/EudicoLoreFragmentADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/EudicoFragmentA.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Eudico/DLoreFrag0010Eudico_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0010Eudico"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/EudicoLoreFragmentB": {
+            "name": "/Lotus/Language/Fragments/EudicoLoreFragmentB",
+            "description": "/Lotus/Language/Fragments/EudicoLoreFragmentBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/EudicoFragmentB.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Eudico/DLoreFrag0020Eudico_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0020Eudico"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/EudicoLoreFragmentC": {
+            "name": "/Lotus/Language/Fragments/EudicoLoreFragmentC",
+            "description": "/Lotus/Language/Fragments/EudicoLoreFragmentCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/EudicoFragmentC.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Eudico/DLoreFrag0030Eudico_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0030Eudico"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/EudicoLoreFragmentD": {
+            "name": "/Lotus/Language/Fragments/EudicoLoreFragmentD",
+            "description": "/Lotus/Language/Fragments/EudicoLoreFragmentDDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/EudicoFragmentD.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Eudico/DLoreFrag0040Eudico_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0040Eudico"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/EudicoLoreFragmentE": {
+            "name": "/Lotus/Language/Fragments/EudicoLoreFragmentE",
+            "description": "/Lotus/Language/Fragments/EudicoLoreFragmentEDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/EudicoFragmentE.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Eudico/DLoreFrag0050Eudico_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0050Eudico"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/LegsLoreFragmentA": {
+            "name": "/Lotus/Language/Fragments/LegsLoreFragmentA",
+            "description": "/Lotus/Language/Fragments/LegsLoreFragmentADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/LegsFragmentA.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Legs/DLoreFrag00010Legs_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag00010Legs"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/LegsLoreFragmentB": {
+            "name": "/Lotus/Language/Fragments/LegsLoreFragmentB",
+            "description": "/Lotus/Language/Fragments/LegsLoreFragmentBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/LegsFragmentB.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Legs/DLoreFrag00020Legs_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag00020Legs"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/LegsLoreFragmentC": {
+            "name": "/Lotus/Language/Fragments/LegsLoreFragmentC",
+            "description": "/Lotus/Language/Fragments/LegsLoreFragmentCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/LegsFragmentC.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Legs/DLoreFrag00030Legs_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag00030Legs"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/LegsLoreFragmentD": {
+            "name": "/Lotus/Language/Fragments/LegsLoreFragmentD",
+            "description": "/Lotus/Language/Fragments/LegsLoreFragmentDDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/LegsFragmentD.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Legs/DLoreFrag00040Legs_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag00040Legs"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/LegsLoreFragmentE": {
+            "name": "/Lotus/Language/Fragments/LegsLoreFragmentE",
+            "description": "/Lotus/Language/Fragments/LegsLoreFragmentEDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/LegsFragmentE.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Legs/DLoreFrag00050Legs_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag00050Legs"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/LittleDuckLoreFragmentA": {
+            "name": "/Lotus/Language/Fragments/LittleDuckLoreFragmentA",
+            "description": "/Lotus/Language/Fragments/LittleDuckLoreFragmentADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/LittleDuckFragmentA.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/LittleDuck/DLoreFragDuckOne0010LittleDuck_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFragDuckOne0010LittleDuck"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/LittleDuckLoreFragmentB": {
+            "name": "/Lotus/Language/Fragments/LittleDuckLoreFragmentB",
+            "description": "/Lotus/Language/Fragments/LittleDuckLoreFragmentBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/LittleDuckFragmentB.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/LittleDuck/DLoreFragDuckTwo0020Jubb_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFragDuckTwo0020Jubb"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/LittleDuckLoreFragmentC": {
+            "name": "/Lotus/Language/Fragments/LittleDuckLoreFragmentC",
+            "description": "/Lotus/Language/Fragments/LittleDuckLoreFragmentCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/LittleDuckFragmentC.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/LittleDuck/DLoreFragDuckThree0130LittleDuck_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFragDuckThree0130LittleDuck"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/LittleDuckLoreFragmentD": {
+            "name": "/Lotus/Language/Fragments/LittleDuckLoreFragmentD",
+            "description": "/Lotus/Language/Fragments/LittleDuckLoreFragmentDDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/LittleDuckFragmentD.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/LittleDuck/DLoreFragDuckFour0200LittleDuck_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFragDuckFour0200LittleDuck"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/LittleDuckLoreFragmentE": {
+            "name": "/Lotus/Language/Fragments/LittleDuckLoreFragmentE",
+            "description": "/Lotus/Language/Fragments/LittleDuckLoreFragmentEDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/LittleDuckFragmentE.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/LittleDuck/DLoreFragDuckFive0260LittleDuck_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFragDuckFive0260LittleDuck"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/SmokefingerLoreFragmentA": {
+            "name": "/Lotus/Language/Fragments/SmokefingerLoreFragmentA",
+            "description": "/Lotus/Language/Fragments/SmokefingerLoreFragmentADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/SmokefingerFragmentA.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Smokefinger/DLoreFrag0010Smokefinger_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0010Smokefinger"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/SmokefingerLoreFragmentB": {
+            "name": "/Lotus/Language/Fragments/SmokefingerLoreFragmentB",
+            "description": "/Lotus/Language/Fragments/SmokefingerLoreFragmentBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/SmokefingerFragmentB.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Smokefinger/DLoreFrag0020Smokefinger_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0020Smokefinger"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/SmokefingerLoreFragmentC": {
+            "name": "/Lotus/Language/Fragments/SmokefingerLoreFragmentC",
+            "description": "/Lotus/Language/Fragments/SmokefingerLoreFragmentCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/SmokefingerFragmentC.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Smokefinger/DLoreFrag0030Smokefinger_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0030Smokefinger"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/SmokefingerLoreFragmentD": {
+            "name": "/Lotus/Language/Fragments/SmokefingerLoreFragmentD",
+            "description": "/Lotus/Language/Fragments/SmokefingerLoreFragmentDDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/SmokefingerFragmentD.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Smokefinger/DLoreFrag0040Smokefinger_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0040Smokefinger"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/SmokefingerLoreFragmentE": {
+            "name": "/Lotus/Language/Fragments/SmokefingerLoreFragmentE",
+            "description": "/Lotus/Language/Fragments/SmokefingerLoreFragmentEDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/SmokefingerFragmentE.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Smokefinger/DLoreFrag0050Smokefinger_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0050Smokefinger"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/TickerLoreFragmentA": {
+            "name": "/Lotus/Language/Fragments/TickerLoreFragmentA",
+            "description": "/Lotus/Language/Fragments/TickerLoreFragmentADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/TickerFragmentA.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Ticker/DLoreFrag0010Ticker_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0010Ticker"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/TickerLoreFragmentB": {
+            "name": "/Lotus/Language/Fragments/TickerLoreFragmentB",
+            "description": "/Lotus/Language/Fragments/TickerLoreFragmentBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/TickerFragmentB.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Ticker/DLoreFrag0020Ticker_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0020Ticker"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/TickerLoreFragmentC": {
+            "name": "/Lotus/Language/Fragments/TickerLoreFragmentC",
+            "description": "/Lotus/Language/Fragments/TickerLoreFragmentCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/TickerFragmentC.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Ticker/DLoreFrag0030Ticker_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0030Ticker"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/TickerLoreFragmentD": {
+            "name": "/Lotus/Language/Fragments/TickerLoreFragmentD",
+            "description": "/Lotus/Language/Fragments/TickerLoreFragmentDDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/TickerFragmentD.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Ticker/DLoreFrag0040Ticker_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0040Ticker"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/TickerLoreFragmentE": {
+            "name": "/Lotus/Language/Fragments/TickerLoreFragmentE",
+            "description": "/Lotus/Language/Fragments/TickerLoreFragmentEDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/TickerFragmentE.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Ticker/DLoreFrag0050Ticker_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag0050Ticker"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/RudeZuudLoreFragmentA": {
+            "name": "/Lotus/Language/Fragments/RudeZuudLoreFragmentA",
+            "description": "/Lotus/Language/Fragments/RudeZuudLoreFragmentADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/RudeZuudFragmentA.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Zuud/DLoreFrag1750Zuud_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag1750Zuud"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/RudeZuudLoreFragmentB": {
+            "name": "/Lotus/Language/Fragments/RudeZuudLoreFragmentB",
+            "description": "/Lotus/Language/Fragments/RudeZuudLoreFragmentBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/RudeZuudFragmentB.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Zuud/DLoreFrag1760Zuud_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag1760Zuud"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/RudeZuudLoreFragmentC": {
+            "name": "/Lotus/Language/Fragments/RudeZuudLoreFragmentC",
+            "description": "/Lotus/Language/Fragments/RudeZuudLoreFragmentCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/RudeZuudFragmentC.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Zuud/DLoreFrag1770Zuud_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag1770Zuud"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/RudeZuudLoreFragmentD": {
+            "name": "/Lotus/Language/Fragments/RudeZuudLoreFragmentD",
+            "description": "/Lotus/Language/Fragments/RudeZuudLoreFragmentDDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/RudeZuudFragmentD.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Zuud/DLoreFrag1780Zuud_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag1780Zuud"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/SolarisFragments/RudeZuudLoreFragmentE": {
+            "name": "/Lotus/Language/Fragments/RudeZuudLoreFragmentE",
+            "description": "/Lotus/Language/Fragments/RudeZuudLoreFragmentEDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Venus/RudeZuudFragmentE.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/FortunaMissions/LoreFragments/Zuud/DLoreFrag1790Zuud_en.wav",
+                "text": "/Lotus/Language/Subtitles/FortunaMissions/DLoreFrag1790Zuud"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GlassFragments/GlassFragmentA": {
+            "name": "/Lotus/Language/Fragments/GlassFragmentA",
+            "description": "/Lotus/Language/Fragments/GlassFragmentADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Glass/ChildWeapons.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/GlassQuest/GlassQuestLoreFragment/DGQLoreFrag0010Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/Quests/DGQLoreFrag0010Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GlassFragments/GlassFragmentB": {
+            "name": "/Lotus/Language/Fragments/GlassFragmentB",
+            "description": "/Lotus/Language/Fragments/GlassFragmentBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Glass/OstronFriends_d.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/GlassQuest/GlassQuestLoreFragment/DGQLoreFrag0020Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/Quests/DGQLoreFrag0020Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GlassFragments/GlassFragmentC": {
+            "name": "/Lotus/Language/Fragments/GlassFragmentC",
+            "description": "/Lotus/Language/Fragments/GlassFragmentCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1155x770_GlassWarframe.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/GlassQuest/GlassQuestLoreFragment/DGQLoreFrag0030Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/Quests/DGQLoreFrag0030Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GlassFragments/GlassFragmentD": {
+            "name": "/Lotus/Language/Fragments/GlassFragmentD",
+            "description": "/Lotus/Language/Fragments/GlassFragmentDDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Glass/OstronTownBW.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/GlassQuest/GlassQuestLoreFragment/DGQLoreFrag0040Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/Quests/DGQLoreFrag0040Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GlassFragments/GlassFragmentE": {
+            "name": "/Lotus/Language/Fragments/GlassFragmentE",
+            "description": "/Lotus/Language/Fragments/GlassFragmentEDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Glass/1023x634_OutdoorKitchen.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/GlassQuest/GlassQuestLoreFragment/DGQLoreFrag0050Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/Quests/DGQLoreFrag0050Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerGhoulFragments/GhoulFragmentA": {
+            "name": "/Lotus/Language/Fragments/GhoulFragmentA",
+            "description": "/Lotus/Language/Fragments/GhoulFragmentADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ghouls/1920x1280_Ghouls11.png",
+            "reqScans": 4,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/LoreFragments/DGhoulFragment1120Sigor_en.wav",
+                "text": "/Lotus/Language/Subtitles/GhoulEvent/DGhoulFragment1120Sigor"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerGhoulFragments/GhoulFragmentB": {
+            "name": "/Lotus/Language/Fragments/GhoulFragmentB",
+            "description": "/Lotus/Language/Fragments/GhoulFragmentBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ghouls/1920x1280_Ghouls12.png",
+            "reqScans": 4,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/LoreFragments/DGhoulFragment1130Sigor_en.wav",
+                "text": "/Lotus/Language/Subtitles/GhoulEvent/DGhoulFragment1130Sigor"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerGhoulFragments/GhoulFragmentC": {
+            "name": "/Lotus/Language/Fragments/GhoulFragmentC",
+            "description": "/Lotus/Language/Fragments/GhoulFragmentCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ghouls/1920x1280_Ghouls13.png",
+            "reqScans": 4,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/LoreFragments/DGhoulFragment1140Sigor_en.wav",
+                "text": "/Lotus/Language/Subtitles/GhoulEvent/DGhoulFragment1140Sigor"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerGhoulFragments/GhoulFragmentD": {
+            "name": "/Lotus/Language/Fragments/GhoulFragmentD",
+            "description": "/Lotus/Language/Fragments/GhoulFragmentDDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ghouls/1920x1280_Ghouls14.png",
+            "reqScans": 4,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/LoreFragments/DGhoulFragment1150Sigor_en.wav",
+                "text": "/Lotus/Language/Subtitles/GhoulEvent/DGhoulFragment1150Sigor"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerGhoulFragments/GhoulFragmentE": {
+            "name": "/Lotus/Language/Fragments/GhoulFragmentE",
+            "description": "/Lotus/Language/Fragments/GhoulFragmentEDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ghouls/1024x1024_Ghouls02.png",
+            "reqScans": 4,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/LoreFragments/DGhoulFragment1160Sigor_en.wav",
+                "text": "/Lotus/Language/Subtitles/GhoulEvent/DGhoulFragment1160Sigor"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerGhoulFragments/GhoulFragmentF": {
+            "name": "/Lotus/Language/Fragments/GhoulFragmentF",
+            "description": "/Lotus/Language/Fragments/GhoulFragmentFDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ghouls/1024x1024_Ghouls10.png",
+            "reqScans": 4,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/LoreFragments/DGhoulFragment1170Sigor_en.wav",
+                "text": "/Lotus/Language/Subtitles/GhoulEvent/DGhoulFragment1170Sigor"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerGhoulFragments/GhoulFragmentG": {
+            "name": "/Lotus/Language/Fragments/GhoulFragmentG",
+            "description": "/Lotus/Language/Fragments/GhoulFragmentGDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ghouls/1680x1050_Ghouls03.png",
+            "reqScans": 4,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/LoreFragments/DGhoulFragment1180Sigor_en.wav",
+                "text": "/Lotus/Language/Subtitles/GhoulEvent/DGhoulFragment1180Sigor"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerGhoulFragments/GhoulFragmentH": {
+            "name": "/Lotus/Language/Fragments/GhoulFragmentH",
+            "description": "/Lotus/Language/Fragments/GhoulFragmentHDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ghouls/1680x1050_Ghouls04.png",
+            "reqScans": 4,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/LoreFragments/DGhoulFragment1190Sigor_en.wav",
+                "text": "/Lotus/Language/Subtitles/GhoulEvent/DGhoulFragment1190Sigor"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerGhoulFragments/GhoulFragmentI": {
+            "name": "/Lotus/Language/Fragments/GhoulFragmentI",
+            "description": "/Lotus/Language/Fragments/GhoulFragmentIDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ghouls/1680x1050_Ghouls05.png",
+            "reqScans": 4,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/LoreFragments/DGhoulFragment1200Sigor_en.wav",
+                "text": "/Lotus/Language/Subtitles/GhoulEvent/DGhoulFragment1200Sigor"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerGhoulFragments/GhoulFragmentJ": {
+            "name": "/Lotus/Language/Fragments/GhoulFragmentJ",
+            "description": "/Lotus/Language/Fragments/GhoulFragmentJDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ghouls/1680x1050_Ghouls06.png",
+            "reqScans": 4,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/LoreFragments/DGhoulFragment1210Sigor_en.wav",
+                "text": "/Lotus/Language/Subtitles/GhoulEvent/DGhoulFragment1210Sigor"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerGhoulFragments/GhoulFragmentK": {
+            "name": "/Lotus/Language/Fragments/GhoulFragmentK",
+            "description": "/Lotus/Language/Fragments/GhoulFragmentKDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ghouls/1680x1050_Ghouls07.png",
+            "reqScans": 4,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/LoreFragments/DGhoulFragment1220Sigor_en.wav",
+                "text": "/Lotus/Language/Subtitles/GhoulEvent/DGhoulFragment1220Sigor"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerGhoulFragments/GhoulFragmentL": {
+            "name": "/Lotus/Language/Fragments/GhoulFragmentL",
+            "description": "/Lotus/Language/Fragments/GhoulFragmentLDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ghouls/1680x1050_Ghouls08.png",
+            "reqScans": 4,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/LoreFragments/DGhoulFragment1230Sigor_en.wav",
+                "text": "/Lotus/Language/Subtitles/GhoulEvent/DGhoulFragment1230Sigor"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/GrineerGhoulFragments/GhoulFragmentM": {
+            "name": "/Lotus/Language/Fragments/GhoulFragmentM",
+            "description": "/Lotus/Language/Fragments/GhoulFragmentMDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Ghouls/1680x1050_Ghouls09.png",
+            "reqScans": 4,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/LoreFragments/DGhoulFragment1240Sigor_en.wav",
+                "text": "/Lotus/Language/Subtitles/GhoulEvent/DGhoulFragment1240Sigor"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentA": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentA",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1007x671_EidolonPlains1.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0010Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0010Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentB": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentB",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Glass/TowerResources.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0020Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0020Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentC": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentC",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1316x877_TowerHarvest.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0030Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0030Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentD": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentD",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentDDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1326x884_Cetus1.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0040Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0040Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentE": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentE",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentEDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1331x887_Driller.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0050Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0050Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentF": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentF",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentFDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1375x917_EidolonPlains2.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0060Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0060Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentG": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentG",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentGDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/Amps.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0070Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0070Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentH": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentH",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentHDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/Quills.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0080Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0080Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentI": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentI",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentIDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1448x965_OstronWorkshop.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0090Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0090Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentJ": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentJ",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentJDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1480x986_Cetus2.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0100Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0100Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentK": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentK",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentKDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1658x1105_GrineerDropship.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0110Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0110Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentL": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentL",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentLDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1693x1129_OstronsTown1.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0120Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0120Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentM": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentM",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentMDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1833x1222_balloons.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0130Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0130Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentN": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentN",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentNDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1839x1226_TowerOverlook.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0140Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0140Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentO": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentO",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentODesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1898x1266_Masks.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0150Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0150Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentP": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentP",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentPDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1961x1307_Teralyst.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0160Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0160Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentQ": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentQ",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentQDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/2003x1335_Scavengers.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0170Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0170Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentR": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentR",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentRDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/2161x1411_FeralKavat.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0180Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0180Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentS": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentS",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentSDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/2486x1657_StructureStudies.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0190Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0190Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/EidolonFragments/EidolonFragmentT": {
+            "name": "/Lotus/Language/Fragments/EidolonFragmentT",
+            "description": "/Lotus/Language/Fragments/EidolonFragmentTDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/2559x1706_Landingpad.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/LandscapeMissions/OstronFolktaleFragments/DOstFolkFrag0200Onkko_en.wav",
+                "text": "/Lotus/Language/Subtitles/LandscapeMissions/DOstFolkFrag0200Onkko"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/RevenantFragments/RevenantFragmentA": {
+            "name": "/Lotus/Language/Fragments/MaskOfTheRevenantATitle",
+            "description": "/Lotus/Language/Fragments/MaskOfTheRevenantADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1705x1587_Ropalolyst.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/RevenantMaskQuest/DRevMaskShrineOne0080Nakak_en.wav",
+                "text": "/Lotus/Language/Subtitles/RevenantMask/DRevMaskShrineOne0080Nakak"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/RevenantFragments/RevenantFragmentB": {
+            "name": "/Lotus/Language/Fragments/MaskOfTheRevenantBTitle",
+            "description": "/Lotus/Language/Fragments/MaskOfTheRevenantBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1705x1587_RopalolystEidolon.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/RevenantMaskQuest/DRevMaskShrineTwo0130Nakak_en.wav",
+                "text": "/Lotus/Language/Subtitles/RevenantMask/DRevMaskShrineTwo0130Nakak"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/RevenantFragments/RevenantFragmentC": {
+            "name": "/Lotus/Language/Fragments/MaskOfTheRevenantCTitle",
+            "description": "/Lotus/Language/Fragments/MaskOfTheRevenantCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Eidolon/1703x1874_Revenant.png",
+            "reqScans": 1,
+            "secretTransmission": {
+                "sound": "/Lotus/Sounds/Dialog/RevenantMaskQuest/DRevMaskShrineThree0170Nakak_en.wav",
+                "text": "/Lotus/Language/Subtitles/RevenantMask/DRevMaskShrineThree0170Nakak"
+            }
+        },
+        "/Lotus/Types/Lore/Fragments/AlbrectFragments/AlbrectLoreFragmentA": {
+            "name": "/Lotus/Language/Fragments/AlbrectLoreFragmentAName",
+            "description": "/Lotus/Language/Fragments/AlbrectLoreFragmentADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/EntratiLab/AlbrechtLoreFragmentA.png",
+            "reqScans": 6
+        },
+        "/Lotus/Types/Lore/Fragments/AlbrectFragments/AlbrectLoreFragmentB": {
+            "name": "/Lotus/Language/Fragments/AlbrectLoreFragmentBName",
+            "description": "/Lotus/Language/Fragments/AlbrectLoreFragmentBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/EntratiLab/AlbrechtLoreFragmentB.png",
+            "reqScans": 6
+        },
+        "/Lotus/Types/Lore/Fragments/AlbrectFragments/AlbrectLoreFragmentC": {
+            "name": "/Lotus/Language/Fragments/AlbrectLoreFragmentCName",
+            "description": "/Lotus/Language/Fragments/AlbrectLoreFragmentCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/EntratiLab/AlbrechtLoreFragmentC.png",
+            "reqScans": 5
+        },
+        "/Lotus/Types/Lore/Fragments/AlbrectFragments/AlbrectLoreFragmentD": {
+            "name": "/Lotus/Language/Fragments/AlbrectLoreFragmentDName",
+            "description": "/Lotus/Language/Fragments/AlbrectLoreFragmentDDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/EntratiLab/AlbrechtLoreFragmentD.png",
+            "reqScans": 5
+        },
+        "/Lotus/Types/Lore/Fragments/AlbrectFragments/AlbrectLoreFragmentE": {
+            "name": "/Lotus/Language/Fragments/AlbrectLoreFragmentEName",
+            "description": "/Lotus/Language/Fragments/AlbrectLoreFragmentEDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/EntratiLab/AlbrechtLoreFragmentE.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/DuviriFragments/DuviriLoreFragmentSetA": {
+            "name": "/Lotus/Language/Fragments/DuviriSetAName",
+            "description": "/Lotus/Language/Fragments/DuviriSetADesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Duviri/DuviriLoreFragmentSetA.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/DuviriFragments/DuviriLoreFragmentSetB": {
+            "name": "/Lotus/Language/Fragments/DuviriSetBName",
+            "description": "/Lotus/Language/Fragments/DuviriSetBDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Duviri/DuviriLoreFragmentSetB.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/DuviriFragments/DuviriLoreFragmentSetC": {
+            "name": "/Lotus/Language/Fragments/DuviriSetCName",
+            "description": "/Lotus/Language/Fragments/DuviriSetCDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Duviri/DuviriLoreFragmentSetC.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/DuviriFragments/DuviriLoreFragmentSetD": {
+            "name": "/Lotus/Language/Fragments/DuviriSetDName",
+            "description": "/Lotus/Language/Fragments/DuviriSetDDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Duviri/DuviriLoreFragmentSetD.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/DuviriFragments/DuviriLoreFragmentSetE": {
+            "name": "/Lotus/Language/Fragments/DuviriSetEName",
+            "description": "/Lotus/Language/Fragments/DuviriSetEDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Duviri/DuviriLoreFragmentSetE.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/DuviriFragments/DuviriLoreFragmentSetF": {
+            "name": "/Lotus/Language/Fragments/DuviriSetFName",
+            "description": "/Lotus/Language/Fragments/DuviriSetFDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Duviri/DuviriLoreFragmentSetF.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/DuviriFragments/DuviriLoreFragmentSetG": {
+            "name": "/Lotus/Language/Fragments/DuviriSetGName",
+            "description": "/Lotus/Language/Fragments/DuviriSetGDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Duviri/DuviriLoreFragmentSetG.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/DuviriFragments/DuviriLoreFragmentSetH": {
+            "name": "/Lotus/Language/Fragments/DuviriSetHName",
+            "description": "/Lotus/Language/Fragments/DuviriSetHDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Duviri/DuviriLoreFragmentSetH.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/DuviriFragments/DuviriLoreFragmentSetI": {
+            "name": "/Lotus/Language/Fragments/DuviriSetIName",
+            "description": "/Lotus/Language/Fragments/DuviriSetIDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Duviri/DuviriLoreFragmentSetI.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/DuviriFragments/DuviriLoreFragmentSetJ": {
+            "name": "/Lotus/Language/Fragments/DuviriSetJName",
+            "description": "/Lotus/Language/Fragments/DuviriSetJDesc",
+            "image": "/Lotus/Interface/FragmentArtwork/Duviri/DuviriLoreFragmentSetJ.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/DuviriMITWFragments/DuviriMITWLoreFragmentSetA": {
+            "name": "/Lotus/Language/Isleweaver/IsleweaverFragmentTitle1",
+            "description": "/Lotus/Language/Isleweaver/IsleweaverFragmentBody1",
+            "image": "/Lotus/Interface/FragmentArtwork/Duviri/MITW/DuviriMurmurFragment1.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/AshLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardAshName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardAshCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/BrawlerLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardAtlasName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardAtlasCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/CalibanLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardCalibanName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardCalibanCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/CyteLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardCyteName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardCyteCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/DagathLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardDagathName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardDagathCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/DanteLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardDanteName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardDanteCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/DevourerLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardGrendelName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardGrendelCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/EmberLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardEmberName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardEmberCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/GarudaLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardGarudaName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardGarudaCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/GyreLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardGyreName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardGyreCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/IvaraLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardIvaraName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardIvaraCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/JadeLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardJadeName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardJadeCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/LavosLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardLavosName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardLavosCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/NezhaLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardNezhaName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardNezhaCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/NokkoLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardNokkoName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardNokkoCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/NovaLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardNovaName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardNovaCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/OraxiaLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardOraxiaName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardOraxiaCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/ProteaLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardProteaName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardProteaCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/RunnerLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardGaussName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardGaussCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/SiriusOrionLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardSiriusOrionName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardSiriusOrionCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/StyanaxLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardStyanaxName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardStyanaxCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/TempleLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardTempleName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardTempleCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/TitaniaLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardTitaniaName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardTitaniaCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/UrielLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardUrielName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardUrielCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/VaubanLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardVaubanName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardVaubanCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/LoreCardFragments/VorunaLoreCardFragment": {
+            "name": "/Lotus/Language/Tarot/TarotCardVorunaName",
+            "image": "/Lotus/Objects/Tenno/Props/CollectibleCards/CollectibleCardVorunaCodexIcon.png",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TheAwakeningSongFragment": {
+            "name": "/Lotus/Language/Fragments/TheAwakeningSongName",
+            "image": "/Lotus/Interface/Icons/StoreIcons/SongItem/AwakeningSongFragment.png",
+            "reqScans": 0
+        }
+    },
+    "songs": {
+        "/Lotus/Types/Lore/Fragments/MusicFragments/ArchwingSongFragment": {
+            "name": "/Lotus/Language/Fragments/ArchwingSongName",
+            "song": "/Lotus/Music/LisetJukebox/Archwing.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/ConsumeUsSongFragment": {
+            "name": "/Lotus/Language/Fragments/ConsumeUsSongName",
+            "song": "/Lotus/Music/LisetJukebox/ConsumeUs.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/CorpusGreedSongFragment": {
+            "name": "/Lotus/Language/Fragments/CorpusGreedSongName",
+            "song": "/Lotus/Music/LisetJukebox/CorpusGreed.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/CorruptedSongFragment": {
+            "name": "/Lotus/Language/Fragments/CorruptedSongName",
+            "song": "/Lotus/Music/LisetJukebox/Corrupted.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/DerelictsSongFragment": {
+            "name": "/Lotus/Language/Fragments/DerelictsSongName",
+            "song": "/Lotus/Music/LisetJukebox/Derelicts.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/GeneMoldsSongFragment": {
+            "name": "/Lotus/Language/Fragments/GeneMoldsSongName",
+            "song": "/Lotus/Music/LisetJukebox/GeneMolds.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/GhostsOfVoidSongFragment": {
+            "name": "/Lotus/Language/Fragments/GhostsOfVoidSongName",
+            "song": "/Lotus/Music/LisetJukebox/GhostsOfVoid.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/GrakataSongFragment": {
+            "name": "/Lotus/Language/Fragments/GrakataSongName",
+            "song": "/Lotus/Music/LisetJukebox/Grakata.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/GrineerOnslaughtSongFragment": {
+            "name": "/Lotus/Language/Fragments/GrineerOnslaughtSongName",
+            "song": "/Lotus/Music/LisetJukebox/GrineerOnslaught.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/HunhowSongFragment": {
+            "name": "/Lotus/Language/Fragments/HunhowSongName",
+            "song": "/Lotus/Music/LisetJukebox/Hunhow.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/MarchOfTheMoaSongFragment": {
+            "name": "/Lotus/Language/Fragments/MarchOfTheMoaSongName",
+            "song": "/Lotus/Music/LisetJukebox/MarchOfTheMoa.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/OriginSystemSongFragment": {
+            "name": "/Lotus/Language/Fragments/OriginSystemSongName",
+            "song": "/Lotus/Music/LisetJukebox/OriginSystem.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/OurDiseaseSongFragment": {
+            "name": "/Lotus/Language/Fragments/OurDiseaseSongName",
+            "song": "/Lotus/Music/LisetJukebox/OurDisease.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/RapidAdaptationSongFragment": {
+            "name": "/Lotus/Language/Fragments/RapidAdaptationSongName",
+            "song": "/Lotus/Music/LisetJukebox/RapidAdaptation.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/RedBrothSongFragment": {
+            "name": "/Lotus/Language/Fragments/RedBrothSongName",
+            "song": "/Lotus/Music/LisetJukebox/RedBroth.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/SentientTombsSongFragment": {
+            "name": "/Lotus/Language/Fragments/SentientTombsSongName",
+            "song": "/Lotus/Music/LisetJukebox/SentientTombs.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TheCreepingDarkSongFragment": {
+            "name": "/Lotus/Language/Fragments/TheCreepingDarkSongName",
+            "song": "/Lotus/Music/LisetJukebox/TheCreepingDark.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TheProfitSongFragment": {
+            "name": "/Lotus/Language/Fragments/TheProfitSongName",
+            "song": "/Lotus/Music/LisetJukebox/TheProfit.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TheSecondDreamSongFragment": {
+            "name": "/Lotus/Language/Fragments/TheSecondDreamSongName",
+            "song": "/Lotus/Music/LisetJukebox/TheSecondDream.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TheWitchesLairSongFragment": {
+            "name": "/Lotus/Language/Fragments/TheWitchesLairSongName",
+            "song": "/Lotus/Music/LisetJukebox/TheWitchesLair.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/ThisIsWhatYouAreSongFragment": {
+            "name": "/Lotus/Language/Fragments/ThisIsWhatYouAreSongName",
+            "song": "/Lotus/Music/LisetJukebox/ThisIsWhatYouAre.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/VorsPrizeSongFragment": {
+            "name": "/Lotus/Language/Fragments/VorsPrizeSongName",
+            "song": "/Lotus/Music/LisetJukebox/VorsPrize.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/WingsOfWarSongFragment": {
+            "name": "/Lotus/Language/Fragments/WingsOfWarSongName",
+            "song": "/Lotus/Music/LisetJukebox/WingsOfWar.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/WretchedThingsSongFragment": {
+            "name": "/Lotus/Language/Fragments/WretchedThingsSongName",
+            "song": "/Lotus/Music/LisetJukebox/WretchedThings.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/YourCreatorSongFragment": {
+            "name": "/Lotus/Language/Fragments/YourCreatorSongName",
+            "song": "/Lotus/Music/LisetJukebox/YourCreator.wav",
+            "reqScans": 2
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/ToTakeItsPainAwaySongFragment": {
+            "name": "/Lotus/Language/Fragments/ToTakeItsPainAwaySongName",
+            "song": "/Lotus/Music/LisetJukebox/ToTakeItsPainAway.wav",
+            "reqScans": 3
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/KlokkitSongFragment": {
+            "name": "/Lotus/Language/Fragments/KlokkitSongName",
+            "song": "/Lotus/Music/LisetJukebox/Klokkit.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/NullUnitSongFragment": {
+            "name": "/Lotus/Language/Fragments/NullUnitSongName",
+            "song": "/Lotus/Music/LisetJukebox/NullUnit.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/WeAllLiftTogetherSongFragment": {
+            "name": "/Lotus/Language/Fragments/WeAllLiftTogetherSongName",
+            "song": "/Lotus/Music/LisetJukebox/WeAllLiftTogether.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/ColdTundraSongFragment": {
+            "name": "/Lotus/Language/Fragments/ColdTundraSongName",
+            "song": "/Lotus/Music/LisetJukebox/ColdTundra.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/VaporTrailsSongFragment": {
+            "name": "/Lotus/Language/Fragments/VaporTrailsSongName",
+            "song": "/Lotus/Music/LisetJukebox/VaporTrails.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/ColdwaveSongFragment": {
+            "name": "/Lotus/Language/Fragments/ColdwaveSongName",
+            "song": "/Lotus/Music/LisetJukebox/Coldwave.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/FluidMechanicsSongFragment": {
+            "name": "/Lotus/Language/Fragments/FluidMechanicsSongName",
+            "song": "/Lotus/Music/LisetJukebox/FluidMechanics.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/SleepingInTheColdBelowSongFragment": {
+            "name": "/Lotus/Language/Fragments/SleepingInTheColdBelowSongName",
+            "song": "/Lotus/Music/LisetJukebox/SleepingInTheColdBelow.wav",
+            "reqScans": 2
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/ForNarmerSongFragment": {
+            "name": "/Lotus/Language/Fragments/ForNarmerSongFragment",
+            "song": "/Lotus/Music/LisetJukebox/ForNarmer.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/HybridAbominationsSongFragment": {
+            "name": "/Lotus/Language/Fragments/HybridAbominationsFragment",
+            "song": "/Lotus/Music/LisetJukebox/HybridAbominations.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/SunkillerSongFragment": {
+            "name": "/Lotus/Language/Fragments/SunkillerFragment",
+            "song": "/Lotus/Music/LisetJukebox/Sunkiller.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/CanticleSongFragment": {
+            "name": "/Lotus/Language/Fragments/CanticleSongFragment",
+            "song": "/Lotus/Music/LisetJukebox/Canticle.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/OnCorrodedWingsSongFragment": {
+            "name": "/Lotus/Language/Fragments/OnCorrodedWingsSongFragment",
+            "song": "/Lotus/Music/LisetJukebox/OnCorrodedWings.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TheOfferingSongFragment": {
+            "name": "/Lotus/Language/Fragments/TheOfferingSongFragment",
+            "song": "/Lotus/Music/LisetJukebox/TheOffering.wav",
+            "reqScans": 4
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/VeilbreakerSongFragmentA": {
+            "name": "/Lotus/Language/Fragments/VeilbreakerSongFragmentA",
+            "song": "/Lotus/Music/LisetJukebox/SteelHorizon.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/VeilbreakerSongFragmentB": {
+            "name": "/Lotus/Language/Fragments/VeilbreakerSongFragmentB",
+            "song": "/Lotus/Music/LisetJukebox/Skybreak.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/VeilbreakerSongFragmentC": {
+            "name": "/Lotus/Language/Fragments/VeilbreakerSongFragmentC",
+            "song": "/Lotus/Music/LisetJukebox/HoldTheLine.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/VeilbreakerSongFragmentD": {
+            "name": "/Lotus/Language/Fragments/VeilbreakerSongFragmentD",
+            "song": "/Lotus/Music/LisetJukebox/FinalStand.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/DuviriBelowTheThunderSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragBelowTheThunder",
+            "song": "/Lotus/Music/LisetJukebox/BelowTheThunder.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/DuviriDriftersRespiteSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragDriftersRespite",
+            "song": "/Lotus/Music/LisetJukebox/DriftersRespite.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/DuviriDuviriParadoxSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragDuviriParadox",
+            "song": "/Lotus/Music/LisetJukebox/DuviriParadox.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/DuviriEyesThatBurnSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragEyesThatBurn",
+            "song": "/Lotus/Music/LisetJukebox/EyesThatBurn.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/DuviriHeWhoWaitsSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragHeWhoWaits",
+            "song": "/Lotus/Music/LisetJukebox/HeWhoWaits.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/DuviriIntoMadnessSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragIntoMadness",
+            "song": "/Lotus/Music/LisetJukebox/IntoMadness.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/DuviriParagrimmAscendingSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragParagrimmAscending",
+            "song": "/Lotus/Music/LisetJukebox/ParagrimmAscending.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/DuviriPerditionsCoilsSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragPerditionsCoils",
+            "song": "/Lotus/Music/LisetJukebox/PerditionsCoils.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/DuviriShadowsAndSummoningsSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragShadowsAndSummoning",
+            "song": "/Lotus/Music/LisetJukebox/ShadowsAndSummonings.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/DuviriUnboundSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragUnbound",
+            "song": "/Lotus/Music/LisetJukebox/Unbound.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/MurumVullSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragMurumVull",
+            "song": "/Lotus/Music/LisetJukebox/MurumVull.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/NoGodAboveKnowledgeSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragNoGodAboveKnowledge",
+            "song": "/Lotus/Music/LisetJukebox/NoGodAboveKnowledge.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/PlatformSevenSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragPlatformSeven",
+            "song": "/Lotus/Music/LisetJukebox/Platform7.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/SanctumAnatomicaSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragSanctumAnatomica",
+            "song": "/Lotus/Music/LisetJukebox/SanctumAnatomica.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/SeeItInTheFleshSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragSeeItInTheFlesh",
+            "song": "/Lotus/Music/LisetJukebox/SeeItInTheFlesh.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TheFragmentedSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragTheFragmented",
+            "song": "/Lotus/Music/LisetJukebox/TheFragmented.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/VashtavSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragVashtav",
+            "song": "/Lotus/Music/LisetJukebox/Vashtav.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/YaraJeliiraSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragYaraJeliira",
+            "song": "/Lotus/Music/LisetJukebox/YaraJeliira.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TheMasterReturnsSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragTheMasterReturns",
+            "song": "/Lotus/Music/LisetJukebox/TheMasterReturns.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/GranumVoidSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragGranumVoid",
+            "song": "/Lotus/Music/LisetJukebox/GranumVoid.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/EntwinedForeverSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragEntwinedForever",
+            "song": "/Lotus/Music/LisetJukebox/EntwinedForever.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/AngelsRequiemSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragmentAngelsRequiem",
+            "song": "/Lotus/Music/LisetJukebox/AngelsRequiem.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/FinalAscentSongFragment": {
+            "name": "/Lotus/Language/Fragments/SongFragmentFinalAscent",
+            "song": "/Lotus/Music/LisetJukebox/FinalAscent.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/BeneathHerEyesSongFragment": {
+            "name": "/Lotus/Language/Fragments/BeneathHerEyesSongName",
+            "song": "/Lotus/Music/LisetJukebox/BeneathHerEyes.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/DustsDominionSongFragment": {
+            "name": "/Lotus/Language/Fragments/DustsDominionSongName",
+            "song": "/Lotus/Music/LisetJukebox/DustsDominion.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TethraJahrakSongFragment": {
+            "name": "/Lotus/Language/Fragments/TethraJahrakSongName",
+            "song": "/Lotus/Music/LisetJukebox/TethraJahrak.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/LifeInDecaySongFragment": {
+            "name": "/Lotus/Language/Fragments/LifeInDecaySongName",
+            "song": "/Lotus/Music/LisetJukebox/LifeInDecay.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/RootsAndFruitsSongFragment": {
+            "name": "/Lotus/Language/Fragments/RootsAndFruitsSongName",
+            "song": "/Lotus/Music/LisetJukebox/RootsAndFruits.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TheCircleSongFragment": {
+            "name": "/Lotus/Language/Fragments/TheCircleSongName",
+            "song": "/Lotus/Music/LisetJukebox/TheCircle.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TauOldPeaceDecryptedSongFragment": {
+            "name": "/Lotus/Language/Fragments/DecryptedSongName",
+            "song": "/Lotus/Music/LisetJukebox/Decrypted.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TauOldPeaceDeepestDarkSongFragment": {
+            "name": "/Lotus/Language/Fragments/DeepestDarkSongName",
+            "song": "/Lotus/Music/LisetJukebox/DeepestDark.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TauOldPeaceExecutorSongFragment": {
+            "name": "/Lotus/Language/Fragments/ExecutorSongName",
+            "song": "/Lotus/Music/LisetJukebox/Executor.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TauOldPeaceFlowersFallSongFragment": {
+            "name": "/Lotus/Language/Fragments/FlowersFallSongName",
+            "song": "/Lotus/Music/LisetJukebox/FlowersFall.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TauOldPeaceHisLightSongFragment": {
+            "name": "/Lotus/Language/Fragments/HisLightSongName",
+            "song": "/Lotus/Music/LisetJukebox/HisLight.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TauOldPeaceIroncladSongFragment": {
+            "name": "/Lotus/Language/Fragments/IroncladSongName",
+            "song": "/Lotus/Music/LisetJukebox/Ironclad.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TauOldPeaceLullabyOfTheManifoldAdissLamentSongFragment": {
+            "name": "/Lotus/Language/Fragments/LullabyOfTheManifoldAdissLamentSongName",
+            "song": "/Lotus/Music/LisetJukebox/LullabyOfTheManifoldAdissLament.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TauOldPeaceLullabyOfTheManifoldDuskSongFragment": {
+            "name": "/Lotus/Language/Fragments/LullabyOfTheManifoldDuskSongName",
+            "song": "/Lotus/Music/LisetJukebox/LullabyOfTheManifoldDusk.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TauOldPeaceLullabyOfTheManifoldSongFragment": {
+            "name": "/Lotus/Language/Fragments/LullabyOfTheManifoldSongName",
+            "song": "/Lotus/Music/LisetJukebox/LullabyOfTheManifold.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TauOldPeaceRosesFromTheAbyssSongFragment": {
+            "name": "/Lotus/Language/Fragments/RosesFromTheAbyssSongName",
+            "song": "/Lotus/Music/LisetJukebox/RosesFromTheAbyss.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TauOldPeaceTheCardinalCallsSongFragment": {
+            "name": "/Lotus/Language/Fragments/TheCardinalCallsSongName",
+            "song": "/Lotus/Music/LisetJukebox/TheCardinalCalls.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TauOldPeaceTheUnrememberedSongFragment": {
+            "name": "/Lotus/Language/Fragments/TheUnrememberedSongName",
+            "song": "/Lotus/Music/LisetJukebox/TheUnremembered.wav",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/MusicFragments/TheAwakeningSongFragment": {
+            "name": "/Lotus/Language/Fragments/TheAwakeningSongName",
+            "song": "/Lotus/Music/LisetJukebox/TheAwakening.wav",
+            "reqScans": 0
+        }
+    },
+    "fighterFrames": {
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/AshFighterFragment": {
+            "name": "/Lotus/Language/Fragments/AshFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Ninja/Ninja",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/AtlasFighterFragment": {
+            "name": "/Lotus/Language/Fragments/AtlasFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Brawler/Brawler",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/BansheeFighterFragment": {
+            "name": "/Lotus/Language/Fragments/BansheeFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Banshee/Banshee",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/BaruukFighterFragment": {
+            "name": "/Lotus/Language/Fragments/BaruukFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Pacifist/Pacifist",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/ChromaFighterFragment": {
+            "name": "/Lotus/Language/Fragments/ChromaFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Dragon/Dragon",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/EmberFighterFragment": {
+            "name": "/Lotus/Language/Fragments/EmberFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Ember/Ember",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/EquinoxFighterFragment": {
+            "name": "/Lotus/Language/Fragments/EquinoxFighterFragmentName",
+            "suit": "/Lotus/Powersuits/YinYang/YinYang",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/FrostFighterFragment": {
+            "name": "/Lotus/Language/Fragments/FrostFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Frost/Frost",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/GaraFighterFragment": {
+            "name": "/Lotus/Language/Fragments/GaraFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Glass/Glass",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/GarudaFighterFragment": {
+            "name": "/Lotus/Language/Fragments/GarudaFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Garuda/Garuda",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/GaussFighterFragment": {
+            "name": "/Lotus/Language/Fragments/GaussFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Runner/Runner",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/GrendelFighterFragment": {
+            "name": "/Lotus/Language/Fragments/GrendelFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Devourer/Devourer",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/HarrowFighterFragment": {
+            "name": "/Lotus/Language/Fragments/HarrowFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Priest/Priest",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/HildrynFighterFragment": {
+            "name": "/Lotus/Language/Fragments/HildrynFighterFragmentName",
+            "suit": "/Lotus/Powersuits/IronFrame/IronFrame",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/HydroidFighterFragment": {
+            "name": "/Lotus/Language/Fragments/HydroidFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Pirate/Pirate",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/InarosFighterFragment": {
+            "name": "/Lotus/Language/Fragments/InarosFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Sandman/Sandman",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/IvaraFighterFragment": {
+            "name": "/Lotus/Language/Fragments/IvaraFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Ranger/Ranger",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/KhoraFighterFragment": {
+            "name": "/Lotus/Language/Fragments/KhoraFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Khora/Khora",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/LavosFighterFragment": {
+            "name": "/Lotus/Language/Fragments/LavosFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Alchemist/Alchemist",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/LimboFighterFragment": {
+            "name": "/Lotus/Language/Fragments/LimboFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Magician/Magician",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/LokiFighterFragment": {
+            "name": "/Lotus/Language/Fragments/LokiFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Loki/Loki",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/MesaFighterFragment": {
+            "name": "/Lotus/Language/Fragments/MesaFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Cowgirl/Cowgirl",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/MirageFighterFragment": {
+            "name": "/Lotus/Language/Fragments/MirageFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Harlequin/Harlequin",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/NekrosFighterFragment": {
+            "name": "/Lotus/Language/Fragments/NekrosFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Necro/Necro",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/NezhaFighterFragment": {
+            "name": "/Lotus/Language/Fragments/NezhaFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Nezha/Nezha",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/NidusFighterFragment": {
+            "name": "/Lotus/Language/Fragments/NidusFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Infestation/Infestation",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/NovaFighterFragment": {
+            "name": "/Lotus/Language/Fragments/NovaFighterFragmentName",
+            "suit": "/Lotus/Powersuits/AntiMatter/Anti",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/NyxFighterFragment": {
+            "name": "/Lotus/Language/Fragments/NyxFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Jade/Jade",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/OberonFighterFragment": {
+            "name": "/Lotus/Language/Fragments/OberonFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Paladin/Paladin",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/OctaviaFighterFragment": {
+            "name": "/Lotus/Language/Fragments/OctaviaFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Bard/Bard",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/ProteaFighterFragment": {
+            "name": "/Lotus/Language/Fragments/ProteaFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Odalisk/Odalisk",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/RevenantFighterFragment": {
+            "name": "/Lotus/Language/Fragments/RevenantFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Revenant/Revenant",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/RhinoFighterFragment": {
+            "name": "/Lotus/Language/Fragments/RhinoFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Rhino/Rhino",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/SarynFighterFragment": {
+            "name": "/Lotus/Language/Fragments/SarynFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Saryn/Saryn",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/SevagothFighterFragment": {
+            "name": "/Lotus/Language/Fragments/SevagothFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Wraith/Wraith",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/TitaniaFighterFragment": {
+            "name": "/Lotus/Language/Fragments/TitaniaFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Fairy/Fairy",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/TrinityFighterFragment": {
+            "name": "/Lotus/Language/Fragments/TrinityFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Trinity/Trinity",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/ValkyrFighterFragment": {
+            "name": "/Lotus/Language/Fragments/ValkyrFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Berserker/Berserker",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/VaubanFighterFragment": {
+            "name": "/Lotus/Language/Fragments/VaubanFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Trapper/Trapper",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/WispFighterFragment": {
+            "name": "/Lotus/Language/Fragments/WispFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Wisp/Wisp",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/WukongFighterFragment": {
+            "name": "/Lotus/Language/Fragments/WukongFighterFragmentName",
+            "suit": "/Lotus/Powersuits/MonkeyKing/MonkeyKing",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/XakuFighterFragment": {
+            "name": "/Lotus/Language/Fragments/XakuFighterFragmentName",
+            "suit": "/Lotus/Powersuits/BrokenFrame/BrokenFrame",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/YareliFighterFragment": {
+            "name": "/Lotus/Language/Fragments/YareliFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Yareli/Yareli",
+            "reqScans": 1
+        },
+        "/Lotus/Types/Lore/Fragments/FrameFighterFragments/ZephyrFighterFragment": {
+            "name": "/Lotus/Language/Fragments/ZephyrFighterFragmentName",
+            "suit": "/Lotus/Powersuits/Tengu/Tengu",
+            "reqScans": 1
+        }
+    }
+}

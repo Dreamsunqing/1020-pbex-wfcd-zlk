@@ -1,0 +1,349 @@
+{
+  "ExportKeys": [
+    {
+      "uniqueName": "/Lotus/Types/Keys/1999PrologueQuest/1999PrologueQuestKeyChain",
+      "name": "Les Dévoreurs de Lotus",
+      "description": "Un étrange appel vient de l'au-delà et ne doit pas rester sans réponse.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/1999Quest/1999QuestGoodEndKeyChain",
+      "name": "Épisode final",
+      "description": "Une chance de réécrire l'histoire et d'éviter un désastre.",
+      "parentName": "",
+      "codexSecret": false,
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/1999Quest/1999QuestKeyChain",
+      "name": "L'Hexagone",
+      "description": "La chasse désespérée d'Albrecht Entrati a conduit le Voyageur jusqu'en Höllvanie le 31 décembre 1999. Malgré le blocage des Scaldras face à la menace du Techrot, les citoyens font de leur mieux pour célébrer la nouvelle année. Mais tout cela s'est déjà produit auparavant... et s'est terminé en désastre.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ApostasyQuest/ApostasyKeyChain",
+      "name": "Prologue Apostasie",
+      "description": "Inspectez vos Quartiers Personnels après avoir terminé la Quête \"Le Fardeau de Harrow\".",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ArchwingQuest/ArchwingQuestKeyChain",
+      "name": "L'Archwing",
+      "description": "Les Fomoriens Balors vont bientôt arriver, mais nous sommes prêts. Grâce à votre aide, nous avons finalement un prototype fonctionnel d'Archwing, je vais vous envoyer son Schéma. Toutefois, votre tâche n'est pas encore terminée. Il vous reste encore à trouver les différentes parties.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/BardQuest/BardQuestKeyChain",
+      "name": "L'Hymne d'Octavia",
+      "description": "Construisez le Mandaccord et trouvez la cause du comportement imprévisible du Céphalon Suda.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ChimeraQuest/ChimeraKeyChain",
+      "name": "Prologue Chimère",
+      "description": "Examinez vos Quartiers Personnels après avoir complété la Quête \"Le Sacrifice\".",
+      "parentName": "",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/DragonQuest/DragonQuestKeyChain",
+      "name": "La Nouvelle Étrange",
+      "description": "Travaillez avec le Céphalon Simaris afin de retrouver l'origine de la voix mystérieuse.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/DuviriQuest/DuviriQuestKeyChain",
+      "name": "Le Paradoxe Duviri",
+      "description": "Entrez dans le Royaume de Duviri",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/EntratiLab/EntratiQuestKeyChain",
+      "name": "Murmures dans les murs",
+      "description": "Loid est hanté par des rêves étranges et il veut désespérément vous montrer quelque chose.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/FairyQuest/FairyQuestKeyChain",
+      "name": "Le Bosquet d'Argent",
+      "description": "Le Nouveau Loka cherche à protéger une forêt sacrée des incursions Grineers, mais est-il prêt à faire face à la véritable nature de la forêt?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/GetClemQuest/GetClemQuestKeyChain",
+      "name": "Un Homme Peu Bavard",
+      "description": "Darvo a encore besoin de votre aide. Empêchez l'un de ses meilleurs fournisseurs de se faire exécuter par les Grineers.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/GlassQuest/GlassQuestKeyChain",
+      "name": "La Veillée de Saya",
+      "description": "Dans les Plaines d'Eidolon, un mystère est demeuré enseveli durant des années: un mystère qui peut consoler ou détruire un cœur et ouvrir les portes d'un passé caché.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/GolemQuest/GolemQuestKeyChainItem",
+      "name": "Le Précepte de Jordas",
+      "description": "Ordis est déterminé à aider un camarade Céphalon à arrêter l'Infestation d'un vaisseau entier.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/IndexQuest/IndexQuestKeyChain",
+      "name": "Le Stratagème de Glast",
+      "description": "Nef Anyo a enlevé les enfants de la Colonie de Mycona et c'est à vous de les récupérer. Vous devez lancer un défi à Nef dans l'Index et le vaincre à son propre jeu. Mais prenez garde, Tenno, tout n'est pas ce qui semble être.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedAladVQuest/AssassinateInfestedAladVKey",
+      "name": "Alad V Mutaliste Assassinat",
+      "description": "Finissez-en avec Alad V et ses expériences Mutalistes",
+      "parentName": "/Lotus/Types/Keys/TestKey",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedAladVQuest/InfestedAladVQuestKeyChain",
+      "name": "Patient Zéro",
+      "description": "Trouvez le laboratoire d'Alad V et mettez un terme à sa folie.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedIntroQuest/InfestedIntroQuestKeyChain",
+      "name": "Autrefois Éveillés",
+      "description": "Des communications entre Grineers interceptées ont révélé que les Grineers ont fait des expériences avec une sorte d'arme biologique. Vous devez mener une enquête.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedMicroplanetQuest/InfestedMicroplanetQuestKeyChain",
+      "name": "Cœur de Deimos",
+      "description": "Deimos ressort dans l'orbite de Mars, complètement envahie par l'Infestation... Pourtant, de cet univers de souffrance, un appel de détresse arrive sur une onde des plus anciennes...",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/JadeShadows/JadeShadowQuestKeyChain",
+      "name": "Les Ombres de Jade",
+      "description": "Luttant pour comprendre le secret le plus ancien et le plus profond de son passé, le Stalker se retrouve allié à ses ennemis jurés sur le chemin difficile qui mène à la découverte de la vérité... et à éviter une perte incalculable.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/JadeShadowsPart2Constellations/JadeShadowsPart2QuestKeyChain",
+      "name": "Les Ombres de Jade : Constellations",
+      "description": "Lorsque Hunhow invoque le Stalker pour un conflit étrange se déroulant dans la Vallée Orbis, il doit affronter les conséquences choquantes de ses propres actes. Les ombres de son avenir sont venues le hanter, et elles ne sont pas seules.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/KahlQuest/KahlQuestKeyChain",
+      "name": "Brise-Voile",
+      "description": "La fille Entrati obtient plus que ce qu'elle voulait lorsqu'elle engage le Tenno pour enquêter sur un appel de renforts à bord d'un Murex Narmer.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/KubrowQuest/KubrowQuestKeyChain",
+      "name": "Hurlement du Kubrow",
+      "description": "Vous êtes un Tenno, vous méritez un Kubrow à vos côtés.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/LimboQuest/LimboQuestKeyChain",
+      "name": "Le Théorème de Limbo",
+      "description": "Vous avez besoin d'une Archwing pour compléter le Théorème de Limbo.\r\n\r\nRésolvez le THÉORÈME DE LIMBO afin de révéler sa solution.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/MirageQuest/MirageQuestKeyChain",
+      "name": "Messages Cachés",
+      "description": "À la recherche de la Warframe Mirage.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ModQuest/ModQuestKeyChain",
+      "name": "Le Professeur",
+      "description": "Les incursions du Corpus sur le territoire Grineer mènent à une confrontation avec un rival oublié.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/MummyQuest/MummyQuestKeyChain",
+      "name": "Les Sables d'Inaros",
+      "description": "Aidez Baro Ki'Teer à explorer un ancien tombeau sur Mars pour trouver un trésor mystérieux.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/NewPlayerQuest/NewPlayerQuestKeyChain",
+      "name": "ÉVEIL",
+      "description": "Les Tennos: monuments d'une ancienne caste de guerriers.\r\n\r\nPendant des générations, vous avez dormi, sans appel pour vous réveiller.\r\n\r\nJusqu'à présent.",
+      "parentName": "",
+      "codexSecret": true,
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/NewWarIntroQuest/NewWarIntroKeyChain",
+      "name": "Erra",
+      "description": "",
+      "parentName": "",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/NewWarQuest/NewWarQuestKeyChain",
+      "name": "La Nouvelle Guerre",
+      "description": "La puissante armada Sentient est sortie de la Proxima du Voile.\r\n\r\nÀ leur tête, Natah, autrefois guide de confiance appelé \"Lotus\", semble maintenant esclave de Ballas et de son frère Erra.\r\n\r\nÀ travers les mondes et l'espace, les Tennos et leur alliance improbable lancent un assaut final pour prendre le vaisseau amiral Sentient... où Natah les attend.",
+      "parentName": "",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/OrokinMoonQuest/OrokinMoonQuestKeyChain",
+      "name": "Le Second Rêve",
+      "description": "Le Sentient Hunhow cherche à détruire les Tennos avec l'aide de secrets oubliés.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/PriestFrameQuest/PriestQuestKeyChain",
+      "name": "Le Fardeau de Harrow",
+      "description": "Une étrange transmission mène dans le monde sombre du mysticisme du Voile Rouge. Quels maux seront trouvés là-bas et que veulent-ils ?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ProteaQuest/ProteaQuestKeyChain",
+      "name": "Le Protocole: Exclusion",
+      "description": "Une lutte interne déchire l'élite du Corpus. Avide de pouvoir, Nef Anyo se tourne vers le passé... et remonte jusqu'aux origines du Corpus lui-même.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/RailJackBuildQuest/RailjackBuildQuestKeyChain",
+      "name": "Marée Montante",
+      "description": "Pour faire face à une menace grandissante, un Céphalon longtemps inactif fait appel à votre aide afin de reconstruire un vaisseau intercepteur de l'ère Orokin: le Railjack.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/RevenantQuest/RevenantQuestKeyChain",
+      "name": "Le Masque du Revenant",
+      "description": "L'Unum choisit Nakak pour recevoir un masque bien étrange, un masque qui confère des visions tout aussi étranges. Quelle légende oubliée l'Unum veut-elle conter?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SacrificeQuest/SacrificeQuestKeyChain",
+      "name": "Le Sacrifice",
+      "description": "Une vision torturée envoie l'Opérateur à la poursuite d'une Warframe à nulle autre pareille.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SentientQuest/SentientQuestKeyChain",
+      "name": "Natah",
+      "description": "D'étranges drones sont apparus dans le Système Origine, aidez le Lotus à trouver ce qu'ils sont et qui les a envoyés.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SolarisQuest/SolarisQuestKeyChain",
+      "name": "Vox Solaris",
+      "description": "Eudico ferait tout pour protéger les siens, mais se dressera-t-elle face à Nef Anyo?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SpyQuestKeyChain/SpyQuestKeyChain",
+      "name": "Rêves Volés",
+      "description": "Retrouvez la voleuse Maroo et découvrez les secrets des Codices d'Arcanes.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrequel/TauPrequelQuestKeyChain",
+      "name": "L'Ancienne Paix",
+      "description": "La piste d'Albrecht Entrati mène au-delà du Système Origine. Seule une exploration du passé permettra de tracer le chemin à suivre, mais les secrets enfouis peuvent être mortels.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrologue/TauPrologueKeyChainA",
+      "name": "Lua",
+      "description": "Trouvez le Lotus dans les Ténèbres Réfractaires et cherchez-la au cœur de ses souvenirs.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrologue/TauPrologueKeyChainB",
+      "name": "Avatar",
+      "description": "L'Avatar s'est réveillé. Praghasa est de retour. Déployez-vous à la surface d'Éris… du carburant est nécessaire.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrologue/TauPrologueKeyChainC",
+      "name": "Éris Mortem",
+      "description": "Praghasa festoie.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/VorsPrize/VorsPrizeQuestKeyChain",
+      "name": "Le Trophée de Vor",
+      "description": "Mes Reines, vous aviez raison, la menace Tenno est bien réelle. Nous en avons trouvé un dérivant près de la Terre, mais le Lotus savait que nous arrivions. Elle a purgé la chambre de cryostase juste avant notre arrivée et a envoyé une escouade Tenno arrêter notre attaque.\r\n\r\nIls se sont échappés. Nous essayons de suivre leurs traces. En séparant ce Tenno du troupeau, il sera facile à tuer. Nous avons endommagé sa Warframe et nous pensons que sa sortie abrupte de cryostase a pu endommager sa mémoire.\r\n\r\nNous attendons avec inquiétude votre punition pour notre échec dans cette tâche.\r\n\r\n- VOR",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/WarWithinQuest/WarWithinQuestKeyChain",
+      "name": "La Guerre Intérieure",
+      "description": "Une perturbation du Lien Somatique pousse le Lotus à renvoyer des agents au Réservoir Tenno.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/WraithQuest/WraithQuestKeyChain",
+      "name": "L'Appel du Tempestarii",
+      "description": "Les Tempêtes du Néant se succèdent dans les zones Corpus... Un mystérieux vaisseau pourrait-il en être la cause?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/YareliQuest/YareliQuestKeyChain",
+      "name": "Waverider",
+      "description": "Lorsque le sort les accable, les Orphelins des Conduits puisent de l'espoir dans une histoire perdue depuis longtemps.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ZarimanQuest/ZarimanQuestKeyChain",
+      "name": "Les Anges du Zariman",
+      "description": "Des profondeurs au-delà de la perception, une Voix s'élève et ses échos ne peuvent être ignorés. N'étant plus entièrement dissimulé par le Néant en constante évolution, le Zariman repose désormais entre les mondes. Une Lamentation obsédante résonne à travers le Système. Une confrontation tardive avec le passé s'impose...",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/DojoKey",
+      "name": "Clé de Clan",
+      "description": "Déverrouille l'accès au Dojo de votre Clan.",
+      "parentName": "/Lotus/Types/Game/KeyItem",
+      "codexSecret": true
+    }
+  ]
+}

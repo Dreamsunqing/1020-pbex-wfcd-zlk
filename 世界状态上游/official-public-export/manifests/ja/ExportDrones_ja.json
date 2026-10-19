@@ -1,0 +1,112 @@
+{
+  "ExportDrones": [
+    {
+      "uniqueName": "/Lotus/Types/Ship/AdvancedResourceDrone",
+      "name": "Titan Prime エクストラクター",
+      "description": "惑星にエクストラクターを設置することで大量の資源を入手することが可能。\r\n\r\n定期的に内包物を回収し、損傷を確認する必要がある。",
+      "binCount": 1,
+      "binCapacity": 2,
+      "fillRate": 4,
+      "durability": 100,
+      "repairRate": 10,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/AdvancedUcResourceDrone",
+      "name": "Distilling Prime エクストラクター",
+      "description": "DISTILLING PRIME エクストラクターはアンコモンとレアな資源を入手しやすくなっている。\r\n\r\nこのエクストラクターを惑星に設置し大量の資源を収集する。定期的に内包物を回収し損傷を監視する必要がある。",
+      "binCount": 1,
+      "binCapacity": 2,
+      "fillRate": 8,
+      "durability": 200,
+      "repairRate": 20,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/BasicResourceDrone",
+      "name": "Titan エクストラクター",
+      "description": "惑星にエクストラクターを設置することで大量の資源を入手することが可能。\r\n\r\n定期的に内包物を回収し、損傷を確認する必要がある。",
+      "binCount": 1,
+      "binCapacity": 1,
+      "fillRate": 4,
+      "durability": 100,
+      "repairRate": 10,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/BasicUcResourceDrone",
+      "name": "Distilling エクストラクター",
+      "description": "DISTILLING EXTRACTOR はアンコモンとレアな資源を入手しやすくなっている。\r\n\r\nこのエクストラクターを惑星に設置し資源を収集する。定期的に内包物を回収し、損傷を確認する必要がある。",
+      "binCount": 1,
+      "binCapacity": 1,
+      "fillRate": 8,
+      "durability": 200,
+      "repairRate": 20,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/LandscapeTrapLight",
+      "name": "Titan エクストラクター",
+      "description": "惑星にエクストラクターを設置することで大量の資源を入手することが可能。\r\n\r\n定期的に内包物を回収し、損傷を確認する必要がある。",
+      "binCount": 1,
+      "binCapacity": 20,
+      "fillRate": 0.1,
+      "durability": 100,
+      "repairRate": 0,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        4,
+        1,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/VoidTraderResourceDrone",
+      "name": "Prisma Niroda エクストラクター",
+      "description": "オロキンの至高の技術を注ぎ込んだこの最高性能モデルは最も過酷な状況下でも最高の採集量を誇る。",
+      "binCount": 1,
+      "binCapacity": 1,
+      "fillRate": 8,
+      "durability": 200,
+      "repairRate": 20,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    }
+  ]
+}

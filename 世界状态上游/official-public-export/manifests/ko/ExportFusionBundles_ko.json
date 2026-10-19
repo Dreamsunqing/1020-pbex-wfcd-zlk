@@ -1,0 +1,310 @@
+{
+  "ExportFusionBundles": [
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/DeepSpaceCommonAvionicsEndo",
+      "description": "레일잭의 그리드 및 에이비오닉 업그레이드에 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 150
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/DeepSpaceUncommonAvionicsEndo",
+      "description": "레일잭의 그리드 및 에이비오닉 업그레이드에 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 300
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/EarthCommonAvionicsEndo",
+      "description": "레일잭의 그리드 및 에이비오닉 업그레이드에 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/EarthUncommonAvionicsEndo",
+      "description": "레일잭의 그리드 및 에이비오닉 업그레이드에 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/MarketTier1CrewShipFusionBundle",
+      "description": "레일잭의 그리드 및 에이비오닉 업그레이드에 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/MarketTier2CrewShipFusionBundle",
+      "description": "레일잭의 그리드 및 에이비오닉 업그레이드에 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/MarketTier3CrewShipFusionBundle",
+      "description": "레일잭의 그리드 및 에이비오닉 업그레이드에 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/SaturnCommonAvionicsEndo",
+      "description": "레일잭의 그리드 및 에이비오닉 업그레이드에 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/SaturnUncommonAvionicsEndo",
+      "description": "레일잭의 그리드 및 에이비오닉 업그레이드에 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertFusionBundleLarge",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 150
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertFusionBundleMedium",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertFusionBundleSmall",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 80
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertRewardFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 235
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierAEndoCommon",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 15
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierAEndoUncommon",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierBEndoCommon",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 15
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierBEndoUncommon",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierCEndoUncommon",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierDEndoUncommon",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitRepeatableNormalFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 250
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitRepeatableSteelPathFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitSilverNormalFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitSilverSteelPathFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 6000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CommonFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 15
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EliteAlertFusionBundleLarge",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 1500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EliteAlertFusionBundleMedium",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 1200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EliteAlertFusionBundleSmall",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 900
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EndoJackpotBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 15000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EvergreenLoginRewardFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 30000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/JunctionRewardNPFusionBundleA",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 2500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/JunctionRewardNPFusionBundleB",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 750
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/LoginRewardFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MPVDualPackFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 50000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MPVSinglePackFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 10000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MarketTier1FusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MarketTier2FusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MarketTier3FusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/NightwatchFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 1500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/PurgatoryBlackTokenFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 600
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/PurgatoryBlueTokenFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/PurgatoryGoldTokenFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierALarge",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 150
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierASmall",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierBLarge",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 300
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierBSmall",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierCLarge",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 450
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierCSmall",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 300
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierDLarge",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 600
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierDSmall",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RareFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 80
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/UncommonFusionBundle",
+      "description": "보유하고 있는 모드를 강화하는 모드 합성 과정에서 재료로 사용됩니다.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    }
+  ]
+}

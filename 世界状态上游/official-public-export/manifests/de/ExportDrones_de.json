@@ -1,0 +1,112 @@
+{
+  "ExportDrones": [
+    {
+      "uniqueName": "/Lotus/Types/Ship/AdvancedResourceDrone",
+      "name": "Titan Extraktor Prime",
+      "description": "Schicke den Extraktor auf einen Planeten, um große Mengen an Ressourcen zu sammeln.\r\n\r\nMuss für maximale Effizient regelmäßig geleert und auf Schäden überprüft werden.",
+      "binCount": 1,
+      "binCapacity": 2,
+      "fillRate": 4,
+      "durability": 100,
+      "repairRate": 10,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/AdvancedUcResourceDrone",
+      "name": "Destillier Extraktor Prime",
+      "description": "Der Destillier Extraktor Prime hat eine erhöhte Chance, ungewöhnliche und seltene Ressourcen zu erlangen.\r\n\r\nSetze diesen Extraktor auf Planeten ein, um große Mengen an Ressourcen zu sammeln. Er muss regelmäßig geleert und auf Schäden überwacht werden.",
+      "binCount": 1,
+      "binCapacity": 2,
+      "fillRate": 8,
+      "durability": 200,
+      "repairRate": 20,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/BasicResourceDrone",
+      "name": "Titan Extraktor",
+      "description": "Schicke den Extraktor auf einen Planeten, um Ressourcen zu sammeln.\r\n\r\nMuss für maximale Effizienz regelmäßig geleert und auf Schäden überprüft werden.",
+      "binCount": 1,
+      "binCapacity": 1,
+      "fillRate": 4,
+      "durability": 100,
+      "repairRate": 10,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/BasicUcResourceDrone",
+      "name": "Destillier Extraktor",
+      "description": "Der Destillier Extraktor hat eine erhöhte Chance, ungewöhnliche und seltene Ressourcen zu erlangen.\r\n\r\nSetze diesen Extraktor auf Planeten ein, um Ressourcen zu sammeln. Er muss regelmäßig geleert und auf Schäden überwacht werden.",
+      "binCount": 1,
+      "binCapacity": 1,
+      "fillRate": 8,
+      "durability": 200,
+      "repairRate": 20,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/LandscapeTrapLight",
+      "name": "Titan Extraktor",
+      "description": "Schicke den Extraktor auf einen Planeten, um Ressourcen zu sammeln.\r\n\r\nMuss für maximale Effizienz regelmäßig geleert und auf Schäden überprüft werden.",
+      "binCount": 1,
+      "binCapacity": 20,
+      "fillRate": 0.1,
+      "durability": 100,
+      "repairRate": 0,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        4,
+        1,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/VoidTraderResourceDrone",
+      "name": "Prisma Niroda Extraktor",
+      "description": "Erschaffen mit der höchsten Orokin Schmiedekunst, ermöglicht dieses weiterentwickelte Modell höchstes Extraktionsvolumen unter den schlechtesten Bedingungen.",
+      "binCount": 1,
+      "binCapacity": 1,
+      "fillRate": 8,
+      "durability": 200,
+      "repairRate": 20,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    }
+  ]
+}

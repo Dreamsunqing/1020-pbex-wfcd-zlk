@@ -1,0 +1,349 @@
+{
+  "ExportKeys": [
+    {
+      "uniqueName": "/Lotus/Types/Keys/1999PrologueQuest/1999PrologueQuestKeyChain",
+      "name": "Пожиратели Лотос",
+      "description": "Странный зов раздаётся извне, который не стоит оставлять без ответа.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/1999Quest/1999QuestGoodEndKeyChain",
+      "name": "Финал Гекса",
+      "description": "Шанс переписать историю и предотвратить катастрофу.",
+      "parentName": "",
+      "codexSecret": false,
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/1999Quest/1999QuestKeyChain",
+      "name": "Гекс",
+      "description": "Отчаянные поиски Альбрехта Энтрати приводят Скитальца в город Хёльвания 31 декабря 1999 года. Несмотря на блокаду города Скальдрой из-за угрозы Техрота, горожане стараются праздновать наступающее тысячелетие. Но всё это уже происходило раньше… и закончилось катастрофой.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ApostasyQuest/ApostasyKeyChain",
+      "name": "Начало Отступничества",
+      "description": "Проверьте вашу личную комнату после завершения квеста «Цепи Харроу».",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ArchwingQuest/ArchwingQuestKeyChain",
+      "name": "Арчвинг",
+      "description": "Форморианцы «Балор» на подходе, но мы готовы к встрече с ними. Благодаря вашим усилиям мы смогли заполучить рабочий прототип арчвинга, высылаю вам чертежи. Однако ваше задание не заканчивается на этом. Вы должны найти ключевые компоненты арчвинга.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/BardQuest/BardQuestKeyChain",
+      "name": "Гимн Октавии",
+      "description": "Создайте мендаккорд и найдите причину странного поведения Суды.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ChimeraQuest/ChimeraKeyChain",
+      "name": "Химера: Пролог",
+      "description": "Осмотрите личную комнату после завершения квеста «Жертва».",
+      "parentName": "",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/DragonQuest/DragonQuestKeyChain",
+      "name": "Новые загадки",
+      "description": "При содействии цефалона Симэриса найдите источник таинственного сигнала.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/DuviriQuest/DuviriQuestKeyChain",
+      "name": "Парадокс Дувири",
+      "description": "Войдите в Королевство Дувири",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/EntratiLab/EntratiQuestKeyChain",
+      "name": "Шёпот в стенах",
+      "description": "Лойду приснился странный сон и он отчаянно хочет тебе что-то показать.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/FairyQuest/FairyQuestKeyChain",
+      "name": "Серебряная роща",
+      "description": "Новая Лока ищет помощи, чтобы защитить священный лес от вторжения Гринир, но готовы ли они узреть истинную природу леса?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/GetClemQuest/GetClemQuestKeyChain",
+      "name": "Немногословный человек",
+      "description": "Дарво снова нужна твоя помощь. Спаси одного из его лучших подрядчиков от казни Гринир.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/GlassQuest/GlassQuestKeyChain",
+      "name": "Дозор Сайи",
+      "description": "Тайна покоилась на Равнинах Эйдолона многие годы: тайна, что исцелит или разобьет сердце и откроет дверь в сокрытое прошлое.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/GolemQuest/GolemQuestKeyChainItem",
+      "name": "Протокол Джордаса",
+      "description": "Ордису предписано помочь бедному цефалону справиться с заражением на корабле.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/IndexQuest/IndexQuestKeyChain",
+      "name": "Гамбит Гласта",
+      "description": "Неф Эньо выкрал дитя из колонии Микон, и твоя задача вернуть его. Ты должен бросить вызов Нефу на Индексе и победить его в собственной игре. Но помни, Тэнно, не всё так, как оно видится.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedAladVQuest/AssassinateInfestedAladVKey",
+      "name": "Заражённый Алад V - убийство",
+      "description": "Нанесите визит на исследовательский корабль Алада V и положите конец его экспериментам с заражёнными.",
+      "parentName": "/Lotus/Types/Keys/TestKey",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedAladVQuest/InfestedAladVQuestKeyChain",
+      "name": "Нулевой пациент",
+      "description": "Найдите лабораторию Алада V и положите конец этому безумию.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedIntroQuest/InfestedIntroQuestKeyChain",
+      "name": "После пробуждения",
+      "description": "Перехваты переговоров Гринир указывают на то, что они продолжают проводить эксперименты с неким биологическим оружием. Вам необходимо провести полноценное расследование.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedMicroplanetQuest/InfestedMicroplanetQuestKeyChain",
+      "name": "Сердце Деймоса",
+      "description": "Деймос выходит на орбиту Марса, всецело охваченный заражением... Но сквозь кишащую массу доносится зов о помощи, сигнал бедствия на древнейшей из передающих волн...",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/JadeShadows/JadeShadowQuestKeyChain",
+      "name": "Нефритовые тени",
+      "description": "Пытаясь понять старейшую и глубочайшую тайну своего прошлого, Сталкер оказывается в союзе со своими заклятыми врагами на непростом пути к раскрытию истины… и предотвращению непоправимой потери.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/JadeShadowsPart2Constellations/JadeShadowsPart2QuestKeyChain",
+      "name": "Нефритовые Тени: Созвездия",
+      "description": "Когда Хунхау призывает Сталкера к необычному конфликту, разворачивающемуся в Долине Сфер, ему приходится столкнуться с шокирующими последствиями собственных действий. Тени его будущего пришли, чтобы преследовать его, и они не одиноки.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/KahlQuest/KahlQuestKeyChain",
+      "name": "Срывающий вуаль",
+      "description": "Дочь Энтрати получает гораздо больше, чем ожидала, когда попросила Тэнно найти источник сигнала о помощи с борта мюрекса Нармера.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/KubrowQuest/KubrowQuestKeyChain",
+      "name": "Вой кубрау",
+      "description": "Вы - Тэнно. Кубрау станет вашим надёжным союзником в бою.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/LimboQuest/LimboQuestKeyChain",
+      "name": "Теорема Лимбо",
+      "description": "Теорема Лимбо не может быть пройдена без Арчвинга\r\n\r\nСоберите Теорему Лимбо по кусочкам, чтобы найти её источник",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/MirageQuest/MirageQuestKeyChain",
+      "name": "Скрытые сообщения",
+      "description": "Найдите варфрейм Мираж.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ModQuest/ModQuestKeyChain",
+      "name": "Наставник",
+      "description": "Вторжение Корпуса на территорию Гринир приводит к столкновению с забытым соперником.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/MummyQuest/MummyQuestKeyChain",
+      "name": "Пески Инароса",
+      "description": "Помогите Баро Ки'Тииру разграбить древнюю Марсианскую гробницу, чтобы найти таинственное сокровище.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/NewPlayerQuest/NewPlayerQuestKeyChain",
+      "name": "ПРОБУЖДЕНИЕ",
+      "description": "Тэнно. Каста воинов древней эпохи.\r\n\r\nСтолетиями ты пребывал во сне. Без зова, который пробудил бы тебя.\r\n\r\nПробудись же, Тэнно.",
+      "parentName": "",
+      "codexSecret": true,
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/NewWarIntroQuest/NewWarIntroKeyChain",
+      "name": "Эрра",
+      "description": "",
+      "parentName": "",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/NewWarQuest/NewWarQuestKeyChain",
+      "name": "Новая Война",
+      "description": "Бесчисленная армада Владеющих Разумом появилась из проксимы Вуали.\r\n\r\nИх возглавляет Ната, известная когда-то как надёжная проводница по имени Лотос, которая теперь, кажется, порабощена Балласом и собственным братом Эррой.\r\n\r\nТэнно из разных миров и уголков Системы и их неожиданные союзники начинают решающий штурм материнского корабля Владеющих Разумом… где их ждёт Ната.",
+      "parentName": "",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/OrokinMoonQuest/OrokinMoonQuestKeyChain",
+      "name": "Второй сон",
+      "description": "Владеющий Разумом Хунхау хочет уничтожить Тэнно с помощью давно забытых секретов.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/PriestFrameQuest/PriestQuestKeyChain",
+      "name": "Цепи Харроу",
+      "description": "Необычное сообщение ведет прямиком в тёмный мир мистицизма Красной Вуали. Какое зло таится там и чего оно хочет?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ProteaQuest/ProteaQuestKeyChain",
+      "name": "Протокол «Мёртвая Точка»",
+      "description": "Борьба за власть внутри элиты Корпуса в самом разгаре. Желая взять руководство под свой контроль, Неф Эньо обратился к прошлому... к истинному происхождению Корпуса.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/RailJackBuildQuest/RailjackBuildQuestKeyChain",
+      "name": "Восходящий прилив",
+      "description": "Чтобы противостоять нарастающей угрозе, длительно пребывавший в спячке цефалон призывает Вас восстановить древний космический корабль эпохи Орокин - Рэйлджек.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/RevenantQuest/RevenantQuestKeyChain",
+      "name": "Маска Ревенанта",
+      "description": "Унум даровала Накак странную маску. Маску, ведущую к ещё более странным видениям. Какую забытую историю хочет поведать Унум?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SacrificeQuest/SacrificeQuestKeyChain",
+      "name": "Жертва",
+      "description": "Мучительное видение заставляет оператора отправиться на поиски варфрейма, который не похож на других.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SentientQuest/SentientQuestKeyChain",
+      "name": "Ната",
+      "description": "Странные дроны появились в Изначальной Системе, помогите Лотос выяснить, что они такое и кто их послал.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SolarisQuest/SolarisQuestKeyChain",
+      "name": "Глас Солярис",
+      "description": "Юдико готова на всё ради защиты своих людей, но бросит ли она вызов Нефу Эньо?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SpyQuestKeyChain/SpyQuestKeyChain",
+      "name": "Похищенные мечты",
+      "description": "Отыщите вора Мэру и раскройте секреты Мистических Кодексов.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrequel/TauPrequelQuestKeyChain",
+      "name": "Стародавний мир",
+      "description": "Тропа Альбрехта Энтрати ведёт за пределы Изначальной системы. Только изучение прошлого может прояснить дальнейший путь, но погребённые тайны могут быть смертельно опасны.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrologue/TauPrologueKeyChainA",
+      "name": "Луа",
+      "description": "Посетите Лотос в Тёмном Рефрактории и познайте её в её же воспоминаниях.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrologue/TauPrologueKeyChainB",
+      "name": "Судно",
+      "description": "Судно пробудилось. Прагаса вернулась. Отправляйтесь на поверхность Эриды... необходимо топливо.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrologue/TauPrologueKeyChainC",
+      "name": "Гибель Эриды",
+      "description": "Пир Прагасы.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/VorsPrize/VorsPrizeQuestKeyChain",
+      "name": "Приз вора",
+      "description": "Мои королевы, вы были правы, угроза, исходящая от Тэнно реальна. Мы нашли одного из них, дрейфующим неподалёку от Земли, но Лотос узнала о нашем приближении. Она открыла криокамеру прежде, чем мы его захватили и отправила отряд Тэнно, чтобы пробить брешь в нашей осаде.\r\n\r\nОни сбежали. Мы делаем всё возможное, чтобы выйти на их след. Отделите этого Тэнно от его группы — и он станет лёгкой добычей. Мы разрушили его варфрейм и думаем, что такой резкий выход из криосна повредит его память.\r\n\r\nМы с нетерпением ожидаем наказания за провал этого задания.\r\n\r\nКАПИТАН ВОР",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/WarWithinQuest/WarWithinQuestKeyChain",
+      "name": "Война внутри",
+      "description": "Помехи в Соматической Связи вынуждают Лотос снова выслать оперативников к Резервуару Тэнно.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/WraithQuest/WraithQuestKeyChain",
+      "name": "Зов Темпестарии",
+      "description": "Бури Бездны зверствуют на путях перемещения кораблей Корпуса... Может ли таинственный корабль быть тому причиной?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/YareliQuest/YareliQuestKeyChain",
+      "name": "Укротительница волн",
+      "description": "Когда случается несчастье, Дети Труб ищут надежду в давно забытой истории.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ZarimanQuest/ZarimanQuestKeyChain",
+      "name": "Ангелы Заримана",
+      "description": "Из глубин за пределами восприятия доносится голос, эхо которого нельзя игнорировать. Возникнув из пучин постоянно меняющейся Бездны, «Зариман» теперь покоится между мирами. Навязчивая песнь эхом разносится по всей Системе. Пришло время для разрешения назревшей конфронтации прошлого…",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/DojoKey",
+      "name": "Клановый ключ",
+      "description": "Открывает доступ к клановому додзё.",
+      "parentName": "/Lotus/Types/Game/KeyItem",
+      "codexSecret": true
+    }
+  ]
+}

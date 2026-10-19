@@ -1,0 +1,1264 @@
+{
+  "ExportGear": [
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Infested/InfestedFishBaitA",
+      "name": "Останки Фэза",
+      "description": "Кусок вирма Фэза, собранный после его взрывной смерти в Камбионском Дрейфе. Используется для привлечения глютинокса на поверхности во время активности Воум, или остимира в горячих точках на поверхности во время активности Фэза, а также витреоспинов в пещерах во время активности Фэза/Воум.\r\n\r\nМестонахождение: Камбионский Дрейф на Деймосе во время активности Воум.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Infested/BaseInfestedFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Infested/InfestedFishBaitB",
+      "name": "Обработанные Останки Фэза",
+      "description": "Материя из тела вирма Фэза, очищенная от токсинов и правильно обработанная. Нужна для привлечения аквапульм и флагеллокантов в горячих точках на поверхности Камбионского Дрейфа, аквапульмы только во время активности Воум.\r\n\r\nМестонахождение: у Дочери в Некралиске (Деймос).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Infested/BaseInfestedFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Infested/OrokinFishBaitA",
+      "name": "Останки Воум",
+      "description": "Кусок сырой плоти вирма Воум отделившийся в её смертельной агонии. Используется для привлечения чандрикордов и дуроидов в горячих точках пещер Камбионского Дрейфа во время активности Фэза и Воум.\r\n\r\nМестонахождение: Камбионский Дрейф на Деймосе во время активности Фэза.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Infested/BaseInfestedFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Infested/OrokinFishBaitB",
+      "name": "Обработанные Останки Воум",
+      "description": "Плоть Воум, очищенная и готовая к использованию. Используется для привлечения миксостоматов в горячих точках пещер Камбионского Дрейфа во время активности Воум.\r\n\r\nМестонахождение: у Дочери в Некралиске (Деймос).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Infested/BaseInfestedFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/CaveContaminantTierA",
+      "name": "Наживка на тинокрута",
+      "description": "Эта наживка состоит из ароматического тетраксина, известного тем, что он привлекает тинокрутов — серворыбу, обитающую в горячих точках пещер Долины Сфер.\r\n\r\nМестонахождение: у Бизнеса в Фортуне (Венера).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/CaveContaminantTierB",
+      "name": "Наживка на карамота",
+      "description": "Эта наживка синтезирована из сложного гексофенола, который привлекает карамотов — серворыбу, найденную в горячих точках пещер Долины Сфер.\r\n\r\nМестонахождение: у Бизнеса в Фортуне (Венера)​",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/CaveContaminantTierC",
+      "name": "Наживка на синафиду",
+      "description": "Эта наживка синтезирована из специальных соединений А-дисульфекса-А, известных тем, что они привлекают синафиду — легендарную редкую серворыбу, обитающую только в горячих точках пещер.\r\n\r\nМестонахождение: у Бизнеса в Фортуне (Венера)​",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/GenericContaminant",
+      "name": "Наживка широкого спектра",
+      "description": "Простой коктейль из короткоцепочечных полимеров и загрязняющих веществ. Легко обнаруживается простой серворыбой при любых условиях, но игнорируется более специализированными моделями. Хорошо подходит для сапкадди (найденных в озере), тинка и каменщика (найденных в прудах).\r\n\r\nМестонахождение: у Бизнеса в Фортуне (Венера)",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/LakeContaminantTierA",
+      "name": "Наживка на криллера",
+      "description": "Эта наживка синтезирована из метакальцена-1, известного тем, что он привлекает криллеров — серворыбу, обитающую в озёрах Долины Сфер в тёплую погоду.\r\n\r\nМестонахождение: у Бизнеса в Фортуне (Венера)​",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/LakeContaminantTierB",
+      "name": "Приманка на длиннокрута",
+      "description": "Эта наживка синтезирована из беризена, известного тем, что он привлекает длиннокрутов — серворыбу, которую можно обнаружить в горячих точках озёр Долины Сфер во время тёплой погоды.\r\n\r\nМестонахождение: у Бизнеса в Фортуне (Венера).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/PondContaminantTierA",
+      "name": "Наживка узкого спектра",
+      "description": "Эта смесь эндохлора и диониума способна привлекать реккастеров и глаз-глазов — серворыб, обитающую в прудах Долины Сфер. Глаз-глазы появляются в тёплую погоду, а реккастеры появляются в горячих точках во время холодной погоды.\r\n\r\nМестонахождение: у Бизнеса в Фортуне (Венера)​",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/PondContaminantTierB",
+      "name": "Наживка на тромазона",
+      "description": "Эта наживка синтезирована из длинноцепочечных соединений LS-74, известных тем, что они привлекают тромазона — серворыбу, обитающую в горячих точках прудов Долины Сфер во время холодной погоды.\r\n\r\nМестонахождение: у Бизнеса в Фортуне (Венера)",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/BothRareFishBaitAItem",
+      "name": "Наживка на Мюркрея",
+      "description": "Эта наживка состоит из веществ, привлекающих мюркрея - рыбу, что встречаются лишь в особых областях океана в любое время суток.\r\n\r\nМестонахождение: Рыбачка Хай-Лук в Цетусе (Земля).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/BothUncommonFishBaitItem",
+      "name": "Сумеречная Наживка",
+      "description": "Эта приманка привлекает хищных рыб, которые активны на Равнинах Эйдолона как днём, так и ночью. Привлекает Шаррака и Каркину в океане.\r\n\r\nМестонахождение: Рыбачка Хай-Лук в Цетусе (Земля).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/GenericFishBait",
+      "name": "Приправленная Наживка",
+      "description": "Эта приманка привлекает рыбу, которая активна на Равнинах Эйдолона в течение дня. Привлекает рыбу-пасть и чарка-угрей в озерах; кхут-кхутов, йогвунов и мортус-рогозубов в прудах; а также гуполлу и тралока в океане.\r\n\r\nМестонахождение: Рыбачка Хай-Лук в Цетусе (Земля).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/NightLegendaryFishBaitItem",
+      "name": "Наживка на Глаппиду",
+      "description": "Эта наживка состоит из экзотических веществ, привлекающих неуловимого глаппида — рыбу, что встречается лишь в особых областях океана на Равнинах Эйдолона ночью.\r\n\r\nМестонахождение: Рыбачка Хай-Лук в Цетусе (Земля).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/NightRareFishBaitAItem",
+      "name": "Наживка на Норгу",
+      "description": "Эта наживка состоит из веществ, привлекающих норга — рыбу, что встречается лишь в особых областях озёр на Равнинах Эйдолона ночью.\r\n\r\nМестонахождение: Рыбачка Хай-Лук в Цетусе (Земля).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/NightRareFishBaitBItem",
+      "name": "Наживка на Кутола",
+      "description": "Эта наживка состоит из веществ, привлекающих кутолов — рыбу, что встречается лишь в особых областях прудов на Равнинах Эйдолона ночью.\r\n\r\nМестонахождение: Рыбачка Хай-Лук в Цетусе (Земля).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/MummyQuest/MummyArtifact01GearItem",
+      "name": "Священный Сосуд",
+      "description": "Странный реликт из гробницы Инароса.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Weapon/GearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedCritterLureGearItem",
+      "name": "ЭХО-МАНОК ДЛЯ ВУЛЬПАФИЛЫ",
+      "description": "Манит и влечет Вульпафил поблизости, издавая идентичные настоящим животные зовы.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedCritterRarityBoost",
+      "name": "ФЕРОМОННАЯ ЖЕЛЕЗА ВУЛЬПАФИЛЫ",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Вульпафилы.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedMaggotLureGearItem",
+      "name": "ЭХО-МАНОК ДЛЯ КРИПТИЛЕКСА",
+      "description": "Манит и влечет Криптилексов поблизости, издавая идентичные настоящим животные зовы.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedMaggotRarityBoost",
+      "name": "ФЕРОМОННАЯ ЖЕЛЕЗА КРИПТИЛЕКСА",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Криптилекса.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedMergooLureGearItem",
+      "name": "ЭХО-МАНОК ДЛЯ АВИЧЕЯ",
+      "description": "Манит и влечет Авичеев поблизости, издавая идентичные настоящим животные зовы.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedMergooRarityBoost",
+      "name": "ФЕРОМОННАЯ ЖЕЛЕЗА АВИЧЕЯ",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Авичея.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedNexiferaLureGearItem",
+      "name": "ЭХО-МАНОК ДЛЯ НЕКСИФЕРЫ",
+      "description": "Манит и влечет Нексифер поблизости, издавая идентичные настоящим животные зовы.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedNexiferaRarityBoost",
+      "name": "ФЕРОМОННАЯ ЖЕЛЕЗА НЕКСИФЕРЫ",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Нексиферы.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedPredatorLureGearItem",
+      "name": "Эхо-Манок Для Придазита",
+      "description": "Манит и влечет Придазитов поблизости, издавая идентичные настоящим животные зовы.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedPredatorRarityBoost",
+      "name": "ФЕРОМОННАЯ ЖЕЛЕЗА ПРИДАЗИТА",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Придазита.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedZongroLureGearItem",
+      "name": "ЭХО-МАНОК ДЛЯ УНДАЗОИ",
+      "description": "Манит и влечет Ундазоа поблизости, издавая идентичные настоящим животные зовы.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedZongroRarityBoost",
+      "name": "ФЕРОМОННАЯ ЖЕЛЕЗА УНДАЗОИ",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Ундазои.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/CondrocRarityBoost",
+      "name": "Ута с феромонами кондрока",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Кондрока.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/KuakaRarityBoost",
+      "name": "Ута с феромонами куаки",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Куаки.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/LegendaryKubrowRarityBoost",
+      "name": "Синтезатор Феромонов Кубродона",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Кубродона.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/MergooRarityBoost",
+      "name": "Ута с феромонами мергу",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Мергу.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/OrokinKubrowRarityBoost",
+      "name": "Синтезатор Феромонов Плитника",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Плитника.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowArmadilloRarityBoost",
+      "name": "Синтезатор Феромонов Боларолы",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Боларолы.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowBirdRarityBoost",
+      "name": "Синтезатор Феромонов Пилопасти",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Пилопасти.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowCritterRarityBoost",
+      "name": "Синтезатор Феромонов Вирнорки",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Вирнорки.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowPredatorRarityBoost",
+      "name": "Синтезатор Феромонов Хорраска",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Хорраска.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowRodentRarityBoost",
+      "name": "Синтезатор Феромонов Поббера",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Побберов.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/VampireKavatRarityBoost",
+      "name": "Ута с феромонами васка кавата",
+      "description": "Примените перед использованием эхо-манка, чтобы увеличить вероятность привлечения более редкого подвида Васка Кавата.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/BirdOfPreyLureGearItem",
+      "name": "Эхо-манок для кондрока",
+      "description": "Манит и влечет Кондроков поблизости, издавая идентичные настоящим животные зовы. Кондроки обитают на Равнинах Эйдолона.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/ForestRodentLureGearItem",
+      "name": "Эхо-манок для куаки",
+      "description": "Манит и влечет Куак поблизости, издавая идентичные настоящим животные зовы. Куаки обитают на Равнинах Эйдолона.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/LegendaryKubrowLureGearItem",
+      "name": "Эхо-Манок Для Кубродона",
+      "description": "Манит и влечет Кубродонов поблизости, издавая идентичные настоящим животные зовы. Кубродоны чаще всего встречаются около кратеров в Долине Сфер.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/OrokinKubrowLureGearItem",
+      "name": "Эхо-Манок Для Плитника",
+      "description": "Манит и влечет Плитников поблизости, издавая идентичные настоящим животные зовы.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/OstronSeaBirdLureGearItem",
+      "name": "Эхо-манок для мергу",
+      "description": "Манит и влечет Мергу поблизости, издавая идентичные настоящим животные зовы. Мергу обитают на Равнинах Эйдолона.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowArmadilloLureGearItem",
+      "name": "Эхо-Манок Для Боларолы",
+      "description": "Манит и влечет Боларол поблизости, издавая идентичные настоящим животные зовы. Боларолы чаще всего встречаются около горных областей в Долине Сфер.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowBirdLureGearItem",
+      "name": "Эхо-Манок Для Пилопасти",
+      "description": "Манит и влечет Пилопастей поблизости, издавая идентичные настоящим животные зовы.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowCritterLureGearItem",
+      "name": "Эхо-Манок Для Вирнорки",
+      "description": "Манит и влечет Вирнорок поблизости, издавая идентичные настоящим животные зовы. Вирнорки чаще всего встречаются около озёр в Долине Сфер.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowPredatorLureGearItem",
+      "name": "Эхо-Манок Для Хорраска",
+      "description": "Манит и влечет Хоррасков поблизости, издавая идентичные настоящим животные зовы. ",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowRodentLureGearItem",
+      "name": "Эхо-Манок Для Поббера",
+      "description": "Манит и влечет Побберов поблизости, издавая идентичные настоящим животные зовы. Побберы чаще всего встречаются около грибных полей в Долине Сфер.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/TranqRifleGearItem",
+      "name": "Транквилизаторная Винтовка",
+      "description": "Обездвиживает животных с целью их дальнейшего безопасного перемещения.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/BaseHuntingGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/UpgradedAnimalLureGearItem",
+      "name": "Эхо-Манок",
+      "description": "Влеките и маните животных поблизости с помощью животноподобных сигналов.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/VampireKavatLureGearItem",
+      "name": "Эхо-манок для васка кавата",
+      "description": "Манит и влечет Васка Каватов поблизости, издавая идентичные настоящим животные зовы. Васка Каваты бродят ночью по Равнинам Эйдолона.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Eidolon/LandscapeTrapLightGear",
+      "name": "Силок С Манком",
+      "description": "Бросьте и забудьте, силок испускает утразвуковые волны определённой частоты, привлекающей определённые формы жизни. При поимке они комфортно помещаются внутри одностороннего фотонного заграждения для удобства перемещения в подходящее для Вас время.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseLandscapeTrapGear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FishingBoosts/AnglerVision",
+      "name": "Светящийся Краситель",
+      "description": "Разбавляет в воде краситель, содержащий смесь, прикрепляющуюся на проплывающую мимо рыбу, делая её более заметной с берега.\r\n\r\nМестонахождение: Рыбачка Хай-Лук в Цетусе (Земля).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/FishingBoosts/BaseDyeConsumable"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FishingBoosts/SoftTouch",
+      "name": "Фарома",
+      "description": "Состав, успокаивающий рыбу.\r\n\r\nМестонахождение: Рыбачка Хай-Лук в Цетусе (Земля).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/FishingBoosts/BaseDyeConsumable"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/ArmorBuffSpeedDebuff",
+      "name": "Стимулятор: Кальцифин",
+      "description": "Упрочняет кожу, повышая сопротивление урону, но замедляя движения.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/NpcBuff"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/CloakingBuff",
+      "name": "Стимулятор: Рефракц",
+      "description": "Покрывает носителя пленкой, отражающей свет, позволяя передвигаться скрытно.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/NpcBuff"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/ReviveBuff",
+      "name": "Стимулятор: Клотра",
+      "description": "Возвращает в строй истекающую кровью цель и даёт бонусное возрождение союзникам в зоне действия.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/NpcBuff"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/SpeedBuffArmorDebuff",
+      "name": "Стимулятор: Адренал",
+      "description": "Повышает уровень адреналина, ускоряя движения, но повышая уязвимость к урону.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/NpcBuff"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Synthetics/FlareBlue",
+      "name": "Фосфор-Блау",
+      "description": "Запускает ярко-синий сигнальный огонь, значительно повышающий радиус Синтеза, пока он горит.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Synthetics/FlareDemo",
+      "name": "Фосфор-Рад",
+      "description": "Запускает ярко-красный сигнальный огонь, значительно повышающий радиус Синтеза, пока он горит.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Synthetics/FlareRed",
+      "name": "Фосфор-Рад",
+      "description": "Запускает ярко-красный сигнальный огонь, значительно повышающий радиус Синтеза, пока он горит.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/DayCommonAntitoxin",
+      "name": "Антитоксин: Берилл",
+      "description": "Антитоксин средней эффективности.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/DayUnCommonAntitoxin",
+      "name": "Антитоксин: Цитрин",
+      "description": "Это антитоксин средней эффективности.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/NightCommonAntitoxin",
+      "name": "Антитоксин: Аметист",
+      "description": "Слабый антитоксин.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/NightUnCommonAntitoxin",
+      "name": "Антитоксин: Топаз",
+      "description": "Антитоксин средней эффективности.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/RareAntitoxin",
+      "name": "Антитоксин: Ляпис",
+      "description": "Это крайне эффективный антитоксин.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/SoloRareAntitoxin",
+      "name": "Антитоксин: Вермиллион",
+      "description": "Это крайне эффективный антитоксин.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AlphaCorruptor",
+      "name": "Заражённый носитель альфа",
+      "description": "Инертный сам по себе, этот носитель становится чрезвычайно эффективным, если смешать его с носителем бета. В верных пропорциях смесь выводит реакторы фоморианцев из строя намного быстрее, чем стабилизированный носитель. Этот взрывоопасный предмет не может быть снаряжён одновременно с заражёнными носителями бета. Рекомендуется для Тэнно, работающих в команде.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Corruptor"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AncientHealerBall",
+      "name": "Спектр: Древний защитник",
+      "description": "Создаёт эксимуса — древнего защитника, который сражается на вашей стороне.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AssassinBait",
+      "name": "Маячок: Сталкер",
+      "description": "Приманка для Сталкера. Доступна к применению только на миссиях, где может появиться убийца, и исчезает после использования.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AssassinBaitB",
+      "name": "Маячок: Занука охотник",
+      "description": "Приманка для Зануки охотника. Доступна к применению только на миссиях, где может появиться убийца, и исчезает после использования.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AssassinBaitC",
+      "name": "Маячок: Грастрагская тройка",
+      "description": "Приманка для Грастрагской тройки. После использования исчезает, может быть применена только на миссиях, где могут появиться убийцы.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AssassinBaitD",
+      "name": "Маячок: Волк",
+      "description": "Приманка для Волка. Доступна к применению только на миссиях, где может появиться убийца, и исчезает после использования.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/BaroFireWorksCrate",
+      "name": "Фейерверки Ки'Тиир",
+      "description": "Взрывная цветовая симфония.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear",
+      "name": "Рыболовный Гарпун",
+      "description": "Шипованные штыри на этом рыболовном гарпуне облегчают ловлю рыб с гладкой кожей. \r\n\r\nМожно получить у рыбачки Хай-Лук в Цетусе (Земля). Этот гарпун наиболее эффективен для следующих рыб на Равнинах Эйдолона:  \r\n- Угорь Чарка \r\n- Кутол \r\n- Гуппола \r\n- Мюркрей \r\n- Шаррака\r\n- Йогвун",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/BetaCorruptor",
+      "name": "Заражённый носитель бета",
+      "description": "Инертный сам по себе, этот носитель становится чрезвычайно эффективным, если смешать его с носителем альфа. В верных пропорциях смесь выводит реакторы фоморианцев из строя намного быстрее, чем стабилизированный носитель. Этот взрывоопасный предмет не может быть снаряжён одновременно с заражёнными носителями альфа. Рекомендуется для Тэнно, работающих в команде.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Corruptor"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/BronzeSpectre",
+      "name": "Туманный спектр",
+      "description": "Репликант-клон варфрейма, который может быть использован для поддержки Тэнно на миссиях.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpectreBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CameraConsumable",
+      "name": "Удалённый наблюдатель",
+      "description": "Выпускает временную дистанционную камеру, что позволяет видеть её глазами.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/ChargerBall",
+      "name": "Спектр: Инфестоид",
+      "description": "Создаёт эксимуса-инфестоида, который сражается на вашей стороне.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/ClemBall",
+      "name": "Клон Клема",
+      "description": "Создаёт клон Клема, который сражается на вашей стороне.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CorruptedBombardBall",
+      "name": "Спектр: Порабощённый бомбардировщик",
+      "description": "Создаёт Порабощённого Бомбардировщика, который сражается на Вашей стороне.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CorruptedHeavyGunnerBall",
+      "name": "Спектр: Порабощённый пулемётчик",
+      "description": "Создаёт Порабощённого Пулеметчика, который сражается на Вашей стороне.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CorruptedLancerBall",
+      "name": "Спектр: Порабощённый стрелок",
+      "description": "Создаёт эксимуса-порабощённого стрелка, который сражается на вашей стороне.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CreditChipLarge",
+      "name": "Горячее предложение из Бездны",
+      "description": "Предложение в 100 000 кредитов из Бездны.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/CreditChipSmall"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CreditChipMedium",
+      "name": "Умеренное предложение из Бездны",
+      "description": "Предложение в 10 000 кредитов из Бездны.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/CreditChipSmall"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CreditChipSmall",
+      "name": "Скромное предложение из Бездны",
+      "description": "Предложение в 1 000 кредитов из Бездны.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CrewmateBall",
+      "name": "Экипаж по вызову",
+      "description": "Вызовите назначенного члена экипажа для поддержки в миссиях, не связанных с Рэйлджеком.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FireWorksCrate",
+      "name": "Грандиозный финал",
+      "description": "Хотите более впечатляющий фейерверк дабы показать свой патриотизм? Празднуйте стильно с этим одноразовым предметом.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FireWorksSingle",
+      "name": "Звёздная вспышка",
+      "description": "Отпразднуйте выходные фейерверком! Осветите небо с помощью этого одноразового предмета.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FomorianNegator",
+      "name": "Фоморианский разрушитель",
+      "description": "При активации нарушает работу энергополя Фоморианского омега-ядра, делая его уязвимым. Также защищает Тэнно от омега-радиации.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/GlyphConsumable",
+      "name": "Глиф: Призма",
+      "description": "Выпускает магнетическую призму с выбранным Глифом. Единовременно может быть установлена только одна, количество зарядов не ограничено.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/GlyphConsumableNoCharges",
+      "name": "Глиф: Призма",
+      "description": "Выпускает магнетическую призму с выбранным Глифом. Единовременно может быть установлена только одна, количество зарядов не ограничено.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/GoldSpectre",
+      "name": "Силовой спектр",
+      "description": "Репликант-клон варфрейма, который может быть использован для поддержки Тэнно на миссиях.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpectreBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/HunterTool",
+      "name": "Кинетико-сифонная ловушка",
+      "description": "Специальная ловушка для привлечения и замедления цели синтеза.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedBaitBall",
+      "name": "Капсулы Ферлиака",
+      "description": "Создаёт 50 капсул Ферлиака, испускающих мощные феромоны, привлекающие заражённых.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedFishingSpearA",
+      "name": "Гарпун: Спари",
+      "description": "Погружайтесь в глубины с этим хитроумным рыболовным гарпуном, который едва заметен для заражённых и гибридных/орокинских рыб. Благодаря своему заражённому аспекту, это одно из немногих известных средств, способных проходить через экзокрин.\r\n\r\nМожно получить у Дочери в Некралиске. Этот гарпун наиболее эффективен для рыб, встречающихся в Камбионском Дрейфе (Деймос).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedFishingSpearB",
+      "name": "Гарпун: Эбису",
+      "description": "Погружайтесь в глубины с этим хитроумным рыболовным гарпуном, который едва заметен для заражённых и гибридных/орокинских рыб. Благодаря своему заражённому аспекту, это одно из немногих известных средств, способных проходить через экзокрин.\r\n\r\nМожно получить у Дочери в Некралиске. Этот гарпун наиболее эффективен для рыб, встречающихся в Камбионском Дрейфе (Деймос).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/InfestedFishingSpearA"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedIrradiatedBaitBall",
+      "name": "Облучённые капсулы Ферлиака",
+      "description": "Создаёт 50 облученных капсул Ферлиака, испускающих мощные феромоны, привлекающие заражённых.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedSyringe",
+      "name": "Инъектор антисерума",
+      "description": "Вводит антисерум в Очистители или в пользователя, предотвращая разрушение брони.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/LibraryScanner",
+      "name": "Сканер синтеза",
+      "description": "Синтезирует генетические данные цели и загружает их в Святилище.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MacheteWomanBall",
+      "name": "Спектр: Скорпион",
+      "description": "Создаёт эксимуса-скорпиона, который сражается на вашей стороне.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MapMarker",
+      "name": "Местный указатель",
+      "description": "Постоянный маркер направления для использования с картой мира. Координируйте свой отряд и отслеживайте важные места!",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MiningLaser",
+      "name": "Нозамовый Резак",
+      "description": "Стандартный инструмент для резки руды и извлечения драгоценных камней из камня.\r\n\r\nОтходите подальше от поселений, чтобы увеличить шансы на добычу редких минералов.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MiningLaserB",
+      "name": "Фокусированный Нозамовый Резак",
+      "description": "Более продвинутая версия Нозамового Резака.\r\n\r\nОтойдите подальше от поселений, чтобы увеличить шансы на добычу редких минералов.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/MiningLaser"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MiningLaserC",
+      "name": "Продвинутый нозамовый резак",
+      "description": "Усовершенствованный с помощью кибернетики, этот инструмент способен находить близлежащие драгоценные камни и рудные жилы, а также имеет шанс извлечь редкие драгоценные камни на любом ландшафте.\r\n\r\nОтходите подальше от поселений-хабов, чтобы увеличить шансы на добычу редких минералов.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/MiningLaser"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MiningLaserSolaris",
+      "name": "Сол-точечный плазменный бур",
+      "description": "Быстро воспламеняющийся, высокоэффективный инструмент для добычи, способный извлекать редчайшие минералы с хирургической точностью.\r\n\r\nМожет использоваться для извлечения редких самоцветов на любом ландшафте. Отходите подальше от поселений, чтобы получить наилучшие шансы на добычу редких минералов.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/MiningLaser"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MoaBall",
+      "name": "Спектр: МОА",
+      "description": "Создаёт эксимуса-МОА, который сражается на вашей стороне.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NemesisBait",
+      "name": "Ультимативный реквием",
+      "description": "Вызывает немедленную конфронтацию с вашим Личом Кувы или Сестрой Парвоса: оскорбление, которое не может быть проигнорировано.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/PlatinumSpectre",
+      "name": "Космический спектр",
+      "description": "Репликант-клон варфрейма, который может быть использован для поддержки Тэнно на миссиях.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpectreBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RazorbackCipher",
+      "name": "Шифр Секача",
+      "description": "Используется для обхода систем защиты ячейки хранения Секача.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RecallToRailjack",
+      "name": "Вернуться в Рэйлджек",
+      "description": "",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RepairTool",
+      "name": "Омни",
+      "description": "Омни - это многофункциональный инструмент Рэйлджека для тушения пожаров, зануления электрических помех и ремонта разрывов фюзеляжа. Используйте его снаружи Рэйлджека, чтобы мгновенно вернуться на борт корабля.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RobofishSpearB",
+      "name": "Рыболовный Гарпун Шокпрод",
+      "description": "Создан для извлечения серворыб без повреждений. Выпускает дезактивирующий электромагнитный импульс после успешного попадания, если правильно рассчитать время.\r\n\r\nМестонахождение: у Бизнеса в Фортуне. Это копьё наиболее эффективно против серворыб, обитающих в Долине сфер (Венера).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RobofishSpearC",
+      "name": "Рыболовный Гарпун Станна",
+      "description": "Успешные электромагнитные импульсы распространяются наружу, дезактивируя также любую серворыбу поблизости.\r\n\r\nМестонахождение: у Бизнеса в Фортуне. Это копьё наиболее эффективно против серворыб, обитающих в Долине Сфер (Венера).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RollerBall",
+      "name": "Спектр: Роллер",
+      "description": "Создаёт эксимуса-роллера, который сражается на вашей стороне.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Scanner",
+      "name": "Сканер",
+      "description": "Собирает образец материалов цели для последующего анализа в Кодексе.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/ShieldDroneBall",
+      "name": "Спектр: Дрон-щитогенератор",
+      "description": "Создаёт эксимуса дрона-щитогенератора, который сражается на вашей стороне.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SilverSpectre",
+      "name": "Фазовый спектр",
+      "description": "Репликант-клон варфрейма, который может быть использован для поддержки Тэнно на миссиях.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpectreBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SkateBall",
+      "name": "Спектр пустынного Ската",
+      "description": "Создаёт ПЕСЧАНОГО СКАТА, который будет сражаться за вас.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpear",
+      "name": "Рыболовный Гарпун Ланзо",
+      "description": "Шипованные штыри на этом рыболовном гарпуне облегчают ловлю рыб с гладкой кожей. \r\n\r\nМожно получить у рыбачки Хай-Лук в Цетусе (Земля). Этот гарпун наиболее эффективен для следующих рыб на Равнинах Эйдолона:  \r\n- Угорь Чарка \r\n- Кутол \r\n- Гуппола \r\n- Мюркрей \r\n- Шаррака\r\n- Йогвун",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpearB",
+      "name": "Рыболовный Гарпун Тулок",
+      "description": "Этот рыболовный гарпун оснащён тонким лезвием, чтобы пробивать броневые пластины и панцири. \r\n\r\nМожно получить у рыбачки Хай-Лук в Цетусе (Земля). Этот гарпун наиболее эффективен для следующей рыбы на Равнинах Эйдолона:  \r\n- Тралок",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpearC",
+      "name": "Рыболовный Гарпун Перам",
+      "description": "Этот рыболовный гарпун имеет несколько лезвий, которые позволяют пробивать шкуры чешуйчатых рыб. \r\n\r\nМожно получить у рыбачки Хай-Лук в Цетусе (Земля). Этот гарпун наиболее эффективен для следующих рыб на Равнинах Эйдолона:  \r\n- Глаппида\r\n- Кхут-Кхут  \r\n- Рыба-пасть\r\n- Мортус-рогозуб\r\n- Норга",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/StableCorruptor",
+      "name": "Стабилизированный заражённый носитель",
+      "description": "Введённый в реактор фоморианца, этот носитель нарушит баланс топлива. Критически нестабильные реакторы рано или поздно интегрируются и уничтожат корабль. Медленный, но эффективный, рекомендуется для Тэнно-одиночек.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Corruptor"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/StalkerBall",
+      "name": "Спектр Сталкера",
+      "description": "Создаёт клон Сталкера, который будет сражаться за вас.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SurgeEximusBall",
+      "name": "Спектр Заряженного Эксимуса",
+      "description": "Создаёт клон Заряженного Эксимуса, который будет сражаться за вас.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/ValentinesArrowBundle",
+      "name": "Скин Стрелы: Эрос",
+      "description": "Покажите врагу, как сильно вы о нём беспокоитесь, с помощью восхитительного скина для стрел «Эрос».",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonFeyarchOberon",
+      "name": "Апотик: Восход",
+      "description": "Создаёт органическое соединение из редких видов растений. Эффект неизвестен.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonKnaveLoki",
+      "name": "Апотик: Приход ночи",
+      "description": "Создаёт органическое соединение из редких видов растений. Эффект неизвестен.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonOrphidSaryn",
+      "name": "Апотик: Сумеречный",
+      "description": "Создаёт органическое соединение из редких видов растений. Эффект неизвестен.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Upgraded/DamageDebuffKey",
+      "name": "Ключ потухшего дракона",
+      "description": "Пока ключ экипирован, урон значительно снижается.\r\n\r\nЧертёж можно получить в лаборатории Орокин в Додзё Клана.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Upgraded/CorruptedKey"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Upgraded/HealthDebuffKey",
+      "name": "Ключ кровоточащего дракона",
+      "description": "Пока ключ экипирован, здоровье значительно снижается.\r\n\r\nЧертёж можно получить в лаборатории Орокин в Додзё Клана.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Upgraded/CorruptedKey"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Upgraded/ShieldDebuffKey",
+      "name": "Ключ увядающего дракона",
+      "description": "Пока ключ экипирован, щиты значительно ослаблены. Максимальная длительность защиты щитов ограничена — 0,33 сек.\r\n\r\nЧертёж можно получить в Лаборатории Орокин в додзё клана.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Upgraded/CorruptedKey"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Upgraded/SpeedDebuffKey",
+      "name": "Ключ хромого дракона",
+      "description": "Пока ключ экипирован, скорость значительно снижается.\r\n\r\nЧертёж можно получить в лаборатории Орокин в додзё клана.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Upgraded/CorruptedKey"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/CatbrowVampireDisinfect",
+      "name": "Вакцина Васки",
+      "description": "Народное средство от вируса Васка, среди Остронцев известное как 'лисау хейсах'. При его применении все каваты поблизости исцеляются.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Cipher",
+      "name": "Дешифратор",
+      "description": "Одноразовое устройство для автоматического взлома панелей блокировки.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ClanTeamAmmoTotem",
+      "name": "Восст. патронов отряда (средний)",
+      "description": "Восстанавливает 2 заряда к основному и дополнительному оружию каждые 15 секунд в течение 60 секунд.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ClanTeamEnergyTotem",
+      "name": "Восст. энергии отряда (средний)",
+      "description": "Восстанавливает энергию всем в отряде. Восполняет 50 ед. энергии каждые 5 с в течение 20 с.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ClanTeamHealTotem",
+      "name": "Восст. здоровья отряда (средний)",
+      "description": "Восстанавливает здоровье всем в отряде. Восполняет 100 ед. здоровья каждые 5 с в течение 20 с.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ClanTeamShieldTotem",
+      "name": "Восст. щитов отряда (средний)",
+      "description": "Восстанавливает щиты всем в отряде. Восполняет 100 ед. щитов каждые 7,5 с в течение 30 с.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ErsatzSummon",
+      "name": "Призыв кайта",
+      "description": "Призовите и мгновенно оседлайте кайта во время миссий со свободой перемещения.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/HeavyWeaponSummon",
+      "name": "Запуск Оружия Арчвинга",
+      "description": "Задействуйте выбранное оружие арчвинга в любой атмосферной среде, используя этот предмет снаряжения.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/HoverboardSummon",
+      "name": "Запуск К-Драйва",
+      "description": "Призывает К-драйв для использования на миссиях со свободным перемещением.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetAirSupport",
+      "name": "Заряды воздушной поддержки",
+      "description": "Заряды, используемые при запросе поддержки с воздуха от десантного корабля.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetAmmoDrop",
+      "name": "Восст. патронов отряда (средний)",
+      "description": "Восстанавливает 2 заряда к основному и дополнительному оружию каждые 15 секунд в течение 60 секунд.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetAutoHack",
+      "name": "Взлом",
+      "description": "Ордис взламывает систему противника и нарушает защитные протоколы на короткий промежуток времени.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetBarrage",
+      "name": "Ковровая бомбардировка",
+      "description": "Ордис сбрасывает бомбы по направлению установленного вами маяка.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetBlackHole",
+      "name": "Вихрь",
+      "description": "Создаёт энергетическую воронку, которая с чудовищной силой притягивает врагов, а затем сминает их в крохотный кусочек материи.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetGoldenInstinct",
+      "name": "Око Орокин",
+      "description": "Ордис сканирует местность в поисках редких предметов.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetKahl",
+      "name": "Маяк Кахла",
+      "description": "Призывает Кахла и его братьев помочь вам в течение ограниченного времени. Последующие применения исцеляют отряд Кахла и добавляют ещё одного брата.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetLaserTurret",
+      "name": "Ракетная Батарея",
+      "description": "Выпускает самонаводящиеся ракеты",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetMedStation",
+      "name": "Мед-башня",
+      "description": "Ордис сбрасывает Мед-башню, восстанавливающую здоровье союзникам неподалеку.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetShield",
+      "name": "Снежная Сфера",
+      "description": "Фрост подвергает глубокой заморозке влагу и пар вокруг себя, создавая непроницаемую защитную сферу с краткой неуязвимостью для её усиления.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetStun",
+      "name": "Сновидцы",
+      "description": "Убаюкивающая мелодия Норы несёт врагам упокой в стране грёз.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetTurret",
+      "name": "Автоматическая турель",
+      "description": "Ордис сбрасывает автоматическую турель, которая будет атаковать ближайших видимых противников.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LoadoutTechSummon",
+      "name": "Запуск Некрамеха",
+      "description": "Призовите Некрамеха на поле битвы.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/BaseTechSummon"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/MotorcycleSummon",
+      "name": "Вызов атомицикла",
+      "description": "Вызывает атомицикл для использования в 1999 году и в миссиях свободного перемещения.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/OpenArchwingSummon",
+      "name": "Запуск арчвинга",
+      "description": "Призывает арчвинг для использования на миссиях со свободным перемещением.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ScenarioBeacon",
+      "name": "ОпСвязь",
+      "description": "Устройство, используемое для взаимодействия и управления ресурсами во время миссий Оперативной Связи.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfHealLarge",
+      "name": "Восст. здоровья (большой)",
+      "description": "Мгновенно восстанавливает все ваше здоровье.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfHealSmall",
+      "name": "Восст. здоровья (малый)",
+      "description": "Мгновенно восстанавливает 50 здоровья.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfOmniAmmo",
+      "name": "Коробка универсальных боеприпасов",
+      "description": "Восполняет все типы патронов.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfPistolAmmo",
+      "name": "Коробка патронов для пистолета",
+      "description": "Восстанавливает часть пистолетных боеприпасов.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfRifleAmmo",
+      "name": "Коробка патронов для винтовки",
+      "description": "Восстанавливает часть боеприпасов для винтовки.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfShieldHeal",
+      "name": "Восст. щита (малый)",
+      "description": "Мгновенно восстанавливает 50 щитов.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfShotgunAmmo",
+      "name": "Коробка с зарядами дроби",
+      "description": "Восстанавливает часть боеприпасов для дробовика.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfSniperAmmo",
+      "name": "Коробка патронов для снайперской винтовки",
+      "description": "Восстанавливает часть снайперских боеприпасов.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SyndicateTeamAmmoTotem",
+      "name": "Восст. патронов отряда (большой)",
+      "description": "Восстанавливает 3 заряда к основному и дополнительному оружию каждые 15 секунд в течение 60 секунд.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SyndicateTeamEnergyTotem",
+      "name": "Восст. энергии отряда (большой)",
+      "description": "Восстанавливает энергию всем в отряде. Восполняет 100 ед. энергии каждые 7,5 с в течение 30 с.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SyndicateTeamHealTotem",
+      "name": "Восст. здоровья отряда (большой)",
+      "description": "Восстанавливает здоровье всем в отряде. Восполняет 300 ед. здоровья каждые 7,5 с в течение 30 с.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SyndicateTeamShieldTotem",
+      "name": "Восст. щитов отряда (большой)",
+      "description": "Восстанавливает щиты всем в отряде. Восполняет 300 ед. щитов каждые 7,5 с в течение 30 с.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamAmmoTotem",
+      "name": "Восст. патронов отряда (малый)",
+      "description": "Восстанавливает 1 заряд к основному и дополнительному оружию каждые 15 секунд в течение 60 секунд.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamEnergyTotem",
+      "name": "Восст. энергии отряда (малый)",
+      "description": "Восстанавливает энергию всем в отряде. Восполняет 25 ед. энергии каждые 7,5 с в течение 30 с.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamHeal",
+      "name": "Восст. здоровья отряда (малый)",
+      "description": "Восстанавливает здоровье всем в отряде. Восполняет 30 ед. здоровья каждые 7,5 с в течение 30 с.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamHealTotem",
+      "name": "Восст. здоровья отряда (малый)",
+      "description": "Восстанавливает здоровье всем в отряде. Восполняет 30 ед. здоровья каждые 7,5 с в течение 30 с.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamShieldTotem",
+      "name": "Восст. щитов отряда (малый)",
+      "description": "Восстанавливает щиты всем в отряде. Восполняет 35 ед. щитов каждые 7,5 с в течение 30 с.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ThermianRPGSummon",
+      "name": "Термианский гранатомёт",
+      "description": "Развёртывает термианский гранатомёт",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    }
+  ]
+}

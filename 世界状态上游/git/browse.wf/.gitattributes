@@ -1,0 +1,3 @@
+*.pluto linguist-language=Lua
+
+typestripped/ linguist-generated

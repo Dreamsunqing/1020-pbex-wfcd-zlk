@@ -1,0 +1,328 @@
+local { crypto, ffi, json, url } = require "*"
+
+$define NUM_INVIGORATIONS = 3
+
+local request = json.decode(url.decode(_SERVER.REQUEST_URI:sub(16)))
+if type(request) ~= "table"
+	or request:size() ~= 3
+	or type(request.n) ~= "string" or #request.n < 4
+	or type(request.s) ~= "table" or #request.s > NUM_INVIGORATIONS
+	or type(request.p) ~= "boolean"
+then
+	return io.write("bad request")
+end
+
+local currentIndex <const> = (os.unixseconds() - 1391990400) // 604800
+
+local responseIndex = currentIndex
+if request.p then
+	++responseIndex
+end
+
+local FloatStruct = ffi.struct[[
+	struct FloatStruct {
+		float a;
+		float b;
+		float c;
+	};
+]]
+local float_struct_inst = new FloatStruct()
+luau_int_add = function(a, b)
+	float_struct_inst.a = a
+	float_struct_inst.b = b
+	float_struct_inst.c = float_struct_inst.a + float_struct_inst.b
+	return math.tointeger(float_struct_inst.c)
+end
+luau_float_add = function(a, b)
+	float_struct_inst.a = a
+	float_struct_inst.b = b
+	float_struct_inst.c = float_struct_inst.a + float_struct_inst.b
+	return float_struct_inst.c
+end
+luau_float_mul = function(a, b)
+	float_struct_inst.a = a
+	float_struct_inst.b = b
+	float_struct_inst.c = float_struct_inst.a * float_struct_inst.b
+	return float_struct_inst.c
+end
+
+local Seed
+function SetSeed(s)
+	Seed = s
+end
+
+function ChurnSeed(s, n)
+	Seed = s
+	for _ = 1, n do
+		Seed = 0x5851F42D4C957F2D * Seed + 0x14057B7EF767814F
+	end
+end
+
+function HIDWORD(d)
+	return (d >> 32) & 0xFFFFFFFF
+end
+
+function SRandom(min, max)
+	Seed = 0x5851F42D4C957F2D * Seed + 0x14057B7EF767814F
+	if min > max then
+		min, max = max, min
+	end
+	return luau_float_add(
+		luau_float_mul(
+			luau_float_mul(((HIDWORD(Seed) >> 6) & 0xFFFFFF), 0.000000059604645),
+			luau_float_add(max, -min)
+			),
+		min
+		)
+end
+
+function SRandomInt(min, max)
+	local diff = max - min
+	if diff ~= 0 then
+		Seed = 0x5851F42D4C957F2D * Seed + 0x14057B7EF767814F
+		min += (HIDWORD(Seed) & 0x3FFFFFFF) % (diff + 1)
+	end
+	return min
+end
+
+local function v_u_2252(p2242, p2243)
+	local v2244 = {}
+	for _ = 1, p2243 do
+		local v2245 = p2242[1]
+		table.insert(v2244, v2245)
+	end
+	if #p2242 == 1 then
+		return v2244
+	end
+	local v2246 = 0
+	for v2247 = 1, #p2242 do
+		v2246 = v2246 + p2242[v2247].Weight
+	end
+	local v2248 = #p2242
+	for v2249 = 1, p2243 do
+		local v2250 = SRandom(0, 1) * v2246
+		for v2251 = 1, v2248 do
+			if v2250 < p2242[v2251].Weight then
+				v2244[v2249] = p2242[v2251].ItemType
+				v2246 = v2246 - p2242[v2251].Weight
+				table.remove(p2242, v2251)
+				v2248 = v2248 - 1
+				break
+			end
+			v2250 = v2250 - p2242[v2251].Weight
+		end
+	end
+	return v2244
+end
+
+SetSeed(responseIndex)
+local v2291 = SRandomInt(1, 1000000)
+local v2292 = crypto.crc32(request.n)
+local v2293 = luau_int_add(v2292, v2291)
+SetSeed(v2293)
+
+local v2269 = {}
+local ExportWarframes = json.decode(io.contents("/storage/wf.browse/warframe-public-export-plus/ExportWarframes.json"), json.withorder)
+for ExportWarframes.__order as uniqueName do
+	local suit = ExportWarframes[uniqueName]
+	if suit.productCategory == "Suits"
+		and suit.parentName ~= "/Lotus/Powersuits/Excalibur/DarkExcalibur"
+		and not (suit.parentName in v2269)
+	then
+		v2269:insert(1, suit.parentName)
+	end
+end
+
+local WeightedWarframes = {
+	--[[{
+		ItemType = "/Lotus/Powersuits/Devourer/DevourerBaseSuit",
+		Weight = 2
+	},
+	{
+		ItemType = "/Lotus/Powersuits/Garuda/GarudaBaseSuit",
+		Weight = 2
+	},
+	{
+		ItemType = "/Lotus/Powersuits/Jade/JadeBaseSuit",
+		Weight = 2
+	},
+	{
+		ItemType = "/Lotus/Powersuits/Brawler/BrawlerBaseSuit",
+		Weight = 2
+	},
+	{
+		ItemType = "/Lotus/Powersuits/Banshee/BansheeBaseSuit",
+		Weight = 2
+	},
+	{
+		ItemType = "/Lotus/Powersuits/Priest/PriestBaseSuit",
+		Weight = 2
+	},
+	{
+		ItemType = "/Lotus/Powersuits/Pirate/PirateBaseSuit",
+		Weight = 2
+	},
+	{
+		ItemType = "/Lotus/Powersuits/MonkeyKing/MonkeyKingBaseSuit",
+		Weight = 0.5
+	},
+	{
+		ItemType = "/Lotus/Powersuits/Saryn/SarynBaseSuit",
+		Weight = 0.5
+	},
+	{
+		ItemType = "/Lotus/Powersuits/Cowgirl/CowgirlBaseSuit",
+		Weight = 0.5
+	},
+	{
+		ItemType = "/Lotus/Powersuits/Wisp/WispBaseSuit",
+		Weight = 0.5
+	},
+	{
+		ItemType = "/Lotus/Powersuits/Volt/VoltBaseSuit",
+		Weight = 0.5
+	},
+	{
+		ItemType = "/Lotus/Powersuits/Khora/KhoraBaseSuit",
+		Weight = 0.5
+	},
+	{
+		ItemType = "/Lotus/Powersuits/Runner/RunnerBaseSuit",
+		Weight = 0.75
+	},
+	{
+		ItemType = "/Lotus/Powersuits/Infestation/InfestationBaseSuit",
+		Weight = 1
+	}]]
+	{
+		ItemType = "/Lotus/Powersuits/Excalibur/ExcaliburBaseSuit",
+		Weight = 1
+	}
+}
+for v2269 as baseSuitType do
+	if not WeightedWarframes:find(|x| -> x.ItemType == baseSuitType) then
+		WeightedWarframes:insert({
+			ItemType = baseSuitType,
+			Weight = 1
+		})
+	end
+end
+
+if request.s then
+	for request.s as suit do
+		local entry = WeightedWarframes:find(|x| -> x.ItemType == suit)
+		if not entry then
+			return io.write("bad request")
+		end
+		entry.Weight = 0
+	end
+end
+
+local response = {
+	__order = { "suits", "offensiveUpgrades", "defensiveUpgrades" },
+	suits = v_u_2252(WeightedWarframes, NUM_INVIGORATIONS)
+}
+
+local WeightedOffensiveUpgrades = {
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPowerStrength",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPowerRange",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPowerDuration",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationMeleeDamage",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPrimaryDamage",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationSecondaryDamage",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPrimaryCritChance",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationSecondaryCritChance",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationMeleeCritChance",
+		Weight = 1
+	}
+}
+response.offensiveUpgrades = v_u_2252(WeightedOffensiveUpgrades, NUM_INVIGORATIONS)
+
+local WeightedDefensiveUpgrades = {
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationPowerEfficiency",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationMovementSpeed",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationParkourSpeed",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationHealth",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationEnergy",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationStatusResistance",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationReloadSpeed",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationHealthRegen",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationArmor",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationJumps",
+		Weight = 1
+	},
+	{
+		ItemType = "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationEnergyRegen",
+		Weight = 1
+	}
+}
+if "/Lotus/Powersuits/IronFrame/IronFrameBaseSuit" in response.suits
+	or "/Lotus/Powersuits/Alchemist/AlchemistBaseSuit" in response.suits
+then
+	for i = #WeightedDefensiveUpgrades, 1, -1 do
+		if WeightedDefensiveUpgrades[i].ItemType == "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationEnergy"
+			or WeightedDefensiveUpgrades[i].ItemType == "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationEnergyRegen"
+		then
+			WeightedDefensiveUpgrades:remove(i)
+		end
+	end
+end
+response.defensiveUpgrades = v_u_2252(WeightedDefensiveUpgrades, NUM_INVIGORATIONS)
+
+local expiry = (currentIndex + 1) * 604800 + 1391990400
+header("Cache-Control: public, max-age="..((expiry - 1) - os.unixseconds()))
+header("Content-Type: application/json")
+io.write(json.encode(response))

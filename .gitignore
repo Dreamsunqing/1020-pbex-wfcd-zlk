@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.workbench/
+*.log
+.DS_Store
+artifacts/
+**/.git/
+__pycache__/

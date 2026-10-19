@@ -1,0 +1,114 @@
+{
+  "name": "@wfcd/items",
+  "version": "0.0.0-dev",
+  "description": "Get all warframe items directly from Warframe's API.",
+  "homepage": "https://github.com/wfcd/warframe-items#readme",
+  "bugs": {
+    "url": "https://github.com/wfcd/warframe-items/issues"
+  },
+  "repository": "https://github.com/WFCD/warframe-items",
+  "license": "MIT",
+  "author": "Kaptard",
+  "contributors": [
+    "Tobiah <tobiah@pm.me>"
+  ],
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.js"
+    },
+    "./utilities": {
+      "types": "./utilities/index.d.ts",
+      "import": "./utilities/index.mjs"
+    }
+  },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "tsx ./build/build.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky",
+    "prepublishOnly": "npm_config_yes=true npx clean-package",
+    "regression": "NODE_OPTIONS='--import tsx' mocha --spec test/index.regression.spec.mjs",
+    "test": "NODE_OPTIONS='--import tsx' nyc mocha --exclude test/*.regression.spec.mjs",
+    "type-check": "tsc --noEmit",
+    "pretypings": "typescript-json-schema ./tsconfig.schema.json Items --out items.schema.json --noExtraProps --required --strictNullChecks",
+    "typings": "ajv validate -s ./items.schema.json -d ./data/json/All.json --allowUnionTypes --verbose",
+    "validate": "npm ls"
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ],
+  "overrides": {
+    "cross-spawn": "^6.0.6",
+    "rimraf": "$rimraf"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.0",
+    "@commitlint/config-conventional": "^21.0.0",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/cheerio": "^1.0.0",
+    "@types/get-image-colors": "^4.0.5",
+    "@types/imagemin": "^8.0.5",
+    "@types/imagemin-jpegtran": "^5.0.4",
+    "@types/lodash.clonedeep": "^4.5.9",
+    "@types/lzma": "^2.3.0",
+    "@types/node": "^25.0.3",
+    "@types/node-cmd": "^5.0.0",
+    "@types/node-fetch": "^2.6.11",
+    "@types/progress": "^2.0.7",
+    "@types/sharp": "^0.32.0",
+    "@typescript-eslint/eslint-plugin": "^8.58.0",
+    "@typescript-eslint/parser": "^8.58.0",
+    "@wfcd/patchlogs": "^2.149.63",
+    "@wfcd/relics": "^2.0.29",
+    "ajv-cli": "^5.0.0",
+    "chai": "^6.0.1",
+    "chalk": "^6.0.0",
+    "cheerio": "^1.0.0",
+    "decache": "^4.6.2",
+    "eslint": "^10.1.0",
+    "eslint-plugin-jsonc": "^3.4.2",
+    "eslint-plugin-yml": "^3.8.1",
+    "expose-gc": "^1.0.0",
+    "get-image-colors": "^4.0.1",
+    "globals": "^17.4.0",
+    "https-proxy-agent": "^9.0.0",
+    "husky": "^9.1.5",
+    "image-downloader": "^4.3.0",
+    "imagemin": "^7.0.1",
+    "imagemin-jpegtran": "^8.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "json-diff": "^1.0.6",
+    "lint-staged": "^17.0.3",
+    "lodash.clonedeep": "^4.5.0",
+    "lua.vm.js": "0.0.1",
+    "lzma": "^2.3.2",
+    "mocha": "^12.0.2",
+    "node-cmd": "^6.0.0",
+    "node-fetch": "^2.6.1",
+    "nyc": "^18.0.0",
+    "progress": "^2.0.3",
+    "rimraf": "^6.1.3",
+    "sanitize-filename": "^1.6.4",
+    "sharp": "^0.35.1",
+    "socks5-http-client": "^1.0.4",
+    "tslib": "^2.7.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.58.0",
+    "typescript-json-schema": "0.68.0",
+    "wasmoon": "^1.16.0"
+  },
+  "peerDependencies": {
+    "warframe-worldstate-data": "^3.0.0"
+  },
+  "publishConfig": {
+    "provenance": true
+  }
+}

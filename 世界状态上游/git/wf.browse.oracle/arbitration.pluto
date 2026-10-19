@@ -1,0 +1,8 @@
+local arbys = io.contents("/var/www/wf.browse/arbys.txt"):split("\n"):map(|x| -> x:split(",")):filter(|x| -> #x == 2)
+local currentHour = (os.unixseconds() // 3600) * 3600
+local epochHour = tonumber(arbys[1][1])
+local currentHourIndex = (currentHour - epochHour) / 3600
+
+header("Cache-Control: public, max-age="..((currentHour + 3599) - os.unixseconds()))
+header("Content-Type: text/plain")
+io.write(arbys[1 + currentHourIndex][2])

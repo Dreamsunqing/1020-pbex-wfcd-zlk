@@ -1,0 +1,1264 @@
+{
+  "ExportGear": [
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Infested/InfestedFishBaitA",
+      "name": "Resztki Fass",
+      "description": "Kawałek Wyrma Fass, zebrany po jego wybuchowej śmierci w Dryfie Kambionu. Można go użyć do zwabienia na powierzchnię Glutinoksa w trakcie Vome, Ostimira na powierzchnię wzburzonej wody w trakcie Fass i Witreospina w jaskiniach w trakcie faz Fass i Vome.\r\n\r\nWystępowanie: Dryf Kambionu na Deimosie podczas fazy Wyrma Vome",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Infested/BaseInfestedFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Infested/InfestedFishBaitB",
+      "name": "Przetworzone Resztki Fass",
+      "description": "Materia z ciała Wyrma Fass, oczyszczona z toksyn i użyteczna. Może służyć do zwabienia Akwenpulma oraz Flagelokanta na powierzchni Dryfu Kambionu, a także Akwenpulmo w trakcie fazy Vome.\r\n\r\nMożna ją zdobyć u Córki w Nekralisku (Deimos).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Infested/BaseInfestedFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Infested/OrokinFishBaitA",
+      "name": "Resztki Vome",
+      "description": "Kawał surowej tkanki, który odpadł z Wyrma Vome w jej śmiertelnym spazmie. Może służyć do zwabienia Chrząstkordzenia i Duroida w jaskiniach Dryfu Kambionu w trakcie faz Vome i Fass.\r\n\r\nWystępowanie: Dryf Kambionu na Deimosie podczas fazy Wyrm Fass",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Infested/BaseInfestedFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Infested/OrokinFishBaitB",
+      "name": "Przetworzone Resztki Vome",
+      "description": "Tkanka Vome, oczyszczona i gotowa do użycia. Może służyć do zwabienia Miksostomaty w jaskiniach Dryfu Kambionu w trakcie fazy Vome.\r\n\r\nMożna ją zdobyć u Córki w Nekralisku (Deimos).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Infested/BaseInfestedFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/CaveContaminantTierA",
+      "name": "Przynęta Błotowkręta",
+      "description": "Ta przynęta zawiera aromatyczne tetraksyny, które są znane z właściwości wabiących Błotowkręty, Serworyby występujące w jaskiniach Orb Vallis.\r\n\r\nMoże zostać zakupiona od Biznesa w Fortunie (Wenus).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/CaveContaminantTierB",
+      "name": "Przynęta Pyłkoczary",
+      "description": "Ta przynęta jest syntetyzowana ze złożonego heksofenolu, który znany jest z przyciągania Pyłkoczary, Serworyby występujące w jaskiniach Orb Vallis.\r\n\r\nMoże zostać zakupiona od Biznesa w Fortunie (Wenus).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/CaveContaminantTierC",
+      "name": "Przynęta Synathid",
+      "description": "Ta przynęta jest syntetyzowana ze specjalistycznych związków A-disulfeks-A, które są znane z przyciągania Synathid, legendarnie rzadkich Serworyb, występujących w jaskiniach Orb Vallis.\r\n\r\nMoże zostać zakupiona od Biznesa w Fortunie (Wenus).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/GenericContaminant",
+      "name": "Przynęta Szerokiego Spektrum",
+      "description": "Prosta mieszanka zanieczyszczeń i polimerów z prostymi wiązaniami. Łatwo odnajdywany przez pospolite Serworyby w każdych warunkach, ale ignorowanych przez bardziej wyspecjalizowane modele. Dobry dla Torbaczy (występujących w jeziorach), Tynków i Cegieł (występujących w stawach).\r\n\r\nMoże zostać zakupiona od Biznesa w Fortunie (Wenus).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/LakeContaminantTierA",
+      "name": "Przynęta Kriller",
+      "description": "Ta przynęta jest syntetyzowana z Methacalcene-1, która jest znana z przyciągania Krillerów, Serworyb występujących w jeziorach Orb Vallis podczas ciepłej pogody.\r\n\r\nMoże zostać zakupiona od Biznesa w Fortunie (Wenus).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/LakeContaminantTierB",
+      "name": "Przynęta Długowija",
+      "description": "Ta przynęta jest syntezowana z berezyny, która jest znana z właściwości wabiących Długowije, Serworyby występujące w jeziorach Orb Vallis podczas ciepłej pogody.\r\n\r\nMoże zostać zakupiona od Biznesa w Fortunie (Wenus).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/PondContaminantTierA",
+      "name": "Przynęta Wąskiego Spektrum",
+      "description": "Ta mieszanka endochloru/dionium wabi zarówno Recasterów, jak i Okularników, Serworyb występujących w jeziorach Orb Vallis. Okularnik pojawia się tylko podczas ciepłej pogody, a Recaster podczas chłodnej pogody.\r\n\r\nMoże zostać zakupiona od Biznesa w Fortunie (Wenus).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/PondContaminantTierB",
+      "name": "Przynęta Tromyzon",
+      "description": "Ta przynęta jest stworzona ze składnika LS-74, które przyciągają Tromyzony, Serworyby występujące w stawach Orb Vallis podczas chłodnej pogody.\r\n\r\nMoże zostać zakupiona od Biznesa w Fortunie (Wenus).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/BothRareFishBaitAItem",
+      "name": "Przynęta na Ciemnopłaszczki",
+      "description": "Tę przynętę wykonano ze składników, w których gustują Ciemnopłaszczki. Ryby te można zwabić do wzburzonych wód oceanu zarówno w dzień, jak i w nocy.\r\n\r\nMożna ją zakupić u Rybaczki Hai-Luk w Cetus (Ziemia).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/BothUncommonFishBaitItem",
+      "name": "Przynęta Zmroku",
+      "description": "Ta przynęta pozwala zwabić drapieżne ryby bytujące w Równinach Eidolon w ciągu dnia i w nocy. Przyciąga ryby Sharrak i Karkina w oceanie.\r\n\r\nMożna ją zakupić u Rybaczki Hai-Luk w Cetus (Ziemia).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/GenericFishBait",
+      "name": "Pieprzowa Przynęta",
+      "description": "Ta przynęta pozwala zwabić ryby bytujące w Równinach Eidolon w ciągu dnia.\r\n\r\nPrzyciąga Rybokopa i Węgorza Charc w jeziorach, Khut-khuta, Yogwuna i Dwudysznego Mortusa w stawach, oraz Goopollę i Traloke w oceanie.\r\n\r\nMożna ją zakupić u Rybaczki Hai-Luk w Cetus (Ziemia).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/NightLegendaryFishBaitItem",
+      "name": "Przynęta na Glappidy",
+      "description": "Tę przynętę wykonano z egzotycznych składników, w których gustują nieuchwytne Glappidy. Ryby te można zwabić do wzburzonych wód oceanu w nocy.\r\n\r\nMożna ją zakupić u Rybaczki Hai-Luk w Cetus (Ziemia).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/NightRareFishBaitAItem",
+      "name": "Przynęta na Norgi",
+      "description": "Tę przynętę wykonano ze składników, w których gustują Norgi. Te bytujące jedynie w Równinach Eidolon ryby można zwabić do wzburzonych wód jeziora w nocy.\r\n\r\nMożna ją zakupić u Rybaczki Hai-Luk w Cetus (Ziemia).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/NightRareFishBaitBItem",
+      "name": "Przynęta na Cuthole",
+      "description": "Ta przynęta stworzona została z materiałów, znanych z przyciągania Cuthol. Ryby te można zwabić nocą, używając tej przynęty na brzegu stawu w miejscu wzburzonej wody.\r\n\r\nMoże zostać zakupiona od Rybaczki Hai-Luk w Cetus (Ziemia).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/MummyQuest/MummyArtifact01GearItem",
+      "name": "Święte Naczynie",
+      "description": "Intrygujący relikt z grobowca Inarosa.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Weapon/GearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedCritterLureGearItem",
+      "name": "Echo-wabik Lisafili",
+      "description": "Wabi i przyciąga pobliską Lisafilę, imitując odgłosy zwierząt.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedCritterRarityBoost",
+      "name": "GRUCZOŁ FEROMONÓW LISAFILI",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie bardziej rzadkiego okazu Lisafili.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedMaggotLureGearItem",
+      "name": "Echo-wabik Kryptileksa",
+      "description": "Wabi i przyciąga pobliskiego Kryptileksa, imitując odgłosy zwierząt.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedMaggotRarityBoost",
+      "name": "GRUCZOŁ FEROMONÓW KRYPTILEKSA",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie bardziej rzadkiego okazu Kryptileksa.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedMergooLureGearItem",
+      "name": "Echo-wabik Awikei",
+      "description": "Wabi i przyciąga pobliską Awikeę, imitując odgłosy zwierząt.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedMergooRarityBoost",
+      "name": "GRUCZOŁ FEROMONÓW AWIKEI",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie rzadszego okazu Awikei.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedNexiferaLureGearItem",
+      "name": "Echo-wabik Neksyfery",
+      "description": "Wabi i przyciąga pobliskie Neksyfery, imitując odgłosy zwierząt.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedNexiferaRarityBoost",
+      "name": "GRUCZOŁ FEROMONÓW NEKSYFERY",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie rzadszego okazu Neksyfery.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedPredatorLureGearItem",
+      "name": "Echo-wabik Predasyta",
+      "description": "Wabi i przyciąga pobliskiego Predasyta, imitując odgłosy zwierząt.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedPredatorRarityBoost",
+      "name": "GRUCZOŁ FEROMONÓW PREDASYTA",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie bardziej rzadkiego okazu Predasyta.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedZongroLureGearItem",
+      "name": "Echo-wabik Undazła",
+      "description": "Wabi i przyciąga pobliskie Undazła, imitując odgłosy zwierząt.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedZongroRarityBoost",
+      "name": "GRUCZOŁ FEROMONÓW UNDAZŁA",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie bardziej rzadkiego okazu Undazła.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/CondrocRarityBoost",
+      "name": "Oota Feromonów Kondroka",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie rzadszego okazu Kondroka.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/KuakaRarityBoost",
+      "name": "Oota Feromonów Kuaka",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie rzadszego okazu Kuaki.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/LegendaryKubrowRarityBoost",
+      "name": "Syntezator Feromonów Kubrodona",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie rzadszego okazu Kubrodrona.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/MergooRarityBoost",
+      "name": "Oota Feromonów Mergoo",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie rzadszego okazu Mergoo. ",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/OrokinKubrowRarityBoost",
+      "name": "Syntezator Feromonów Rozgrzańca",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie rzadszego okazu Rozgrzańca.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowArmadilloRarityBoost",
+      "name": "Syntezator Feromonów Stulacza",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie rzadszego okazu Stulacza.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowBirdRarityBoost",
+      "name": "Syntezator Feromonów Rozpłatnicy",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie rzadszego okazu Rozpłatnicy.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowCritterRarityBoost",
+      "name": "Syntezator Feromonów Śmigotek",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie rzadszego okazu Śmigotka.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowPredatorRarityBoost",
+      "name": "Syntezator Feromonów Poczwary",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie rzadszego okazu Poczwary.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowRodentRarityBoost",
+      "name": "Syntezator Feromonów Pobbera",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie rzadszego okazu Pobbera.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/VampireKavatRarityBoost",
+      "name": "Oota Feromonów Kavata Vasca",
+      "description": "Skorzystaj z tego zaraz przed użyciem echo-wabika, aby zwiększyć szansę na zwabienie bardziej rzadkiego okazu Kavata Vasca.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/BirdOfPreyLureGearItem",
+      "name": "Echo-wabik Kondroka",
+      "description": "Wabi i przyciąga pobliskie Kondroki, imitując odgłosy tych zwierząt. Kondrok zamieszkuje Równiny Eidolon.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/ForestRodentLureGearItem",
+      "name": "Echo-wabik Kuaki",
+      "description": "Wabi i przyciąga pobliskie Kuaki, imitując odgłosy tych zwierząt. Kuaka zamieszkuje Równiny Eidolon.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/LegendaryKubrowLureGearItem",
+      "name": "Echo-wabik Kubrodona",
+      "description": "Wabi i przyciąga pobliskiego Kubrodona, imitując odgłosy zwierząt. Kubrodon jest najczęściej spotykany w okolicach Kraterów w Orb Vallis.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/OrokinKubrowLureGearItem",
+      "name": "Echo-wabik Rozgrzańca",
+      "description": "Wabi i przyciąga pobliskie Rozgrzańce, imitując odgłosy zwierząt.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/OstronSeaBirdLureGearItem",
+      "name": "Echo-wabik Mergoo",
+      "description": "Wabi i przyciąga pobliskie Mergoo, imitując odgłosy tych zwierząt. Mergoo zamieszkuje Równiny Eidolon.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowArmadilloLureGearItem",
+      "name": "Echo-wabik Stulacza",
+      "description": "Wabi i przyciąga pobliskiego Stulacza, imitując odgłosy zwierząt. Stulacze są najczęściej spotykane wokół górskich obszarów Orb Vallis.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowBirdLureGearItem",
+      "name": "Echo-wabik Rozpłatnicy",
+      "description": "Wabi i przyciąga pobliską Rozpłatnicę, imitując odgłosy zwierząt.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowCritterLureGearItem",
+      "name": "Echo-wabik Śmigotka",
+      "description": "Wabi i przyciąga pobliskiego Śmigotka, imitując odgłosy zwierząt. Śmigotki są najczęściej spotykane wokół Jezior w Orb Vallis.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowPredatorLureGearItem",
+      "name": "Echo-wabik Poczwary",
+      "description": "Wabi i przyciąga pobliską Poczwarę, imitując odgłosy zwierząt.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowRodentLureGearItem",
+      "name": "Echo-wabik Pobbera",
+      "description": "Wabi i przyciąga pobliskie Pobbery, imitując odgłosy zwierząt. Pobbery są najczęściej spotykane wokół Grzybowych Pól w Orb Vallis.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/TranqRifleGearItem",
+      "name": "Karabin usypiający",
+      "description": "Wystrzeliwuje środek uspokajający pozwalający na bezpieczne przetransportowanie zwierzyny.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/BaseHuntingGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/UpgradedAnimalLureGearItem",
+      "name": "Echo-wabik",
+      "description": "Wabi i przyciąga pobliską dziką zwierzynę, imitując odgłosy zwierząt.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/VampireKavatLureGearItem",
+      "name": "Echo-wabik Kavata Vasca",
+      "description": "Wabi i przyciąga pobliskie Kavaty Vasca, imitując odgłosy tych zwierząt. Kavaty Vasca można spotkać na Równinach Eidolon nocą.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Eidolon/LandscapeTrapLightGear",
+      "name": "Fotonowa Pułapka",
+      "description": "Ustaw-i-zapomnij, Fotonowa pułapka emituje ultradźwięki nęcące wybrane formy życia. Gdy wejdą, są zamykane w fotonowej zagrodzie, co ułatwia ich zebranie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseLandscapeTrapGear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FishingBoosts/AnglerVision",
+      "name": "Barwnik Luminous",
+      "description": "Barwi wodę mieszanką, która przykleja się do ryby, która przez nią przepływa, co czyni je łatwiejsze do dostrzeżenia z brzegu.\r\n\r\nMoże zostać zakupiony od Rybaczki Hai-Luk w Cetus (Ziemia).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/FishingBoosts/BaseDyeConsumable"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FishingBoosts/SoftTouch",
+      "name": "Pharoma",
+      "description": "Mieszanka uspokajająca pobliskie ryby.\r\n\r\nMoże zostać zakupiona od Rybaczki Hai-Luk w Cetus (Ziemia).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/FishingBoosts/BaseDyeConsumable"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/ArmorBuffSpeedDebuff",
+      "name": "Karbo Stym",
+      "description": "Utwardza skórę, uodporniając ją na obrażenia i ogranicza zdolność ruchu.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/NpcBuff"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/CloakingBuff",
+      "name": "Refrakt Stym",
+      "description": "Powleka cel w cienką powłoką odbijającą świało, pozwalając na niewykrywalne poruszanie się.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/NpcBuff"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/ReviveBuff",
+      "name": "Skrzep Stym",
+      "description": "Ożywia wykrwawiający się cel oraz zapewnia dodatkowe wskrzeszenie dla wszystkich sojuszników w zasięgu.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/NpcBuff"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/SpeedBuffArmorDebuff",
+      "name": "Adrenal Stym",
+      "description": "Podwyższa poziomy adrenaliny pozwalające na szybsze poruszanie się i zwiększają podatność na obrażenia.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/NpcBuff"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Synthetics/FlareBlue",
+      "name": "Fosforowy Blau",
+      "description": "Wypuszcza jasną niebieską flarę, która znacząco zwiększa Zasięg Biegłości, gdy jest aktywna.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Synthetics/FlareDemo",
+      "name": "Fosforowy Rahd",
+      "description": "Wypuszcza jasną czerwoną flarę, która znacząco zwiększa Zasięg Biegłości, gdy jest aktywna.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Synthetics/FlareRed",
+      "name": "Fosforowy Rahd",
+      "description": "Wypuszcza jasną czerwoną flarę, która znacząco zwiększa Zasięg Biegłości, gdy jest aktywna.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/DayCommonAntitoxin",
+      "name": "Antytoksyna Beryl",
+      "description": "Jest to słabo skuteczna antytoksyna.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/DayUnCommonAntitoxin",
+      "name": "Antytoksyna Citrine",
+      "description": "Jest to umiarkowanie skuteczna antytoksyna.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/NightCommonAntitoxin",
+      "name": "Antytoksyna Amethyst",
+      "description": "Jest to słabo skuteczna antytoksyna.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/NightUnCommonAntitoxin",
+      "name": "Antytoksyna Topaz",
+      "description": "Jest to umiarkowanie skuteczna antytoksyna.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/RareAntitoxin",
+      "name": "Antytoksyna Lapis",
+      "description": "Jest to ekstremalnie skuteczna antytoksyna.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/SoloRareAntitoxin",
+      "name": "Antytoksyna Vermillion",
+      "description": "Jest to ekstremalnie skuteczna antytoksyna.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AlphaCorruptor",
+      "name": "Koruptor Alfa",
+      "description": "Obojętny czynnik korupcyjny, który staje się bardzo efektywny po wymieszaniu ze swoim odpowiednikiem BETA. Właściwie wymieszane destabilizują Reaktory Fomorian znacznie szybciej, niż ich Stabilne odpowiedniki. Ta lotna substancja nie może być przenoszona jednocześnie z Koruptorem Beta. Rekomendowany dla Tenno działających jako drużyna.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Corruptor"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AncientHealerBall",
+      "name": "Widmo Starożytnego Obrońcy",
+      "description": "Tworzy Starożytnego Obrońcę Eximusa, który walczy po Twojej stronie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AssassinBait",
+      "name": "Wabik Stalkera",
+      "description": "Wywabia Stalkera z ukrycia. Przedmiot jednorazowego użytku, który można wykorzystać w miejscu gdzie normalnie pojawia się zabójca.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AssassinBaitB",
+      "name": "Wabik Łowczyni Zanuka",
+      "description": "Wywabia Łowczynię Zanukę z ukrycia. Przedmiot jednorazowego użytku, który można wykorzystać w miejscu gdzie normalnie pojawia się zabójca.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AssassinBaitC",
+      "name": "Wabik Trio Grustrag",
+      "description": "Zmusza Trio Grustrag do przybycia. Przedmiot jednorazowego użytku, który można wykorzystać w miejscu, gdzie normalnie może pojawić się zabójca.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AssassinBaitD",
+      "name": "Wabik Wilka",
+      "description": "Wywabia Wilka z jego kryjówki. Przedmiot jednorazowego użytku do wykorzystania tylko w tych lokacjach, w których normalnie pojawiłby się zabójca.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/BaroFireWorksCrate",
+      "name": "Sztuczne ognie Ki'Teer",
+      "description": "Wybuchowa symfonia kolorów.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear",
+      "name": "Włócznia rybacka",
+      "description": "Kolczaste zęby wystające z tej Włóczni Rybackiej ułatwiają łapanie ryb o gładkiej skórze.\r\n\r\nMożna ją zdobyć u Rybaczki Hai-Luk w Cetus (Ziemia). Ta włócznia jest najskuteczniejsza podczas połowu następujących ryb w Równinach Eidolon:\r\nWęgorz Charc\r\nCuthol\r\nGoopolla\r\nCiemnopłaszczka\r\nSzarak\r\nYogwun",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/BetaCorruptor",
+      "name": "Koruptor Beta",
+      "description": "Obojętny czynnik korupcyjny, który staje się bardzo efektywny po wymieszaniu ze swoim odpowiednikiem ALFA. Właściwie wymieszane destabilizują Reaktory Fomorian znacznie szybciej, niż ich Stabilne odpowiedniki. Ta lotna substancja nie może być przenoszona jednocześnie z Koruptorem Alfa. Rekomendowany dla Tenno działających jako drużyna.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Corruptor"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/BronzeSpectre",
+      "name": "Widmo Warframe: Vapor",
+      "description": "Replikant sklonowany z oryginalnego Warframe'a, który może zostać wykorzystany w czasie misji jako wsparcie dla Tenno.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpectreBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CameraConsumable",
+      "name": "Zdalny Obserwator",
+      "description": "Rozmieszcza zdalnie sterowaną kamerę, która przez krótki czas będzie Twoimi oczami.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/ChargerBall",
+      "name": "Widmo Tarana",
+      "description": "Tworzy Tarana Eximusa, który walczy po Twojej stronie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/ClemBall",
+      "name": "Klon Clema",
+      "description": "Tworzy klon Clema, który walczy po Twojej stronie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CorruptedBombardBall",
+      "name": "Widmo Skażonego Kanoniera",
+      "description": "Tworzy Skażonego Kanoniera, który walczy po Twojej stronie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CorruptedHeavyGunnerBall",
+      "name": "Widmo Skażonej Ciężkozbrojnej",
+      "description": "Tworzy SKAŻONĄ CIĘŻKOZBROJNĄ jednostkę, która walczy po Twojej stronie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CorruptedLancerBall",
+      "name": "Widmo Skażonego Szturmowca",
+      "description": "Tworzy Skażonego Szturmowca Eximusa, który walczy po Twojej stronie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CreditChipLarge",
+      "name": "Zapalczywa Ofiara Pustki",
+      "description": "Oddaj Pustce hojne 100 000 kredytów.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/CreditChipSmall"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CreditChipMedium",
+      "name": "Wierna Ofiara Pustki",
+      "description": "Oddaj Pustce 10 000 kredytów.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/CreditChipSmall"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CreditChipSmall",
+      "name": "Skromna Ofiara Pustki",
+      "description": "Oddaj Pustce 1000 kredytów.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CrewmateBall",
+      "name": "Załoga na dyżurze",
+      "description": "Wezwij wskazanego członka załogi jako wsparcie w misjach poza Railjackiem.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FireWorksCrate",
+      "name": "Wielki Finał",
+      "description": "Czy chciałbyś mieć możliwość stworzenia bardziej spektakularnego pokazu fajerwerków, by pokazać swój patriotyzm? Świętuj w wielkim stylu, korzystając z tego jednorazowego przedmiotu.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FireWorksSingle",
+      "name": "Gwiezdny Wybuch",
+      "description": "Uczcij wakacje fajerwerkami! Rozświetl niebo korzystając z tego jednorazowego przedmiotu.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FomorianNegator",
+      "name": "Zakłócacz Fomorianów",
+      "description": "Po aktywacji zakłóca pole energetyczne rdzenia omega Fomorian, czyniąc go podatnym na ataki. Chroni również Tenno przed promieniowaniem omega.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/GlyphConsumable",
+      "name": "Glif Pryzmatyczny",
+      "description": "Tworzy pryzmat, który wyświetla wybrany Glif. W danym czasie aktywny może być tylko jeden Pryzmatyczny Glif. Każde użycie zużywa jeden ładunek.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/GlyphConsumableNoCharges",
+      "name": "Glif Pryzmatyczny",
+      "description": "Tworzy pryzmat, który wyświetla wybrany Glif. W danym czasie aktywny może być tylko jeden Pryzmatyczny Glif. Nie zużywa ładunków.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/GoldSpectre",
+      "name": "Widmo Warframe: Force",
+      "description": "Replikant sklonowany z oryginalnego Warframe'a, który może zostać wykorzystany w czasie misji jako wsparcie dla Tenno.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpectreBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/HunterTool",
+      "name": "Pułapka Syfonu Kinetycznego",
+      "description": "Wyspecjalizowana pułapka służąca do zwabiania i spowalniania ruchów celu Syntezy.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedBaitBall",
+      "name": "Kokony Ferliatyczne",
+      "description": "Tworzy 50 Kokonów Ferliatycznych, które uwalniają potężne feromony, zwabiają pobliskich Zainfekowanych.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedFishingSpearA",
+      "name": "Włócznia Spari",
+      "description": "Przemierzaj głębiny, dzierżąc tę zmyślną Włócznię Rybacką – niemal niezauważalną dla ryb Plagi oraz ryb będących hybrydami Plagi i ryb Orokin. Dzięki zainfekowaniu Plagą, jest to jedno z niewielu znanych narzędzi, które potrafi przenikać przez egzokrynę.\r\n\r\nMożna ją zdobyć u Córki w Nekralisku (Deimos). Ta włócznia jest najskuteczniejsza podczas połowu ryb w Dryfie Kambionu.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedFishingSpearB",
+      "name": "Włócznia Ebisu",
+      "description": "Przemierzaj głębiny, dzierżąc tę zmyślną Włócznię Rybacką – niemal niezauważalną dla ryb Plagi oraz ryb będących hybrydami Plagi i ryb Orokin. Dzięki zainfekowaniu Plagą, jest to jedno z niewielu znanych narzędzi, które potrafi przenikać przez egzokrynę.\r\n\r\nMożna ją zdobyć u Córki w Nekralisku (Deimos). Ta włócznia jest najskuteczniejsza podczas połowu ryb w Dryfie Kambionu.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/InfestedFishingSpearA"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedIrradiatedBaitBall",
+      "name": "Zmutowane Kokony Ferliatyczne",
+      "description": "Tworzy 50 Zmutowanych Kokonów Ferliatycznych posiadających silne feromony wabiące plagę.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedSyringe",
+      "name": "Iniektor antyserum",
+      "description": "Wszczepia antyserum w atomizery lub w użytkownika, aby powstrzymać degradację pancerza.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/LibraryScanner",
+      "name": "Skaner Syntezy",
+      "description": "Przeprowadza syntezę danych genetycznych celu i przesyła je do Sanktuarium.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MacheteWomanBall",
+      "name": "Widmo Skorpiona",
+      "description": "Tworzy Skorpion Eximus, która walczy po Twojej stronie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MapMarker",
+      "name": "Loc-Pin",
+      "description": "Punkt nawigacyjny używany na Mapie. Skoordynuj Twoją drużynę i oznacz istotne miejsca!",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MiningLaser",
+      "name": "Wiertło Nosam",
+      "description": "Standardowe narzędzie do wydobywania rud i klejnotów z kamienia.\r\n\r\nSzansa napotkania rzadkich surowców jest największa daleko od Centrów.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MiningLaserB",
+      "name": "Precyzyjne Wiertło Nosam",
+      "description": "Dokładniejsza wersja Wiertła Nosam.\r\n\r\nSzansa napotkania rzadkich surowców jest największa daleko od Centrów.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/MiningLaser"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MiningLaserC",
+      "name": "Zaawansowane Wiertło Nosam",
+      "description": "Narzędzie ulepszone cybernetyką, które może zlokalizować pobliskie kryształy i żyły rud, oraz ma szansę wydobycia Rzadkich Klejnotów w dowolnej lokacji.\r\n\r\nSzansa napotkania rzadkich surowców jest największa daleko od Centrów.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/MiningLaser"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MiningLaserSolaris",
+      "name": "Wiertło Plazmowe Sunpoint",
+      "description": "Szybko rozgrzewające się narzędzie górnicze o wysokiej wydajności, umożliwiające wydobycie najrzadszych materiałów z chirurgiczną precyzją. Może być używane do odzyskiwania Rzadkich Kamieni szlachetnych w otwartym świecie.\r\n\r\nSzansa napotkania rzadkich surowców jest największa daleko od Centrów.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/MiningLaser"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MoaBall",
+      "name": "Widmo Moa",
+      "description": "Tworzy Moa Eximusa, który walczy po Twojej stronie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NemesisBait",
+      "name": "Ultimatum Requiem",
+      "description": "Prowokuje Licza Kuvy lub Siostrę Parvosa do natychmiastowej konfrontacji: zniewaga, której nie można zignorować.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/PlatinumSpectre",
+      "name": "Widmo Warframe: Cosmic",
+      "description": "Replikant sklonowany z oryginalnego Warframe'a, który może zostać wykorzystany w czasie misji jako wsparcie dla Tenno.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpectreBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RazorbackCipher",
+      "name": "Dekoder Razorback",
+      "description": "Wymagany, by obejść systemy bezpieczeństwa celi Razorbacka.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RecallToRailjack",
+      "name": "Powrót do Railjacka",
+      "description": "",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RepairTool",
+      "name": "Omni",
+      "description": "Omni to wielofunkcyjne narzędzie Railjacka do gaszenia pożarów, uziemiania zagrożeń elektrycznych i naprawy pęknięć kadłuba. Użyj poza Railjackiem, aby natychmiast powrócić do statku.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RobofishSpearB",
+      "name": "Włócznia rybacka Shockprod",
+      "description": "Stworzona, aby łapać Serworyby nie uszkadzając ich. Emituje unieruchamiający impuls elektromagnetyczny po trafieniu, jeśli dobrze zostanie dobrany odpowiedni moment. \r\n\r\nMoże zostać zakupiona od Biznesa w Fortunie. Ta włócznia jest najbardziej skuteczna w łapaniu serworyb w Orb Vallis (Wenus). ",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RobofishSpearC",
+      "name": "Włócznia rybacka Stunna",
+      "description": "Emitowane impulsy elektromagnetyczne promieniują na zewnątrz, wyłączając także wszelkie pobliskie serworyby. \r\n\r\nMoże zostać zakupiona od Biznesa w Fortunie. Ta włócznia jest najbardziej skuteczna w łapaniu serworyb w Orb Vallis (Wenus). ",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RollerBall",
+      "name": "Widmo Siekacza",
+      "description": "Tworzy Siekacza Eximusa, który walczy po Twojej stronie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Scanner",
+      "name": "Skaner Kodeksu",
+      "description": "Analizuje wskazany obiekt i zachowuje go w Kodeksie (25 ładunków).",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/ShieldDroneBall",
+      "name": "Widmo Drona-Tarczy",
+      "description": "Tworzy Drona Tarczowego Eximusa, który walczy po Twojej stronie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SilverSpectre",
+      "name": "Widmo Warframe: Phase",
+      "description": "Replikant sklonowany z oryginalnego Warframe'a, który może zostać wykorzystany w czasie misji jako wsparcie dla Tenno.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpectreBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SkateBall",
+      "name": "Widmo Pustynnej Płaszczki",
+      "description": "Tworzy Pustynną Płaszczkę, która walczy po Twojej stronie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpear",
+      "name": "Włócznia rybacka Lanzo",
+      "description": "Kolczaste zęby wystające z tej Włóczni Rybackiej ułatwiają łapanie ryb o gładkiej skórze.\r\n\r\nMożna ją zdobyć u Rybaczki Hai-Luk w Cetus (Ziemia). Ta włócznia jest najskuteczniejsza podczas połowu następujących ryb w Równinach Eidolon:\r\nWęgorz Charc\r\nCuthol\r\nGoopolla\r\nCiemnopłaszczka\r\nSzarak\r\nYogwun",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpearB",
+      "name": "Włócznia rybacka Tulok",
+      "description": "Ta Włócznia Rybacka cechuje się smukłym ostrzem, idealnym do przebijania skorup i pancerzy. \r\n\r\nMożna ją zdobyć u Rybaczki Hai-Luk w Cetus (Ziemia). Ta włócznia jest najskuteczniejsza podczas połowu następujących ryb w Równinach Eidolon:\r\nTralok",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpearC",
+      "name": "Włócznia rybacka Peram",
+      "description": "Ta Włócznia Rybacka ma wiele ostrzy, umożliwiających przebijanie skóry łuskowatych ryb.\r\n\r\nMożna ją zdobyć u Rybaczki Hai-Luk w Cetus (Ziemia). Ta włócznia jest najskuteczniejsza podczas połowu następujących ryb w Równinach Eidolon:\r\nGlappid\r\nKhut-khut\r\nRybokop\r\nDwudyszny Mortus\r\nNorg",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/StableCorruptor",
+      "name": "Koruptor Stabilny",
+      "description": "Wstrzyknięty do Reaktora Fomorian ten koruptor zdestabilizuje paliwo. Krytycznie zdestabilizowane reaktory w końcu implodują niszcząc statek. Powolny lecz efektywny, rekomendowany dla pojedynczych Tenno.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Corruptor"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/StalkerBall",
+      "name": "Widmo Stalkera",
+      "description": "Tworzy klon Stalkera, który walczy po Twojej stronie.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SurgeEximusBall",
+      "name": "Widmo Eximusa Spięcia",
+      "description": "Tworzy klona Eximusa Spięcia, który walczy po twojej stronie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/ValentinesArrowBundle",
+      "name": "Skórka do Strzał: Eros",
+      "description": "Pokaż swoim wrogom, jak bardzo Ci zależy tą uroczą Skórką Eros dla Strzał.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonFeyarchOberon",
+      "name": "Wywar Poranka",
+      "description": "Tworzy organiczną mieszaninę rzadkich rodzajów roślin. Efekt nieznany.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonKnaveLoki",
+      "name": "Wywar Zmroku",
+      "description": "Tworzy organiczną mieszaninę rzadkich rodzajów roślin. Efekt nieznany.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonOrphidSaryn",
+      "name": "Wywar Zmierzchu",
+      "description": "Tworzy organiczną mieszaninę rzadkich rodzajów roślin. Efekt nieznany.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Upgraded/DamageDebuffKey",
+      "name": "Smoczy Klucz — Wygaszony",
+      "description": "Wyposażenie tego klucza w Sprzęcie znacznie obniża zadawane obrażenia.\r\n\r\nSchemat można uzyskać w Laboratorium Orokin w Dojo Klanu.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Upgraded/CorruptedKey"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Upgraded/HealthDebuffKey",
+      "name": "Smoczy Klucz — Krwawiący",
+      "description": "Wyposażenie tego klucza w Sprzęcie znacznie obniża maksymalną ilość Życia.\r\n\r\nSchemat można uzyskać w Laboratorium Orokin w Dojo Klanu.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Upgraded/CorruptedKey"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Upgraded/ShieldDebuffKey",
+      "name": "Smoczy Klucz — Niszczejący",
+      "description": "Wyposażenie tego klucza w Sprzęcie znacznie obniża pojemność Tarczy. Czas działania Bramkowania Tarcz jest ograniczony do 0,33 s.\r\n\r\nSchemat można uzyskać w Laboratorium Orokin w Dojo Klanu.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Upgraded/CorruptedKey"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Upgraded/SpeedDebuffKey",
+      "name": "Smoczy Klucz — Kulejący",
+      "description": "Wyposażenie tego klucza w Sprzęcie znacznie obniża prędkość poruszania.\r\n\r\nSchemat można uzyskać w Laboratorium Orokin w Dojo Klanu.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Upgraded/CorruptedKey"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/CatbrowVampireDisinfect",
+      "name": "Remedium Vasca",
+      "description": "Tradycyjnie warzone lekarstwo na wirus Vasca, znane wśród Ostronów jako 'lisau heisah'. Po użyciu wszelkie zainfekowane Kavaty w pobliżu zostaną wyleczone.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Cipher",
+      "name": "Dekoder",
+      "description": "Urządzenie jednorazowego użytku, wykorzystywane do automatycznego hakowania paneli sterujących blokadami.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ClanTeamAmmoTotem",
+      "name": "Odnowa Amunicji Zespołu (średnia)",
+      "description": "Przywraca równowartość 2 skrzynek amunicji do Broni głównej i bocznej co 15 sekund przez 60 sekund.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ClanTeamEnergyTotem",
+      "name": "Odnowa Energii Zespołu (średnia)",
+      "description": "Odnawia Energię całemu zespołowi. Odnawia 50 Energii co 5s przez 20s.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ClanTeamHealTotem",
+      "name": "Odnowa Życia Zespołu (średnia)",
+      "description": "Odnawia Życie całemu zespołowi. Odnawia 100 Życia co 5s przez 20s.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ClanTeamShieldTotem",
+      "name": "Odnowa Tarcz Zespołu (średnia)",
+      "description": "Odnawia Tarcze całemu zespołowi. Odnawia 100 Tarcz co 7.5s przez 30s.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ErsatzSummon",
+      "name": "Wezwanie Kaithe",
+      "description": "Przywołaj i natychmiast dosiądź Kaithe podczas misji w trybie swobodnej eksploracji.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/HeavyWeaponSummon",
+      "name": "Aktywator Archgun",
+      "description": "Użycie tego przedmiotu umożliwia korzystanie z wybranego Archguna w każdych warunkach atmosferycznych.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/HoverboardSummon",
+      "name": "Wyrzutnia K-Drive",
+      "description": "Przywołuje K-Drive do użycia podczas misji w otwartych lokacjach",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetAirSupport",
+      "name": "Ładunki wsparcia powietrznego",
+      "description": "Ładunki zużywane przez wsparcie powietrzne ze statku desantowego.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetAmmoDrop",
+      "name": "Odnowa Amunicji Zespołu (średnia)",
+      "description": "Przywraca równowartość 2 skrzynek amunicji do Broni głównej i bocznej co 15 sekund przez 60 sekund.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetAutoHack",
+      "name": "Obejście",
+      "description": "Ordis włamuje się do systemów wroga i na krótki czas zakłóca działanie protokołów bezpieczeństwa.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetBarrage",
+      "name": "Nalot Dywanowy",
+      "description": "Ordis przeprowadza nalot dywanowy na wskazanej pozycji.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetBlackHole",
+      "name": "Wir",
+      "description": "Tworzy wirujące skupisko energii, która gwałtownie przyciąga pobliskich wrogów, miażdżąc ich ciała w drobne punkty materii.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetGoldenInstinct",
+      "name": "Wzrok Orokin",
+      "description": "Ordis przeszukuje okolicę w poszukiwaniu rzadkich przedmiotów.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetKahl",
+      "name": "Wezwanie Kahla",
+      "description": "Przyzywa Kahla wraz z oddziałem jego Braci, by wspomogli Cię w walce przez krótki czas. Kolejne użycia Boi uleczają oddział Kahla i przyzywają dodatkowego Brata.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetLaserTurret",
+      "name": "Rakietownia",
+      "description": "Strzela pociskami naprowadzającymi",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetMedStation",
+      "name": "Wieża Medyczna",
+      "description": "Ordis aktywuje Wsparcie Medyczne, aby uleczyć towarzyszy znajdujących się w pobliżu.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetShield",
+      "name": "Śnieżna Kula",
+      "description": "Frost zamraża wszystkie cząsteczki pary wodnej wokół siebie, tworząc czasowo niezniszczalną lodową sferę, która w czasie swej nietykalności nabiera odporności.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetStun",
+      "name": "Bezsenni",
+      "description": "Nora wysyła wrogów do krainy snów tą uspokajającą melodią.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetTurret",
+      "name": "Działko Wartownicze",
+      "description": "Ordis przysyła automatyczne działko, które będzie atakowało wszystkich przeciwników w polu widzenia.",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LoadoutTechSummon",
+      "name": "Przyzwanie Nekramecha",
+      "description": "Przyzywa Nekramecha na pole bitwy.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/BaseTechSummon"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/MotorcycleSummon",
+      "name": "Przyzwanie Atomicykla",
+      "description": "Przyzywa Atomicykl do użytku w 1999 roku i podczas misji w trybie swobodnej eksploracji.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/OpenArchwingSummon",
+      "name": "Przyzwanie Archwinga",
+      "description": "Wzywa Archwing do użycia w czasie misji w otwartych lokacjach.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ScenarioBeacon",
+      "name": "OpLink",
+      "description": "Urządzenie służące do koordynowania i zarządzania zasobami podczas misji Łącza Operacji.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfHealLarge",
+      "name": "Odnowa Życia (duża)",
+      "description": "Natychmiastowo odnawia całe Twoje Życie.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfHealSmall",
+      "name": "Odnowa Życia (mała)",
+      "description": "Natychmiastowo odnawia 50 Życia.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfOmniAmmo",
+      "name": "Amunicja uniwersalna",
+      "description": "W pełni przywraca wszystkie rodzaje amunicji.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfPistolAmmo",
+      "name": "Amunicja pistoletowa",
+      "description": "Przywraca część amunicji do pistoletu.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfRifleAmmo",
+      "name": "Amunicja karabinowa",
+      "description": "Przywraca część amunicji do karabinu.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfShieldHeal",
+      "name": "Odnowa Tarcz (mała)",
+      "description": "Natychmiastowo odnawia 50 Tarcz.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfShotgunAmmo",
+      "name": "Amunicja strzelby",
+      "description": "Przywraca część amunicji do strzelby.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfSniperAmmo",
+      "name": "Amunicja snajperki",
+      "description": "Przywraca część amunicji do karabinu snajperskiego.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SyndicateTeamAmmoTotem",
+      "name": "Odnowa Amunicji Zespołu (duża)",
+      "description": "Przywraca równowartość 3 skrzynek amunicji do Broni głównej i bocznej co 15 sekund przez 60 sekund.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SyndicateTeamEnergyTotem",
+      "name": "Odnowa Energii Zespołu (duża)",
+      "description": "Odnawia Energię całemu zespołowi. Odnawia 100 Energii co 7.5s przez 30s.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SyndicateTeamHealTotem",
+      "name": "Odnowa Życia Zespołu (duża)",
+      "description": "Odnawia Życie całemu zespołowi. Odnawia 300 Życia co 7.5s przez 30s.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SyndicateTeamShieldTotem",
+      "name": "Odnowa Tarcz Zespołu (duża)",
+      "description": "Odnawia Tarcze całemu zespołowi. Odnawia 300 Tarcz co 7.5s przez 30s.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamAmmoTotem",
+      "name": "Odnowa Amunicji Zespołu (mała)",
+      "description": "Przywraca równowartość pojedynczej skrzynki amunicji do Broni głównej i bocznej co 15 sekund przez 60 sekund.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamEnergyTotem",
+      "name": "Odnowa Energii Zespołu (mała)",
+      "description": "Odnawia Energię całemu zespołowi. Odnawia 25 Energii co 7.5s przez 30s.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamHeal",
+      "name": "Odnowa Życia Zespołu (mała)",
+      "description": "Odnawia Życie całemu zespołowi. Odnawia 35 Życia co 7.5s przez 30s.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamHealTotem",
+      "name": "Odnowa Życia Zespołu (mała)",
+      "description": "Odnawia Życie całemu zespołowi. Odnawia 35 Życia co 7.5s przez 30s.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamShieldTotem",
+      "name": "Odnowa Tarcz Zespołu (mała)",
+      "description": "Odnawia Tarcze całemu zespołowi. Odnawia 35 Tarcz co 7.5s przez 30s.",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ThermianRPGSummon",
+      "name": "Wyrzutnia Termian",
+      "description": "Rozmieszcza wyrzutnię Termian",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    }
+  ]
+}

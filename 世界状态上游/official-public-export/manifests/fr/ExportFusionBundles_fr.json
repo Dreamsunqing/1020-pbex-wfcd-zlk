@@ -1,0 +1,310 @@
+{
+  "ExportFusionBundles": [
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/DeepSpaceCommonAvionicsEndo",
+      "description": "Consommé pour améliorer la Matrice et les Avioniques du Railjack.",
+      "codexSecret": false,
+      "fusionPoints": 150
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/DeepSpaceUncommonAvionicsEndo",
+      "description": "Consommé pour améliorer la Matrice et les Avioniques du Railjack.",
+      "codexSecret": false,
+      "fusionPoints": 300
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/EarthCommonAvionicsEndo",
+      "description": "Consommé pour améliorer la Matrice et les Avioniques du Railjack.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/EarthUncommonAvionicsEndo",
+      "description": "Consommé pour améliorer la Matrice et les Avioniques du Railjack.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/MarketTier1CrewShipFusionBundle",
+      "description": "Consommé pour améliorer la Matrice et les Avioniques du Railjack.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/MarketTier2CrewShipFusionBundle",
+      "description": "Consommé pour améliorer la Matrice et les Avioniques du Railjack.",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/MarketTier3CrewShipFusionBundle",
+      "description": "Consommé pour améliorer la Matrice et les Avioniques du Railjack.",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/SaturnCommonAvionicsEndo",
+      "description": "Consommé pour améliorer la Matrice et les Avioniques du Railjack.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/SaturnUncommonAvionicsEndo",
+      "description": "Consommé pour améliorer la Matrice et les Avioniques du Railjack.",
+      "codexSecret": false,
+      "fusionPoints": 200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertFusionBundleLarge",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 150
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertFusionBundleMedium",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertFusionBundleSmall",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 80
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertRewardFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 235
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierAEndoCommon",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 15
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierAEndoUncommon",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierBEndoCommon",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 15
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierBEndoUncommon",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierCEndoUncommon",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierDEndoUncommon",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitRepeatableNormalFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 250
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitRepeatableSteelPathFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitSilverNormalFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitSilverSteelPathFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 6000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CommonFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 15
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EliteAlertFusionBundleLarge",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 1500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EliteAlertFusionBundleMedium",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 1200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EliteAlertFusionBundleSmall",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 900
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EndoJackpotBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 15000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EvergreenLoginRewardFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 30000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/JunctionRewardNPFusionBundleA",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 2500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/JunctionRewardNPFusionBundleB",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 750
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/LoginRewardFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MPVDualPackFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 50000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MPVSinglePackFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 10000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MarketTier1FusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MarketTier2FusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MarketTier3FusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/NightwatchFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 1500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/PurgatoryBlackTokenFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 600
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/PurgatoryBlueTokenFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/PurgatoryGoldTokenFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierALarge",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 150
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierASmall",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierBLarge",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 300
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierBSmall",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierCLarge",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 450
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierCSmall",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 300
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierDLarge",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 600
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierDSmall",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RareFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 80
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/UncommonFusionBundle",
+      "description": "Utilisé pendant le processus de fusion afin de charger un Mod cible.",
+      "codexSecret": false,
+      "fusionPoints": 50
+    }
+  ]
+}

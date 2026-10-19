@@ -1,0 +1,354 @@
+{
+  "/Lotus/Upgrades/Mods/OrokinChallenge/OrokinChallengeModAgility": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/AvatarDamageReductionInAir": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/PvPMods/Warframe/RagdollImmunityMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/ImpactParkourTwoMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/OrokinChallenge/OrokinChallengeModCollaboration": {
+    "isExilus": true
+  },
+  "/Lotus/Powersuits/Bard/BardCharmAugmentCard": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/OrokinChallenge/OrokinChallengeModCunning": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/OrokinChallenge/OrokinChallengeModEndurance": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/AvatarEnemyRadarMod": {
+    "isExilus": true
+  },
+  "/Lotus/Powersuits/AntiMatter/WormHoleAugmentCard": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/FireParkourTwoMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/AvatarKnockdownRecoveryMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/AvatarFallingImpactMod": {
+    "isExilus": true
+  },
+  "/Lotus/Powersuits/Berserker/LastStandAugmentCard": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/IceParkourTwoMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/AvatarTimeLimitIncreaseMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/ElectricalParkourTwoMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/AvatarSlideBoostMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/AvatarChanceToLoot": {
+    "isExilus": true
+  },
+  "/Lotus/Powersuits/Cowgirl/GunFuPvPAugmentCard": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/ParkourTwoMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/Events/AvatarStaggerRecoveryMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/SuperGlideParkourTwoMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/PunctureParkourTwoMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/OrokinChallenge/OrokinChallengeModPower": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/SlashParkourTwoMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/AvatarRevengeDamageMelee": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/PvPMods/Warframe/FreezeParkourPvPMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/AvatarSprintSpeedMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/AvatarDamageResistanceKnockdown": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/OrokinChallenge/OrokinChallengeModSpeed": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/DualStat/HolsterSpeedSlideBoostMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/OrokinChallenge/OrokinChallengeModStealth": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/Expert/AvatarKnockdownResistanceModExpert": {
+    "isExilus": true,
+    "tradable": false
+  },
+  "/Lotus/Upgrades/Mods/Warframe/AvatarLootRadarMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/ToxinParkourTwoMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/PvPMods/Warframe/ElectricityParkourPvPMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/PvPMods/Warframe/ToxinParkourPvPMod": {
+    "isExilus": true
+  },
+  "/Lotus/Upgrades/Mods/Warframe/AvatarMissionSpecificResistanceIce": {
+    "isExilus": true
+  },
+  "/Lotus/Types/Items/MiscItems/Beacon": {
+    "tradable": true
+  },
+  "/Lotus/Powersuits/Archwing/DemolitionJetPack/ExhaustTrailAugmentCard": {
+    "tradable": true,
+    "type": "Archwing Mod"
+  },
+  "/Lotus/Upgrades/Mods/Melee/Expert/WeaponFireRateModExpert": {
+    "tradable": false
+  },
+  "/Lotus/Upgrades/Mods/Warframe/Expert/VigorModExpert": {
+    "tradable": false
+  },
+  "/Lotus/Upgrades/Mods/Rifle/DualStat/PrimedShredMod": {
+    "tradable": false
+  },
+  "/Lotus/Powersuits/Excalibur/ExcaliburPrime": {
+    "tradable": false
+  },
+  "/Lotus/Weapons/Tenno/Pistol/LatoPrime": {
+    "tradable": false
+  },
+  "/Lotus/Weapons/Tenno/Melee/LongSword/SkanaPrime": {
+    "tradable": false
+  },
+  "/Lotus/Types/Recipes/Kubrow/Collars/PrimeKubrowCollarABlueprint": {
+    "ducats": 45
+  },
+  "/Lotus/Types/Recipes/Kubrow/Collars/PrimeKubrowCollarABandComponent": {
+    "ducats": 45
+  },
+  "/Lotus/Types/Recipes/Kubrow/Collars/PrimeKubrowCollarABuckleComponent": {
+    "ducats": 65
+  },
+  "/Lotus/Weapons/Tenno/Pistol/LatoVandal": {
+    "tradable": false
+  },
+  "/Lotus/Weapons/Tenno/Rifle/VIPRifle": {
+    "tradable": false
+  },
+  "/Lotus/Powersuits/Pacifist/PacifistFist": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Fairy/FlightPistols": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Fairy/PrimeFlightPistols": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Fairy/FlightSword": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Fairy/PrimeFlightSword": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Excalibur/DoomSword": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Excalibur/DoomSwordPrime": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Excalibur/DoomSwordUmbra": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Garuda/GarudaPrimeClaws": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Garuda/GarudaClaws": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/MonkeyKing/MonkeyKingStaff": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/MonkeyKing/WukongPrimeStaff": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Cowgirl/SlingerPistols": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Cowgirl/PrimeSlingerPistols": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Berserker/BerserkerMeleePrime": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Berserker/BerserkerMelee": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Powersuits/Pacifist/PacifistFistPrime": {
+    "type": "Exalted Weapon"
+  },
+  "/Lotus/Types/Items/MiscItems/AlloyPlate": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/SyringeComponent": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/ArgonCrystal": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/SchismKey": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Circuits": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/ControlModule": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Cryotic": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Gallium": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/ConcentratedGas": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/GrnFlameSpearPart": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/KelaArenaToken": {
+    "type": "Resource"
+  },
+  "/Lotus/StoreItems/Types/Items/MiscItems/Kuva": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Kuva": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Morphic": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/InfestedAladCoordinate": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Nanospores": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/NavCode": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/NeuralSensor": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/OmegaIsotope": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/OrokinCell": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/OxiumAlloy": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Plastids": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/PolymerBundle": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/PolymerBundle240TutorialQuest": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/PolymerBundleRaidTutorial": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/RazorbackCipherPart": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/RivenFragment": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Rubedo": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Salvage": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Salvage1000JunctionReward": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Salvage450TutorialQuest": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Salvage500JunctionReward": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/SalvageRaidTutorial": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/MemoryCryptoFragment": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/SpecterParticleResidue": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/SteelEssence": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/SteelEssence20Pack": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Eventium": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Tellurium": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/Elitium": {
+    "type": "Resource"
+  },
+  "/Lotus/Types/Items/MiscItems/VoidTearDrop": {
+    "type": "Resource"
+  },
+  "/Lotus/Weapons/Grineer/LongGuns/GrnOrokinRifle/GrnOrokinRifleWeapon": {
+    "isPrime": true
+  },
+  "/Lotus/Weapons/Tenno/Melee/Scythe/ReaperWeapon": {
+    "isPrime": true
+  },
+  "/Lotus/Weapons/Tenno/Pistols/AllNew1hSG/AllNew1hSG": {
+    "isPrime": true
+  },
+  "/Lotus/Weapons/Tenno/Archwing/Melee/ExaltedArchScythe/ExaltedAWScytheWeapon": {
+    "category": "Melee",
+    "type": "Melee"
+  },
+  "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire": {
+    "slot": 2,
+    "category": "Secondary"
+  },
+  "/Lotus/Powersuits/PowersuitAbilities/Helminth": {
+    "masterable": false
+  }
+}

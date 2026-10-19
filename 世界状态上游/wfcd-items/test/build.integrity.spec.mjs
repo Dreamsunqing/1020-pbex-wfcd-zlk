@@ -1,0 +1,108 @@
+import assert from 'node:assert';
+import { readFileSync } from 'node:fs';
+import { createRequire } from 'node:module';
+
+import Items from '../index.mjs';
+
+const require = createRequire(import.meta.url);
+
+// All.json is gitignored; compose from per-category dumps via Items
+const all = new Items();
+const arcanes = require('../data/json/Arcanes.json');
+const warnings = JSON.parse(readFileSync(new URL('../data/warnings.json', import.meta.url), 'utf8'));
+
+const exaltedSlotValues = ['Primary', 'Secondary', 'Melee', 'Arch-Gun', 'Arch-Melee'];
+
+/** Arcane names that exist in Module:Arcane and should always merge after a build. */
+const knownWikiArcanes = [
+  'Arcane Acceleration',
+  'Arcane Aegis',
+  'Arcane Energize',
+  'Arcane Grace',
+  'Magus Elevate',
+  'Virtuos Fury'
+];
+
+/** Items with no standalone wiki Introduced entry or known InternalName gaps. */
+const allowedMissingReleaseDates = [
+  'Bad Baby',
+  'Bonewidow',
+  'Corufell Prime',
+  'Dark Split-Sword',
+  'Enkaus',
+  'Feverspine',
+  'Flatbelly',
+  'Grimoire',
+  'Imperator Vandal',
+  'Kuva Ghoulsaw',
+  'Mandonel',
+  'Needlenose',
+  'Runway',
+  'Steflos Prime',
+  'Voidrig'
+];
+
+/** Skip when committed JSON predates wiki merge fixes (run `npm run build -- --force` locally). */
+const rebuiltWithWikiMerge = arcanes.some((arcane) => arcane.wikiAvailable);
+
+(rebuiltWithWikiMerge ? describe : describe.skip)('build output wiki integrity', () => {
+  it('known wiki arcanes should have merge data applied', () => {
+    knownWikiArcanes.forEach((name) => {
+      const arcane = arcanes.find((entry) => entry.name === name);
+      assert(arcane, `${name} not found in Arcanes.json`);
+      assert(arcane.wikiAvailable, `${name} missing wikiAvailable`);
+      assert(arcane.releaseDate, `${name} missing releaseDate`);
+      assert(arcane.rarity, `${name} missing rarity`);
+    });
+  });
+
+  it('arcanes with wikiAvailable should have releaseDate and rarity', () => {
+    arcanes
+      .filter((arcane) => arcane.wikiAvailable)
+      .forEach((arcane) => {
+        assert(arcane.releaseDate, `${arcane.name} missing releaseDate`);
+        assert(arcane.rarity, `${arcane.name} missing rarity`);
+      });
+  });
+
+  it('masterable primes should have releaseDate', () => {
+    const missing = all
+      .filter((item) => item.masterable && item.name.endsWith(' Prime') && !item.releaseDate)
+      .map((item) => item.name)
+      .filter((name) => !allowedMissingReleaseDates.includes(name));
+
+    assert.deepStrictEqual(missing, []);
+  });
+
+  it('missingReleaseDates warnings should only contain known gaps', () => {
+    const unexpected = (warnings.missingReleaseDates ?? []).filter(
+      (name) => !allowedMissingReleaseDates.includes(name)
+    );
+    assert.deepStrictEqual(
+      unexpected,
+      [],
+      `Unexpected missingReleaseDates entries: ${unexpected.join(', ')}`
+    );
+  });
+
+  it('ambiguousWikiMatch warnings should be empty', () => {
+    assert.deepStrictEqual(warnings.ambiguousWikiMatch ?? [], []);
+  });
+});
+
+describe('exalted weapon slot integrity', () => {
+  it('every exalted weapon should have a valid exaltedSlot', () => {
+    const exalted = all.filter((item) => item.type === 'Exalted Weapon');
+    const missing = exalted.filter((item) => !item.exaltedSlot).map((item) => item.name);
+    assert.deepStrictEqual(missing, [], `Missing exaltedSlot: ${missing.join(', ')}`);
+
+    const invalid = exalted
+      .filter((item) => !exaltedSlotValues.includes(item.exaltedSlot))
+      .map((item) => item.name);
+    assert.deepStrictEqual(invalid, [], `Invalid exaltedSlot: ${invalid.join(', ')}`);
+  });
+
+  it('missingExaltedSlot warnings should be empty', () => {
+    assert.deepStrictEqual(warnings.missingExaltedSlot ?? [], []);
+  });
+});

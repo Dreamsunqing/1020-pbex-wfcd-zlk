@@ -1,0 +1,118 @@
+local Seed
+function ChurnSeed(s, n)
+	Seed = s
+	for _ = 1, n do
+		Seed = 0x5851F42D4C957F2D * Seed + 0x14057B7EF767814F
+	end
+end
+
+-- HIDWORD
+function hd(d)
+	return (d >> 32) & 0xFFFFFFFF
+end
+
+-- SRandomInt
+function sri(min, max)
+	local diff = max - min
+	if diff ~= 0 then
+		Seed = 0x5851F42D4C957F2D * Seed + 0x14057B7EF767814F
+		min += (hd(Seed) & 0x3FFFFFFF) % (diff + 1)
+	end
+	return min
+end
+
+function _47fe25be(interval, rewind = 0)
+	return ((os.unixseconds() - rewind) - 1391990400) % interval
+end
+
+local attackerMissionTypes <const> = {
+	"Exterminate",
+	"Sabotage",
+	"Capture",
+	"Territory"
+}
+local defenderMissionTypes <const> = {
+	"Exterminate",
+	"Survival",
+	"MobileDefense",
+	"Defense"
+}
+local grineerVsCorpusShipMissionTypes <const> = {
+	"Exterminate",
+	"Capture",
+	"Spy",
+	"Rescue",
+	"Sabotage"
+}
+local shipNodes <const> = { "SolNode94", "SolNode28", "EventNode0", "SolNode221", "SolNode222", "SolNode224", "SolNode225", "SolNode226", "SolNode227", "SolNode123", "SolNode61", "SolNode71", "SolNode23", "SolNode104", "PvpNode1", "ClanNode1", "ClanNode0", "EventNode1", "SolNode333", "SolNode15", "EventNode26", "CrewBattleNode519", "SolNode35", "SolNode68", "SolNode65", "ClanNode9", "SolNode115", "SolNode88", "SolNode110", "SolNode7", "SolNode42", "SolNode96", "SolNode47", "SolNode32", "SolNode80", "SolNode37", "SolNode20", "SolNode55", "SolNode70", "SolNode31", "SolNode82", "PvpNode9", "PvpNode10", "ClanNode12", "PvpNode13", "PvpNode14", "SolNode52", "SolNode111", "SolNode77", "EventNode20", "SolNode5", "EventNode21", "EventNode23", "ClanNode16", "ClanNode17", "EventNode6", "SolNode49", "SolNode95", "SolNode17", "SolNode78", "SolNode120", "SolNode127", "SolNode118", "ClanNode20", "ClanNode21", "EventNode7", "SolNode4", "SolNode92", "SolNode76", "SolNode8", "SolNode56", "SolNode81", "SolNode102", "EventNode8", "SolNode135", "ClanNode23", "SolNode156", "SolNode155", "SolNode154", "SolNode152", "SolNode157", "SolNode151", "SolNode153", "SolNode159", "SolNode164", "SolNode161", "SolNode162", "SolNode160", "SolNode165", "SolNode171", "SolNode168", "SolNode167", "SolNode170", "SolNode169", "SolNode166", "EventNode10", "SolNode173", "ClanNode18", "SolNode174", "SolNode172", "SolNode176", "ClanNode19", "SolNode175", "SolNode177", "SolNode184", "SolNode180", "SolNode188", "SolNode189", "SolNode194", "SolNode196", "SolNode195", "SolNode198", "EventNode11", "SolNode201", "ClanNode14", "SolNode200", "SolNode204", "SolNode215", "PvpNode5", "SolNode218", "EventNode15", "EventNode12", "EventNode17", "EventNode16", "SettlementNode1", "SettlementNode3", "SettlementNode2", "SettlementNode12", "SettlementNode15", "SettlementNode11", "SettlementNode14", "SettlementNode20", "CrewBattleNode553" }
+function getInvasionMission(data, are_we_the_baddies, rewind = 0)
+	if data.LocTag == "/Lotus/Language/Menu/InfestedInvasionBoss" then
+		return "Assassination"
+	end
+
+	local seed = (are_we_the_baddies ? data.AttackerMissionInfo : data.DefenderMissionInfo).seed
+	local us = (are_we_the_baddies ? data.Faction : data.DefenderFaction)
+	local them = (are_we_the_baddies ? data.DefenderFaction : data.Faction)
+
+	local cycleNum = math.floor(_47fe25be(86400, rewind) / 900)
+	ChurnSeed(seed, cycleNum)
+	local missionType = (us ~= "FC_INFESTATION" and them ~= "FC_INFESTATION" and data.Node in shipNodes)
+		? grineerVsCorpusShipMissionTypes[sri(1, #grineerVsCorpusShipMissionTypes)]
+		: are_we_the_baddies -- ASSUMPTION: All tilesets where invasions take place support all invasion mission types, so none have to be removed from the candidate tables.
+			? attackerMissionTypes[sri(1, #attackerMissionTypes)]
+			: defenderMissionTypes[sri(1, #defenderMissionTypes)]
+
+	return missionType
+end
+
+local json = require"pluto:json"
+local now = os.unixseconds()
+local activation = now - (now  % 900)
+local expiry = activation + 900
+
+header("Content-Type: application/json")
+header("Cache-Control: public, max-age="..math.min(59, ((expiry - 1) - os.unixseconds())))
+
+local response = {
+	__order = { "activation", "expiry", "invasions" },
+	activation = activation,
+	expiry = expiry,
+	invasions = {}
+}
+
+local worldState
+repeat
+	worldState = json.decode(io.contents("worldState.json"))
+until worldState
+
+for worldState.Invasions as invasion do
+	if not invasion.Completed --[[and os.unixseconds() >= (invasion.Activation["$date"]["$numberLong"] / 1000)]] then
+		if invasion.AttackerReward.countedItems then
+			response.invasions:insert({
+				__order = { "id", "node", "ally", "allyPay", "missions" },
+				id = invasion._id["$oid"],
+				node = invasion.Node,
+				ally = invasion.Faction,
+				allyPay = invasion.AttackerReward.countedItems,
+				missions = {
+					getInvasionMission(invasion, true),
+					getInvasionMission(invasion, true, -900)
+				}
+			})
+		end
+		if invasion.DefenderReward.countedItems then
+			response.invasions:insert({
+				__order = { "id", "node", "ally", "allyPay", "missions" },
+				id = invasion._id["$oid"],
+				node = invasion.Node,
+				ally = invasion.DefenderFaction,
+				allyPay = invasion.DefenderReward.countedItems,
+				missions = {
+					getInvasionMission(invasion, false),
+					getInvasionMission(invasion, false, -900)
+				}
+			})
+		end
+	end
+end
+io.write(json.encode(response))

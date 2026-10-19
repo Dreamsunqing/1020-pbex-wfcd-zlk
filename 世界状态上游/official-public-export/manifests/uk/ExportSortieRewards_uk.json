@@ -1,0 +1,2956 @@
+{
+  "ExportSortieRewards": [
+    {
+      "rewardName": "/Lotus/StoreItems/Types/Items/FusionTreasures/OroFusexF",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.28
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/FusionBundles/RareFusionBundle",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 50,
+      "probability": 0.12
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Types/Items/MiscItems/Forma",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.025
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Types/Items/MiscItems/UtilityUnlocker",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.025
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Types/Recipes/Components/OrokinReactorBlueprint",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.025
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Types/Recipes/Components/OrokinCatalystBlueprint",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.025
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Fusers/LegendaryModFuser",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.0019
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Types/Items/MiscItems/Kuva",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 6000,
+      "probability": 0.12
+    },
+    {
+      "rewardName": "/Lotus/Types/StoreItems/Boosters/AffinityBoosterStoreItem",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.032699998
+    },
+    {
+      "rewardName": "/Lotus/Types/StoreItems/Boosters/ResourceDropChanceBoosterStoreItem",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.032699998
+    },
+    {
+      "rewardName": "/Lotus/Types/StoreItems/Boosters/ModDropChanceBoosterStoreItem",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.032699998
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawRifleRandomMod",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.07
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawPistolRandomMod",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.07
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawShotgunRandomMod",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.022
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawMeleeRandomMod",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.097999997
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawModularMeleeRandomMod",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.0099999998
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawModularPistolRandomMod",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.010000138
+    }
+  ],
+  "ExportNightwave": {
+    "affiliationTag": "RadioLegionIntermission16Syndicate",
+    "challenges": [
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyAimGlide",
+        "name": "Пір'їна",
+        "description": "Убийте ворогів під час прицілювання в повітрі. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyArtist",
+        "name": "Митець",
+        "description": "Налаштуйте кольори на одному спорядженні.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyBulletJump",
+        "name": "Батут",
+        "description": "Здійсніть гвинтові стрибки. Стрибків здійснено: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCodexScan",
+        "name": "Дослідник",
+        "description": "Зчитайте об'єкти чи ворогів. Зчитано: |COUNT|",
+        "standing": 1000,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCollectCredits",
+        "name": "Заощаджувач",
+        "description": "Зберіть потрібну кількість кредитів. Зібрано: |COUNT|",
+        "standing": 1000,
+        "required": 15000
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCompleteMission",
+        "name": "Агент",
+        "description": "Завершіть завдання.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyDeployGlyph",
+        "name": "Графіті",
+        "description": "Розташуйте гліф під час виконання завдання.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemies",
+        "name": "Попереджувальний постріл",
+        "description": "Убийте ворогів. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 200
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithAbilities",
+        "name": "Підкорювач волі",
+        "description": "Убийте ворогів за допомогою здібностей. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithBlast",
+        "name": "Підривник",
+        "description": "Убийте ворогів <DT_EXPLOSION>вибуховою шкодою. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithCorrosive",
+        "name": "Розплавитель",
+        "description": "Убийте ворогів <DT_CORROSIVE>корозійною шкодою. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithElectricity",
+        "name": "Коротке замикання",
+        "description": "Убийте ворогів <DT_ELECTRICITY>електричною шкодою. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithFinishers",
+        "name": "Кат",
+        "description": "Убийте ворогів добиванням. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 10
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithFire",
+        "name": "Палій",
+        "description": "Убийте ворогів <DT_FIRE>термічною шкодою. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithFreeze",
+        "name": "Глибоке замороження",
+        "description": "Убийте ворогів <DT_FREEZE>крижаною шкодою. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithGas",
+        "name": "Біологічний руйнівник",
+        "description": "Убийте ворогів <DT_GAS>газовою шкодою. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithHeadshots",
+        "name": "Вправний стрілець",
+        "description": "Убийте ворогів влучанням у голову. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 40
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithMagnetic",
+        "name": "Зваблювач",
+        "description": "Убийте ворогів <DT_MAGNETIC>магнетичною шкодою. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithMelee",
+        "name": "Танець клинка",
+        "description": "Убийте ворогів холодною зброєю. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithPoison",
+        "name": "Отруйник",
+        "description": "Убийте ворогів <DT_POISON>токсичною шкодою. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithPrimary",
+        "name": "Скошування",
+        "description": "Убийте ворогів основною зброєю. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithRadiation",
+        "name": "Реактор",
+        "description": "Убийте ворогів <DT_RADIATION>радіаційною шкодою. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithSecondary",
+        "name": "Менше, отже краще",
+        "description": "Убийте ворогів допоміжною зброєю. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithViral",
+        "name": "Уперед, вірусе!",
+        "description": "Убийте ворогів <DT_VIRAL>вірусною шкодою. Убито: |COUNT|.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPickUpEnergy",
+        "name": "Енергійчик",
+        "description": "Підберіть згустки енергії. Підібрано: |COUNT|",
+        "standing": 1000,
+        "required": 20
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPickUpMods",
+        "name": "Лискуче",
+        "description": "Підберіть модифікатори. Підібрано: |COUNT|",
+        "standing": 1000,
+        "required": 8
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPlaceMarker",
+        "name": "Зв'язковий",
+        "description": "Позначте модифікатори чи ресурси. Позначено: |COUNT|",
+        "standing": 1000,
+        "required": 5
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPlayEmote",
+        "name": "Актор",
+        "description": "Відіграйте жест. Відіграно: |COUNT|",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailySlideKills",
+        "name": "Блискавка",
+        "description": "Убийте ворогів під час ковзання. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 10
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWhileOnKDrive",
+        "name": "Бурхлива їзда",
+        "description": "Убийте ворогів, катаючись на к-драйві, кайті, велоциподі чи атомоциклі. Убито: |COUNT|.",
+        "standing": 1000,
+        "required": 20
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyLiquidation",
+        "name": "Ліквідація залишків",
+        "description": "Продайте будь-яку свою річ за кредити.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyTwoForOne",
+        "name": "Два за ціною одного",
+        "description": "Убийте 2 чи більше ворогів одним пострілом із лука.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailySwatter",
+        "name": "Мухобійка",
+        "description": "Убийте дронів холодною зброєю. Убито: |COUNT|",
+        "standing": 1000,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyToppingOffTheTank",
+        "name": "Повний бак",
+        "description": "Успішно захистіть видобувач, постійно підживлюючи його.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyThePersonalTouch",
+        "name": "Особистий доторк",
+        "description": "Розмістіть 1 оздоблення на палубі орбітра.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyBuildersTouch",
+        "name": "Доторк творця",
+        "description": "Заберіть предмет із кузні.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCompleteMissionMelee",
+        "name": "Фехтувальник",
+        "description": "Завершіть завдання лише зі спорядженою холодною зброєю.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCompleteMissionPrimary",
+        "name": "Руки зайняті",
+        "description": "Завершіть завдання лише зі спорядженою основною зброєю.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCompleteMissionSecondary",
+        "name": "Вестерн",
+        "description": "Завершіть завдання лише зі спорядженою допоміжною зброєю.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyDeployAirSupport",
+        "name": "Провітримо",
+        "description": "Викличте підтримку з повітря на завданні.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyDeploySpecter",
+        "name": "Двійник",
+        "description": "Прикличте тінь.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyDonateLeverian",
+        "name": "Меценат",
+        "description": "Зробіть пожертву Леверію.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyInteractWithPet",
+        "name": "Відданість",
+        "description": "Попестіть свого куброу чи кавата.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyMercyKill",
+        "name": "Криваве милосердя",
+        "description": "Добийте ворога паразоном.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailySuspendFiveEnemies",
+        "name": "Потужний удар",
+        "description": "Підійміть 5 чи більше ворогів у повітря потужним ударом по землі.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyTransmuteMods",
+        "name": "Усе нове — це добре забуте старе",
+        "description": "Виконайте перетворення модифікаторів. Перетворено: |COUNT|",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyVisitFeaturedDojo",
+        "name": "Лиш на хвильку",
+        "description": "Відвідайте обране доджьо.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyWholeArsenal",
+        "name": "Усенька зброярня",
+        "description": "Убийте за 10 секунд трьох ворогів з основної, допоміжної та холодної зброї в довільному порядку.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyBowOffense",
+        "name": "Лучна навала",
+        "description": "Убийте ворогів із лука. Убито: |COUNT|.",
+        "standing": 4500,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCatchRarePlainsFish",
+        "name": "Риболовля на Землі",
+        "description": "Наловіть рідкісної риби на Рівнинах Ейдолонів. Виловлено: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCatchRareVenusFish",
+        "name": "Риболовля на Венері",
+        "description": "Наловіть рідкісної риби в Долині Куль. Виловлено: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteAssassination",
+        "name": "Убивця",
+        "description": "Завершіть завдання на вбивство. Завершено: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteCapture",
+        "name": "Поневолитель",
+        "description": "Завершіть завдання на захоплення. Завершено: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteClemMission",
+        "name": "Чудовий друг",
+        "description": "Допоможіть Клему з його щотижневим завданням.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteExterminate",
+        "name": "Винищувач",
+        "description": "Завершіть завдання на винищення. Завершено: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteInvasionMissions",
+        "name": "Загарбник",
+        "description": "Завершіть завдання на вторгнення. Завершено: |COUNT|",
+        "standing": 4500,
+        "required": 6
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteMobileDefense",
+        "name": "Захисник",
+        "description": "Завершіть завдання з мобільної оборони. Завершено: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteNightmareMissions",
+        "name": "Міцний сон",
+        "description": "Завершіть завдання складності «Жахіття». Завершено: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteRescue",
+        "name": "Рятівник",
+        "description": "Завершіть завдання з визволення. Завершено: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSabotage",
+        "name": "Диверсант",
+        "description": "Завершіть завдання із саботажу. Завершено: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSortie",
+        "name": "Фахівець із вилазок",
+        "description": "Завершіть вилазку. Завершено: |COUNT|",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSpy",
+        "name": "Шпигун",
+        "description": "Завершіть завдання зі шпигунства. Завершено: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSyndicateMissions",
+        "name": "Прихильник",
+        "description": "Завершіть завдання синдикатів. Завершено: |COUNT|",
+        "standing": 4500,
+        "required": 5
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteTreasures",
+        "name": "Пожвавлювач",
+        "description": "Шукайте аятана-скарби для Мару з ярмарку Мару.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillEnemiesWithHeadshots",
+        "name": "Зовсім не попереджувальні постріли",
+        "description": "Убийте ворогів влучанням у голову. Убито: |COUNT|.",
+        "standing": 4500,
+        "required": 100
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyMineRarePlainsResources",
+        "name": "Рудокоп Землі",
+        "description": "Видобудьте рідкісні самоцвіти чи руду на Рівнинах Ейдолонів. Видобуто: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyMineRareVenusResources",
+        "name": "Рудокоп Венери",
+        "description": "Видобудьте рідкісні самоцвіти чи руду в Долині Куль. Видобуто: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPerfectAnimalCapture",
+        "name": "Борець з охорони природи",
+        "description": "Здійсніть різні бездоганні захоплення тварин у Долині Куль. Піймано: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPerplexed",
+        "name": "Непозбувна бентежність",
+        "description": "Розгадайте головоломку в Дувірі.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPickUpMedallion",
+        "name": "Полювання розпочато",
+        "description": "Знайдіть |COUNT| медальйонів синдикату. Ви можете шукати самостійно або із загоном.",
+        "standing": 4500,
+        "required": 10
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPlainsBounties",
+        "name": "Головоріз Землі",
+        "description": "Виконайте контракти на Рівнинах Ейдолонів. Виконано: |COUNT|.",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySabotageCaches",
+        "name": "Мисливець на схови",
+        "description": "Знайдіть схови на будь-яких завданнях. Кількість: |COUNT|.",
+        "standing": 4500,
+        "required": 6
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyRifleOffense",
+        "name": "Гвинтівкова навала",
+        "description": "Убийте ворогів з гвинтівки. Убито: |COUNT|.",
+        "standing": 4500,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySanctuaryOnslaught",
+        "name": "Суб'єкт дослідження",
+        "description": "Протримайтеся в штурмі Заповідника. Завершено ділянок: |COUNT|",
+        "standing": 4500,
+        "required": 8
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyShotgunOffense",
+        "name": "Рушнична навала",
+        "description": "Убийте ворогів з рушниці. Убито: |COUNT|.",
+        "standing": 4500,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySimarisScan",
+        "name": "Дослідник Заповідника",
+        "description": "Здійсніть потрібні зчитування для цефалона Симаріса. Зчитано: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySniperOffense",
+        "name": "Снайперська навала",
+        "description": "Убийте ворогів зі снайперської гвинтівки. Убито: |COUNT|.",
+        "standing": 4500,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyToAshes",
+        "name": "Спопеління",
+        "description": "Розщепіть містифікатор задля восфору.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyUnlockDragonVaults",
+        "name": "Розкрадач сховища",
+        "description": "Відімкніть орокінські сховища на Деймосі за допомогою ключів дракона. Відімкнено: |COUNT|",
+        "standing": 4500,
+        "required": 4
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyUnlockRelics",
+        "name": "Розкриття реліквій",
+        "description": "Розкрийте реліквії. Розкрито: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyUseForma",
+        "name": "Поляризовано",
+        "description": "Поляризуйте зброю, супутника або ворфрейма (не в симулякрі).",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyVenusBounties",
+        "name": "Головоріз Венери",
+        "description": "Виконайте контракти в Долині Куль. Виконано: |COUNT|.",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyVoidNet",
+        "name": "Сітка Порожнечі",
+        "description": "Зберіть відлуння Порожнечі. Підібрано: |COUNT|.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyNightAndDay",
+        "name": "Ніч і день",
+        "description": "Зберіть рештки Вом чи Фасса в Кембіонській течії. Зібрано: |COUNT|",
+        "standing": 4500,
+        "required": 10
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyLoyalty",
+        "name": "Відданість",
+        "description": "Здобудьте очки репутації в синдикатах. Загалом здобуто: |COUNT|",
+        "standing": 4500,
+        "required": 5000
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyTheOldWays",
+        "name": "Старомодний спосіб",
+        "description": "Виконайте завдання лише зі спорядженими пістолетом і глефою.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyBloodthirsty",
+        "name": "Жага крові",
+        "description": "Убийте 20 ворогів за 5 секунд.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyIsolationBounties",
+        "name": "Розкрадач ізокамер",
+        "description": "Завершіть завдання з відкриття камери ізоляції в Кембіонській течії на Деймосі.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyFeedHelminth",
+        "name": "Пожива для почвари",
+        "description": "Нагодуйте гельмінта будь-якою сировиною.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillEnemiesInMech",
+        "name": "Некралізатор",
+        "description": "Убийте ворогів некрамехом. Убито: |COUNT|",
+        "standing": 4500,
+        "required": 100
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteDisruptionConduits",
+        "name": "Не руйнуй",
+        "description": "Захистіть джерела на завданні «Завада підриву». Захищено: |COUNT|",
+        "standing": 4500,
+        "required": 12
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteKuva",
+        "name": "Як добре те, що смерті не боюся…",
+        "description": "Завершіть завдання на поглинання куви. Завершено: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteVenusRace",
+        "name": "На дошку",
+        "description": "Успішно дійдіть до фінішу в перегонах на к-драйві в Долині Куль на Венері або в Кембіонській течії на Деймосі.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyDestroyCrewshipArtillery",
+        "name": "Дивитися в майбутнє",
+        "description": "Знищте ворожий транспортник із носової гармати зорельота.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillArchgunEnemies",
+        "name": "Важке озброєння",
+        "description": "Убийте ворогів зброєю арквінґа. Убито: |COUNT|",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillThumper",
+        "name": "Тупотіння «Бивнів»",
+        "description": "Убийте землетруса «Бивнів» на Рівнинах Ейдолонів.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyRailjackMissions",
+        "name": "Дослідник",
+        "description": "Завершіть завдання на рейкоджеку. Завершено: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyBeastSlayer",
+        "name": "Винищувач звірів",
+        "description": "Здолайте орозмія.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyBoardingPartyNoDamage",
+        "name": "Бездоганний",
+        "description": "Звільніть палубу зорельота від абордажної команди й водночас не отримайте ворфреймом шкоди.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCollector",
+        "name": "Збирач",
+        "description": "Підберіть ресурси Дувірі. Підібрано: |COUNT|",
+        "standing": 4500,
+        "required": 100
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyFinelyTuned",
+        "name": "Ладна настройка",
+        "description": "Візьміть участь в активності «Гра на шодзіні» в Дувірі.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyHorsingAround",
+        "name": "Верхи на конях",
+        "description": "Пролетіть на кайті |COUNT| метрів.",
+        "standing": 4500,
+        "required": 1500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyIDecree",
+        "name": "Я ухвалюю",
+        "description": "Зберіть |COUNT| ухвал за одні відвідини Дувірі чи забіг Ланцюгом.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySkeletonsInTheCloset",
+        "name": "Скелети в шафі",
+        "description": "Убийте даксів у Дувірі. Убито |COUNT|.",
+        "standing": 4500,
+        "required": 50
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteRace",
+        "name": "Оллі-гоп!",
+        "description": "Зіграйте в Ollie's Crash Course і завершіть заїзд.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyRequiemTotem",
+        "name": "Прадавні обеліски",
+        "description": "Запустіть 3 обеліски Реквієму на Деймосі.",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCollectHundredResources",
+        "name": "Збирач",
+        "description": "Підберіть ресурси. Підібрано: |COUNT|",
+        "standing": 4500,
+        "required": 4000
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySolveCiphers",
+        "name": "Гакер",
+        "description": "Зламайте консолі. Кількість: |COUNT|.",
+        "standing": 4500,
+        "required": 10
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyOpenLockers",
+        "name": "Клептоман",
+        "description": "Відчиніть шафки. Кількість: |COUNT|.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions",
+        "name": "Завдання виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus",
+        "name": "Винищувач ексімів",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies",
+        "name": "Зовсім не попереджувальні постріли",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions2",
+        "name": "Завдання II виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus2",
+        "name": "Винищувач ексімів II",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies2",
+        "name": "Зовсім не попереджувальні постріли II",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions3",
+        "name": "Завдання III виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus3",
+        "name": "Винищувач ексімів III",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies3",
+        "name": "Зовсім не попереджувальні постріли III",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions4",
+        "name": "Завдання IV виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus4",
+        "name": "Винищувач ексімів IV",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies4",
+        "name": "Зовсім не попереджувальні постріли IV",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions5",
+        "name": "Завдання V виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus5",
+        "name": "Винищувач ексімів V",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies5",
+        "name": "Зовсім не попереджувальні постріли V",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions6",
+        "name": "Завдання VI виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus6",
+        "name": "Винищувач ексімів VI",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies6",
+        "name": "Зовсім не попереджувальні постріли VI",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions7",
+        "name": "Завдання VII виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus7",
+        "name": "Винищувач ексімів VII",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies7",
+        "name": "Зовсім не попереджувальні постріли VII",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions8",
+        "name": "Завдання VIII виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus8",
+        "name": "Винищувач ексімів VIII",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies8",
+        "name": "Зовсім не попереджувальні постріли VIII",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions9",
+        "name": "Завдання IX виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus9",
+        "name": "Винищувач ексімів IX",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies9",
+        "name": "Зовсім не попереджувальні постріли IX",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions10",
+        "name": "Завдання X виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus10",
+        "name": "Винищувач ексімів X",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies10",
+        "name": "Зовсім не попереджувальні постріли X",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions11",
+        "name": "Завдання XI виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus11",
+        "name": "Винищувач ексімів XI",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies11",
+        "name": "Зовсім не попереджувальні постріли XI",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions12",
+        "name": "Завдання XII виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus12",
+        "name": "Винищувач ексімів XII",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies12",
+        "name": "Зовсім не попереджувальні постріли XII",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions13",
+        "name": "Завдання XIII виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus13",
+        "name": "Винищувач ексімів XIII",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies13",
+        "name": "Зовсім не попереджувальні постріли XIII",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions14",
+        "name": "Завдання XIV виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus14",
+        "name": "Винищувач ексімів XIV",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies14",
+        "name": "Зовсім не попереджувальні постріли XIV",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions15",
+        "name": "Завдання XV виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus15",
+        "name": "Винищувач ексімів XV",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies15",
+        "name": "Зовсім не попереджувальні постріли XV",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions16",
+        "name": "Завдання XVI виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus16",
+        "name": "Винищувач ексімів XVI",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies16",
+        "name": "Зовсім не попереджувальні постріли XVI",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions17",
+        "name": "Завдання XVII виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus17",
+        "name": "Винищувач ексімів XVII",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies17",
+        "name": "Зовсім не попереджувальні постріли XVII",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions18",
+        "name": "Завдання XVIII виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus18",
+        "name": "Винищувач ексімів XVIII",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies18",
+        "name": "Зовсім не попереджувальні постріли XVIII",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions19",
+        "name": "Завдання XIX виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus19",
+        "name": "Винищувач ексімів XIX",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies19",
+        "name": "Зовсім не попереджувальні постріли XIX",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions20",
+        "name": "Завдання XX виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus20",
+        "name": "Винищувач ексімів XX",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies20",
+        "name": "Зовсім не попереджувальні постріли XX",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions21",
+        "name": "Завдання XXI виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus21",
+        "name": "Винищувач ексімів XXI",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies21",
+        "name": "Зовсім не попереджувальні постріли XXI",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions22",
+        "name": "Завдання XXII виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus22",
+        "name": "Винищувач ексімів XXII",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies22",
+        "name": "Зовсім не попереджувальні постріли XXII",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions23",
+        "name": "Завдання XXIII виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus23",
+        "name": "Винищувач ексімів XXIII",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies23",
+        "name": "Зовсім не попереджувальні постріли XXIII",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions24",
+        "name": "Завдання XXIV виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus24",
+        "name": "Винищувач ексімів XXIV",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies24",
+        "name": "Зовсім не попереджувальні постріли XXIV",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions25",
+        "name": "Завдання XXV виконано",
+        "description": "Завершіть |COUNT| завдань.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus25",
+        "name": "Винищувач ексімів XXV",
+        "description": "Убийте |COUNT| ексімів.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies25",
+        "name": "Зовсім не попереджувальні постріли XXV",
+        "description": "Убийте |COUNT| ворогів.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardLuaPuzzles",
+        "name": "Звеличення",
+        "description": "Пройдіть випробування зали Звеличення на Луа. Пройдено: |COUNT|",
+        "standing": 7000,
+        "required": 4
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardBattleHardened",
+        "name": "Загартовані битвами",
+        "description": "Завершіть «Повстання на Періті», виконавши |COUNT| або більше наказів.",
+        "standing": 7000,
+        "required": 6
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteNightmareMissions",
+        "name": "Нічне жахіття",
+        "description": "Завершіть завдання складності «Жахіття». Завершено: |COUNT|",
+        "standing": 7000,
+        "required": 5
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteSortie",
+        "name": "Знавець із вилазок",
+        "description": "Завершіть кілька вилазок. Завершено: |COUNT|",
+        "standing": 7000,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardElementaryMyDear",
+        "name": "Елементарні любощі",
+        "description": "Здійсніть |COUNT| успішних перетворень у режимі «Алхімія».",
+        "standing": 7000,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardEliteSanctuaryOnslaught",
+        "name": "Добірний суб'єкт дослідження",
+        "description": "Протримайтеся в добірному штурмі Заповідника. Завершено ділянок: |COUNT|",
+        "standing": 7000,
+        "required": 8
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardEternalGuardian",
+        "name": "Вічний вартовий",
+        "description": "Завершіть раунд «Армагеддон Порожнечі». Завершено: |COUNT|.",
+        "standing": 7000,
+        "required": 2
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFriendsDefense",
+        "name": "Оборона",
+        "description": "Завершіть завдання з оборони після 12-ї хвилі.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFriendsProfitTaker",
+        "name": "Привласнювачка",
+        "description": "Убийте Привласнювачку.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFriendsSurvival",
+        "name": "Виживання",
+        "description": "Завершіть завдання з виживання щонайменше через 20 хвилин від початку.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardGoingDown",
+        "name": "Низхідна поїздка",
+        "description": "Здолайте Роута в режимі «Спуск».",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardHighGround",
+        "name": "Над землею",
+        "description": "Закрийте |COUNT| розривів на завданні «Повінь Порожнечі»",
+        "standing": 7000,
+        "required": 12
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardHoldTheMushrooms",
+        "name": "Грибна навала",
+        "description": "Зберіть гриби у Глибкопальнях. Зібрано: |COUNT|.",
+        "standing": 7000,
+        "required": 6
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardIndexWinStreak",
+        "name": "Спекулянт",
+        "description": "Виграйте 3 ставки поспіль в одній грі Індексу.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillEnemies",
+        "name": "Убивчий постріл",
+        "description": "Убийте ворогів. Убито: |COUNT|",
+        "standing": 7000,
+        "required": 1500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillEximus",
+        "name": "Кара ексімам",
+        "description": "Убийте ексімів. Убито: |COUNT|",
+        "standing": 7000,
+        "required": 100
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillOrCaptureRainalyst",
+        "name": "Мисливець за гідролистом",
+        "description": "Убийте чи захопіть гідролиста.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKuvaSurvivalNoCapsules",
+        "name": "Затримати дихання",
+        "description": "Протримайтеся щонайменше 20 хвилин під час завдання на виживання серед куви.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardUnlockRelics",
+        "name": "Розкриття реліквій",
+        "description": "Розкрийте реліквії. Розкрито: |COUNT|",
+        "standing": 7000,
+        "required": 10
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillEnemiesSteelPath",
+        "name": "Холодна сталь",
+        "description": "Убийте ворогів у режимі «Шлях сталі». Убито: |COUNT|",
+        "standing": 7000,
+        "required": 1000
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardSpiderHunt",
+        "name": "Павучі лови",
+        "description": "Завершіть завдання «Ткаля островів» у Дувірі.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardTreasureFromThePast",
+        "name": "Скарби з минулого",
+        "description": "Завершіть завдання з нетракамерою.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCollectUniqueResources",
+        "name": "Збирач ресурсів",
+        "description": "Зберіть різні типи ресурсів. Зібрано: |COUNT|",
+        "standing": 7000,
+        "required": 20
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteSteelPathMissions",
+        "name": "Нетоптаний шлях",
+        "description": "Завершіть різні завдання в режимі «Шлях сталі». Завершено: |COUNT|",
+        "standing": 7000,
+        "required": 5
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardAntiquarian",
+        "name": "Антиквар",
+        "description": "Розкрийте по одній реліквії з кожної ери: літ, мезо, нео, аксі. Розкрито: |COUNT|",
+        "standing": 7000,
+        "required": 4
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardThePriceOfFreedom",
+        "name": "Ціна свободи",
+        "description": "Звільніть 1 солярійського заручника за допомогою крони Ґранума.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardTheManyMadeWhole",
+        "name": "Частинки формують ціле",
+        "description": "Обміняйте 10 уламків розколу на модифікатор розколу.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardTerminated",
+        "name": "Знищення",
+        "description": "Знищте некрамехів, що оберігають сховище. Знищено: |COUNT|",
+        "standing": 7000,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardRiseOfTheMachine",
+        "name": "Повстання машин",
+        "description": "Убийте ворогів некрамехом і не дайте знищити його. Убито: |COUNT|",
+        "standing": 7000,
+        "required": 300
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFallenAngel",
+        "name": "Занепалий янгол",
+        "description": "Убийте янголів Порожнечі на «Заримені». Убито: |COUNT| ",
+        "standing": 7000,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFastCapture",
+        "name": "Швидкісник",
+        "description": "Завершіть завдання із захоплення менше ніж за 90 секунд.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillExploiterOrb",
+        "name": "Прибуток понад усе",
+        "description": "Убийте Експлуататорку.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillThumper",
+        "name": "Його кроки не мали ритму…",
+        "description": "Убийте купо-землетруса «Бивнів» на Рівнинах Ейдолонів.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardRailjackMissions",
+        "name": "Кваліфікований дослідник",
+        "description": "Завершіть завдання для рейкоджека. Завершено: |COUNT|",
+        "standing": 7000,
+        "required": 6
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteArchonHunt",
+        "name": "Мисливець на архонтів",
+        "description": "Успішно завершіть архонтові лови.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFriendsMirrorDefense",
+        "name": "Миле дзеркальце, скажи",
+        "description": "Тричі захистіть обидва об'єкти за одне завдання «Дзеркальна оборона».",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCeremonialEvolution",
+        "name": "Церемоніальна еволюція",
+        "description": "Увімкніть інкарнонську форму будь-якої інкарнонської зброї під час завдань |COUNT| разів.",
+        "standing": 7000,
+        "required": 5
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardEliteBeastSlayer",
+        "name": "Добірний винищувач звірів",
+        "description": "Здолайте орозмія на Шляху сталі.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardVitalArbiter",
+        "name": "Важливий арбітр",
+        "description": "Завершіть завдання арбітражу.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardZarimanBountyHunter",
+        "name": "Виконавець «Заримена»",
+        "description": "Виконайте контракти на «Заримені». Виконано: |COUNT|.",
+        "standing": 7000,
+        "required": 4
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillTank",
+        "name": "Затанковано",
+        "description": "Знищте танк H-09 «Ефервон».",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteConquest",
+        "name": "Піддослідний",
+        "description": "Завершіть завдання «Поглибленої архімедії» або «Часової архімедії».",
+        "standing": 7000,
+        "required": 1
+      }
+    ],
+    "rewards": [
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 150
+      },
+      {
+        "uniqueName": "/Lotus/StoreItems/Types/Items/ShipDecos/Plushies/PlushyDrippy",
+        "name": "Плюш «Краплик»",
+        "description": "Як знадобиться водичка, то м'якенький плюш Краплик тут як тут!"
+      },
+      {
+        "uniqueName": "/Lotus/Types/StoreItems/Packages/FormaPack",
+        "name": "Комплект форм",
+        "description": "Колекція з трьох форм."
+      },
+      {
+        "uniqueName": "/Lotus/Types/StoreItems/Packages/Inf1999ArmorBundle",
+        "name": "Комплект обладунків «Техногниль»",
+        "description": "Набувайте зовнішнього вигляду техногнилі без нищівного зараження власної плоті.",
+        "components": [
+          "Наплічник «Техногниль»",
+          "Нагрудник «Техногниль»",
+          "Наголінник «Техногниль»"
+        ]
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 50
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Skins/Scarves/LasNightwaveCape"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/ShipDecos/Nightwave/NightwaveEntertechmentCrate"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/WeaponPrimaryArcaneUnlocker"
+      },
+      {
+        "uniqueName": "/Lotus/StoreItems/Types/StoreItems/SlotItems/TwoWeaponSlotItem",
+        "name": "КОМІРКИ ЗБРОЇ",
+        "description": "Додає дві комірки для зброї."
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Mods/Pistol/Event/Nightwave/NightwaveLasGooPistolAugmentMod"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 50
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/FormaStance"
+      },
+      {
+        "uniqueName": "/Lotus/Types/StoreItems/AvatarImages/AvatarImageNightwaveDrippyGraffitiGlyph"
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/ArmourOnDamage",
+        "itemCount": 3
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Skins/Operator/Accessories/NightWaveScouterEyePiece"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 150
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Skins/BrokenFrame/XakuCosmosSkin"
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Skins/MeleeDangles/DrippyKeychainMeleeDangle"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/RivenIdentifier"
+      },
+      {
+        "uniqueName": "/Lotus/StoreItems/Types/StoreItems/SlotItems/SuitSlotItem",
+        "name": "Комірка ворфрейма",
+        "description": "Додає комірку для ворфрейма."
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 50
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/Emotes/FinishLine"
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Skins/Effects/NightwaveDigitalEphemera"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 50
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveLasGooAKAugmentMod"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/FormaAura"
+      },
+      {
+        "uniqueName": "/Lotus/Types/StoreItems/SuitCustomizations/ColourPickerNightwave1999Item"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/FormaUmbra"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/Titles/ShockwaveTitle"
+      },
+      {
+        "uniqueName": "/Lotus/Types/StoreItems/Packages/OperatorSuitNightwave1999Bundle",
+        "name": "Атомоцикловий комплект «Кейншел»",
+        "description": "Приміряйте байкерське вбрання нового тисячоліття. Пасує оператору й мандрівнику.",
+        "components": [
+          "Атомоциклова куртка «Кейншел»",
+          "Атомоцикловий шолом «Кейншел»",
+          "Атомоциклові штани «Кейншел»",
+          "Атомоциклові рукави «Кейншел»"
+        ]
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      }
+    ]
+  },
+  "ExportRailjack": {
+    "nodes": [
+      {
+        "uniqueName": "CrewBattleNode553",
+        "name": "Флекса"
+      },
+      {
+        "uniqueName": "CrewBattleNode554",
+        "name": "Хмара H-2"
+      },
+      {
+        "uniqueName": "CrewBattleNode555",
+        "name": "Хмара R-9"
+      },
+      {
+        "uniqueName": "CrewBattleNode550",
+        "name": "Сітка Нсу"
+      },
+      {
+        "uniqueName": "CrewBattleNode538",
+        "name": "Калабаш"
+      },
+      {
+        "uniqueName": "CrewBattleNode539",
+        "name": "Нуміна"
+      },
+      {
+        "uniqueName": "CrewBattleNode540",
+        "name": "Срібна Арка"
+      },
+      {
+        "uniqueName": "CrewBattleNode541",
+        "name": "Ерато"
+      },
+      {
+        "uniqueName": "CrewBattleNode542",
+        "name": "Лу-янь"
+      },
+      {
+        "uniqueName": "CrewBattleNode543",
+        "name": "Хмара Сабміра"
+      }
+    ]
+  },
+  "ExportIntrinsics": [
+    {
+      "name": "ТАКТИКА",
+      "ranks": [
+        {
+          "name": "Тактичні системи",
+          "description": "Дозволяє розміщувати тактичні модифікатори й отримувати доступ до відстеження екіпажу завдяки тактичному меню |TACT_MENU|."
+        },
+        {
+          "name": "Перенесення здібностей та нагляд",
+          "description": "Дозволяє використовувати здібності ворфреймів як тактичну підтримку. Вмикає камеру стеження за екіпажем."
+        },
+        {
+          "name": "Командний зв'язок",
+          "description": "Дозволяє швидко переноситися в різні відсіки зорельота й координувати роботу екіпажу за допомогою інтерфейсу командувача."
+        },
+        {
+          "name": "Стрибок повернення",
+          "description": "Дозволяє використовувати мультиінструмент для переміщення на зореліт із будь-якого місця."
+        },
+        {
+          "name": "Розміщення некрамехів",
+          "description": "Дозволяє розміщувати некрамехів під час будь-яких завдань для рейкоджека."
+        },
+        {
+          "name": "Тактична дієвість",
+          "description": "Зменшує споживання енергії бойовими модифікаторами на 25 %."
+        },
+        {
+          "name": "Тактичний відгук",
+          "description": "Зменшує час перезаряджання тактичних модифікаторів на 20 %."
+        },
+        {
+          "name": "Перезаряджання виклику некрамеха та здібності «Тактичний стрибок» арквінґа",
+          "description": "Скорочує перезаряджання здібності арквінґа на 25 %. Скорочує Перезаряджання виклику некрамеха на 25 %."
+        },
+        {
+          "name": "Стрімка тактика",
+          "description": "Зменшує час перезаряджання тактичних модифікаторів на 20 %."
+        },
+        {
+          "name": "Стрибок приєднання",
+          "description": "Дозволяє стрибнути із зорельота до члена екіпажу."
+        }
+      ]
+    },
+    {
+      "name": "ПІЛОТУВАННЯ",
+      "ranks": [
+        {
+          "name": "Пришвидшення",
+          "description": "Утримуйте |SPRINT|, щоби збільшити швидкість рушіїв. Постріли з гармат пілота переривають пришвидшення."
+        },
+        {
+          "name": "Керований маневр",
+          "description": "Натисніть |ACTION|, щоби пустити в дію рушії напрямку."
+        },
+        {
+          "name": "Кероване ухилення",
+          "description": "Ворожі снаряди поблизу втрачають ціль під час керованого маневру."
+        },
+        {
+          "name": "Дрифт",
+          "description": "Під час керованого маневру натисніть і утримуйте |SPRINT|, щоб дрифтувати."
+        },
+        {
+          "name": "Досвідчений збирач",
+          "description": "Утричі збільшує дальність збору здобичі під час пришвидшення, дрифту чи ухиляння. Приховані зорельоти-блукачі позначаються на мапі."
+        },
+        {
+          "name": "Десантний заваджувач",
+          "description": "Дає 25 % імовірності створити завади навідним системам абордажних капсул, від чого вони пролітають повз і вибухають."
+        },
+        {
+          "name": "Квапливість некрамеха",
+          "description": "Збільшує швидкість руху некрамеха на 10 %."
+        },
+        {
+          "name": "Аеронавт",
+          "description": "Збільшує швидкість арквінґа на 20 %."
+        },
+        {
+          "name": "Швидкість тарана",
+          "description": "Зменшує отримувану шкоду на 2000 % під час пришвидшення. Зіткнення з ворогами під час пришвидшення завдасть 25 <DT_IMPACT>ударної шкоди."
+        },
+        {
+          "name": "Стрибок рейкоджека",
+          "description": "Двічі натисніть <JUMP>, щоб негайно кинути рейкоджек вперед, залишивши позаду турбулентний слід, який сповільнює ворогів поблизу."
+        }
+      ]
+    },
+    {
+      "name": "ГАРМАТНИЦТВО",
+      "ranks": [
+        {
+          "name": "Накручені стволи",
+          "description": "Озброєння нижньої й верхньої турелей завдають на 50 % більше шкоди."
+        },
+        {
+          "name": "Фантомне око",
+          "description": "Модифікує проєкцію та підвіску турелей, щоб дозволити стрільбу на 360 градусів."
+        },
+        {
+          "name": "Катапультування арквінґа",
+          "description": "Дозволяє швидко доправити арквінґ у бій. Катапультований арквінґ пошкоджує винищувачі й пробиває корпуси ворожих транспортників."
+        },
+        {
+          "name": "Лють арквінґа",
+          "description": "Збільшує відстань притягування арквінґа на 0.75 м, дальність рукопашного бою — на 20 м, а шкоду — на 25 %."
+        },
+        {
+          "name": "Лють некрамеха",
+          "description": "Збільшує шкоду від зброї некрамеха на 20 %."
+        },
+        {
+          "name": "Холодний спуск",
+          "description": "Зменшує приріст тепла під час стрільби турелей на 20 %."
+        },
+        {
+          "name": "Поглиблене гарматництво",
+          "description": "Скорочує час відновлення після перегрівання на 50 %. Збільшує дальність катапультування на 50 %."
+        },
+        {
+          "name": "Мстивий арквінґ",
+          "description": "Збільшує потужність арквінґа. +20 % до шкоди, +20 % до потужності здібностей, +20 % до дальності дії здібностей, +25 % до ощадливості здібностей."
+        },
+        {
+          "name": "Промивання тепловідвідників",
+          "description": "Повністю охолоджує перегріту зброю за 0,5 с, якщо перезаряджатися під час перегрівання."
+        },
+        {
+          "name": "Рефлексивне прицілювання",
+          "description": "Упродовж 3 секунд приціл турелі слідує за вказівником."
+        }
+      ]
+    },
+    {
+      "name": "ІНЖЕНЕРІЯ",
+      "ranks": [
+        {
+          "name": "Поліпшений мультиінструмент",
+          "description": "Пришвидшує усування небезпек та лагодження корпуса."
+        },
+        {
+          "name": "Швидка підтримка",
+          "description": "Зменшує час перезаряджання зарядів підтримки з повітря на 50 %."
+        },
+        {
+          "name": "Кузня снарядів",
+          "description": "Поповнює запас снарядів, якщо встановлена."
+        },
+        {
+          "name": "Кузня сферозарядів",
+          "description": "Поповнює боєкомплект носової гармати під час бою."
+        },
+        {
+          "name": "Оптимізована кузня",
+          "description": "Збільшує вихід предметів із кузні на 1 %. Дозволяє створювати відновлювачі корпуса."
+        },
+        {
+          "name": "Пришвидшувач кузні",
+          "description": "Збільшує швидкість поступу виготовлення в кузні на 25 %."
+        },
+        {
+          "name": "Повна оптимізація",
+          "description": "Збільшує кількість виходу готового продукту з кузні на 25 %."
+        },
+        {
+          "name": "Пильність арквінґа",
+          "description": "Збільшує захист арквінґа. +30 % до здоров'я, +30 % до щитів, +30 % до захисту."
+        },
+        {
+          "name": "Пильність некрамеха",
+          "description": "Збільшує захист некрамеха. +25 % до здоров'я, +25 % до щитів."
+        },
+        {
+          "name": "Анастазис",
+          "description": "Дозволяє віддалено усувати небезпеки на борту."
+        }
+      ]
+    },
+    {
+      "name": "КОМАНДУВАННЯ",
+      "ranks": [
+        {
+          "name": "1-й член екіпажу",
+          "description": "Розблоковує першого члена екіпажу й можливість найму в Тікер."
+        },
+        {
+          "name": "Отримання компетенції",
+          "description": "Дозволяє дати членам екіпажу 1 очко компетенції."
+        },
+        {
+          "name": "2-й член екіпажу",
+          "description": "Розблоковує другого члена екіпажу."
+        },
+        {
+          "name": "Отримання компетенції",
+          "description": "Дозволяє дати членам екіпажу 1 очко компетенції."
+        },
+        {
+          "name": "3-й член екіпажу",
+          "description": "Розблоковує третього члена екіпажу."
+        },
+        {
+          "name": "Отримання компетенції",
+          "description": "Дозволяє дати членам екіпажу 1 очко компетенції."
+        },
+        {
+          "name": "Перерозподіл компетенції",
+          "description": "Дозволяє перерозподілити раніше призначені очки компетенції."
+        },
+        {
+          "name": "Незвичайний екіпаж",
+          "description": "Дозволяє наймати на рейкоджек обернених лічів як захисників."
+        },
+        {
+          "name": "Черговий",
+          "description": "Одного з членів екіпажу можна призначити «черговим» і викликати його під час виконання завдань, не пов'язаних із рейкоджеком."
+        },
+        {
+          "name": "Добірний екіпаж",
+          "description": "Тікер пропонує сильніших членів екіпажу для наймання."
+        }
+      ]
+    }
+  ],
+  "ExportOther": [
+    {
+      "uniqueName": "/Lotus/StoreItems/Types/BoosterPacks/BaroTreasureBox",
+      "name": "Надлишки з Порожнечі",
+      "description": "У кожній скрині міститься один немаркований зайвий предмет. Одна скринька в одні руки, будь ласка.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/AffinityBooster30DayStoreItem",
+      "name": "Збільшення єдності на 30 діб",
+      "description": "Збільшує здобуту єдність удвічі. Опановуйте свою зброю та ворфреймів швидше.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/AffinityBooster3DayStoreItem",
+      "name": "Збільшення єдності на 3 доби",
+      "description": "Збільшує здобуту єдність удвічі. Опановуйте свою зброю та ворфреймів швидше.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/AffinityBooster7DayStoreItem",
+      "name": "Збільшення єдності на 7 діб",
+      "description": "Збільшує здобуту єдність удвічі. Опановуйте свою зброю та ворфреймів швидше.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/AffinityBooster90DayStoreItem",
+      "name": "Збільшення єдності на 90 діб",
+      "description": "Збільшує здобуту єдність удвічі. Опановуйте свою зброю та ворфреймів швидше.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/CreditBooster30DayStoreItem",
+      "name": "Збільшення кредитів на 30 діб",
+      "description": "Подвоює кількість підібраних чи отриманих за завдання кредитів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/CreditBooster3DayStoreItem",
+      "name": "Збільшення кредитів на 3 доби",
+      "description": "Подвоює кількість підібраних чи отриманих за завдання кредитів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/CreditBooster7DayStoreItem",
+      "name": "Збільшення кредитів на 7 діб",
+      "description": "Подвоює кількість підібраних чи отриманих за завдання кредитів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/CreditBooster90DayStoreItem",
+      "name": "Збільшення кредитів на 90 діб",
+      "description": "Подвоює кількість підібраних чи отриманих за завдання кредитів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ModDropChanceBooster30DayStoreItem",
+      "name": "Збільшення ймовірності випадіння модифікаторів на 30 діб",
+      "description": "Подвоює ймовірність випадіння модифікаторів, ендо та містифікаторів з ворогів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ModDropChanceBooster3DayStoreItem",
+      "name": "Збільшення ймовірності випадіння модифікаторів на 3 доби",
+      "description": "Подвоює ймовірність випадіння модифікаторів, ендо та містифікаторів з ворогів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ModDropChanceBooster7DayStoreItem",
+      "name": "Збільшення ймовірності випадіння модифікаторів на 7 діб",
+      "description": "Подвоює ймовірність випадіння модифікаторів, ендо та містифікаторів з ворогів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ModDropChanceBooster90DayStoreItem",
+      "name": "Збільшення ймовірності випадіння модифікаторів на 90 діб",
+      "description": "Подвоює ймовірність випадіння модифікаторів, ендо та містифікаторів з ворогів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceAmount30DayStoreItem",
+      "name": "Збільшення ресурсів на 30 діб",
+      "description": "Подвоює кількість підібраних ресурсів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceAmount3DayStoreItem",
+      "name": "Збільшення ресурсів на 3 доби",
+      "description": "Подвоює кількість підібраних ресурсів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceAmount7DayStoreItem",
+      "name": "Збільшення ресурсів на 7 діб",
+      "description": "Подвоює кількість підібраних ресурсів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceAmount90DayStoreItem",
+      "name": "Збільшення ресурсів на 90 діб",
+      "description": "Подвоює кількість підібраних ресурсів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceDropChance30DayStoreItem",
+      "name": "Збільшення ймовірності випадіння ресурсів на 30 діб",
+      "description": "Подвоює ймовірність випадіння ресурсів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceDropChance3DayStoreItem",
+      "name": "Збільшення ймовірності випадіння ресурсів на 3 доби",
+      "description": "Подвоює ймовірність випадіння ресурсів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceDropChance7DayStoreItem",
+      "name": "Збільшення ймовірності випадіння ресурсів на 7 діб",
+      "description": "Подвоює ймовірність випадіння ресурсів.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatBaseColorPack",
+      "name": "Набір генетичної модифікації для кавата",
+      "description": "Змінює забарвлення хутра кавата відповідно до кольорів порід адарза або сміта."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackCeph",
+      "name": "Набір генетичної модифікації «Нейро» для кавата",
+      "description": "Виокремлені послідовності генів, що змінюють забарвлення хутра кавата.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackContest",
+      "name": "Набір генетичної модифікації «Деяейра» для кавата",
+      "description": "Уцілівші записи свідчать, що породу деяейра вивели й дуже любили орокіни. [Вигляд-переможець конкурсу «Найліпші друзі тенно»]"
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackDaybreak",
+      "name": "Набір генетичної модифікації «Світанок» для кавата",
+      "description": "Орокіни створили цей генетичний набір, щоби їхні кавати втілювали пору оновлення."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackDuviri",
+      "name": "Набір генетичної модифікації «Кезат» для кавата",
+      "description": "Поверніть «Дувірські казки» в Материнську систему з виглядом «Кезат» для каватів."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackEntrati",
+      "name": "Набір генетичної модифікації «Калимос» для кавата",
+      "description": "Надайте своєму кавату зовнішність Калимос — відданої супутниці Альбрехта Ентраті."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackFeral",
+      "name": "Набір генетичної модифікації «Місяцелик» для кавата",
+      "description": "Бездоганне забарвлення кавата для нічного полювання."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackHyekka",
+      "name": "Набір генетичної модифікації «Хьока»",
+      "description": "Змініть структуру ДНК свого кавата й перетворіть його на безшерсту хьоку."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackKrest",
+      "name": "Набір генетичної модифікації «Крест»",
+      "description": "Виокремлені послідовності генів, що змінюють забарвлення хутра кавата."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackNesyr",
+      "name": "Набір генетичної модифікації «Несир»",
+      "description": "Виокремлені послідовності генів, що змінюють забарвлення хутра кавата."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackNexus",
+      "name": "Набір генетичної модифікації «Нексус»",
+      "description": "Виокремлені послідовності генів, що змінюють забарвлення хутра кавата."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackPrimeA",
+      "name": "Набір генетичної модифікації «Тібор-прайм»",
+      "description": "Елегантний позолочений обладунок, що підкреслює витонченість кавата."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackSolstice",
+      "name": "Набір генетичної модифікації «Сонцестояння» для кавата",
+      "description": "Виокремлені послідовності генів, що змінюють забарвлення хутра кавата."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackXmas",
+      "name": "Набір генетичної модифікації «Арґайл»",
+      "description": "Виокремлені послідовності генів, що змінюють забарвлення хутра кавата."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowBaseColorPack",
+      "name": "Стандартний набір генетичної модифікації",
+      "description": "Цей стандартний інструмент надає всю необхідну генетичну інформацію для маскування вродженої структури ДНК і дозволяє обрати лише забарвлення хутра."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackCandyCane",
+      "name": "Набір генетичної модифікації «Кущ ністл»",
+      "description": "Пристрій із генетичною інформацією, з допомогою якої можна повністю приховати вроджену структуру ДНК куброу та наділити хутро забарвленням."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackContest",
+      "name": "Набір генетичної модифікації «Гейно» для куброу",
+      "description": "Вигляд для хутра, як у предків із лінії гейно, гени якої зберіг Сквирл. [Вигляд-переможець конкурсу «Найліпші друзі тенно»]"
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackDaybreak",
+      "name": "Набір генетичної модифікації «Світанок» для куброу",
+      "description": "Орокіни створили цей генетичний набір, щоби їхні кавати втілювали пору оновлення."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackLiquid",
+      "name": "Набір генетичної модифікації «Арклут»",
+      "description": "Пристрій із генетичною інформацією, за допомогою якої можна повністю приховати вроджену структуру ДНК куброу та наділити хутро забарвленням."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackReindeer",
+      "name": "Набір генетичної модифікації «Північний олень»",
+      "description": "Пристрій із генетичною інформацією, з допомогою якої можна повністю приховати вроджену структуру ДНК куброу та наділити хутро забарвленням."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackSolstice",
+      "name": "Набір генетичної модифікації «Сонцестояння» для куброу",
+      "description": "Пристрій із генетичною інформацією, за допомогою якої можна повністю приховати вроджену структуру ДНК куброу та наділити хутро забарвленням."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackSpeckled",
+      "name": "Набір генетичної модифікації «Телматієць»",
+      "description": "Пристрій із генетичною інформацією, з допомогою якої можна повністю приховати вроджену структуру ДНК куброу та наділити хутро забарвленням, подібним до куброу породи телматієць."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackStriped",
+      "name": "Набір генетичної модифікації «Савенга»",
+      "description": "Пристрій із генетичною інформацією, з допомогою якої можна повністю приховати вроджену структуру ДНК куброу та наділити хутро забарвленням, подібним до куброу породи савенга."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackTiger",
+      "name": "Набір генетичної модифікації «Тигрол»",
+      "description": "Пристрій із генетичною інформацією, з допомогою якої можна повністю приховати вроджену структуру ДНК куброу та наділити хутро забарвленням, подібним до куброу породи тигрол."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowKavatContestPack",
+      "name": "Набір виглядів «Лауреат» для супутників",
+      "description": "Набір виглядів для хутра, що перетворять вашого куброу чи кавата на переможця престижної виставки. Містить вигляд «Гейно» для куброу та вигляд «Деяейра» для кавата. [Виряди-переможці конкурсу «Найліпші друзі тенно»]"
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/VTEosArmourBundle",
+      "name": "Комплект обладунків «Еос-прайм»",
+      "description": "Повний комплект декоративних обладунків для стильних тенно."
+    }
+  ]
+}

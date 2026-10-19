@@ -1,0 +1,135 @@
+{
+  "provenance": "Independent Python struct float32 + zlib CRC32 port of cached Oracle semantics; not game observation",
+  "sourceSha256": "b9b5bd22c26935b9785316b632f5e04d154e66791e59078b2e016d81ac393016",
+  "warframesSha256": "bc2cd57ac43a3983aed93b6efd380060215e0843399760c4d0944ea8250ad4b0",
+  "cases": [
+    {
+      "username": "WorkbenchTest",
+      "week": 662,
+      "observed": [],
+      "suits": [
+        "/Lotus/Powersuits/Brawler/BrawlerBaseSuit",
+        "/Lotus/Powersuits/Inkblot/InkblotBaseSuit",
+        "/Lotus/Powersuits/Oraxia/OraxiaBaseSuit"
+      ],
+      "offensive": [
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPowerStrength",
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationSecondaryDamage",
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationMeleeDamage"
+      ],
+      "defensive": [
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationReloadSpeed",
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationEnergyRegen",
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationJumps"
+      ]
+    },
+    {
+      "username": "workbenchtest",
+      "week": 662,
+      "observed": [],
+      "suits": [
+        "/Lotus/Powersuits/SiriusOrion/SiriusBaseSuit",
+        "/Lotus/Powersuits/Hoplite/HopliteBaseSuit",
+        "/Lotus/Powersuits/Ember/EmberBaseSuit"
+      ],
+      "offensive": [
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationMeleeDamage",
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPowerDuration",
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPowerRange"
+      ],
+      "defensive": [
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationMovementSpeed",
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationArmor",
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationEnergyRegen"
+      ]
+    },
+    {
+      "username": "Test0",
+      "week": 661,
+      "observed": [],
+      "suits": [
+        "/Lotus/Powersuits/Fairy/FairyBaseSuit",
+        "/Lotus/Powersuits/Choir/ChoirBaseSuit",
+        "/Lotus/Powersuits/Koumei/KoumeiBaseSuit"
+      ],
+      "offensive": [
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPowerStrength",
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPrimaryDamage",
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationSecondaryCritChance"
+      ],
+      "defensive": [
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationJumps",
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationStatusResistance",
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationParkourSpeed"
+      ]
+    },
+    {
+      "username": "Test19",
+      "week": 663,
+      "observed": [],
+      "suits": [
+        "/Lotus/Powersuits/Temple/TempleBaseSuit",
+        "/Lotus/Powersuits/Trinity/TrinityBaseSuit",
+        "/Lotus/Powersuits/Runner/RunnerBaseSuit"
+      ],
+      "offensive": [
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationSecondaryDamage",
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPrimaryDamage",
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPowerStrength"
+      ],
+      "defensive": [
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationEnergy",
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationParkourSpeed",
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationArmor"
+      ]
+    },
+    {
+      "username": "账号CaseTest",
+      "week": 662,
+      "observed": [
+        "/Lotus/Powersuits/Excalibur/ExcaliburBaseSuit",
+        "/Lotus/Powersuits/Alchemist/AlchemistBaseSuit",
+        "/Lotus/Powersuits/AntiMatter/NovaBaseSuit"
+      ],
+      "suits": [
+        "/Lotus/Powersuits/IronFrame/IronFrameBaseSuit",
+        "/Lotus/Powersuits/Dragon/DragonBaseSuit",
+        "/Lotus/Powersuits/Gyre/GyreBaseSuit"
+      ],
+      "offensive": [
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationSecondaryDamage",
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationMeleeCritChance",
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPowerDuration"
+      ],
+      "defensive": [
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationReloadSpeed",
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationHealth",
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationJumps"
+      ]
+    },
+    {
+      "username": "WorkbenchTest",
+      "week": 662,
+      "observed": [
+        "/Lotus/Powersuits/Berserker/BerserkerBaseSuit",
+        "/Lotus/Powersuits/Brawler/BrawlerBaseSuit",
+        "/Lotus/Powersuits/BrokenFrame/BrokenFrameBaseSuit"
+      ],
+      "suits": [
+        "/Lotus/Powersuits/Choir/ChoirBaseSuit",
+        "/Lotus/Powersuits/Jade/JadeBaseSuit",
+        "/Lotus/Powersuits/Pacifist/PacifistBaseSuit"
+      ],
+      "offensive": [
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationPowerStrength",
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationSecondaryDamage",
+        "/Lotus/Upgrades/Invigorations/Offensive/OffensiveInvigorationMeleeDamage"
+      ],
+      "defensive": [
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationReloadSpeed",
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationEnergyRegen",
+        "/Lotus/Upgrades/Invigorations/Utility/UtilityInvigorationJumps"
+      ]
+    }
+  ]
+}

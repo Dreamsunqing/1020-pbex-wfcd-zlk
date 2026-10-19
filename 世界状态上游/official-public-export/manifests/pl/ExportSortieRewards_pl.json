@@ -1,0 +1,2956 @@
+{
+  "ExportSortieRewards": [
+    {
+      "rewardName": "/Lotus/StoreItems/Types/Items/FusionTreasures/OroFusexF",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.28
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/FusionBundles/RareFusionBundle",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 50,
+      "probability": 0.12
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Types/Items/MiscItems/Forma",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.025
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Types/Items/MiscItems/UtilityUnlocker",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.025
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Types/Recipes/Components/OrokinReactorBlueprint",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.025
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Types/Recipes/Components/OrokinCatalystBlueprint",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.025
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Fusers/LegendaryModFuser",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.0019
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Types/Items/MiscItems/Kuva",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 6000,
+      "probability": 0.12
+    },
+    {
+      "rewardName": "/Lotus/Types/StoreItems/Boosters/AffinityBoosterStoreItem",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.032699998
+    },
+    {
+      "rewardName": "/Lotus/Types/StoreItems/Boosters/ResourceDropChanceBoosterStoreItem",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.032699998
+    },
+    {
+      "rewardName": "/Lotus/Types/StoreItems/Boosters/ModDropChanceBoosterStoreItem",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.032699998
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawRifleRandomMod",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.07
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawPistolRandomMod",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.07
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawShotgunRandomMod",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.022
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawMeleeRandomMod",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.097999997
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawModularMeleeRandomMod",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.0099999998
+    },
+    {
+      "rewardName": "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawModularPistolRandomMod",
+      "rarity": "COMMON",
+      "tier": 0,
+      "itemCount": 1,
+      "probability": 0.010000138
+    }
+  ],
+  "ExportNightwave": {
+    "affiliationTag": "RadioLegionIntermission16Syndicate",
+    "challenges": [
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyAimGlide",
+        "name": "Motylem jestem",
+        "description": "Zabij |COUNT| Przeciwników podczas Celowania w locie",
+        "standing": 1000,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyArtist",
+        "name": "Artysta",
+        "description": "Dostosuj kolory elementu wyposażenia.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyBulletJump",
+        "name": "Trampolina",
+        "description": "Wykonaj |COUNT| Skoków Balistycznych.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCodexScan",
+        "name": "Badacz",
+        "description": "Zeskanuj |COUNT| Obiektów lub Przeciwników.",
+        "standing": 1000,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCollectCredits",
+        "name": "Kieszonkowe",
+        "description": "Podnieś |COUNT| Kredytów.",
+        "standing": 1000,
+        "required": 15000
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCompleteMission",
+        "name": "Agent",
+        "description": "Ukończ Misję.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyDeployGlyph",
+        "name": "Graffiti",
+        "description": "Umieść Glif w trakcie misji.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemies",
+        "name": "Strzał Ostrzegawczy",
+        "description": "Zabij |COUNT| Przeciwników.",
+        "standing": 1000,
+        "required": 200
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithAbilities",
+        "name": "Pokaz Siły",
+        "description": "Zabij |COUNT| Przeciwników za pomocą umiejętności.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithBlast",
+        "name": "Detonator",
+        "description": "Zabij |COUNT| Przeciwników Obrażeniami <DT_EXPLOSION>Wybuchowymi.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithCorrosive",
+        "name": "Stopienie",
+        "description": "Zabij |COUNT| Przeciwników Obrażeniami <DT_CORROSIVE>Żrącymi.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithElectricity",
+        "name": "Krótkie Spięcie",
+        "description": "Zabij |COUNT| Przeciwników Obrażeniami <DT_ELECTRICITY>Elektrycznymi.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithFinishers",
+        "name": "Egzekutor",
+        "description": "Zabij |COUNT| przeciwników przy pomocy Dobicia.",
+        "standing": 1000,
+        "required": 10
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithFire",
+        "name": "Podpalacz",
+        "description": "Zabij |COUNT| Przeciwników <DT_FIRE>Obr. od Ognia.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithFreeze",
+        "name": "Mrożonki",
+        "description": "Zabij |COUNT| Przeciwników Obrażeniami od <DT_FREEZE>Zimna.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithGas",
+        "name": "Zagrożenie Biologiczne",
+        "description": "Zabij |COUNT| Przeciwników Obrażeniami <DT_GAS>Gazowymi.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithHeadshots",
+        "name": "Strzelec Wyborowy",
+        "description": "Zabij |COUNT| Przeciwników strzałami w głowę.",
+        "standing": 1000,
+        "required": 40
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithMagnetic",
+        "name": "Magnes",
+        "description": "Zabij |COUNT| Przeciwników Obrażeniami <DT_MAGNETIC>Magnetycznymi.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithMelee",
+        "name": "Taniec Ostrzy",
+        "description": "Zabij |COUNT| Przeciwników przy pomocy Broni Białej.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithPoison",
+        "name": "Truciciel",
+        "description": "Zabij |COUNT| Przeciwników Obrażeniami od <DT_POISON>Toksyn.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithPrimary",
+        "name": "Przemiel ich",
+        "description": "Zabij |COUNT| Przeciwników przy pomocy Broni Głównej.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithRadiation",
+        "name": "Reaktor",
+        "description": "Zabij |COUNT| Przeciwników Obrażeniami <DT_RADIATION>Radiacyjnymi.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithSecondary",
+        "name": "Mniej znaczy Więcej",
+        "description": "Zabij |COUNT| Przeciwników przy pomocy Broni Bocznej.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithViral",
+        "name": "Rozprzestrzeniaj się",
+        "description": "Zabij |COUNT| Przeciwników Obrażeniami <DT_VIRAL>Wirusowymi.",
+        "standing": 1000,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPickUpEnergy",
+        "name": "Zastrzyk Energii",
+        "description": "Podnieś |COUNT| Kul Energii.",
+        "standing": 1000,
+        "required": 20
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPickUpMods",
+        "name": "Błyskotki",
+        "description": "Podnieś |COUNT| Mody/ów.",
+        "standing": 1000,
+        "required": 8
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPlaceMarker",
+        "name": "Komunikator",
+        "description": "Zaznacz |COUNT| Modów lub Surowców.",
+        "standing": 1000,
+        "required": 5
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPlayEmote",
+        "name": "Ekspresja",
+        "description": "Wykonaj |COUNT| Gestów.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailySlideKills",
+        "name": "Akcelerator",
+        "description": "Zabij |COUNT| przeciwników podczas ślizgu.",
+        "standing": 1000,
+        "required": 10
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWhileOnKDrive",
+        "name": "Dzika Jeźdźczyni",
+        "description": "Zabij wrogów podczas jazdy na K-Drive, Kaithe, Velocipodzie lub Atomicykl: |COUNT|.",
+        "standing": 1000,
+        "required": 20
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyLiquidation",
+        "name": "Wyprzedaż",
+        "description": "Sprzedaj dowolny przedmiot z Ekwipunku za Kredyty.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyTwoForOne",
+        "name": "Dwóch za Jednego",
+        "description": "Przebij i zabij 2 lub więcej wrogów jednym strzałem z łuku.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailySwatter",
+        "name": "Packa",
+        "description": "Zabij |COUNT| Drony bronią białą.",
+        "standing": 1000,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyToppingOffTheTank",
+        "name": "Pod Korek",
+        "description": "Skutecznie obroń Ekskawator, nie pozwalając mu na wyczerpanie zapasu energii.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyThePersonalTouch",
+        "name": "Własny Kącik",
+        "description": "Umieść 1 dekorację na swoim Orbiterze.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyBuildersTouch",
+        "name": "Dotyk Budowniczego",
+        "description": "Odbierz przedmiot z Warsztatu.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCompleteMissionMelee",
+        "name": "Szermierz",
+        "description": "Ukończ misję mając założoną tylko Broń białą",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCompleteMissionPrimary",
+        "name": "Pancerny",
+        "description": "Ukończ misję mając założoną tylko Broń Główną",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCompleteMissionSecondary",
+        "name": "Westernowiec",
+        "description": "Ukończ misję mając założoną tylko Broń Boczną",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyDeployAirSupport",
+        "name": "Kawaleria Powietrzna",
+        "description": "Użyj wsparcia powietrznego podczas misji",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyDeploySpecter",
+        "name": "Sobowtór",
+        "description": "Rozmieść Widmo",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyDonateLeverian",
+        "name": "Patron",
+        "description": "Przekaż darowiznę Leverianowi",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyInteractWithPet",
+        "name": "Lojalność",
+        "description": "Wejdź w interakcję ze swoim Kubrowem lub Kavatem",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyMercyKill",
+        "name": "Brutalna Litość",
+        "description": "Zabij wroga Miłosierdziem",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailySuspendFiveEnemies",
+        "name": "Potężny Wstrząs",
+        "description": "Unieś w powietrze 5 lub więcej wrogów jednym ciężkim atakiem z wyskoku w ziemię Broni Białej",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyTransmuteMods",
+        "name": "Wszystko stare jest teraz nowe",
+        "description": "Przeprowadź Transmutacje Modów. |COUNT| razy",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyVisitFeaturedDojo",
+        "name": "Wycieczkownik",
+        "description": "Odwiedź Wyróżnione Dojo",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyWholeArsenal",
+        "name": "Cały Arsenał",
+        "description": "Zabij wroga bronią główną, boczną i białą w ciągu 10 sekund.",
+        "standing": 1000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyBowOffense",
+        "name": "Ofensywa Łukowa",
+        "description": "Zabij |COUNT| {COUNT:plural:wroga|wrogów|wrogów}, używając łuków (broń główna).",
+        "standing": 4500,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCatchRarePlainsFish",
+        "name": "Ziemski Rybak",
+        "description": "Złap |COUNT| Rzadkich Ryb na Równinach Eidolon.",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCatchRareVenusFish",
+        "name": "Wenusjański Rybak",
+        "description": "Złap |COUNT| Rzadkich Serworyb na Orb Vallis.",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteAssassination",
+        "name": "Zabójca",
+        "description": "Ukończ misje Zabójstwa: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteCapture",
+        "name": "Klawisz",
+        "description": "Ukończ misje Uprowadzenia: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteClemMission",
+        "name": "Dobry przyjaciel",
+        "description": "Pomóż Clemowi w jego cotygodniowej misji.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteExterminate",
+        "name": "Eliminator",
+        "description": "Ukończ misje Eksterminacji: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteInvasionMissions",
+        "name": "Najeźdźca",
+        "description": "Ukończ misje Inwazji: |COUNT|",
+        "standing": 4500,
+        "required": 6
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteMobileDefense",
+        "name": "Obrońca",
+        "description": "Ukończ misje Obrony Mobilnej: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteNightmareMissions",
+        "name": "Śpioch",
+        "description": "Ukończ misję w trybie koszmaru: |COUNT|.",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteRescue",
+        "name": "Ratownik",
+        "description": "Ukończ misje Ratunkowe: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSabotage",
+        "name": "Sabotażysta",
+        "description": "Ukończ misje Sabotażu: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSortie",
+        "name": "Specjalista Mobilizacji",
+        "description": "Ukończ Mobilizacje. Ilość: |COUNT|.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSpy",
+        "name": "Operator",
+        "description": "Ukończ misje Infiltracji: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSyndicateMissions",
+        "name": "Sympatyk",
+        "description": "Ukończ misje Syndykatu: |COUNT|",
+        "standing": 4500,
+        "required": 5
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteTreasures",
+        "name": "Animator",
+        "description": "Szukaj Skarbów Ayatan dla Maroo na Bazarze Maroo.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillEnemiesWithHeadshots",
+        "name": "To nie jest Strzał Ostrzegawczy",
+        "description": "Zabij wrogów strzałem w głowę: |COUNT|",
+        "standing": 4500,
+        "required": 100
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyMineRarePlainsResources",
+        "name": "Ziemski Górnik",
+        "description": "Wykop |COUNT| Rzadkich Kamieni szlachetnych lub Rudy na Równinach Eidolon.",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyMineRareVenusResources",
+        "name": "Wenusjański Górnik",
+        "description": "Wykop |COUNT| Rzadkich Kamieni szlachetnych lub Rudy na Orb Vallis.",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPerfectAnimalCapture",
+        "name": "Konserwator",
+        "description": "Schwytaj Perfekcyjnie różne Gatunki na Orb Vallis. Ilość: |COUNT| szt.",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPerplexed",
+        "name": "Łamigłówka",
+        "description": "Ukończ łamigłówkę w Duviri",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPickUpMedallion",
+        "name": "Czas zacząć polowanie",
+        "description": "Znajdź |COUNT| {COUNT:plural:Medalion Syndykatu|Medaliony Syndykatu|Medalionów Syndykatu} podczas gry w pojedynkę lub wieloosobowej.",
+        "standing": 4500,
+        "required": 10
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPlainsBounties",
+        "name": "Ziemski Łowca Głów",
+        "description": "Ukończ |COUNT| {COUNT:plural:zlecenie|zlecenia|zleceń} na Równinach Eidolon.",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySabotageCaches",
+        "name": "Poszukiwacz Skrytek",
+        "description": "Znajdź |COUNT| {COUNT:plural:skrytkę|skrytki|skrytek} w misjach.",
+        "standing": 4500,
+        "required": 6
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyRifleOffense",
+        "name": "Ofensywa Karabinowa",
+        "description": "Zabij |COUNT| {COUNT:plural:wroga|wrogów|wrogów}, używając karabinów (broń główna).",
+        "standing": 4500,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySanctuaryOnslaught",
+        "name": "Obiekt Testów",
+        "description": "Ukończ Strefy Rzezi Sanktuarium (ilość: |COUNT|).",
+        "standing": 4500,
+        "required": 8
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyShotgunOffense",
+        "name": "Ofensywa Strzelbowa",
+        "description": "Zabij |COUNT| {COUNT:plural:wroga|wrogów|wrogów}, używając strzelb (broń główna).",
+        "standing": 4500,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySimarisScan",
+        "name": "Badacz Sanktuarium",
+        "description": "Wykonaj |COUNT| skanów dla Cefalona Simarisa.",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySniperOffense",
+        "name": "Ofensywa Snajperska",
+        "description": "Zabij |COUNT| {COUNT:plural:wroga|wrogów|wrogów}, używając karabinu snajperskiego (broń główna).",
+        "standing": 4500,
+        "required": 150
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyToAshes",
+        "name": "W popiół",
+        "description": "Rozłóż Arkanum na Wosfor.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyUnlockDragonVaults",
+        "name": "Szabrownik Skarbców",
+        "description": "Używając Smoczych Kluczy, otwórz Skarbce na Deimosie: |COUNT| razy.",
+        "standing": 4500,
+        "required": 4
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyUnlockRelics",
+        "name": "Otwórz Relikty",
+        "description": "Otwórz |COUNT| Reliktów",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyUseForma",
+        "name": "Spolaryzowany",
+        "description": "Spolaryzuj Broń, Towarzysza lub Warframe'a (poza Symulakrem).",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyVenusBounties",
+        "name": "Wenusjański Łowca Głów",
+        "description": "Ukończ |COUNT| {COUNT:plural:zlecenie|zlecenia|zleceń} w Orb Vallis.",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyVoidNet",
+        "name": "Sieć Pustki",
+        "description": "Zbierz |COUNT| {COUNT:plural:Łzę|Łzy|Łez} Pustki.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyNightAndDay",
+        "name": "Dzień i Noc",
+        "description": "Zbierz |COUNT| Resztek Vome lub Fass w Dryfie Kambionu.",
+        "standing": 4500,
+        "required": 10
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyLoyalty",
+        "name": "Lojalność",
+        "description": "Zdobądź |COUNT| punktów Reputacji w dowolnym Syndykacie.",
+        "standing": 4500,
+        "required": 5000
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyTheOldWays",
+        "name": "Stare Sposoby",
+        "description": "Ukończ 1 misję, mając wyposażony tylko pojedynczy pistolet i broń typu glaive.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyBloodthirsty",
+        "name": "Krwiożerczy",
+        "description": "Zabij 20 wrogów w 5 sekund.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyIsolationBounties",
+        "name": "Najeźdźca Skarbców",
+        "description": "Ukończ Zlecenie Skarbca Izolacyjnego w Dryfie Kambionu na Deimosie.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyFeedHelminth",
+        "name": "Nakarm Bestię",
+        "description": "Nakarm Helmintha dowolnym surowcem.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillEnemiesInMech",
+        "name": "Nekralizer",
+        "description": "Zabij wrogów używając Nekramecha: |COUNT|",
+        "standing": 4500,
+        "required": 100
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteDisruptionConduits",
+        "name": "Nie pękaj",
+        "description": "Obroń |COUNT| Bezpieczników w misjach Zakłócenia",
+        "standing": 4500,
+        "required": 12
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteKuva",
+        "name": "Nie obawiaj się Żniwiarza",
+        "description": "Ukończ misje Syfonu Kuvy: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteVenusRace",
+        "name": "Dokuje",
+        "description": "Ukończ wyścig K-Drive w Orb Vallis na Wenus lub w Dryfie Kambionu na Deimosie.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyDestroyCrewshipArtillery",
+        "name": "Czołowe Myślenie",
+        "description": "Zniszcz załogowca za pomocą artylerii dziobowej.",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillArchgunEnemies",
+        "name": "Ciężkie Uzbrojenie",
+        "description": "Zabij wrogów używając Archguna: |COUNT|",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillThumper",
+        "name": "Cień Kolosa",
+        "description": "Zabij Równinnego Kolosa na Równinach Eidolon",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyRailjackMissions",
+        "name": "Oblatywacz",
+        "description": "Ukończ misje Railjacka: |COUNT|",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyBeastSlayer",
+        "name": "Pogromca Bestii",
+        "description": "Pokonaj Orożmija",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyBoardingPartyNoDamage",
+        "name": "Nietykalny",
+        "description": "Pokonaj wrogą Drużynę Abordażową bez otrzymania obrażeń przez Warframe",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCollector",
+        "name": "Kolekcjoner",
+        "description": "Zbierz |COUNT| surowców w Duviri",
+        "standing": 4500,
+        "required": 100
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyFinelyTuned",
+        "name": "Dobre dostrojenie",
+        "description": "Zagraj utwór Shawzin w aktywności pobocznej Duviri",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyHorsingAround",
+        "name": "Polatajmy",
+        "description": "Przeleć swoim Kaithe |COUNT| metrów",
+        "standing": 4500,
+        "required": 1500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyIDecree",
+        "name": "Z mojego rozkazu",
+        "description": "Zbierz |COUNT| Dekretów w pojedynczej sesji Duviri lub Wieloboju.",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySkeletonsInTheCloset",
+        "name": "Szkielety w szafie",
+        "description": "Pokonaj przeciwników Dax na Duviri: |COUNT|",
+        "standing": 4500,
+        "required": 50
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteRace",
+        "name": "Ollie Oop!",
+        "description": "Zagraj w Ollie's Crash Course i ukończ wyścig",
+        "standing": 4500,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyRequiemTotem",
+        "name": "Pradawne Obeliski",
+        "description": "Aktywuj 3 Obeliski Requiem na Deimosie.",
+        "standing": 4500,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCollectHundredResources",
+        "name": "Zbieracz",
+        "description": "Zbierz |COUNT| Surowców",
+        "standing": 4500,
+        "required": 4000
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySolveCiphers",
+        "name": "Haker",
+        "description": "Zhakuj |COUNT| Konsol.",
+        "standing": 4500,
+        "required": 10
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyOpenLockers",
+        "name": "Kleptoman",
+        "description": "Otwórz |COUNT| Szafek.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions",
+        "name": "Misja zakończona",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus",
+        "name": "Eliminator Eximusów",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies",
+        "name": "To nie jest Strzał Ostrzegawczy",
+        "description": "Zabij wrogów: |COUNT|",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions2",
+        "name": "Misja zakończona II",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus2",
+        "name": "Eliminator Eximusów II",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies2",
+        "name": "To nie jest Strzał Ostrzegawczy II",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions3",
+        "name": "Misja zakończona III",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus3",
+        "name": "Eliminator Eximusów III",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies3",
+        "name": "To nie jest Strzał Ostrzegawczy III",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions4",
+        "name": "Misja zakończona IV",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus4",
+        "name": "Eliminator Eximusów IV",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies4",
+        "name": "To nie jest Strzał Ostrzegawczy IV",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions5",
+        "name": "Misja zakończona V",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus5",
+        "name": "Eliminator Eximusów V",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies5",
+        "name": "To nie jest Strzał Ostrzegawczy V",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions6",
+        "name": "Misja zakończona VI",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus6",
+        "name": "Eliminator Eximusów VI",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies6",
+        "name": "To nie jest Strzał Ostrzegawczy VI",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions7",
+        "name": "Misja zakończona VII",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus7",
+        "name": "Eliminator Eximusów VII",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies7",
+        "name": "To nie jest Strzał Ostrzegawczy VII",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions8",
+        "name": "Misja zakończona VIII",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus8",
+        "name": "Eliminator Eximusów VIII",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies8",
+        "name": "To nie jest Strzał Ostrzegawczy VIII",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions9",
+        "name": "Misja zakończona IX",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus9",
+        "name": "Eliminator Eximusów IX",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies9",
+        "name": "To nie jest Strzał Ostrzegawczy IX",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions10",
+        "name": "Misja zakończona X",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus10",
+        "name": "Eliminator Eximusów X",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies10",
+        "name": "To nie jest Strzał Ostrzegawczy X",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions11",
+        "name": "Misja zakończona XI",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus11",
+        "name": "Eliminator Eximusów XI",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies11",
+        "name": "To nie jest Strzał Ostrzegawczy XI",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions12",
+        "name": "Misja zakończona XII",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus12",
+        "name": "Eliminator Eximusów XII",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies12",
+        "name": "To nie jest Strzał Ostrzegawczy XII",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions13",
+        "name": "Misja zakończona XIII",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus13",
+        "name": "Eliminator Eximusów XIII",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies13",
+        "name": "To nie jest Strzał Ostrzegawczy XIII",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions14",
+        "name": "Misja zakończona XIV",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus14",
+        "name": "Eliminator Eximusów XIV",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies14",
+        "name": "To nie jest Strzał Ostrzegawczy XIV",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions15",
+        "name": "Misja zakończona XV",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus15",
+        "name": "Eliminator Eximusów XV",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies15",
+        "name": "To nie jest Strzał Ostrzegawczy XV",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions16",
+        "name": "Misja zakończona XVI",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus16",
+        "name": "Eliminator Eximusów XVI",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies16",
+        "name": "To nie jest Strzał Ostrzegawczy XVI",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions17",
+        "name": "Misja zakończona XVII",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus17",
+        "name": "Eliminator Eximusów XVII",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies17",
+        "name": "To nie jest Strzał Ostrzegawczy XVII",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions18",
+        "name": "Misja zakończona XVIII",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus18",
+        "name": "Eliminator Eximusów XVIII",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies18",
+        "name": "To nie jest Strzał Ostrzegawczy XVIII",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions19",
+        "name": "Misja zakończona XIX",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus19",
+        "name": "Eliminator Eximusów XIX",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies19",
+        "name": "To nie jest Strzał Ostrzegawczy XIX",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions20",
+        "name": "Misja zakończona XX",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus20",
+        "name": "Eliminator Eximusów XX",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies20",
+        "name": "To nie jest Strzał Ostrzegawczy XX",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions21",
+        "name": "Misja zakończona XXI",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus21",
+        "name": "Eliminator Eximusów XXI",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies21",
+        "name": "To nie jest Strzał Ostrzegawczy XXI",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions22",
+        "name": "Misja zakończona XXII",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus22",
+        "name": "Eliminator Eximusów XXII",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies22",
+        "name": "To nie jest Strzał Ostrzegawczy XXII",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions23",
+        "name": "Misja zakończona XXIII",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus23",
+        "name": "Eliminator Eximusów XXIII",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies23",
+        "name": "To nie jest Strzał Ostrzegawczy XXIII",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions24",
+        "name": "Misja zakończona XXIV",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus24",
+        "name": "Eliminator Eximusów XXIV",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies24",
+        "name": "To nie jest Strzał Ostrzegawczy XXIV",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions25",
+        "name": "Misja zakończona XXV",
+        "description": "Ukończ misje: |COUNT|",
+        "standing": 4500,
+        "required": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus25",
+        "name": "Eliminator Eximusów XXV",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 4500,
+        "required": 30
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies25",
+        "name": "To nie jest Strzał Ostrzegawczy XXV",
+        "description": "Zabij wrogów: |COUNT|.",
+        "standing": 4500,
+        "required": 500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardLuaPuzzles",
+        "name": "Ceremonialny",
+        "description": "Ukończ |COUNT| Sal Wstąpienia na Lua.",
+        "standing": 7000,
+        "required": 4
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardBattleHardened",
+        "name": "Zahartowany w boju",
+        "description": "Ukończ misję Powstania Perity wykonując |COUNT| lub więcej rozkazów.",
+        "standing": 7000,
+        "required": 6
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteNightmareMissions",
+        "name": "Nocny Terror",
+        "description": "Ukończ misję w trybie koszmaru: |COUNT|.",
+        "standing": 7000,
+        "required": 5
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteSortie",
+        "name": "Ekspert Mobilizacji",
+        "description": "Wykonaj |COUNT| misji Mobilizacji.",
+        "standing": 7000,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardElementaryMyDear",
+        "name": "Elementarnie, mój drogi",
+        "description": "Ukończ |COUNT| konwersji w trybie gry Alchemia.",
+        "standing": 7000,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardEliteSanctuaryOnslaught",
+        "name": "Elitarny Obiekt Badań",
+        "description": "Ukończ Rzeź Elitarnego Sanktuarium (ilość stref: |COUNT|).",
+        "standing": 7000,
+        "required": 8
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardEternalGuardian",
+        "name": "Wieczny Strażnik",
+        "description": "Ukończ |COUNT| {COUNT:plural:rundę|rundy|rund} misji Armagedonu Pustki.",
+        "standing": 7000,
+        "required": 2
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFriendsDefense",
+        "name": "Obrona",
+        "description": "Ukończ misję Obrony, osiągając co najmniej 12 Falę.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFriendsProfitTaker",
+        "name": "Zyskobiorczyni",
+        "description": "Zabij Zyskobiorczynię.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFriendsSurvival",
+        "name": "Przetrwanie",
+        "description": "Ukończ misję Przetrwania, trwającą co najmniej 20 minut.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardGoingDown",
+        "name": "W dół",
+        "description": "Pokonaj Roathe'a w Descendii.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardHighGround",
+        "name": "Nie utop się",
+        "description": "Zasklep |COUNT| {COUNT:plural:pęknięcie|pęknięcia|pęknięć} w misji Powodzi Pustki",
+        "standing": 7000,
+        "required": 12
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardHoldTheMushrooms",
+        "name": "Trzymaj grzyba",
+        "description": "Zbierz |COUNT| {COUNT:plural:grzyba|grzyby|grzybów} w Kopalniach.",
+        "standing": 7000,
+        "required": 6
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardIndexWinStreak",
+        "name": "Akcjonariusz",
+        "description": "Wygraj 3 zakłady Indeksu pod rząd w jednym meczu.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillEnemies",
+        "name": "Zabójczy Strzał",
+        "description": "Zgładź |COUNT| przeciwników.",
+        "standing": 7000,
+        "required": 1500
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillEximus",
+        "name": "Egzekutor Eximusów",
+        "description": "Zabij |COUNT| Eximusów.",
+        "standing": 7000,
+        "required": 100
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillOrCaptureRainalyst",
+        "name": "Łowca Hydrolysta",
+        "description": "Zabij lub schwytaj Eidolona Hydrolysta.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKuvaSurvivalNoCapsules",
+        "name": "Wstrzymaj oddech",
+        "description": "Ukończ misję Przetrwania Kuvy, trwającą co najmniej 20 minut.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardUnlockRelics",
+        "name": "Otwórz Relikty",
+        "description": "Otwórz Relikty: |COUNT|",
+        "standing": 7000,
+        "required": 10
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillEnemiesSteelPath",
+        "name": "Zimna Stal",
+        "description": "Zabij |COUNT| wrogów na Ścieżce Stali.",
+        "standing": 7000,
+        "required": 1000
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardSpiderHunt",
+        "name": "Polowanie na pająka",
+        "description": "Ukończ misję Duviri \"Tkaczka Światów\".",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardTreasureFromThePast",
+        "name": "Skarby przeszłości",
+        "description": "Ukończ misję Netraceli.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCollectUniqueResources",
+        "name": "Szabrownik Surowców",
+        "description": "Zbierz |COUNT| typów różnych surowców.",
+        "standing": 7000,
+        "required": 20
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteSteelPathMissions",
+        "name": "Mniej Uczęszczana Ścieżka",
+        "description": "Ukończ różne misje na Ścieżce Stali: |COUNT|",
+        "standing": 7000,
+        "required": 5
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardAntiquarian",
+        "name": "Antykwariusz",
+        "description": "Otwórz po jednym Relikcie z każdej ery (Lith, Meso, Neo, Axi) |COUNT|.",
+        "standing": 7000,
+        "required": 4
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardThePriceOfFreedom",
+        "name": "Cena Wolności",
+        "description": "Uwolnij jednego pojmanego Solaris za pomocą Korony Granuma.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardTheManyMadeWhole",
+        "name": "Części Tworzą Całość",
+        "description": "Wymień 10 Okruchów Riven na Mod Riven",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardTerminated",
+        "name": "Eliminacja",
+        "description": "Zniszcz |COUNT| Nekramechy pilnujące skarbca.",
+        "standing": 7000,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardRiseOfTheMachine",
+        "name": "Bunt Maszyny",
+        "description": "Zabij |COUNT| przeciwników Nekramechem nie dając się zniszczyć.",
+        "standing": 7000,
+        "required": 300
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFallenAngel",
+        "name": "Upadły Anioł",
+        "description": "Zabij Anioły Pustki na Zarimanie: |COUNT|",
+        "standing": 7000,
+        "required": 3
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFastCapture",
+        "name": "Sprinter",
+        "description": "Ukończ misję Uprowadzenia w mniej niż 90 sekund",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillExploiterOrb",
+        "name": "Nic oprócz Zysku",
+        "description": "Zabij Matkę Wyzysku",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillThumper",
+        "name": "Krocz bez rytmu",
+        "description": "Zabij Równinnego Kolosa Doma na Równinach Eidolon",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardRailjackMissions",
+        "name": "Elitarny Oblatywacz",
+        "description": "Ukończ misje Railjacka: |COUNT|",
+        "standing": 7000,
+        "required": 6
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteArchonHunt",
+        "name": "Łowca Archonów",
+        "description": "Ukończ Polowanie na Archona.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFriendsMirrorDefense",
+        "name": "Lustereczko powiedz przecie",
+        "description": "Trzykrotnie obroń oba cele Lustrzanej Obrony podczas jednej misji.",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCeremonialEvolution",
+        "name": "Ceremonialna Ewolucja",
+        "description": "Aktywuj formę Inkarnon dowolnej Broni Inkarnon w misji |COUNT| razy",
+        "standing": 7000,
+        "required": 5
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardEliteBeastSlayer",
+        "name": "Elitarny Pogromca Bestii",
+        "description": "Pokonaj Orożmija na Ścieżce Stali",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardVitalArbiter",
+        "name": "Istotny Arbiter",
+        "description": "Ukończ Misję Arbitrażu",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardZarimanBountyHunter",
+        "name": "Zarimański Łowca Głów",
+        "description": "Ukończ |COUNT| {COUNT:plural:zlecenie|zlecenia|zleceń} na Zarimanie.",
+        "standing": 7000,
+        "required": 4
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillTank",
+        "name": "Zakaz wjazdu",
+        "description": "Zniszcz czołg H-09 Eferwon",
+        "standing": 7000,
+        "required": 1
+      },
+      {
+        "uniqueName": "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteConquest",
+        "name": "Wolontariusz",
+        "description": "Ukończ serię misji Głębokich lub Temporalnych Archimediów",
+        "standing": 7000,
+        "required": 1
+      }
+    ],
+    "rewards": [
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 150
+      },
+      {
+        "uniqueName": "/Lotus/StoreItems/Types/Items/ShipDecos/Plushies/PlushyDrippy",
+        "name": "Pluszak Drippy'ego",
+        "description": "W razie nieszczelności pluszak Drippy'ego śpieszy z pomocą!"
+      },
+      {
+        "uniqueName": "/Lotus/Types/StoreItems/Packages/FormaPack",
+        "name": "Paczka Formy",
+        "description": "Zestaw trzech Form."
+      },
+      {
+        "uniqueName": "/Lotus/Types/StoreItems/Packages/Inf1999ArmorBundle",
+        "name": "Zestaw Pancerza: Techrot",
+        "description": "Wygląd Techrotu bez ryzyka śmiertelnego zakażenia.",
+        "components": [
+          "Naramienniki: Techrot",
+          "Napierśnik: Techrot",
+          "Nagolenniki: Techrot"
+        ]
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 50
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Skins/Scarves/LasNightwaveCape"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/ShipDecos/Nightwave/NightwaveEntertechmentCrate"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/WeaponPrimaryArcaneUnlocker"
+      },
+      {
+        "uniqueName": "/Lotus/StoreItems/Types/StoreItems/SlotItems/TwoWeaponSlotItem",
+        "name": "GNIAZDA BRONI",
+        "description": "Dodaje dwa gniazda ekwipunku dla broni."
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Mods/Pistol/Event/Nightwave/NightwaveLasGooPistolAugmentMod"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 50
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/FormaStance"
+      },
+      {
+        "uniqueName": "/Lotus/Types/StoreItems/AvatarImages/AvatarImageNightwaveDrippyGraffitiGlyph"
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/ArmourOnDamage",
+        "itemCount": 3
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Skins/Operator/Accessories/NightWaveScouterEyePiece"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 150
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Skins/BrokenFrame/XakuCosmosSkin"
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Skins/MeleeDangles/DrippyKeychainMeleeDangle"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/RivenIdentifier"
+      },
+      {
+        "uniqueName": "/Lotus/StoreItems/Types/StoreItems/SlotItems/SuitSlotItem",
+        "name": "Gniazdo Warframe'a",
+        "description": "Dodaje gniazdo na Warframe'a."
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 50
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/Emotes/FinishLine"
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Skins/Effects/NightwaveDigitalEphemera"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 50
+      },
+      {
+        "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveLasGooAKAugmentMod"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/FormaAura"
+      },
+      {
+        "uniqueName": "/Lotus/Types/StoreItems/SuitCustomizations/ColourPickerNightwave1999Item"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/FormaUmbra"
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/Titles/ShockwaveTitle"
+      },
+      {
+        "uniqueName": "/Lotus/Types/StoreItems/Packages/OperatorSuitNightwave1999Bundle",
+        "name": "Regalia Atomicyklowe Kaneshell",
+        "description": "Załóż ten strój atomicyklowy godny nowego tysiąclecia. Dopasowany do Włóczęgi i Operatora.",
+        "components": [
+          "Kamizelka atomicyklowa Kaneshell",
+          "Hełm atomicyklowy Kaneshell",
+          "Nogawice atomicyklowe Kaneshell",
+          "Rękawice atomicyklowe Kaneshell"
+        ]
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      },
+      {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/NoraIntermissionSixteenCreds",
+        "itemCount": 15
+      }
+    ]
+  },
+  "ExportRailjack": {
+    "nodes": [
+      {
+        "uniqueName": "CrewBattleNode553",
+        "name": "Flexa"
+      },
+      {
+        "uniqueName": "CrewBattleNode554",
+        "name": "Chmura H-2"
+      },
+      {
+        "uniqueName": "CrewBattleNode555",
+        "name": "Chmura R-9"
+      },
+      {
+        "uniqueName": "CrewBattleNode550",
+        "name": "Sieć Nsu"
+      },
+      {
+        "uniqueName": "CrewBattleNode538",
+        "name": "Tykwa"
+      },
+      {
+        "uniqueName": "CrewBattleNode539",
+        "name": "Numen"
+      },
+      {
+        "uniqueName": "CrewBattleNode540",
+        "name": "Srebrzysty Łuk"
+      },
+      {
+        "uniqueName": "CrewBattleNode541",
+        "name": "Erato"
+      },
+      {
+        "uniqueName": "CrewBattleNode542",
+        "name": "Lu-yan"
+      },
+      {
+        "uniqueName": "CrewBattleNode543",
+        "name": "Chmura Sabmir"
+      }
+    ]
+  },
+  "ExportIntrinsics": [
+    {
+      "name": "TAKTYCZNE",
+      "ranks": [
+        {
+          "name": "Taktyczny System",
+          "description": "Używaj Modów Taktycznych i skorzystaj z systemu śledzenia załogi przez Menu Taktyczne |TACT_MENU|."
+        },
+        {
+          "name": "Kineza umiejętności i Nadzorca",
+          "description": "Umiejętności Warframe'a mogą być użyte jako wsparcie taktyczne. Aktywuje kamerę śledzenia załogi."
+        },
+        {
+          "name": "Łącze Dowodzenia",
+          "description": "Szybka Podróż w obrębie statku. Koordynuj członków drużyny dzięki interfejsowi poleceń."
+        },
+        {
+          "name": "Przywołanie Nadświetlne",
+          "description": "Omni może być użyte do powrotu do statku z dowolnego miejsca poza nim."
+        },
+        {
+          "name": "Przywołaj Nekramecha",
+          "description": "Przywołaj Nekramecha na każdej misji Railjacka."
+        },
+        {
+          "name": "Taktyczna Wydajność",
+          "description": "Redukuje zużycie Energii przez Mody Bitewne o 25%."
+        },
+        {
+          "name": "Taktyczna Odpowiedź",
+          "description": "Redukuje czas odnowienia Modów Taktycznych o 20%."
+        },
+        {
+          "name": "Czas odnowienia Taktycznego Mgnienia Archwinga i Nekramecha",
+          "description": "Redukuje czas odnowienia Mgnienia Archwinga o 25%. Redukuje czas odnowienia przyzwania Nekramecha o 25%."
+        },
+        {
+          "name": "Szybka Taktyka",
+          "description": "Redukuje czas ładowania Modów Taktycznych o 20%."
+        },
+        {
+          "name": "Dołączenie Nadświetlne",
+          "description": "Przenieś się nadświetlnie ze statku do członka załogi."
+        }
+      ]
+    },
+    {
+      "name": "PILOTAŻ",
+      "ranks": [
+        {
+          "name": "Przyspieszenie",
+          "description": "Przytrzymaj |SPRINT|, aby zwiększyć prędkość odrzutową. Strzelanie zakłóca przyspieszenie."
+        },
+        {
+          "name": "Manewr Wektorowy",
+          "description": "Wciśnij |ACTION|, by skorzystać ze Stateczników kierunkowych."
+        },
+        {
+          "name": "Uniknięcie Wektorowe",
+          "description": "Pociski pobliskich wrogów tracą namierzenie celu w czasie Manewru Wektorowego."
+        },
+        {
+          "name": "Manewr Driftu",
+          "description": "Podczas manewru Wektorowego, wciśnij i przytrzymaj |SPRINT|, aby driftować."
+        },
+        {
+          "name": "Wzmocnione Szabrowanie",
+          "description": "Trzykrotnie zwiększa promień zbierania łupu podczas driftu lub uniku. Ukryte wraki są oznaczone."
+        },
+        {
+          "name": "Zakłócacz Kapsuł",
+          "description": "25% szans na zablokowanie systemów celowniczych nadlatującej kapsuły abordażowej, przez co nie trafia i wybucha."
+        },
+        {
+          "name": "Nekramechowy Pośpiech",
+          "description": "Zwiększa Prędkość Ruchu Nekramecha o 10%."
+        },
+        {
+          "name": "Aeronauta",
+          "description": "Prędkość Archwing zwiększona o 20%."
+        },
+        {
+          "name": "Taranująca Prędkość",
+          "description": "Podczas Przyspieszenia redukuje obrażenia nadchodzące o 2000%. Taranowanie wrogów podczas Przyspieszenia zada 25 <DT_IMPACT> Obr. Miażdżących."
+        },
+        {
+          "name": "Mgnienie Railjacka",
+          "description": "Dwukrotnie wciśnij <JUMP>, natychmiast przesuwając Railjacka do przodu, pozostawiając za sobą turbulencje, które spowolnią na pobliskich wrogów."
+        }
+      ]
+    },
+    {
+      "name": "ARTYLERIA",
+      "ranks": [
+        {
+          "name": "Naładowane Lufy",
+          "description": "Wieżyczki brzuszna i grzbietowa zadają +50% obrażeń."
+        },
+        {
+          "name": "Widmowe Oko",
+          "description": "Ulepszona reprojekcja i zawieszenie wieżyczek pozwalające na walkę w każdym kierunku."
+        },
+        {
+          "name": "Wyrzutnia Archwing",
+          "description": "Rozmieszcza wysoce rozpędzonego Archwinga w strefie walki. Wyrzutnia Archwing zadaje obrażenia myśliwcom i przebija kadłuby wrogich załogowców."
+        },
+        {
+          "name": "Furia Archwinga",
+          "description": "Zwiększa Zasięg Przyciągania Archwinga o 0.75m, Zasięg Broni białej o 20m i Obrażenia o 25%."
+        },
+        {
+          "name": "Nekramechowa Furia",
+          "description": "Zwiększa Obrażenia Broni Nekramecha o 20%."
+        },
+        {
+          "name": "Zimny Spust",
+          "description": "Zmniejsza Przyrost Ciepła o 20%."
+        },
+        {
+          "name": "Zaawansowana Artyleria",
+          "description": "Zmniejsza czas regeneracji po przegrzaniu o 50%. Zwiększa zasięg Wyrzutni o 50%."
+        },
+        {
+          "name": "Mściwy Archwing",
+          "description": "Zwiększa siłę Archwinga: obrażenia +20%, siła umiejętności +20%, zasięg umiejętności +20% i wydajność umiejętności +25%."
+        },
+        {
+          "name": "Szybkie Chłodzenie",
+          "description": "Przeładowanie przegrzanej broni spowoduje jej całkowite schłodzenie w 0,5 sekundy."
+        },
+        {
+          "name": "Refleks Celowania",
+          "description": "Celownik wieżyczki będzie automatycznie śledzić wroga przez 3 s."
+        }
+      ]
+    },
+    {
+      "name": "INŻYNIERIA",
+      "ranks": [
+        {
+          "name": "Wykorzystanie Omni",
+          "description": "Przyspieszona neutralizacja zagrożeń i naprawa kadłuba."
+        },
+        {
+          "name": "Szybkie Wsparcie",
+          "description": "Zmniejsza czas odnowienia ładunków wsparcia powietrznego o 50%."
+        },
+        {
+          "name": "Kuźnia Uzbrojenia",
+          "description": "Uzupełnij Uzbrojenie podczas bitwy."
+        },
+        {
+          "name": "Kuźnia Ładunków Dome",
+          "description": "Uzupełniaj Artylerię Dziobową w czasie bitwy."
+        },
+        {
+          "name": "Optymalizacja Kuźni",
+          "description": "Zwiększ zbiory Kuźni o 1%. Naprawiaj Kadłub przez wytwarzanie."
+        },
+        {
+          "name": "Akcelerator Kuźni",
+          "description": "Zwiększa szybkość przetwarzania Kuźni o 25%."
+        },
+        {
+          "name": "Pełna Optymalizacja",
+          "description": "Zwiększ zbiory Kuźni o 25%."
+        },
+        {
+          "name": "Czujny Archwing",
+          "description": "Zwiększ obronę Archwinga. Życie +30%, Tarcza +30%, i Pancerz +30%."
+        },
+        {
+          "name": "Czujny Nekramech",
+          "description": "Zwiększ obronę Nekramecha. +25% Życia. +25% Tarczy."
+        },
+        {
+          "name": "Anastaza",
+          "description": "Naprawiaj zdalnie wszystkie zagrożenia na pokładzie."
+        }
+      ]
+    },
+    {
+      "name": "DOWÓDZTWO",
+      "ranks": [
+        {
+          "name": "Pierwszy członek załogi",
+          "description": "Odblokowuje pierwszego członka załogi i możliwość jego zatrudnienia u Ticker."
+        },
+        {
+          "name": "Zdobywanie Kompetencji",
+          "description": "Pozwala przyznać 1 punkt kompetencji członkom załogi."
+        },
+        {
+          "name": "Drugi członek załogi",
+          "description": "Odblokowuje drugiego członka załogi."
+        },
+        {
+          "name": "Zdobywanie Kompetencji",
+          "description": "Pozwala przyznać 1 punkt kompetencji członkom załogi."
+        },
+        {
+          "name": "Trzeci członek załogi",
+          "description": "Odblokowuje trzeciego członka załogi."
+        },
+        {
+          "name": "Zdobywanie Kompetencji",
+          "description": "Pozwala przyznać 1 punkt kompetencji członkom załogi."
+        },
+        {
+          "name": "Przekwalifikowanie",
+          "description": "Umożliwia ponowne przyznanie przypisanych punktów kompetencji."
+        },
+        {
+          "name": "Nietypowi członkowie załogi",
+          "description": "Nawrócone Licze mogą pełnić rolę Obrońcy na pokładzie Twojego Railjacka."
+        },
+        {
+          "name": "Na Dyżurze",
+          "description": "Jeden z członków Twojej załogi może zostać wezwany na Dyżur i może zostać przyzwany do pomocy w dowolnej misji poza Railjackiem."
+        },
+        {
+          "name": "Elitarni członkowie załogi",
+          "description": "Umożliwia rekrutację silniejszych członków załogi u Ticker."
+        }
+      ]
+    }
+  ],
+  "ExportOther": [
+    {
+      "uniqueName": "/Lotus/StoreItems/Types/BoosterPacks/BaroTreasureBox",
+      "name": "Dar Pustki",
+      "description": "Zawiera dokładnie jeden, nieznany przedmiot. Tylko jedna na klienta.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/AffinityBooster30DayStoreItem",
+      "name": "30-dniowy Wzmacniacz Biegłości",
+      "description": "Wzmacnia Twoje mistrzostwo broni i sprzętu Tenno. Postęp w zwiększaniu biegłości Twojego uzbrojenia jest podwojony.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/AffinityBooster3DayStoreItem",
+      "name": "3-dniowy Wzmacniacz Biegłości",
+      "description": "Wzmacnia Twoje mistrzostwo broni i sprzętu Tenno. Postęp w zwiększaniu biegłości Twojego uzbrojenia jest podwojony.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/AffinityBooster7DayStoreItem",
+      "name": "7-dniowy Wzmacniacz Biegłości",
+      "description": "Wzmacnia Twoje mistrzostwo broni i sprzętu Tenno. Postęp w zwiększaniu biegłości Twojego uzbrojenia jest podwojony.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/AffinityBooster90DayStoreItem",
+      "name": "90-dniowy Wzmacniacz Biegłości",
+      "description": "Wzmacnia Twoje mistrzostwo broni i sprzętu Tenno. Postęp w zwiększaniu biegłości Twojego uzbrojenia jest podwojony.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/CreditBooster30DayStoreItem",
+      "name": "30-dniowy Wzmacniacz Kredytów",
+      "description": "Podwaja ilość zebranych kredytów ze skrzynek i za zakończenie misji.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/CreditBooster3DayStoreItem",
+      "name": "3-dniowy Wzmacniacz Kredytów",
+      "description": "Podwaja ilość zebranych kredytów ze skrzynek i za zakończenie misji.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/CreditBooster7DayStoreItem",
+      "name": "7-dniowy Wzmacniacz Kredytów",
+      "description": "Podwaja ilość zebranych kredytów ze skrzynek i za zakończenie misji.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/CreditBooster90DayStoreItem",
+      "name": "90-dniowy Wzmacniacz Kredytów",
+      "description": "Podwaja ilość zebranych kredytów ze skrzynek i za zakończenie misji.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ModDropChanceBooster30DayStoreItem",
+      "name": "30-dniowy Wzmacniacz Wypadania Modów",
+      "description": "Podwaja szansę upuszczenia przez wrogów Modów, Endo i Arkan.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ModDropChanceBooster3DayStoreItem",
+      "name": "3-dniowy Wzmacniacz Wypadania Modów",
+      "description": "Podwaja szansę upuszczenia przez wrogów Modów, Endo i Arkan.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ModDropChanceBooster7DayStoreItem",
+      "name": "7-dniowy Wzmacniacz Wypadania Modów",
+      "description": "Podwaja szansę upuszczenia przez wrogów Modów, Endo i Arkan.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ModDropChanceBooster90DayStoreItem",
+      "name": "90-dniowy Wzmacniacz Wypadania Modów",
+      "description": "Podwaja szansę upuszczenia przez wrogów Modów, Endo i Arkan.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceAmount30DayStoreItem",
+      "name": "30-dniowy Wzmacniacz Surowców",
+      "description": "Podwaja ilość surowców podnoszonych w czasie misji.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceAmount3DayStoreItem",
+      "name": "3-dniowy Wzmacniacz Surowców",
+      "description": "Podwaja ilość surowców podnoszonych w czasie misji.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceAmount7DayStoreItem",
+      "name": "7-dniowy Wzmacniacz Surowców",
+      "description": "Podwaja ilość surowców podnoszonych w czasie misji.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceAmount90DayStoreItem",
+      "name": "90-dniowy Wzmacniacz Surowców",
+      "description": "Podwaja ilość surowców podnoszonych w czasie misji.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceDropChance30DayStoreItem",
+      "name": "30-dniowy Wzmacniacz Wypadania Surowców",
+      "description": "Podwaja szansę wypadnięcia surowców.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceDropChance3DayStoreItem",
+      "name": "3-dniowy Wzmacniacz Wypadania Surowców",
+      "description": "Podwaja szansę wypadnięcia surowców.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Boosters/ResourceDropChance7DayStoreItem",
+      "name": "7-dniowy Wzmacniacz Wypadania Surowców",
+      "description": "Podwaja szansę wypadnięcia surowców.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatBaseColorPack",
+      "name": "Maskowanie genetyczne: Kavatów",
+      "description": "Zmień wzór oraz kolor futra Kavata, aby upodobnić go do Kavatów Adarza albo Smeeta."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackCeph",
+      "name": "Maskowanie genetyczne: Kavat Neura",
+      "description": "Dostosuj kolor futra Kavata przy pomocy tych wyizolowanych sekwencji DNA.",
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackContest",
+      "name": "Maskowanie genetyczne: Kavat Deaeira",
+      "description": "Ocalałe zapiski informują, że Kavat Deaeira był rozwijany i bardzo ceniony przez Orokin. [Zwycięzca Konkursu na Najlepszego Przyjaciela Tenno]"
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackDaybreak",
+      "name": "Maskowanie genetyczne: Kavat Brzasku",
+      "description": "Orokin zaprojektowali tę strukturę DNA, aby ich Kavaty ucieleśniały sezon odnowy."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackDuviri",
+      "name": "Maskowanie genetyczne: Kavat Kexat",
+      "description": "Sprowadź \"Opowieści z Duviri\" do Systemu Origin dzięki tej skórce Kexata dla Twojego Kavata."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackEntrati",
+      "name": "Maskowanie genetyczne: Kavat Kalimosa",
+      "description": "Nadaj swojemu Kavatowi wygląd lojalnej towarzyszki Albrechta Entratiego, Kalimosy."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackFeral",
+      "name": "Maskowanie genetyczne: Kavat Moonless",
+      "description": "Idealny na nocne polowanie wzór futra dla Kavata."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackHyekka",
+      "name": "Maskowanie genetyczne: Hyekka",
+      "description": "Przekształć Kavata w bezsierstną Hyekkę poprzez zmienienie struktury jego DNA."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackKrest",
+      "name": "Maskowanie genetyczne: Krest",
+      "description": "Spersonalizuj kolor futra Kavata używając tej oddzielnej sekwencji DNA."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackNesyr",
+      "name": "Maskowanie genetyczne: Nesyr",
+      "description": "Spersonalizuj kolor futra Kavata używając tej oddzielnej sekwencji DNA."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackNexus",
+      "name": "Maskowanie genetyczne: Nexus",
+      "description": "Dostosuj futro Kavata przy pomocy tej wyizolowanej sekwencji DNA."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackPrimeA",
+      "name": "Maskowanie genetyczne: Tibor Prime",
+      "description": "Uzupełnij Zbroję Tibor Twojego Kavata tym eleganckim maskowaniem genetycznym."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackSolstice",
+      "name": "Maskowanie genetyczne: Kavat Solstice",
+      "description": "Dostosuj kolor futra Kavata przy pomocy tych wyizolowanych sekwencji DNA."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KavatColorPackXmas",
+      "name": "Maskowanie genetyczne: Argyl",
+      "description": "Dostosuj kolor futra Kavata przy pomocy tych wyizolowanych sekwencji DNA."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowBaseColorPack",
+      "name": "Maskowanie genetyczne: Podstawowy",
+      "description": "Zapewnia podstawowe opcje maskowania genetycznego dla wrodzonej struktury DNA Kubrowa, pozwalając na personalizację koloru sierści."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackCandyCane",
+      "name": "Maskowanie genetyczne: Nistlebrush",
+      "description": "To narzędzie zapewnia dostęp do wszystkich informacji genetycznych potrzebnych do zamaskowania wrodzonej struktury DNA Kubrowa i zmienienia wzór jego futra."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackContest",
+      "name": "Maskowanie genetyczne: Kubrow Heino",
+      "description": "Wzór futra Kubrowa pasujący do jego przodka, Heino. Z linii genetycznej zachowanej przez mistrza Kubrowów Skvirla. [Zwycięzca Konkursu na Najlepszego Przyjaciela Tenno]"
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackDaybreak",
+      "name": "Maskowanie genetyczne: Kubrow Brzasku",
+      "description": "Orokin zaprojektowali tę strukturę DNA, aby ich Kubrowy ucieleśniały sezon odnowy."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackLiquid",
+      "name": "Maskowanie genetyczne: Arklut",
+      "description": "To narzędzie zapewnia dostęp do wszystkich informacji genetycznych potrzebnych do zamaskowania wrodzonej struktury DNA Kubrowa i zmienienia wzór jego futra."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackReindeer",
+      "name": "Maskowanie genetyczne: Nart-Deer",
+      "description": "To narzędzie zapewnia dostęp do wszystkich informacji genetycznych potrzebnych do zamaskowania wrodzonej struktury DNA Kubrowa i zmienienia wzór jego futra."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackSolstice",
+      "name": "Maskowanie genetyczne: Kubrow Solstice",
+      "description": "To narzędzie zapewnia dostęp do wszystkich informacji genetycznych potrzebnych do zamaskowania wrodzonej struktury DNA Kubrowa i zmiany wzoru jego futra."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackSpeckled",
+      "name": "Maskowanie genetyczne: Telmatian",
+      "description": "To narzędzie zapewnia dostęp do wszystkich informacji genetycznych potrzebnych do zamaskowania wrodzonej struktury DNA Kubrowa i dopasowania jego wyglądu do jego przodków, Kubrowów Telmatian."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackStriped",
+      "name": "Maskowanie genetyczne: Savenga",
+      "description": "To narzędzie zapewnia dostęp do wszystkich informacji genetycznych potrzebnych do zamaskowania wrodzonej struktury DNA Kubrowa i dopasowania jego wyglądu do jego przodków, Kubrowów Savenga."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowColorPackTiger",
+      "name": "Maskowanie genetyczne: Tigrol",
+      "description": "To narzędzie zapewnia dostęp do wszystkich informacji genetycznych potrzebnych do zamaskowania wrodzonej struktury DNA Kubrowa i dopasowania jego wyglądu do jego przodków, Kubrowów Tigrol."
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/KubrowKavatContestPack",
+      "name": "Pakiet Skórek: Kochany Towarzysz",
+      "description": "Wykorzystaj ten wzór futra dla Kubrowa i Kavata, by wyhodować prawdziwego czempiona. Zawiera wzór futra Kubrowa Heino i wzór futra Kavata Deaeira. [Zwycięzcy Konkursu Najlepszych Przyjaciół Tenno]"
+    },
+    {
+      "uniqueName": "/Lotus/Types/StoreItems/Packages/VTEosArmourBundle",
+      "name": "Zestaw Pancerza: Eos Prime",
+      "description": "Pełny zestaw ozdobnego pancerza dla modnego Tenno."
+    }
+  ]
+}

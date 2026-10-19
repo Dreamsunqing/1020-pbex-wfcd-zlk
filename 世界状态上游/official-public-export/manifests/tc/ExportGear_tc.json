@@ -1,0 +1,1264 @@
+{
+  "ExportGear": [
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Infested/InfestedFishBaitA",
+      "name": "Fass 殘餘物",
+      "description": "蛟龍 Fass 於魔裔禁地爆炸性死亡後收集到的一塊遺骸。在 Vome 週期於地面上用來吸引古鰧魶、在 Fass 週期於地面魚點用來吸引奧鯷鰵，以及在 Fass／Vome 週期於洞穴中用來吸引琉璃鯻。 \r\n\r\n地點：Vome 活躍時，在魔裔禁地（火衛二）",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Infested/BaseInfestedFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Infested/InfestedFishBaitB",
+      "name": "加工過的 Fass 殘餘物",
+      "description": "蛟龍 Fass 體內的物質，已除去毒素且變得可用。於魔裔禁地的地面魚點用來吸引液肺魩以及鞭棘鱇。液肺魩僅限 Vome 週期。\r\n\r\n可以從亡骸殿（火衛二）的女兒取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Infested/BaseInfestedFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Infested/OrokinFishBaitA",
+      "name": "Vome 殘餘物",
+      "description": "蛟龍 Vome 抽搐死亡時掉落的一塊生肉。在 Fass 和 Vome 週期於魔裔禁地的洞穴魚點用來吸引軟骨鰱以及杜羅鯣。\r\n\r\n地點：Fass 活躍時，在魔裔禁地（火衛二）",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Infested/BaseInfestedFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Infested/OrokinFishBaitB",
+      "name": "加工過的 Vome 殘餘物",
+      "description": "Vome 的蛟龍肉，已精製且隨時備用。在 Vome 週期於魔裔禁地的洞穴魚點用來吸引泌溢鯤。\r\n\r\n可以從亡骸殿（火衛二）的女兒取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Infested/BaseInfestedFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/CaveContaminantTierA",
+      "name": "污泥繞環者魚餌",
+      "description": "這種魚餌由芳香四環鑫組成，能夠吸引污泥繞環者，一種可於奧布山谷的洞穴魚點裡找到的伺服魚。\r\n\r\n可以從福爾圖娜（金星）的 Business 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/CaveContaminantTierB",
+      "name": "輪藻微粒魚餌",
+      "description": "這種魚餌由複雜的己苯酚合成，能夠吸引輪藻微粒，一種可於奧布山谷的洞穴魚點裡找到的伺服魚。\r\n\r\n可以從福爾圖娜（金星）的 Business 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/CaveContaminantTierC",
+      "name": "海龍魚餌",
+      "description": "這種魚餌由特製的A－二硫科斯－A 化合物合成，能夠吸引海龍，一種可於奧布山谷的洞穴魚點裡找到的傳奇稀有伺服魚。\r\n\r\n可以從福爾圖娜（金星）的 Business 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/GenericContaminant",
+      "name": "廣譜魚餌",
+      "description": "一種單純的短鏈聚合物及污染物的混合。在所有條件下都能夠輕易地被奧布山谷裡的基本伺服魚偵測得到，但是被更特殊型的伺服魚所忽略。適用於液集盒（可於湖泊裡找到）、修補機和磚瓦匠（可於池塘裡找到）。\r\n\r\n可以從福爾圖娜（金星）的 Business 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/LakeContaminantTierA",
+      "name": "磷蝦殺手魚餌",
+      "description": "這種魚餌由甲烷活性鈣-1合成，能夠吸引磷蝦殺手，一種在溫暖週期於奧布山谷湖泊裡找到的伺服魚。\r\n\r\n可以從福爾圖娜（金星）的 Business 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/LakeContaminantTierB",
+      "name": "長型環繞者魚餌",
+      "description": "這種魚餌由鈹苯合成，能夠吸引長型環繞者，一種在溫暖週期於奧布山谷湖泊魚點裡找到的伺服魚。\r\n\r\n可以從福爾圖娜（金星）的 Business 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/PondContaminantTierA",
+      "name": "窄譜魚餌",
+      "description": "這種內氯／戴金屬混合物能夠吸引續播機和眼-眼，一種在奧布山谷池塘裡找到的伺服魚。眼-眼會在溫暖週期出現，而續播機則會在涼爽週期於魚點裡現在。\r\n\r\n可以從福爾圖娜（金星）的 Business 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/Venus/PondContaminantTierB",
+      "name": "多目鰻魚餌",
+      "description": "這種魚餌由長鏈的 LS-74 化合物合成，能夠吸引多目鰻，一種在寒冷週期於奧布山谷池塘魚點裡找到的伺服魚。\r\n\r\n可以從福爾圖娜（金星）的 Business 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/Venus/BaseContaminant"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/BothRareFishBaitAItem",
+      "name": "陰暗鰩魚餌",
+      "description": "這種魚餌是由已知能吸引陰暗鰩的材料所組成。這種魚無論日夜皆只能在夜靈平野的海洋魚點中尋獲。\r\n\r\n可以從希圖斯（地球）的漁夫 Hai-Luk 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/BothUncommonFishBaitItem",
+      "name": "黃昏魚餌",
+      "description": "這種魚餌可以吸引在夜靈平野白天或夜間活動的掠食性魚類。\r\n\r\n可以從希圖斯（地球）的漁夫 Hai-Luk 取得。能用來吸引海洋中的鯊客和卡其那。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/GenericFishBait",
+      "name": "胡椒魚餌",
+      "description": "這種魚餌可以吸引在夜靈平野白天裡活動的魚類。\r\n\r\n可以從希圖斯（地球）的漁夫 Hai-Luk 取得。能用來吸引湖泊的喉魚和查克鰻；池塘裡的庫特-庫特、約格溫和摩圖斯肺魚；以及海洋的古泊拉和塔洛。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/NightLegendaryFishBaitItem",
+      "name": "蓋拉佩德魚餌",
+      "description": "這種魚餌是由已知能吸引蓋拉佩德的奇特材料所組成。蓋拉佩德相當難以捕捉，而且是只能在夜間的夜靈平野海洋魚點中尋獲的魚種。\r\n\r\n可以從希圖斯（地球）的漁夫 Hai-Luk 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/NightRareFishBaitAItem",
+      "name": "諾格魚餌",
+      "description": "這種魚餌是由已知能吸引諾格的材料所組成。這種魚只能在夜間的夜靈平野湖泊魚點中尋獲。\r\n\r\n可以從希圖斯（地球）的漁夫 Hai-Luk 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Game/FishBait/NightRareFishBaitBItem",
+      "name": "克蘇爾魚餌",
+      "description": "這種魚餌是由已知能吸引克蘇爾的材料所組成。這種魚只能在夜間的夜靈平野池塘魚點中尋獲。\r\n\r\n可以從希圖斯（地球）的漁夫 Hai-Luk 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/FishBait/BaseFishBait"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/MummyQuest/MummyArtifact01GearItem",
+      "name": "神聖容器",
+      "description": "來自 Inaros 古墓中的奇怪文物。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Weapon/GearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedCritterLureGearItem",
+      "name": "擬狐獸迴聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的擬狐獸。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedCritterRarityBoost",
+      "name": "擬狐獸費洛蒙腺體",
+      "description": "在使用迴聲誘餌前部署可以提升吸引一種擬狐獸稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedMaggotLureGearItem",
+      "name": "土窖蟲迴聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的土窖蟲。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedMaggotRarityBoost",
+      "name": "土窖蟲費洛蒙腺體",
+      "description": "在使用迴聲誘餌前部署可以提升吸引一種土窖蟲稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedMergooLureGearItem",
+      "name": "太古鳥回聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的太古鳥。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedMergooRarityBoost",
+      "name": "太古鳥費洛蒙腺體",
+      "description": "在使用回聲誘餌前部署可以提昇吸引到稀有太古鳥亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedNexiferaLureGearItem",
+      "name": "隱沒獸迴聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的隱沒獸。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedNexiferaRarityBoost",
+      "name": "隱沒獸費洛蒙腺體",
+      "description": "在使用迴聲誘餌前部署可以提升吸引到隱沒獸稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedPredatorLureGearItem",
+      "name": "孤生獸迴聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的孤生獸。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedPredatorRarityBoost",
+      "name": "孤生獸費洛蒙腺體",
+      "description": "在使用迴聲誘餌前部署可以提升吸引一種孤生獸稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedZongroLureGearItem",
+      "name": "覓液蟲迴聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的覓液蟲。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/Deimos/InfestedZongroRarityBoost",
+      "name": "覓液蟲費洛蒙腺體",
+      "description": "在使用迴聲誘餌前部署可以提升吸引一種覓液蟲較稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/CondrocRarityBoost",
+      "name": "禿鷹費洛蒙合成器",
+      "description": "在使用回聲誘餌前部署可以提升吸引一種禿鷹稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/KuakaRarityBoost",
+      "name": "庫阿卡費洛蒙合成器",
+      "description": "在使用回聲誘餌前部署可以提升吸引一種庫阿卡稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/LegendaryKubrowRarityBoost",
+      "name": "庫狛頓費洛蒙合成器",
+      "description": "在使用迴聲誘餌前部署可以提升吸引一種庫狛頓稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/MergooRarityBoost",
+      "name": "秋沙鳥費洛蒙合成器",
+      "description": "在使用回聲誘餌前部署可以提升吸引一種秋沙鳥稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/OrokinKubrowRarityBoost",
+      "name": "熾託法費洛蒙合成器",
+      "description": "在使用迴聲誘餌前部署可以提升吸引一種熾託法稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowArmadilloRarityBoost",
+      "name": "波雷羅拉費洛蒙合成器",
+      "description": "在使用迴聲誘餌前部署可以提升吸引一種波雷羅拉稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowBirdRarityBoost",
+      "name": "梭歌費洛蒙合成器",
+      "description": "在使用迴聲誘餌前部署可以提升吸引一種梭歌稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowCritterRarityBoost",
+      "name": "弗鳴克費洛蒙合成器",
+      "description": "在使用迴聲誘餌前部署可以提升吸引一種弗鳴克稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowPredatorRarityBoost",
+      "name": "惑瓦廝克費洛蒙合成器",
+      "description": "在使用迴聲誘餌前部署可以提升吸引一種惑瓦廝克稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/SnowRodentRarityBoost",
+      "name": "泡博費洛蒙合成器",
+      "description": "在使用迴聲誘餌前部署可以提升吸引一種泡博稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/VampireKavatRarityBoost",
+      "name": "噬血型庫娃費洛蒙合成器",
+      "description": "在使用迴聲誘餌前部署可以提升吸引一種噬血型庫娃稀有亞種的機率。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/RarityBoosts/AnimalRarityBoost"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/BirdOfPreyLureGearItem",
+      "name": "禿鷹回聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的禿鷹。禿鷹棲息在夜靈平野。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/ForestRodentLureGearItem",
+      "name": "庫阿卡回聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的庫阿卡。庫阿卡棲息在夜靈平野。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/LegendaryKubrowLureGearItem",
+      "name": "庫狛頓迴聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的庫狛頓。通常可以在奧布山谷的隕石坑周圍發現庫狛頓。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/OrokinKubrowLureGearItem",
+      "name": "熾託法迴聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的熾託法。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/OstronSeaBirdLureGearItem",
+      "name": "秋沙鳥回聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的秋沙鳥。棲息在夜靈平野。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowArmadilloLureGearItem",
+      "name": "波雷羅拉迴聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的波雷羅。通常可以在奧布山谷的有山的地方周圍發現波雷羅拉。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowBirdLureGearItem",
+      "name": "梭歌迴聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的梭歌。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowCritterLureGearItem",
+      "name": "弗鳴克迴聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的弗鳴克。通常可以在奧布山谷的湖泊周圍發現弗鳴克。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowPredatorLureGearItem",
+      "name": "惑瓦廝克迴聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的惑瓦廝克。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/SnowRodentLureGearItem",
+      "name": "泡博迴聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的泡博。通常可以在奧布山谷有蘑菇的地域周圍發現泡博。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/TranqRifleGearItem",
+      "name": "麻醉步槍",
+      "description": "以安全重新安置為目的鎮靜動物。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/BaseHuntingGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/UpgradedAnimalLureGearItem",
+      "name": "迴聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的野生動物。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Conservation/VampireKavatLureGearItem",
+      "name": "噬血型庫娃回聲誘餌",
+      "description": "以擬真的動物叫聲來誘惑、吸引附近的噬血型庫娃。噬血型庫娃棲息在夜靈平野。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Conservation/AnimalLureGearItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Eidolon/LandscapeTrapLightGear",
+      "name": "引誘陷阱",
+      "description": "引誘陷阱發出的超聲波頻率可以吸引任何具有生命的目標。當目標進入後，它們將被牽制在單向光範圍內，方便收集。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseLandscapeTrapGear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FishingBoosts/AnglerVision",
+      "name": "光亮染料",
+      "description": "用一種化合物將水染色，游過的魚會沾上，從岸上能更輕易地發現牠們。\r\n\r\n可以從希圖斯（地球）的漁夫 Hai-Luk 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/FishingBoosts/BaseDyeConsumable"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FishingBoosts/SoftTouch",
+      "name": "芳香費洛蒙",
+      "description": "一種能讓附近魚群放鬆戒心的化合物。\r\n\r\n可以從希圖斯（地球）的漁夫 Hai-Luk 取得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/FishingBoosts/BaseDyeConsumable"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/ArmorBuffSpeedDebuff",
+      "name": "鈣化刺激劑",
+      "description": "硬化皮膚，對傷害產生抵抗，但限制移動力",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/NpcBuff"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/CloakingBuff",
+      "name": "折光刺激劑",
+      "description": "將目標包覆在一層折射光線的薄膜中，使移動變得無法被偵測。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/NpcBuff"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/ReviveBuff",
+      "name": "凝血刺激劑",
+      "description": "復活一名倒地流血的目標，並為範圍內的友方提供一次額外的復活。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/NpcBuff"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/SpeedBuffArmorDebuff",
+      "name": "腎上腺刺激劑",
+      "description": "提升腎上腺素水平以加快移動，但對傷害更加敏感。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/NpcBuffs/NpcBuff"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Synthetics/FlareBlue",
+      "name": "青色磷光",
+      "description": "發射一隻亮藍色的信號彈，有效期內大幅增加經驗共享範圍。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Synthetics/FlareDemo",
+      "name": "赤色磷光",
+      "description": "發射一隻亮紅色的信號彈，有效期內大幅增加經驗共享範圍。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Synthetics/FlareRed",
+      "name": "赤色磷光",
+      "description": "發射一隻亮紅色的信號彈，有效期內大幅增加經驗共享範圍。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/DayCommonAntitoxin",
+      "name": "綠寶石解毒劑",
+      "description": "這是一個輕度有效的解毒劑。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/DayUnCommonAntitoxin",
+      "name": "黃水晶解毒劑",
+      "description": "這是一個比較有效的解毒劑。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/NightCommonAntitoxin",
+      "name": "紫水晶解毒劑",
+      "description": "這是一個輕度有效的解毒劑。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/NightUnCommonAntitoxin",
+      "name": "黃玉解毒劑",
+      "description": "這是一個比較有效的解毒劑。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/RareAntitoxin",
+      "name": "天青石解毒劑",
+      "description": "這是一個非常有效的解毒劑。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Toxins/SoloRareAntitoxin",
+      "name": "辰砂解毒劑",
+      "description": "這是一個非常有效的解毒劑。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Toxins/AntitoxinBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AlphaCorruptor",
+      "name": "Alpha 污染物",
+      "description": "這污染物單獨時屬於惰性，當與 BETA 污染物混合時會產生極高的效果，適當的混合會破壞巨人戰艦反應爐的平衡，比 STABLE 污染物來的迅速，這個不穩定的物品不能同時間與 BETA 污染物一起攜帶，推薦給 Tenno 合作團隊。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Corruptor"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AncientHealerBall",
+      "name": "遠古保護者魅影",
+      "description": "設置一個為你戰鬥的遠古保護卓越者。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AssassinBait",
+      "name": "Stalker 信標",
+      "description": "吸引 Stalker 現身的物品。為一次性道具，僅能使用在刺客一般會出沒的場景。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AssassinBaitB",
+      "name": "Zanuka 獵犬信標",
+      "description": "吸引 Zanuka 獵犬現身的物品。為一次性道具，僅能使用在刺客一般會出沒的場景。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AssassinBaitC",
+      "name": "Grustrag 三霸信標",
+      "description": "吸引 GRUSTRAG 三霸現身的物品。為一次性道具，僅能使用在刺客一般會出沒的場景。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/AssassinBaitD",
+      "name": "惡狼信標",
+      "description": "引出惡狼現身，僅能使用在刺客一般會出沒的場景的一次性道具。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/BaroFireWorksCrate",
+      "name": "Ki'Teer 煙火",
+      "description": "宛如誇張交響樂般的顏色。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear",
+      "name": "一個魚叉",
+      "description": "這把魚叉有著帶倒刺的叉齒，便於抓住表皮光滑的魚類。\r\n\r\n可以從希圖斯（地球）的漁夫 Hai-Luk 取得。這個魚叉對以下夜靈平野（地球）的魚最有效：\r\n查克鰻\r\n克蘇爾\r\n古泊拉\r\n陰暗鰩\r\n鯊客\r\n約格溫",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/BetaCorruptor",
+      "name": "Beta 污染物",
+      "description": "這污染物單獨時屬於惰性，當與 ALPHA 污染物混合時會產生極高的效果，適當的混合會破壞巨人戰艦反應爐的平衡，比 STABLE 污染物來的迅速，這個不穩定的物品不能同時間與 ALPHA 污染物一起攜帶，推薦給 Tenno 合作團隊。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Corruptor"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/BronzeSpectre",
+      "name": "幻霧魅影",
+      "description": "Warframe 的複製人，可以部署來協助 Tenno 執行任務。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpectreBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CameraConsumable",
+      "name": "遠程視角鏡頭",
+      "description": "設置一個短暫存在的遙控鏡頭，取代 Warframe 的視角",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/ChargerBall",
+      "name": "疾衝者魅影",
+      "description": "設置一個為你戰鬥的疾衝卓越者魅影。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/ClemBall",
+      "name": "複製人 Clem",
+      "description": "部署一名 Clem 複製人為你作戰。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CorruptedBombardBall",
+      "name": "墮落轟擊者魅影",
+      "description": "部置一名墮落轟擊者單位為你戰鬥。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CorruptedHeavyGunnerBall",
+      "name": "墮落重型機槍兵魅影",
+      "description": "部署一名墮落重型機槍兵單位為你戰鬥。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CorruptedLancerBall",
+      "name": "墮落槍兵魅影",
+      "description": "設置一個為你戰鬥的墮落槍兵卓越者魅影。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CreditChipLarge",
+      "name": "熱心的虛空捐獻",
+      "description": "獻給虛空的一大筆 100,000 元現金。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/CreditChipSmall"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CreditChipMedium",
+      "name": "忠誠的虛空捐獻",
+      "description": "獻給虛空的 10,000 元現金。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/CreditChipSmall"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CreditChipSmall",
+      "name": "謙卑的虛空捐獻",
+      "description": "獻給虛空的 1,000 元現金。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/CrewmateBall",
+      "name": "待命船員",
+      "description": "召喚一名指定的船員前來支援非銳捷號任務。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FireWorksCrate",
+      "name": "壓軸好戲",
+      "description": "想要以更壯觀的煙火表演來展現你的愛國精神嗎? 以這個僅限一次使用的道具來慶祝吧。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FireWorksSingle",
+      "name": "光芒四射",
+      "description": "用煙火來歡慶假日！以這個僅限一次使用的道具來點亮整片天空吧。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/FomorianNegator",
+      "name": "巨人戰艦干擾器",
+      "description": "啟動時它會破壞巨人戰艦核心的奧米伽能量力場，使其變得脆弱易損。並為暴露在奧米伽輻射中的 Tenno 提供庇護。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/GlyphConsumable",
+      "name": "浮印光譜",
+      "description": "發射一道電磁光譜來展示你所選取的浮印。同一時間只能部署一個，並且一旦使用將消耗道具。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/GlyphConsumableNoCharges",
+      "name": "浮印光譜",
+      "description": "發射一道電磁光譜來展示你所選取的浮印。同一時間只能部署一個，並且可以無限次地使用。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/GoldSpectre",
+      "name": "原力魅影",
+      "description": "Warframe 的複製人，可以部署來協助 Tenno 執行任務。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpectreBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/HunterTool",
+      "name": "動能吸收陷阱",
+      "description": "用以吸引或減緩結合目標移動速度的特製陷阱。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedBaitBall",
+      "name": "費洛髂莢囊",
+      "description": "製造 50 個費洛髂莢囊，能釋出強烈的費洛蒙吸引 Infested。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedFishingSpearA",
+      "name": "狩獵魚叉",
+      "description": "用這支靈巧的魚叉探測深度，難以被 Infested 和 Infested／Orokin 的混種魚所偵測到。由於受感染的性質，這是少數已知能射穿外分泌液的工具之一。\r\n\r\n可以從亡骸殿（火衛二）的女兒取得。這個魚叉對魔裔禁地（火衛二）的魚最有效。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedFishingSpearB",
+      "name": "惠比壽魚叉",
+      "description": "用這支靈巧的魚叉探測深度，難以被 Infested 和 Infested／Orokin 的混種魚所偵測到。由於受感染的性質，這是少數已知能射穿外分泌液的工具之一。\r\n\r\n可以從亡骸殿（火衛二）的女兒取得。這個魚叉對魔裔禁地（火衛二）的魚最有效。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/InfestedFishingSpearA"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedIrradiatedBaitBall",
+      "name": "強效費洛髂莢囊",
+      "description": "製造 50 個強效費洛髂莢囊，能釋出強烈的費洛蒙吸引 Infested。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/InfestedSyringe",
+      "name": "抗血清注射器",
+      "description": "將抗血清注入霧化器或是使用者本身，可防止護甲被侵蝕。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/LibraryScanner",
+      "name": "結合掃描器",
+      "description": "結合目標的基因資料並將其上傳至聖殿。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MacheteWomanBall",
+      "name": "毒蠍魅影",
+      "description": "設置一個為你戰鬥的毒蠍卓越者魅影。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MapMarker",
+      "name": "位置圖針",
+      "description": "一種使用在世界地圖中的持久性標記點。協調你的隊伍並追踨一些重要的位置！",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MiningLaser",
+      "name": "諾薩姆切割器",
+      "description": "從石頭中切割礦物和寶石的標準工具。\r\n\r\n遠離城鎮中心有更高機率開採稀有礦物。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MiningLaserB",
+      "name": "聚焦諾薩姆切割器",
+      "description": "另一款更加精準的諾薩姆切割器。\r\n\r\n遠離城鎮中心有更高機率開採稀有礦物。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/MiningLaser"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MiningLaserC",
+      "name": "高級諾薩姆切割器",
+      "description": "經過控制理論的升級，這把工具能夠定位附近的寶石和礦脈並有機率在任何開放景觀裡獲取稀有寶石。\r\n\r\n遠離城鎮中心有更高機率開採稀有礦物。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/MiningLaser"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MiningLaserSolaris",
+      "name": "索拉里斯採礦雷射",
+      "description": "快速點火、高強度的採礦工具，能夠手術般精確地採集最稀有的礦物。\r\n\r\n可在任何開放景觀裡用來獲取稀有寶石。遠離城鎮中心有更高機率開採稀有礦物。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/MiningLaser"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/MoaBall",
+      "name": "恐鳥魅影",
+      "description": "設置一個為你戰鬥的恐鳥卓越者魅影。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/NemesisBait",
+      "name": "鎮魂戰帖",
+      "description": "立即挑起你與赤毒巫妖或 Parvos 的姊妹之間的衝突，這是一種不容忽視的侮辱。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/PlatinumSpectre",
+      "name": "無極魅影",
+      "description": "Warframe 的複製人，可以部署來協助 Tenno 執行任務。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpectreBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RazorbackCipher",
+      "name": "利刃豺狼破解器",
+      "description": "用來繞開保護利刃豺狼收容室的保全系統。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RecallToRailjack",
+      "name": "召回銳捷號",
+      "description": "",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RepairTool",
+      "name": "奧寧",
+      "description": "奧寧是一個多功能銳捷號工具用來撲滅火勢、解除觸電危機，以及修復船身的破裂。在銳捷號外面使用來立即返回船艦上。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RobofishSpearB",
+      "name": "休克波魚叉",
+      "description": "這是一種能捕獲伺服魚，同時避免造成損傷的工具。 如命中時機精準，將釋放出一道可癱瘓伺服魚的電磁脈衝。\r\n\r\n可以從福爾圖娜（金星）的 Business 取得。這個魚叉對奧布山谷（金星）的伺服魚最有效。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RobofishSpearC",
+      "name": "史鈍那魚叉",
+      "description": "向外放射出一道完美的電磁脈衝，癱瘓附近所有的伺服魚。\r\n\r\n可以從福爾圖娜（金星）的 Business 取得。這個魚叉對奧布山谷（金星）的伺服魚最有效。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/RollerBall",
+      "name": "滾子魅影",
+      "description": "設置一個為你戰鬥的滾子卓越者魅影。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/Scanner",
+      "name": "資料庫掃描器",
+      "description": "掃描感興趣的目標到資料庫，用於日後分析。(25個裝)",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/ShieldDroneBall",
+      "name": "護盾魚鷹魅影",
+      "description": "設置一個為你戰鬥的護盾魚鷹卓越者魅影。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SilverSpectre",
+      "name": "相位魅影",
+      "description": "Warframe 的複製人，可以部署來協助 Tenno 執行任務。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpectreBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SkateBall",
+      "name": "沙漠鰩魚魅影",
+      "description": "設置一個為你戰鬥的沙漠鰩魚魅影。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpear",
+      "name": "蘭佐魚叉",
+      "description": "這把魚叉有著帶倒刺的叉齒，便於抓住表皮光滑的魚類。\r\n\r\n可以從希圖斯（地球）的漁夫 Hai-Luk 取得。這個魚叉對以下夜靈平野（地球）的魚最有效：\r\n查克鰻\r\n克蘇爾\r\n古泊拉\r\n陰暗鰩\r\n鯊客\r\n約格溫",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/BaseSpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpearB",
+      "name": "圖洛克魚叉",
+      "description": "這把魚叉有著細長的刃，可以穿透護甲板和外殼。\r\n\r\n可以從希圖斯（地球）的漁夫 Hai-Luk 取得。這個魚叉對以下夜靈平野（地球）的魚最有效：\r\n塔洛",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpearC",
+      "name": "佩拉姆魚叉",
+      "description": "這把魚叉有著多道刀刃，可以穿透有鱗魚的外皮。\r\n\r\n可以從希圖斯（地球）的漁夫 Hai-Luk 取得。這個魚叉對以下夜靈平野（地球）的魚最有效：\r\n蓋拉佩德\r\n庫特-庫特\r\n喉魚\r\n摩圖斯肺魚\r\n諾格",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/SpearFishingSpear"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/StableCorruptor",
+      "name": "Stable 污染物",
+      "description": "對巨人戰艦反應爐注射這個污染物會造成燃料失調，失調的精密反應爐最後會發生聚爆，並摧毀船隻，緩慢但是有效，推薦給獨行 Tenno。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/Consumable/Corruptor"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/StalkerBall",
+      "name": "Stalker 魅影",
+      "description": "部署一名 Stalker 分身為你作戰。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/SurgeEximusBall",
+      "name": "電湧卓越者魅影",
+      "description": "部署一名電湧卓越者分身為你作戰。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/SummonNpcItem"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Consumable/ValentinesArrowBundle",
+      "name": "箭矢 愛神外觀",
+      "description": "藉由可愛的愛神之箭外觀來對你的敵人訴說他們在你心目中的地位。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonFeyarchOberon",
+      "name": "日昇藥劑",
+      "description": "製作一種由稀有植物合成的有機混合物。效果未知。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonKnaveLoki",
+      "name": "夜幕藥劑",
+      "description": "製作一種由稀有植物合成的有機混合物。效果未知。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonOrphidSaryn",
+      "name": "暮光藥劑",
+      "description": "製作一種由稀有植物合成的有機混合物。效果未知。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/TitaniaQuest/SpecterSummonBase"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Upgraded/DamageDebuffKey",
+      "name": "熄滅龍鑰",
+      "description": "裝備鑰匙時，傷害大幅降低。\r\n\r\n藍圖可透過 Orokin 實驗室（氏族道場）獲得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Upgraded/CorruptedKey"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Upgraded/HealthDebuffKey",
+      "name": "殘血龍鑰",
+      "description": "裝備鑰匙時，生命大幅降低。\r\n\r\n藍圖可透過 Orokin 實驗室（氏族道場）獲得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Upgraded/CorruptedKey"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Upgraded/ShieldDebuffKey",
+      "name": "腐朽龍鑰",
+      "description": "裝備該鑰匙時，護盾大幅降低。全滿護盾閘的持續時間上限為 0.33 秒。\r\n\r\n藍圖可透過 Orokin 實驗室（氏族道場）獲得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Upgraded/CorruptedKey"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Upgraded/SpeedDebuffKey",
+      "name": "蹣跚龍鑰",
+      "description": "裝備鑰匙時，速度大幅降低。\r\n\r\n藍圖可透過 Orokin 實驗室（氏族道場）獲得。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/Upgraded/CorruptedKey"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/CatbrowVampireDisinfect",
+      "name": "噬血治癒劑",
+      "description": "Ostron 人將這種對付噬血病毒的傳統釀制療法稱之為「lisau heisah」，一旦使用後可治癒小範圍內任何受感染的庫娃。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/Cipher",
+      "name": "破解器",
+      "description": "自動破解被鎖定控制面板的一次性道具。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ClanTeamAmmoTotem",
+      "name": "團隊彈藥補給（中型）",
+      "description": "每 15 秒恢復 2 倍拾取的主要和次要武器彈藥，持續 60 秒。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ClanTeamEnergyTotem",
+      "name": "團隊能量補給（中型）",
+      "description": "恢復全團隊的能量值。每次脈衝恢復 50 點能量。脈衝間隔 5 秒，共計 20 秒。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ClanTeamHealTotem",
+      "name": "團隊生命補給（中型）",
+      "description": "恢復全團隊的生命值。每次脈衝恢復 100 點生命。脈衝間隔 5 秒，共計 20 秒。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ClanTeamShieldTotem",
+      "name": "團隊護盾補給（中型）",
+      "description": "恢復全團隊的護盾值。每次脈衝恢復 100 點護盾。脈衝間隔 7.5 秒，共計 30 秒。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ErsatzSummon",
+      "name": "召喚凱駿",
+      "description": "在自由探索任務中召唤並立即騎乘凱駿。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/HeavyWeaponSummon",
+      "name": "Archwing 槍械設置器",
+      "description": "使用此裝備道具來在任何大氣環境下使用選定的 Archwing 槍械。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/HoverboardSummon",
+      "name": "K 式懸浮板啟動器",
+      "description": "可以在自由探索任務中召喚一個 K 式懸浮板使用。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetAirSupport",
+      "name": "空中支援呼叫器",
+      "description": "使用空中支援時會消耗使用次數。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetAmmoDrop",
+      "name": "團隊彈藥補給（中型）",
+      "description": "每 15 秒恢復 2 倍拾取的主要和次要武器彈藥，持續 60 秒。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetAutoHack",
+      "name": "覆寫",
+      "description": "Ordis 駭入敵方系統，暫時中斷敵人的保全系統協定。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetBarrage",
+      "name": "地毯式轟炸",
+      "description": "Ordis 會從你的位置直線到信標的距離內投下炸彈。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetBlackHole",
+      "name": "旋渦",
+      "description": "創造一個大規模旋轉的能量，猛烈牽引附近敵人，粉碎他們的原子成微小物質。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetGoldenInstinct",
+      "name": "Orokin 之眼",
+      "description": "Ordis 掃描該區域的稀有物品。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetKahl",
+      "name": "Kahl 信標",
+      "description": "呼叫 Kahl 和他的隨從兄弟們在有限的時間內前來協助你。再次使用將治癒 Kahl 的小隊並新增多一名兄弟。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetLaserTurret",
+      "name": "飛彈砲台",
+      "description": "發射追蹤導彈",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetMedStation",
+      "name": "治癒之塔",
+      "description": "Ordis 配送一座治療塔，可恢復附近友方的生命值。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetShield",
+      "name": "冰雪護罩",
+      "description": "凍結周圍所有水氣與水分，製造出能用來防禦的球形冰罩；冰罩生成時有短暫的無敵時間，此時敵人對冰罩造成的傷害能強化冰罩的耐久度；在相同位置重複施放冰罩可強化其耐久度。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetStun",
+      "name": "夢迴者",
+      "description": "Nora 以平靜的音調將敵人送至夢境。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LisetTurret",
+      "name": "自動炮臺",
+      "description": "Ordis 會投放一門全自動炮臺來打擊附近視野內的敵人。",
+      "codexSecret": true,
+      "parentName": "/Lotus/Types/Restoratives/LisetBaseAirSupportPower"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/LoadoutTechSummon",
+      "name": "召喚亡骸機甲",
+      "description": "在戰場上召喚一架亡骸機甲。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Restoratives/BaseTechSummon"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/MotorcycleSummon",
+      "name": "原拓密重機召喚器",
+      "description": "召喚一台原拓密重機供《1999》及自由探索任務中使用。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/OpenArchwingSummon",
+      "name": "Archwing 啟動器",
+      "description": "在自由探索任務中召唤一架 Archwing。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ScenarioBeacon",
+      "name": "行動連接裝置",
+      "description": "在行動連接任務中用於管理協調及資源分配的一裝置。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfHealLarge",
+      "name": "生命補給（大型）",
+      "description": "立即將你的生命恢復至全滿",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfHealSmall",
+      "name": "生命補給（小型）",
+      "description": "立即恢復50生命",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfOmniAmmo",
+      "name": "綜合彈藥箱",
+      "description": "完全補充所有彈藥。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfPistolAmmo",
+      "name": "手槍彈藥箱",
+      "description": "補充全部手槍彈藥。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfRifleAmmo",
+      "name": "步槍彈藥箱",
+      "description": "補充全部步槍彈藥。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfShieldHeal",
+      "name": "護盾補給（小型）",
+      "description": "立即恢復 50 護盾",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfShotgunAmmo",
+      "name": "霰彈槍彈藥箱",
+      "description": "補充全部霰彈槍彈藥。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SelfSniperAmmo",
+      "name": "狙擊槍彈藥箱",
+      "description": "補充全部狙擊槍彈藥。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SyndicateTeamAmmoTotem",
+      "name": "團隊彈藥補給（大型）",
+      "description": "每 15 秒恢復 3 倍拾取的主要和次要武器彈藥，持續 60 秒。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SyndicateTeamEnergyTotem",
+      "name": "團隊能量補給（大型）",
+      "description": "恢復全團隊的能量。每次脈衝恢復 100 點能量。脈衝間隔 7.5 秒，共計 30 秒。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SyndicateTeamHealTotem",
+      "name": "團隊生命補給（大型）",
+      "description": "恢復全團隊的生命值。每次脈衝恢復 300 點生命。脈衝間隔 7.5 秒，共計 30 秒。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/SyndicateTeamShieldTotem",
+      "name": "團隊護盾補給（大型）",
+      "description": "恢復全團隊的護盾值。每次脈衝恢復 300 點護盾。脈衝間隔 7.5 秒，共計 30 秒。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamAmmoTotem",
+      "name": "團隊彈藥補給（小型）",
+      "description": "每 15 秒恢復 1 倍拾取的主要和次要武器彈藥，持續 60 秒。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamEnergyTotem",
+      "name": "團隊能量補給（小型）",
+      "description": "恢復全團隊的能量值。每次脈衝恢復 25 點能量。脈衝間隔 7.5 秒，共計 30 秒。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamHeal",
+      "name": "團隊生命補給（小型）",
+      "description": "恢復全團隊的生命值。每次脈衝恢復 30 點生命。脈衝間隔 7.5 秒，共計 30 秒。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamHealTotem",
+      "name": "團隊生命補給（小型）",
+      "description": "恢復全團隊的生命值。每次脈衝恢復 30 點生命。脈衝間隔 7.5 秒，共計 30 秒。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/TeamShieldTotem",
+      "name": "團隊護盾補給（小型）",
+      "description": "恢復全團隊的護盾值。每次脈衝恢復 35 點護盾。脈衝間隔 7.5 秒，共計 30 秒。",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    },
+    {
+      "uniqueName": "/Lotus/Types/Restoratives/ThermianRPGSummon",
+      "name": "熱美氨火箭彈",
+      "description": "部署熱美氨火箭彈",
+      "codexSecret": false,
+      "parentName": "/Lotus/Types/Game/Restorative"
+    }
+  ]
+}

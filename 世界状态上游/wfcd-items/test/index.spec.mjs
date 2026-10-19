@@ -1,0 +1,707 @@
+import assert from 'node:assert';
+import { join, resolve } from 'node:path';
+import { createRequire } from 'module';
+import { existsSync, statSync } from 'node:fs';
+import sharp from 'sharp';
+
+import gc from 'expose-gc/function.js';
+import { expect } from 'chai';
+
+import dedupe from '../build/dedupe';
+import { beforeEach } from 'mocha';
+
+const require = createRequire(import.meta.url);
+const masterableCategories = require('../config/masterableCategories.json');
+
+let itemPath;
+let Items;
+let data;
+const inits = [];
+
+/**
+ * Use for fresh imports
+ * @param {string} path to import
+ * @param {string?} discriminator extra query param to force cache bust
+ * @returns {Promise<module>}
+ */
+const importFresh = async (path, discriminator) => {
+  return (await import(`${path}?discriminator=${discriminator}`)).default;
+};
+const wrapConstr = async (opts) => {
+  const before = Date.now();
+  const items = new Items(opts);
+  const after = Date.now();
+  inits.push(after - before);
+  return items;
+};
+
+const namedExclusions = ['Excalibur Prime', 'Helminth', 'Orion & Sirius'];
+
+const setupItems = async () => {
+  Items = await importFresh(itemPath);
+  data = Object.freeze({
+    items: await wrapConstr(),
+    warframes: await wrapConstr({ category: ['Warframes', 'Archwing'], i18n: 'en', i18nOnObject: true }),
+    weapons: await wrapConstr({
+      category: ['Primary', 'Secondary', 'Melee', 'Arch-Melee', 'Arch-Gun'],
+      i18n: 'en',
+      i18nOnObject: true
+    }),
+    mods: await wrapConstr({ category: ['Mods'], i18n: 'en', i18nOnObject: true })
+  });
+};
+
+const test = (base) => {
+  describe(base, () => {
+    before(async () => {
+      itemPath = resolve(`./${base}`);
+      await setupItems();
+    });
+    beforeEach(async () => {
+      gc();
+      await setupItems();
+    });
+    afterEach(async () => {
+      delete require.cache[itemPath];
+      Items = undefined;
+      data = undefined;
+      gc();
+    });
+    it('should contain items when initializing.', async () => {
+      const items = await wrapConstr();
+      assert(items.length);
+    });
+    it('should ignore enemies when configured.', async () => {
+      let items = (await wrapConstr({ ignoreEnemies: true })).filter((i) => i.category === 'Enemy');
+      assert(!items.length);
+
+      items = (await wrapConstr({ category: ['Enemy', 'Primary'], ignoreEnemies: true })).filter(
+        (i) => i.category === 'Enemy'
+      );
+      assert(!items.length);
+    });
+    it('should construct successfully with all & primary', async () => {
+      const items = await wrapConstr({ category: ['Primary', 'All'] });
+      assert(items.length > 0);
+    });
+    it('should tolerate seed items without uniqueName when resolving', async () => {
+      const items = new Items({ category: ['Mods'] }, { name: 'seed-without-id' });
+      assert(items.some((i) => i.name === 'seed-without-id'));
+      assert(items.length > 1);
+    });
+    it('should resolve component refs on seed items', async () => {
+      Items = await importFresh(itemPath, Date.now());
+      const catalog = await wrapConstr({ category: ['Components'], resolveComponents: false });
+      const chassis = catalog.find((c) => c.uniqueName?.includes('AshChassisComponent'));
+      assert.ok(chassis);
+      const seed = {
+        name: 'Seed Ash',
+        uniqueName: '/test/SeedAsh',
+        components: [{ uniqueName: chassis.uniqueName, itemCount: 1 }]
+      };
+      const items = new Items({ category: ['Mods'] }, seed);
+      const resolved = items.find((i) => i.uniqueName === seed.uniqueName);
+      assert.ok(resolved?.components?.[0]?.name);
+    });
+    it('should not error current worldstate-data supported locales', async () => {
+      try {
+        await wrapConstr({
+          i18n: ['de', 'es', 'fr', 'it', 'ko', 'pl', 'pt', 'ru', 'zh', 'cs', 'sr'],
+          i18nOnObject: true
+        });
+      } catch (e) {
+        assert(typeof e === 'undefined');
+      }
+    });
+    it('does not fail on invalid categories', () => {
+      assert.doesNotThrow(() => {
+        new Items({ category: 'Warframe' });
+      });
+    });
+    it('should apply custom categories are specified', async () => {
+      const items = await wrapConstr({ category: ['Primary'] });
+      const primes = items.filter((i) => i.name.includes('Prime'));
+      assert(primes.length < items.length);
+    });
+    describe('i18n', () => {
+      beforeEach(gc);
+      it('should populate with a truthy boolean', async () => {
+        Items = await importFresh(itemPath, Date.now());
+        const items = await wrapConstr({ category: ['Mods'], i18n: true });
+        assert(items.i18n);
+        assert(!!items.i18n[items[0].uniqueName].es);
+      });
+      it('should populate requested locales from an array', async () => {
+        Items = await importFresh(itemPath, Date.now());
+        const items = await wrapConstr({ category: ['Mods'], i18n: ['es', 'tr'] });
+        assert(!!items.i18n[items[0].uniqueName].tr);
+        assert(!!items.i18n[items[0].uniqueName].es);
+      });
+      it('should ignore invalid i18n option types', async () => {
+        const items = await wrapConstr({ category: ['Mods'], i18n: { nope: true } });
+        assert.strictEqual(items.i18n, undefined);
+      });
+      it('should fall back when category is not an array', async () => {
+        const items = await wrapConstr({ category: null });
+        assert(items.length > 0);
+      });
+      it('should not exist by default', async () => {
+        const items = await wrapConstr();
+        assert(!items.i18n);
+      });
+      it('should only contain requested locales', async () => {
+        const items = await wrapConstr({ category: ['Mods'], i18n: ['es'] });
+        assert(!items.i18n[items[0].uniqueName].tr);
+        assert(!!items.i18n[items[0].uniqueName].es);
+      });
+      it('should respect itemOnObject', async () => {
+        const items = await wrapConstr({ category: ['Mods'], i18n: ['es'], i18nOnObject: true });
+        assert(!items[0].i18n.tr);
+        assert(!!items[0].i18n.es);
+        assert(!items.i18n);
+      });
+      it('should have i18n on object for different locales in same runtime', async () => {
+        const getItem = async (locale) => {
+          const items = await wrapConstr({ category: ['Pets'], i18n: [locale], i18nOnObject: true });
+          const firstItem = items[0];
+          return firstItem?.i18n;
+        };
+
+        const esI18n = await getItem('es');
+        assert.ok(esI18n.es, 'should have i18n on object for es');
+        const jaI18n = await getItem('ja');
+        assert.ok(jaI18n.ja, 'should have i18n on object for ja');
+      });
+      it('should include stripped component locale names in i18n', async () => {
+        const cerebrum = '/Lotus/Types/Recipes/Weapons/WeaponParts/PrimeWyrmCerebrum';
+        const items = await wrapConstr({
+          category: ['Components'],
+          i18n: ['de'],
+          i18nOnObject: true
+        });
+        const match = items.find((i) => i.uniqueName === cerebrum);
+        assert.ok(match, 'PrimeWyrmCerebrum should be in Components catalog');
+        assert.strictEqual(match.name, 'Cerebrum');
+        assert.ok(match.i18n?.de?.name, 'should have German i18n name');
+        assert.strictEqual(match.i18n.de.name, 'Cerebrum');
+        assert.ok(match.parentUniqueNames?.length);
+      });
+    });
+    describe('components catalog', () => {
+      beforeEach(gc);
+      it('should resolve components by default', async () => {
+        const items = await wrapConstr({ category: ['Warframes'] });
+        const ash = items.find((i) => i.name === 'Ash');
+        assert.ok(ash?.components?.length);
+        const chassis = ash.components.find((c) => c.name === 'Chassis');
+        assert.ok(chassis, 'resolved chassis should have a name');
+        assert.ok(chassis.imageName);
+        assert.strictEqual(chassis.itemCount, 1);
+      });
+      it('should leave refs when resolveComponents is false', async () => {
+        const items = await wrapConstr({ category: ['Warframes'], resolveComponents: false });
+        const ash = items.find((i) => i.name === 'Ash');
+        assert.ok(ash?.components?.length);
+        const chassis = ash.components.find((c) =>
+          c.uniqueName?.includes('AshChassisComponent')
+        );
+        assert.ok(chassis);
+        assert.strictEqual(chassis.name, undefined);
+        assert.strictEqual(chassis.itemCount, 1);
+      });
+      it('should expand refs via Items.resolveComponents', async () => {
+        Items = await importFresh(itemPath, Date.now());
+        const items = await wrapConstr({ category: ['Warframes'], resolveComponents: false });
+        const ash = items.find((i) => i.name === 'Ash');
+        Items.resolveComponents(ash);
+        const chassis = ash.components.find((c) => c.name === 'Chassis');
+        assert.ok(chassis);
+        assert.ok(chassis.imageName);
+      });
+      it('should expand refs with an explicit catalog array', async () => {
+        Items = await importFresh(itemPath, Date.now());
+        const items = await wrapConstr({ category: ['Warframes'], resolveComponents: false });
+        const catalog = await wrapConstr({ category: ['Components'], resolveComponents: false });
+        const ash = items.find((i) => i.name === 'Ash');
+        Items.resolveComponents(ash, catalog);
+        assert.ok(ash.components.find((c) => c.name === 'Chassis'));
+      });
+      it('should include Components as a default category', async () => {
+        const items = await wrapConstr({ category: ['Components'] });
+        assert.ok(items.length > 1000);
+        assert.ok(items.every((i) => i.category === 'Components'));
+        // Standalone ingredients must not live in Components
+        assert.ok(!items.some((i) => i.name === 'Amphis'));
+        assert.ok(!items.some((i) => i.uniqueName === '/Lotus/Types/Items/MiscItems/OrokinCell'));
+      });
+      it('should resolve standalone ingredients from their own categories', async () => {
+        const items = await wrapConstr({ category: ['Warframes'] });
+        const ash = items.find((i) => i.name === 'Ash');
+        const cell = ash.components.find((c) => c.uniqueName?.includes('OrokinCell'));
+        assert.ok(cell);
+        assert.strictEqual(cell.name, 'Orokin Cell');
+        assert.notStrictEqual(cell.category, 'Components');
+      });
+    });
+    describe('drops', () => {
+      beforeEach(gc);
+      it('should not have drops for hikou', async () => {
+        const items = await wrapConstr({ category: ['Secondary'] });
+        const hikouMatches = items.filter((i) => i.name === 'Hikou');
+        assert(hikouMatches.length === 1);
+        const { drops } = hikouMatches[0];
+        assert(typeof drops === 'undefined');
+      });
+      it('should only have non-prime drops for Gorgon', async () => {
+        const items = await wrapConstr({ category: ['Primary'] });
+        const matches = items.filter((i) => i.name === 'Gorgon');
+        assert(matches.length === 1);
+        const { drops } = matches[0];
+        assert(typeof drops === 'undefined');
+
+        const bp = matches[0].components.filter((component) => component.name === 'Blueprint')[0];
+        assert(typeof bp !== 'undefined');
+        assert(bp.drops.length !== 0);
+
+        const primeBpDrops = bp.drops.filter((n) => n.type.includes('Prime'));
+        assert(primeBpDrops.length === 0);
+      });
+      it('should have variant drops when requested', async () => {
+        const items = await wrapConstr({ category: ['Primary'] });
+        const matches = items.filter((i) => i.name === 'Gorgon Wraith');
+        assert(matches.length === 1);
+        const { drops } = matches[0];
+        assert(typeof drops === 'undefined');
+
+        const bp = matches[0].components.filter((component) => component.name === 'Blueprint')[0];
+        assert(typeof bp !== 'undefined');
+        assert(bp.drops.length !== 0);
+
+        const variantDrops = bp.drops.filter((n) => n.type.includes('Wraith'));
+        assert(variantDrops.length === 1);
+      });
+      it('should only have 1 result for Mausolon', async () => {
+        const items = await wrapConstr({ category: ['Arch-Gun'] });
+        const matches = items
+          .filter((i) => i.name === 'Mausolon')
+          .map((i) => {
+            delete i.patchlogs;
+            return i;
+          });
+        const dd = dedupe(matches);
+        assert.strictEqual(dd.length, matches.length, 'Before and after dedupe should match');
+        assert.strictEqual(matches.length, 1, 'There can be only One');
+      });
+    });
+    describe('integrity', async () => {
+      beforeEach(gc);
+      it('should have wikia available for Dark Split-Sword', async () => {
+        const matches = data.weapons
+          .filter((i) => i.name === 'Dark Split-Sword')
+          .map((i) => {
+            delete i.patchlogs;
+            return i;
+          });
+        const dd = dedupe(matches);
+        assert.strictEqual(dd.length, matches.length, 'Before and after dedupe should match');
+        assert.strictEqual(matches.length, 1);
+
+        assert.strictEqual(matches[0].wikiAvailable, true);
+      });
+      it('should only have wikia available for Voidrig', async () => {
+        const matches = data.warframes
+          .filter((i) => i.name === 'Voidrig')
+          .map((i) => {
+            delete i.patchlogs;
+            return i;
+          });
+        const dd = dedupe(matches);
+        assert.strictEqual(dd.length, matches.length, 'Before and after dedupe should match');
+        assert.strictEqual(matches.length, 1);
+
+        assert.strictEqual(matches[0].wikiAvailable, true);
+      });
+      it('should only have wikia available for Bonewidow', async () => {
+        const matches = data.warframes
+          .filter((i) => i.name === 'Bonewidow')
+          .map((i) => {
+            delete i.patchlogs;
+            return i;
+          });
+        const dd = dedupe(matches);
+        assert.strictEqual(dd.length, matches.length, 'Before and after dedupe should match');
+        assert.strictEqual(matches.length, 1);
+
+        assert.strictEqual(matches[0].wikiAvailable, true);
+      });
+      it('should not have tradable components for Galariak Prime', async () => {
+        const matches = data.weapons
+          .filter((i) => i.name === 'Galariak Prime')
+          .map((i) => {
+            delete i.patchlogs;
+            return i;
+          });
+        const dd = dedupe(matches);
+        assert.strictEqual(dd.length, matches.length, 'Before and after dedupe should match');
+
+        matches[0].components.forEach((comp) => {
+          assert.strictEqual(comp.tradable, false);
+        });
+      });
+      it('should not have tradable components for Sagek Prime', async () => {
+        const matches = data.weapons
+          .filter((i) => i.name === 'Sagek Prime')
+          .map((i) => {
+            delete i.patchlogs;
+            return i;
+          });
+        const dd = dedupe(matches);
+        assert.strictEqual(dd.length, matches.length, 'Before and after dedupe should match');
+
+        matches[0].components.forEach((comp) => {
+          assert.strictEqual(comp.tradable, false);
+        });
+      });
+      it('should have 4 tradable components for Boar Prime', async () => {
+        const matches = data.weapons
+          .filter((i) => i.name === 'Boar Prime')
+          .map((i) => {
+            delete i.patchlogs;
+            return i;
+          });
+        const dd = dedupe(matches);
+        assert.strictEqual(dd.length, matches.length, 'Before and after dedupe should match');
+
+        let tradable = 0;
+        matches[0].components.forEach((comp) => {
+          if (comp.tradable === true) {
+            tradable++;
+          }
+        });
+        assert.strictEqual(tradable, 4);
+      });
+      it('should have Primed Continuity as tradable', async () => {
+        const matches = data.mods
+          .filter((i) => i.name === 'Primed Continuity')
+          .map((i) => {
+            delete i.patchlogs;
+            return i;
+          });
+        const dd = dedupe(matches);
+        assert.strictEqual(dd.length, matches.length, 'Before and after dedupe should match');
+        assert.strictEqual(matches[0].tradable, true);
+      });
+      it('weapons should only have 1 result for Mausolon', () => {
+        const matches = data.weapons
+          .filter((i) => i.name === 'Mausolon')
+          .map((i) => {
+            delete i.patchlogs;
+            return i;
+          });
+        const dd = dedupe(matches);
+        assert.strictEqual(dd.length, matches.length, 'Before and after dedupe should match');
+        assert.strictEqual(matches.length, 1, 'There can be only One');
+      });
+      it('warframe Octavia Prime should be untradable', () => {
+        const matches = data.warframes
+          .filter((i) => i.name === 'Octavia Prime')
+          .map((i) => {
+            delete i.patchlogs;
+            return i;
+          });
+        const dd = dedupe(matches);
+        assert.strictEqual(dd.length, matches.length, 'Before and after dedupe should match');
+        assert.strictEqual(matches[0].tradable, false);
+      });
+      it('warframes should only have 1 result for Octavia Prime', () => {
+        const matches = data.warframes
+          .filter((i) => i.name === 'Octavia Prime')
+          .map((i) => {
+            delete i.patchlogs;
+            return i;
+          });
+        const dd = dedupe(matches);
+        assert.strictEqual(dd.length, matches.length, 'Before and after dedupe should match');
+        assert.strictEqual(matches.length, 1, 'There can be only One');
+      });
+      it('items should only have 1 result for Octavia Prime', () => {
+        const matches = data.items
+          .filter((i) => i.name === 'Octavia Prime')
+          .map((i) => {
+            delete i.patchlogs;
+            return i;
+          });
+        const dd = dedupe(matches);
+        assert.strictEqual(dd.length, matches.length, 'Before and after dedupe should match');
+        assert.strictEqual(matches.length, 1, 'There can be only One');
+        assert(Object.keys(matches[0]).includes('components'));
+      });
+      it('should reflect melee types', () => {
+        data.items
+          .filter((i) => ['Amphis', 'Cadus', 'Cassowar', 'Caustacyst', 'Sigma & Octantis'].includes(i.name))
+          .forEach((item) => {
+            assert.equal(item.type, 'Melee', `${item.name} should be melee!`);
+          });
+      });
+      it('should reflect warframe components', () => {
+        data.warframes
+          .filter((w) => !namedExclusions.includes(w.name))
+          .forEach((warframe) => {
+            assert(warframe?.components?.length > 0, `${warframe.name} should have components`);
+          });
+      });
+      it('marketCost should be a number', () => {
+        data.items.forEach((item) => {
+          assert(
+            ['number', 'undefined'].includes(typeof item.marketCost),
+            `${item.name} marketCost should be a number if present`
+          );
+        });
+      });
+      it('items should be marked masterable correctly ', async () => {
+        const items = await wrapConstr({ ignoreEnemies: true });
+        items.forEach((item) => {
+          const masterable = (category, type, uniqueName) => {
+            if (type?.includes('Component') || category === 'Pets') {
+              const regex = new RegExp(masterableCategories.regex);
+              return regex.test(uniqueName);
+            }
+
+            return masterableCategories.categories.includes(category);
+          };
+
+          if (item.name === 'Helminth') return;
+
+          assert.equal(
+            item.masterable,
+            masterable(item.category, item.type, item.uniqueName),
+            `${item.name} should be marked as ${!masterable ? 'not ' : ''}masterable`
+          );
+        });
+      });
+      it('resources should be resources', () => {
+        [
+          'Nano Spores',
+          'Alloy Plate',
+          'Salvage',
+          'Rubedo',
+          'Plastids',
+          'Circuits',
+          'Orokin Cell',
+          'Argon Crystal',
+          'Control Module',
+          'Mutalist Alad V Nav Coordinate',
+          'Cryptographic ALU',
+          'Omega Isotope',
+          'Riven Sliver',
+          'Kuva',
+          'Steel Essence',
+          'Morphics',
+          'Cryotic',
+          'Hexenon',
+          'Neural Sensors',
+          'Oxium',
+          'Polymer Bundle',
+          'Tellurium',
+          'Spectral Debris',
+          'Aya',
+          'Somatic Fibers',
+          'Nav Coordinate',
+          'Judgement Points',
+          'Synthula',
+          'Javlok Capacitor',
+          'Vitus Essence',
+          'Void Traces',
+          'Gallium',
+          'Antiserum Injector Fragment'
+        ].forEach((iName) => {
+          const results = data.items.filter(
+            (i) => iName.toLowerCase() === i.name.toLowerCase() && !i.uniqueName.includes('/Enemies')
+          );
+          assert(results?.length > 0, `${iName} should have results`);
+          results.forEach((res) =>
+            assert.strictEqual(res.type, 'Resource', `${res.name} should be a Resource type... ${res.type}`)
+          );
+        });
+      });
+      describe('augment cards', () => {
+        it('should not be all mods', () => {
+          const augments = data.mods.filter((i) => i.isAugment);
+          assert(data.mods.length > 0, 'There should be augment mods');
+          assert.notEqual(augments.length, data.mods.length, 'Not all mods are augments');
+        });
+        ['Loyal Merulina', 'Anchored Glide'].forEach((itemName) => {
+          it(`should have ${itemName} as an augment`, () => {
+            assert.equal(data.mods.find((item) => item.name === itemName).isAugment, true);
+          });
+        });
+      });
+    });
+    it('should not change size when using filter', async () => {
+      const items = await wrapConstr({ category: ['Arch-Gun'] });
+      const realLength = items.length;
+      assert(realLength === items.filter(() => true).length);
+    });
+    it('should not change size when using map', async () => {
+      const items = await wrapConstr({ category: ['Arch-Gun'] });
+      const realLength = items.length;
+      assert(realLength === items.map((x) => x).length);
+    });
+    it('should preserve i18n and versions after filter', async () => {
+      const items = await wrapConstr({ category: ['Pets'], i18n: ['es'] });
+      const filtered = items.filter(() => true);
+      assert.deepStrictEqual(filtered.i18n, items.i18n, 'filter should preserve i18n');
+      assert.deepStrictEqual(filtered.versions, items.versions, 'filter should preserve versions');
+    });
+    it('should filter i18n entries to only matched items', async () => {
+      const items = await wrapConstr({ category: ['Pets'], i18n: ['es'] });
+      const targetUniqueName = items[0]?.uniqueName;
+      const filtered = items.filter((i) => i.uniqueName === targetUniqueName);
+      assert.strictEqual(filtered.length, 1, 'should have exactly one result');
+      assert.ok(filtered.i18n, 'filtered result should have i18n');
+      assert.ok(filtered.i18n[targetUniqueName], 'i18n should contain the matched item');
+      assert.strictEqual(Object.keys(filtered.i18n).length, 1, 'i18n should only contain the matched item');
+    });
+    it('edge case: should ignore i18n entry when is missing from original', async () => {
+      const items = await wrapConstr({ category: ['Pets'], i18n: ['es'] });
+      const targetUniqueName = items[0]?.uniqueName;
+      items.i18n = {}; // simulate missing i18n entries
+      const filtered = items.filter((i) => i.uniqueName === targetUniqueName);
+      assert.strictEqual(filtered.length, 1, 'should have exactly one result');
+      assert.ok(filtered.i18n, 'filtered result should have i18n');
+      assert.strictEqual(Object.keys(filtered.i18n).length, 0, 'i18n should be empty when original is empty');
+    });
+    describe('helminth', async () => {
+      it('should only have drops', async () => {
+        const items = await wrapConstr({ category: ['Warframes'] });
+        const helminth = items.find((i) => i.name === 'Helminth');
+        assert(typeof helminth.component, undefined);
+        assert(typeof helminth.drops, Array);
+      });
+      it('should have more than 4 abilities', async () => {
+        const items = await wrapConstr({ category: ['Warframes'] });
+        const helminth = items.find((i) => i.name === 'Helminth');
+        expect(helminth.abilities.length).above(4);
+        // There are 13 abilties in all but room was added in case DE added a few between here and now
+        expect(helminth.abilities.length).lessThan(20);
+      });
+      it('should not be masterable', async () => {
+        const items = await wrapConstr({ category: ['Warframes'] });
+        const helminth = items.find((i) => i.name === 'Helminth');
+        expect(helminth.masterable).to.eq(false);
+      });
+    });
+    describe('sentinels', async () => {
+      it('should have a sentinel category', async () => {
+        const items = await wrapConstr({ category: ['Sentinels'] });
+        assert(items.length > 0);
+      });
+      it('should have prime sentinels', async () => {
+        const items = await wrapConstr({ category: ['Sentinels'] });
+        const primes = items.filter((i) => i.isPrime);
+        assert(primes.length > 0);
+        const names = primes.map((prime) => prime.name);
+        const known = [
+          'Carrier Prime',
+          'Wyrm Prime',
+          'Shade Prime',
+          'Dethcube Prime',
+          'Nautilus Prime',
+          'Helios Prime'
+        ];
+        known.forEach((name) => {
+          assert(names.includes(name), `${name} should be in the list of primes`);
+        });
+      });
+    });
+    describe('relics', async () => {
+      it('should have correct drop rates for each refinement level', async () => {
+        const relics = await wrapConstr({ category: ['Relics'] });
+
+        // Expected patterns for each refinement level
+        const expectedPatterns = {
+          Intact: { 25.33: 3, 11: 2, 2: 1 },
+          Exceptional: { 23.33: 3, 13: 2, 4: 1 },
+          Flawless: { 20: 3, 17: 2, 6: 1 },
+          Radiant: { 16.67: 3, 20: 2, 10: 1 }
+        };
+
+        Object.entries(expectedPatterns).forEach(([level, expected]) => {
+          const relicsAtLevel = relics.filter((r) => r.name.endsWith(level));
+          relicsAtLevel.forEach((relic) => {
+            // BUG: Skip Axi S19 - has no rewards (doesn't exist in game)
+            if (!relic.rewards || relic.rewards.length === 0) {
+              return;
+            }
+            // Group rewards by percentage
+            const chanceGroups = {};
+            relic.rewards.forEach((reward) => {
+              if (!chanceGroups[reward.chance]) {
+                chanceGroups[reward.chance] = 0;
+              }
+              chanceGroups[reward.chance] += 1;
+            });
+
+            assert.deepStrictEqual(
+              chanceGroups,
+              expected,
+              `${relic.name} should have exact distribution: ${JSON.stringify(expected)}`
+            );
+          });
+        });
+      });
+    });
+    describe('images', async () => {
+      let imageNames;
+      beforeEach(async () => {
+        const items = await wrapConstr({ category: ['All'] });
+        imageNames = items
+          .filter((item) => item && item.category !== 'Enemy')
+          .flatMap((item) => {
+            const result = [item];
+            if (Array.isArray(item?.components)) {
+              result.push(...item.components);
+            }
+            return result;
+          })
+          .filter((item) => typeof item.imageName === 'string');
+      });
+      it('should have the image stored on disk', async () => {
+        for (const { imageName, uniqueName } of imageNames) {
+          if (imageName === 'missing.png') continue;
+
+          const imagePath = join('./data/img/', imageName);
+          const nameInfo = `in { uniqueName: ${uniqueName}, imageName: ${imageName} }`;
+          const exists = existsSync(imagePath);
+          assert(exists, `${imageName} should exist ${nameInfo}`);
+          if (exists) {
+            const { size } = statSync(imagePath);
+            assert(size > 0, `size should be greater than zero ${nameInfo}`);
+          }
+        }
+      });
+      it('size should be greater than 0', async () => {
+        for (const { imageName, uniqueName } of imageNames) {
+          if (imageName === 'missing.png') continue;
+
+          const imagePath = join('./data/img/', imageName);
+          const nameInfo = `in { uniqueName: ${uniqueName}, imageName: ${imageName} }`;
+          const { size } = statSync(imagePath);
+          assert(size > 0, `size should be greater than zero ${nameInfo}`);
+        }
+      });
+      it('should be a valid image', async () => {
+        for (const { imageName } of imageNames) {
+          if (imageName === 'missing.png') continue;
+
+          const imagePath = join('./data/img/', imageName);
+          await sharp(imagePath)
+            .metadata()
+            .catch((e) => assert.fail(e));
+        }
+      });
+    });
+  });
+};
+
+['index.js', 'index.mjs'].forEach(test);

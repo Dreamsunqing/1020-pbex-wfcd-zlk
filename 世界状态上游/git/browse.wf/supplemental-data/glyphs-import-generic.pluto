@@ -1,0 +1,44 @@
+local input = [[https://www.warframe.com/promocode?code=4MORI4N
+https://www.warframe.com/promocode?code=AMAZINGBURI
+https://www.warframe.com/promocode?code=ANAVIIVY
+https://www.warframe.com/promocode?code=BRIGHAN
+https://www.warframe.com/promocode?code=CAUTIONARYTAIL
+https://www.warframe.com/promocode?code=CYANFACADE
+https://www.warframe.com/promocode?code=DYANA
+https://www.warframe.com/promocode?code=DYNOES
+https://www.warframe.com/promocode?code=ENDQUAR
+https://www.warframe.com/promocode?code=FLADBOX
+https://www.warframe.com/promocode?code=FREDDYCAPS
+https://www.warframe.com/promocode?code=HJEMDG
+https://www.warframe.com/promocode?code=IRISILLYCH
+https://www.warframe.com/promocode?code=JUSTOLDPRIME
+https://www.warframe.com/promocode?code=LUALITY
+https://www.warframe.com/promocode?code=MARCOMEATBALL
+https://www.warframe.com/promocode?code=MISCHKA
+https://www.warframe.com/promocode?code=MUSINGTIAN
+https://www.warframe.com/promocode?code=QUITESHALLOW
+https://www.warframe.com/promocode?code=RIESLING
+https://www.warframe.com/promocode?code=SHENPAI
+https://www.warframe.com/promocode?code=SHY_ANABANANA
+https://www.warframe.com/promocode?code=SMETTBONIA
+https://www.warframe.com/promocode?code=SNOOTYDEATH
+https://www.warframe.com/promocode?code=UPSIDEDOWNSMORE
+https://www.warframe.com/promocode?code=ZKOICHI]]
+
+local ExportFlavour_en = require"json".decode(io.contents("../../warframe-public-export/ExportFlavour_en.json")).ExportFlavour
+local function find_glyph_for_code(code)
+	for ExportFlavour_en as glyph do
+		if code in glyph.uniqueName:upper()
+			or glyph.name:upper():startswith(code)
+		then
+			return glyph.uniqueName
+		end
+	end
+	error("Glyph not found for code: " .. code)
+end
+local output = {}
+for input:split("\n") as line do
+	local code = line:replace("https://www.warframe.com/promocode?code=", "")
+	output[find_glyph_for_code(code)] = { promo_code = code }
+end
+print(require"json".encode(output, true))

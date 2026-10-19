@@ -1,0 +1,223 @@
+local json = require"pluto:json"
+
+local response = {
+	__order = { "expiry", "rot", "vaultRot", --[["seed",]] "zarimanFaction", "bounties" },
+	bounties = {
+		__order = { "ZarimanSyndicate", "EntratiLabSyndicate", "HexSyndicate" }
+	}
+}
+
+-- Utility functions
+local Seed
+function SetSeed(s)
+	Seed = s
+end
+
+-- HIDWORD
+function hd(d)
+	return (d >> 32) & 0xFFFFFFFF
+end
+
+-- SRandomInt
+function sri(min, max)
+	local diff = max - min
+	if diff ~= 0 then
+		Seed = 0x5851F42D4C957F2D * Seed + 0x14057B7EF767814F
+		min += (hd(Seed) & 0x3FFFFFFF) % (diff + 1)
+	end
+	return min
+end
+
+-- SeededShuffleTable
+function sst(table)
+	local size = #table
+	while size >= 2 do
+		local rand = sri(1, size)
+		local a = table[rand]
+		local b = table[size]
+		table[size] = a
+		table[rand] = b
+		size = size - 1
+	end
+	return table
+end
+
+function getNormalisedChallengeName(p63)
+	local arr = p63:split("/")
+	local v64 = arr[#arr]
+	local v65 = string.find(v64, "Easy")
+	if v65 == nil then
+		v65 = string.find(v64, "VeryHard")
+	end
+	if v65 == nil then
+		v65 = string.find(v64, "Hard")
+	end
+	if v65 == nil then
+		v65 = string.find(v64, "Challenge")
+	end
+	if v65 ~= nil then
+		local v66 = v65 - 1
+		v64 = string.sub(v64, 1, v66)
+	end
+	return v64
+end
+
+function challengeEntryMatchesNode(entry, node)
+	return (entry.Node == "" or entry.Node == node)
+		and (entry.CheckFaction == 0 or response.zarimanFaction == entry.Faction) -- CheckFaction is only used in ZarimanJobManifest right now
+end
+
+-- Based on GenerateChallengeMissions in SyndicateMissionGenerator.lua
+function computeBounties(jobManifest, seed, agents)
+	local nodes = jobManifest.ChallengeMissionNodes
+
+	SetSeed(seed)
+	sst(nodes)
+
+	local lich_nodes
+	if agents then
+		lich_nodes = { "SolNode852", "SolNode850", "SolNode854" }
+	else
+		lich_nodes = {}
+		for _, v101 in ipairs(nodes) do
+			table.insert(lich_nodes, v101)
+		end
+	end
+
+	if agents then
+		local node_excluded_agent_map <const> = {
+			["SolNode856"] = "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/ArthurAllyAgent",
+			["SolNode852"] = "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/LettieAllyAgent",
+			["SolNode851"] = "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AmirAllyAgent",
+			["SolNode850"] = "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/EleanorAllyAgent",
+			["SolNode853"] = "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AoiAllyAgent",
+			["SolNode854"] = "/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/QuincyAllyAgent"
+		}
+
+		if #agents > 0 and #agents < #nodes then
+			local v105 = {
+				"SolNode851",
+				"SolNode852",
+				"SolNode853",
+				"SolNode854"
+			}
+			sst(v105)
+			while #agents < #nodes and #v105 > 0 do
+				for v107, v108 in ipairs(nodes) do
+					if v108 == v105[1] then
+						table.remove(nodes, v107)
+						break
+					end
+				end
+				table.remove(v105, 1)
+			end
+		end
+
+		sst(agents)
+		for i = 1, math.min(#agents, #nodes) do
+			if agents[i] == node_excluded_agent_map[nodes[i]] then
+				local v102 = i % #agents + 1
+				local v103 = agents[v102]
+				local v104 = agents[i]
+				agents[i] = v103
+				agents[v102] = v104
+			end
+		end
+	end
+
+	local bounties = {}
+	local normalised_challenges_seen_before = {}
+	for i, difficultyTier in jobManifest.ChallengeMissionDifficultyTiers do
+		local bounty = {
+			__order = { "node", "challenge", "ally" }
+		}
+		if i <= #nodes then
+			bounty.node = nodes[i]
+			if agents then
+				bounty.ally = agents[i]
+			end
+		else
+			bounty.node = lich_nodes[sri(1, #lich_nodes)]
+		end
+
+		local interesting_challenges = {}
+		local uninteresting_challenges = {}
+		for difficultyTier.challenges as entry do
+			if challengeEntryMatchesNode(entry, bounty.node) then
+				for entry.challenges as challenge do
+					local normalised = getNormalisedChallengeName(challenge)
+					if --[[normalised == nil or]] normalised_challenges_seen_before[normalised] then
+						uninteresting_challenges:insert(challenge)
+					else
+						interesting_challenges:insert(challenge)
+					end
+				end
+			end
+		end
+
+		if #interesting_challenges > 0 then
+			bounty.challenge = interesting_challenges[sri(1, #interesting_challenges)]
+		else
+			bounty.challenge = uninteresting_challenges[sri(1, #uninteresting_challenges)]
+		end
+		normalised_challenges_seen_before[getNormalisedChallengeName(bounty.challenge)] = true
+
+		bounties:insert(bounty)
+	end
+	return bounties
+end
+
+local worldState
+repeat
+	worldState = json.decode(io.contents("worldState.json"))
+until worldState
+
+local challengeSyndicateData = worldState.SyndicateMissions:find(|x| -> x.Tag == "HexSyndicate" and os.unixseconds() >= (x.Activation["$date"]["$numberLong"] // 1000) and os.unixseconds() < (x.Expiry["$date"]["$numberLong"] // 1000))
+if not challengeSyndicateData then
+	challengeSyndicateData = worldState.SyndicateMissions:find(|x| -> x.Tag == "HexSyndicate")
+end
+response.expiry = tonumber(challengeSyndicateData.Expiry["$date"]["$numberLong"])
+local expirySeconds = math.tointeger(math.floor(response.expiry / 1000))
+
+local CetusSyndicate = worldState.SyndicateMissions:find(|x| -> x.Tag == "CetusSyndicate" and os.unixseconds() >= (x.Activation["$date"]["$numberLong"] // 1000) and os.unixseconds() < (x.Expiry["$date"]["$numberLong"] // 1000))
+if not CetusSyndicate then
+	CetusSyndicate = worldState.SyndicateMissions:find(|x| -> x.Tag == "CetusSyndicate")
+end
+response.rot = CetusSyndicate.Jobs[1].rewards:sub(67, 67)
+
+local EntratiSyndicate = worldState.SyndicateMissions:find(|x| -> x.Tag == "EntratiSyndicate" and os.unixseconds() >= (x.Activation["$date"]["$numberLong"] // 1000) and os.unixseconds() < (x.Expiry["$date"]["$numberLong"] // 1000))
+if not EntratiSyndicate then
+	EntratiSyndicate = worldState.SyndicateMissions:find(|x| -> x.Tag == "EntratiSyndicate")
+end
+response.vaultRot = EntratiSyndicate.Jobs:back().rewards:sub(74, 74)
+
+--response.seed = challengeSyndicateData.Seed
+
+response.zarimanFaction = { "FC_GRINEER", "FC_CORPUS" }[(challengeSyndicateData.Seed & 1) + 1]
+
+response.bounties["ZarimanSyndicate"] = computeBounties(
+	json.decode(io.contents("data/ZarimanJobManifest.json")).data,
+	challengeSyndicateData.Seed
+)
+
+response.bounties["EntratiLabSyndicate"] = computeBounties(
+	json.decode(io.contents("data/EntratiLabsJobManifest.json")).data,
+	challengeSyndicateData.Seed
+)
+
+response.bounties["HexSyndicate"] = computeBounties(
+	json.decode(io.contents("data/WF1999JobManifest.json")).data,
+	challengeSyndicateData.Seed,
+	{
+		"/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AmirAllyAgent",
+		"/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/AoiAllyAgent",
+		"/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/ArthurAllyAgent",
+		"/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/EleanorAllyAgent",
+		"/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/LettieAllyAgent",
+		"/Lotus/Types/Gameplay/1999Wf/ProtoframeAllies/QuincyAllyAgent"
+	}
+)
+
+header("Cache-Control: public, max-age="..math.max(0, expirySeconds - os.unixseconds()))
+header("Content-Type: application/json")
+io.write(json.encode(response))

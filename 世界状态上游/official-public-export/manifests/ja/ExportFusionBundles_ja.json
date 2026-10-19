@@ -1,0 +1,310 @@
+{
+  "ExportFusionBundles": [
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/DeepSpaceCommonAvionicsEndo",
+      "description": "レールジャックのグリッドとアビオニックをアップグレードするための消費アイテム。",
+      "codexSecret": false,
+      "fusionPoints": 150
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/DeepSpaceUncommonAvionicsEndo",
+      "description": "レールジャックのグリッドとアビオニックをアップグレードするための消費アイテム。",
+      "codexSecret": false,
+      "fusionPoints": 300
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/EarthCommonAvionicsEndo",
+      "description": "レールジャックのグリッドとアビオニックをアップグレードするための消費アイテム。",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/EarthUncommonAvionicsEndo",
+      "description": "レールジャックのグリッドとアビオニックをアップグレードするための消費アイテム。",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/MarketTier1CrewShipFusionBundle",
+      "description": "レールジャックのグリッドとアビオニックをアップグレードするための消費アイテム。",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/MarketTier2CrewShipFusionBundle",
+      "description": "レールジャックのグリッドとアビオニックをアップグレードするための消費アイテム。",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/MarketTier3CrewShipFusionBundle",
+      "description": "レールジャックのグリッドとアビオニックをアップグレードするための消費アイテム。",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/SaturnCommonAvionicsEndo",
+      "description": "レールジャックのグリッドとアビオニックをアップグレードするための消費アイテム。",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CrewShipFusionBundles/SaturnUncommonAvionicsEndo",
+      "description": "レールジャックのグリッドとアビオニックをアップグレードするための消費アイテム。",
+      "codexSecret": false,
+      "fusionPoints": 200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertFusionBundleLarge",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 150
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertFusionBundleMedium",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertFusionBundleSmall",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 80
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/AlertRewardFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 235
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierAEndoCommon",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 15
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierAEndoUncommon",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierBEndoCommon",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 15
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierBEndoUncommon",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierCEndoUncommon",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CetusTierDEndoUncommon",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 50
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitRepeatableNormalFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 250
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitRepeatableSteelPathFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitSilverNormalFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CircuitSilverSteelPathFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 6000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/CommonFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 15
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EliteAlertFusionBundleLarge",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 1500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EliteAlertFusionBundleMedium",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 1200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EliteAlertFusionBundleSmall",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 900
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EndoJackpotBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 15000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/EvergreenLoginRewardFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 30000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/JunctionRewardNPFusionBundleA",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 2500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/JunctionRewardNPFusionBundleB",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 750
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/LoginRewardFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MPVDualPackFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 50000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MPVSinglePackFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 10000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MarketTier1FusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MarketTier2FusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/MarketTier3FusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 1000
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/NightwatchFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 1500
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/PurgatoryBlackTokenFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 600
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/PurgatoryBlueTokenFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/PurgatoryGoldTokenFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierALarge",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 150
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierASmall",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 100
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierBLarge",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 300
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierBSmall",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 200
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierCLarge",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 450
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierCSmall",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 300
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierDLarge",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 600
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RailjackEndoTierDSmall",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 400
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/RareFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 80
+    },
+    {
+      "uniqueName": "/Lotus/Upgrades/Mods/FusionBundles/UncommonFusionBundle",
+      "description": "合成時にMODに吸収させることで、その効果を増幅させる。",
+      "codexSecret": false,
+      "fusionPoints": 50
+    }
+  ]
+}

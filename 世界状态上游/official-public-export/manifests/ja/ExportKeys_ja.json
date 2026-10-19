@@ -1,0 +1,349 @@
+{
+  "ExportKeys": [
+    {
+      "uniqueName": "/Lotus/Types/Keys/1999PrologueQuest/1999PrologueQuestKeyChain",
+      "name": "ロートパゴス",
+      "description": "果てからの問いかけに応えるのです。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/1999Quest/1999QuestGoodEndKeyChain",
+      "name": "ヘックスフィナーレ",
+      "description": "歴史を書き換え、災害を回避するチャンス。",
+      "parentName": "",
+      "codexSecret": false,
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/1999Quest/1999QuestKeyChain",
+      "name": "ヘックス",
+      "description": "Albrecht Entratiの捜索に乗り出した漂流者は、1999年12月31日のホルバニアに辿り着いた。そこではテックロット拡大とスカルドラによる制圧に耐えながらも、新年を楽しもうとする市民があった。しかしこれは既に起こった出来事であり…　悲惨な終末が待ち構えている。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ApostasyQuest/ApostasyKeyChain",
+      "name": "背信のプロローグ",
+      "description": "個人部屋は「Harrowの鎖」クエストをクリアした後に調査できます。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ArchwingQuest/ArchwingQuestKeyChain",
+      "name": "アークウイング",
+      "description": "バロール・フォーモリアン戦艦は迫り続けています。でも、それに対抗する準備も進んでいます。あなたのお陰でアークウイングのプロトタイプは完成しました。その設計図もすぐあなたのもとに届けます。しかし、やるべきことはまだ残っています。ほかのパーツを探し、回収してください。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/BardQuest/BardQuestKeyChain",
+      "name": "Octaviaの賛美歌",
+      "description": "Mandachordを作成しセファロン・スーダのエラー行動の原因を見つけろ。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ChimeraQuest/ChimeraKeyChain",
+      "name": "キメラプロローグ",
+      "description": "「サクリファイス」クエストを完了後個人部屋を調査する。",
+      "parentName": "",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/DragonQuest/DragonQuestKeyChain",
+      "name": "新たな怪奇",
+      "description": "Cephalon Simaris に協力し、不可思議な「声」の発生源を見つけよう。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/DuviriQuest/DuviriQuestKeyChain",
+      "name": "デュヴィリ・パラドックス",
+      "description": "デュヴィリ王国に入る",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/EntratiLab/EntratiQuestKeyChain",
+      "name": "壁の中の囁き",
+      "description": "Loidは奇妙な夢に悩まされており、あなたに何か見せようとしている。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/FairyQuest/FairyQuestKeyChain",
+      "name": "銀の果樹園",
+      "description": "ニュー・ロカは神聖なる森をグリニア兵から守るため、テンノに助太刀を要求しています。しかし彼らは森の真実を知らない。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/GetClemQuest/GetClemQuestKeyChain",
+      "name": "寡黙な人物",
+      "description": "Darvoが君の助けを必要としている。グリニアの処刑から、Darvoの大事な契約業者を救い出せ。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/GlassQuest/GlassQuestKeyChain",
+      "name": "Sayaの眼",
+      "description": "エイドロンの草原には謎が何年も埋まったまま眠っている。心を直すも壊すも不明の秘められた過去へのドアを開けるモノが。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/GolemQuest/GolemQuestKeyChainItem",
+      "name": "Jordas の教訓",
+      "description": "Ordisは戦艦全体に感染が広がっている仲間のセファロンを救うことを決心した。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/IndexQuest/IndexQuestKeyChain",
+      "name": "グラスト・ギャンビット",
+      "description": "Nef Anyoがマイコーナコロニーの子供たちを攫いました。取り戻すにはあなたの力が必要です。Nefを彼自身のグラウンドであるインデックスで打ち負かさねばなりません。しかしテンノ、気を付けて。見た目通りには行かない物もあるのです。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedAladVQuest/AssassinateInfestedAladVKey",
+      "name": "Mutalist Alad V 暗殺",
+      "description": "Alad Vとそのミュータリスト実験に終止符を打つ",
+      "parentName": "/Lotus/Types/Keys/TestKey",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedAladVQuest/InfestedAladVQuestKeyChain",
+      "name": "感染起源は誰",
+      "description": "Alad Vの研究所を探し出して、彼の狂気に終止符を打つ。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedIntroQuest/InfestedIntroQuestKeyChain",
+      "name": "博士の計略",
+      "description": "傍受したグリニアの通信によると、グリニアは新しい生物兵器の実験を行っているようです。これを調査してください。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedMicroplanetQuest/InfestedMicroplanetQuestKeyChain",
+      "name": "ダイモスの心臓",
+      "description": "感染体に埋め尽くされたダイモスが、火星軌道上に姿を現す…　しかしその蠢く巨塊から届いたのは、最古の搬送波に乗った救難信号だった…",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/JadeShadows/JadeShadowQuestKeyChain",
+      "name": "翡翠の影",
+      "description": "深い闇を宿す過去と向き合う時が来た「Stalker」。宿敵を共に戦いを強いられた彼は真実が明らかになる今…　大切のものを失わないよう武器を手に取る。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/JadeShadowsPart2Constellations/JadeShadowsPart2QuestKeyChain",
+      "name": "翡翠の影：星座",
+      "description": "オーブ峡谷で繰り広げられる、奇妙な紛争。Hunhowは影を調査に向かわせ、そこでStalkerの選択が招いた結果に直面する。影の未来、未来の影がここに集結する。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/KahlQuest/KahlQuestKeyChain",
+      "name": "ベールブレイカー",
+      "description": "エントラティのDaughterは、ナルメル・ミュレックス内から届いた救援信号をテンノの力を借りて調査した。吉と出るか凶と出るか、この時のDaughterはまだ知らない。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/KubrowQuest/KubrowQuestKeyChain",
+      "name": "クブロウ獲得",
+      "description": "あなたはテンノ。クブロウを従えて戦場に赴く価値があります。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/LimboQuest/LimboQuestKeyChain",
+      "name": "Limbo セオリム",
+      "description": "Limbo セオリムクエストをクリアするにはアークウイングが必要です。\r\n\r\n根源を辿ってLimboセオリムをつなぎ合わせる",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/MirageQuest/MirageQuestKeyChain",
+      "name": "隠されたメッセージ",
+      "description": "Mirageを探索。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ModQuest/ModQuestKeyChain",
+      "name": "師範",
+      "description": "コーパスによるグリニア領土への侵攻は、古の時代のライバルとの対決へとつながる。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/MummyQuest/MummyQuestKeyChain",
+      "name": "Inaros の砂嵐",
+      "description": "Baro Ki'Teer を手伝いフォボスの古代墳墓から奇妙なお宝を奪取する。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/NewPlayerQuest/NewPlayerQuestKeyChain",
+      "name": "目覚め",
+      "description": "テンノ：　古代の戦士の記念碑。\r\n\r\n永きに渡って眠り続けたテンノ…　目的もなく、あなたを呼ぶ者もおらず。\r\n\r\nそして再び動き出す。",
+      "parentName": "",
+      "codexSecret": true,
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/NewWarIntroQuest/NewWarIntroKeyChain",
+      "name": "Erra",
+      "description": "",
+      "parentName": "",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/NewWarQuest/NewWarQuestKeyChain",
+      "name": "新たな大戦",
+      "description": "膨大な数のセンティエントがベール・プロキシマから現れ、本格的な侵略が遂に始まりました。\r\n\r\nセンティエントの先頭に立つのはNatah、かつてテンノを導いたLotusであり、今はBallasと弟Erraの配下としてあなたの前に立ちはだかります。\r\n\r\n今やOrigin太陽系の各地が戦場となり、テンノを含む様々な勢力がセンティエントとの最終局面に向かっています。この大戦の先にあるのは勝利か、破滅か。",
+      "parentName": "",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/OrokinMoonQuest/OrokinMoonQuestKeyChain",
+      "name": "二番目の夢",
+      "description": "センティエントHunhow が長い間忘れ去られていた秘密を利用して、テンノを壊滅しようとする。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/PriestFrameQuest/PriestQuestKeyChain",
+      "name": "Harrowの鎖",
+      "description": "奇妙な通信がレッド・ベール神秘論の暗い世界の奥底へと誘う。そこでどんな邪悪なモノを見るだろう？ソレは何がしたいのだろうか？",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ProteaQuest/ProteaQuestKeyChain",
+      "name": "デッドロック・プロトコル",
+      "description": "エリートコーパスたちの間で権力闘争が勃発した。Nef Anyoは主導権を握るため、過去に目を向ける…　コーパスの起源そのものに。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/RailJackBuildQuest/RailjackBuildQuestKeyChain",
+      "name": "流転する形勢",
+      "description": "増大する脅威に立ち向かうため、長い休眠状態にあったセファロンが、オロキン時代の迎撃機レールジャックを再建するよう呼びかける。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/RevenantQuest/RevenantQuestKeyChain",
+      "name": "Revenantの仮面",
+      "description": "奇妙な仮面を受け取るようUnumがNakakを選んだ。仮面が奇妙な光景へと導く。Unumが伝えたい失われた物語とはいったい？",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SacrificeQuest/SacrificeQuestKeyChain",
+      "name": "サクリファイス",
+      "description": "他とは異なるWarframeを追う内にオペレーターは苦悶の回想を垣間見る。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SentientQuest/SentientQuestKeyChain",
+      "name": "Natah",
+      "description": "Origin太陽系に不審なドローンが現れた。Lotusが彼らが何で、誰から送り込まれたのかを調べるのを手伝おう。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SolarisQuest/SolarisQuestKeyChain",
+      "name": "Vox Solaris",
+      "description": "Eudico には仲間を守る覚悟があるが、果たしてNef Anyo に立ち向かうことはできるのだろうか？",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SpyQuestKeyChain/SpyQuestKeyChain",
+      "name": "奪われた野望",
+      "description": "コソ泥のMarooを探しアルケインコーデックスの秘密を突き止めよ。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrequel/TauPrequelQuestKeyChain",
+      "name": "古の同盟",
+      "description": "Albrecht Entratiの足跡はOrigin太陽系の先へと続く。過去を掘り下げることでのみ、先にある道筋を明らかにすることができる…　しかし、埋もれた秘密は命取りになりかねない。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrologue/TauPrologueKeyChainA",
+      "name": "ルア",
+      "description": "ダーク・リフラクトリー内でLotusの記憶から、彼女を探し出す。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrologue/TauPrologueKeyChainB",
+      "name": "器",
+      "description": "器は目覚めた。Praghasaは復活した。エリスの地上へ向かい…　糧を求めよ。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrologue/TauPrologueKeyChainC",
+      "name": "エリス後日談",
+      "description": "Praghasaは喰らう。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/VorsPrize/VorsPrizeQuestKeyChain",
+      "name": "Vorの秘宝",
+      "description": "我が両女帝陛下、\r\n\r\n仰る通り、テンノの脅威は本物です。我々は地球付近に漂流しているものを発見したのですが、Lotusに一枚上手を取られてしまったようです。ヤツは我々が到達する直前にコールドスリープの封印を解除し、別のテンノの迎撃部隊を派遣していたのです。\r\n\r\n現在、逃亡したテンノらを追跡中です。群れから孤立させればテンノと言えど難なく殺せるはず。コールドスリープの緊急解除により、記憶障害を起こしていることも期待できそうかと。\r\n\r\n我々は今回の失態への罰を覚悟しております。\r\n\r\n- VOR",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/WarWithinQuest/WarWithinQuestKeyChain",
+      "name": "内なる紛争",
+      "description": "ソマティックリンクのノイズを探知し、Lotusはオペレーターをリザーバへと再度向かわせる。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/WraithQuest/WraithQuestKeyChain",
+      "name": "嵐を呼ぶ者テンペスタリ",
+      "description": "コーパス宇宙空域で広がるVoid嵐…　奇妙な船を包む謎とは一体？",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/YareliQuest/YareliQuestKeyChain",
+      "name": "ウェーブライダー",
+      "description": "悲劇が襲う時、ベントキッドは過去の物語から救いを求める。",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ZarimanQuest/ZarimanQuestKeyChain",
+      "name": "Zarimanの天使",
+      "description": "理の外の世界から聞こえる奇妙な声、その反響はもはや背を向ける事さえ許されない。揮発的なVoidから姿を現したZarimanは今二つの世界の狭間にある。太陽系中に響き渡る鳴り止むことのない歌声。過去と向き合う時が来たのです…",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/DojoKey",
+      "name": "クランキー",
+      "description": "クランDOJOへのアクセスを許可する。",
+      "parentName": "/Lotus/Types/Game/KeyItem",
+      "codexSecret": true
+    }
+  ]
+}

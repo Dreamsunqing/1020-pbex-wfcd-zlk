@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-src 'none'">
+  <title>上游资料工作台</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="brand-icon">◈</span><div>上游资料工作台<small>SOURCE WORKBENCH <b>01</b></small></div></div>
+    <nav aria-label="功能页面"><button class="nav active" data-panel="browser">资料浏览</button><button class="nav" data-panel="updates">更新与版本</button><button class="nav" data-panel="oracle">推算实验室</button><button class="nav" data-panel="settings">配置</button></nav>
+    <span class="version">v0.1.1 <i>本地工作台</i></span>
+  </header>
+  <div id="notice" role="status" hidden></div>
+  <main>
+    <section id="browser" class="panel active">
+      <aside>
+        <div class="aside-title"><span>资料目录</span><button id="choose" class="small">打开目录 ↗</button></div>
+        <div id="root" class="root-path">选择项目资料目录</div>
+        <div id="facet-pickers" class="facet-pickers" aria-label="文件多维筛选"></div>
+        <div class="filter-tools"><label class="check"><input type="checkbox" id="json-only" checked> 只看 JSON</label><button id="clear-filters" class="link">清空筛选</button></div>
+        <div id="filter-chips" class="filter-chips" aria-label="已选筛选条件" hidden></div>
+        <input id="file-filter" class="search" placeholder="搜索文件名或路径…" aria-label="搜索文件">
+        <div class="file-meta"><span id="file-count">0 个文件</span><button id="refresh" class="link">刷新</button></div>
+        <div id="files" role="list" class="file-list"></div>
+      </aside>
+      <article class="viewer">
+        <div id="empty" class="empty"><div class="empty-symbol">{ }</div><h1>从原始资料开始</h1><p>打开资料包，选择一份 JSON 查看结构与内容。</p><p class="muted">官方 · Plus · WFCD · Oracle · browse.wf</p><button id="empty-choose" class="primary">打开资料目录</button><div class="scope-note">第一版保留各来源原貌。合并汇总与邮件通知后续接入。</div></div>
+        <div id="document" hidden>
+          <div class="document-heading"><div><small id="file-source">SOURCE</small><h1 id="file-title"></h1><p id="file-path" class="muted"></p></div><div class="actions"><button id="copy" class="small">复制</button><button id="export" class="small">导出</button></div></div>
+          <div class="document-stats" id="document-stats"></div>
+          <div class="view-toolbar"><div class="segmented"><button data-view="table" class="selected">表格</button><button data-view="tree">结构</button><button data-view="raw">原文</button></div><input id="content-filter" placeholder="搜索当前层级的键、名称或记录内容…" aria-label="搜索记录"></div>
+          <div class="pointer-bar"><button id="parent" class="small">↑ 上一级</button><input id="pointer" placeholder="JSON Pointer：/ExportResources" aria-label="JSON 路径"><button id="go-pointer" class="small">跳转</button></div>
+          <div id="doc-warning" class="hint" hidden></div>
+          <div id="data-view" class="data-view"></div>
+          <div class="pagination"><span id="page-info"></span><div><button id="previous" class="small">上一页</button><button id="next" class="small">下一页</button></div></div>
+        </div>
+      </article>
+    </section>
+    <section id="updates" class="panel page">
+      <div class="page-heading"><div><small>UPSTREAM / RELEASES</small><h1>更新与版本</h1><p>校验全部启用来源后发布快照，检查失败时继续使用上一版本。</p></div><button id="update-now" class="primary">检查上游并更新</button></div>
+      <div class="cards"><div class="card"><small>当前状态</small><strong id="update-state">尚未检查</strong><p id="update-detail">资料存储在独立的用户数据目录。</p></div><div class="card"><small>定时检查</small><strong id="interval">每 60 分钟</strong><label class="check"><input type="checkbox" id="auto-update"> 启用应用内定时检查</label><p>应用退出后停止。常驻更新可使用 CLI watch。</p></div><div class="card"><small>本地基线</small><strong>导入现有资料</strong><p>将本地各来源原始文本保存为独立快照。</p><button id="import" class="small">导入当前目录</button></div></div>
+      <div class="section-heading"><h2>版本快照</h2><button id="history-refresh" class="small">刷新列表</button></div>
+      <div id="releases" class="release-list"></div>
+      <div class="section-heading"><h2>文件变更</h2><div class="actions"><select id="diff-before" aria-label="旧版本"></select><span>→</span><select id="diff-after" aria-label="新版本"></select><button id="diff" class="small">比较</button></div></div>
+      <p class="muted">按文件哈希列出增删改；各来源保持独立。</p><div id="diff-result"></div>
+      <details class="log-card" open><summary>最近操作</summary><pre id="operation-log">等待操作。</pre></details>
+    </section>
+    <section id="oracle" class="panel page">
+      <div class="page-heading"><div><small>ORACLE / COMPATIBILITY</small><h1>推算实验室</h1><p>使用当前打开目录或所选快照中的资料；所有计算在本地完成。</p></div><span class="pill">规则版本 1</span></div>
+      <div class="oracle-grid"><div class="card oracle-form"><h2>活化战甲</h2><p>用户名区分大小写。输入目标周的上一周战甲，缺少历史时返回条件推算。</p><label>游戏名<input id="username" placeholder="CaseSensitiveName" autocomplete="off"></label><div class="form-row"><label>目标周<select id="target"><option value="current">本周</option><option value="next">下周</option></select></label><label>参考时间<input type="datetime-local" id="inv-time"></label></div><label id="observed-label">上一周已观察到的战甲（可选）</label><div id="observed"></div><button id="predict" class="primary">推算活化组合</button><div id="inv-result" class="result"></div></div>
+      <div class="card oracle-form"><h2>仲裁排期</h2><p>按缓存的逐小时排期查询，返回节点和任务类型。</p><div class="form-row"><label>查询时间<input type="datetime-local" id="arb-time"></label><label>未来小时数<select id="arb-count"><option value="12">12 小时</option><option value="24" selected>24 小时</option><option value="72">72 小时</option><option value="168">168 小时</option></select></label></div><button id="query-arb" class="primary">查询仲裁</button><div id="arb-result" class="result"></div></div></div>
+    </section>
+    <section id="settings" class="panel page">
+      <div class="page-heading"><div><small>WORKSPACE / SETTINGS</small><h1>来源配置</h1><p>配置只影响新检查；历史快照继续保留原有来源记录。</p></div><button id="save-config" class="primary">保存配置</button></div>
+      <div class="settings-grid"><div><textarea id="config-text" spellcheck="false" aria-label="来源配置 JSON"></textarea></div><div class="card"><h2>第一版范围</h2><p>已接入官方、Plus、WFCD、Oracle、browse.wf 与 Plus 生成器文本资料。</p><p>图片二进制不下载，图片名称、链接和哈希索引继续保留。</p><p>跨来源合并汇总（P3）与邮件通知保留后续接入位置，当前均未实现。</p><h2>定时运行</h2><p>应用内定时检查需要保持应用运行。服务器可运行同一核心的 CLI watch。</p><h2>资料路径</h2><p id="store-path" class="root-path"></p><p>GitHub 私有凭据仅从启动环境中的 GITHUB_TOKEN 读取，不写入配置。</p></div></div>
+    </section>
+  </main>
+  <footer><span class="status-dot"></span><span id="status-text">离线资料预览就绪</span><span id="footer-context">各来源独立 · 原文保留</span></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

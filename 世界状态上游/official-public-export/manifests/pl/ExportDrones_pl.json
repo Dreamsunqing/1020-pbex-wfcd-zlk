@@ -1,0 +1,112 @@
+{
+  "ExportDrones": [
+    {
+      "uniqueName": "/Lotus/Types/Ship/AdvancedResourceDrone",
+      "name": "Tytanowy Ekstraktor Prime",
+      "description": "Wyślij Ekstraktor na planetę, by zebrać dużą ilość surowców.\r\n\r\nMusi być regularnie opróżniany dla maksymalnej efektywności i sprawdzany pod kątem odniesionych obrażeń.",
+      "binCount": 1,
+      "binCapacity": 2,
+      "fillRate": 4,
+      "durability": 100,
+      "repairRate": 10,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/AdvancedUcResourceDrone",
+      "name": "Destylujący Ekstraktor Prime",
+      "description": "Destylujący Ekstraktor Prime ma zwiększoną szansę zdobycia niespotykanych i rzadkich surowców.\r\n\r\nWyślij ten Ekstraktor na planetę, by zebrać dużą ilość surowców. Musi być regularnie opróżniany i sprawdzany pod kątem odniesionych obrażeń.",
+      "binCount": 1,
+      "binCapacity": 2,
+      "fillRate": 8,
+      "durability": 200,
+      "repairRate": 20,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/BasicResourceDrone",
+      "name": "Tytanowy Ekstraktor",
+      "description": "Wyślij Ekstraktor na planetę, by zebrać surowce.\r\n\r\nMusi być regularnie opróżniany dla maksymalnej efektywności i sprawdzany pod kątem odniesionych obrażeń.",
+      "binCount": 1,
+      "binCapacity": 1,
+      "fillRate": 4,
+      "durability": 100,
+      "repairRate": 10,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/BasicUcResourceDrone",
+      "name": "Destylujący Ekstraktor",
+      "description": "Destylujący Ekstraktor ma zwiększoną szansę zdobycia niespotykanych i rzadkich surowców.\r\n\r\nWyślij ten Ekstraktor na planetę, by zebrać surowce. Musi być regularnie opróżniany i sprawdzany pod kątem odniesionych obrażeń.",
+      "binCount": 1,
+      "binCapacity": 1,
+      "fillRate": 8,
+      "durability": 200,
+      "repairRate": 20,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/LandscapeTrapLight",
+      "name": "Tytanowy Ekstraktor",
+      "description": "Wyślij Ekstraktor na planetę, by zebrać surowce.\r\n\r\nMusi być regularnie opróżniany dla maksymalnej efektywności i sprawdzany pod kątem odniesionych obrażeń.",
+      "binCount": 1,
+      "binCapacity": 20,
+      "fillRate": 0.1,
+      "durability": 100,
+      "repairRate": 0,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        4,
+        1,
+        1
+      ],
+      "specialities": []
+    },
+    {
+      "uniqueName": "/Lotus/Types/Ship/VoidTraderResourceDrone",
+      "name": "Niroda Prisma Ekstraktor",
+      "description": "Dzieło niedoścignionej inżynierii Orokin, ten zaawansowany model został zaprojektowany do zdobywania największej możliwej ilości surowców w najgorszych warunkach.",
+      "binCount": 1,
+      "binCapacity": 1,
+      "fillRate": 8,
+      "durability": 200,
+      "repairRate": 20,
+      "codexSecret": false,
+      "capacityMultiplier": [
+        8,
+        6,
+        4,
+        1
+      ],
+      "specialities": []
+    }
+  ]
+}

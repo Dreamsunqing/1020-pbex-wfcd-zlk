@@ -1,0 +1,3759 @@
+{
+  "preparedOn": "2026-10-19",
+  "algorithm": "sha256",
+  "scope": "世界状态上游/ 所有文件（含原四个 .git、WFCD 无图片快照），不含文档与工具",
+  "fileCount": 750,
+  "totalBytes": 674590772,
+  "files": [
+    {
+      "path": "世界状态上游/README.md",
+      "size": 1627,
+      "sha256": "2e2697bbe4bc52c84563532c3e8e325ec2458fbdd0f5426296e91e7466596ad6"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.eslintrc",
+      "size": 213,
+      "sha256": "352eae9331508bd730cab6cb6ee1ee03d637b8158376f9cb18394376ae091b9c"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/HEAD",
+      "size": 23,
+      "sha256": "da7c541be1cff3848a9f9498155c269473651a49d9f401a69ba4107795ddd4f9"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/config",
+      "size": 315,
+      "sha256": "acf64c20f615e7bf80499d8f34aa2d3e9194af5af771e45d8ae501c93903f1f1"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/description",
+      "size": 73,
+      "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/applypatch-msg.sample",
+      "size": 478,
+      "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/commit-msg.sample",
+      "size": 896,
+      "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/fsmonitor-watchman.sample",
+      "size": 4726,
+      "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/post-update.sample",
+      "size": 189,
+      "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/pre-applypatch.sample",
+      "size": 424,
+      "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/pre-commit.sample",
+      "size": 1649,
+      "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/pre-merge-commit.sample",
+      "size": 416,
+      "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/pre-push.sample",
+      "size": 1374,
+      "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/pre-rebase.sample",
+      "size": 4898,
+      "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/pre-receive.sample",
+      "size": 544,
+      "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/prepare-commit-msg.sample",
+      "size": 1492,
+      "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/push-to-checkout.sample",
+      "size": 2783,
+      "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/sendemail-validate.sample",
+      "size": 2308,
+      "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/hooks/update.sample",
+      "size": 3650,
+      "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/index",
+      "size": 5055,
+      "sha256": "1c425a98d170ba12076e608118eaf49722793944343d54c75ffbc0bab3674d46"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/info/exclude",
+      "size": 240,
+      "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/logs/HEAD",
+      "size": 187,
+      "sha256": "a9bd17e2edb899e9e3d79f369bff056654ca2f0a107a52c295eca8e104a7a213"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/logs/refs/heads/senpai",
+      "size": 187,
+      "sha256": "a9bd17e2edb899e9e3d79f369bff056654ca2f0a107a52c295eca8e104a7a213"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/logs/refs/remotes/origin/HEAD",
+      "size": 187,
+      "sha256": "a9bd17e2edb899e9e3d79f369bff056654ca2f0a107a52c295eca8e104a7a213"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/objects/pack/pack-31651fdedec687609d36ad8aa6339237d98b9236.idx",
+      "size": 39488,
+      "sha256": "578d977479fd9742c8bbd0bb0c732e014c9ac814e7b0d9f7f4dad8e399ef44a2"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/objects/pack/pack-31651fdedec687609d36ad8aa6339237d98b9236.pack",
+      "size": 1009060,
+      "sha256": "e3646523fc290a61c26ec6abdb44fe6298a1eb17cc8fcf001dd92c106bc9382a"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/objects/pack/pack-31651fdedec687609d36ad8aa6339237d98b9236.rev",
+      "size": 5540,
+      "sha256": "df4ef903c579deefa8e7efa91dfccd8b7a37ec4635c3b827ccbd53415d837c83"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/packed-refs",
+      "size": 114,
+      "sha256": "cc971913b80d6a509eba36e917197f933b9b79e6f014d0de5e602514b9ab9c45"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/refs/heads/senpai",
+      "size": 41,
+      "sha256": "75e1fb2029788803cfa97b2f9a1f5d67de6cc66dbb389a666d082bc7800638df"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.git/refs/remotes/origin/HEAD",
+      "size": 32,
+      "sha256": "1d801b09b275450bd96671aa098cb74597bc2878e23c84e1d0c381269e1c91cc"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.gitattributes",
+      "size": 64,
+      "sha256": "14d1349a0ceda2b7e3fb82972777bb3b06e58e615d8eba54d10643c5a4307c05"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.github/workflows/check.yml",
+      "size": 647,
+      "sha256": "bb50b905eac5efd550b864f0743ea9d72540b0f7c88a73890f1f46e9baece2ad"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/.gitignore",
+      "size": 63,
+      "sha256": "e3bd81549eace8e759acec55fd25188fc7569df7ed8a088e08222fec390ec715"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/404.php",
+      "size": 10559,
+      "sha256": "45b5f2dc5cb2f064259dba07d6580ef944f0a336b12f9ce196750be2130b755c"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/LICENSE",
+      "size": 1071,
+      "sha256": "5444583105f47c2db52eb9110ca0f1c5c92262c1c72396e6a31ac35f79ee3742"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/about.php",
+      "size": 6866,
+      "sha256": "aac519a5948b5fe51cacdcb1b0817c787e244320acb560e0b91c5100dc4c1c00"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/arbys-old.txt",
+      "size": 874773,
+      "sha256": "ba8655c641ddfb822e097adefb77061fe7278e0acc1304d948360acd600c4362"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/arbys.php",
+      "size": 6571,
+      "sha256": "365ca822a1b6b36f3ea2df2e81e4429e828d15503cf2a6d1ac0dd7d4271e5b5d"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/arbys.ts",
+      "size": 12551,
+      "sha256": "012ca8ef3176bbc2db9a88bf400d36ea8fcd87556a4c25b261fb55de8363cf37"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/arbys.txt",
+      "size": 961662,
+      "sha256": "007b46e6cf4d879e20f815ccc1e03b6dad4a58018959f8541fad37f385ee2cb4"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/color-picker.php",
+      "size": 9355,
+      "sha256": "201b4b8b9faa77d981b2d498a2dd6d155d05a7ea1eb0256aaa1f97eff802b810"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/colour-picker.html",
+      "size": 57,
+      "sha256": "0cfffdeb628075edb82637e2a73e96ba8d61fa24ceb2f9fb565c96ea9845034b"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/common.js",
+      "size": 2720,
+      "sha256": "e97fdea786deccae0665593d9f11051c92ac6a373e932dbfa7b0a14de0efe579"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/components/commonjs.html",
+      "size": 80,
+      "sha256": "79a393eb761bd8267e62065d1a0e3e1fd4eee45e1bd1c8f230befd0ad53e5959"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/components/navbar.php",
+      "size": 5981,
+      "sha256": "8f6e52e976726ec4cecc35d59f2c1bc4a1bcb80a2b44f1086195d8be2cb4bd00"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/eslint.config.js",
+      "size": 377,
+      "sha256": "ef61a0611c53395986f5ba876f52a4463349aa36ae765d3f8539468f2096370c"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/favicon.ico",
+      "size": 3381,
+      "sha256": "6d240fde5cdc6cc8fd15e5db5cdc4a5171a96f3bafa5f8fe3fe0e6f3fc08191e"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/glyphs.php",
+      "size": 5111,
+      "sha256": "cc4b59d233f3d0902abf5794c2ab4056b0dfaef67b1ea79a4b3a132685a2da4a"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/index.php",
+      "size": 1315,
+      "sha256": "4023f7c0c499977ed6e07bf993412695ada0cae50162759bca77a4e2e5a02321"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/index.ts",
+      "size": 32493,
+      "sha256": "f7d62c89c14361edfd2b41ef46ccdb8ec19a1fefcd92033970f08ef987f2f669"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/inventory.php",
+      "size": 4052,
+      "sha256": "6e715f8413d96f4b3e057dfb82daeeaa9bbf2104e687ead653ec7a39e66ee7ae"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/invigorations.php",
+      "size": 9332,
+      "sha256": "5d50474c3bb4010e9b8125800d145f4adeda0059708a94c91a97461c9f56eabc"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/kim-convo-locator.php",
+      "size": 11910,
+      "sha256": "9ed5e35874a2e839f8409294c5e90faa79f734bb44f891179d79b9a3ba9366d7"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/kimulacrum.php",
+      "size": 24224,
+      "sha256": "d1869c66974f584693cfaa7d56dceadecb48b1bcc7f9e82edd06fb2555a09ae1"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/live.php",
+      "size": 16288,
+      "sha256": "0b96592a23bb44cf306ceec4e6f9bc07e552e877100e3987beaefbd4dab31bb8"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/live.ts",
+      "size": 65692,
+      "sha256": "e73ac6fda5ee92c6b91880ef027a9cd9f648afddef24d790a8dbccd87793ae1d"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/package-lock.json",
+      "size": 47202,
+      "sha256": "4ed00490627854794d764afaaa48d44b21b0460ae8a1cb16e37d62354c37658d"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/package.json",
+      "size": 413,
+      "sha256": "10e13de286737a0315f0802eb60f2a3b181cff5f8c5c3d42a9811e4446db0fbd"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/platform-suffix.php",
+      "size": 3525,
+      "sha256": "f9c4fe08cf04cb349ee20402adad49a1d994303da657990c949af6b2b38b7b96"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/platform-suffix.pluto",
+      "size": 228,
+      "sha256": "7429ab771cfb5cce3f87ceb562de376b0b639a16911d293c0d1293c0c6311002"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/prime-vault.php",
+      "size": 1096,
+      "sha256": "52cab9d291d45e01e42dc568eab0a2bb763f63c947c80d84370ed817357794ac"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/prime-vault.ts",
+      "size": 5566,
+      "sha256": "0a53323e95ef43ce07a477cc146eefde44d0c1d3969514814d2ee26046cd2ff6"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/profile.php",
+      "size": 20144,
+      "sha256": "1f5a1bae32185f32bb34926f7fff8c066190d56839a250665851151c3250bea9"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/profile.ts",
+      "size": 28170,
+      "sha256": "d0127feca0e949b23cb050e02da27242e682e992f05a7f687f3b2aff7894b272"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/raw-data.html",
+      "size": 50,
+      "sha256": "2022c3eab78ae30d82a139579025af4843738685f0f8b6e3853145429a5b1571"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/rivencalc.php",
+      "size": 20595,
+      "sha256": "33495c8c0edb1b78d5f493f6f7205a164cc988d18b38ab9902230038bde0b81c"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/sp-incursions.txt",
+      "size": 102347,
+      "sha256": "4b8bc7e06db54bd8cb751fea2f12338ee264c55cb015c640ab2a8256391a081c"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/supplemental-data/arbyTiers.js",
+      "size": 1452,
+      "sha256": "aa25e300f709feca277b2600336a600224e63e12f0ba1f9039ad589cb156bc30"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/supplemental-data/arbyTiers.pluto",
+      "size": 1293,
+      "sha256": "8a6993a8e047d52b9575e1c0f64bb038931f5ce3343aae71ebdad069463dd3fe"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/supplemental-data/glyphs-import-generic.pluto",
+      "size": 1976,
+      "sha256": "498241d4d8408895af3212fd55910a07d49da46e6a10e4e4fbb4e5510ae9c467"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/supplemental-data/glyphs-import-glyphswf.pluto",
+      "size": 1923,
+      "sha256": "2d355eb1f9e923cf1749cf93fe118ec4e34c76adb079ebb41a7d52bb94ed2af9"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/supplemental-data/glyphs-import-wiki.pluto",
+      "size": 9238,
+      "sha256": "833da4d7bc6ebfdfb510ed9fe4bb0b2d33bd5560b8557e3a75cbde5d7124cc22"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/supplemental-data/glyphs.json",
+      "size": 108984,
+      "sha256": "64b18da17c52a6edcd7ec2edbfba5e7fc8661a57652ef11672d7dc40e808033d"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/supplemental-data/profile-[DE]Rebecca.json",
+      "size": 1320981,
+      "sha256": "f96648d3603c80168f308befcf38f8c0351cfbae28b35c4cd246bb6e698d505a"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/text-icons.php",
+      "size": 3082,
+      "sha256": "ec202048b63b6bfd6653a01a5aa58f413d2677ace02156f4ab87e9143db9f40a"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/tsconfig.json",
+      "size": 12930,
+      "sha256": "8fadc7546a2fbd0737d8fa55713952de2143656f798c945bf0688318d503339b"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/typestripped/arbys.js",
+      "size": 12198,
+      "sha256": "3d4420eb6564f5ef965c681d81f478df6c6e96b53c7fee3bfadae011dfdcba00"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/typestripped/arbys.js.map",
+      "size": 13306,
+      "sha256": "0368552fb549ad9ecf9ca31e36395f9c7e1eeb976e2426f5cd61a3d14776d61f"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/typestripped/index.js",
+      "size": 34557,
+      "sha256": "05fcdbcc414f443af22b152d59844853868c7765c32503bae484dfc0346ecbcc"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/typestripped/index.js.map",
+      "size": 27452,
+      "sha256": "ea8c8177e94b1e320cf519c319d28401811d0162d4b6f4dded0211734491a9fd"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/typestripped/live.js",
+      "size": 66441,
+      "sha256": "05a533d15f5faad70e83b3e6b825a9aaee7ea2e879ffcc1d66441b8ad66c6eb8"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/typestripped/live.js.map",
+      "size": 63465,
+      "sha256": "046bfdb1c065fe75f351eea02337a19ac45f9cef0e0e5b8c389257412dc65511"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/typestripped/prime-vault.js",
+      "size": 5018,
+      "sha256": "5edb0a73191e982981d83d597ebfcbe40a966214f1f546f84c3af64dbb2fd802"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/typestripped/prime-vault.js.map",
+      "size": 5122,
+      "sha256": "c95191ed70fc1fd91d0435b2cf9f2d40f43ab38c8d230295bdb374c3a23d4c12"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/typestripped/profile.js",
+      "size": 30868,
+      "sha256": "39c528bb17ef0cf0a6ce1fe235174f3579d5a88fc29e2d05d346d117bfe78c12"
+    },
+    {
+      "path": "世界状态上游/git/browse.wf/typestripped/profile.js.map",
+      "size": 29076,
+      "sha256": "cf6aecd5542407a53989281a3fe3bcc48ed3eb06eaaa6812cae0de22f12d9282"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/HEAD",
+      "size": 23,
+      "sha256": "da7c541be1cff3848a9f9498155c269473651a49d9f401a69ba4107795ddd4f9"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/config",
+      "size": 333,
+      "sha256": "1d2ae50ee59eb35e57df4939b4664d5e18e325882a7cac248531fb994ec8fd8a"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/description",
+      "size": 73,
+      "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/gk/config",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/applypatch-msg.sample",
+      "size": 478,
+      "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/commit-msg.sample",
+      "size": 896,
+      "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/fsmonitor-watchman.sample",
+      "size": 4726,
+      "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/post-update.sample",
+      "size": 189,
+      "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/pre-applypatch.sample",
+      "size": 424,
+      "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/pre-commit.sample",
+      "size": 1649,
+      "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/pre-merge-commit.sample",
+      "size": 416,
+      "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/pre-push.sample",
+      "size": 1374,
+      "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/pre-rebase.sample",
+      "size": 4898,
+      "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/pre-receive.sample",
+      "size": 544,
+      "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/prepare-commit-msg.sample",
+      "size": 1492,
+      "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/push-to-checkout.sample",
+      "size": 2783,
+      "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/sendemail-validate.sample",
+      "size": 2308,
+      "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/hooks/update.sample",
+      "size": 3650,
+      "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/index",
+      "size": 7147,
+      "sha256": "71e6b4b55d5a79ea745e3bf02ead0d2f0d01852dea35346dbe310fc08dacca35"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/info/exclude",
+      "size": 240,
+      "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/logs/HEAD",
+      "size": 205,
+      "sha256": "d505efc1c025167c38ba74317dbee4d92abdc47593779afa3fd56ff403b836f9"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/logs/refs/heads/senpai",
+      "size": 205,
+      "sha256": "d505efc1c025167c38ba74317dbee4d92abdc47593779afa3fd56ff403b836f9"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/logs/refs/remotes/origin/HEAD",
+      "size": 205,
+      "sha256": "d505efc1c025167c38ba74317dbee4d92abdc47593779afa3fd56ff403b836f9"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/objects/pack/pack-41c4e84d8bf043dc218e49dada693edde72edc06.idx",
+      "size": 179348,
+      "sha256": "22444c5b9e52ea04efc645416ae6a4be64d737fafb748552b9b86453227381e4"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/objects/pack/pack-41c4e84d8bf043dc218e49dada693edde72edc06.pack",
+      "size": 119714449,
+      "sha256": "2067b6322a37bb3e67bb928bcb98781cfba45a15ca26c500134bbce25aeb9217"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/objects/pack/pack-41c4e84d8bf043dc218e49dada693edde72edc06.rev",
+      "size": 25520,
+      "sha256": "f5ab6990d03f8645a19dab33e09c6a5a4f2decd157b7e1ff071202e3ae65bca4"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/packed-refs",
+      "size": 8257,
+      "sha256": "8c153e6dc2c996964e3c74254ff3b2bc788b99afba4a854ed0bfa89609adaa31"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/refs/heads/senpai",
+      "size": 41,
+      "sha256": "66f8c47741c0efe7eb9f105965c82a6ad65377739694f5161133ed3ebd2f3257"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.git/refs/remotes/origin/HEAD",
+      "size": 32,
+      "sha256": "1d801b09b275450bd96671aa098cb74597bc2878e23c84e1d0c381269e1c91cc"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.gitattributes",
+      "size": 57,
+      "sha256": "ad29ee66647a3d3f1ae799a19af815428374f7c2bffa49a12d398e096582e703"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.github/workflows/validate-typings.yml",
+      "size": 294,
+      "sha256": "fff5ca146fd6a8a984cc75598cf61289139df27e793b67a73b363508c285581b"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/.gitignore",
+      "size": 63,
+      "sha256": "6e6d1720cf88bbe322582fe52948234a064957d824993a6d99ee27a7d9b2b3e0"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/CONTRIBUTING.md",
+      "size": 284,
+      "sha256": "3bb62aef4b281002f8c12075cf2a2191f8553a6e1549e5767ad8c41b92ef9760"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportAbilities.json",
+      "size": 23196,
+      "sha256": "bfdda0312f2f22a03afaf1ab81fa8cc0117897adabeb45a6fd5a9018e3857f16"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportAchievements.json",
+      "size": 103201,
+      "sha256": "01a8a8dc91c901ce551c0ec458954ce59094b4ce13722c867b30daa897cb9f48"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportAnimals.json",
+      "size": 83761,
+      "sha256": "855776772371a23e6e383e16d37e8b74f6444d05cd6ecf44194ac97710f0344e"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportArcanes.json",
+      "size": 581835,
+      "sha256": "8bec9449651e3d16a989c29584c4d5bba1c669a3633acf1667777c58e2d1530e"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportAvionics.json",
+      "size": 31128,
+      "sha256": "f7b1b96a4466bc02beb49be27d15f3f40dba4d3dbe205e627b0fcb78ae31d5f7"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportBoosterPacks.json",
+      "size": 482637,
+      "sha256": "59b8b350b55f128cd552e78b2d6167b8bce4767e9c8dca3b1d1a3b16ee6a7898"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportBoosters.json",
+      "size": 4063,
+      "sha256": "2c222c49a72a8f52a87bfb1885435ca8e005e0393b23615d3fa220f1dbc5c116"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportBounties.json",
+      "size": 98349,
+      "sha256": "a53d295991e51b2c28ac1af428a417b19f0f06d458ef779e91d4479a668b9a8b"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportBundles.json",
+      "size": 1426154,
+      "sha256": "2396b94d6fb1cec4a7a20c48ae579ce91aab57fe703dc3ccc08017df892f995d"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportChallenges.json",
+      "size": 248156,
+      "sha256": "38dec5c4675b4c96aa2c819bace51d13c3861c396d7261a59b1e8cd323c1816c"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportCodex.json",
+      "size": 183097,
+      "sha256": "6ace332b6369d358454a43612994051c7c49b63ae114163819318e74501e3c5f"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportCreditBundles.json",
+      "size": 6280,
+      "sha256": "d331559e989fa65dc41b65bb24637752a68d33b553f3f2b4902cfa3e1bf2911a"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportCustoms.json",
+      "size": 2343784,
+      "sha256": "463bfc2b00a5fac9e832a64a2c1d92d0d4a1aa45c1ddbd24658d09c0b384734e"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportDojoRecipes.json",
+      "size": 3838267,
+      "sha256": "80a4ac52916ce5ee0f1a4c828ceb328d58c3b98a4d790146b3cfc6c5f3b68ca1"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportDrones.json",
+      "size": 4450,
+      "sha256": "000da15ed0197f2d497bacfd6a2d67a0274c01b238c6a1ba74da24dae70bcd01"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportEmailItems.json",
+      "size": 33288,
+      "sha256": "4ca4008772d49ca3d191954ca9b74c15f724e306c7b0e0b25ce67e84b2f35289"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportEnemies.json",
+      "size": 5784048,
+      "sha256": "7328d7f92a5df9b0ce646d8cfbe56dab7bb05ff4e070c634bdefb1f290921dda"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportFactions.json",
+      "size": 1175,
+      "sha256": "fc940c5432724bfff0d02902373ec0cdd7cb0bdca2735489b547d75ad7b5a7ea"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportFlavour.json",
+      "size": 1693244,
+      "sha256": "b21fe8f9404a97fc5cb3c21e48bf6051c6357d876ec9959faa5e4ed3c50b30ab"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportFocusUpgrades.json",
+      "size": 91701,
+      "sha256": "d1b8bba034e56eaf29819dec727e899ad14413add87357099f532788c4bc7256"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportFusionBundles.json",
+      "size": 16128,
+      "sha256": "f831834c4d5a8b183ee15c33532bf3327b03916852e277ec76c4f3f160b2c52e"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportGear.json",
+      "size": 80419,
+      "sha256": "023c7912655f76d6bf6f64b6afcbe089f63ee38c9fd736415af6bab8a52ca91b"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportImages.json",
+      "size": 1782911,
+      "sha256": "fdce85c475a60a879c8a26526e37c8cc50af62fee3d87fde3d9842e98acd6101"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportIntrinsics.json",
+      "size": 11449,
+      "sha256": "206662b0f51af60ec69e8f1d15a4bcd7c830a23037fa13135a82b57d3cc47648"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportKeys.json",
+      "size": 358655,
+      "sha256": "dbb8053270ba44a40c7105aaafbbf4841a2d6c704d1d719a7661713f302da17c"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportMissionTypes.json",
+      "size": 4708,
+      "sha256": "886768768dce18c70bd92acc58e77accd78dc8f22f17199e7dd45bef71eea847"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportModSet.json",
+      "size": 10616,
+      "sha256": "512831e3e639ccf56a5ce4291caf131431befc44aa62bce284a549cd006f7d95"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportNightwave.json",
+      "size": 209447,
+      "sha256": "ea0f5ed496f4a98f0f30f2a74bfd406ae8235ff3498195d1e60ceb661e7680bf"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportRailjackWeapons.json",
+      "size": 301190,
+      "sha256": "6e5e23c07067144faa8ef54df8b32c798cd7533d4ae9ebfdef834845b613e104"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportRecipes.json",
+      "size": 1945894,
+      "sha256": "6c4437137302d17f2b7848e6e4ce5a39aa6da9d87862ee51362faa7055ef4984"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportRegions.json",
+      "size": 472559,
+      "sha256": "56baa9b44520e1cadb4e045dd3af065edf8f15287257e4b3f48a40d153822072"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportRelics.json",
+      "size": 1502222,
+      "sha256": "bd90729e2ca97cc7cce3a128771581db68ef89f19b8e4f891b07e8483ac41299"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportResources.json",
+      "size": 2140337,
+      "sha256": "27263bfcc4b35909b88fadf90ba838f877e7aaeb49a4441505d459354a9cc855"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportRewards.json",
+      "size": 2346587,
+      "sha256": "8dc2f72831a49a1a9c0306ef92932562e510f9bb9b8dffc872239476974ef524"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportSentinels.json",
+      "size": 39389,
+      "sha256": "aed4f77404508dc57406d471a8a7a60f880ae62c197c223a8be8b8ecc907dfa0"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportSyndicates.json",
+      "size": 1989103,
+      "sha256": "f6311abaf009a1e88862b7744d0e08e71982e5023ee6988e1139d30f12a65f3d"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportSystems.json",
+      "size": 26147,
+      "sha256": "9747f84c8ce5953d7d7129fa13a52989a8255e1c06db43d9d42ffdbf0d255707"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportTextIcons.json",
+      "size": 94264,
+      "sha256": "e156ee252e9d53c4c8a3fa666bab410ea237e803db8e10eb05ca77340b7fd46f"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportTilesets.json",
+      "size": 80448,
+      "sha256": "2c49f2a5874b17134280df8f6deb8be9e81e1b6d503f44d129c5bc38b95ccc19"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportUpgrades.json",
+      "size": 1485682,
+      "sha256": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportVendors.json",
+      "size": 2824631,
+      "sha256": "5dbcc887574dd15f7a8d59c14a1ac9dc1beceb999f9643909942cc21c872b7fc"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportVirtuals.json",
+      "size": 27459,
+      "sha256": "d96264c584a32cb617185e41544342675437521db97d3639850458b0e8804473"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportWarframes.json",
+      "size": 321525,
+      "sha256": "bc2cd57ac43a3983aed93b6efd380060215e0843399760c4d0944ea8250ad4b0"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/ExportWeapons.json",
+      "size": 1627082,
+      "sha256": "a0fe031227c3cf903230b79672d75dc8873364353666e277d5894526118b6c63"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/README.md",
+      "size": 4813,
+      "sha256": "4fad7a47ef77d6698f25a424ac2fc4373e8a9d3af741f4c1ad9c88a0c20ad347"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.de.json",
+      "size": 4115356,
+      "sha256": "27b90f9795b5a76dd2a7427dee64a4dfbf18c0a9b3402a4fd07b8108d14d1346"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.en.json",
+      "size": 3872676,
+      "sha256": "ab82babcde2cb4b2c741d33db1d99b4a523695988768a8cc91d7d6b9465ae9d0"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.es.json",
+      "size": 4154869,
+      "sha256": "55e32260a545bcc24a3ed6febb82133b55eb998eed3c3baab1c8c8a5f7f328b5"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.fr.json",
+      "size": 4161074,
+      "sha256": "726e409342952b1b1a67f8629ea00e6aca999d5359081a2039c8943a24553ebc"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.it.json",
+      "size": 4060269,
+      "sha256": "c889eebaee2a85a58c91637944c49df8a8456ffc6e4953062920dc50138bcec0"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.ja.json",
+      "size": 4310462,
+      "sha256": "288b771b9458eafad1b253365b24bc42e7268e59956b6416e07fbcf4d0913c79"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.ko.json",
+      "size": 4542591,
+      "sha256": "cb9ff3d336b12e8aaa9ae2e0d710ff1968265623f0a392840d5aa1f6989d8d7f"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.pl.json",
+      "size": 4071525,
+      "sha256": "20ea489400f815a855ad6d5d65e7aba33934314b6641e282acd85cc3b84e6c73"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.pt.json",
+      "size": 4130029,
+      "sha256": "3de14478665b66ec3efc237b8bfb780bc36e542abae557b9a2ebf4fd7c7718d0"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.ru.json",
+      "size": 5408693,
+      "sha256": "73358148649e4b4d64fa00394fff7ae0491fe78ebbcf1f3c15fdbf26de6ccb26"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.tc.json",
+      "size": 3856982,
+      "sha256": "9e4776fd0c1ea289bf0edb38c41f2f218f731087fec0f0ce928c407a609284aa"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.th.json",
+      "size": 6327943,
+      "sha256": "94833aa49b5471477a9fe1a01b527be8bb8ac75eb5fc75d47fc6a7f3d3b663f8"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.tr.json",
+      "size": 4057545,
+      "sha256": "630de589616ecafd8dc221806b364f4c62a98484f292f658b1834e640c06c6aa"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.uk.json",
+      "size": 5361030,
+      "sha256": "380ab1858f8f919720a3c783f6d49679c37ef2b4887db634e42436816a7af76a"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/dict.zh.json",
+      "size": 3869431,
+      "sha256": "d12114e0351d675bf1d189f7b710688d056979a2fbdf1a6d8a3d46bbaa3427e8"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/index.d.ts",
+      "size": 33816,
+      "sha256": "1c6e82af6987a5b0a1198bb4898820a5bc2faa2de3a65d89f9639e388acdcfad"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/index.js",
+      "size": 4115,
+      "sha256": "8258ae2aba4944d0b52bbb0363eb4602bf60a3b22af74e578bdc29b54124eb13"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/index.mjs",
+      "size": 1141,
+      "sha256": "04b55265fc1133113c26532f3ab5bbf8c444663594f82a31500fc56e75701495"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/package-lock.json",
+      "size": 43581,
+      "sha256": "e45b848881b06d4502ef5833bc451644a0b409bdadae0b8386b2e9893d628628"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/package.json",
+      "size": 402,
+      "sha256": "957651e3b0b39dd6df1ac8a2adae72f16b635468c2c78574b091ddb965823c6b"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/supplementals/getScaledPowersuitValues.js",
+      "size": 1139,
+      "sha256": "134d2a42f28f0131f34b4db7a03ef12562af840d88f2fe61148dca7bced7ce7b"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/supplementals/getScaledPowersuitValues.pluto",
+      "size": 697,
+      "sha256": "a36d8bab33e0f5257404e18b98987624f0b08e8851b33f26de00c4b7ce53dbac"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/supplementals/languages.csv",
+      "size": 403,
+      "sha256": "6f1ac31bb358789f6c692e855b3e19e96fd2bc9ad6b8dcdc58f5b4776126596c"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/supplementals/relic-chances.pluto",
+      "size": 1032,
+      "sha256": "94608a0477ad4fc5d8c1544056f08086541de7b92281838c968c17c1c493b06c"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/supplementals/riven_unrollables.json",
+      "size": 48864,
+      "sha256": "c8c3f1ee16aca16b0dd739d1242e370b8babe85d02130fbd357b9d80558655ce"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/supplementals/syndicate-logo.html",
+      "size": 1514,
+      "sha256": "760e111d6d8ba7d57b6e71f69ef35000268ee7ed578992d07f6ed6169b44444c"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/supplementals/util.wasm",
+      "size": 781,
+      "sha256": "e7268d1abc33b23159cc5ecc1e0e0c72ad4d23e99ba77ecb9e0b430c99ff5251"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/supplementals/util.wat",
+      "size": 9792,
+      "sha256": "d1330427e19fc3e202336aa49bc73912983394cfe6df3e1cd5bf3f42fefe767f"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/supplementals/weapons-graph.pluto",
+      "size": 1518,
+      "sha256": "a21edbf981c3d805bfb32f86e4bd2e50629dbfbb3cca530a1b0e5f8258c7eeba"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/supplementals/weight-calc.pluto",
+      "size": 1314,
+      "sha256": "317a415c1a2fcafec23085e883b8088906d22cc1bb235cb5119a44c15b7491de"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/validate-keys.pluto",
+      "size": 567,
+      "sha256": "e1914c41047ee73d99e9a6ad980b326922db5fba554b135388095dbe8d1ab1f8"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus/validate-typings.js",
+      "size": 1804,
+      "sha256": "8dc5cb5f7dc0c2c1bddeda231dbc83b694bba6c645534f5b2ac9b68ea9c75e5c"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/HEAD",
+      "size": 23,
+      "sha256": "da7c541be1cff3848a9f9498155c269473651a49d9f401a69ba4107795ddd4f9"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/config",
+      "size": 337,
+      "sha256": "013437d8eae6e45671cd9a02202f1f4f5c36a60dcce1d748972a74cc3c3352f7"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/description",
+      "size": 73,
+      "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/applypatch-msg.sample",
+      "size": 478,
+      "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/commit-msg.sample",
+      "size": 896,
+      "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/fsmonitor-watchman.sample",
+      "size": 4726,
+      "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/post-update.sample",
+      "size": 189,
+      "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/pre-applypatch.sample",
+      "size": 424,
+      "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/pre-commit.sample",
+      "size": 1649,
+      "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/pre-merge-commit.sample",
+      "size": 416,
+      "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/pre-push.sample",
+      "size": 1374,
+      "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/pre-rebase.sample",
+      "size": 4898,
+      "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/pre-receive.sample",
+      "size": 544,
+      "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/prepare-commit-msg.sample",
+      "size": 1492,
+      "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/push-to-checkout.sample",
+      "size": 2783,
+      "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/sendemail-validate.sample",
+      "size": 2308,
+      "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/hooks/update.sample",
+      "size": 3650,
+      "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/index",
+      "size": 3459,
+      "sha256": "c2d717a800e79fbaf4424ea6bd31ad3c9ba3a657ff19f1b5346fd9b05d169e78"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/info/exclude",
+      "size": 240,
+      "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/logs/HEAD",
+      "size": 209,
+      "sha256": "3d077773e4cbb6d39b4a1ab4c1984bfa854717ac39aeced8cddc6d2bd42d9ea2"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/logs/refs/heads/senpai",
+      "size": 209,
+      "sha256": "3d077773e4cbb6d39b4a1ab4c1984bfa854717ac39aeced8cddc6d2bd42d9ea2"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/logs/refs/remotes/origin/HEAD",
+      "size": 209,
+      "sha256": "3d077773e4cbb6d39b4a1ab4c1984bfa854717ac39aeced8cddc6d2bd42d9ea2"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/objects/pack/pack-1739d7df9981955ca62b366d6e1caf244249ff8a.idx",
+      "size": 9080,
+      "sha256": "eab227cd44cc058e52a200a9ff045296b603fdd39c21bca2277deec73e57ebf7"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/objects/pack/pack-1739d7df9981955ca62b366d6e1caf244249ff8a.pack",
+      "size": 3869707,
+      "sha256": "a96c8f44a8fcd8bd7767c2fb01caadda820ce7fe9044a5acdd8ce5c5aec718ff"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/objects/pack/pack-1739d7df9981955ca62b366d6e1caf244249ff8a.rev",
+      "size": 1196,
+      "sha256": "b8bfd9f44d42634460717cea5bca3327ba2c956cf97495c5beb4d17b85e23a6e"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/packed-refs",
+      "size": 114,
+      "sha256": "c33a0e4ec866786a37a89387a4ce145e48d494be3651924d5828255d3e7a130e"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/refs/heads/senpai",
+      "size": 41,
+      "sha256": "7d628a9c4eeea4f7efc2a1999c51965e82e8d447bee32eb5e7ee0d7fc6e55d22"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.git/refs/remotes/origin/HEAD",
+      "size": 32,
+      "sha256": "1d801b09b275450bd96671aa098cb74597bc2878e23c84e1d0c381269e1c91cc"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.gitattributes",
+      "size": 93,
+      "sha256": "5c179dde7720825e362c02b5daedf150c8df2860d264701a54d68c2136d1b39f"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/.gitignore",
+      "size": 86,
+      "sha256": "3f8ed889cedcf156669b5cfbd1a51c88fbb0a2367323c05e74b7d9669a7b0036"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/DropTables.lua",
+      "size": 889429,
+      "sha256": "b223bc999ca404f1fed58fe93ed08654d171c9d284b9c5ce727e8f037351a01a"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/ExportCodex.json",
+      "size": 128967,
+      "sha256": "bca7f4fae93634206abe9fe95c2470edffeaed9eeb514f6318b82eaf65238b51"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/ExportUpgrades-missing.json",
+      "size": 3096,
+      "sha256": "c82fbcc08954f6ab194b96f1d6635eb02648cba4d6d22a6b065d13776a6ddb33"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/Missions.lua",
+      "size": 173712,
+      "sha256": "dea0b4eb79d118b1dee3d7f782ed2cabfd33ade31e34cc459e1e6810a92229c5"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/Warframe-Exporter-CLI_Windows.exe",
+      "size": 1744896,
+      "sha256": "17105d912343d6f432f423e612e3bbb3d217512848f6c2ad72bc7bac5874ac58"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/datafiles/_extract.bat",
+      "size": 614,
+      "sha256": "ca179861825dde0ea3f37cae056620a275e9fc1906c026823ffa3cbb6996cebe"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/datafiles/bin2json.exe",
+      "size": 350208,
+      "sha256": "cda49a48481133e379d0e673d2f40954efef59c0f9d6740f4406006edd6bf47e"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/datafiles/jsonify.pluto",
+      "size": 291,
+      "sha256": "d659fadc2ad7fccd4805ff0cb8d3ef7dd2dd9255d3db2cf1ce821034c4f721fe"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/droptables.html",
+      "size": 4420888,
+      "sha256": "04979aca211a64fe3a67a82fbd35ab2f85bffb01c89f8f423da1a6310f199060"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/droptables_upd.pluto",
+      "size": 7500,
+      "sha256": "c4ca114c4b1c178d789f73cfb2f1f55484dcd7a36ae15d8af8e3113d78485dda"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/eFaction.json",
+      "size": 968,
+      "sha256": "376b70c2a51133d387c08ee2e373a8d1bd6cf1c35b2401f6c880ea61a5a981c0"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/eMissionType.json",
+      "size": 3945,
+      "sha256": "0ae5a2cc8126d7ae339a4b8a55c855e78237d06b644e4002b975fdd7c312778a"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/forum-glyphs-ok.cat.txt",
+      "size": 176705,
+      "sha256": "121f23d7c37907619524d79321cd6c45b1082e03d939eb62cce79a9209324ac1"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/gifting-bonuses.json",
+      "size": 2869,
+      "sha256": "4254d848f9b34f858ca755472705ac7b64ae1ff4fb9e03e471a8b3b8f427d0ee"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/materials/extract.bat",
+      "size": 327,
+      "sha256": "0483b17c68c1c071e1f92d083dbef25b7042273d81d8407fe6e4bcfa03b9a6d6"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/palettes.json",
+      "size": 296278,
+      "sha256": "baf246f3894240cac30fe6221f73fe7de1045ceb10e70a0cf9bbf6f50cde5000"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/resource-supplementals.json",
+      "size": 7997,
+      "sha256": "fc22d65a44d63664790c8e1847726a6a595e23b119182940caec64604618539f"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/scripts/Export Codex.pluto",
+      "size": 731,
+      "sha256": "1eb62c594222e1a0acee362ae58d5d9901835a838ea8b7178fe58dce827bae30"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/scripts/Export Gifting Bonuses.pluto",
+      "size": 316,
+      "sha256": "57b1f29c858cf58c737a01738a32bc19b218caf9f8d0704bf95c896c39490267"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/scripts/Export Regions.pluto",
+      "size": 853,
+      "sha256": "de58146894039525ebfb72acb32274cbc26bef9b409334af4fcd2ef916c9d1c6"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/scripts/Export Resource Supplementals.pluto",
+      "size": 972,
+      "sha256": "469a7625990d49399c9567a4dd9c0276dfee6d1ff99aad54ac82dd2abd2ce265"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/scripts/Export Sectors.pluto",
+      "size": 3223,
+      "sha256": "5d822708e4644a60221f1f493aae4239cd879ceb21a9d11c7c83de630fa851bb"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/starchart-export.json",
+      "size": 276939,
+      "sha256": "dbbd21afc1dc1ece7bbdf5c1af96bc91ea6203bec7b92991a81024e620cff820"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+      "size": 968530,
+      "sha256": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/wiki/Version.lua",
+      "size": 713590,
+      "sha256": "e9c9acfab91689c89f9a168064ca9cfe394bd75bdaffaaaef61f2e36b290058d"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/wiki/Void.lua",
+      "size": 497260,
+      "sha256": "4a6671824128a12320067203de375a2db5e060ae7b5936851d3afdf06961f169"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/wiki/Warframes.lua",
+      "size": 165128,
+      "sha256": "875ffaab0268127d2b15f097cc8d0115d398f4651cfb71212ead278e9808c2a9"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/wiki/Weapons/melee.lua",
+      "size": 482963,
+      "sha256": "58a65f1bfc06819841b769ea8bf204c88a2b819da4b4c5d78fbfec79189e7f8c"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/wiki/Weapons/primary.lua",
+      "size": 347069,
+      "sha256": "080f1d6881e4166eaf64b8e8f6d0af05dd92ca7fb9d07eb9dc7586460497c883"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/extras/wiki/Weapons/secondary.lua",
+      "size": 238950,
+      "sha256": "49c026b478dd18f9237d348a6469b9e45b5af511600c0f8c7ca94d6f041ea381"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/index.pluto",
+      "size": 216958,
+      "sha256": "81d44cde31e0335e7216ddcdb5a635e4478afd04ad1f504b23f923968ece4c5d"
+    },
+    {
+      "path": "世界状态上游/git/warframe-public-export-plus-gen/validate-scaled-values.js",
+      "size": 1352,
+      "sha256": "380e9288fbb79c30affa71a4830f9489a6c34c9c228b7c5ce2e9142912ea4508"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/HEAD",
+      "size": 23,
+      "sha256": "da7c541be1cff3848a9f9498155c269473651a49d9f401a69ba4107795ddd4f9"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/config",
+      "size": 322,
+      "sha256": "aa6f0258f4c02eb4bef947c5dbd22167e5e83ce8c7448b4456649484ab7ac2cb"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/description",
+      "size": 73,
+      "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/applypatch-msg.sample",
+      "size": 478,
+      "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/commit-msg.sample",
+      "size": 896,
+      "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/fsmonitor-watchman.sample",
+      "size": 4726,
+      "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/post-update.sample",
+      "size": 189,
+      "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/pre-applypatch.sample",
+      "size": 424,
+      "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/pre-commit.sample",
+      "size": 1649,
+      "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/pre-merge-commit.sample",
+      "size": 416,
+      "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/pre-push.sample",
+      "size": 1374,
+      "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/pre-rebase.sample",
+      "size": 4898,
+      "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/pre-receive.sample",
+      "size": 544,
+      "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/prepare-commit-msg.sample",
+      "size": 1492,
+      "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/push-to-checkout.sample",
+      "size": 2783,
+      "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/sendemail-validate.sample",
+      "size": 2308,
+      "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/hooks/update.sample",
+      "size": 3650,
+      "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/index",
+      "size": 3460,
+      "sha256": "a5b3c17675ae9cb34dc12ff3c4424217ec4fa7b92145e703f3daff710a30c5c9"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/info/exclude",
+      "size": 240,
+      "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/logs/HEAD",
+      "size": 194,
+      "sha256": "6194c1c1676c6bff2712122debcdcc990d4abf17946239720c7c0c493a63db85"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/logs/refs/heads/senpai",
+      "size": 194,
+      "sha256": "6194c1c1676c6bff2712122debcdcc990d4abf17946239720c7c0c493a63db85"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/logs/refs/remotes/origin/HEAD",
+      "size": 194,
+      "sha256": "6194c1c1676c6bff2712122debcdcc990d4abf17946239720c7c0c493a63db85"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/objects/pack/pack-2a245761606417ede79635f1de160405fb5c2ef0.idx",
+      "size": 2640,
+      "sha256": "a68d9d6a087bdc7bee033bfb7d72a4e76540c0814d86ef9c90f96123da900bff"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/objects/pack/pack-2a245761606417ede79635f1de160405fb5c2ef0.pack",
+      "size": 1249085,
+      "sha256": "628fd039a91e5419d00c6d60c1167b7b1f44021874b5e384b419a0ca14b03f20"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/objects/pack/pack-2a245761606417ede79635f1de160405fb5c2ef0.rev",
+      "size": 276,
+      "sha256": "15aaa10b2e14234c9b84e40788cd77a12c46e7361f1bdb99e924eb726423888f"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/packed-refs",
+      "size": 114,
+      "sha256": "f6d020a4f360545d6d4dea19eb3cf10f6256ddbf619d0bc609b55eefb4a92d48"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/refs/heads/senpai",
+      "size": 41,
+      "sha256": "8033e031131bef1fe847ff0df9f084ffccd775e6d880f0ec9c4821f7e1f296bb"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.git/refs/remotes/origin/HEAD",
+      "size": 32,
+      "sha256": "1d801b09b275450bd96671aa098cb74597bc2878e23c84e1d0c381269e1c91cc"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.gitattributes",
+      "size": 30,
+      "sha256": "aca8a0692e3463a31cad2454c073afb73b2287ef6acd0a8e501b4688e7d6df84"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/.gitignore",
+      "size": 36,
+      "sha256": "cef9f72c1a386156a66c54880580cf9f3e60d26cc4fd24c618eb46068489edb4"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/README.md",
+      "size": 919,
+      "sha256": "458d5e083237d87286f99ba3e2f009dbdf72dee82e8ca81648fa6a22f152ff1c"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/arbitration.pluto",
+      "size": 440,
+      "sha256": "53c63205b8d9dc92ec98a4e7b38d81a6e0d2e43ec6cb10fa0696bb1a599596b0"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/bounty-cycle.pluto",
+      "size": 7122,
+      "sha256": "5f08f0523b2096a3338148fb5143f88214aefe6bbb5051823a79408cabd08dff"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/data/EidolonJobManifest.json",
+      "size": 9054,
+      "sha256": "3100a7d62ece1436b38ed3e069a94642ee237aee840f837d5d8618400e197269"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/data/EntratiLabsJobManifest.json",
+      "size": 33690,
+      "sha256": "bca7f7c2914e9cf08fb721aaae55729f91545511933929980ca49ed6330d33b5"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/data/ExportMissionTypes.json",
+      "size": 4369,
+      "sha256": "d6a517fa5b94a546a1b660f1590717b1f3baef4b853d85ff98928cd4fd427061"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/data/MicroplanetJobManifest.json",
+      "size": 10977,
+      "sha256": "8d5b40b680370ab8c218755530c2487d20fd4f203aa6f995e0eaa9c89159eb07"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/data/VenusJobManifest.json",
+      "size": 21639,
+      "sha256": "40a07ba7442d99f728be3d66f980c91f907153f6799a920d3e693e733ff72dd8"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/data/WF1999JobManifest.json",
+      "size": 30257,
+      "sha256": "300455cbda6b33264549fd84cd11543219ca2c6bb223bc7c466e5982b67762ef"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/data/ZarimanJobManifest.json",
+      "size": 31193,
+      "sha256": "4f9065a43fd2d8401d663cf030a3dd257035dd3a72d9c8033eb3fc4fdbc4bd0c"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/de.json",
+      "size": 27225,
+      "sha256": "6a54378e546c274b0f5cfe1a6083a65da42441b5507d042e38fa4f187c4c3830"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/en.json",
+      "size": 25290,
+      "sha256": "b5ebdfd97e21d88ba48e82ebc904f434eac522072eb9e03247c7db2a7bca31d9"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/es.json",
+      "size": 27339,
+      "sha256": "0d371d03122d2aa1585d2d60770cc6405e60274a2581c2d36ed628b62b4333c2"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/fr.json",
+      "size": 28162,
+      "sha256": "28d48d2bea6d1459c5f5d6b916b469393738fd31e4de212dc4aa3ab927fcae8b"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/it.json",
+      "size": 27076,
+      "sha256": "4abb8d1db95874c2b84accf2f2ddeec9de7dec02f483bf463d678fafea06478e"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/ja.json",
+      "size": 28054,
+      "sha256": "fbb9d2d924c27fe720a392f275d1b120f9f66b496621bc7615d43b8dc4de069a"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/ko.json",
+      "size": 29004,
+      "sha256": "235f090c87674d9d03bd85fc7ea3208422f6e645bbd0ba7c74137a4ece28ccc0"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/pl.json",
+      "size": 26942,
+      "sha256": "7b4630712073472cffb9fb122a5365567604dc04586aa80ed5250ea592a328f6"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/pt.json",
+      "size": 27481,
+      "sha256": "e91be8b508756c0461f2f2c2f108e02c59154a3d1de8692f39a76401c9a0f30a"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/ru.json",
+      "size": 35769,
+      "sha256": "0a07c95a60405222f22797b89702b7b82fd098b73aad81e618b5c45fc594cf7e"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/tc.json",
+      "size": 24654,
+      "sha256": "29a9c9475f20025fd68e6964aeca5366d01b38e8ec410a604b107ef0cb863ae7"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/th.json",
+      "size": 39795,
+      "sha256": "1d2a4f94d013c904c7e0f7256a3843f27f876a5a6ad61ce8b2dee326ada7933e"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/tr.json",
+      "size": 27074,
+      "sha256": "16bbfa1d8c90f34b88112c6e0347ea0a2c01a2dcdecfec74b7b8744610bd21dd"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/uk.json",
+      "size": 35059,
+      "sha256": "bf8f520e4e0f5140e5550ceb8faa6d7723dd6fa87b84b53c52e11686946b7fdc"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/dicts/zh.json",
+      "size": 24628,
+      "sha256": "2bc399658201dc4e5e91ddc6992388b9188ee2567bd21e0db0eee5c16e58d2de"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/favicon.ico",
+      "size": 3597,
+      "sha256": "06af42394e110a0bf27d3fa0495815f47c36a22c3f4e9cb1c2d964c9eb345fc5"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/index.html",
+      "size": 1297,
+      "sha256": "e78d3f5347e4547e2d9ec53190995508973bb6fe179da71a443cc0607ed10440"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/invasions.pluto",
+      "size": 5323,
+      "sha256": "193b5176b1e5a28c7af376fde57ccd12a5552a176e472e5240fb1659ab9c5abb"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/invigorations.pluto",
+      "size": 8388,
+      "sha256": "b9b5bd22c26935b9785316b632f5e04d154e66791e59078b2e016d81ac393016"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/location-bounties.pluto",
+      "size": 2847,
+      "sha256": "ac84105dabd9b12c1008039b577409be2f78c8fde7cb3c852bc47ccb064d37a6"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/min.php",
+      "size": 2315,
+      "sha256": "10eef2ef2f59f280d6c60148b1709360607600d2a66e6645bc56c5af5fa13976"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/pluto_backend/invoke.php",
+      "size": 3763,
+      "sha256": "d6db4e5fb61abfed3658738a4536ed54e82cdffbd2918cd4435130f94f8c787f"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/pluto_backend/libpluto.so",
+      "size": 2839432,
+      "sha256": "8eaca985eb23ca32eee1fe2f0595921c9ac9b695f0aebc9320858ce818f6f7d9"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/pluto_backend/runtime.pluto",
+      "size": 738,
+      "sha256": "eebc87b88b659756a4485c6dba718c54d484afbc39e0d9a6533627859bd96733"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/pluto_backend/templating-engine.pluto",
+      "size": 1044,
+      "sha256": "0b11f139baec4f34b7194521a191025e9ff2ee9182b062fa8af49727f2d19607"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/redtext.json",
+      "size": 121174,
+      "sha256": "6a46bb1081e08a9b3b582666decc7d161ac759f151876f7580d6b94c7c817f98"
+    },
+    {
+      "path": "世界状态上游/git/wf.browse.oracle/weekly.php",
+      "size": 2662,
+      "sha256": "b25ffb9b1e5228fe5c2859ca5c9cbea17c446ffe6b1b53a23b220b680bb49b85"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_de.txt",
+      "size": 798,
+      "sha256": "eec4d119666177d542003f4057a89a5f2243dfa9ab1f39de81aaf5c0ce1a17c1"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_en.txt",
+      "size": 798,
+      "sha256": "37ce0b0ea112e2976d30fe2b86f78dde723a75926ff46c1898a0ce90f968f0b2"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_es.txt",
+      "size": 798,
+      "sha256": "b350ccb016e80eddccfd0adeb47a859f03b1399b526bbd6e6ebbf0a42ab42a96"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_fr.txt",
+      "size": 798,
+      "sha256": "1e0d5e9995eae007826b7fc8c2fcb1cfbd94943dcf4742513b88e288ae5fe187"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_it.txt",
+      "size": 798,
+      "sha256": "30fac5f78f08bbf9a92f00f47f99645390114b2f72f453b0470fe2f871203bc5"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_ja.txt",
+      "size": 798,
+      "sha256": "d472ee89c83de3d7095b50dcd74ed533d0d913359602ea4705a2d17f68e7378e"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_ko.txt",
+      "size": 798,
+      "sha256": "f809cdb2f6c5cfadffd138ff1c637aa17f8bc01a7da7e3a973f6e10d8ba58439"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_pl.txt",
+      "size": 798,
+      "sha256": "7ec863287fd03f3c69cc56784ce0885bb5332671af8cfc78f7d5afe9e9e623f1"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_pt.txt",
+      "size": 798,
+      "sha256": "0289ecfa607b4541cf59eacdfb1c8626bd1262e98d0b2d47eaaf0560e9e9e732"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_ru.txt",
+      "size": 798,
+      "sha256": "ef2c4d7cd075c77a02e0056a6a5784c717de4480dc2d567abddd114bfcbb83c2"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_tc.txt",
+      "size": 798,
+      "sha256": "c548202ce012caa829199e1d3165a8c6b74722d749e243e09142f581fabc1892"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_th.txt",
+      "size": 798,
+      "sha256": "4dd2c7d3d5c4dab6737a39ffcfde016c7efb5fe4d0fc72e5052d7b104cedcf52"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_tr.txt",
+      "size": 798,
+      "sha256": "b82010af5221dbaf491489426ce30f167e6bd5a0e278465443e877820ce512e1"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_uk.txt",
+      "size": 798,
+      "sha256": "d0a51cb57f81463b7876b41b6500ef75e62bfea11b58eceb83ccd886c04bac84"
+    },
+    {
+      "path": "世界状态上游/official-public-export/indexes/index_zh.txt",
+      "size": 798,
+      "sha256": "67aed97635b0c224e6a39d9750a045d2777e2d414f9a5995f810d34f603decb7"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_de.txt.lzma",
+      "size": 495,
+      "sha256": "e351caa179a7b004c9f3d599198afc4eddac1169ba08ad804541df69cef7b70a"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_en.txt.lzma",
+      "size": 490,
+      "sha256": "7b409ba3d4ee1cb88c119b6fde5dc29ce49b9bf9510749ccad0d1f781362b37a"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_es.txt.lzma",
+      "size": 491,
+      "sha256": "cdfe5153b06321e50480a65905069c71d2819ddde9996f3c5fe4523d0ef79ad9"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_fr.txt.lzma",
+      "size": 492,
+      "sha256": "559b2190674c1e5d1c45ef441ad0010d972638cb380fb98d19019c41db1adf29"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_it.txt.lzma",
+      "size": 493,
+      "sha256": "b805133a97f22d5ffaffb6ccd7b7e18f24ac8035b773162b63c5dc30fa5c2b87"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_ja.txt.lzma",
+      "size": 497,
+      "sha256": "14bc311716d1178a5ee772d4061c0ad0b384bb97c2c78281fc82c6d938582cbf"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_ko.txt.lzma",
+      "size": 493,
+      "sha256": "bdb02ae90fc97cc42c12aa2d3588fe780bd10c8bd88e7c6c0d31e9f86cd56d89"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_pl.txt.lzma",
+      "size": 493,
+      "sha256": "d5fee20f28f42647e2f1fb6b1cc38d805f3c33db34feb19a92db1634fd0479a2"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_pt.txt.lzma",
+      "size": 499,
+      "sha256": "335e9a2d0ee200a6052e43539e9bfad2d3d1375a0d9336afd5f4679255b16b45"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_ru.txt.lzma",
+      "size": 495,
+      "sha256": "7f1c268060eeef22984e22a954558b7f54519ec736ca4967d6c94e6233e42ca1"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_tc.txt.lzma",
+      "size": 495,
+      "sha256": "e132d7eb2a35c43b51eefafcec3ba6ff11f8110d350188f82b817153a1809e5b"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_th.txt.lzma",
+      "size": 491,
+      "sha256": "f154dfcd2d90bd739a4d7ca87aa424a9dc17eaee933518f26fab6c7b1b9349ed"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_tr.txt.lzma",
+      "size": 494,
+      "sha256": "c045af56040de0b7b526d72353325be1ca47cca5651846cec20d3f2309e8df40"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_uk.txt.lzma",
+      "size": 494,
+      "sha256": "964ec94bc0f086c011813c520405bfcd0f0c56aac3c6f5a2f7918260c9192bb2"
+    },
+    {
+      "path": "世界状态上游/official-public-export/lzma/index_zh.txt.lzma",
+      "size": 493,
+      "sha256": "f02ce88cad198d329f2b5d8aa42b51d98e8b8e787b3d144806b30536001399c4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportCustoms_de.json",
+      "size": 1249775,
+      "sha256": "ca8199fb969787b09d779ff55f33a4d622da422e47f803814a9b3745742c3cac"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportDrones_de.json",
+      "size": 3523,
+      "sha256": "33be62c15d3eef01db1c25215869e4d46f0d73202dbe38302f9096a0315b0553"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportFlavour_de.json",
+      "size": 1024469,
+      "sha256": "28c30e25620d28323ae8cd80fcd948ecf416f516dbbef31240446312a78b708e"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportFusionBundles_de.json",
+      "size": 12655,
+      "sha256": "85aef2c0d7e0dc1b968593bc4f91d87ecaa98197efe9905328a8d56880f9e8b9"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportGear_de.json",
+      "size": 67441,
+      "sha256": "950f9e6488dd8121334bdd7459b9d2ee34d9b800ad9f4f87f503d3b6b1dc447b"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportKeys_de.json",
+      "size": 16782,
+      "sha256": "be7ddf897ffd36a9dcf7a4a8dde79a5c775811d88b8631cb918972d124c91186"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportRecipes_de.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportRegions_de.json",
+      "size": 73719,
+      "sha256": "9375860ce4e4f075aad0c58e500ff1187f7a61bffad5de2f7a97fdac3f5dfd3b"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportRelicArcane_de.json",
+      "size": 4918011,
+      "sha256": "428e96040c9c7602456fb7a4423897e07cfcc250d6f3ea5b9a0bd4c8d5edbeb8"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportResources_de.json",
+      "size": 1255551,
+      "sha256": "0b9eec1449ea2bd9f9c5aacc8859f6fdc1c632ad2c5b71e0acea5a707fee12d2"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportSentinels_de.json",
+      "size": 15350,
+      "sha256": "f4bab0e66454749ba772a8db60b0e1defedcbea42c27b89dee9098232849484a"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportSortieRewards_de.json",
+      "size": 108895,
+      "sha256": "e79b4dbec1d527d21fc156cdd82d9f3aa2c523a145e21fe2ee4f036dd6e40c79"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportUpgrades_de.json",
+      "size": 4805527,
+      "sha256": "3ba1fc06b40a4c69b72ae18647942c950d3d5185d16488becdd3e758ee8fca24"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportWarframes_de.json",
+      "size": 308643,
+      "sha256": "4c949cee86ae0ba5dd0b749f8f045317d236036be654ed3cf1728a56d27ea5b3"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/de/ExportWeapons_de.json",
+      "size": 1005860,
+      "sha256": "6025b423bea60e5445c891238db46da6855f98be1c78ad0d24d0750c7b5f7024"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportCustoms_en.json",
+      "size": 1197959,
+      "sha256": "146170e8c2e0b99ca705ab7cf6591cee9ad3d017a782a8af36d6ff601f17674d"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportDrones_en.json",
+      "size": 3354,
+      "sha256": "335197edd9f775b13b47957989e29473d3ba132d24261133561e9beedf539882"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportFlavour_en.json",
+      "size": 992700,
+      "sha256": "868f7aafa24bca5632b424ce2575b3585667439e4ca178299863dcb8c122f1df"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportFusionBundles_en.json",
+      "size": 12067,
+      "sha256": "5b4e4ba28531c88a2e3811cdd46014bdba78244c642700ccf1f05614bf2987fe"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportGear_en.json",
+      "size": 63746,
+      "sha256": "c4fa7dbe5679e54c735fb377ad1e7a598034644025b4f80eb2545ee5d05b07d6"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportKeys_en.json",
+      "size": 15556,
+      "sha256": "6777aac365eebe7c0a19a4418163d826892dc9687b4a5a8597d8087635bbe51f"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportRecipes_en.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportRegions_en.json",
+      "size": 73720,
+      "sha256": "b7ba9f17beca545ee2caae0f53f4c1f8edef9ff9269a4e7de303c7aa99ae4b67"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportRelicArcane_en.json",
+      "size": 4868144,
+      "sha256": "1f9a781bb61d66bff756ab84f8bed7adc7158161e04118df7c5f66edac837289"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportResources_en.json",
+      "size": 1195720,
+      "sha256": "7b1bfbeaa800904210c24304796d87150d637856905619b1d8855b7343db2651"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportSentinels_en.json",
+      "size": 14760,
+      "sha256": "eca3669f489ac648908dbfbcffe2381ff2833b98cc823ea910c70ab0b90157ff"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportSortieRewards_en.json",
+      "size": 105570,
+      "sha256": "f7f818f9c746de83910111766f133e421638c1d74c626ed3a29c45f508c21e38"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportUpgrades_en.json",
+      "size": 4616925,
+      "sha256": "8f89b7dec792afb3951b68d26b676472677c1b004d192ff2e4d8cfb37ec78843"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportWarframes_en.json",
+      "size": 282896,
+      "sha256": "0e329e584d0a0440f34c42743708f4e0e8a0293e0cbb9ca10b50f155a14bfe2d"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/en/ExportWeapons_en.json",
+      "size": 984564,
+      "sha256": "73dd0dc246b90e87051d7675ae3d91572cc40a8fb7f8656d1510a132d55783cd"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportCustoms_es.json",
+      "size": 1256166,
+      "sha256": "ff4df9eaf4307710d3b8ddfeafee201f39c2859422ba794e944c7d210ff376c0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportDrones_es.json",
+      "size": 3510,
+      "sha256": "06a700599cc6e9f124870eb1c92ceb02b56e2cc5a4ec0a9bafbba9687302a2b8"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportFlavour_es.json",
+      "size": 1023666,
+      "sha256": "6251a1850e52fdf1bf810b3fb49f99ffdf5f8630c07cf12e6b37f407209f764a"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportFusionBundles_es.json",
+      "size": 12988,
+      "sha256": "f796e0a85b41b72c6309196f780e35ba0f29c5bb76ca9f034ac33ef4a46442fd"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportGear_es.json",
+      "size": 68781,
+      "sha256": "3d6331040d8432727819fa6f3efed1d5379f15bd96a2fb6ff0daa6ca67193d96"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportKeys_es.json",
+      "size": 16415,
+      "sha256": "761c76b7e5229a12ddc4cdf526b0b465a7e0015fac04ecdfa6fe240c65b39cd8"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportRecipes_es.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportRegions_es.json",
+      "size": 73967,
+      "sha256": "2f677cd3fcfe2b24a0a3ddbdea2f119e63c6b6b5fea092ef8f93bc4c77618b62"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportRelicArcane_es.json",
+      "size": 4923184,
+      "sha256": "14a941dba93c8da8086e5507c64006220a638618c79f67a994b3a846fd709638"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportResources_es.json",
+      "size": 1260100,
+      "sha256": "108d93b1cf423b487efe42f8cfce4dce89cf066eb64c50b47d70d436d45550f9"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportSentinels_es.json",
+      "size": 15342,
+      "sha256": "724a0d3041477a9419a7c73006ac6bbf2c2f093139f73d773283810692af2bbe"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportSortieRewards_es.json",
+      "size": 110001,
+      "sha256": "447d162a5044fddcbee3e6491ffb897c5f694743d1cfd8d9cc46e68446038b90"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportUpgrades_es.json",
+      "size": 4853240,
+      "sha256": "e93df5dca93e3d387ad78384e37ad307d45e2162b3f2ebb41d49b3356a9514c0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportWarframes_es.json",
+      "size": 307683,
+      "sha256": "4fa3e529c267ea8de9309305fbddee529ca9df34eb0e71e3e11be1639feb117d"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/es/ExportWeapons_es.json",
+      "size": 1003658,
+      "sha256": "1e17bc2b23350126e17d2fe7c67b93db55fc713c775850e6051982a022e152c5"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportCustoms_fr.json",
+      "size": 1247042,
+      "sha256": "1396534f90f4390a983846cb31a7d1e4b19edcb4be09cd8d7a29c06440919f3f"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportDrones_fr.json",
+      "size": 3666,
+      "sha256": "6c8696fdda1c195b9b12b241f1dd8ac4480c41c1ac1d859c615b2fd9157f1da4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportFlavour_fr.json",
+      "size": 1018221,
+      "sha256": "0bc9d70a63acf1b296dfa06396a82a39fc980ad96cc2f176b2f5f000baf0b4b1"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportFusionBundles_fr.json",
+      "size": 12715,
+      "sha256": "323bae041818a2a4c8135a4872a96c62b67b9902185b8a11cb9b8c0808f95caf"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportGear_fr.json",
+      "size": 69619,
+      "sha256": "33cca6757b5ebd963798294a668d5de20fe4b52ac2a72cfc661e4ded4339f172"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportKeys_fr.json",
+      "size": 16824,
+      "sha256": "c8572c32ddceb1445f5107051fbbcb7a41f502256dd56a0cdad418ac29b64d7b"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportRecipes_fr.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportRegions_fr.json",
+      "size": 73990,
+      "sha256": "aae6277ecbbd0fefbbdd080421997e1f8a0c771c5d7d93ff64b1c7644d06ac6a"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportRelicArcane_fr.json",
+      "size": 4927586,
+      "sha256": "aebb2a25cf39dfdf4e30c438ec43a01ffd3a0dc06b0dfa0f1ee618057e8c1fdd"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportResources_fr.json",
+      "size": 1269371,
+      "sha256": "14a56e2d1157d60661305c43cf8c5d1bae85934bcba550978b7c389f597ef0ac"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportSentinels_fr.json",
+      "size": 15651,
+      "sha256": "091fad1c140b4e7c34d2284f072bca7cd388861084a4f754d789b24cea0b3988"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportSortieRewards_fr.json",
+      "size": 110707,
+      "sha256": "3958b2e0825114b161165b0e36092e150fd7c7a72fa3863af21482e28a9a9e91"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportUpgrades_fr.json",
+      "size": 4872774,
+      "sha256": "2baa8b81a579fd8a5ae4dc8c0f2a00c1ded57106f4609aeb530c9bac38a753ef"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportWarframes_fr.json",
+      "size": 314948,
+      "sha256": "75fcfe21f9c55452422b9c0f38115e483c34578d0346fac6c8a12ac9d6ae87c9"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/fr/ExportWeapons_fr.json",
+      "size": 1007794,
+      "sha256": "1d150dfe21288b802f64c4006afc5fcccd75cbd1a05e9ffa3bf5b4b9aba5825c"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportCustoms_it.json",
+      "size": 1222451,
+      "sha256": "147da82a45f8e7512e9eb90d9fc17dcf772db5efb84afa5ea062154892b025ce"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportDrones_it.json",
+      "size": 3516,
+      "sha256": "c9cd5372610ee921f83afb0bb98814e7c5116c1569ed0d21e5b8b4767e443c4b"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportFlavour_it.json",
+      "size": 1006842,
+      "sha256": "18a7df6498560957e44cf30c66798c39549fa0799a1e06e7d6a7d6e18497e3e9"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportFusionBundles_it.json",
+      "size": 12418,
+      "sha256": "931bae3f1f8b06740e465ae5749a5564eff2b33079e2461374f06204f7db99af"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportGear_it.json",
+      "size": 66618,
+      "sha256": "6a347c6c8bcd771622172d5935cc6fc25201376b7a2be6b23d5e8203d5934138"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportKeys_it.json",
+      "size": 16232,
+      "sha256": "eaf1ba81356fc574cf1974295b263d7c7d008cc92632892f7b5dd9d5fc87c308"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportRecipes_it.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportRegions_it.json",
+      "size": 73837,
+      "sha256": "19c9cbf12d728e21af176698adea0ddeaa760a675cb007adbff82586dd50fc82"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportRelicArcane_it.json",
+      "size": 4915599,
+      "sha256": "0f5a0232dc621214b471881a58f989b4ec7e34933cd8d3ab8a7d639761539720"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportResources_it.json",
+      "size": 1248757,
+      "sha256": "4a2518071093a249406ea48a4866e0d5f144f4213704270dd345e342d5ba6040"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportSentinels_it.json",
+      "size": 15009,
+      "sha256": "39d6bfebe3df104a4b7d26e128b0d5ca792be14e2f358ff0ce9ae8b538fb45ca"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportSortieRewards_it.json",
+      "size": 109328,
+      "sha256": "7401828a6a83e9d0bcc6812c574e33eb84b0ea7cb6cf0af89efc9fa96a4aa78f"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportUpgrades_it.json",
+      "size": 4794805,
+      "sha256": "c6e31c6ba3f6c1d45161fb685614086282806e2f9c73b9eaae21d8144f9edf6d"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportWarframes_it.json",
+      "size": 301096,
+      "sha256": "3cf689c7fb34c089ee2ef82bc6975584a7b0aef7eea8337c800607a8f7f6c60a"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/it/ExportWeapons_it.json",
+      "size": 1002475,
+      "sha256": "e739142a149cbc397de705083affe8fa0964f6a607b6090ec42c19b8f12408d5"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportCustoms_ja.json",
+      "size": 1282018,
+      "sha256": "b7bd8cc01b636ec29311a66b1b0a8de60b935adecf2f42dfb92e3b50354f0090"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportDrones_ja.json",
+      "size": 3686,
+      "sha256": "4031dad9de0c650a9b38b024b06aed4e1c45375e373f5dbb360076a49f297e89"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportFlavour_ja.json",
+      "size": 1037694,
+      "sha256": "3a9cb665f6ac1f75dc69bb7ee011acbadfc2cc865489fa63deb1177fab0e4b16"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportFusionBundles_ja.json",
+      "size": 13543,
+      "sha256": "dcf701a151f9c096cfd1e2a636ec72ff2da1c8436ddfc3c8260de3d6871f8ad0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportGear_ja.json",
+      "size": 70971,
+      "sha256": "f65395aa5240dee0f7638928cc4ca25db862839f7e4fd4124c89d2184c36e729"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportKeys_ja.json",
+      "size": 17635,
+      "sha256": "54b0fa7505828bb86d4d6a9bee3e8112ab5a0752f7896f03bb0c9a4774e75670"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportRecipes_ja.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportRegions_ja.json",
+      "size": 74822,
+      "sha256": "6deaffce1226ee7ff178b1385dd1c48e6ff41d4a4839afc1699dabe975472346"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportRelicArcane_ja.json",
+      "size": 4926719,
+      "sha256": "b5a518804336f0146467ccc8118be6141651a85b005b643decbe51cb6f621dcf"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportResources_ja.json",
+      "size": 1293591,
+      "sha256": "821b0f8f958bd7346a628910894ecec8c5f70431efdd849f743ee4d32059b2f6"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportSentinels_ja.json",
+      "size": 16105,
+      "sha256": "f5c0d1a14bc8000e7425bf7e113f14365e8bbfd18ef1b61479b4139ae20e6d64"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportSortieRewards_ja.json",
+      "size": 113567,
+      "sha256": "67c2f421211007f6cd1f38541b92f84913f0ea8ec233f1cc4e0d61869b2d650b"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportUpgrades_ja.json",
+      "size": 4852193,
+      "sha256": "0d66d5e4a045b0bd4d88192d174ece57cd99ce310946ababa887f52b04c71922"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportWarframes_ja.json",
+      "size": 308600,
+      "sha256": "eeba6016150a8c55835715a39f5803b57ffe46518e949be30301d23b6f3e434e"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ja/ExportWeapons_ja.json",
+      "size": 1008259,
+      "sha256": "4d870d5dc6c9db9c8ff646e998a4a80ea419b713b5d93682b0a9d952accaf991"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportCustoms_ko.json",
+      "size": 1365969,
+      "sha256": "1f4f033a416b4c76c58c9bb6cba8b1ae3b9696a4a1146f3bdaf8b532afd21a43"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportDrones_ko.json",
+      "size": 3630,
+      "sha256": "aac3d827f9ae41412ff7914a00dd0273fae8e8009b23e11072726efd0e86230a"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportFlavour_ko.json",
+      "size": 1076863,
+      "sha256": "f94ca352ffbf704a135e2088a102b3ad4af8118eff924c2e75ff5084cdad0465"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportFusionBundles_ko.json",
+      "size": 13948,
+      "sha256": "53de49f7f379ecadf101aa078118d6b3ce05f4cd1e5a272c58b04fd1bb57f1dc"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportGear_ko.json",
+      "size": 72706,
+      "sha256": "11a50e1dbdac0741efeb09d60803e2de3e64e33a174aaa6ecc646feadaa48ff9"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportKeys_ko.json",
+      "size": 18599,
+      "sha256": "19fee990662876fc2f2abfd02590137f2b7c484fd60fe56077f1412650fc9b27"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportRecipes_ko.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportRegions_ko.json",
+      "size": 74555,
+      "sha256": "42a851604b4ed238997eb8e8e25b9770e1ea21f9fc5c64f31579b61e7eb56cf1"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportRelicArcane_ko.json",
+      "size": 4940821,
+      "sha256": "1234688ef669007e78248192bc882c5d4be8be9038dc27593b5c935be5a9dc7b"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportResources_ko.json",
+      "size": 1321286,
+      "sha256": "6f70357b06971242632972712187109018f945b59d7bee557e82b92b9aa19edd"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportSentinels_ko.json",
+      "size": 16619,
+      "sha256": "411a4c94a13bc2142249fecdee8c1fd816d49ed85c95ed30ad2173599dc48831"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportSortieRewards_ko.json",
+      "size": 112770,
+      "sha256": "f38e81516f29981b09f8ccaa3bf1d3491d52829ab9682b8b40741bb3e5be1299"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportUpgrades_ko.json",
+      "size": 4871697,
+      "sha256": "d371e8cc525033b1aed7b8d7915ae9db5b2ec762d66ddab4d963fc635edc3dd1"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportWarframes_ko.json",
+      "size": 341548,
+      "sha256": "7320bf1eb5e5255a10986ba26437ce66769233809c23d971b9e2588b40b1e00a"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ko/ExportWeapons_ko.json",
+      "size": 1027957,
+      "sha256": "39df2a24b7d69866a6918eed1ae9d5e4f61b28fb4e48554a65cd070b0a4e955f"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportCustoms_pl.json",
+      "size": 1230767,
+      "sha256": "60e05268a8a89887e1738219b1be0615b19810784bb0668ee0eee0f76b46b865"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportDrones_pl.json",
+      "size": 3575,
+      "sha256": "7b8036d76f8c61bb0e5277f503196b62b41e8b3d19f4b8bcd4dd295adeb04143"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportFlavour_pl.json",
+      "size": 1003373,
+      "sha256": "71f0256da3b6d336f7a4ad0fd6b9239077cca2693f311dc87ba87e982540d1d1"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportFusionBundles_pl.json",
+      "size": 12277,
+      "sha256": "c7853f18219138cd2f806de34e4782e90b6b721f52521f0b22914b7a73910803"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportGear_pl.json",
+      "size": 67102,
+      "sha256": "0f41d5b1eb268466385125df4fa029efa5fe6694ade05517820ce17898445583"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportKeys_pl.json",
+      "size": 16204,
+      "sha256": "22151e04838bc2e9cedbfc014bb86a73f330ca1544d06de0fb83eb12e1c9449f"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportRecipes_pl.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportRegions_pl.json",
+      "size": 73791,
+      "sha256": "03781d5420226caa748d62b3bb091e23a9c78a864845c4a6965145c8f9d6c0fb"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportRelicArcane_pl.json",
+      "size": 4910342,
+      "sha256": "74498f85251f356f3fff846474408cdc95e41ed4658052e5b1fe37106d4de70c"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportResources_pl.json",
+      "size": 1222496,
+      "sha256": "cfec923aeb67ff4a82fe7435385421990fac7d1d79280a696a85f498f55e0f18"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportSentinels_pl.json",
+      "size": 15040,
+      "sha256": "5da7da227fb6ba55ec5e3202a69dfe1fe430113fb5f5f02d4b64035b9629a626"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportSortieRewards_pl.json",
+      "size": 109039,
+      "sha256": "15d635c30a7ef5500a32d78888e9ef710f907f697098b7bc967094254abb1ae9"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportUpgrades_pl.json",
+      "size": 4846211,
+      "sha256": "c704e97c1c81fb96cecf2f718e3929c6016ddd566949d40c80cc8904e0a070bd"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportWarframes_pl.json",
+      "size": 305076,
+      "sha256": "13b92e084fdaf2a98a2297ddbf648a606aa8d65bb8784e4055aaba9bc4733359"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pl/ExportWeapons_pl.json",
+      "size": 1003449,
+      "sha256": "8f5b4be3a5e654eabd9bd08293a306fa3a9d20ca9ff553f5766be75b3abef616"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportCustoms_pt.json",
+      "size": 1248921,
+      "sha256": "1e273a191c492a8b886b6325bf0465b8cda3ec53a052cd8a0b3a3d13cf9ab857"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportDrones_pt.json",
+      "size": 3452,
+      "sha256": "2f5ba56786dfcd771bdb7460a68b110bae48659e81285b474396db8672ce92b5"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportFlavour_pt.json",
+      "size": 1010198,
+      "sha256": "c285ad6a69188a5143368e3aec0011a211934c9fb83f678c77bd577c934c88ae"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportFusionBundles_pt.json",
+      "size": 12436,
+      "sha256": "4adbeb5c75c50adc92560cd0f6770f9bf159a6427ab4cf3c84aa44aa05bbc342"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportGear_pt.json",
+      "size": 68481,
+      "sha256": "80ec3f8e7b43bc7e236154ca7e0c64c917f8958ad09ade00c50a5de287dc3039"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportKeys_pt.json",
+      "size": 16495,
+      "sha256": "e55e5852643792a9bf466f88af41fffefae46e1a024d06e71b6eba31672adf50"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportRecipes_pt.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportRegions_pt.json",
+      "size": 73969,
+      "sha256": "e138d6592acf31571c7b2b883f26d1676adb51fcf44363033ce3fe0a14fbf063"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportRelicArcane_pt.json",
+      "size": 4901104,
+      "sha256": "b47c9edef8bec5515ac2e9535ffa0709c99d700ee8c807b8125eb13616cce9f8"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportResources_pt.json",
+      "size": 1248417,
+      "sha256": "d49a84e5a442e3787a0d48df7b200232402f021be4835184fa4a6d13dc811ef4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportSentinels_pt.json",
+      "size": 15132,
+      "sha256": "a37ce1822eb9e530747b87a5d793d3cdddcda5a8899524d9154227f722a1f02c"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportSortieRewards_pt.json",
+      "size": 110421,
+      "sha256": "cb0c7f211a25c97f71dcc6d01daa77da1c3dfed4923079bf0a8b824780fa0b10"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportUpgrades_pt.json",
+      "size": 4862762,
+      "sha256": "2ce607abfaf50a6eb837f4f0ec5aa8940ae799546e7b8bc5d2721d01053e02a4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportWarframes_pt.json",
+      "size": 316855,
+      "sha256": "bab33a9030ceadbc818d66f3794c6987ea594ef7f4ec8aaf2c7b89b88c63e4f7"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/pt/ExportWeapons_pt.json",
+      "size": 1004626,
+      "sha256": "1719591c09fafaa886529d8ef594995f547e6a1f3d72b11f85ada5a633f0b3ef"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportCustoms_ru.json",
+      "size": 1524934,
+      "sha256": "e2ae7c5dca1781eeaa790419172cd8c40352ebbc8c6872eb45989f9c1cd58763"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportDrones_ru.json",
+      "size": 4713,
+      "sha256": "b154a787005993fbe9c675e09d3d8461aea09af60245e001bb8f5d50a8bc4ca5"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportFlavour_ru.json",
+      "size": 1146933,
+      "sha256": "d0213630dd77dc29dcb887baff6a5d7b919ad6ab3e8c77c67f710cf04e8b9636"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportFusionBundles_ru.json",
+      "size": 14341,
+      "sha256": "50b0e1bb17c90e00fbd68a8b3fc7c40781c75f5d4dc3f3133e5e5c92ad602ab8"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportGear_ru.json",
+      "size": 87693,
+      "sha256": "9df87adebab54382af1c4384e19cb96c34854a6491f20561fb04b02815f21282"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportKeys_ru.json",
+      "size": 21420,
+      "sha256": "81ecac4079a6924b4994e1f8f2a0554222d618c3af15480e46bf162ddfcb5696"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportRecipes_ru.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportRegions_ru.json",
+      "size": 75951,
+      "sha256": "a0a75cb3e03ea44115288ab4d6ad3e68db2b68834b109fc1dcb4cc3acc6b57e9"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportRelicArcane_ru.json",
+      "size": 5210582,
+      "sha256": "dd767308d3899e8b7d6918a9484b9669045e79a044bd7d3e6e6813dfbe60d2a4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportResources_ru.json",
+      "size": 1480772,
+      "sha256": "6032cd5e074892c266e7a27bb7495892eb4ec4d5818d7a28e372a6ef684ba942"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportSentinels_ru.json",
+      "size": 18589,
+      "sha256": "a5cf4f2165321d8e662b4e30855f39c3cd295ac142ec643184db8771547cded6"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportSortieRewards_ru.json",
+      "size": 130162,
+      "sha256": "caaf768511e53116c2fd8ad9c0c2dd8bf6ccde42861bff4df17d470da5a7b6d2"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportUpgrades_ru.json",
+      "size": 5314811,
+      "sha256": "35ed74aea006f44f63ca2a4554a040630ef67fa93551f7199ea74d8ec4bed670"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportWarframes_ru.json",
+      "size": 416247,
+      "sha256": "ab754f08e8d516d3d10974fff40726a994d779caf01bf6c30c2e6d274dc0f903"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/ru/ExportWeapons_ru.json",
+      "size": 1104675,
+      "sha256": "65098c515a008b28f715d3933bd2793df4cf6d5e0a9f80f8338e17148a2f17cc"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportCustoms_tc.json",
+      "size": 1174608,
+      "sha256": "3ae9512e3524f29543d7dc4097b65b8f3c322fa931dd5b29966f700c076c43a2"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportDrones_tc.json",
+      "size": 3173,
+      "sha256": "0e971b32eeb8ac9a62d75ae878956403a58aee18183cf86867c5f74bb8f2243b"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportFlavour_tc.json",
+      "size": 995965,
+      "sha256": "d128522b1e784bcf9b89087cedc83990f4445776cb7a73909335e73e43b91c07"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportFusionBundles_tc.json",
+      "size": 11299,
+      "sha256": "03169dbc887547d6dc908cbd8199c83066300988e63913124a06d245d1aa0ca6"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportGear_tc.json",
+      "size": 63284,
+      "sha256": "7cb3cbd1294bafe96e423d39402a50e0294ac346f742c673c796a92b982521ea"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportKeys_tc.json",
+      "size": 15588,
+      "sha256": "37fb953ce034b632e5af74b723842b73eabd156483465db58749c27030744842"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportRecipes_tc.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportRegions_tc.json",
+      "size": 74294,
+      "sha256": "cb7921aa4522abc9f053c9c41a9ed69d73bc32379d3c2f467b2d44429a255d61"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportRelicArcane_tc.json",
+      "size": 4853322,
+      "sha256": "1445d5446fd78d684da18ad61a241d3cb2b195f6214436e4e5f429f6ae76f366"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportResources_tc.json",
+      "size": 1188928,
+      "sha256": "d748b9974b5fe4f892f371bb4a4d7f9412f68764023c3f828a7e3cc0fdc8f49a"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportSentinels_tc.json",
+      "size": 14656,
+      "sha256": "445cf416ebb3e2fe3189dee097b5a5843078939fabecc780b6cf5d2b5923f994"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportSortieRewards_tc.json",
+      "size": 105637,
+      "sha256": "3e38a03539ea87ec641f11700df0e3611e963bcabb2e18e9164bf06a436c33cd"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportUpgrades_tc.json",
+      "size": 4712380,
+      "sha256": "0f3198fc298e5f3b886b2cf64bae8c863280c2f21b14106c4b28226f47b66d59"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportWarframes_tc.json",
+      "size": 280475,
+      "sha256": "a27cec1b1e87a08296a02366ef2022d725ec888d4d1381759d7d6887eb87ab0c"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tc/ExportWeapons_tc.json",
+      "size": 1003706,
+      "sha256": "2661b3669a9b6fc8eeed4b7f0f11e876dc786a9654a5caeabff6e91c05a24e6a"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportCustoms_th.json",
+      "size": 1774839,
+      "sha256": "21aeef4f23e6c2db8050c9ce59bd12325bc8c3700d5fdf7108c5ebb3f14b885a"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportDrones_th.json",
+      "size": 5525,
+      "sha256": "e845d9c4d38ac60cb6f764609d0316ea350e9515c6c0bd343da1dbc777c70945"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportFlavour_th.json",
+      "size": 1306566,
+      "sha256": "ebcf7efed7ec6a98c30797cb37ee07142fecc3b38b2ab438bda8b74fae76203c"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportFusionBundles_th.json",
+      "size": 16660,
+      "sha256": "9187da9e9a6419c4b18364baca4b01c0532159e97594e0d4d90b5418cf18935b"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportGear_th.json",
+      "size": 101490,
+      "sha256": "62ed5c45d1c184506ce6f4d4408cb8e79e27a568a57c6c7fe6bfaceec8973e9b"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportKeys_th.json",
+      "size": 26151,
+      "sha256": "76750a742fcb5d1e0b7b97098d26cd74070f909eeaf36e63dc4ba88260d9213d"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportRecipes_th.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportRegions_th.json",
+      "size": 78813,
+      "sha256": "a6a0b2c306cc7a2d4cb3b8122dcf9541060ce1079858e76570d04d27a24cce74"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportRelicArcane_th.json",
+      "size": 5419242,
+      "sha256": "f1a519967ba066bcbeb1055230534bd352917c90c1a352fcd551c16ed5f19264"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportResources_th.json",
+      "size": 1726600,
+      "sha256": "e477182d6d9cb3d4f3e0024b95fa3496c7248fd1f5aae896fd1c03ef192f2adb"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportSentinels_th.json",
+      "size": 20734,
+      "sha256": "620ea7315c4f1585446f506be048f8e9a3d3067227850c886f66886bf125308b"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportSortieRewards_th.json",
+      "size": 137630,
+      "sha256": "3663bbabffacdd5b116328e4a007ee8bd776dc027a514d1256c96cf6136c2d6e"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportUpgrades_th.json",
+      "size": 5622489,
+      "sha256": "55ab785b730543ade1528d73b5a4cc7e0496704ad7d68c007fcb1eeb6562b609"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportWarframes_th.json",
+      "size": 509485,
+      "sha256": "df04872fb37e88cb721381b7d77f00bbfabca228af3472ff95b4473c01242b85"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/th/ExportWeapons_th.json",
+      "size": 1187986,
+      "sha256": "8da9c2d540e52422276404dbac74b08b625945d0e574080086281aa527b482e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportCustoms_tr.json",
+      "size": 1229031,
+      "sha256": "30eef412f9020fd67ebd6d7860a25e9caa6612bd85b42af4e3e10831a60cd57b"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportDrones_tr.json",
+      "size": 3624,
+      "sha256": "4e0000eb3e529de9d1932ee55c7a619ec568d8ef40ff098214d8f6c66b5b47b2"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportFlavour_tr.json",
+      "size": 997916,
+      "sha256": "a3be40bd378dfcb74de2e1c51d408561152faf54e2fefd325342e1cda9f3ad7a"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportFusionBundles_tr.json",
+      "size": 12460,
+      "sha256": "1068c8a5728442cbdbd4bcd85b46e43b04207eb368ae1b7bb1650340e3973175"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportGear_tr.json",
+      "size": 67564,
+      "sha256": "c18c8d3cedb5458e7b6b9d202f09a8226bda953471f77f349ac9dc1f45f69fad"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportKeys_tr.json",
+      "size": 16533,
+      "sha256": "cc71cba38bedea247ea86feb0b52af6818e734dded223c5d3c858354b42442f8"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportRecipes_tr.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportRegions_tr.json",
+      "size": 73905,
+      "sha256": "fb1517d4022adc7df4ae2c51fe5a110fb8958cbe127469de23afb08fe446cb8c"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportRelicArcane_tr.json",
+      "size": 4892281,
+      "sha256": "39236e34ed5cc1a53cf59063e9ec30a62eb07896320ed8f37eca4c32817012ab"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportResources_tr.json",
+      "size": 1234308,
+      "sha256": "9a9305d3b0ede773e57e490c83debbe09d04c63aaca6198fc224287d4b49cf7d"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportSentinels_tr.json",
+      "size": 15770,
+      "sha256": "6557be915485edaab278523d5b45713438b68181d4b75c0f80496f82f99f65e3"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportSortieRewards_tr.json",
+      "size": 108492,
+      "sha256": "26745c718349bbf707fbf19692870e28c2f833bf2aac3802b10c54d1b98b6d7e"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportUpgrades_tr.json",
+      "size": 4800157,
+      "sha256": "61d5d65583dd644b383bc19f0c9b0be9d346240202ad49e02a959f150f8000fd"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportWarframes_tr.json",
+      "size": 308336,
+      "sha256": "315402bca0a7c6409ab02941c53e206cc39fb946fe1e2dce3c2e67015f81acbc"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/tr/ExportWeapons_tr.json",
+      "size": 1002797,
+      "sha256": "486300f995704035d03d86d571e5e3f3c74ce3477fcea22af1531b03edcabee0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportCustoms_uk.json",
+      "size": 1552091,
+      "sha256": "bb03fde9c708f9f8b40e6070ce1fc63928c2bc0e68fad4fed089600c2827f586"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportDrones_uk.json",
+      "size": 4458,
+      "sha256": "8d3c0780fa2f488d5ee67081e6d9aa5a7e1b35242ad1881592ec128e0602778f"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportFlavour_uk.json",
+      "size": 1145278,
+      "sha256": "83856dff35d0dbca7647b4010e32b1fbcca90f6b583fc436d90014f9e806ddb9"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportFusionBundles_uk.json",
+      "size": 15625,
+      "sha256": "772e1b3e5452e9ead7c34449d4942117d029774c5abf6fa78fc41289403aacd7"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportGear_uk.json",
+      "size": 83955,
+      "sha256": "b3bad4b36ff4ac10c59563fe26e012f7144fdb68eaca142a3cfa459bfa748599"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportKeys_uk.json",
+      "size": 21165,
+      "sha256": "a886afb8ca6d33fca9e083ec22ff9467e3c9cd0bdece84ba0e637d1b1278fe69"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportRecipes_uk.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportRegions_uk.json",
+      "size": 77347,
+      "sha256": "0e56c4519c6ddf1023bfe48549475c3bfc5fcbd7170964154c455091f8ea2bd8"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportRelicArcane_uk.json",
+      "size": 5205668,
+      "sha256": "a4f70eaccc17049e0836780ec841e8f1b2cceb745c6bf43d609d29c3ae1a8734"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportResources_uk.json",
+      "size": 1458286,
+      "sha256": "a28e7359c260a4f1736437da267db6fe44b415592c1b412aae47354bf8352328"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportSentinels_uk.json",
+      "size": 18403,
+      "sha256": "f255f7691ebcb5dff87af9a4baca03a2951607ff64c01b0ddcccdf0d847ff842"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportSortieRewards_uk.json",
+      "size": 129350,
+      "sha256": "fce7d4e57383e901c5e6f51a6d55b0c5bc22ddcaa0e478bbf66b145dca46802f"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportUpgrades_uk.json",
+      "size": 5391615,
+      "sha256": "5ae9ae25da446e89a307259474f18e79b521708f0ea4c81d2f502910d78b573c"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportWarframes_uk.json",
+      "size": 397280,
+      "sha256": "1abb068a0455f856692ee8a50249ec2a17198b1b74bca56d701005a71cd119f8"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/uk/ExportWeapons_uk.json",
+      "size": 1091238,
+      "sha256": "385d0865a23a4f9747164ce3505df3a144d4f9bbf56b6fded96eec946359a708"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportCustoms_zh.json",
+      "size": 1178375,
+      "sha256": "b47c77ef5a3d30689e35bd4c94f0cb3333f8eef90b82486514c03e9579dc2ed2"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportDrones_zh.json",
+      "size": 3171,
+      "sha256": "fca7c7404dc07252d69b79bae09f69f9b7eea9f461e5d3cada9ef3c366390a4c"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportFlavour_zh.json",
+      "size": 983711,
+      "sha256": "589de64363d9305389a138898420e083f5bfb65565e938bbd38bfe14ebcc2f71"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportFusionBundles_zh.json",
+      "size": 11299,
+      "sha256": "521857b675ba6c8eb091602c140f3908de6b3576d5cd27a38c2aee64f42173dd"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportGear_zh.json",
+      "size": 63339,
+      "sha256": "ed902d4c5198d94bc4a37af4ef322bdb42339f19083a666b4fac4116e114fe4f"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportKeys_zh.json",
+      "size": 15619,
+      "sha256": "b8992238ce452165508041a7d1cd8fabfd7d76fe8a97ae35153cda2a0ab8195f"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportManifest.json",
+      "size": 4360240,
+      "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportRecipes_zh.json",
+      "size": 1860379,
+      "sha256": "403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportRegions_zh.json",
+      "size": 74485,
+      "sha256": "22434621a877bd4150713fd8373ba3a44c8fed5d428f79f003f8aa2ea580d32e"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportRelicArcane_zh.json",
+      "size": 4857511,
+      "sha256": "3e566c5b05b787d84055518d0149f1b4ba53b895dc5a0077a4e82f98718edd98"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportResources_zh.json",
+      "size": 1194573,
+      "sha256": "194f54307e4cfa0922c64f91be41ba6ebea224dd69661d22a0d69785fb1ed953"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportSentinels_zh.json",
+      "size": 14724,
+      "sha256": "3209a3eb6a26ab36fefd184f3f73c1febfac297c90a7461f73f307fc57eb0d95"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportSortieRewards_zh.json",
+      "size": 105571,
+      "sha256": "cb8dfdfc1f98e51ac45f877ba6734038134c5e68569d905a8cdad0881c9c4c10"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportUpgrades_zh.json",
+      "size": 4716371,
+      "sha256": "bec46c0747c49bb6b7569c7617b8108e71b2d2636d52f5fed00941fc0f0a4b21"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportWarframes_zh.json",
+      "size": 283890,
+      "sha256": "1dcff68db583a6efa7cdcff00500deccd714e7ac0336c2fe07e442a3529fba4b"
+    },
+    {
+      "path": "世界状态上游/official-public-export/manifests/zh/ExportWeapons_zh.json",
+      "size": 1002828,
+      "sha256": "aade7e857d637b4a2bce4a2c01e86f3628edb8bc6dfec87c833c50636d488627"
+    },
+    {
+      "path": "世界状态上游/snapshot-manifest.json",
+      "size": 88695,
+      "sha256": "83920b9028d9c0a71fd049c406265f65a75a303b8706500f8eb691e77d80d737"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.babelrc.json",
+      "size": 141,
+      "sha256": "47695de4884ada244f3af39de306bf6af7027f693d9e79ce0b8ea3a22c48708e"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.commitlintrc.mjs",
+      "size": 137,
+      "sha256": "8a3465e4167a4eac57531709b2329ca69cc4a04d5def18752134266f6e66cf57"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.github/CODEOWNERS",
+      "size": 284,
+      "sha256": "3a840a7a2d28d4d377946fce772bba767d75fa1537926c2e71a14367060fd2b2"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.github/ISSUE_TEMPLATE/BUG-REPORT.yaml",
+      "size": 1525,
+      "sha256": "67e2128f2add2ae8a923f3d2490b43882a4afb82f673d8de1bcb0b2096bb10a7"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.github/ISSUE_TEMPLATE/enhancement.md",
+      "size": 761,
+      "sha256": "e43a114a452517e10ac8e2b6534b86b14775c8cb5bd94ceb38f3c87c7bf4aba7"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.github/ISSUE_TEMPLATE/feature_request.md",
+      "size": 732,
+      "sha256": "8eda026834425aef9b667f406bc6ce9910534442bbd5f23da7ded45b4bf14527"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.github/dependabot.yml",
+      "size": 861,
+      "sha256": "e6921a671ece6ab5bd7a52756854b9a0b390c8ee7dbdcd9f54b4d67919f55812"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.github/workflows/build.yaml",
+      "size": 2084,
+      "sha256": "40a777616e08e9a52ad029760dd89f9829ea484101ae801c71bc9c3f4b4b4997"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.github/workflows/codeql-analysis.yml",
+      "size": 800,
+      "sha256": "83c332cc20b7fb9d19b1ec5b8b1dfa634fc57e596d62c7a3a588ab2d032a6181"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.github/workflows/regression.sh",
+      "size": 196,
+      "sha256": "6ce79538e5e761020d88e1caffe114555bbe1a9186c05ad3232c9044faafcc83"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.github/workflows/regression.yaml",
+      "size": 584,
+      "sha256": "40f2cc6d5b42e5455b22d6d59cfc6bcb58e6d5ddeb7ae7ea9db0c0994c0412f7"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.github/workflows/release.yaml",
+      "size": 1047,
+      "sha256": "fc569d7fdf4927d2f7e62175122812e68a656ed2c6fae0f83e4f36c76b91a8ab"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.github/workflows/static.yaml",
+      "size": 3314,
+      "sha256": "19da88f5fda25442aa49941e7d73fabc0ef4476848350c50a41d413b38f2b98d"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.gitignore",
+      "size": 190,
+      "sha256": "11a2302f8e3b2a6dcc8d81180d438bc46b2d3e164877cc1aba06e58f2fb6fb46"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.husky/commit-msg",
+      "size": 33,
+      "sha256": "4f351f65f6c0c6e76279fb88bf6b5d56ff0c5c5f33465b4c6fb4839ce66a4754"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.husky/pre-commit",
+      "size": 16,
+      "sha256": "e2b7c9733375d7182af2033bda9a7d2a05d0db5eef5be53d26eb7b5f3df8fbc3"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.lintstagedrc.mjs",
+      "size": 337,
+      "sha256": "61a5b43d863aa3c7429deaf577c7e1d2e0287076afe150c6f33be2453ca4ec7a"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.mocharc.yml",
+      "size": 52,
+      "sha256": "35465b283a69cd3d9d7444813d31ead1a963a66643fe3dbed623f94ef214626a"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.npmignore",
+      "size": 280,
+      "sha256": "9708e2c92d562b39f876556e0272361bd412e4e788965e4efdb4665f76c5dd05"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.nvmrc",
+      "size": 12,
+      "sha256": "99d924cba0f1108bda49db624f2532cdd75ecba5a5f151dff62b32878179e037"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/.releaserc.yaml",
+      "size": 17,
+      "sha256": "309a759b678fcc5a28dca3b351a06146dbf969d7f50e2d53134497aecce8890e"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/CONTRIBUTING.md",
+      "size": 1263,
+      "sha256": "e82128ebd5155047228e096119f817514a710708ef7e6ee51ce67f307978ed8a"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/LICENSE",
+      "size": 1064,
+      "sha256": "673c2edd935e4386a055f1a51242917a6bd9d943e0aa8eed2d71accd24095b38"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/README.md",
+      "size": 9201,
+      "sha256": "528f01e19662ca166a70d3ba6054bef84bbc998defa2f8f1752846a291a242b6"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/build.ts",
+      "size": 17192,
+      "sha256": "d939e7de99736a8cebc251ff0a4e8f48ce2525cffd4a32fe189743a1d82639bc"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/dedupe.ts",
+      "size": 708,
+      "sha256": "2b8ac7944fb92e816ee9c6341e104f5a4f6c0b3c83e314fc11790b6e6b669fe0"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/eslint.config.ts",
+      "size": 486,
+      "sha256": "165aa5a4ce05bbe42e953b953c7da36d0c4ac0bf25ec58e1d521c3a673f9131c"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/hashManager.ts",
+      "size": 3034,
+      "sha256": "5f92fc69c4a9bdec0a1f3c3a57645a5583c6aceb8a377f40179e690c3f88d465"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/network.ts",
+      "size": 1538,
+      "sha256": "965980d0d1d0b2d000c2bac3c6a55196f5fe2cc04a82e1198c676b4a870ec2ea"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/objectsort.ts",
+      "size": 426,
+      "sha256": "3c2d0210c43ffcf572f69ce5b96a6fbd7f5b7782ff087a53b4380144f90c56ef"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/package.json",
+      "size": 101,
+      "sha256": "1b2796bc4d71c01047246cb812f1c67f129fc8797abbb44540144f2fd2d1989e"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/parser.ts",
+      "size": 57144,
+      "sha256": "75667a9f1e94a9a1fdf5c1d2764fc4c9adecbf950bcc287f116165c13c3e1810"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/progress.ts",
+      "size": 1180,
+      "sha256": "b29e140fe6b1beb7c3038ca3ccd24f4e3ba7e12624c3feeb17032b7450bf91c8"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/proxyAgent.ts",
+      "size": 1267,
+      "sha256": "8ba75bbdbd14704ecbd586dceda9cfc349d73d47d0f42004f342ca236fafb699"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/readJson.ts",
+      "size": 429,
+      "sha256": "476c919998937641bbcb7effb62a3b701fcd074822ccfbc7c18b2613a991385a"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/scraper.ts",
+      "size": 12378,
+      "sha256": "3cd422398a15cc45abb3a7ee133a92046ed2af3612072cdfcaaf98406571cee7"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/sleep.ts",
+      "size": 337,
+      "sha256": "11a5d7e0cc9232fe647882a4d78642f755446f8a42cea7c87198ef96be574dd1"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/stringify.ts",
+      "size": 1653,
+      "sha256": "97688220cec1d7d103ab1612d017b62500751feb2eb2f2c360b245b37231db78"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/tradable.ts",
+      "size": 3706,
+      "sha256": "55cb00efaed45a4fcf2f9deebde12d1c387d4051a67d7376f366de866206a4e7"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/tsconfig.json",
+      "size": 128,
+      "sha256": "3e808a6157539734dbe1ef1ce85be40f83757050fefdd0d974749d27f3234ec3"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/types/@wfcd.d.ts",
+      "size": 446,
+      "sha256": "5268b4fbc05063dc284f3d47c18e84cd1119bb0023c0318937f8f6a4257b82c4"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/types/image-downloader.d.ts",
+      "size": 369,
+      "sha256": "fb071b69639cbabeddaeeacdef4df2d1fbb30b960512ef089fd7dcaf19ab7e7d"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/types/shared.ts",
+      "size": 8972,
+      "sha256": "f91829b440b9fca523ab659982aef53471971f698a5bd7bbb057d30e0e3123b6"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/types/socks5-http-client.d.ts",
+      "size": 330,
+      "sha256": "577d5713f5d65062a649e6d1fea78a4a780e921fefaf0d3d344a5c4e984f2241"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/JSON.lua",
+      "size": 69100,
+      "sha256": "d536afcef0904370ad6d202758bc1b2b9b0debd19a4c7fa0402030cd1ecd65c5"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/WikiaDataScraper.ts",
+      "size": 7674,
+      "sha256": "e3bc667911205d8c374dc1d1d638f593a93899a1dc726086b2f7ee26e213c9aa"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/scrapers/ArcaneScraper.ts",
+      "size": 373,
+      "sha256": "f02983e19e79ed74ad3c38c1d8dcf5fcae45b7287b20e120609edcbe48c9b085"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/scrapers/ArchwingScraper.ts",
+      "size": 387,
+      "sha256": "093fc71f42d03962d3e9352eecb5116c936e1d6ded05ceed530968452c328a56"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/scrapers/CompanionScraper.ts",
+      "size": 395,
+      "sha256": "8ce8eb6146589ea9ed746603c509773002f36b51c2cae7f5597d01b3f9754a63"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/scrapers/HonoriaScraper.ts",
+      "size": 382,
+      "sha256": "4e454b6da22eb3829d4d5d924e62253a4cdc490794ad1f1b63a81f951aaa1504"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/scrapers/ModScraper.ts",
+      "size": 347,
+      "sha256": "6c609b58cd061fa85dd10bb7536634a22860c331158e5279bcbd4c96cd448f61"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/scrapers/NecramechScraper.ts",
+      "size": 394,
+      "sha256": "9a94a5586ae1dc377110251ed9535c42fcd31e2e88dc406f573edc6b54a1fd4c"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/scrapers/VaultScraper.ts",
+      "size": 2811,
+      "sha256": "6218f8d22bf654d84259abc728e0d02b165d7c5e1c46173527d2fcca92fb3293"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/scrapers/VersionScraper.ts",
+      "size": 378,
+      "sha256": "bb5a123d008636d04f92461aa1f8e69da5b1aa599e1b542425972354ce6b6a48"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/scrapers/WarframeScraper.ts",
+      "size": 387,
+      "sha256": "4f8ec411f753e60a8f52f3eec1b6afab1bec848ba57b443f22f4c9f737f0d970"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/scrapers/WeaponScraper.ts",
+      "size": 602,
+      "sha256": "93bc7fece61c8d30d21b378d1fb5afb1e30450482eddb7653f696fec5dfb8a7a"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/transformers/elements.ts",
+      "size": 293,
+      "sha256": "12aee743a02b2e30ebc83c8f78002fea26876c7fe5214f3ee85eef8134402983"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/transformers/polarities.ts",
+      "size": 220,
+      "sha256": "9af3fde3d2be3550df0a18a226dccda208417bf87661d5e7955055fa98c00a10"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/transformers/transformArcanes.ts",
+      "size": 1064,
+      "sha256": "447026cf2f7b11a96e1f8f0f131b955497d47980033969b03148460b456b9a91"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/transformers/transformCompanion.ts",
+      "size": 1725,
+      "sha256": "a0eece80d3ed8853c74490fba0157367e58e910cce93005b5ede5f80a8b20341"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/transformers/transformHonoria.ts",
+      "size": 2019,
+      "sha256": "da485daeb31d90fec1d5fd35167255817306e31a7d930afd7ce2c9c44ef847c1"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/transformers/transformMod.ts",
+      "size": 902,
+      "sha256": "665626e3a0493f7cdb5d4f629a6fd4eb3ca2ba9571585de946870a17402277ba"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/transformers/transformNecramech.ts",
+      "size": 1735,
+      "sha256": "45de36816a87ac9960f5770041698f07e5ff11cf163f0c1acc0a61dfcd00b021"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/transformers/transformPolarity.ts",
+      "size": 1781,
+      "sha256": "4da9d10367aab45b18cb5d5cc93e1905adcfc886954d9fd407e91f55797d67ba"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/transformers/transformVersion.ts",
+      "size": 823,
+      "sha256": "4ac054e9fd22fe427e4f3057a7eb0020e6d5e0ac369205210e94d345d927cd08"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/transformers/transformWarframe.ts",
+      "size": 2797,
+      "sha256": "c45e4ec11d6618f70c4af6458351769c5ce726f91d4282d8b64dcd6a331e18f7"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/transformers/transformWeapon.ts",
+      "size": 8637,
+      "sha256": "06f10f4972c059b7366e116e1877c2edb0fb4291fd7fb08266b7f7b59be92332"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/build/wikia/transformers/transformerArchwing.ts",
+      "size": 1453,
+      "sha256": "22139c2630d7d6a09e9d7629f217183f2cea66c9f729f6e578045a8549f0f610"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/config/bpConflicts.json",
+      "size": 129,
+      "sha256": "f9f018108fbfba315f13db14c5d8f377435a82bba4cada534156c876b3e4f8eb"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/config/damageTypes.json",
+      "size": 258,
+      "sha256": "7df8a3b61b61f87ef353218876dd8faa6be4ed51a78439863e5d62838645b5eb"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/config/dropLocations.json",
+      "size": 993,
+      "sha256": "b0e09a3b7758020a665399194c88798404cfc615dba6ef3e3c49c073421fc556"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/config/dt_map.json",
+      "size": 379,
+      "sha256": "321460c08fc3939e04acdf32c4f90a4183919adbfd5c8b65c05b83d69520a9e3"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/config/endpoints.json",
+      "size": 969,
+      "sha256": "a084af769e4b54ddc115405fd6708df71a74b0652223792e66b3591cd88705b0"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/config/itemTypes.json",
+      "size": 21689,
+      "sha256": "f6c5dcf46ca5f54d8508859967e18e0e219e255bbeed85ebe7ed33e40b6c1350"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/config/locales.json",
+      "size": 85,
+      "sha256": "ce0ee426723c2c3a3324bb6793a140e8be90b88c3a05b749537a41c844587c79"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/config/masterableCategories.json",
+      "size": 305,
+      "sha256": "12861504cb550928d829733bfbe67a4e896ad9e23233749a26ae21f5b0b77f98"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/config/overrides.json",
+      "size": 9825,
+      "sha256": "ec70914f86780f087f911a84f6610be926924bdad2aba000972524fb50297723"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/config/polarities.json",
+      "size": 483,
+      "sha256": "d84faf829795874d61471e3e761f84819dfb75fca7683b9e26763a9a6db950e1"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/config/relicGrades.json",
+      "size": 195,
+      "sha256": "3ebc48cbc69e045300ad8b806549dc555ef27fb1cb7043c6c02b6a43940d420f"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/config/variants.json",
+      "size": 466,
+      "sha256": "9d7fb31c47a0491bcfc8bb8f988faadaaceb57bc3d851e084e0c69d7af30f30b"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/config/wikiaNameOverrides.json",
+      "size": 92,
+      "sha256": "ec4b66c2384423d65f7a5bd12d19b1298763fc29cadca8a89d4d8a267e9b6c6c"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/cache/.export.json",
+      "size": 15513,
+      "sha256": "b22029f0075d4bb6fd475e7037476d8514d893ca393e09a369436e8bcbb7a6ca"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/cache/.images.json",
+      "size": 1841008,
+      "sha256": "581842588353eaf5e5599bd896903c1fba57d79d38fdc5bfdff15b0459814c92"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Arcanes.json",
+      "size": 287942,
+      "sha256": "6eadb7c36894dad2cc48b78b422b28582771c872642653db65a99fcfaebceb07"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Arch-Gun.json",
+      "size": 48573,
+      "sha256": "6bf2bcf241fee2ee3207848fa532fe9eb5dfefa97d4e817ee8651967ab43d0db"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Arch-Melee.json",
+      "size": 19445,
+      "sha256": "2cc3aee93351bc10bd98e16b2bc8cbe5e27408a78b52a443cf4e0e3bc09ad6ed"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Archwing.json",
+      "size": 12604,
+      "sha256": "ebe76f869ddd1509ae19cf45e27ad3f1e3ae20449be7f17f978b63dd31abd169"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Components.json",
+      "size": 4457148,
+      "sha256": "b4f4a9203296aebd64742f3eb44586e9abb0b1239281b44a46268343d936c242"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Enemy.json",
+      "size": 2799680,
+      "sha256": "4583d4bd324e717c381a8a144d33e0d44c96f616fbfa12d8e7aab88d07cfde59"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Fish.json",
+      "size": 70844,
+      "sha256": "4cbb7ab86eb988426354f9ecf8a9c8a09748de79b5991e67144e04f3724d2231"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Gear.json",
+      "size": 109276,
+      "sha256": "6470bbe75a995ad374d79262be40ab7c468fae832d27cd3a3baf8610471121fe"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Glyphs.json",
+      "size": 516209,
+      "sha256": "cb6212e4f9aa389bc5dca86bc1d5859813135ea3eaade1ab3a0f1196f88a2b9f"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Honoria.json",
+      "size": 102264,
+      "sha256": "3a6d74e6206f5661d295560cb0fb9b9ac66e4c753530948e17929f606d6a54e8"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Melee.json",
+      "size": 656307,
+      "sha256": "5b07ce0588c3b1cc30c1362d7676ad00323652c10424930fcbca9791cb258407"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Misc.json",
+      "size": 1274419,
+      "sha256": "f42bcdaac35360fbbbaa3ae66fdae6686d5fe3bdb5df74c15d4734c733209237"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Mods.json",
+      "size": 5712276,
+      "sha256": "fe329cb832d99153f8dc21ed5e6a14b62e701cd2da86e9b1546c4ff8c3f6e3b4"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Node.json",
+      "size": 161861,
+      "sha256": "07f3d1e200de43aac45fa64c1b1621cbfa28260bb3cc75915aecfd23153b5b56"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Pets.json",
+      "size": 82352,
+      "sha256": "69247ca8b6c0def4d4bc0ada2937edb9d450b3285c2c85b195b7a103386111ba"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Primary.json",
+      "size": 447365,
+      "sha256": "f2ffdce41b8d741fad9701843640cde1dea9dcb3ac448e4b29f60759cc39d5a0"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Quests.json",
+      "size": 22068,
+      "sha256": "51f04d708e39dea88fe270699a0695c3c519f88d283696cb034430c9133cac61"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Railjack.json",
+      "size": 209925,
+      "sha256": "73658fd6b615945019cbff1c005d8c0317fb0f75b7a38f6d94d386da43c7cee9"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Relics.json",
+      "size": 8791629,
+      "sha256": "4733ab645a81330a709b1a7c5b8b0369f7baa2b8024371e875f433011b7b3fb3"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Resources.json",
+      "size": 291305,
+      "sha256": "1266968802544331ba287042f701c4c4f3da73a521354da9de40517689ef5339"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Secondary.json",
+      "size": 325526,
+      "sha256": "98562b34773daf100fce743cbadb2204fb658d5936f576282e132fa7e662c2dd"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/SentinelWeapons.json",
+      "size": 40112,
+      "sha256": "23232a109ff8a374e917f8bbdf14a3e76296930646578e987424237a257fabcb"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Sentinels.json",
+      "size": 23982,
+      "sha256": "3ba97ec86e7c80aef7c1a743c3c0272099457635544dfc5cfe37108f3ff9615f"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Sigils.json",
+      "size": 106360,
+      "sha256": "26288e40a80123517e0c09701de340b0ffc93a35ac7dbab238a7b884daa3f4d0"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Skins.json",
+      "size": 2525990,
+      "sha256": "919f2bd8c461ba5b82c106c19a9b8897fca50a7fc6a8a3a8f1fd89ede7b6df18"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/Warframes.json",
+      "size": 353813,
+      "sha256": "8212da092f96ae1c297676729d800166fedf30dee8b93b00b2195bf72b3a4b6b"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/de.json",
+      "size": 4460585,
+      "sha256": "14856b844560e620959c6652a46dd51ecf6dbd62749916cd9c0b66604cc982e4"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/es.json",
+      "size": 4533077,
+      "sha256": "c9b0fdb2a218f2dbbf08871d276b74c46761e513516dd2c1465ecec20afc1817"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/fr.json",
+      "size": 4556249,
+      "sha256": "729498818a6c2c594760cc0bfc2eb21d5f2391b3b742ede99af7765cd3cee1a1"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/it.json",
+      "size": 4384885,
+      "sha256": "d4e6194bdb848d90ac69de08baf9978ab6a6f459e3dbc9d7e55694e54e3eefb8"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/ja.json",
+      "size": 4606971,
+      "sha256": "c7382193cb6851437126e65c1d58436200524954f99f96a06b95e8fd315b171d"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/ko.json",
+      "size": 4841523,
+      "sha256": "606b7d078ec54db6b3ab27d0b2d1e027d85e4b8f1d699b88b231b4f2641944ee"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/pl.json",
+      "size": 4414571,
+      "sha256": "b0af68b60b147d4cb5cfce1bfa86f6cf7446584335b714c812676565c0be0148"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/pt.json",
+      "size": 4487218,
+      "sha256": "ee7049fd9a40d48147d3ca1904cde878d1c2afcf7d3d5b94fbb82fbd51b61e46"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/ru.json",
+      "size": 6107880,
+      "sha256": "72ce03e5bca559beb82433d7a1e94ed67e971984bc8d7f07096912ec088206bf"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/tc.json",
+      "size": 4094176,
+      "sha256": "1a46e058c3c3648e57f2d1416531dfeda80faddc6d82d9e3e6f91c6362ffcada"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/th.json",
+      "size": 7465384,
+      "sha256": "24e2aed26058b2436da09be5d449413504b86387c7e4db9d95c6e59b7bd755a5"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/tr.json",
+      "size": 4358668,
+      "sha256": "34b9fd3325421cb31786b3f3e641a951b3917b30f36417264f556862cab7145f"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/uk.json",
+      "size": 6146670,
+      "sha256": "fc88ae7b616e1d83c3042e7884d4addc299fe6e20e7df37ff05115c08ba0e401"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/json/i18n/zh.json",
+      "size": 4103154,
+      "sha256": "029a7dd62e9ef32f035a0741b0ad5e898d1db0e6b2b7da3a4942edddf72c68af"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/data/warnings.json",
+      "size": 9148,
+      "sha256": "99156974c9a44d3cf0c572a249b91efc6572b36544e4072430abeed8989caaa8"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/eslint.config.ts",
+      "size": 3457,
+      "sha256": "ceba7ac5d4eec2e0616fcf81ec765f27b765fe9752ce922d624080985ac5d7af"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/index.d.ts",
+      "size": 24045,
+      "sha256": "6430f108b18341b5dfc058cb50b3409bfbf4d822b6283b234901e268499993d7"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/index.js",
+      "size": 9193,
+      "sha256": "b8b6723cf2b6e2f5acf45b1ccfe7c5802917ee403e28286f3e48f658dea8385f"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/index.mjs",
+      "size": 8870,
+      "sha256": "e2003fb224325c4fef836ddc2ea15de77542cba33d1f180f889d1d8f8750d910"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/nyc.config.mjs",
+      "size": 247,
+      "sha256": "2288e58a9e7029e1404fa8e34195518d4d88005749bf341f49c616e87e577dd5"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/package-lock.json",
+      "size": 968224,
+      "sha256": "56db950168fb91389ae4078633f920e15837cfa4d67745a9f8bc34c4140604cd"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/package.json",
+      "size": 3431,
+      "sha256": "4582f44cbb1ed7559367cb860a0aea1b5fa20d40ba7fcee0cae9f5ee8332c5b2"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/test/build.integrity.spec.mjs",
+      "size": 3721,
+      "sha256": "0c3a917fe1b0e3a0975e56af4dd52d5593de95a11133cdfe35bdd600e612d8ea"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/test/fixtures/wikia.fixture.mjs",
+      "size": 2463,
+      "sha256": "69fcc475c4d7973e485537165b6b09feae2e712414bb07799e2518eaa08405eb"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/test/index.regression.spec.mjs",
+      "size": 2157,
+      "sha256": "04731267fb3bbdd96de163c0f8e02a2c8e15437c948cfb83397d908901875f7b"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/test/index.spec.mjs",
+      "size": 29028,
+      "sha256": "898e0ed83085ae9f81bafe9985a7238e243e20bf06748f7a35f62c5bb394ab2c"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/test/lookup.mjs",
+      "size": 789,
+      "sha256": "a3171915c309075c796e8c26ff55783a534cec976a100f75a4783bb510a9546d"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/test/parser.components.spec.mjs",
+      "size": 4839,
+      "sha256": "3df7bbd58648fd23381a1f1d789c9863235ee538f57eb7c1e5db00375ad9927c"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/test/parser.damage.spec.mjs",
+      "size": 2816,
+      "sha256": "212cb5f19394304369b04c90ba39b3c16723998eca42ab34c5f87bfaa93e414f"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/test/parser.wikia.spec.mjs",
+      "size": 11357,
+      "sha256": "af5fb6f8cf7cbe1a32f4ccdad2ef763725acec92920b698d6103a6d92aa9dcaf"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/test/utilities/find.spec.mjs",
+      "size": 3960,
+      "sha256": "d05bec7b4080edb75abbc19596234b85a40a68e76f6706664483f59958714a7b"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/test/utilities/pixel.spec.mjs",
+      "size": 1049,
+      "sha256": "68d219c465cb3aa9933f052dc2689f338d6e1b91d874d8b7c09846ce3906bc74"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/test/utilities/resolveComponents.spec.mjs",
+      "size": 3009,
+      "sha256": "2c5a8677d8c359412b3ad65a9cf688653893845e8639df74bf7298d110e0eca5"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/test/utilities/title.spec.mjs",
+      "size": 1167,
+      "sha256": "24ad6cd50c76e448a94e94c2f5f1d73df040cd18b0b38d4b3b923a1230365c11"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/test/utilities/utils.mjs",
+      "size": 211,
+      "sha256": "cba84bd7e4c67da2b7c33eab64e383e81315eac76bba03658ab5e73ff87978a2"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/tsconfig.json",
+      "size": 600,
+      "sha256": "c980b0ed306325940177de9c744c9adbbb22dab367a125fc0372ade916b142d9"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/tsconfig.schema.json",
+      "size": 246,
+      "sha256": "78fc386990314fff2b7258561ae14acfcd15e0ad317850d078da05cef80a9e6a"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/utilities/Pixel.mjs",
+      "size": 2599,
+      "sha256": "9e2e02c6c274594ab58b83c2c56bebf5f37ce9f74cda908d4a966ea59c0fa78a"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/utilities/colors.mjs",
+      "size": 1511,
+      "sha256": "ceda570199d088897155ca83234864aecfd480bf6dae2bdf45e1f48b464e63d1"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/utilities/find.mjs",
+      "size": 2107,
+      "sha256": "3a3ff5a12dd9ce289f3f1423a3bcf18382507d3ce1af0d2543c04c90436c5db2"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/utilities/index.d.ts",
+      "size": 802,
+      "sha256": "2d121cf4bc073998e5ba444729d8f3bac3ab3284a2b34b03da0ad89158573520"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/utilities/index.mjs",
+      "size": 151,
+      "sha256": "ff753da95fb1daa8ce222e360e8cde5b87e42cffc4227302d62145247de453df"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/utilities/resolveComponents.js",
+      "size": 1603,
+      "sha256": "e29cf5fd18e1ea4106cab78e2601b64d9664176a0b737729960c0923278c2626"
+    },
+    {
+      "path": "世界状态上游/wfcd-items/utilities/resolveComponents.mjs",
+      "size": 1583,
+      "sha256": "43e0ac6c7de4d0c1b61f66b8a57ef84acecb57b0698bda468f26abd1a334212e"
+    },
+    {
+      "path": "世界状态上游/wfcd-items-snapshot.json",
+      "size": 1908150,
+      "sha256": "06d812751c0c8b067ce252fc686966bb42ae1ef341b397fa7216bc60a78da26f"
+    }
+  ]
+}

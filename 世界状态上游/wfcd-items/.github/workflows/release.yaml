@@ -1,0 +1,43 @@
+name: Release
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "build/**"
+      - "data/**"
+      - index.m?js
+      - index.d.ts
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          fetch-depth: 5
+      - uses: leafo/gh-actions-lua@v13.0.0
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+      - run: npm ci
+      - run: npm i -D @wfcd/patchlogs@^2
+      - run: npm i --no-save warframe-worldstate-data@^3
+      - run: npm run lint
+      - name: Run commitlint
+        run: npx commitlint --last
+      - run: npm test
+        env:
+          NODE_OPTIONS: --max_old_space_size=5120
+      - name: Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run:
+          npx semantic-release

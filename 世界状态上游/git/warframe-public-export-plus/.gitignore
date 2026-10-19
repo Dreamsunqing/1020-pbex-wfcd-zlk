@@ -1,0 +1,6 @@
+_gsdata_/
+extras/
+node_modules/
+index.pluto
+tmp-*
+wat2wasm.exe

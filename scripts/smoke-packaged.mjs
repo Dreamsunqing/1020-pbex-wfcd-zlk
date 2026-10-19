@@ -1,0 +1,14 @@
+import { spawn } from 'node:child_process';
+import { promises as fs } from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+const executable = process.argv[2]; const label = process.argv[3] ?? 'packaged';
+if (!executable) throw new Error('请传入打包后的可执行文件路径');
+const userData = await fs.mkdtemp(path.join(os.tmpdir(), 'wb-packaged-'));
+const output = path.resolve('artifacts', label);
+const env = { ...process.env, WORKBENCH_SMOKE: '1', WORKBENCH_ROOT: process.cwd(), WORKBENCH_USER_DATA: userData, WORKBENCH_SMOKE_OUT: output };
+delete env.ELECTRON_RUN_AS_NODE;
+const child = spawn(path.resolve(executable), [], { env, stdio: 'inherit' });
+const timer = setTimeout(() => child.kill('SIGTERM'), 90000);
+child.on('error', error => { console.error(error.message); clearTimeout(timer); process.exitCode = 1; });
+child.on('exit', async code => { clearTimeout(timer); await fs.rm(userData, { recursive: true, force: true }); process.exitCode = code ?? 1; });

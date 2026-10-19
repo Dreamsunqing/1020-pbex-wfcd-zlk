@@ -1,0 +1,101 @@
+local json = require"pluto:json"
+
+local response = {
+	__order = { "expiry", "CetusSyndicate", "SolarisSyndicate", "EntratiSyndicate" },
+}
+
+-- Utility functions
+local Seed
+function SetSeed(s)
+	Seed = s
+end
+
+-- HIDWORD
+function hd(d)
+	return (d >> 32) & 0xFFFFFFFF
+end
+
+-- SRandomInt
+function sri(min, max)
+	local diff = max - min
+	if diff ~= 0 then
+		Seed = 0x5851F42D4C957F2D * Seed + 0x14057B7EF767814F
+		min += (hd(Seed) & 0x3FFFFFFF) % (diff + 1)
+	end
+	return min
+end
+
+-- SeededShuffleTable
+function sst(table)
+	local size = #table
+	while size >= 2 do
+		local rand = sri(1, size)
+		local a = table[rand]
+		local b = table[size]
+		table[size] = a
+		table[rand] = b
+		size = size - 1
+	end
+	return table
+end
+
+function computeJobs(prefix, p88, p89)
+	local v96 = {}
+	for v97 = 1, #p88 do
+		v96[v97] = v97 <= p89
+	end
+	sst(v96)
+	local res = {}
+	for v98 = 1, #p88 do
+		if v96[v98] then
+			res:insert(prefix..p88[v98])
+		end
+	end
+	return res
+end
+
+function computeLocationBounties(prefix, jobManifest)
+	local res = { __order = {} }
+	for jobManifest.LocationSpecificJobs as location do
+		res.__order:insert(location.LocationTag)
+		res[location.LocationTag] = computeJobs(prefix, location.Jobs, location.NumJobsToShow)
+	end
+	return res
+end
+
+local query = _SERVER.REQUEST_URI:sub(19)
+local given_seed
+local expirySeconds = os.unixseconds() + (30 * 24 * 60 * 60)
+if query ~= "" then
+	given_seed = json.decode(query:sub(2))
+	if type(given_seed) ~= "number" then
+		return io.write("bad request")
+	end
+end
+
+if not given_seed then
+	local worldState
+	repeat
+		worldState = json.decode(io.contents("worldState.json"))
+	until worldState
+
+	local bountySyndicateData = worldState.SyndicateMissions:find(|x| -> x.Tag == "CetusSyndicate" and os.unixseconds() >= (x.Activation["$date"]["$numberLong"] // 1000) and os.unixseconds() < (x.Expiry["$date"]["$numberLong"] // 1000))
+
+	given_seed = bountySyndicateData.Seed
+
+	response.expiry = tonumber(bountySyndicateData.Expiry["$date"]["$numberLong"])
+	expirySeconds = math.tointeger(math.floor(response.expiry / 1000))
+end
+
+SetSeed(given_seed)
+response.CetusSyndicate = computeLocationBounties("/Lotus/Types/Gameplay/Eidolon/Jobs/", json.decode(io.contents("data/EidolonJobManifest.json")).data)
+
+SetSeed(given_seed)
+response.SolarisSyndicate = computeLocationBounties("/Lotus/Types/Gameplay/Venus/Jobs/", json.decode(io.contents("data/VenusJobManifest.json")).data)
+
+SetSeed(given_seed)
+response.EntratiSyndicate = computeLocationBounties("/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/", json.decode(io.contents("data/MicroplanetJobManifest.json")).data)
+
+header("Cache-Control: public, max-age="..math.max(0, expirySeconds - os.unixseconds()))
+header("Content-Type: application/json")
+io.write(json.encode(response))

@@ -1,0 +1,349 @@
+{
+  "ExportKeys": [
+    {
+      "uniqueName": "/Lotus/Types/Keys/1999PrologueQuest/1999PrologueQuestKeyChain",
+      "name": "Lotus Eaters",
+      "description": "Diğer taraftan yankılanan bu tuhaf çağrının yanıtlanması gerekiyor.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/1999Quest/1999QuestGoodEndKeyChain",
+      "name": "Hex Finali",
+      "description": "Tarihi yeniden yazmak ve felaketi önlemek için bir şans.",
+      "parentName": "",
+      "codexSecret": false,
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/1999Quest/1999QuestKeyChain",
+      "name": "Hex",
+      "description": "Albrecht Entrati'yi bulmak için umutsuz bir göreve çıkan Gezgin, kendini 31 Aralık 1999'da, Höllvania şehrinde bulur. Techrot tehdidi karşısında Scaldra'nın sıkı yönetimine rağmen, vatandaşlar yeni yılı kutlamak için ellerinden geleni yapıyorlar. Ancak bunların hepsi daha önce de oldu... ve felaketle sonuçlandı.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ApostasyQuest/ApostasyKeyChain",
+      "name": "Apostasy Prologue",
+      "description": "Chains of Harrow hikaye görevi ardından kişisel karargahınızı inceleyin.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ArchwingQuest/ArchwingQuestKeyChain",
+      "name": "The Archwing",
+      "description": "Balor Fomorian'lar geliyor fakat biz hazırlıklıyız. Senin çabaların sayesinde sonunda çalışan bir Archwing prototipi yapmayı başardık. Atölyende yapman için sana prototipin kalıbını gönderiyorum. Fakat senin görevin henüz tamamlanmadı. Halen yapım için gerekli parçaları bulman gerekiyor.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/BardQuest/BardQuestKeyChain",
+      "name": "Octavia's Anthem",
+      "description": "Mandachord'u inşa et Cephalon Suda dengesiz davranışlarının sebebini bul.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ChimeraQuest/ChimeraKeyChain",
+      "name": "Chimera Prologue",
+      "description": "The Sacrifice hikaye görevini tamamladıktan sonra Kişisel Karargahınıza göz atın.",
+      "parentName": "",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/DragonQuest/DragonQuestKeyChain",
+      "name": "The New Strange",
+      "description": "Cephalon Simaris ile beraber çalışarak gizemli sesin kaynağını bulun",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/DuviriQuest/DuviriQuestKeyChain",
+      "name": "The Duviri Paradox",
+      "description": "Duviri Krallığına Gir",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/EntratiLab/EntratiQuestKeyChain",
+      "name": "Whispers in the Walls",
+      "description": "Loid tuhaf rüyalar gördü ve sana acilen bir şeyi göstermesi gerekiyor.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/FairyQuest/FairyQuestKeyChain",
+      "name": "The Silver Grove",
+      "description": "New Loka, kutsal bir ormanı Grineer saldırılarından korumak için yardım istiyor, ancak ormanın gerçek doğasıyla yüzleşmeye hazırlar mı?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/GetClemQuest/GetClemQuestKeyChain",
+      "name": "A Man Of Few Words",
+      "description": "Darvo'nun tekrar yardımına ihtiyacı var. Onun iyi müşterilerinden birisini Grineer idamından kurtar.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/GlassQuest/GlassQuestKeyChain",
+      "name": "Saya's Vigil",
+      "description": "Eidolon Ovalarında yıllardır gömülü olan bir gizem var: birisi bir kalbi ya onaracak, ya da yok edecek. Ve gizlenmiş geçmişin kapılarını açacak.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/GolemQuest/GolemQuestKeyChainItem",
+      "name": "The Jordas Precept",
+      "description": "Ordis arkadaşı Cephalon'a gemi boyunca yayılan istilada yardımcı olmak istiyor",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/IndexQuest/IndexQuestKeyChain",
+      "name": "The Glast Gambit",
+      "description": "Nef Anyo Mycona Kolonisi'nin evlatlarını kaçırdı ve onları geri getirme görevi sana düştü. İndeks'de Nef'e kafa tutarak onu kendi oyununda yenmelisin. Fakat Tenno, dikkatli ol, hiçbir şey göründüğü gibi değildir.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedAladVQuest/AssassinateInfestedAladVKey",
+      "name": "Mutalist Alad V Suikast",
+      "description": "Alad V'nin araştırma gemisine baskın yaparak deneylerine son ver!",
+      "parentName": "/Lotus/Types/Keys/TestKey",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedAladVQuest/InfestedAladVQuestKeyChain",
+      "name": "Patient Zero",
+      "description": "Alad V'nin laboratuvarını yok et ve bu deliliğe bir son ver.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedIntroQuest/InfestedIntroQuestKeyChain",
+      "name": "Once Awake",
+      "description": "Tarafımızdan algılanan ve engellenen mesajlardan alınan bilgilere göre Grineer biyolojik bir silah üzerinde çalışıyor. Bu konuyu araştırman gerekiyor.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/InfestedMicroplanetQuest/InfestedMicroplanetQuestKeyChain",
+      "name": "Heart of Deimos",
+      "description": "Deimos, Mars yörüngesinde belirmektedir ve tamamıyla Infestation istilası altındadır... Sonunda bu çilekeş evrenden çok daha eski bir radyo dalga taşıyıcısı ile bir acil yardım çağrısı ulaştı...",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/JadeShadows/JadeShadowQuestKeyChain",
+      "name": "Jade Shadows",
+      "description": "Geçmişindeki en eski ve en derin sırrı anlamaya çalışan Stalker, gerçeği ortaya çıkarmaya… ve hesaplanamaz bir kaybı önlemeye giden zorlu yolda kendisini ezeli düşmanlarla ittifak halinde bulur.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/JadeShadowsPart2Constellations/JadeShadowsPart2QuestKeyChain",
+      "name": "Jade Shadows: Constellations",
+      "description": "Hunhow, Orb Vadisi'nde yaşanan tuhaf bir çatışmaların ardından Stalker'ı çağırdığında, kendi eylemlerinin şok edici sonuçlarıyla yüzleşmek zorunda kalır. Geleceğinin gölgeleri kapısını çalmıştır ve yalnız değillerdir.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/KahlQuest/KahlQuestKeyChain",
+      "name": "Veilbreaker",
+      "description": "Entrati'nin Kızı, bir Narmer Murex'inin destek çağrısını araştırması için Tenno'yu görevlendirdiğinde umduğundan fazlasını alıyor.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/KubrowQuest/KubrowQuestKeyChain",
+      "name": "Howl of the Kubrow",
+      "description": "Sen Tenno'sun ve yanında bir Kubrow'u hak ediyorsun",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/LimboQuest/LimboQuestKeyChain",
+      "name": "The Limbo Theorem",
+      "description": "Limbo Theorem hikaye görevi Archwing olmadan tamamlanamaz\r\n\r\nKaynağını ortaya çıkarmak için Limbo Teoremini bir araya getirin",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/MirageQuest/MirageQuestKeyChain",
+      "name": "Hidden Messages",
+      "description": "Mirage Warframe'i Bul.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ModQuest/ModQuestKeyChain",
+      "name": "The Teacher",
+      "description": "Corpus'un Grineer topraklarına yaptığı saldırılar, unutulmuş bir rakiple hesaplaşmaya yol açar.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/MummyQuest/MummyQuestKeyChain",
+      "name": "Sands Of Inaros",
+      "description": "Baro Ki'Teer'e içindeki gizemli hazine için Martian Mezarına yaptığı baskında yardım et.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/NewPlayerQuest/NewPlayerQuestKeyChain",
+      "name": "UYANIŞ",
+      "description": "Tenno: Eski bir savaşçı kastının abidesi.\r\n\r\nNesillerdir seni uyandıracak bir çağrı olmaksızın uyudun.\r\n\r\nŞimdiye kadar.",
+      "parentName": "",
+      "codexSecret": true,
+      "excludeFromCodex": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/NewWarIntroQuest/NewWarIntroKeyChain",
+      "name": "Erra",
+      "description": "",
+      "parentName": "",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/NewWarQuest/NewWarQuestKeyChain",
+      "name": "The New War",
+      "description": "Veil Proxima'da endişe verici sayıda Sentient donanması ortaya çıktı.\r\n\r\nKomutalarında, eskiden \"Lotus\"un güvenilir rehberi olarak bilinen Natah, şimdi Ballas ve kardeşi Erra tarafından köleleştirilmiş gibi görünüyor.\r\n\r\nTenno ve olası ittifakları, uzayın derinliklerindeki Sentient ana gemisini Natah'ın onları beklediği yere götürmek için son bir saldırı başlattı.",
+      "parentName": "",
+      "codexSecret": true
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/OrokinMoonQuest/OrokinMoonQuestKeyChain",
+      "name": "The Second Dream",
+      "description": "Sentient Hunhow eski zamandan kalma sırları kullanarak Tennoları yok etmeye çalışıyor.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/PriestFrameQuest/PriestQuestKeyChain",
+      "name": "Chains of Harrow",
+      "description": "Red Veil inanışlarının karanlık dünyasının derinliklerini gösteren yabancı bir ileti. Burada ne tür kötülükler var ve ne istiyorlar ?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ProteaQuest/ProteaQuestKeyChain",
+      "name": "The Deadlock Protocol",
+      "description": "Corpus seçkinleri arasında bir güç mücadelesi patlak verdi. Nef Anyo, kontrolü sağlamak için geçmişe... yani Corpus'un kendi kökenine başvuruyor.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/RailJackBuildQuest/RailjackBuildQuestKeyChain",
+      "name": "Rising Tide",
+      "description": "Büyüyen tehditle yüzleşmek için, uzun süre uykuda olan Cephalon seni bir Orokin dönemi avcı gemisini yeniden inşa etmeye çağırıyor: Railjack.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/RevenantQuest/RevenantQuestKeyChain",
+      "name": "Mask of the Revenant",
+      "description": "Unum, gizemli bir maskeyi alması için Nakak'ı seçiyor. Maske daha da garip görüntülere yol açıyor. Unum'un anlatmak istediği kayıp hikaye nedir?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SacrificeQuest/SacrificeQuestKeyChain",
+      "name": "The Sacrifice",
+      "description": "Belli belirsiz bir görüntü Operatörün sıradışı bir Warframe'in peşinden gitmesine neden oluyor.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SentientQuest/SentientQuestKeyChain",
+      "name": "Natah",
+      "description": "Garip dron robotları Origin Sistemde görülmeye başlandı, Lotus'a onları kimin gönderdiğini bulmasında yardımcı ol.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SolarisQuest/SolarisQuestKeyChain",
+      "name": "Vox Solaris",
+      "description": "Eudico halkını güvende tutmak için her şeyi yapar, ama Nef Anyo'ya karşı koyabilecek mi?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/SpyQuestKeyChain/SpyQuestKeyChain",
+      "name": "Stolen Dreams",
+      "description": "Hırsız Maroo'yu bularak Arcane Kodekslerinin gizemini çözün",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrequel/TauPrequelQuestKeyChain",
+      "name": "The Old Peace",
+      "description": "Albrecht Entrati'nin izi Origin Sistemi'nin ötesine uzanıyor. Önümüzdeki yol ancak geçmişin derinliğinde netleştirilebilir; fakat gömülü sırlar, gizemli olduğu kadar ölümcül olabilir.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrologue/TauPrologueKeyChainA",
+      "name": "Lua",
+      "description": "Lotus'u Karanlık Refraktör'de ziyaret et ve anılarının derinliklerinde onu bul.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrologue/TauPrologueKeyChainB",
+      "name": "Beden",
+      "description": "Beden uyandı. Praghasa geri döndü. Eris yüzeyine in... yakıt gerekiyor.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/TauPrologue/TauPrologueKeyChainC",
+      "name": "Eris'in Ölümü",
+      "description": "Praghasa'nın ziyafeti.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/VorsPrize/VorsPrizeQuestKeyChain",
+      "name": "Vor's Prize",
+      "description": "Kraliçelerim, haklıydınız, Tenno tehdidi gerçek. Dünya dolaylarında savrulan bir tane bulduk, ancak Lotus peşinde olduğumuzu biliyordu. Biz ele geçirmeden onu uyku kapsülünden tasfiye etti ve saldırımızı püskürtmek için bir Tenno bölüğü gönderdi.\r\n\r\nKaçtılar, fakat izlerini sürüyoruz. Bu Tenno'yu grubundan ayırırsak öldürmesi daha kolay olacaktır. Warframe'e olabildiğince zarar verdik ve uyku kapsülüne yapılan ani müdahalenin hafızasına zarar verdiğini düşünüyoruz. \r\n\r\nBu görevdeki başarısızlığımızdan dolayı vereceğiniz cezaya hazırız.\r\n\r\n- VOR",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/WarWithinQuest/WarWithinQuestKeyChain",
+      "name": "The War Within",
+      "description": "Somatik Link'teki kargaşa Lotusu operatörlerini Tenno Haznelerine geri göndermeye zorluyor.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/WraithQuest/WraithQuestKeyChain",
+      "name": "Call of the Tempestarii",
+      "description": "Corpus saflarında Void Fırtınası büyüyor... Gizemli bir araç bunun sebebi olabilir mi?",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/YareliQuest/YareliQuestKeyChain",
+      "name": "The Waverider",
+      "description": "Trajedi baş gösterdiğinde, Ventkid'ler çok uzun zamandır unutulmuş bir hikayede umut ararlar.",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/ZarimanQuest/ZarimanQuestKeyChain",
+      "name": "Angels of the Zariman",
+      "description": "Aklın ötesindeki derinliklerden bir Ses yükselmişti, ve yankıları inkar edilemezdi. Sürekli değişen Void tarafından artık tam olarak gizlenemeyen Zariman, iki evrenin arasında çakılı kalmış durumda. Sistemin her yerinde akıldan çıkmayan ağıtlar yankılanıyor. Geç de olsa artık geçmişle yüzleşmenin zamanı geldi...",
+      "parentName": "",
+      "codexSecret": false
+    },
+    {
+      "uniqueName": "/Lotus/Types/Keys/DojoKey",
+      "name": "Klan Anahtarı",
+      "description": "Klan Dojo'nuza girişi açın",
+      "parentName": "/Lotus/Types/Game/KeyItem",
+      "codexSecret": true
+    }
+  ]
+}

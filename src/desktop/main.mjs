@@ -48,10 +48,16 @@ else app.whenReady().then(async () => {
   worker.on('exit', code => rejectPending(new Error(`后台进程已退出（${code}），请重启应用`)));
   const allowed = new Set(['init', 'refresh', 'page', 'detail', 'schema', 'raw', 'galleryList', 'galleryDetail', 'rulesGet', 'rulesValidate', 'rulesSave', 'rulesPrevious', 'mergeStatus', 'mergeBuild', 'mergeList', 'mergeDetail', 'mergeReport', 'update', 'import', 'history', 'snapshot', 'rollback', 'diff', 'oracleOptions', 'invigorations', 'arbitration', 'browseCycles', 'browseWeekly', 'browseIncursions', 'refreshWorldState', 'oracleCycle', 'oracleLocations', 'oracleInvasions', 'oracleWeekly', 'oracleStateStatus', 'refreshOracleState', 'autoUpdate', 'config', 'saveConfig']);
   allowed.add('documentsList'); allowed.add('documentsRead');
+  allowed.add('liveState');
   function checkSender(event) { if (event.sender !== win?.webContents || event.senderFrame !== win.webContents.mainFrame) throw new Error('不允许的调用来源'); }
   ipcMain.handle('workbench:call', (event, method, args) => { checkSender(event); if (!allowed.has(method)) throw new Error('不允许的操作'); return invoke(method, args); });
   ipcMain.handle('workbench:choose-root', async event => { checkSender(event); const result = await dialog.showOpenDialog(win, { title: '选择资料包或上游资料目录', properties: ['openDirectory'] }); return result.canceled ? null : invoke('chooseRoot', { root: result.filePaths[0] }); });
   ipcMain.handle('workbench:oracle-state', async (event, args) => { checkSender(event); const result = await dialog.showOpenDialog(win, { title: '导入世界状态 JSON（以页面参考时间作为采集时间）', properties: ['openFile'], filters: [{ name: '世界状态 JSON', extensions: ['json'] }] }); return result.canceled ? null : invoke('importOracleState', { file: result.filePaths[0], at: args?.at }); });
+  ipcMain.handle('workbench:live-state-import', async (event, server) => {
+    checkSender(event); if (!['de', 'wg'].includes(server)) throw new Error('服务器无效');
+    const result = await dialog.showOpenDialog(win, { title: `导入${server === 'de' ? '国际服' : '国服'}官方世界状态 JSON`, properties: ['openFile'], filters: [{ name: '世界状态 JSON', extensions: ['json'] }] });
+    return result.canceled ? null : invoke('importLiveState', { server, file: result.filePaths[0] });
+  });
   ipcMain.handle('workbench:export', async (event, args) => { checkSender(event); const result = await invoke('export', args); const save = await dialog.showSaveDialog(win, { defaultPath: result.name }); if (save.canceled) return false; await fs.writeFile(save.filePath, result.text); return true; });
   ipcMain.handle('workbench:rules-export', async (event, args) => { checkSender(event); await invoke('rulesValidate', args); const save = await dialog.showSaveDialog(win, { defaultPath: 'merge-rules.json', filters: [{ name: 'JSON', extensions: ['json'] }] }); if (save.canceled) return false; await fs.writeFile(save.filePath, JSON.stringify({ contract: args.contract, overrides: args.overrides }, null, 2) + '\n'); return true; });
   ipcMain.handle('workbench:merge-export', async (event, args) => {

@@ -1,4 +1,7 @@
 import { rewardContexts } from '../core/merge/reward-context.mjs';
+import { LiveStateStore } from '../core/live-state/service.mjs';
+import { loadWorldCatalog } from '../core/live-state/catalog.mjs';
+import { buildWorldView } from '../core/live-state/view.mjs';
 import { LocalImages } from '../core/local-images.mjs';
 import { ImageGallery } from '../core/gallery.mjs';
 import { DocumentLibrary } from '../core/documents.mjs';
@@ -27,6 +30,22 @@ import { exportMerged } from '../core/merge/repository.mjs';
 import { mergeContext, mergedStatus, datasetFor, mergedList, mergedDetail, expandEvidence, imageDescriptors } from '../core/merge/service.mjs';
 
 const store = new Store(workerData.storeRoot);
+const liveState = new LiveStateStore(path.join(workerData.userData, 'world-state'));
+let liveCatalog = null;
+async function liveView(server, refresh = false, imported = null) {
+  const snapshot = imported ?? (refresh ? await liveState.refresh(server, { proxyUrl: config.network?.proxyUrl }) : await liveState.current(server));
+  // Capture the selected dictionary source. Switching directory/snapshot cannot mix a load.
+  const selectedLibrary = library, selectedRelease = mode === 'snapshot' ? release : null;
+  const contextKey = selectedRelease?.id ?? selectedLibrary?.root ?? 'empty';
+  let catalog = liveCatalog?.key === contextKey && !refresh ? liveCatalog.value : null;
+  if (!catalog) {
+    const files = selectedRelease ? await snapshotFiles(store, selectedRelease) : selectedLibrary?.files ?? [];
+    const read = selectedRelease ? async id => {const entry = snapshotEntry(selectedRelease, id);return {bytes:await store.bytes(entry),hash:entry.hash};} : id => readLibraryFile(selectedLibrary.root,id);
+    catalog = await loadWorldCatalog(files, read);
+    if ((mode === 'snapshot' ? release?.id : library?.root ?? 'empty') === contextKey) liveCatalog = {key:contextKey,value:catalog};
+  }
+  return buildWorldView(snapshot, catalog);
+}
 const ruleStore = new RuleStore(path.join(workerData.userData, 'merge-rules'));
 let mergeBusy = false;
 const preferencesFile = path.join(workerData.userData, 'preferences.json');
@@ -48,7 +67,7 @@ async function initializeImages(root) {
 }
 const progress = value => parentPort.postMessage({ event: 'progress', value });
 const savePreferences = () => atomicJson(preferencesFile, preferences);
-async function selectRoot(root) { library = await scanLibrary(root, config); await initializeImages(library.root); mode = 'local'; release = null; cached = null; preferences.root = library.root; await savePreferences(); return summary(); }
+async function selectRoot(root) { library = await scanLibrary(root, config); await initializeImages(library.root); mode = 'local'; release = null; cached = null; liveCatalog = null; preferences.root = library.root; await savePreferences(); return summary(); }
 async function summary() {
   return { mode, root: mode === 'snapshot' ? `快照 ${release.id.slice(0, 12)}` : library?.root ?? '', files: mode === 'snapshot' ? await snapshotFiles(store, release) : library?.files ?? [], releaseId: release?.id ?? null, storeRoot: store.root, autoUpdate: preferences.autoUpdate, intervalMinutes: config.intervalMinutes, status: await store.status(), sources: config.sources.map(({ id, label }) => ({ id, label })) };
 }
@@ -109,6 +128,8 @@ function schedule() {
   if (preferences.autoUpdate) timer = setTimeout(async () => { try { await update(); } catch (error) { progress({ message: error.message, error: true }); } finally { schedule(); } }, config.intervalMinutes * 60000);
 }
 const handlers = {
+  async liveState({ server = 'de', refresh = false } = {}) { if (typeof refresh !== 'boolean') throw new Error('刷新参数无效'); return liveView(server, refresh); },
+  async importLiveState({ server, file }) { return liveView(server, false, await liveState.import(server, file)); },
   async documentsList(args) { return documents.list(args); },
   async documentsRead({ id }) { return documents.read(id); },
   async images({ requests }) {
@@ -209,7 +230,7 @@ const handlers = {
   async update() { return update(); },
   async import() { if (!library || mode !== 'local') throw new Error('请先打开本地资料目录'); if (busy) throw new Error('更新或导入正在进行'); busy = true; try { return await importLocal({ libraryRoot: library.root, config, storeRoot: store.root, onProgress: progress }); } finally { busy = false; } },
   async history() { return { releases: await store.history(), current: (await store.current())?.id ?? null, status: await store.status() }; },
-  async snapshot({ id }) { release = id ? await store.release(id) : await store.current(); if (!release) throw new Error('尚无快照，请先导入本地资料或检查更新'); mode = 'snapshot'; cached = null; return summary(); },
+  async snapshot({ id }) { release = id ? await store.release(id) : await store.current(); if (!release) throw new Error('尚无快照，请先导入本地资料或检查更新'); mode = 'snapshot'; cached = null; liveCatalog = null; return summary(); },
   async rollback({ id }) { if (busy) throw new Error('更新或导入正在进行'); const result = await rollback({ storeRoot: store.root, releaseId: id }); return { releaseId: result }; },
   async diff({ before, after }) { return changesBetween(await store.release(before), await store.release(after)); },
   async oracleOptions() { const data = await oracleData(true); return warframePool(data.warframes, data.dictionary); },

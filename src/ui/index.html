@@ -8,12 +8,13 @@
   <script src="theme.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="workspace.css">
+  <link rel="stylesheet" href="live-state.css">
 </head>
 <body>
   <header>
     <div class="brand"><span class="brand-icon">◈</span><div>上游资料工作台<small>SOURCE WORKBENCH <b>01</b></small></div></div>
-    <nav aria-label="功能页面"><button class="nav active" data-panel="browser">资料浏览</button><button class="nav" data-panel="merged">合并汇总</button><button class="nav" data-panel="gallery">图片资源</button><button class="nav" data-panel="rules">合并规则</button><button class="nav" data-panel="oracle">推算实验室</button><button class="nav" data-panel="updates">更新与版本</button><button class="nav" data-panel="documents">文档阅读</button><button class="nav" data-panel="settings">配置</button></nav>
-    <div class="header-tools"><span class="version">v0.13.3</span><select id="theme-select" aria-label="外观主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">暗色</option></select></div>
+    <nav aria-label="功能页面"><button class="nav active" data-panel="browser">资料浏览</button><button class="nav" data-panel="world">世界状态</button><button class="nav" data-panel="merged">合并汇总</button><button class="nav" data-panel="gallery">图片资源</button><button class="nav" data-panel="rules">合并规则</button><button class="nav" data-panel="oracle">推算实验室</button><button class="nav" data-panel="updates">更新与版本</button><button class="nav" data-panel="documents">文档阅读</button><button class="nav" data-panel="settings">配置</button></nav>
+    <div class="header-tools"><span class="version">v0.14.0</span><select id="theme-select" aria-label="外观主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">暗色</option></select></div>
   </header>
   <div id="notice" role="status" hidden></div>
   <main>
@@ -40,6 +41,18 @@
           <div class="pagination"><span id="page-info"></span><div><button id="previous" class="small">上一页</button><button id="next" class="small">下一页</button></div></div>
         </div>
       </article>
+    </section>
+    <section id="world" class="panel page ws-page" aria-label="世界状态">
+      <div class="ws-hero">
+        <div class="ws-hero-main"><div class="ws-eyebrow">ORIGIN SYSTEM / LIVE OPERATIONS</div><h1>世界状态<span class="ws-orbit-dot" aria-hidden="true"></span></h1><div class="ws-hero-meta"><strong id="ws-server-label">国际服 · DE</strong><span id="ws-status" class="ws-status">读取中</span><span id="ws-timestamp"></span></div><p id="ws-date" class="ws-hero-date"></p></div>
+        <div class="ws-hero-tools"><div class="ws-server-switch" aria-label="选择服务器"><button data-ws-server="de" class="selected" aria-pressed="true">国际服 <small>DE</small></button><button data-ws-server="wg" aria-pressed="false">国服 <small>WG</small></button></div><button id="ws-refresh" class="primary"></button><div class="ws-secondary-tools"><button id="ws-import">导入快照</button><label><input id="ws-auto" type="checkbox">每分钟刷新</label></div></div>
+        <div class="ws-hero-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+      </div>
+      <p id="ws-banner" class="ws-banner" role="status" hidden></p>
+      <div class="ws-overview"><p>此刻，始源星系<small>任务 · 轮换 · 奖励</small></p><div class="ws-stat-buttons"><button id="ws-stat-missions"></button><button id="ws-stat-weekly"></button><button id="ws-stat-trade"></button></div></div>
+      <div class="ws-toolbar"><nav id="ws-tabs" aria-label="世界状态分类"></nav><input id="ws-search" type="search" placeholder="搜索任务、物品、奖励…" aria-label="搜索世界状态"></div>
+      <div id="ws-content" aria-live="polite"><p class="ws-empty">正在读取状态…</p></div>
+      <details class="ws-diagnostics"><summary id="ws-source-info">数据来源与解析状态</summary><pre id="ws-diagnostics"></pre></details>
     </section>
     <section id="merged" class="panel page">
       <div class="page-heading"><div><small>P3 / OFFLINE DATASET</small><h1>合并汇总</h1><p>全量静态资料：统一实体、配方与奖励引用，逐字段保留来源和差异。</p></div><div class="actions"><button id="merge-copy" class="small" disabled>复制清单</button><button id="merge-export" class="small" disabled>导出数据包</button><button id="merge-build" class="primary">构建全量资料</button></div></div>

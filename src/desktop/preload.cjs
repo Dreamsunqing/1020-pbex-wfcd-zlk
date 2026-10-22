@@ -3,6 +3,7 @@ contextBridge.exposeInMainWorld('workbench', {
   call: (method, args) => ipcRenderer.invoke('workbench:call', method, args),
   chooseRoot: () => ipcRenderer.invoke('workbench:choose-root'),
   importOracleState: args => ipcRenderer.invoke('workbench:oracle-state', args),
+  importLiveState: server => ipcRenderer.invoke('workbench:live-state-import', server),
   exportFile: args => ipcRenderer.invoke('workbench:export', args),
   exportRules: args => ipcRenderer.invoke('workbench:rules-export', args),
   exportMerged: args => ipcRenderer.invoke('workbench:merge-export', args),

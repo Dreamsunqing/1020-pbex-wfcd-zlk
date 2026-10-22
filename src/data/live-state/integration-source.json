@@ -1,0 +1,82 @@
+{
+  "project": "世界状态重构",
+  "commit": "94832d3642b2dab13615c574f0df5b8797d03c61",
+  "importedAt": "2026-10-23",
+  "files": [
+    {
+      "file": "src/core/live-state/normalizers/archon-hunt.mjs",
+      "source": "src/world-state/normalizers/archon-hunt.mjs",
+      "sha256": "5e39b7c201d4c53fe1659757d31631c514f2d4f1a6dc1127d8aeceffa35ebad9"
+    },
+    {
+      "file": "src/core/live-state/normalizers/commerce-fields.mjs",
+      "source": "src/world-state/normalizers/commerce-fields.mjs",
+      "sha256": "8639d71d61825eca9a2d087f6d27bf3304e36f3f1b1a551a8def8dfda963b49a"
+    },
+    {
+      "file": "src/core/live-state/normalizers/cycles.mjs",
+      "source": "src/world-state/normalizers/cycles.mjs",
+      "sha256": "0ddc570316b36af3c49a44136671ce0cea8f397a85ded9dc113e3d9ddbc55410"
+    },
+    {
+      "file": "src/core/live-state/normalizers/events.mjs",
+      "source": "src/world-state/normalizers/events.mjs",
+      "sha256": "05986695b3aead7e6ab60a190a01cebd160ae8b0fe6c60b3471f64e6e670c675"
+    },
+    {
+      "file": "src/core/live-state/normalizers/fissures.mjs",
+      "source": "src/world-state/normalizers/fissures.mjs",
+      "sha256": "180513cc4991b01add61eecc72961ad1c34449876c6523f369cfebe07589a403"
+    },
+    {
+      "file": "src/core/live-state/normalizers/gameplay-fields.mjs",
+      "source": "src/world-state/normalizers/gameplay-fields.mjs",
+      "sha256": "fc15cf6e7419b7e9bebaf741fdfde365b3c554859638d0525e44d1ad14c1b686"
+    },
+    {
+      "file": "src/core/live-state/normalizers/season-social-fields.mjs",
+      "source": "src/world-state/normalizers/season-social-fields.mjs",
+      "sha256": "5b4d8c1542c057ceb275f6ca33dc790ebcbfe42ccb636b7a523a3a5947027034"
+    },
+    {
+      "file": "src/core/live-state/normalizers/sorties.mjs",
+      "source": "src/world-state/normalizers/sorties.mjs",
+      "sha256": "ac4c2616f05ce92a1a2d7a338a830dcd12f30d1ced47d64ab55c5f7e4ce9fbe9"
+    },
+    {
+      "file": "src/core/live-state/normalizers/system-fields.mjs",
+      "source": "src/world-state/normalizers/system-fields.mjs",
+      "sha256": "b1986ff2fa592cbd5296bbff3f779d8d372c13e1d76f10ca97da20d8c2cdefc5"
+    },
+    {
+      "file": "src/core/live-state/normalizers/index.mjs",
+      "source": "src/world-state/normalizers/index.mjs",
+      "sha256": "30833e819c0b0048ee4c60436a5a1f7b1d373b22f65efaeeb26b26ec8dca86aa"
+    },
+    {
+      "file": "src/core/live-state/raw/extended-json.mjs",
+      "source": "src/world-state/raw/extended-json.mjs",
+      "sha256": "e7297bf0e4cf81eec74df5418f8da353e22ccdf9065f1977fceeb437cf2a3e67"
+    },
+    {
+      "file": "src/core/live-state/raw/raw-envelope.mjs",
+      "source": "src/world-state/raw/raw-envelope.mjs",
+      "sha256": "2d249b5c94194dc8b8c27e4d23a3fb6956cb36d8bc14022e0017a3a1febcc835"
+    }
+  ],
+  "note": "解析器移植，静态翻译适配器替换为本项目字典。原项目未改动。样本仅为离线演示，不是实时数据。",
+  "communityFallback": {
+    "name": "warframe-worldstate-data",
+    "version": "3.16.10",
+    "license": "MIT",
+    "repository": "https://github.com/WFCD/warframe-worldstate-data",
+    "notice": "community-LICENSE.txt",
+    "fields": [
+      "solNodes",
+      "missionTypes",
+      "factions",
+      "sortie",
+      "fissureModifiers"
+    ]
+  }
+}

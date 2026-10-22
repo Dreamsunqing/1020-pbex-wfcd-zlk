@@ -1,0 +1,362 @@
+{
+  "extraAnalysis": {
+    "uniqueTextureUrls": 444,
+    "uniqueTexturesNotUsedByCommonIds": 369,
+    "exactOriginalFilenameInLocal": 534,
+    "textureDirectories": {
+      "/Lotus/Interface/Icons/Abilities": 272,
+      "/Lotus/Interface/Icons/Abilities/Archwing": 15,
+      "/Lotus/Interface/Icons/Abilities/Mech": 8,
+      "/Lotus/Interface/Icons/Abilities/Helminth": 13,
+      "/Lotus/Interface/Icons/StoreIcons/Objects": 1,
+      "/Lotus/Interface/Icons/StoreIcons/ShipDecos/Decorations": 1,
+      "/Lotus/Interface/Icons/StoreIcons/MarketBundles/Slots": 2,
+      "/Lotus/Interface/Icons/StoreIcons/LevelKeys": 2,
+      "/Lotus/Interface/Icons/StoreIcons/Resources/CraftingComponents": 480,
+      "/Lotus/Interface/Icons/StoreIcons/MiscItems": 4,
+      "/Lotus/Interface/Icons/StoreIcons/Cosmetics/Helmets": 29,
+      "/Lotus/Interface/Icons/StoreIcons/Operator/FocusLenses": 5,
+      "/Lotus/Interface/Icons/StoreIcons/Pickups": 6,
+      "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons": 2,
+      "/Lotus/Interface/Icons/StoreIcons/Weapons/MeleeWeapons/Weapons": 2,
+      "/Lotus/Interface/Icons/StoreIcons/Companions/Zanukas": 3,
+      "/Lotus/Interface/Icons/Player/ContentCreators": 1,
+      "/Lotus/Interface/Icons/StoreIcons/Boosters": 19,
+      "/Lotus/Interface/Icons/StoreIcons/Gear": 6,
+      "/Lotus/Interface/Icons/StoreIcons/MarketBundles/GearAndResources": 13,
+      "/Lotus/Interface/Icons/StoreIcons/MarketBundles": 1,
+      "/Lotus/Interface/Icons/StoreIcons/MarketBundles/CosmeticBundles/Armour": 2,
+      "/Lotus/Interface/Icons/StoreIcons/MarketBundles/CosmeticBundles/Pets": 25,
+      "/Lotus/Interface/Icons/StoreIcons/MarketBundles/Operator": 1,
+      "/Lotus/Interface/Icons/StoreIcons/Operator/Amps": 1
+    },
+    "note": "精确原图名可复用仅代表文件名关联，不能证明不同版本像素相同；未按英文标题模糊匹配。"
+  },
+  "checkedAt": "2026-10-22T14:00:31.830Z",
+  "augmented": {
+    "wfcdIds": 19542,
+    "overlap": 19538,
+    "officialOnly": 606,
+    "wfcdOnly": 4
+  },
+  "officialSizes": {
+    "512×512": 10811,
+    "256×256": 1506,
+    "128×128": 99,
+    "2048×2048": 15,
+    "1024×1024": 52,
+    "128×64": 18
+  },
+  "wfcdSizes": {
+    "512×512": 10646,
+    "462×462": 1,
+    "256×256": 1495,
+    "128×128": 6,
+    "2048×2048": 15,
+    "128×64": 18,
+    "1024×1024": 52
+  },
+  "basis": "同一完整物品 ID 比较，WFCD 仅计本机 catalog 原图且文件存在；技能补充库单独计数。图片文件数不能当作物品数。",
+  "manifest": {
+    "file": "official-public-export/manifests/en/ExportManifest.json",
+    "sha256": "bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4"
+  },
+  "official": {
+    "ids": 20144,
+    "uniqueTextureUrls": 12624,
+    "downloadedUrls": 12623,
+    "downloadedIds": 20143,
+    "uniqueContentFiles": 12501,
+    "bytes": 922974823,
+    "failures": 1,
+    "pngUrls": 11265,
+    "jpgUrls": 1358
+  },
+  "wfcd": {
+    "ids": 19234,
+    "uniqueFiles": 12233,
+    "bytes": 621154171,
+    "categories": {
+      "Arcanes": 172,
+      "Arch-Gun": 20,
+      "Arch-Melee": 9,
+      "Archwing": 5,
+      "Components": 2225,
+      "Fish": 126,
+      "Gear": 184,
+      "Glyphs": 1722,
+      "Honoria": 219,
+      "Melee": 269,
+      "Misc": 1247,
+      "Mods": 1809,
+      "Pets": 66,
+      "Primary": 197,
+      "Quests": 49,
+      "Railjack": 143,
+      "Relics": 3204,
+      "Resources": 242,
+      "Secondary": 149,
+      "SentinelWeapons": 24,
+      "Sentinels": 17,
+      "Sigils": 337,
+      "Skins": 6677,
+      "Warframes": 122
+    },
+    "uniqueContentFiles": 12117,
+    "uniqueContentBytes": 620159435
+  },
+  "skills": {
+    "records": 521,
+    "images": 305,
+    "mappedIds": 308,
+    "officialCovered": 308,
+    "failed": 0
+  },
+  "counts": {
+    "overlap": 19230,
+    "officialOnly": 914,
+    "wfcdOnly": 4,
+    "sameBytes": 0,
+    "differentBytes": 19230
+  },
+  "categories": {
+    "Skins": {
+      "officialIds": 6674,
+      "overlap": 6674,
+      "officialOnly": 0
+    },
+    "ExportWarframes": {
+      "officialIds": 308,
+      "overlap": 0,
+      "officialOnly": 308
+    },
+    "Warframes": {
+      "officialIds": 122,
+      "overlap": 122,
+      "officialOnly": 0
+    },
+    "Mods": {
+      "officialIds": 1809,
+      "overlap": 1809,
+      "officialOnly": 0
+    },
+    "Archwing": {
+      "officialIds": 5,
+      "overlap": 5,
+      "officialOnly": 0
+    },
+    "Misc": {
+      "officialIds": 1246,
+      "overlap": 1246,
+      "officialOnly": 0
+    },
+    "Pets": {
+      "officialIds": 66,
+      "overlap": 66,
+      "officialOnly": 0
+    },
+    "ExportSortieRewards": {
+      "officialIds": 52,
+      "overlap": 0,
+      "officialOnly": 52
+    },
+    "SentinelWeapons": {
+      "officialIds": 24,
+      "overlap": 24,
+      "officialOnly": 0
+    },
+    "Melee": {
+      "officialIds": 269,
+      "overlap": 269,
+      "officialOnly": 0
+    },
+    "Gear": {
+      "officialIds": 184,
+      "overlap": 184,
+      "officialOnly": 0
+    },
+    "Components": {
+      "officialIds": 2225,
+      "overlap": 2225,
+      "officialOnly": 0
+    },
+    "Resources": {
+      "officialIds": 242,
+      "overlap": 242,
+      "officialOnly": 0
+    },
+    "Relics": {
+      "officialIds": 3204,
+      "overlap": 3204,
+      "officialOnly": 0
+    },
+    "Fish": {
+      "officialIds": 126,
+      "overlap": 126,
+      "officialOnly": 0
+    },
+    "ExportRecipes": {
+      "officialIds": 543,
+      "overlap": 0,
+      "officialOnly": 543
+    },
+    "Honoria": {
+      "officialIds": 219,
+      "overlap": 219,
+      "officialOnly": 0
+    },
+    "Quests": {
+      "officialIds": 49,
+      "overlap": 49,
+      "officialOnly": 0
+    },
+    "ExportResources": {
+      "officialIds": 10,
+      "overlap": 0,
+      "officialOnly": 10
+    },
+    "Sentinels": {
+      "officialIds": 17,
+      "overlap": 17,
+      "officialOnly": 0
+    },
+    "Glyphs": {
+      "officialIds": 1722,
+      "overlap": 1722,
+      "officialOnly": 0
+    },
+    "ExportFlavour": {
+      "officialIds": 1,
+      "overlap": 0,
+      "officialOnly": 1
+    },
+    "Arcanes": {
+      "officialIds": 172,
+      "overlap": 172,
+      "officialOnly": 0
+    },
+    "Sigils": {
+      "officialIds": 337,
+      "overlap": 337,
+      "officialOnly": 0
+    },
+    "Primary": {
+      "officialIds": 197,
+      "overlap": 197,
+      "officialOnly": 0
+    },
+    "Secondary": {
+      "officialIds": 149,
+      "overlap": 149,
+      "officialOnly": 0
+    },
+    "Railjack": {
+      "officialIds": 143,
+      "overlap": 143,
+      "officialOnly": 0
+    },
+    "Arch-Gun": {
+      "officialIds": 20,
+      "overlap": 20,
+      "officialOnly": 0
+    },
+    "Arch-Melee": {
+      "officialIds": 9,
+      "overlap": 9,
+      "officialOnly": 0
+    }
+  },
+  "wfcdOnly": [
+    {
+      "id": "/Lotus/Types/Items/PhotoBooth/Zariman/PhotoboothTileZarMelicaLabTreasureRoom",
+      "category": "Misc",
+      "name": "冰川实验室场景",
+      "imageName": "ZarMelicaLabTreasureRoom.png",
+      "file": "909e5dc0c38944c10592ef7c.png"
+    },
+    {
+      "id": "/Lotus/Upgrades/Skins/Operator/Heads/ExtraAdultAlbedoC",
+      "category": "Skins",
+      "name": "肤色 B-17 [经典]",
+      "imageName": "ExtraC.png",
+      "file": "9c349e26ec4cc7f28dc527b7.png"
+    },
+    {
+      "id": "/Lotus/Upgrades/Skins/Operator/Heads/ExtraAlbedoC",
+      "category": "Skins",
+      "name": "肤色 B-17 [经典]",
+      "imageName": "ExtraC.png",
+      "file": "9c349e26ec4cc7f28dc527b7.png"
+    },
+    {
+      "id": "/Lotus/Types/Items/ShipDecos/TarotCard2026Tennotober",
+      "category": "Skins",
+      "name": "Tennotober 2026 Prex",
+      "imageName": "TarotCard2026Tennotober.png",
+      "file": "2899a0b0a7e81dca07204d41.png"
+    }
+  ],
+  "failures": [
+    {
+      "textureLocation": "/Lotus/Interface/Icons/Player/ContentCreators/DeathMa666ot.png!00_w3OCAqKWH5ngubC29LD+Cw",
+      "url": "https://content.warframe.com/PublicExport/Lotus/Interface/Icons/Player/ContentCreators/DeathMa666ot.png!00_w3OCAqKWH5ngubC29LD+Cw",
+      "error": "HTTP 404"
+    }
+  ],
+  "examples": {
+    "officialOnly": [
+      {
+        "id": "/Lotus/Powersuits/Alchemist/Abilities/AlchemistDistillAbility",
+        "category": "ExportWarframes",
+        "textureLocation": "/Lotus/Interface/Icons/Abilities/AlchemistDistill.png!00_AYCNpodsYqdEiDJidLT3jw",
+        "downloaded": true
+      },
+      {
+        "id": "/Lotus/Powersuits/Alchemist/Abilities/AlchemistSerpentAbility",
+        "category": "ExportWarframes",
+        "textureLocation": "/Lotus/Interface/Icons/Abilities/AlchemistSerpent.png!00_OT04mWPoskwA6fiMYAL6cA",
+        "downloaded": true
+      },
+      {
+        "id": "/Lotus/Powersuits/Alchemist/Abilities/AlchemistTransmuteAbility",
+        "category": "ExportWarframes",
+        "textureLocation": "/Lotus/Interface/Icons/Abilities/AlchemistTransmuter.png!00_Wmg-vwzG993sT6PTBZCq2g",
+        "downloaded": true
+      },
+      {
+        "id": "/Lotus/Powersuits/Alchemist/Abilities/AlchemistVialAbility",
+        "category": "ExportWarframes",
+        "textureLocation": "/Lotus/Interface/Icons/Abilities/AlchemistRush.png!00_7r+3shNgn-q+Hw3Goh4y-w",
+        "downloaded": true
+      },
+      {
+        "id": "/Lotus/Powersuits/AntiMatter/Abilities/AntiMatterDrop",
+        "category": "ExportWarframes",
+        "textureLocation": "/Lotus/Interface/Icons/Abilities/NovaAntimatterDrop.png!00_+4Yvqqk+awo1sfZBtqLVfA",
+        "downloaded": true
+      }
+    ],
+    "components": [
+      {
+        "id": "/Lotus/Types/Recipes/ArchwingRecipes/DemolitionArchwing/DemolitionArchwingChassisBlueprint",
+        "category": "ExportRecipes",
+        "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Resources/CraftingComponents/GenericArchwingHarness.png!00_FaFK-TWDPULy-LycLS2CzQ",
+        "downloaded": true
+      },
+      {
+        "id": "/Lotus/Types/Recipes/ArchwingRecipes/DemolitionArchwing/DemolitionArchwingSystemsBlueprint",
+        "category": "ExportRecipes",
+        "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Resources/CraftingComponents/GenericArchwingSystems.png!00_uotWwFz2T4hxqBytVPDuHQ",
+        "downloaded": true
+      },
+      {
+        "id": "/Lotus/Types/Recipes/ArchwingRecipes/DemolitionArchwing/DemolitionArchwingWingsBlueprint",
+        "category": "ExportRecipes",
+        "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Resources/CraftingComponents/GenericArchwingWings.png!00_Jv-UWP1jGZBCT-6KBvtMqg",
+        "downloaded": true
+      }
+    ]
+  },
+  "fullLocalReport": "artifacts/image-comparison/report.json",
+  "officialCache": ".workbench/official-images/index.json"
+}

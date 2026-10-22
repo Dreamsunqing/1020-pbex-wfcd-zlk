@@ -1,112 +1,57 @@
-# 世界状态资料库上游资料包
+# 星际战甲上游资料工作台
 
-## 第一版应用
+把分散的官方、Plus、WFCD、Oracle 和 browse.wf 资料放在一个离线工作台中：查看 JSON、说明字段和中文映射、按规则合并实体与奖励关系、查询和导出本地图片。当前版本 **0.13.3**。
 
-现已加入上游资料工作台：各来源独立预览、自动更新、历史快照和活化/仲裁推算。使用方式见 [使用说明](使用说明.md)，测试与成品状态见 [第一版验收记录](文档/04-第一版验收记录.md)，应用源码在 `src/`。跨来源合并汇总（P3）和邮件通知暂不实现。下文的“尚未生成 ZIP”指原始历史资料包整理记录，不代表工作台应用的打包状态。
+本项目先跑通 P3 离线数据流程，再讨论仓鼠互助洞 App 的在线分发。邮件、uniCloud／ECS 部署仍待后续处理；`<xxx>` 文本标记通过统一中间件展示，已有映射使用离线真实图标。
 
-0.1.1 增加来源、类型、语言、数据类别四维多选 picker 和文件徽章，内容预览列扩至 75%。本次验证见 [多维筛选验收](文档/05-多维筛选验收.md)。
+## 从哪里开始
 
-0.2.0 加入 browse.wf 世界周期、Teshin 周商品、普通／钢铁回廊和每日突袭查询，支持本地资料与历史快照。平原／火卫二使用可手动刷新的官方世界状态基准。详情见 [使用说明](使用说明.md)和 [四组功能验收](文档/06-browse功能验收.md)。
+- 第一次接触：[十分钟上手](文档/入门/01-十分钟上手.md)。
+- 想知道数据和图片如何流转：[流水线脚本地图](文档/深入/00-数据与图片流水线脚本地图.md)。
+- 深入开发或让 AI 接手：[文档总览](文档/README.md)、[AI 交接说明](文档/AI/项目交接与修改边界.md)。
+- 实际操作：[使用说明](使用说明.md)、[工具箱](工具/README.md)。程序内也有“文档阅读”。
 
-0.3.0 补齐 Oracle 五组入口：赏金轮次、地区赏金、入侵任务变化、活化战甲、仲裁排期。支持官方世界状态刷新、本地 JSON 导入和手填 seed 复算，详情见 [Oracle 五组推理验收](文档/07-Oracle五组推理验收.md)。
+## 运行
 
-0.4.0 加入实验室／Hex 周常：整理有效任务、第二档变体与风险、个人限制，兼容 Oracle 名称转换并显示中文说明，支持 JSON 复制和 CLI `weekly`。详情见 [周常整理验收](文档/08-Oracle周常整理验收.md)。
+在资料包目录安装 `package.json` 的依赖后，运行：
 
-0.5.1 调整导航与实验室：两页签各保留时间和一个“刷新并查询”，模块条件独立设置；周常为第 4 项、活化第 5 项、仲裁第 6 项。见 [实验室界面调整](文档/11-实验室操作栏调整.md)。
-
-0.6.0 为 Oracle 01、02 加入赏金奖励：中文物品、数量、原始概率与来源；地区按难度查看，并独立确认各地区奖励轮次。见 [赏金奖励实现与验收](文档/12-Oracle赏金奖励.md)。
-
-0.5.0 新增 JSON 卡片视图、中文标题字典匹配与可追溯的翻译来源列，保持原始 JSON 只读。见 [卡片与中文标题验收](文档/10-JSON卡片与中文标题.md)。
-
-0.4.1 修复科研个人限制的中文缺项，并将英文原始标识折叠到详情。中文采用“所选上游字典优先、应用补译兜底、缺失明确提示”，补充译文记录官方依据和独立哈希。见 [中文展示修复](文档/09-科研中文展示修复.md)。
-
-GitHub 保存地址：[Dreamsunqing/1020-pbex-wfcd-zlk](https://github.com/Dreamsunqing/1020-pbex-wfcd-zlk)。最新发布标签为 `v0.6.0`，桌面安装包（macOS arm64、macOS x64、Windows x64）见 [Release](https://github.com/Dreamsunqing/1020-pbex-wfcd-zlk/releases/tag/v0.6.0)。本地 `dist/` 仅保留最新版本的交付文件。
-
-仓库保存工作台源码、文档和 637 个上游资料文件。四个上游仓库以普通文件保存，原始来源与固定提交记录仍在快照清单中；本地保留的上游 `.git` 历史不上传。依赖、运行快照、缓存及打包目录不进入 Git。下文包含 `.git` 的 750 文件规模描述对应原始本地资料包。
-
-```bash
-git clone https://github.com/Dreamsunqing/1020-pbex-wfcd-zlk.git
-cd 1020-pbex-wfcd-zlk
-npm ci
+```sh
 npm start
-python3 工具/校验资料包.py
 ```
 
-克隆后默认核验 637 个资料文件。对仍保留四个上游 `.git` 的原始本地资料包，可运行 `python3 工具/校验资料包.py --include-git` 核验全部 750 个文件。
-
-待确认的目录版资料包，尚未生成 ZIP。整理日期：2026-10-19。
-
-资料包含官方 Public Export、四个保留既有 Git 历史的社区仓库，以及新加入的 WFCD Items 无图片源码与数据快照。可脱离世界状态 API 项目阅读、查询和校验。
-
-## 从这里开始
-
-1. [数据来源与获取方法](文档/01-数据来源与获取方法.md)：来源分工（含 WFCD Items）、来源网址、Fandom Public Export 教程出处、采集时间、固定提交、语言代码、独立下载方法与边界。
-2. [各类 JSON 内容说明](文档/02-各类JSON内容说明.md)：官方 16 类、Plus 44 类导出、Oracle 清单、WFCD 26 类物品及 14 种语言数据、字典与配套 JSON 的实际内容和条目数。
-3. [JSON 文件清单](文档/JSON文件清单.tsv)：逐文件路径、用途、数量、大小、哈希及 GitHub / browse.wf 两列网址，可用表格工具打开。
-4. [JSON 文件结构清单](文档/JSON文件结构清单.json)：各文件字段、分组长度与截断示例。
-5. [官方来源映射](文档/官方文件来源与当前文件映射.json)：远端原版本/哈希与本地改名格式化文件的对应关系。
-
-核验记录见 [整理与核验记录](文档/03-整理与核验记录.md)。
-
-## 来源分工
-
-| 来源 | 用途 | GitHub URL | browse.wf URL | 收录状态 |
-| --- | --- | --- | --- | --- |
-| DE 官方 Public Export | 官方静态物品、星图、配方、奖励及多语言文本 | [社区镜像](https://github.com/calamity-inc/warframe-public-export) | — | 已保存 15 种语言、240 份 Manifest |
-| Plus | 增强静态资料与独立语言字典 | [warframe-public-export-plus](https://github.com/calamity-inc/warframe-public-export-plus) | [在线 JSON](https://browse.wf/warframe-public-export-plus/) | 已随包保存 |
-| WFCD Items（warframe-items） | 分类物品资料，含图片名称/哈希等元数据、掉落率、更新日志与紫卡关联；npm 包为 `@wfcd/items` | [WFCD/warframe-items](https://github.com/WFCD/warframe-items) | — | 已保存非图片文件，无 `.git` |
-| Plus 生成器 | Plus 的生成逻辑与补充输入 | [warframe-public-export-plus-gen](https://github.com/calamity-inc/warframe-public-export-plus-gen) | — | 已随包保存 |
-| Oracle | 赏金与挑战清单、补充字典、轮换推算逻辑 | [wf.browse.oracle](https://github.com/calamity-inc/wf.browse.oracle) | [Oracle 服务](https://oracle.browse.wf/) | 已随包保存 |
-| browse.wf | 数据展示与消费代码、浮印等配套资料 | [browse.wf](https://github.com/calamity-inc/browse.wf) | [网站入口](https://browse.wf/) | 已随包保存 |
-
-WFCD Items 已缓存到 `世界状态上游/wfcd-items/`：固定提交 `20f8d9427a5a62268817853eefd8962d18c0b70e`，保存 153 个文件（101,250,492 字节），排除 12,543 个 PNG/JPG 文件和 1 个内嵌 SVG 的 JSON。分类数据、语言数据、图片哈希索引、源码、配置和许可证均保留；没有 `.git` 或图片内容（含内嵌 SVG 的 `data/logo.json` 也已排除）。获取及校验信息见 `wfcd-items-snapshot.json`。
-
-## 本包规模
-
-| 项目 | 数量 |
-| --- | --- |
-| 资料文件（含原四个 Git 内部文件） | 750 |
-| 资料总字节数 | 674,590,772（约 643.3 MiB；不代表 ZIP 大小） |
-| 官方语言/JSON | 15 种 / 240 个 |
-| Plus JSON（含字典和 npm 配置） | 62 |
-| Plus 生成器 JSON 后缀文件 | 8 |
-| Oracle JSON | 23 |
-| browse.wf JSON 后缀文件 | 5 |
-| WFCD JSON 后缀文件 | 63 |
-| 原快照 JSON / WFCD 来源清单 | 1 / 1 |
-| 全部 JSON 后缀文件 | 403（401 个严格 JSON，2 个非严格 JSON，详见结构清单） |
-
-`zh/ExportResources_zh.json` 的 `ExportResources` 数组为 **3549 项**。条目数不是按名称或 uniqueName 去重后的物品数。
+或者双击 `工具/打开工具箱.command`（Mac）／`工具/打开工具箱.cmd`（Windows），选择“启动工作台”。命令行工具需 Node.js 22.19+；维护 WFCD 图库还需 Python 3。已有应用 ZIP 可以独立启动，维护脚本需要完整项目和依赖。
 
 ## 目录
 
 ```text
-世界状态资料库上游资料包/
-├── README.md
-├── 世界状态上游/
-│   ├── README.md
-│   ├── snapshot-manifest.json
-│   ├── official-public-export/  # lzma、indexes、manifests
-│   ├── git/                    # 四个原仓库，含 .git
-│   ├── wfcd-items/             # WFCD 源码与数据，排除图片，无 .git
-│   └── wfcd-items-snapshot.json # 新增来源与排除清单
-├── 文档/                       # 两份说明、结构/来源/校验清单
-└── 工具/
-    ├── 按快照重新获取.py
-    ├── 缓存WFCD无图片.py
-    └── 校验资料包.py
+世界状态上游/                原始文本资料，按来源区分
+assets/content/wfcd/img/    WFCD 原图
+assets/content/wfcd/        WFCD 目录、图名及 ID 索引
+assets/content/official/img/ 官方原图，内容去重
+assets/content/official/    官方 Manifest 和索引
+工具/                      可以直接运行的命名入口
+scripts/                   维护实现
+src/core/                  数据、映射、合并、图片与文档核心
+src/desktop/               Electron 主进程、隔离接口、后台
+src/ui/                    页面和交互
+文档/入门、深入、AI/        当前文档
+文档/归档/                 历史过程、报告和版本说明
+.workbench/                CLI 快照、合并仓库；桌面版另有独立用户目录
+输出/                      手动运行工具的导出结果
 ```
 
-## 离线校验
+开发维护的图库集中在本项目。原独立攻略图片工具已合并并删除；同机开发版和普通发布版共用 `assets/content`。普通应用 ZIP 不含大图库，跨电脑时需携带该目录和原始资料；GitHub Release 另提供 Windows x64 `with-images.zip`，内含现有 WFCD、官方图库及索引，解压后自动发现。含图版不另含原始资料或个人缓存，详见 [含图库发布说明](文档/深入/12-含图库Windows发布.md)。
 
-在本目录运行（只需要 Python 3）：
+## 本轮变更与状态
 
-```bash
-python3 工具/校验资料包.py
-```
+0.12.0 统一了 `wfcd/img`、`official/img` 路径，增加分层文档、工具箱和“文档阅读”，并将蓝图叠加用于图库预览与图片导出。蓝图底纹在下，精确关联的成品图在上；不改源图、不凭名字猜成品。
 
-重新获取方法见第一份文档，需要网络、Python 3.10+ 和 Git；本次实际联网获取了 WFCD 部分，原官方数据和原四仓库未重新联网下载。官方 JSON 的格式化哈希与原快照下载哈希口径不同，文档中已分别保留。两份带注释的上游配置保持原状，不作为下载失败。
+2026-10-23 已恢复测试：修复首页初始化被 JSON 模块 CSP 拦截的问题，补齐离线文本图标，并验证合并展示与图库操作。完整测试范围见 [启动与图标修复](文档/深入/09-启动故障与真实文本图标.md)。发布仅制作 Mac x64、Windows x64，并保留当前和一个上一版应用 ZIP。
 
-官方数据与原四仓库沿用 2026-10-04 的来源记录；WFCD Items 是 2026-10-19 新获取的固定提交快照。不含正在更新的世界状态服务运行数据、所有图标二进制或 Plus 完整生成环境。
+0.13.0 修复合并页暗色、强化跳转与关系配图；增加内部定义筛选、Tau 叠加、普通 Forma 展示选图和 `<xxx>` 文本中间件。详见 [展示规则与配图说明](文档/深入/08-展示规则文本标记与配图修复.md)。
 
-网址补充于 2026-10-19：[Fandom Public Export 教程](https://warframe.fandom.com/wiki/Public_Export#Details)、[browse.wf 数据浏览说明](https://browse.wf/about)。两份主题文档的表格与 TSV 已同步补充可确认的逐文件链接。
+0.13.1 修复首页无法初始化，按 Plus 的 ExportTextIcons 映射补齐真实文本图标。应用内置小型文本图标运行时资源，大图库仍共用外部目录。
+
+0.13.2 按官方语言字段、Plus／Oracle 语言键和 WFCD 本地化对象修复多层中文映射，补齐 Mod 等级效果描述，恢复 `<DT_*_COLOR>` 真实图标；统一资料可切换内容语言。旧合并缓存需重新构建。详见 [字段、字典与多语言映射](文档/深入/10-字段字典与多语言映射.md)。
+
+0.13.3 统一赏金奖励卡片尺寸，改为点击进入详情，保留物品往返和原搜索页码；图库新增“文本图标”分类，可检索、预览、复制和导出 624 个已有图片标记。无需重建 0.13.2 合并数据。详见 [赏金详情与文本图标图库](文档/深入/11-赏金详情与文本图标图库.md)。

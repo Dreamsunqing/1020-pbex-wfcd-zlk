@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' guide-image:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>星际战甲 · 攻略图片工具</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="search.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-background="checker" data-size="medium">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-icon">✧</span><div><strong>攻略图片工具</strong><span>WARFRAME ASSET LIBRARY</span></div></div>
+      <div class="library-label">素材分类 <span id="category-total"></span></div>
+      <nav id="categories" aria-label="素材分类"></nav>
+      <div class="sidebar-bottom"><span class="offline-dot"></span> 离线素材库 <span id="sidebar-version">v1.0</span></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="搜索中文名或英文名，例如：迅发 / Acceltra" aria-label="搜索中文名或英文名" autocomplete="off"><kbd>Ctrl K</kbd></div>
+        <button id="help" class="icon-button" title="使用说明" aria-label="使用说明">?</button>
+      </header>
+      <main class="content">
+        <section class="browser">
+          <div class="section-heading"><div><div class="eyebrow">为每一篇攻略，找到合适的图片</div><h1 id="category-title">全部素材</h1></div><div class="result-total"><strong id="result-count">—</strong><span>个结果</span></div></div>
+          <div class="toolbar">
+            <div class="filter-left"><select id="image-filter" aria-label="图片筛选"><option value="available">有图片</option><option value="all">全部记录</option><option value="missing">暂无图片</option></select><select id="sort" aria-label="排序"><option value="name">名称排序</option><option value="english">英文名排序</option></select><button id="clear-filters" class="text-button">重置</button></div>
+            <div class="view-options"><span>预览</span><div class="segmented" id="background-options" role="group" aria-label="预览背景"><button data-bg="checker" class="checker-swatch" title="透明棋盘格" aria-label="透明棋盘格"></button><button data-bg="light" class="light-swatch" title="浅色背景" aria-label="浅色背景"></button><button data-bg="dark" class="dark-swatch" title="深色背景" aria-label="深色背景"></button></div><select id="thumbnail-size" aria-label="缩略图大小"><option value="small">小图</option><option value="medium" selected>中图</option><option value="large">大图</option></select></div>
+          </div>
+          <div id="enemy-coverage" class="coverage-note" hidden><span id="enemy-coverage-text"></span><button id="view-missing-enemies" class="text-button">查看未对应条目</button></div>
+          <div class="selection-tools"><label><input type="checkbox" id="select-page"> 选择本页可用图片</label><button id="show-selected" class="text-button" aria-pressed="false">只看已选</button><span id="page-hint"></span></div>
+          <div id="grid-scroll" class="grid-scroll"><div id="grid" class="image-grid" aria-label="图片列表"></div><div id="empty" class="empty" hidden><span>⌕</span><h2>没有找到匹配的素材</h2><p>试试更短的中文或英文名称，或切换分类与图片筛选。</p><button id="empty-reset" class="button secondary">重置筛选</button></div><div id="load-error" class="empty" hidden><h2>图片库加载失败</h2><p id="load-error-message"></p><button id="retry" class="button secondary">重新加载</button></div></div>
+          <div class="pagination"><span id="range-info">正在读取离线图片库…</span><div><button id="prev" class="pager-button" aria-label="上一页">← 上一页</button><span id="page-info">—</span><button id="next" class="pager-button" aria-label="下一页">下一页 →</button></div></div>
+        </section>
+        <aside id="details" class="details" aria-label="图片详情"><div class="detail-placeholder"><span>✧</span><h2>让图片为攻略添彩</h2><p>点击一张图片查看大图，<br>复制后即可粘贴到编辑器。</p><div>中文检索 · 英文检索 · 原图导出</div></div></aside>
+      </main>
+      <footer class="bottom-bar"><div><span id="selected-count" class="count-badge">0</span><span>张已选择</span><button id="clear-selection" class="text-button" disabled>清空</button></div><div class="export-options"><label for="naming">文件名</label><select id="naming"><option value="both">中文名_英文名</option><option value="zh">中文名</option><option value="en">英文名</option></select><button id="export" class="button primary" disabled>导出所选图片 <span>↗</span></button></div></footer>
+      <div class="status-bar"><span id="data-version">正在加载数据版本…</span><span>原图与名称均来自 WFCD / warframe-items</span></div>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="help-dialog"><div class="dialog-heading"><div><div class="eyebrow">QUICK START</div><h2>三步，把图片用进攻略</h2></div><button class="icon-button close-dialog" aria-label="关闭使用说明">×</button></div><ol class="help-steps"><li><strong>找到素材</strong><p>输入中文或英文名称，也可以从左侧选择分类。多个关键词用空格分开；搜索部件时可输入所属装备的名称。</p></li><li><strong>复制或保存</strong><p>点击图片，在右侧选择「复制图片」或「保存原图」。复制图片后，在支持图片粘贴的编辑器中按 Ctrl + V。</p></li><li><strong>一次导出多张</strong><p>勾选图片左上角的选择框，点击底部「导出所选图片」。跨页、跨分类的选择都会保留；同名文件会自动编号。</p></li></ol><div class="help-note">图片随程序提供，无需联网。缺少中文翻译的条目会显示英文；「暂无图片」记录仍可复制名称。预览底色不会加入保存的原图。不同编辑器的图片粘贴效果可能不同，遇到问题可保存原图后插入。</div><p class="help-source">数据来源：WFCD / warframe-items。游戏素材权益归原权利人。完整解压后运行，请保留程序附带的文件。</p><button class="button primary close-dialog">开始找图</button></dialog>
+  <dialog id="lightbox"><div class="lightbox-toolbar"><strong id="lightbox-title"></strong><div><button id="zoom-out" class="icon-button" aria-label="缩小">−</button><span id="zoom-value">适应窗口</span><button id="zoom-in" class="icon-button" aria-label="放大">+</button><button id="zoom-fit" class="text-button">适应窗口</button><button class="icon-button close-dialog" aria-label="关闭大图">×</button></div></div><div id="lightbox-canvas" class="lightbox-canvas image-surface"><img id="lightbox-img" alt=""></div><div class="lightbox-bottom"><span>保留原始透明背景 · 滚轮缩放</span><div><button id="lightbox-save" class="button secondary">保存原图</button><button id="lightbox-copy" class="button primary">复制图片</button></div></div></dialog>
+  <dialog id="export-dialog"><div class="dialog-heading"><h2>正在导出原图</h2></div><p id="export-message">准备保存…</p><progress id="export-progress" max="100" value="0"></progress><p class="muted">导出时保留原图，同名文件自动编号。</p><button id="cancel-export" class="button secondary">停止导出</button></dialog>
+  <dialog id="result-dialog"><div class="dialog-heading"><h2 id="export-result-title">导出完成</h2><button class="icon-button close-dialog" aria-label="关闭导出结果">×</button></div><p id="export-result-message"></p><pre id="export-errors" hidden></pre><div class="dialog-actions"><button class="button secondary close-dialog">继续找图</button><button id="open-export-folder" class="button primary">打开保存文件夹</button></div></dialog>
+</body>
+</html>

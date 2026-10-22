@@ -1,20 +1,39 @@
 // Exercise the packaged app's own renderer via its temporary debugging socket.
 import { spawn } from 'node:child_process';
 import { promises as fs } from 'node:fs';
+import { constants } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { anchorFromWorldState } from '../src/core/browse.mjs';
 import { atomicJson } from '../src/core/io.mjs';
 import { selectOracleState } from '../src/core/oracle-state.mjs';
+import { scanLibrary } from '../src/core/library.mjs';
 const executable = path.resolve(process.argv[2]);
 const userData = await fs.mkdtemp(path.join(os.tmpdir(), 'wb-ui-'));
+const cardRoot = path.join(userData, 'card-fixture');
+const sourceLibrary = await scanLibrary(process.cwd());
+for (const file of sourceLibrary.files) {
+  const destination = path.join(cardRoot, file.id);
+  await fs.mkdir(path.dirname(destination), { recursive: true });
+  await fs.copyFile(path.join(sourceLibrary.root, file.id), destination, constants.COPYFILE_FICLONE);
+}
+await fs.mkdir(path.join(cardRoot, 'dicts'), { recursive: true });
+const cardRecords = Array.from({ length: 101 }, (_, i) => ({ name: i ? `记录 ${i}` : '/Lotus/Test/Weapon', criticalChance: 0.31999999, power: 150, omegaAttenuation: 0.65, disposition: 2, description: '完整描述'.repeat(i ? 2 : 800), icon: 'https://example.invalid/image.png', patchlogs: [{ name: 'Update 1', date: '2026-10-22', changes: '调整内容', fixes: '修复内容', additions: '新增内容' }], nested: Array.from({ length: 83 }, (_, n) => ({ count: n })) }));
+cardRecords[100].rare = { onlyLastRecord: true };
+await fs.writeFile(path.join(cardRoot, 'items.json'), JSON.stringify(cardRecords));
+await fs.writeFile(path.join(cardRoot, 'collections.json'), JSON.stringify({ ExportCustoms: cardRecords, Empty: [], Nested: [cardRecords.slice(0, 2)], Records: { '/Lotus/Test/One': cardRecords[0], '/Lotus/Test/Two': cardRecords[1] } }));
+await fs.writeFile(path.join(cardRoot, 'dicts/zh.json'), JSON.stringify({ '/Lotus/Test/Weapon': '离线武器示例' }));
 const activation = Date.parse('2026-10-19T12:00Z');
 const stamp = time => ({ $date: { $numberLong: String(time) } });
 await atomicJson(path.join(userData, 'snapshots/runtime/world-state.json'), anchorFromWorldState(JSON.stringify({ SyndicateMissions: [{ Tag: 'HexSyndicate', Activation: stamp(activation), Expiry: stamp(activation + 9000000) }] }), { fetchedAt: activation }));
 const weeklyFixture = JSON.parse(await fs.readFile(new URL('../test/fixtures/oracle-weekly-service.json', import.meta.url), 'utf8'));
 const oracleFixture = JSON.parse(await fs.readFile(new URL('../test/fixtures/oracle-service.json', import.meta.url), 'utf8'));
 await atomicJson(path.join(userData, 'snapshots/runtime/oracle-world-state.json'), selectOracleState(JSON.stringify({ ...oracleFixture.worldState, ...weeklyFixture.worldState }), { at: oracleFixture.queryAt, loadedAt: oracleFixture.queryAt }));
-const env = { ...process.env, WORKBENCH_ROOT: process.cwd(), WORKBENCH_USER_DATA: userData };
+const imageFixture = path.join(userData, 'images');
+await fs.mkdir(path.join(imageFixture, 'img'), { recursive: true });
+await fs.writeFile(path.join(imageFixture, 'img/fixture.png'), Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jvXcAAAAASUVORK5CYII=', 'base64'));
+await atomicJson(path.join(imageFixture, 'catalog.json'), { items: [{ id: '/Lotus/Weapons/Tenno/LongGuns/SapientPrimary/SapientPrimaryWeapon', hasImage: true, imageKind: 'original', assetName: 'fixture.png', imageName: 'SapientPrimaryWeapon.png' }] });
+const env = { ...process.env, WORKBENCH_ROOT: cardRoot, WORKBENCH_IMAGE_ROOT: process.env.WORKBENCH_IMAGE_ROOT ?? imageFixture, WORKBENCH_USER_DATA: userData };
 delete env.ELECTRON_RUN_AS_NODE; delete env.WORKBENCH_SMOKE;
 const child = spawn(executable, [...(process.argv[3] ? [process.argv[3]] : []), '--remote-debugging-port=0'], { env, stdio: ['ignore', 'ignore', 'pipe'] });
 let socket;
@@ -24,13 +43,16 @@ try {
     child.on('error', reject);
     child.stderr.on('data', bytes => { const match = /DevTools listening on (ws:\/\/[^\s]+)/.exec(bytes.toString()); if (match) { clearTimeout(timer); resolve(match[1]); } });
   });
-  let target;
+  let target, targetError, lastTargets;
   for (let i = 0; i < 100 && !target; i++) {
-    const targets = await (await fetch(`http://127.0.0.1:${new URL(endpoint).port}/json/list`)).json();
-    target = targets.find(x => x.type === 'page' && x.url.endsWith('/src/ui/index.html'));
+    try {
+      const targets = await (await fetch(`http://127.0.0.1:${new URL(endpoint).port}/json/list`)).json();
+      lastTargets = targets;
+      target = targets.find(x => x.type === 'page' && x.url.endsWith('/src/ui/index.html'));
+    } catch (error) { targetError = error.cause?.message ?? error.message; }
     if (!target) await new Promise(resolve => setTimeout(resolve, 100));
   }
-  if (!target) throw new Error('未找到刚启动工作台的页面');
+  if (!target) throw new Error('未找到刚启动工作台的页面：' + JSON.stringify({ endpoint, targetError, lastTargets, exitCode: child.exitCode }));
   socket = new WebSocket(target.webSocketDebuggerUrl); await new Promise((resolve, reject) => { socket.onopen = resolve; socket.onerror = reject; });
   let id = 0; const pending = new Map();
   socket.onmessage = event => { const result = JSON.parse(event.data); if (!result.id) return; const task = pending.get(result.id); pending.delete(result.id); result.error ? task.reject(new Error(result.error.message)) : task.resolve(result.result); };
@@ -55,7 +77,7 @@ try {
     const toolbars=[...document.querySelectorAll('.lab-toolbar')].map(node=>({buttons:node.querySelectorAll('button').length,pickers:node.querySelectorAll('select').length,inputs:node.querySelectorAll('input').length,text:node.querySelector('button').textContent}));
     const primary=[...document.querySelectorAll('#browse-lab,#oracle-legacy')].map(node=>node.querySelectorAll('button.primary').length);
     const local=document.getElementById('browse-weeks').closest('.card').id==='browse-teshin-card'&&document.getElementById('browse-circuit-weeks').closest('.card').id==='browse-circuit-card'&&document.getElementById('oracle-cycle-seed').closest('.card').id==='oracle-cycle-card'&&document.getElementById('oracle-locations-seed').closest('.card').id==='oracle-locations-card'&&document.getElementById('oracle-invasion-count').closest('.card').id==='oracle-invasions-card'&&document.getElementById('import-oracle-state').closest('.card').id==='oracle-weekly-card';
-    const ok=nav.join('/')==='资料浏览/推算实验室/更新与版本/配置'&&order.join('/')==='oracle-cycle-card/oracle-locations-card/oracle-invasions-card/oracle-weekly-card/oracle-invig-card/oracle-arb-card'&&shortcuts[4].startsWith('05')&&shortcuts[5].startsWith('06')&&toolbars.every(item=>item.buttons===1&&item.pickers===0&&item.inputs===1&&item.text==='刷新并查询')&&primary.every(count=>count===1)&&local&&document.querySelectorAll('#oracle-legacy input[type=datetime-local]').length===1;
+    const ok=nav.join('/')==='资料浏览/合并汇总/合并规则/推算实验室/更新与版本/配置'&&order.join('/')==='oracle-cycle-card/oracle-locations-card/oracle-invasions-card/oracle-weekly-card/oracle-invig-card/oracle-arb-card'&&shortcuts[4].startsWith('05')&&shortcuts[5].startsWith('06')&&toolbars.every(item=>item.buttons===1&&item.pickers===0&&item.inputs===1&&item.text==='刷新并查询')&&primary.every(count=>count===1)&&local&&document.querySelectorAll('#oracle-legacy input[type=datetime-local]').length===1;
     return {ok,nav,order,shortcuts,toolbars,primary,local};
   })()`});
   result.layout=layoutReply.result.value;if(!result.layout?.ok)throw new Error(JSON.stringify(result.layout));
@@ -217,9 +239,149 @@ try {
     result.solarisCached=(await window.workbench.call('oracleStateStatus')).syndicates.some(row=>row.tag==='SolarisSyndicate');
     if(!result.solarisCached||!Object.values(ui.oracleResults.locations.rewardCatalog).every(catalog=>catalog.tiers.every(tier=>tier.tables.every(table=>table.status==='available'))))throw new Error('官方赏金奖励关联不完整');return result;
   })()`);
+  result.jsonDetails = await evaluate(`(async()=>{
+    const ui=await import('./app.js'),$=ui.$;
+    ui.applyLibrary(await window.workbench.call('refresh'));ui.activate('browser');$('notice').hidden=true;
+    ui.state.view='cards';await ui.selectFile(ui.state.files.find(f=>f.id==='items.json'));
+    const heights=[...document.querySelectorAll('.json-preview-card')].map(n=>n.getBoundingClientRect().height);
+    if(heights.length!==80||new Set(heights).size!==1||heights[0]!==184)throw new Error('卡片尺寸不一致 '+JSON.stringify(heights.slice(0,5)));
+    const firstRow=[...document.querySelectorAll('.json-card-grid>.json-preview-card')].filter(n=>n.getBoundingClientRect().top===document.querySelector('.json-card-grid>.json-preview-card').getBoundingClientRect().top).length;
+    const compact=firstRow>=3&&!document.querySelector('.json-card-grid .json-card-fields')&&!document.querySelector('.json-card-grid').textContent.includes('完整描述');
+    if(!compact)throw new Error('卡片列表应隐藏描述并在一行显示多个精简卡片');
+    document.querySelector('.json-card-open').click();
+    for(let i=0;i<100&&!document.querySelector('.record-detail');i++)await new Promise(r=>setTimeout(r,20));
+    const fields=[...document.querySelectorAll('.record-detail>.record-fields>.record-field')];
+    const singleCard=document.querySelectorAll('article.json-record-card').length===1&&ui.state.view==='cards'&&fields.every(n=>getComputedStyle(n).borderRadius==='0px'&&getComputedStyle(n).backgroundColor==='rgba(0, 0, 0, 0)');
+    if(!singleCard)throw new Error('详情必须仍是一张完整记录卡片，字段不能拆成小卡片');
+    const field=key=>fields.find(n=>n.querySelector('.field-heading code')?.textContent===key);
+    if(fields.length!==9||field('description').querySelector('.field-value').textContent.length!==3200||!field('criticalChance').textContent.includes('32%')||!field('omegaAttenuation').textContent.includes('紫卡系数')||!field('power').textContent.includes('能量容量')||document.querySelectorAll('img').length)throw new Error('详情字段不完整');
+    const patches=field('patchlogs').querySelector('details');patches.open=true;
+    for(let i=0;i<100&&!patches.querySelector('details');i++)await new Promise(r=>setTimeout(r,20));
+    patches.querySelector('details').open=true;
+    for(let i=0;i<100&&!patches.textContent.includes('修复内容');i++)await new Promise(r=>setTimeout(r,20));
+    if(!patches.textContent.includes('更新版本名称')||!patches.textContent.includes('修复内容'))throw new Error('更新日志未展开');
+    const nested=field('nested').querySelector('details');nested.open=true;
+    for(let i=0;i<100&&!nested.querySelector('.load-fields');i++)await new Promise(r=>setTimeout(r,20));
+    if(nested.querySelectorAll(':scope>div>.record-fields>.record-field').length!==80)throw new Error('子字段分页错误');
+    nested.querySelector('.load-fields').click();
+    for(let i=0;i<100&&nested.querySelector('.load-fields');i++)await new Promise(r=>setTimeout(r,20));
+    if(nested.querySelectorAll(':scope>div>.record-fields>.record-field').length!==83)throw new Error('子字段加载不完整');
+    const original=await window.workbench.call('raw',{id:'items.json'});if(original.truncated||original.text!==${JSON.stringify(JSON.stringify(cardRecords))})throw new Error('预览改变原文');
+    $('parent').click();for(let i=0;i<100&&!document.querySelector('.json-card-grid');i++)await new Promise(r=>setTimeout(r,20));
+    if(ui.state.pointer!==''||document.querySelectorAll('.json-preview-card').length!==80)throw new Error('返回卡片失败');
+    await document.querySelector('[data-view=schema]').onclick();
+    const schema=ui.state.page;
+    if(!schema.rows.some(r=>r.key==='onlyLastRecord')||schema.rows.filter(r=>r.key==='criticalChance').length!==1||schema.visited<1000)throw new Error('结构遗漏稀有字段或未合并');
+    ui.state.query='紫卡';await ui.renderDocument();if(!document.querySelector('.schema-table').textContent.includes('紫卡系数'))throw new Error('结构中文搜索失败');
+    ui.state.query='';await ui.renderDocument();
+    return {compact,firstRow,singleCard,uniformHeight:heights[0],cards:heights.length,completeFields:fields.length,fullText:3200,nestedItems:83,patchlogs:true,fields:schema.fields,rareField:true,sourceUnchanged:true,noImages:document.querySelectorAll('img').length===0};
+  })()`);
+  await fs.mkdir('artifacts/json-structure',{recursive:true});
+  await fs.writeFile('artifacts/json-structure/ui-schema.png', Buffer.from((await send('Page.captureScreenshot',{format:'png'})).data,'base64'));
+  await send('Emulation.setDeviceMetricsOverride',{width:1080,height:800,deviceScaleFactor:1,mobile:false});
+  result.jsonNarrow=await evaluate(`(async()=>{const ui=await import('./app.js');ui.state.view='cards';await ui.selectFile(ui.state.files.find(f=>f.id==='items.json'));await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));return {overflow:document.documentElement.scrollWidth>innerWidth||ui.$('data-view').scrollWidth>ui.$('data-view').clientWidth,buttons:[...document.querySelectorAll('.json-card-open')].slice(0,2).every(n=>n.getBoundingClientRect().bottom<=n.closest('article').getBoundingClientRect().bottom),cards:document.querySelectorAll('.json-preview-card').length};})()`);
+  if(result.jsonNarrow.overflow||!result.jsonNarrow.buttons)throw new Error('1080px 窗口布局溢出 '+JSON.stringify(result.jsonNarrow));
+  await fs.writeFile('artifacts/json-structure/ui-cards.png', Buffer.from((await send('Page.captureScreenshot',{format:'png'})).data,'base64'));
+  await evaluate(`(async()=>{const ui=await import('./app.js');await ui.openCard('/0');})()`);
+  await fs.writeFile('artifacts/json-structure/ui-detail.png', Buffer.from((await send('Page.captureScreenshot',{format:'png'})).data,'base64'));
+  await send('Emulation.setDeviceMetricsOverride',{width:1440,height:960,deviceScaleFactor:1,mobile:false});
+  result.realJson = await evaluate(`(async()=>{
+    const ui=await import('./app.js');ui.state.view='cards';await ui.selectFile(ui.state.files.find(f=>f.id==='wfcd-items/data/json/Primary.json'));
+    const heights=[...document.querySelectorAll('.json-preview-card')].map(n=>n.getBoundingClientRect().height);if(new Set(heights).size!==1)throw new Error('实际资料卡片尺寸不一致');
+    return {cards:heights.length,title:document.querySelector('.json-card-title').textContent,height:heights[0]};
+  })()`);
+  await fs.writeFile('artifacts/json-structure/ui-real-cards.png', Buffer.from((await send('Page.captureScreenshot',{format:'png'})).data,'base64'));
+  await evaluate(`(async()=>{const ui=await import('./app.js');await ui.openCard('/0');})()`);
+  await fs.writeFile('artifacts/json-structure/ui-real-detail.png', Buffer.from((await send('Page.captureScreenshot',{format:'png'})).data,'base64'));
+  await evaluate(`document.querySelector('[data-view=schema]').onclick()`);
+  await fs.writeFile('artifacts/json-structure/ui-real-schema.png', Buffer.from((await send('Page.captureScreenshot',{format:'png'})).data,'base64'));
+  result.cardCollections = await evaluate(`(async()=>{
+    const ui=await import('./app.js'),$=ui.$;
+    const waitFor=async predicate=>{for(let i=0;i<200;i++){if(predicate())return;await new Promise(r=>setTimeout(r,20));}throw new Error('集合卡片导航超时');};
+    const list=()=>document.querySelectorAll('.json-card-grid>.json-preview-card').length;
+    const collection=pointer=>ui.state.pointer===pointer&&!ui.state.cardReturn&&!document.querySelector('.record-detail');
+    ui.state.view='cards';await ui.selectFile(ui.state.files.find(f=>f.id==='collections.json'));
+    if(list()!==4||[...document.querySelectorAll('.json-card-open')].some(n=>n.textContent!=='查看集合'))throw new Error('容器入口标记错误');
+    document.querySelector('.json-preview-card').click();await waitFor(()=>collection('/ExportCustoms')&&list()===80);
+    $('next').click();await waitFor(()=>ui.state.offset===80&&list()===21);
+    const selected=ui.state.page.rows[0].pointer;await ui.openCard(selected);
+    if(!document.querySelector('.record-detail'))throw new Error('记录未进入完整卡片');
+    $('parent').click();await waitFor(()=>collection('/ExportCustoms')&&ui.state.offset===80&&list()===21);
+    ui.state.query='记录 100';$('content-filter').value=ui.state.query;ui.state.offset=0;await ui.renderDocument();
+    if(list()!==1)throw new Error('集合搜索失败');
+    await ui.openCard(ui.state.page.rows[0].pointer);$('parent').click();await waitFor(()=>collection('/ExportCustoms')&&ui.state.query==='记录 100'&&list()===1);
+    ui.state.query='';$('content-filter').value='';$('parent').click();await waitFor(()=>collection('')&&list()===4);
+    await ui.openCard('/Empty');if(!collection('/Empty')||list()!==0)throw new Error('空集合进入详情');
+    await ui.selectFile(ui.state.selected);await ui.openCard('/Nested');await ui.openCard('/Nested/0');
+    if(!collection('/Nested/0')||list()!==2)throw new Error('多层集合进入详情');
+    await ui.selectFile(ui.state.selected);await ui.openCard('/Records');
+    if(!collection('/Records')||list()!==2)throw new Error('记录映射未显示集合');
+    await ui.openCard('/Records/~1Lotus~1Test~1One');if(!document.querySelector('.record-detail'))throw new Error('映射记录未进入详情');
+    const official=ui.state.files.find(f=>f.id==='official-public-export/manifests/de/ExportCustoms_de.json');await ui.selectFile(official);await ui.openCard('/ExportCustoms');
+    if(!collection('/ExportCustoms')||list()!==80||ui.state.page.total!==4834)throw new Error('DE 官方 ExportCustoms 集合未展示卡片');
+    return {officialRecords:ui.state.page.total,cards:list(),array:true,recordMap:true,nested:true,empty:true,paginationRestored:true,queryRestored:true,detail:true};
+  })()`);
+  await fs.writeFile('artifacts/json-structure/ui-de-collection.png', Buffer.from((await send('Page.captureScreenshot',{format:'png'})).data,'base64'));
+  result.merged = await evaluate(`(async()=>{
+    const ui=await import('./app.js');ui.activate('merged');await ui.mergeUI.enter();await ui.mergeUI.build('pilot');
+    const manifest=ui.mergeUI.state.status.manifest;
+    if(manifest.summary.entities!==51||manifest.summary.recipes!==14||document.querySelectorAll('#merge-content .json-preview-card').length!==51)throw new Error('合并汇总样本不完整');
+    for(let i=0;i<200&&!document.querySelector('#merge-content img');i++)await new Promise(r=>setTimeout(r,20));
+    const images=[...document.querySelectorAll('#merge-content img')];if(!images.length||images.some(n=>!n.src.startsWith('data:image/')))throw new Error('本地图片没有显示');
+    return {datasetVersion:manifest.datasetVersion,...manifest.summary,catalog:true,localImages:images.length};
+  })()`);
+  await fs.mkdir('artifacts/p3',{recursive:true});
+  await fs.writeFile('artifacts/p3/ui-catalog.png', Buffer.from((await send('Page.captureScreenshot',{format:'png'})).data,'base64'));
+  result.merged.detail=await evaluate(`(async()=>{
+    const ui=await import('./app.js'),m=ui.mergeUI;await m.showDetail('/Lotus/Weapons/Tenno/LongGuns/SapientPrimary/SapientPrimaryWeapon');
+    const card=document.querySelector('.merge-record');
+    if(!card||!card.textContent.includes('32%')||!card.textContent.includes('紫卡系数')||!card.textContent.includes('关联关系')||!card.textContent.includes('待释义字段'))throw new Error('合并详情、释义或来源缺失');
+    const candidates=card.querySelector('.merge-candidates');candidates.open=true;
+    const source=card.querySelector('.merge-source-link');source.click();
+    for(let i=0;i<200&&!document.querySelector('#browser.active');i++)await new Promise(r=>setTimeout(r,20));
+    if(!document.querySelector('#browser.active')||!ui.state.pointer||ui.state.view!=='tree')throw new Error('来源字段跳转失败');
+    ui.activate('merged');await m.enter();return {sourceJump:true,singleCard:document.querySelectorAll('.merge-record').length===1};
+  })()`);
+  await fs.writeFile('artifacts/p3/ui-detail.png', Buffer.from((await send('Page.captureScreenshot',{format:'png'})).data,'base64'));
+  result.merged.relationChecks=await evaluate(`(async()=>{
+    const ui=await import('./app.js'),m=ui.mergeUI;
+    const button=document.querySelector('.merge-connection-card button.link:not(.merge-source-link)');button.click();
+    for(let i=0;i<200&&!document.querySelector('.merge-record')?.textContent.includes('recipe.materials');i++)await new Promise(r=>setTimeout(r,20));
+    if(!document.querySelector('.merge-record')?.textContent.includes('recipe.materials'))throw new Error('配方关系跳转失败');
+    await document.querySelector('[data-merge-view=rewards]').onclick();
+    document.querySelector('.merge-reward-fold').open=true;await new Promise(r=>setTimeout(r,80));
+    const text=document.querySelector('#merge-content').textContent;
+    if(document.querySelectorAll('.merge-reward-row').length!==8||!text.includes('500 内融核心')||!text.includes('15000 现金')||!text.includes('蓝图')||!text.includes('17.39%'))throw new Error('合并赏金奖励不完整');
+    return {recipeJump:true,rewardItems:8,endo:true,credits:true,blueprint:true};
+  })()`);
+  await fs.writeFile('artifacts/p3/ui-rewards.png', Buffer.from((await send('Page.captureScreenshot',{format:'png'})).data,'base64'));
+  await evaluate(`document.querySelector('[data-merge-view=issues]').onclick()`);
+  await fs.writeFile('artifacts/p3/ui-issues.png', Buffer.from((await send('Page.captureScreenshot',{format:'png'})).data,'base64'));
+  result.merged.reports=await evaluate(`(async()=>{
+    const ui=await import('./app.js');
+    if(!document.querySelector('#merge-content').textContent.includes('field-conflict'))throw new Error('未展示字段差异');
+    await document.querySelector('[data-merge-view=changes]').onclick();
+    if(!document.querySelector('#merge-content').textContent.includes('首次构建'))throw new Error('首次构建差异缺少空基线说明');
+    await document.querySelector('[data-merge-view=catalog]').onclick();
+    ui.mergeUI.state.query='迅发电浆炮';ui.mergeUI.state.kind='weapon';await ui.mergeUI.render();
+    if(document.querySelectorAll('#merge-content .json-preview-card').length!==1)throw new Error('合并中文搜索失败');
+    ui.mergeUI.state.query='';ui.mergeUI.state.kind='warframe';await ui.mergeUI.render();
+    if(document.querySelectorAll('#merge-content .json-preview-card').length!==1)throw new Error('合并分类失败');
+    ui.mergeUI.state.kind='';await ui.mergeUI.render();return {issues:true,firstBuild:true,search:true,kind:true};
+  })()`);
+  const mergeRewardsPath=path.join(cardRoot,'git/warframe-public-export-plus/ExportRewards.json');
+  const originalMergeRewards=await fs.readFile(mergeRewardsPath);
+  try {
+    await fs.writeFile(mergeRewardsPath,'{}');
+    result.merged.failedBuild=await evaluate(`(async()=>{const ui=await import('./app.js'),m=ui.mergeUI,before=m.state.status.manifest.datasetVersion;await m.build('pilot');const result={preserved:m.state.status.manifest.datasetVersion===before,visible:!ui.$('merge-error').hidden&&ui.$('merge-error').textContent.includes('保留'),restored:!ui.$('merge-build').disabled};if(!result.preserved||!result.visible||!result.restored)throw new Error('失败构建未保留上一版');return result;})()`);
+  } finally { await fs.writeFile(mergeRewardsPath,originalMergeRewards); }
+  await send('Emulation.setDeviceMetricsOverride',{width:1080,height:800,deviceScaleFactor:1,mobile:false});
+  result.merged.narrow=await evaluate(`(async()=>{const ui=await import('./app.js');await ui.mergeUI.showDetail('/Lotus/Weapons/Tenno/LongGuns/SapientPrimary/SapientPrimaryWeapon');await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));return {fits:document.documentElement.scrollWidth<=innerWidth&&document.querySelector('#merged').scrollWidth<=document.querySelector('#merged').clientWidth,imagesFit:[...document.querySelectorAll('#merged img')].every(n=>n.getBoundingClientRect().right<=innerWidth)};})()`);
+  if(!result.merged.narrow.fits||!result.merged.narrow.imagesFit)throw new Error('合并汇总窄窗口溢出');
+  await fs.writeFile('artifacts/p3/ui-narrow.png', Buffer.from((await send('Page.captureScreenshot',{format:'png'})).data,'base64'));
   await fs.mkdir('artifacts/weekly',{recursive:true});await fs.writeFile('artifacts/weekly/ui-result.json',JSON.stringify(result,null,2));
   await fs.writeFile('artifacts/ui-result.json', JSON.stringify(result, null, 2));
   await fs.writeFile('artifacts/oracle/ui-result.json', JSON.stringify(result, null, 2));
   console.log(result); if (!result.ok) process.exitCode = 1;
 } catch (error) { console.error(error.message); process.exitCode = 1; }
-finally { socket?.close(); child.kill('SIGTERM'); await new Promise(resolve => child.once('exit', resolve)); await fs.rm(userData, { recursive: true, force: true }); }
+finally { socket?.close(); if (child.exitCode === null && child.signalCode === null) { child.kill('SIGTERM'); await new Promise(resolve => child.once('exit', resolve)); } await fs.rm(userData, { recursive: true, force: true }); }

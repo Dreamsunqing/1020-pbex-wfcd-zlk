@@ -1,0 +1,20 @@
+数据和图片来源：
+https://github.com/WFCD/warframe-items
+
+分类数据：data/json/*.json
+简体中文名称和描述：data/json/i18n/zh.json
+图片：同一仓库快照的 data/img/，通常通过条目的 imageName 精确匹配。
+敌人图片：原始 imageName 保留；经核对的参考图实际文件另存 resolvedImageName，并记录来源 uniqueName。
+参考图来自同角色的幽魂外观、浮印头像或战甲外观，界面明确标注，不视作独立敌人原图。
+当前没有使用任何其他网站、历史仓库快照或外部图片。
+错误的同名纹章、守护和资源对应已排除；完整清单见 README.md。
+名称关联键：uniqueName。
+
+工具随包提供固定仓库版本的数据快照，具体提交及统计见「数据版本.json」。
+上游许可证副本：resources/content/UPSTREAM-LICENSE.txt。
+源数据缺图、缺翻译等统计：resources/content/data-report.json。
+敌人逐条来源和缺失清单：resources/content/enemy-images.csv、enemy-image-report.json。
+图片 SHA-256 清单：resources/content/checksums.json。
+
+Warframe 为 Digital Extremes 的游戏，本工具与 Digital Extremes 无隶属关系。
+工具代码许可证不构成对游戏美术素材权利的额外授权。

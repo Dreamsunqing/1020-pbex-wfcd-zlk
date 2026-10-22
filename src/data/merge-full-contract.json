@@ -1,0 +1,1254 @@
+{
+  "schemaVersion": 2,
+  "mappingVersion": "p3-full-2",
+  "builderVersion": "2.1.0",
+  "locales": [
+    "zh-CN",
+    "en"
+  ],
+  "priority": [
+    "official",
+    "plus",
+    "wfcd",
+    "oracle"
+  ],
+  "scope": {
+    "id": "full-static",
+    "mode": "full",
+    "label": "全量静态资料",
+    "maxEntities": 200000
+  },
+  "catalogs": [
+    {
+      "source": "plus",
+      "file": "ExportAbilities.json",
+      "kind": "ability",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportAchievements.json",
+      "kind": "achievement",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportAnimals.json",
+      "kind": "animal",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportArcanes.json",
+      "kind": "arcane",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 0
+    },
+    {
+      "source": "plus",
+      "file": "ExportAvionics.json",
+      "kind": "mod",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportBoosterPacks.json",
+      "kind": "bundle",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportBoosters.json",
+      "kind": "booster",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportBounties.json",
+      "kind": "bounty",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportBundles.json",
+      "kind": "bundle",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportChallenges.json",
+      "kind": "challenge",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportCodex.json",
+      "kind": "codex",
+      "shape": "nested",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportCreditBundles.json",
+      "kind": "resource",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "plus",
+      "file": "ExportCustoms.json",
+      "kind": "cosmetic",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "plus",
+      "file": "ExportDojoRecipes.json",
+      "kind": "dojo",
+      "shape": "nested",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportDrones.json",
+      "kind": "extractor",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportEmailItems.json",
+      "kind": "quest-item",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportEnemies.json",
+      "kind": "enemy",
+      "shape": "nested",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportFactions.json",
+      "kind": "faction",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportFlavour.json",
+      "kind": "cosmetic",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "plus",
+      "file": "ExportFocusUpgrades.json",
+      "kind": "focus",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportFusionBundles.json",
+      "kind": "resource",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "plus",
+      "file": "ExportGear.json",
+      "kind": "gear",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportIntrinsics.json",
+      "kind": "intrinsic",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportKeys.json",
+      "kind": "quest",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportMissionTypes.json",
+      "kind": "mission-type",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportModSet.json",
+      "kind": "mod-set",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 0
+    },
+    {
+      "source": "plus",
+      "file": "ExportNightwave.json",
+      "kind": "challenge",
+      "shape": "nested",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportRailjackWeapons.json",
+      "kind": "weapon",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportRecipes.json",
+      "kind": "blueprint",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 0
+    },
+    {
+      "source": "plus",
+      "file": "ExportRegions.json",
+      "kind": "region",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportRelics.json",
+      "kind": "relic",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportResources.json",
+      "kind": "resource",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "plus",
+      "file": "ExportSentinels.json",
+      "kind": "companion",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportSyndicates.json",
+      "kind": "syndicate",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportSystems.json",
+      "kind": "system",
+      "shape": "array",
+      "enabled": true,
+      "idKey": "index",
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportTilesets.json",
+      "kind": "tileset",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportUpgrades.json",
+      "kind": "mod",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportVendors.json",
+      "kind": "vendor",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportVirtuals.json",
+      "kind": "weapon",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportWarframes.json",
+      "kind": "warframe",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "plus",
+      "file": "ExportWeapons.json",
+      "kind": "weapon",
+      "shape": "map",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Arcanes.json",
+      "kind": "arcane",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 0
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Arch-Gun.json",
+      "kind": "weapon",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Arch-Melee.json",
+      "kind": "weapon",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Archwing.json",
+      "kind": "warframe",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Components.json",
+      "kind": "resource",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Enemy.json",
+      "kind": "enemy",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Fish.json",
+      "kind": "animal",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Gear.json",
+      "kind": "gear",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Glyphs.json",
+      "kind": "cosmetic",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Honoria.json",
+      "kind": "cosmetic",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Melee.json",
+      "kind": "weapon",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Misc.json",
+      "kind": "misc",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Mods.json",
+      "kind": "mod",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Node.json",
+      "kind": "region",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Pets.json",
+      "kind": "companion",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Primary.json",
+      "kind": "weapon",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Quests.json",
+      "kind": "quest",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Railjack.json",
+      "kind": "weapon",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Relics.json",
+      "kind": "relic",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Resources.json",
+      "kind": "resource",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Secondary.json",
+      "kind": "weapon",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/SentinelWeapons.json",
+      "kind": "weapon",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Sentinels.json",
+      "kind": "companion",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Sigils.json",
+      "kind": "cosmetic",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Skins.json",
+      "kind": "cosmetic",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "wfcd",
+      "file": "data/json/Warframes.json",
+      "kind": "warframe",
+      "shape": "array",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportCustoms_zh.json",
+      "group": "ExportCustoms",
+      "kind": "cosmetic",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportCustoms_en.json",
+      "group": "ExportCustoms",
+      "kind": "cosmetic",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportDrones_zh.json",
+      "group": "ExportDrones",
+      "kind": "extractor",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportDrones_en.json",
+      "group": "ExportDrones",
+      "kind": "extractor",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportFlavour_zh.json",
+      "group": "ExportFlavour",
+      "kind": "cosmetic",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportFlavour_en.json",
+      "group": "ExportFlavour",
+      "kind": "cosmetic",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportFusionBundles_zh.json",
+      "group": "ExportFusionBundles",
+      "kind": "resource",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportFusionBundles_en.json",
+      "group": "ExportFusionBundles",
+      "kind": "resource",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportGear_zh.json",
+      "group": "ExportGear",
+      "kind": "gear",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportGear_en.json",
+      "group": "ExportGear",
+      "kind": "gear",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportKeys_zh.json",
+      "group": "ExportKeys",
+      "kind": "quest",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportKeys_en.json",
+      "group": "ExportKeys",
+      "kind": "quest",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportRecipes_zh.json",
+      "group": "ExportRecipes",
+      "kind": "blueprint",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 0
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportRecipes_en.json",
+      "group": "ExportRecipes",
+      "kind": "blueprint",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 0
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportRegions_zh.json",
+      "group": "ExportRegions",
+      "kind": "region",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportRegions_en.json",
+      "group": "ExportRegions",
+      "kind": "region",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportResources_zh.json",
+      "group": "ExportResources",
+      "kind": "resource",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportResources_en.json",
+      "group": "ExportResources",
+      "kind": "resource",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 2
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportSentinels_zh.json",
+      "group": "ExportSentinels",
+      "kind": "companion",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportSentinels_en.json",
+      "group": "ExportSentinels",
+      "kind": "companion",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportUpgrades_zh.json",
+      "group": "ExportUpgrades",
+      "kind": "mod",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportUpgrades_en.json",
+      "group": "ExportUpgrades",
+      "kind": "mod",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportWarframes_zh.json",
+      "group": "ExportWarframes",
+      "kind": "warframe",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportWarframes_en.json",
+      "group": "ExportWarframes",
+      "kind": "warframe",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportWeapons_zh.json",
+      "group": "ExportWeapons",
+      "kind": "weapon",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportWeapons_en.json",
+      "group": "ExportWeapons",
+      "kind": "weapon",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportWeapons_zh.json",
+      "group": "ExportRailjackWeapons",
+      "kind": "weapon",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportWeapons_en.json",
+      "group": "ExportRailjackWeapons",
+      "kind": "weapon",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportUpgrades_zh.json",
+      "group": "ExportModSet",
+      "kind": "mod-set",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 0
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportUpgrades_en.json",
+      "group": "ExportModSet",
+      "kind": "mod-set",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 0
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportWarframes_zh.json",
+      "group": "ExportAbilities",
+      "kind": "ability",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "idKey": "abilityUniqueName",
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportWarframes_en.json",
+      "group": "ExportAbilities",
+      "kind": "ability",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "idKey": "abilityUniqueName",
+      "classificationPriority": 1
+    },
+    {
+      "source": "official",
+      "file": "manifests/zh/ExportRelicArcane_zh.json",
+      "group": "ExportRelicArcane",
+      "kind": "relic",
+      "shape": "group",
+      "locale": "zh-CN",
+      "enabled": true,
+      "classificationPriority": 3
+    },
+    {
+      "source": "official",
+      "file": "manifests/en/ExportRelicArcane_en.json",
+      "group": "ExportRelicArcane",
+      "kind": "relic",
+      "shape": "group",
+      "locale": "en",
+      "enabled": true,
+      "classificationPriority": 3
+    }
+  ],
+  "aliases": [
+    {
+      "from": "/Lotus/StoreItems/",
+      "to": "/Lotus/",
+      "mode": "prefix"
+    }
+  ],
+  "fields": [
+    {
+      "path": "masteryRank",
+      "key": "masteryReq",
+      "label": "段位要求",
+      "kinds": [
+        "weapon",
+        "warframe"
+      ],
+      "type": "integer",
+      "min": 0,
+      "unit": "段"
+    },
+    {
+      "path": "tradable",
+      "key": "tradable",
+      "label": "可交易",
+      "kinds": [
+        "*"
+      ],
+      "type": "boolean"
+    },
+    {
+      "path": "stats.criticalChance",
+      "key": "criticalChance",
+      "label": "基础暴击率",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "比例",
+      "description": "基础面板比例值；可超过 1（100%）。不与攻击模式百分数混用。"
+    },
+    {
+      "path": "stats.criticalMultiplier",
+      "key": "criticalMultiplier",
+      "label": "暴击倍率",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "倍"
+    },
+    {
+      "path": "stats.statusChance",
+      "key": "procChance",
+      "label": "基础触发率",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "比例",
+      "description": "基础面板比例值；可超过 1（100%）。不与攻击模式百分数混用。"
+    },
+    {
+      "path": "stats.fireRate",
+      "key": "fireRate",
+      "label": "射速",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 5,
+      "unit": "次/秒"
+    },
+    {
+      "path": "stats.magazineSize",
+      "key": "magazineSize",
+      "label": "弹匣容量",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "integer",
+      "min": 0,
+      "unit": "发"
+    },
+    {
+      "path": "stats.reloadSeconds",
+      "key": "reloadTime",
+      "label": "装填时间",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "秒"
+    },
+    {
+      "path": "stats.totalDamage",
+      "key": "totalDamage",
+      "label": "基础总伤害",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 5,
+      "unit": "点",
+      "description": "来源基础面板总伤害；不与独立攻击模式相加。"
+    },
+    {
+      "path": "stats.rivenCoefficient",
+      "key": "omegaAttenuation",
+      "label": "紫卡系数",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "系数"
+    },
+    {
+      "path": "stats.rivenDisposition",
+      "key": "disposition",
+      "label": "紫卡倾向档位",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "integer",
+      "min": 1,
+      "max": 5,
+      "unit": "档"
+    },
+    {
+      "path": "stats.health",
+      "key": "health",
+      "label": "基础生命",
+      "kinds": [
+        "warframe",
+        "companion"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "点"
+    },
+    {
+      "path": "stats.shield",
+      "key": "shield",
+      "label": "基础护盾",
+      "kinds": [
+        "warframe",
+        "companion"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "点"
+    },
+    {
+      "path": "stats.armor",
+      "key": "armor",
+      "label": "基础护甲",
+      "kinds": [
+        "warframe",
+        "companion"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "点"
+    },
+    {
+      "path": "stats.energy",
+      "key": "power",
+      "label": "基础能量容量",
+      "kinds": [
+        "warframe",
+        "companion"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "点",
+      "description": "战甲基础容量，不读取配色 energy 字段。"
+    },
+    {
+      "path": "stats.sprintSpeed",
+      "key": "sprintSpeed",
+      "label": "冲刺速度",
+      "kinds": [
+        "warframe",
+        "companion"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "系数"
+    },
+    {
+      "path": "bundle.credits",
+      "key": "credits",
+      "label": "每包现金",
+      "kinds": [
+        "resource"
+      ],
+      "type": "integer",
+      "min": 0,
+      "unit": "现金"
+    },
+    {
+      "path": "bundle.endo",
+      "key": "fusionPoints",
+      "label": "每包内融核心",
+      "kinds": [
+        "resource"
+      ],
+      "type": "integer",
+      "min": 0,
+      "unit": "内融核心"
+    },
+    {
+      "path": "stats.baseDrain",
+      "key": "baseDrain",
+      "label": "基础容量消耗",
+      "kinds": [
+        "mod"
+      ],
+      "type": "integer",
+      "unit": "点"
+    },
+    {
+      "path": "stats.fusionLimit",
+      "key": "fusionLimit",
+      "label": "最大升级等级",
+      "kinds": [
+        "mod"
+      ],
+      "type": "integer",
+      "min": 0
+    },
+    {
+      "path": "rarity",
+      "key": "rarity",
+      "label": "稀有度",
+      "kinds": [
+        "*"
+      ],
+      "type": "string"
+    },
+    {
+      "path": "imageName",
+      "key": "imageName",
+      "label": "WFCD图片名",
+      "kinds": [
+        "*"
+      ],
+      "type": "string"
+    },
+    {
+      "path": "icon",
+      "key": "icon",
+      "label": "图标资源路径",
+      "kinds": [
+        "*"
+      ],
+      "type": "string"
+    },
+    {
+      "path": "stats.activationEnergy",
+      "key": "energyRequiredToActivate",
+      "label": "技能启动能量",
+      "description": "启动技能所需能量；不据此推断持续消耗或最终实战消耗。",
+      "kinds": [
+        "ability"
+      ],
+      "type": "number",
+      "min": 0
+    }
+  ],
+  "nested": [
+    {
+      "key": "abilities",
+      "path": "abilities",
+      "label": "技能",
+      "relation": "has-ability",
+      "entityKind": "ability",
+      "enabled": true
+    },
+    {
+      "key": "components",
+      "path": "components",
+      "label": "组件／制造材料",
+      "relation": "has-component",
+      "entityKind": "resource",
+      "enabled": true
+    },
+    {
+      "key": "parentUniqueNames",
+      "path": "components",
+      "label": "所属物品",
+      "relation": "has-component",
+      "reverse": true,
+      "enabled": true
+    },
+    {
+      "key": "additionalItems",
+      "path": "additionalItems",
+      "label": "附带物品",
+      "relation": "includes-item",
+      "enabled": true
+    },
+    {
+      "key": "exalted",
+      "path": "exaltedItems",
+      "label": "显赫武器",
+      "relation": "has-exalted",
+      "enabled": true
+    }
+  ]
+}

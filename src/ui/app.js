@@ -1,8 +1,27 @@
+import { decorateImages } from './images.js';
+import { renderGameText } from './game-text.js';
 import { FACETS, facetValues, matchesFacets, facetCounts } from '../core/facets.mjs';
+import { describeField } from '../core/field-guide.mjs';
+import { createRulesUI } from './rules.js';
+import { createMergeUI } from './merge.js';
+import { createGalleryUI } from './gallery.js';
+import { createDocumentsUI } from './documents.js';
 const api = window.workbench;
 const $ = id => document.getElementById(id);
-const state = { files: [], selected: null, pointer: '', query: '', offset: 0, view: 'table', page: null, requests: 0, releases: [], busy: false };
-const element = (tag, className, text) => { const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) node.textContent = text; return node; };
+const mergeUI = createMergeUI({ api, guarded, notify, openSource: async source => {
+  const file = state.files.find(file => file.id === source.file);
+  if (!file) throw new Error('来源文件不属于当前资料目录或快照');
+  const current = await api.call('raw', { id: file.id });
+  if (current.hash !== source.hash) throw new Error('来源文件已变化，请重新构建或打开匹配的历史快照');
+  state.view = 'tree'; await selectFile(file); await go(source.pointer, source.line ?? null); activate('browser');
+} });
+const rulesUI = createRulesUI({ api, guarded, notify });
+const galleryUI = createGalleryUI({ api, guarded, notify, openEntity: async id => {
+  await mergeUI.enter(); await mergeUI.showDetail(id); activate('merged');
+} });
+const documentsUI = createDocumentsUI({ api, guarded, notify });
+const state = { files: [], selected: null, pointer: '', query: '', offset: 0, view: 'table', page: null, requests: 0, releases: [], busy: false, cardReturn: null };
+const element = (tag, className, text) => { const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) { if (tag === 'pre' || tag === 'code') node.textContent = text; else renderGameText(node, text, /^h[1-6]$/.test(tag) || /title|original|heading/.test(className ?? '') ? 'name' : 'description'); } return node; };
 const size = bytes => bytes < 1024 ? `${bytes} B` : bytes < 1048576 ? `${(bytes / 1024).toFixed(1)} KiB` : `${(bytes / 1048576).toFixed(1)} MiB`;
 const date = value => new Date(value).toLocaleString('zh-CN', { hour12: false });
 const selections = Object.fromEntries(Object.keys(FACETS).map(key => [key, new Set()]));
@@ -104,14 +123,19 @@ async function guarded(work) { try { return await work(); } catch (error) { noti
 function debounce(fn, ms = 200) { let timer; return (...args) => { clearTimeout(timer); timer = setTimeout(() => guarded(() => fn(...args)), ms); }; }
 function activate(panel) {
   for (const node of document.querySelectorAll('.panel')) node.classList.toggle('active', node.id === panel);
-  for (const node of document.querySelectorAll('.nav')) node.classList.toggle('active', node.dataset.panel === panel);
+  for (const node of document.querySelectorAll('.nav')) { node.classList.toggle('active', node.dataset.panel === panel); node.setAttribute('aria-current', node.dataset.panel === panel ? 'page' : 'false'); }
   if (panel === 'updates') guarded(loadHistory);
+  if (panel === 'merged') guarded(() => mergeUI.enter());
+  if (panel === 'rules') guarded(() => rulesUI.enter());
+  if (panel === 'gallery') guarded(() => galleryUI.enter());
+  if (panel === 'documents') guarded(() => documentsUI.enter());
   if (panel === 'oracle') { if (!$('oracle-legacy').hidden) guarded(prepareOracle); else if (!browseLoaded) guarded(queryBrowse); }
-  if (panel === 'settings') guarded(async () => { $('config-text').value = JSON.stringify(await api.call('config'), null, 2); });
+  if (panel === 'settings') guarded(async () => { await loadImageStatus(); $('config-text').value = JSON.stringify(await api.call('config'), null, 2); });
 }
 function applyLibrary(data) {
   if (!data) return;
-  state.files = data.files; state.selected = null; state.requests++; state.pointer = ''; state.offset = 0;
+  state.files = data.files; state.selected = null; state.requests++; state.pointer = ''; state.offset = 0; state.cardReturn = null;
+  mergeUI.reset();
   browseLoaded = false;
   oracleLoaded = false; libraryGeneration++;
   for (const key of Object.keys(oracleResults)) delete oracleResults[key];
@@ -146,7 +170,8 @@ function renderFiles(resetScroll = false) {
   $('files').onscroll = () => { if ($('files').scrollTop + $('files').clientHeight > $('files').scrollHeight - 250) render($('files').childElementCount + 100); };
 }
 async function selectFile(file) {
-  state.selected = file; state.pointer = ''; state.offset = 0; state.query = ''; $('content-filter').value = ''; $('pointer').value = '';
+  state.sourceLine = null;
+  state.selected = file; state.pointer = ''; state.offset = 0; state.query = ''; state.cardReturn = null; $('content-filter').value = ''; $('pointer').value = '';
   $('empty').hidden = true; $('document').hidden = false; $('file-source').textContent = file.label ?? file.source;
   $('file-title').textContent = file.name; $('file-path').textContent = file.id;
   renderFiles(); await renderDocument();
@@ -160,33 +185,132 @@ function translationSource(title) {
   for (const item of title.sources) details.append(element('code', '', `${item.file}\n${item.pointer}${item.hash ? '\nSHA-256: ' + item.hash : ''}`));
   details.onclick = event => event.stopPropagation(); return details;
 }
-const fieldLabels = { name: '名称', title: '标题', uniqueName: '内部路径', description: '说明', type: '类型', category: '类别', productCategory: '物品分类', totalDamage: '总伤害', masteryReq: '段位要求', criticalChance: '暴击几率', criticalMultiplier: '暴击倍率', fireRate: '射速', magazineSize: '弹匣容量', reloadTime: '装填时间', tradable: '可交易', damagePerShot: '每次射击伤害' };
 function renderJsonCards(rows) {
-  const grid = element('div', 'json-card-grid');
+  const grid = element('div', 'json-card-grid'), images = [];
   for (const row of rows) {
     const card = element('article', 'json-preview-card');
     card.append(element('span', 'json-card-key', `${row.key} · ${row.type}${row.count !== undefined ? ` [${row.count}]` : ''}`), element('h2', 'json-card-title', row.title.text));
+    card.querySelector('.json-card-title').title = row.title.text;
     if (row.title.original !== row.title.text) card.append(element('p', 'json-card-original', row.title.original));
-    card.append(translationSource(row.title));
-    const fields = element('dl', 'json-card-fields');
-    for (const field of row.fields) { const dt = element('dt', '', fieldLabels[field.key] ?? field.key); dt.title = field.key; fields.append(dt, element('dd', '', field.value)); }
-    card.append(fields);
-    const open = element('button', 'small json-card-open', row.omitted ? `查看完整记录 · 另 ${row.omitted} 个字段` : ['object', 'array'].includes(row.type) ? '展开记录' : '查看原值');
-    open.onclick = () => guarded(() => go(row.pointer)); card.append(open); grid.append(card);
+    const origin = element('span', 'json-card-origin', row.title.status === 'missing' ? '未匹配中文' : `${row.title.status === 'original' ? '原文' : '字典'} · ${row.title.sources.map(item => item.file.split('/').at(-1)).join('、')}`);
+    origin.title = row.title.sources.map(item => `${item.file}\nJSON Pointer: ${item.pointer}${item.hash ? '\nSHA-256: ' + item.hash : ''}`).join('\n\n'); card.append(origin);
+    const open = element('button', 'small json-card-open', row.collection || row.type === 'array' ? '查看集合' : '查看详情');
+    open.onclick = event => { event.stopPropagation(); return guarded(() => openCard(row.pointer)); };
+    card.onclick = () => guarded(() => openCard(row.pointer)); card.append(open); grid.append(card); if (row.image && !row.collection) images.push({ ...row.image, card, label: row.title.text });
   }
-  $('data-view').append(grid);
+  $('data-view').append(grid); void decorateImages(api, images);
+}
+async function openCard(pointer) {
+  const row = state.page?.rows.find(item => item.pointer === pointer);
+  if (row?.collection || row?.type === 'array') {
+    state.query = ''; $('content-filter').value = '';
+    return go(pointer);
+  }
+  state.cardReturn = { pointer: state.pointer, query: state.query, offset: state.offset };
+  state.pointer = pointer; state.query = ''; state.offset = 0; $('content-filter').value = '';
+  await renderDocument();
+}
+async function backToCards() {
+  if (!state.cardReturn) return;
+  Object.assign(state, state.cardReturn); state.cardReturn = null; $('content-filter').value = state.query;
+  await renderDocument();
+}
+function detailFields(rows, sequence, hash) {
+  const list = element('div', 'record-fields');
+  for (const row of rows) {
+    const field = element('section', 'record-field'), heading = element('div', 'field-heading');
+    const meta = element('div', 'record-field-label'), content = element('div', 'record-field-content');
+    const label = element('strong', '', row.guide.label); label.title = `${row.key}\n${row.guide.description}\n${row.guide.source}`;
+    heading.append(label, element('code', '', row.key), element('span', 'type', `${row.type}${row.count !== undefined ? ` [${row.count}]` : ''}`));
+    if (row.guide.status === 'unknown') heading.append(element('span', 'title-missing', '释义待补充'));
+    meta.append(heading, element('p', 'field-description', row.guide.description));
+    if ('value' in row) {
+      if (row.meaning) content.append(element('strong', 'field-meaning', row.meaning));
+      if (row.title?.status === 'dictionary') { content.append(element('p', 'field-translation', row.title.text), translationSource(row.title)); }
+      const value = element('pre', 'field-value'); renderGameText(value, row.value === null ? 'null' : String(row.value), /^(name|abilityName|title|displayName)$/i.test(row.key) ? 'name' : 'description'); content.append(value);
+    } else {
+      const details = element('details', 'nested-fields'), summary = element('summary', '', `展开全部${row.type === 'array' ? '元素' : '子字段'} · ${row.count} 项`), body = element('div');
+      details.append(summary, body); let loaded = false, loading = false, offset = 0;
+      const id = state.selected.id;
+      const load = async () => {
+        if (loading || sequence !== state.requests) return; loading = true;
+        const more = body.querySelector(':scope > .load-fields'); if (more) more.disabled = true;
+        try {
+          const page = await api.call('detail', { id, pointer: row.pointer, offset, limit: 80 });
+          if (sequence !== state.requests) return;
+          if (page.hash !== hash) throw new Error('原文件已发生变化，请重新打开完整记录');
+          more?.remove(); body.querySelector(':scope > .field-load-error')?.remove();
+          body.append(detailFields(page.rows, sequence, hash)); offset += page.rows.length; loaded = true;
+          if (!page.rows.length) body.append(element('p', 'muted', '空容器，无子字段。'));
+          if (page.hasMore) { const button = element('button', 'small load-fields', `继续显示 · 已展示 ${offset} / ${page.total} 项`); button.onclick = () => guarded(load); body.append(button); }
+        } catch (error) {
+          if (sequence === state.requests) { const retry = element('button', 'small field-load-error', `读取失败：${error.message} · 点击重试`); retry.onclick = () => { retry.remove(); guarded(load); }; body.append(retry); }
+        } finally { loading = false; if (more?.isConnected) more.disabled = false; }
+      };
+      details.ontoggle = () => { if (details.open && !loaded) guarded(load); }; content.append(details);
+    }
+    meta.append(element('small', 'field-source', `字段说明：${row.guide.source}`)); field.append(meta, content); list.append(field);
+  }
+  return list;
+}
+function renderRecord(page, sequence) {
+  const container = element('article', 'json-preview-card json-record-card record-detail'), heading = element('div', 'record-heading');
+  heading.append(element('h2', 'json-record-title', page.title.text), translationSource(page.title));
+  container.append(element('span', 'json-card-key', `${page.pointer || '/'} · ${page.type}${page.count !== undefined ? ` [${page.count}]` : ''}`), heading);
+  if (page.title.original !== page.title.text) container.append(element('p', 'json-record-original', page.title.original));
+  container.append(element('p', 'record-help', '完整卡片 · 悬停字段名查看中文说明，对象和数组可在卡片内展开。'));
+  if ('value' in page) { const key = page.pointer.split('/').at(-1)?.replaceAll('~1', '/').replaceAll('~0', '~') ?? '$'; const guide = describeField(key, page.pointer, state.selected.id); const value = element('pre', 'field-value'); renderGameText(value, page.value === null ? 'null' : String(page.value)); container.append(element('p', 'field-description', guide.description), value); }
+  else container.append(detailFields(page.rows, sequence, page.hash));
+  $('data-view').append(container); if (page.image) void decorateImages(api, [{ ...page.image, card: container, label: page.title.text }], true);
+}
+function renderSchema(page) {
+  const container = element('div', 'schema-view');
+  container.append(element('p', 'detail-note', `整份 JSON · ${page.visited.toLocaleString()} 个值 · ${page.fields.toLocaleString()} 个结构节点 · ${page.unknown} 项释义待补充。[] 合并所有数组元素，{key} 合并同类动态键；所有条目均参与扫描。空容器只能显示已观察到的结构。`));
+  const table = element('table', 'schema-table'), head = element('thead'), tr = element('tr');
+  for (const text of ['字段 / 中文名称', '类型 / 观察次数', '作用 / 样例 / 依据']) tr.append(element('th', '', text));
+  head.append(tr); table.append(head); const body = element('tbody');
+  for (const row of page.rows) {
+    const tr = element('tr'), name = element('td'), type = element('td'), info = element('td');
+    name.append(element('strong', '', row.guide.label), element('code', 'schema-path', row.path));
+    const sample = element('button', 'link', '查看实际值 ↗'); sample.onclick = () => guarded(async () => { state.view = 'tree'; state.cardReturn = null; state.query = ''; $('content-filter').value = ''; await go(row.pointer); }); name.append(sample);
+    type.append(element('code', '', row.types.join(' | ')), element('small', '', `观察 ${row.seen.toLocaleString()} 次${row.key !== '[]' && row.key !== '{key}' && row.parentObjects ? ` / 父对象 ${row.parentObjects.toLocaleString()} 次` : ''}`));
+    if (row.empty) type.append(element('small', '', `${row.empty} 个空容器`));
+    info.append(element('p', '', row.guide.description));
+    if (row.guide.status === 'unknown') info.append(element('span', 'title-missing', '释义待补充'));
+    if (row.examples.length) info.append(element('pre', 'schema-examples', row.examples.join('\n')));
+    if (row.keyExamples.length) info.append(element('pre', 'schema-examples', '实际键样例：\n' + row.keyExamples.join('\n')));
+    info.append(element('small', 'field-source', row.guide.source)); tr.append(name, type, info); body.append(tr);
+  }
+  table.append(body); container.append(table); if (!page.rows.length) container.append(element('p', 'muted', '没有匹配的字段。')); $('data-view').append(container);
 }
 async function renderDocument() {
   if (!state.selected) return;
   const sequence = ++state.requests; const id = state.selected.id;
   $('data-view').replaceChildren(element('p', 'raw', '读取中…'));
-  $('pointer').value = state.pointer; $('parent').disabled = !state.pointer;
+  $('data-view').scrollTop = 0;
+  $('pointer').value = state.pointer; $('parent').disabled = !state.pointer && !state.cardReturn;
+  $('parent').textContent = state.view === 'cards' && state.cardReturn ? '← 返回卡片' : '↑ 上一级';
+  $('pointer').disabled = state.view === 'schema'; $('go-pointer').disabled = state.view === 'schema';
+  if (state.view === 'schema') $('parent').disabled = true;
+  $('content-filter').placeholder = state.view === 'schema' ? '搜索整份 JSON 的字段、中文说明或类型…' : state.view === 'cards' && state.cardReturn ? '搜索当前记录的字段、中文说明或原值…' : '搜索当前层级的键、名称或记录内容…';
   for (const button of document.querySelectorAll('[data-view]')) button.classList.toggle('selected', button.dataset.view === state.view);
   if (state.view === 'raw' || state.selected.format === 'text') {
-    const raw = await api.call('raw', { id, pointer: state.pointer }); if (sequence !== state.requests) return;
-    $('data-view').replaceChildren(element('pre', 'raw', raw.text)); $('page-info').textContent = raw.truncated ? '显示前 200,000 字符，导出可获取完整内容' : `${raw.totalCharacters.toLocaleString()} 字符 · 原文只读`;
+    const raw = await api.call('raw', { id, pointer: state.pointer, line: state.sourceLine ?? null }); if (sequence !== state.requests) return;
+    $('data-view').replaceChildren(element('pre', 'raw', raw.text)); $('page-info').textContent = raw.targetLine ? `原文定位第 ${raw.targetLine} 行 · 显示第 ${raw.startLine}–${raw.endLine} 行 · 原文只读` : raw.truncated ? '显示前 200,000 字符，导出可获取完整内容' : `${raw.totalCharacters.toLocaleString()} 字符 · 原文只读`;
     $('previous').disabled = true; $('next').disabled = true; showStats([{ text: size(state.selected.size) }, { text: 'SHA-256 ' + raw.hash.slice(0, 16) }]);
     $('doc-warning').hidden = true; return;
+  }
+  if (state.view === 'schema' || state.view === 'cards' && state.cardReturn) {
+    let page;
+    try { page = await api.call(state.view === 'schema' ? 'schema' : 'detail', { id, pointer: state.pointer, query: state.query, offset: state.offset, limit: 80 }); }
+    catch (error) { if (sequence === state.requests) { $('data-view').replaceChildren(element('p', 'hint', error.message)); $('previous').disabled = true; $('next').disabled = true; $('page-info').textContent = '请切换原文视图检查文件'; $('doc-warning').hidden = true; } return; }
+    if (sequence !== state.requests) return; state.page = page;
+    $('data-view').replaceChildren(); $('doc-warning').hidden = !page.warnings.length; $('doc-warning').textContent = page.warnings.join('；');
+    showStats([{ text: state.view === 'schema' ? '整份 JSON · 结构与字段释义' : '完整记录 · 原值只读', accent: true }, { text: 'SHA-256 ' + page.hash.slice(0, 12) }]);
+    state.view === 'schema' ? renderSchema(page) : renderRecord(page, sequence);
+    $('previous').disabled = state.offset === 0; $('next').disabled = !page.hasMore;
+    $('page-info').textContent = page.rows.length ? `第 ${state.offset + 1}–${state.offset + page.rows.length} 项 · 共 ${page.total} 项${state.query ? ' · 已筛选' : ''}` : '无匹配字段';
+    return;
   }
   const page = await api.call('page', { id, pointer: state.pointer, query: state.query, offset: state.offset, limit: 80 });
   if (sequence !== state.requests) return; state.page = page;
@@ -214,7 +338,7 @@ async function renderDocument() {
   $('page-info').textContent = page.rows.length ? `第 ${state.offset + 1}–${state.offset + page.rows.length} 项 · 当前层级 ${page.total.toLocaleString()} 项${state.query ? ' · 已应用筛选' : ''}` : '当前层级无记录';
 }
 function showStats(items) { $('document-stats').replaceChildren(...items.map(x => element('span', 'badge' + (x.accent ? ' accent' : ''), x.text))); }
-async function go(pointer) { state.pointer = pointer; state.offset = 0; await renderDocument(); }
+async function go(pointer, line = null) { state.pointer = pointer; state.sourceLine = line; state.offset = 0; state.cardReturn = null; await renderDocument(); }
 function showStatus(status) { if (!status) return; $('update-state').textContent = ({ idle: '尚未检查', running: '检查中', ok: '检查成功', error: '检查失败' })[status.state] ?? status.state; $('update-detail').textContent = status.message ?? (status.checkedAt ? `${date(status.checkedAt)} · ${status.fileChanges ?? 0} 个文件变更` : '导入本地基线后，可查看和回滚历史版本。'); }
 async function loadHistory() {
   const data = await api.call('history'); state.releases = data.releases; showStatus(data.status); $('releases').replaceChildren();
@@ -401,11 +525,13 @@ function renderRewardTable(table, label = '随机奖励') {
     if (table.pools.length > 1) body.append(element('p', 'oracle-reward-note', '奖励池按源文件顺序列出；池号不代表任务阶段。'));
     for (const pool of table.pools) {
       body.append(element('h5', '', `奖励池 ${pool.index}`));
+      const items = element('div', 'reward-item-grid');
       for (const item of pool.items) {
-        const row = element('div', 'oracle-reward-item'), heading = element('div', 'oracle-reward-heading');
+        const row = element('article', 'oracle-reward-item'), heading = element('div', 'oracle-reward-heading');
         heading.append(element('span', '', `${item.name}${item.localization === 'missing' ? '（中文待补充）' : ''} × ${item.quantity ?? '数量待补充'}`), element('span', 'oracle-reward-chance', item.probability === null ? '概率待补充' : `${Number((item.probability * 100).toFixed(2))}%`));
-        row.append(heading, rewardSources({ type: item.type, key: item.key, itemCount: item.itemCount, probability: item.rawProbability, rarity: item.rarity ?? null, source: item.source, nameSource: item.nameSource, conversion: item.conversion })); body.append(row);
+        row.append(heading, rewardSources({ type: item.type, key: item.key, itemCount: item.itemCount, probability: item.rawProbability, rarity: item.rarity ?? null, source: item.source, nameSource: item.nameSource, conversion: item.conversion })); items.append(row);
       }
+      body.append(items);
       if (!pool.items.length) body.append(element('p', 'muted', '源文件中的奖励池为空'));
     }
     for (const warning of table.warnings) body.append(element('p', 'oracle-reward-note', warning));
@@ -442,7 +568,7 @@ function renderOracleCycle(result) {
       const item = element('div', 'oracle-bounty-row'); item.title = `${row.node}\n${row.challenge}${row.ally ? `\n${row.ally}` : ''}`;
       item.append(element('small', '', `TIER ${i + 1}${row.allyName ? ` · ${row.allyName}` : ''}`), element('strong', '', row.nodeName), element('span', 'oracle-mission', row.missionName ?? row.node), element('p', 'oracle-challenge-name', row.challengeName));
       if (row.challengeDescription) item.append(element('p', 'oracle-challenge-desc', row.challengeDescription));
-      if (row.rewardDetails) item.append(renderFixedRewards(row.rewardDetails.fixed), renderRewardTable(row.rewardDetails.table), rewardSources({ source: row.rewardDetails.source, fixed: row.rewardDetails.fixed }));
+      if (row.rewardDetails) item.append(element('p', 'oracle-reward-context', `${oracleZones[tag] ?? tag} · 第 ${i + 1} 档赏金报酬；对应上方任务与挑战。`), renderFixedRewards(row.rewardDetails.fixed), renderRewardTable(row.rewardDetails.table), rewardSources({ source: row.rewardDetails.source, fixed: row.rewardDetails.fixed }));
       list.append(item);
     }); grid.append(group);
   }
@@ -523,14 +649,14 @@ async function longTask(method) {
   finally { state.busy = false; $('update-now').disabled = false; $('import').disabled = false; }
 }
 for (const node of document.querySelectorAll('.nav')) node.onclick = () => activate(node.dataset.panel);
-for (const node of document.querySelectorAll('[data-view]')) node.onclick = () => guarded(async () => { state.view = node.dataset.view; await renderDocument(); });
+for (const node of document.querySelectorAll('[data-view]')) node.onclick = () => guarded(async () => { state.view = node.dataset.view; state.query = ''; state.offset = 0; $('content-filter').value = ''; await renderDocument(); });
 const choose = () => guarded(async () => applyLibrary(await api.chooseRoot())); $('choose').onclick = choose; $('empty-choose').onclick = choose;
 createPickers();
 $('json-only').onchange = () => renderFiles(true); $('file-filter').oninput = debounce(() => renderFiles(true)); $('clear-filters').onclick = resetFilters;
 $('refresh').onclick = () => guarded(async () => applyLibrary(await api.call('refresh')));
 $('content-filter').oninput = debounce(async () => { state.query = $('content-filter').value; state.offset = 0; await renderDocument(); });
 $('go-pointer').onclick = () => guarded(() => go($('pointer').value)); $('pointer').onkeydown = event => { if (event.key === 'Enter') guarded(() => go($('pointer').value)); };
-$('parent').onclick = () => guarded(() => go(state.pointer.slice(0, state.pointer.lastIndexOf('/'))));
+$('parent').onclick = () => guarded(() => state.view === 'cards' && state.cardReturn ? backToCards() : go(state.pointer.slice(0, state.pointer.lastIndexOf('/'))));
 $('previous').onclick = () => guarded(async () => { state.offset = Math.max(0, state.offset - 80); await renderDocument(); }); $('next').onclick = () => guarded(async () => { state.offset += 80; await renderDocument(); });
 $('copy').onclick = () => guarded(async () => { if (!state.selected) return; const result = await api.call('raw', { id: state.selected.id, pointer: state.pointer }); if (result.truncated) throw new Error('内容超过复制上限，请使用导出获取完整内容'); await api.copy(result.text); notify('已复制'); });
 $('export').onclick = () => guarded(async () => { if (state.selected && await api.exportFile({ id: state.selected.id, pointer: state.pointer })) notify('已导出'); });
@@ -558,6 +684,16 @@ $('save-config').onclick = () => guarded(async () => { await api.call('saveConfi
 $('browse-time').value = localInputDate(true);
 $('oracle-time').value = localInputDate(true);
 api.onEvent(message => { if (message.event === 'progress') log(message.value.message); if (message.event === 'updated') { showStatus(message.value); log(`上游检查成功：${message.value.fileChanges} 个文件变化`); } });
+async function loadImageStatus() { const status = await api.imageStatus(); $('image-path').textContent = status.available ? `${status.root} · ${status.files} 张图片` : '未配置，卡片仅显示文字'; }
+$('choose-images').onclick = () => guarded(async () => { if (await api.chooseImages()) { await loadImageStatus(); galleryUI.state.entered = false; notify('图片资源目录已切换'); } });
+document.addEventListener('keydown', event => {
+  if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+    event.preventDefault();
+    const active = document.querySelector('.panel.active')?.id;
+    const target = ({ documents: 'docs-search', gallery: 'gallery-search', merged: 'merge-search', browser: 'file-filter' })[active];
+    if (target) { $(target).focus(); $(target).select(); }
+  }
+});
 window.runSmoke = async () => {
   const report = { ok: false, files: state.files.length };
   const file = state.files.find(f => f.id.endsWith('/ExportResources_zh.json')); if (!file) throw new Error('烟雾测试缺少资料包');
@@ -571,8 +707,9 @@ window.runSmoke = async () => {
   const incursions = await api.call('browseIncursions', { at: browseAt, count: 7 }); report.incursionDays = incursions.entries.length; report.incursionNodes = incursions.entries[0].nodes.length;
   const bounty = await api.call('oracleCycle', { seed: '24091' }); report.oracleBounties = Object.values(bounty.bounties).reduce((sum, rows) => sum + rows.length, 0);
   const locations = await api.call('oracleLocations', { seed: '24091' }); report.oracleLocations = Object.values(locations.locations).reduce((sum, rows) => sum + rows.length, 0);
+  const merged = await api.call('mergeBuild', { profile: 'pilot' }); report.mergedEntities = merged.manifest.summary.entities; report.mergedRecipes = merged.manifest.summary.recipes;
   report.isolated = typeof window.require === 'undefined' && typeof window.process === 'undefined';
-  report.ok = report.files >= 403 && report.resourceCount === 3549 && report.offers === 3 && report.arbitrations === 24 && report.cycles === 4 && report.teshin === 4 && report.circuitFrames === 3 && report.circuitWeapons === 5 && report.incursionDays === 7 && report.incursionNodes === 6 && report.oracleBounties === 17 && report.oracleLocations > 0 && report.isolated; return report;
+  report.ok = report.mergedEntities === 51 && report.mergedRecipes === 14 && report.files >= 403 && report.resourceCount === 3549 && report.offers === 3 && report.arbitrations === 24 && report.cycles === 4 && report.teshin === 4 && report.circuitFrames === 3 && report.circuitWeapons === 5 && report.incursionDays === 7 && report.incursionNodes === 6 && report.oracleBounties === 17 && report.oracleLocations > 0 && report.isolated; return report;
 };
 guarded(async () => { applyLibrary(await api.call('init')); window.smokeReady = true; });
-export { $, state, selections, filteredFiles, resetFilters, renderFiles, selectFile, go, activate, loadOracleOptions, predict, queryArb, queryBrowse, selectLab, applyLibrary, queryOracle, loadOracleState, oracleResults, refreshAndQuery };
+export { $, state, mergeUI, rulesUI, galleryUI, documentsUI, selections, filteredFiles, resetFilters, renderFiles, selectFile, go, openCard, renderDocument, activate, loadOracleOptions, predict, queryArb, queryBrowse, selectLab, applyLibrary, queryOracle, loadOracleState, oracleResults, refreshAndQuery };

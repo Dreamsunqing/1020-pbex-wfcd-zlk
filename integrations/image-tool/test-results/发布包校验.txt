@@ -1,0 +1,21 @@
+Checked 3000/12234 content hashes
+Checked 6000/12234 content hashes
+Checked 9000/12234 content hashes
+Checked 12000/12234 content hashes
+{
+  "archive": "dist/攻略图片工具-v1.0.1-Windows-x64.zip",
+  "bytes": 785039441,
+  "architecture": "Windows x64",
+  "itemCount": 20160,
+  "imageCount": 12233,
+  "enemyImages": {
+    "total": 638,
+    "original": 0,
+    "reference": 37,
+    "missing": 601
+  },
+  "contentHashesVerified": 12234,
+  "crc": "passed",
+  "commit": "20f8d9427a5a62268817853eefd8962d18c0b70e"
+}
+ZIP SHA-256 passed

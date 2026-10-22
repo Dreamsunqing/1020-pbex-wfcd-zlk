@@ -1,7 +1,7 @@
 import { escapePointer, parseDocument } from './library.mjs';
 
 const chinese = value => typeof value === 'string' && /\p{Script=Han}/u.test(value);
-const nameFields = ['name', 'title', 'displayName', 'label', 'Name', 'Title'];
+const nameFields = ['name', 'abilityName', 'title', 'displayName', 'label', 'Name', 'Title'];
 const imageField = key => /(?:image|icon|thumbnail|^img$|^svg$|base64)/i.test(key);
 const lotus = value => typeof value === 'string' && /^\/(?:Lotus|louts)\//i.test(value);
 const normalize = value => value.replace(/^\/(?:Lotus|louts)\//i, '/Lotus/');
@@ -15,6 +15,7 @@ export function dictionaryFiles(files) {
 // dictionary edits are visible without reopening the selected JSON file.
 export class PreviewTitles {
   cache = new Map();
+  abilityCache = new Map();
   async load(files, read, selectedSource) {
     const warnings = [], indexes = [];
     const priority = file => file.source === selectedSource ? -1 : ({ plus: 0, wfcd: 1, oracle: 2 })[file.source] ?? 3;
@@ -36,6 +37,43 @@ export class PreviewTitles {
         indexes.push(entry.index);
       } catch (error) { warnings.push(`中文字典不可用：${file.id}（${error.message}）`); }
     }
+    // Official export abilities use abilityUniqueName, while their Chinese names
+    // may live inside another file's abilities collection. Join only complete IDs.
+    const abilityFiles = files.filter(file => file.format === 'json' && (file.source === 'plus' && /\/Export(Warframes|Abilities)\.json$/.test(file.id) || file.source === 'official' && /\/manifests\/zh\/ExportWarframes_zh\.json$/.test(file.id))).sort((a,b) => Number(a.source !== 'official') - Number(b.source !== 'official') || a.id.localeCompare(b.id));
+    const abilityIndex = new Map();
+    for (const file of abilityFiles) {
+      try {
+        const { bytes, hash } = await read(file.id); let doc = this.abilityCache.get(file.id);
+        if (doc?.hash !== hash) { doc = { hash, value: parseDocument(bytes.toString('utf8'), file.id).value }; this.abilityCache.set(file.id, doc); }
+        const add = (record, id, at) => {
+          if (!lotus(id) || !record || typeof record !== 'object' || abilityIndex.has(normalize(id))) return;
+          const name = resolveTitle(record, id, at, file.id, indexes);
+          if (name.status !== 'missing') {
+            const nameKey = nameFields.find(key => typeof record[key] === 'string');
+            const bridge = name.status === 'dictionary' && nameKey ? [{ file: file.id, pointer: at + '/' + escapePointer(nameKey), hash }] : [];
+            abilityIndex.set(normalize(id), { text: name.text, sources: [...bridge, ...name.sources.map(source => ({ ...source, hash: source.hash ?? hash }))] });
+          }
+        };
+        const collection = (rows, at) => {
+          if (Array.isArray(rows)) rows.forEach((record, i) => add(record, record?.abilityUniqueName ?? record?.uniqueName, at + '/' + i));
+          else if (rows && typeof rows === 'object') for (const [id, record] of Object.entries(rows)) add(record, record?.abilityUniqueName ?? record?.uniqueName ?? id, at + '/' + escapePointer(id));
+        };
+        const value = doc.value;
+        if (/\/ExportAbilities\.json$/.test(file.id)) collection(value, '');
+        else {
+          collection(value.ExportAbilities, '/ExportAbilities');
+          const frames = value.ExportWarframes ?? value;
+          for (const [key, record] of Object.entries(frames ?? {})) {
+            const at = (value.ExportWarframes ? '/ExportWarframes' : '') + '/' + escapePointer(key) + '/abilities';
+            collection(record?.abilities, at);
+
+          }
+        }
+      } catch (error) { warnings.push(`技能名称索引不可用：${file.id}（${error.message}）`); }
+    }
+    indexes.push(abilityIndex);
+    const activeAbilities = new Set(abilityFiles.map(file => file.id));
+    for (const key of this.abilityCache.keys()) if (!activeAbilities.has(key)) this.abilityCache.delete(key);
     // Retain only dictionaries in this library/snapshot.
     const active = new Set(candidates.map(file => file.id));
     for (const key of this.cache.keys()) if (!active.has(key)) this.cache.delete(key);
@@ -47,10 +85,10 @@ export function resolveTitle(item, key, pointer, file, indexes = []) {
   const names = item && typeof item === 'object' && !Array.isArray(item) ? nameFields.filter(field => typeof item[field] === 'string').map(field => ({ value: item[field], pointer: `${pointer}/${escapePointer(field)}` })) : [];
   const native = names.find(entry => chinese(entry.value)) ?? (chinese(item) ? { value: item, pointer } : null);
   if (native) return { text: shorten(native.value, 140), original: names[0]?.value ?? key, status: 'original', sources: [{ file, pointer: native.pointer }] };
-  const refs = [...names.map(entry => entry.value), item?.uniqueName, item?.type, item?.Type, key, typeof item === 'string' ? item : null].filter(lotus);
+  const refs = [...names.map(entry => entry.value), item?.uniqueName, item?.abilityUniqueName, item?.type, item?.Type, key, typeof item === 'string' ? item : null].filter(lotus);
   for (const ref of refs) for (const index of indexes) {
     const entry = index.get(normalize(ref));
-    if (entry) return { text: shorten(entry.text, 140), original: names[0]?.value ?? ref, status: 'dictionary', reference: ref, sources: [{ file: entry.file, pointer: entry.pointer, hash: entry.hash }] };
+    if (entry) return { text: shorten(entry.text, 140), original: names[0]?.value ?? ref, status: 'dictionary', reference: ref, sources: entry.sources ?? [{ file: entry.file, pointer: entry.pointer, hash: entry.hash }] };
   }
   const original = names[0]?.value ?? key;
   return { text: shorten(original, 140), original, status: 'missing', sources: [] };

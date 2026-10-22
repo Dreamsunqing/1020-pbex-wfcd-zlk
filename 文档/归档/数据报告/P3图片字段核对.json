@@ -1,0 +1,27 @@
+{
+  "basis": "local snapshot, one language; image manifest duplicated in other language folders",
+  "entries": 20144,
+  "uniqueIds": 20144,
+  "uniqueTextures": 12624,
+  "formats": {
+    "png": 18478,
+    "jpg": 1666
+  },
+  "imageLikeKeys": {
+    "ExportManifest.json:textureLocation": 20144
+  },
+  "examples": {
+    "ExportManifest.json:textureLocation": {
+      "pointer": "/Manifest/0/textureLocation",
+      "value": "/Lotus/Interface/Icons/StoreIcons/Cosmetics/Syandanas/VanquishedBanner.png!00_tRfVpDeIxYKopXuvOIooOg"
+    }
+  },
+  "imageValueOccurrences": {
+    "ExportManifest.json": 20144
+  },
+  "plus": {
+    "entries": 12467,
+    "contentHash": 12466,
+    "forumName": 1347
+  }
+}

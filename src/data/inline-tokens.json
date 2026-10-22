@@ -1,0 +1,387 @@
+{
+  "version": 1,
+  "description": "显示层中文语义登记表；未知标记原样保留。人工编辑不会被扫描工具覆盖。",
+  "entries": {
+    "CREDITS": {
+      "kind": "icon",
+      "label": "现金",
+      "glyph": "¤",
+      "omitInName": false
+    },
+    "PLATINUM_CREDITS": {
+      "kind": "icon",
+      "label": "白金",
+      "glyph": "◇",
+      "omitInName": false
+    },
+    "ENDO": {
+      "kind": "icon",
+      "label": "内融核心",
+      "glyph": "◈",
+      "omitInName": false
+    },
+    "ENERGY": {
+      "kind": "icon",
+      "label": "能量",
+      "glyph": "ϟ",
+      "omitInName": false
+    },
+    "HEALTH": {
+      "kind": "icon",
+      "label": "生命",
+      "glyph": "♥",
+      "omitInName": false
+    },
+    "DT_IMPACT": {
+      "kind": "icon",
+      "label": "冲击",
+      "glyph": "◉",
+      "omitInName": false
+    },
+    "DT_PUNCTURE": {
+      "kind": "icon",
+      "label": "穿刺",
+      "glyph": "◆",
+      "omitInName": false
+    },
+    "DT_SLASH": {
+      "kind": "icon",
+      "label": "切割",
+      "glyph": "／",
+      "omitInName": false
+    },
+    "DT_FIRE": {
+      "kind": "icon",
+      "label": "火焰",
+      "glyph": "♨",
+      "omitInName": false
+    },
+    "DT_HEAT": {
+      "kind": "icon",
+      "label": "火焰",
+      "glyph": "♨",
+      "omitInName": false
+    },
+    "DT_FREEZE": {
+      "kind": "icon",
+      "label": "冰冻",
+      "glyph": "❄",
+      "omitInName": false
+    },
+    "DT_POISON": {
+      "kind": "icon",
+      "label": "毒素",
+      "glyph": "⬡",
+      "omitInName": false
+    },
+    "DT_ELECTRICITY": {
+      "kind": "icon",
+      "label": "电击",
+      "glyph": "ϟ",
+      "omitInName": false
+    },
+    "DT_EXPLOSION": {
+      "kind": "icon",
+      "label": "爆炸",
+      "glyph": "✹",
+      "omitInName": false
+    },
+    "DT_GAS": {
+      "kind": "icon",
+      "label": "毒气",
+      "glyph": "⬡",
+      "omitInName": false
+    },
+    "DT_RADIATION": {
+      "kind": "icon",
+      "label": "辐射",
+      "glyph": "☢",
+      "omitInName": false
+    },
+    "DT_MAGNETIC": {
+      "kind": "icon",
+      "label": "磁力",
+      "glyph": "⊕",
+      "omitInName": false
+    },
+    "DT_VIRAL": {
+      "kind": "icon",
+      "label": "病毒",
+      "glyph": "⬡",
+      "omitInName": false
+    },
+    "DT_CORROSIVE": {
+      "kind": "icon",
+      "label": "腐蚀",
+      "glyph": "⬡",
+      "omitInName": false
+    },
+    "DT_RADIANT": {
+      "kind": "icon",
+      "label": "虚空",
+      "glyph": "✧",
+      "omitInName": false
+    },
+    "DT_SENTIENT": {
+      "kind": "icon",
+      "label": "Sentient",
+      "glyph": "✧",
+      "omitInName": false
+    },
+    "ARCHWING": {
+      "kind": "icon",
+      "label": "Archwing",
+      "glyph": "✧",
+      "omitInName": false
+    },
+    "AFFINITY_SHARE": {
+      "kind": "icon",
+      "label": "经验共享",
+      "glyph": "✦",
+      "omitInName": false
+    },
+    "MOTHER_TOKEN": {
+      "kind": "icon",
+      "label": "母亲石印",
+      "glyph": "◈",
+      "omitInName": false
+    },
+    "REPUTATION_SMALL": {
+      "kind": "icon",
+      "label": "声望",
+      "glyph": "◇",
+      "omitInName": false
+    },
+    "MINI_ARROW": {
+      "kind": "icon",
+      "label": "方向",
+      "glyph": "→",
+      "omitInName": false
+    },
+    "MINI_INVENTORY_HOLD": {
+      "kind": "icon",
+      "label": "长按物品栏",
+      "glyph": "▣",
+      "omitInName": false
+    },
+    "PRE_ATTACK": {
+      "kind": "icon",
+      "label": "近战攻击",
+      "glyph": "",
+      "omitInName": false
+    },
+    "AIM_WEAPON": {
+      "kind": "icon",
+      "label": "瞄准",
+      "glyph": "",
+      "omitInName": false
+    },
+    "ACTIVATE_ABILITY_1": {
+      "kind": "icon",
+      "label": "施放技能 1",
+      "glyph": "",
+      "omitInName": false
+    },
+    "JUMP": {
+      "kind": "icon",
+      "label": "跳跃",
+      "glyph": "",
+      "omitInName": false
+    },
+    "HOLD_CROUCH": {
+      "kind": "icon",
+      "label": "长按蹲伏",
+      "glyph": "",
+      "omitInName": false
+    },
+    "USE": {
+      "kind": "icon",
+      "label": "互动",
+      "glyph": "",
+      "omitInName": false
+    },
+    "MELEE_CHANNEL": {
+      "kind": "icon",
+      "label": "近战引导",
+      "glyph": "",
+      "omitInName": false
+    },
+    "SWITCH_GUN": {
+      "kind": "icon",
+      "label": "切换武器",
+      "glyph": "",
+      "omitInName": false
+    },
+    "SHOW_SECRET_1": {
+      "kind": "icon",
+      "label": "查看隐藏信息",
+      "glyph": "",
+      "omitInName": false
+    },
+    "RETRO_TM": {
+      "kind": "icon",
+      "label": "™",
+      "glyph": "",
+      "omitInName": false
+    },
+    "Retro_TM": {
+      "kind": "icon",
+      "label": "™",
+      "glyph": "",
+      "omitInName": false
+    },
+    "SHARD_RED_SIMPLE": {
+      "kind": "icon",
+      "label": "深红源力石",
+      "glyph": "◆",
+      "omitInName": true
+    },
+    "SHARD_BLUE_SIMPLE": {
+      "kind": "icon",
+      "label": "蔚蓝源力石",
+      "glyph": "◆",
+      "omitInName": true
+    },
+    "SHARD_GREEN_SIMPLE": {
+      "kind": "icon",
+      "label": "翡翠源力石",
+      "glyph": "◆",
+      "omitInName": true
+    },
+    "SHARD_YELLOW_SIMPLE": {
+      "kind": "icon",
+      "label": "琥珀源力石",
+      "glyph": "◆",
+      "omitInName": true
+    },
+    "SHARD_ORANGE_SIMPLE": {
+      "kind": "icon",
+      "label": "黄玉源力石",
+      "glyph": "◆",
+      "omitInName": true
+    },
+    "SHARD_VIOLET_SIMPLE": {
+      "kind": "icon",
+      "label": "紫晶源力石",
+      "glyph": "◆",
+      "omitInName": true
+    },
+    "DT_IMPACT_COLOR": {
+      "kind": "icon",
+      "label": "冲击",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_PUNCTURE_COLOR": {
+      "kind": "icon",
+      "label": "穿刺",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_SLASH_COLOR": {
+      "kind": "icon",
+      "label": "切割",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_FIRE_COLOR": {
+      "kind": "icon",
+      "label": "火焰",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_FREEZE_COLOR": {
+      "kind": "icon",
+      "label": "冰冻",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_POISON_COLOR": {
+      "kind": "icon",
+      "label": "毒素",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_ELECTRICITY_COLOR": {
+      "kind": "icon",
+      "label": "电击",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_EXPLOSION_COLOR": {
+      "kind": "icon",
+      "label": "爆炸",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_GAS_COLOR": {
+      "kind": "icon",
+      "label": "毒气",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_RADIATION_COLOR": {
+      "kind": "icon",
+      "label": "辐射",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_MAGNETIC_COLOR": {
+      "kind": "icon",
+      "label": "磁力",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_VIRAL_COLOR": {
+      "kind": "icon",
+      "label": "病毒",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_CORROSIVE_COLOR": {
+      "kind": "icon",
+      "label": "腐蚀",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_RADIANT_COLOR": {
+      "kind": "icon",
+      "label": "虚空",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "DT_SENTIENT_COLOR": {
+      "kind": "icon",
+      "label": "Sentient",
+      "omitInName": false,
+      "omitInPlain": true,
+      "note": "ExportTextIcons 中有明确图片映射；保留真实伤害图标。纯文本略去装饰，保留后续原文。"
+    },
+    "br": {
+      "kind": "break"
+    },
+    "BR": {
+      "kind": "break"
+    },
+    "br/": {
+      "kind": "break"
+    },
+    "br /": {
+      "kind": "break"
+    }
+  }
+}

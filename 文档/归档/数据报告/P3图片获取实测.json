@@ -1,0 +1,106 @@
+{
+  "checkedAt": "2026-10-22T10:12:50.150Z",
+  "probes": [
+    {
+      "label": "weapon",
+      "entry": {
+        "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/SapientPrimary/SapientPrimaryWeapon",
+        "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/SapientPrimaryWeapon.png!00_uZ982neYQf9WURACyrZgpA"
+      },
+      "url": "https://content.warframe.com/PublicExport/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/SapientPrimaryWeapon.png!00_uZ982neYQf9WURACyrZgpA",
+      "status": 200,
+      "contentType": null,
+      "bytes": 44043,
+      "signature": "89504e470d0a1a0a0000000d",
+      "sha256": "95b739948be6e6dd43dfd0acd31a67f9b83512ef45ccd773265c77b268f3221b"
+    },
+    {
+      "label": "warframe",
+      "entry": {
+        "uniqueName": "/Lotus/Powersuits/Runner/Runner",
+        "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Warframes/Gauss.png!00_-c2p4CkQ1H4i7RMiGBxX5w"
+      },
+      "url": "https://content.warframe.com/PublicExport/Lotus/Interface/Icons/StoreIcons/Warframes/Gauss.png!00_-c2p4CkQ1H4i7RMiGBxX5w",
+      "status": 200,
+      "contentType": null,
+      "bytes": 91311,
+      "signature": "89504e470d0a1a0a0000000d",
+      "sha256": "efe3e8d994dcfbc6ba5f481c194743e2aaa36664a80b580ce461af480075f5b5"
+    },
+    {
+      "label": "blueprint",
+      "entry": {
+        "uniqueName": "/Lotus/Types/Recipes/WarframeRecipes/GyreHelmetBlueprint",
+        "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Resources/CraftingComponents/GenericWarframeHelmet.png!00_O4vbbBxptlitT7pbdnVwPg"
+      },
+      "url": "https://content.warframe.com/PublicExport/Lotus/Interface/Icons/StoreIcons/Resources/CraftingComponents/GenericWarframeHelmet.png!00_O4vbbBxptlitT7pbdnVwPg",
+      "status": 200,
+      "contentType": null,
+      "bytes": 49244,
+      "signature": "89504e470d0a1a0a0000000d",
+      "sha256": "f7f6ef2a6cc4f1b6d23242fff7e77f5c6d117b48f0080a4d0bce3e8a253d54bd"
+    },
+    {
+      "label": "resource",
+      "entry": {
+        "uniqueName": "/Lotus/Types/Items/MiscItems/Neurode",
+        "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Resources/CraftingComponents/ComponentNeurode.png!00_aIo0B2Jtk790+PfOpd7mag"
+      },
+      "url": "https://content.warframe.com/PublicExport/Lotus/Interface/Icons/StoreIcons/Resources/CraftingComponents/ComponentNeurode.png!00_aIo0B2Jtk790+PfOpd7mag",
+      "status": 200,
+      "contentType": null,
+      "bytes": 42729,
+      "signature": "89504e470d0a1a0a0000000d",
+      "sha256": "b8f9bcbcfbdffe0dc28c2b3a12b28042d7ec1252f16478c8935ce050727b93b6"
+    },
+    {
+      "label": "mod",
+      "entry": {
+        "uniqueName": "/Lotus/Powersuits/Runner/RunnerRushAugmentCard",
+        "textureLocation": "/Lotus/Interface/Cards/Images/AbilityAugments/GaussMachRushAugment.jpg!00_jUPB84Ku3NADMZDZw63IdQ"
+      },
+      "url": "https://content.warframe.com/PublicExport/Lotus/Interface/Cards/Images/AbilityAugments/GaussMachRushAugment.jpg!00_jUPB84Ku3NADMZDZw63IdQ",
+      "status": 200,
+      "contentType": null,
+      "bytes": 26498,
+      "signature": "ffd8ffe000104a4649460001",
+      "sha256": "ee68700bfe29c256a8d64cee7b5fb396782930e805dd2cb1a17969ca04b63dc0"
+    },
+    {
+      "label": "without-hash",
+      "url": "https://content.warframe.com/PublicExport/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/SapientPrimaryWeapon.png",
+      "status": 404,
+      "contentType": "text/html; charset=iso-8859-1",
+      "bytes": 196,
+      "signature": "3c21444f4354595045204854",
+      "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880"
+    },
+    {
+      "label": "plus-official-hash",
+      "url": "https://content.warframe.com/PublicExport/Lotus/Interface/Icons/Player/DanteGlyph.png!00_bWgrY3O49Z3RYaqGpuawpg",
+      "status": 200,
+      "contentType": null,
+      "bytes": 78850,
+      "signature": "89504e470d0a1a0a0000000d",
+      "sha256": "071dce200aa76625bc7c0c9c6b6248712d945d395ae02dc653a5c98dc5a5b7e0"
+    },
+    {
+      "label": "plus-forum",
+      "url": "https://media.invisioncic.com/Mwarframe/pages_media/1_DanteGlyph.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 292631,
+      "signature": "89504e470d0a1a0a0000000d",
+      "sha256": "c076a720465a63349c26b7e9b9ad2b98198fb108a3904fa2b019e49c2295afa7"
+    },
+    {
+      "label": "community-browse",
+      "url": "https://browse.wf/Lotus/Interface/Icons/Player/DanteGlyph.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 202972,
+      "signature": "89504e470d0a1a0a0000000d",
+      "sha256": "f13e53e0e0e7ed60abc90e1526ceddfa916a89d305b3407bf010c44779030aae"
+    }
+  ]
+}

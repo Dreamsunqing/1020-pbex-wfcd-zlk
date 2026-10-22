@@ -1,3 +1,7 @@
+import { rewardContexts } from '../core/merge/reward-context.mjs';
+import { LocalImages } from '../core/local-images.mjs';
+import { ImageGallery } from '../core/gallery.mjs';
+import { DocumentLibrary } from '../core/documents.mjs';
 import { parentPort, workerData } from 'node:worker_threads';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
@@ -16,8 +20,15 @@ import { weeklyConquests } from '../core/oracle-weekly.mjs';
 import { loadOracleData, describeOracle } from '../core/oracle-data.mjs';
 import { cachedOracleState, refreshOracleState, importOracleState, oracleStateStatus } from '../core/oracle-state.mjs';
 import { PreviewTitles, cardFields } from '../core/preview-titles.mjs';
+import { scanStructure, sliceStructure, recordDetail, isRecordMap } from '../core/json-structure.mjs';
+import { pointerValue } from '../core/library.mjs';
+import { RuleStore, validateRules } from '../core/merge/rules.mjs';
+import { exportMerged } from '../core/merge/repository.mjs';
+import { mergeContext, mergedStatus, datasetFor, mergedList, mergedDetail, expandEvidence, imageDescriptors } from '../core/merge/service.mjs';
 
 const store = new Store(workerData.storeRoot);
+const ruleStore = new RuleStore(path.join(workerData.userData, 'merge-rules'));
+let mergeBusy = false;
 const preferencesFile = path.join(workerData.userData, 'preferences.json');
 const configFile = path.join(workerData.userData, 'sources.json');
 const anchorFile = path.join(store.root, 'runtime', 'world-state.json');
@@ -26,9 +37,18 @@ let config = await loadConfig(await exists(configFile) ? configFile : undefined)
 let preferences = await readJson(preferencesFile).catch(() => ({ root: workerData.defaultRoot, autoUpdate: false }));
 let library = null, release = null, mode = 'local', cached = null, busy = false;
 const previewTitles = new PreviewTitles();
+let structureCache = null;
+const localImages = new LocalImages();
+const documents = new DocumentLibrary(workerData.documentsRoot ?? workerData.defaultRoot);
+let gallery = new ImageGallery(workerData.contentRoot, path.join(workerData.defaultRoot, '世界状态上游'));
+async function initializeImages(root) {
+  if (localImages.root) { gallery = new ImageGallery(localImages.root, root); return; }
+  const candidates = [workerData.imageRoot, preferences.imageRoot, workerData.contentRoot, path.resolve(root, '../assets/content'), path.resolve(root, 'assets/content')].filter(Boolean);
+  for (const candidate of candidates) try { await localImages.select(candidate); gallery = new ImageGallery(localImages.root, root); return; } catch { /* Try the next known local location. */ }
+}
 const progress = value => parentPort.postMessage({ event: 'progress', value });
 const savePreferences = () => atomicJson(preferencesFile, preferences);
-async function selectRoot(root) { library = await scanLibrary(root, config); mode = 'local'; release = null; cached = null; preferences.root = library.root; await savePreferences(); return summary(); }
+async function selectRoot(root) { library = await scanLibrary(root, config); await initializeImages(library.root); mode = 'local'; release = null; cached = null; preferences.root = library.root; await savePreferences(); return summary(); }
 async function summary() {
   return { mode, root: mode === 'snapshot' ? `快照 ${release.id.slice(0, 12)}` : library?.root ?? '', files: mode === 'snapshot' ? await snapshotFiles(store, release) : library?.files ?? [], releaseId: release?.id ?? null, storeRoot: store.root, autoUpdate: preferences.autoUpdate, intervalMinutes: config.intervalMinutes, status: await store.status(), sources: config.sources.map(({ id, label }) => ({ id, label })) };
 }
@@ -45,6 +65,18 @@ async function document(id) {
   const text = bytes.toString('utf8'); let parsed;
   try { parsed = parseDocument(text, id); } catch (error) { parsed = { value: null, format: 'invalid-json', warnings: [error.message], parseError: error.message }; }
   cached = { id, hash, text, ...parsed }; return cached;
+}
+async function previewContext(id) {
+  const selectedLibrary = library, selectedRelease = mode === 'snapshot' ? release : null;
+  const files = selectedRelease ? await snapshotFiles(store, selectedRelease) : selectedLibrary?.files ?? [];
+  const read = selectedRelease ? async file => { const entry = snapshotEntry(selectedRelease, file); return { bytes: await store.bytes(entry), hash: entry.hash }; } : file => readLibraryFile(selectedLibrary.root, file);
+  const file = files.find(file => file.id === id);
+  if (!file) throw new Error('请先选择资料目录中的文件');
+  const { bytes, hash } = await read(id);
+  const doc = cached?.id === id && cached.hash === hash ? cached : { id, hash, ...parseDocument(bytes.toString('utf8'), id) };
+  // Keep raw text in the existing cache: raw/export always return source bytes.
+  cached = { ...doc, text: bytes.toString('utf8') };
+  return { doc: cached, file, files, read };
 }
 async function sourceFile(sourceId, filename) {
   const source = config.sources.find(s => s.id === sourceId); if (!source) throw new Error('缺少推算输入来源配置');
@@ -77,6 +109,60 @@ function schedule() {
   if (preferences.autoUpdate) timer = setTimeout(async () => { try { await update(); } catch (error) { progress({ message: error.message, error: true }); } finally { schedule(); } }, config.intervalMinutes * 60000);
 }
 const handlers = {
+  async documentsList(args) { return documents.list(args); },
+  async documentsRead({ id }) { return documents.read(id); },
+  async images({ requests }) {
+    const images = await localImages.batch(requests);
+    let remaining = 16 * 1024 * 1024 - images.flatMap(image => image?.layers ?? (image ? [image] : [])).reduce((sum, image) => sum + Math.ceil((image.dataUrl?.length ?? 0) * 3 / 4), 0);
+    for (let i = 0; i < requests.length; i++) if (!images[i] && requests[i].id?.startsWith('/Lotus/') && !requests[i].blueprint && !requests[i].resultId) {
+      try {
+        const asset = await gallery.asset('official:' + requests[i].id);
+        if (asset.bytes > 2 * 1024 * 1024 || asset.bytes > remaining) continue;
+        const bytes = await fs.readFile(asset.file); if (bytes.length > remaining || bytes.length > 2 * 1024 * 1024) continue;
+        remaining -= bytes.length;
+        images[i] = { dataUrl: `data:${asset.mime};base64,${bytes.toString('base64')}`, file: path.basename(asset.file), original: asset.item.imageName, provider: 'official', method: 'official-exact-id', abilityIcon: asset.item.category === 'Abilities' };
+      } catch { /* No exact local official match: retain a text card. */ }
+    }
+    return images;
+  },
+  async galleryList(args) { return gallery.list(args); },
+  async galleryDetail({ key }) { return gallery.detail(key); },
+  async galleryAsset({ key }) { return gallery.asset(key); },
+  async imageStatus() { return localImages.status(); },
+  async chooseImages({ root }) { const status = await localImages.select(root); gallery = new ImageGallery(root, library?.root); preferences.imageRoot = root; await savePreferences(); return status; },
+  async mergeStatus() { return mergedStatus(await mergeContext({ library, release, mode, store })); },
+  async rulesGet() { return ruleStore.get(); },
+  async rulesValidate(args) { return validateRules(args); },
+  async rulesSave(args) { return ruleStore.save(args); },
+  async rulesPrevious() { return ruleStore.previous(); },
+  async mergeBuild(args = {}) {
+    if (mergeBusy) throw new Error('已有合并构建正在进行'); mergeBusy = true;
+    try {
+      const ctx = await mergeContext({ library, release, mode, store });
+      const rules = args.profile === 'pilot' ? {} : await ruleStore.get();
+      await ctx.repository.build({ ...ctx, ...rules, onProgress: progress });
+      return mergedStatus(ctx);
+    } finally { mergeBusy = false; }
+  },
+  async mergeList(args) { const ctx = await mergeContext({ library, release, mode, store }); return mergedList(await datasetFor(ctx, args.datasetVersion), args); },
+  async mergeDetail(args) { const ctx = await mergeContext({ library, release, mode, store }); return mergedDetail(await datasetFor(ctx, args.datasetVersion), args.id, {locale:args.locale}); },
+  async mergeReport({ type, datasetVersion, offset = 0, limit = 40, query = '', tableId=null }) {
+    if (!Number.isInteger(offset) || offset < 0 || !Number.isInteger(limit) || limit < 1 || limit > 100 || typeof query !== 'string' || query.length > 500) throw new Error('报告分页参数无效');
+    const ctx = await mergeContext({ library, release, mode, store }), data = await datasetFor(ctx, datasetVersion);
+    const page = rows => ({ total: rows.length, offset, hasMore: offset + limit < rows.length, rows: rows.slice(offset, offset + limit) });
+    if (type === 'changes') { const changes = await ctx.repository.changes(data), paged = page(changes.changes); return { ...changes, ...paged, changes: paged.rows }; }
+    if (type === 'issues') { const paged = page(data.output['reports/issues.json'].filter(row => !query || JSON.stringify(row).toLowerCase().includes(query.toLowerCase()))); return { ...paged, issues: expandEvidence(data, paged.rows), coverage: data.output['reports/coverage.json'], localization:data.output['reports/localization.json'] }; }
+    if (type === 'rewards') {
+      if(tableId!==null&&(typeof tableId!=='string'||tableId.length>2000))throw new Error('奖励表标识无效');
+      if(tableId!==null&&!data.output['reward-tables.json'].some(t=>t.id===tableId))throw new Error('奖励表不存在');
+      const names = data.output['search.zh-CN.json'], nameMap = new Map(names.map(n => [n.id, n.title])), contexts = rewardContexts(data), search = query.toLowerCase();
+      const paged = page(data.output['reward-tables.json'].filter(t => tableId!==null?t.id===tableId:!search || `${t.id} ${JSON.stringify(contexts.get(t.id))}`.toLowerCase().includes(search) || t.pools.some(p => p.items.some(i => (nameMap.get(i.itemId) ?? '').toLowerCase().includes(search)))));
+      const ids = new Set(paged.rows.flatMap(t => t.pools.flatMap(p => p.items.map(i => i.itemId))));
+      return { ...paged, tables: expandEvidence(data, paged.rows).map(t => ({ ...t, context: contexts.get(t.id) })), names: names.filter(n => ids.has(n.id)), images: imageDescriptors(data, names.filter(n => ids.has(n.id))) };
+    }
+    throw new Error('合并报告类型无效');
+  },
+  async mergeExport(args) { const ctx = await mergeContext({ library, release, mode, store }); return exportMerged(await datasetFor(ctx, args.datasetVersion), args.directory); },
   async init() { try { await selectRoot(preferences.root ?? workerData.defaultRoot); } catch (error) { progress({ message: '请选择资料包目录：' + error.message }); } schedule(); return summary(); },
   async chooseRoot(args) { return selectRoot(args.root); },
   async refresh() { if (mode === 'snapshot') return handlers.snapshot({ id: release.id }); if (!library) return summary(); return selectRoot(library.root); },
@@ -92,9 +178,33 @@ const handlers = {
     catch (error) { return { id, hash, format: 'invalid-json', warnings: [error.message], type: 'error', rows: [], total: 0, hasMore: false, scalar: bytes.toString('utf8').slice(0, 200000) }; }
     cached = parsed;
     const titles = await previewTitles.load(files, read, files.find(file => file.id === id).source);
-    return { id, hash, format: parsed.format, warnings: [...parsed.warnings, ...titles.warnings], ...preview(parsed.value, { pointer, query, offset, limit, titleFor: (item, key, at) => titles.resolve(item, key, at, id), fieldsFor: cardFields }) };
+    return { id, hash, format: parsed.format, warnings: [...parsed.warnings, ...titles.warnings], ...preview(parsed.value, { pointer, query, offset, limit, titleFor: (item, key, at) => titles.resolve(item, key, at, id), fieldsFor: (item, key, at) => ({ ...cardFields(item), image: item && typeof item === 'object' ? { id: item.uniqueName ?? item.abilityUniqueName ?? item.type ?? key, imageName: item.imageName, icon: item.icon, ...(typeof item.resultType === 'string' ? { resultId: item.resultType, blueprint: true } : {}) } : null, collection: Array.isArray(item) || isRecordMap(item, key, id, at.split('/').length - 1) }) }) };
   },
-  async raw({ id, pointer = '' }) { const doc = await document(id); const text = pointer ? JSON.stringify((await import('../core/library.mjs')).pointerValue(doc.value, pointer), null, 2) : doc.text; return { text: text.slice(0, 200000), truncated: text.length > 200000, totalCharacters: text.length, hash: doc.hash }; },
+  async detail({ id, pointer = '', query = '', offset = 0, limit = 80 }) {
+    const { doc, file, files, read } = await previewContext(id);
+    if (doc.format === 'text' || doc.parseError) throw new Error('此文件无法解析为 JSON，请使用原文视图');
+    const titles = await previewTitles.load(files, read, file.source);
+    const result = recordDetail(doc.value, { pointer, query, offset, limit, file: id });
+    for (const row of result.rows) if ('value' in row && typeof row.value === 'string') row.title = titles.resolve(row.value, row.key, row.pointer, id);
+    return { ...result, id, hash: doc.hash, format: doc.format, image: (() => { const item = pointerValue(doc.value, pointer); return item && typeof item === 'object' ? { id: item.uniqueName ?? item.abilityUniqueName ?? item.type ?? pointer.split('/').at(-1)?.replaceAll('~1', '/').replaceAll('~0', '~'), imageName: item.imageName, icon: item.icon, ...(typeof item.resultType === 'string' ? { resultId: item.resultType, blueprint: true } : {}) } : null; })(), title: titles.resolve(pointerValue(doc.value, pointer), pointer.split('/').at(-1), pointer, id), warnings: [...doc.warnings, ...titles.warnings] };
+  },
+  async schema({ id, query = '', offset = 0, limit = 80 }) {
+    const { doc } = await previewContext(id);
+    if (doc.format === 'text' || doc.parseError) throw new Error('此文件无法解析为 JSON，请使用原文视图');
+    if (structureCache?.id !== id || structureCache.hash !== doc.hash) structureCache = { id, hash: doc.hash, structure: scanStructure(doc.value, id) };
+    return { id, hash: doc.hash, format: doc.format, warnings: doc.warnings, ...sliceStructure(structureCache.structure, { query, offset, limit }) };
+  },
+  async raw({ id, pointer = '', line = null }) {
+    const doc = await document(id); let text = pointer ? JSON.stringify((await import('../core/library.mjs')).pointerValue(doc.value, pointer), null, 2) : doc.text;
+    if (line !== null) {
+      if (!Number.isInteger(line) || line < 1 || doc.format !== 'text' || pointer) throw new Error('原文行号定位参数无效');
+      const lines = text.split('\n'); if (line > lines.length) throw new Error('原文行号超出范围');
+      const start = Math.max(0, line - 12), end = Math.min(lines.length, line + 18);
+      text = lines.slice(start, end).map((value, i) => `${i + start + 1 === line ? '▶' : ' '} ${i + start + 1}  ${value}`).join('\n');
+      return { text: text.slice(0, 200000), truncated: text.length > 200000, totalCharacters: doc.text.length, hash: doc.hash, startLine: start + 1, endLine: end, targetLine: line };
+    }
+    return { text: text.slice(0, 200000), truncated: text.length > 200000, totalCharacters: text.length, hash: doc.hash };
+  },
   async export({ id, pointer = '' }) { const doc = await document(id); const text = pointer ? JSON.stringify((await import('../core/library.mjs')).pointerValue(doc.value, pointer), null, 2) : doc.text; return { text, name: path.basename(id) }; },
   async update() { return update(); },
   async import() { if (!library || mode !== 'local') throw new Error('请先打开本地资料目录'); if (busy) throw new Error('更新或导入正在进行'); busy = true; try { return await importLocal({ libraryRoot: library.root, config, storeRoot: store.root, onProgress: progress }); } finally { busy = false; } },

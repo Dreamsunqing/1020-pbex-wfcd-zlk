@@ -44,8 +44,24 @@ export class Store {
     if (!await exists(file)) await atomicJson(file, release);
     else await this.release(id);
     const current = await exists(path.join(this.root, 'current.json')) ? await readJson(path.join(this.root, 'current.json')) : null;
-    await atomicJson(path.join(this.root, 'current.json'), { releaseId: id, previousId, generation: (current?.generation ?? 0) + 1, switchedAt: new Date().toISOString() });
+    await atomicJson(path.join(this.root, 'current.json'), { releaseId: id, previousId: id === current?.releaseId ? current.previousId : previousId ?? current?.releaseId ?? null, generation: (current?.generation ?? 0) + 1, switchedAt: new Date().toISOString() });
+    await this.prune();
     return this.release(id);
+  }
+  async prune() {
+    const pointer = await readJson(path.join(this.root, 'current.json'));
+    const keep = new Set([pointer.releaseId, pointer.previousId].filter(Boolean));
+    for (const file of await fs.readdir(path.join(this.root, 'releases'))) if (/^[a-f0-9]{64}\.json$/.test(file) && !keep.has(file.slice(0, -5))) await fs.rm(path.join(this.root, 'releases', file));
+  }
+  async collectObjects() {
+    // Called only while holding the update lock, after all candidate writes finish.
+    const used = new Set();
+    const add = source => { for (const entry of Object.values(source.files ?? {})) used.add(entry.hash); };
+    for (const row of await this.history()) for (const source of Object.values((await this.release(row.id)).sources)) add(source);
+    const candidates = path.join(this.root, 'candidates');
+    if (await exists(candidates)) for (const file of await fs.readdir(candidates)) if (/^[a-zA-Z0-9_-]+\.json$/.test(file)) add(await readJson(path.join(candidates, file)));
+    const objects = path.join(this.root, 'objects');
+    if (await exists(objects)) for (const prefix of await fs.readdir(objects)) if (/^[a-f0-9]{2}$/.test(prefix)) for (const file of await fs.readdir(path.join(objects, prefix))) if (/^[a-f0-9]{64}$/.test(file) && !used.has(file)) await fs.rm(path.join(objects, prefix, file));
   }
   async event(event) {
     await fs.mkdir(this.root, { recursive: true });

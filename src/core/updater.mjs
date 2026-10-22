@@ -114,6 +114,7 @@ export async function importLocal({ libraryRoot, storeRoot, config, onProgress =
       sources[source.id] = { kind: source.kind, label: source.label, version: `local:${sha256(JSON.stringify(files))}`, files };
     }
     const release = await store.publish(sources, current?.id); const changes = changesBetween(current, release);
+    await store.collectObjects();
     await store.event({ type: 'imported', releaseId: release.id, count: changes.length });
     return { releaseId: release.id, changes };
   });
@@ -136,6 +137,7 @@ export async function runUpdate({ storeRoot, config, onProgress = () => {}, get 
       const candidate = { sources }; const changes = changesBetween(before, candidate);
       const differs = !before || sha256(JSON.stringify({ schemaVersion: 1, sources })) !== before.id;
       const release = differs ? await store.publish(sources, before?.id) : before;
+      await store.collectObjects();
       const result = { state: 'ok', checkedAt: new Date().toISOString(), releaseId: release.id, changed: differs, fileChanges: changes.length, sources: Object.fromEntries(Object.entries(sources).map(([id, s]) => [id, { version: s.version, files: Object.keys(s.files).length }])), email: 'reserved-not-implemented' };
       const previousFailure = await fs.readFile(path.join(store.root, 'last-failure.json'), 'utf8').then(JSON.parse, () => null);
       await store.event({ type: previousFailure ? 'recovered' : differs ? 'updated' : 'checked', ...result });
@@ -158,6 +160,7 @@ export async function rollback({ storeRoot, releaseId }) {
   return withLock(store.root, async () => {
     const before = await store.current(); const target = await store.release(releaseId);
     const release = await store.publish(target.sources, before?.id);
+    await store.collectObjects();
     await store.event({ type: 'rollback', from: before?.id, releaseId: release.id }); return release.id;
   });
 }

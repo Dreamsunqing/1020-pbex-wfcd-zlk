@@ -53,7 +53,7 @@ export function preview(value, { pointer = '', query = '', offset = 0, limit = 8
     if (matches <= offset) continue;
     if (rows.length === limit) return { ...info, rows, hasMore: true, total: info.count, scanned };
     rows.push({ key, pointer: itemPointer, ...describe(item), preview: brief(item), label: typeof item?.name === 'string' ? item.name : undefined,
-      ...(titleFor ? { title: title ?? titleFor(item, key, itemPointer) } : {}), ...(fieldsFor ? fieldsFor(item) : {}) });
+      ...(titleFor ? { title: title ?? titleFor(item, key, itemPointer) } : {}), ...(fieldsFor ? fieldsFor(item, key, itemPointer) : {}) });
   }
   return { ...info, rows, hasMore: false, total: info.count, matched: matches, scanned };
 }

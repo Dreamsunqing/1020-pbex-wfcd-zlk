@@ -1,0 +1,4683 @@
+{
+  "abilityLinks": {
+    "donorFrames": 66,
+    "limitations": [
+      "强化 Mod 关联不代表集团商店当前可购买；非集团武器强化使用“强化卡”徽章",
+      "可移植指同系技能；Prime／Umbra／竞技场变体不作为献出材料",
+      "不从名称相似度或技能序号猜测关联；未唯一匹配者保留待复核"
+    ],
+    "skillAugments": 205,
+    "transferableAbilities": 66,
+    "unmatched": [
+      {
+        "id": "/Lotus/Powersuits/Infestation/InfestPassiveAugmentCard",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 959,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Infestation~1InfestPassiveAugmentCard/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Powersuits/Frost/FrostPassiveAugmentCard",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 3253,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Frost~1FrostPassiveAugmentCard/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Powersuits/Pirate/LiquifyAugmentCard",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 6207,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Pirate~1LiquifyAugmentCard/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Types/Sentinels/SentinelPrecepts/Events/ProjectNightwatch/SentinelHealthRegenPreceptNightwatchMod",
+        "reason": "武器强化缺少可确认的兼容实体，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 16188,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Types~1Sentinels~1SentinelPrecepts~1Events~1ProjectNightwatch~1SentinelHealthRegenPreceptNightwatchMod/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Powersuits/Temple/TemplePassiveAugment1Card",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 22593,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Temple~1TemplePassiveAugment1Card/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Powersuits/Brawler/BrawlerPassiveAugmentCard",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 22965,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Brawler~1BrawlerPassiveAugmentCard/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Powersuits/Alchemist/AlchemistPassiveAugmentCard",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 28261,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Alchemist~1AlchemistPassiveAugmentCard/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Powersuits/Excalibur/ExcaliburUmbraPassiveAugmentCard",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 29622,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Excalibur~1ExcaliburUmbraPassiveAugmentCard/compat",
+            "source": "plus"
+          }
+        ]
+      }
+    ],
+    "weaponAugments": 128
+  },
+  "conflicts": 22473,
+  "entities": 32941,
+  "fields": 598621,
+  "files": [
+    {
+      "file": "README.md",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "archive",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/404.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/about.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/arbys-old.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/arbys.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/arbys.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/arbys.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/color-picker.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/common.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/components/navbar.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/eslint.config.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/glyphs.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/index.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/index.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/inventory.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/invigorations.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/kim-convo-locator.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/kimulacrum.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/live.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/live.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/package-lock.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/package.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/platform-suffix.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/platform-suffix.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/prime-vault.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/prime-vault.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/profile.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/profile.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/rivencalc.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/sp-incursions.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/supplemental-data/arbyTiers.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/supplemental-data/arbyTiers.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/supplemental-data/glyphs-import-generic.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/supplemental-data/glyphs-import-glyphswf.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/supplemental-data/glyphs-import-wiki.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/supplemental-data/glyphs.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/browse/64b18da17c52a6edcd7ec2edbfba5e7fc8661a57652ef11672d7dc40e808033d.json",
+      "source": "browse",
+      "status": "reference"
+    },
+    {
+      "file": "git/browse.wf/supplemental-data/profile-[DE]Rebecca.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/browse/f96648d3603c80168f308befcf38f8c0351cfbae28b35c4cd246bb6e698d505a.json",
+      "source": "browse",
+      "status": "reference"
+    },
+    {
+      "file": "git/browse.wf/text-icons.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/tsconfig.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/browse/8fadc7546a2fbd0737d8fa55713952de2143656f798c945bf0688318d503339b.json",
+      "source": "browse",
+      "status": "reference"
+    },
+    {
+      "file": "git/browse.wf/typestripped/arbys.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/typestripped/index.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/typestripped/live.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/typestripped/prime-vault.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/browse.wf/typestripped/profile.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "browse",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/DropTables.lua",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/ExportCodex.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus-gen/bca7f4fae93634206abe9fe95c2470edffeaed9eeb514f6318b82eaf65238b51.json",
+      "source": "plus-gen",
+      "status": "reference"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/ExportUpgrades-missing.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus-gen/c82fbcc08954f6ab194b96f1d6635eb02648cba4d6d22a6b065d13776a6ddb33.json",
+      "source": "plus-gen",
+      "status": "reference"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/Missions.lua",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/datafiles/jsonify.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/droptables_upd.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/eFaction.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus-gen/376b70c2a51133d387c08ee2e373a8d1bd6cf1c35b2401f6c880ea61a5a981c0.json",
+      "source": "plus-gen",
+      "status": "reference"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/eMissionType.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus-gen/0ae5a2cc8126d7ae339a4b8a55c855e78237d06b644e4002b975fdd7c312778a.json",
+      "source": "plus-gen",
+      "status": "reference"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/forum-glyphs-ok.cat.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/gifting-bonuses.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus-gen/4254d848f9b34f858ca755472705ac7b64ae1ff4fb9e03e471a8b3b8f427d0ee.json",
+      "source": "plus-gen",
+      "status": "reference"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/palettes.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus-gen/baf246f3894240cac30fe6221f73fe7de1045ceb10e70a0cf9bbf6f50cde5000.json",
+      "source": "plus-gen",
+      "status": "reference"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/resource-supplementals.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus-gen/fc22d65a44d63664790c8e1847726a6a595e23b119182940caec64604618539f.json",
+      "source": "plus-gen",
+      "status": "reference"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/scripts/Export Codex.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/scripts/Export Gifting Bonuses.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/scripts/Export Regions.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/scripts/Export Resource Supplementals.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/scripts/Export Sectors.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/starchart-export.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus-gen/dbbd21afc1dc1ece7bbdf5c1af96bc91ea6203bec7b92991a81024e620cff820.json",
+      "source": "plus-gen",
+      "status": "reference"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+      "reason": "只读提取明确的 Subsumed／强化标记；Lua 不执行，原文另行保留",
+      "records": 0,
+      "reference": "reference/plus-gen/effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577.json",
+      "source": "plus-gen",
+      "status": "metadata"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/wiki/Version.lua",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/wiki/Void.lua",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/wiki/Warframes.lua",
+      "reason": "只读提取明确的 Subsumed／强化标记；Lua 不执行，原文另行保留",
+      "records": 0,
+      "reference": "reference/plus-gen/875ffaab0268127d2b15f097cc8d0115d398f4651cfb71212ead278e9808c2a9.json",
+      "source": "plus-gen",
+      "status": "metadata"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/wiki/Weapons/melee.lua",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/wiki/Weapons/primary.lua",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/extras/wiki/Weapons/secondary.lua",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/index.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus-gen/validate-scaled-values.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus-gen",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/CONTRIBUTING.md",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportAbilities.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 77,
+      "reference": "reference/plus/bfdda0312f2f22a03afaf1ab81fa8cc0117897adabeb45a6fd5a9018e3857f16.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportAchievements.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 376,
+      "reference": "reference/plus/01a8a8dc91c901ce551c0ec458954ce59094b4ce13722c867b30daa897cb9f48.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportAnimals.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 159,
+      "reference": "reference/plus/855776772371a23e6e383e16d37e8b74f6444d05cd6ecf44194ac97710f0344e.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportArcanes.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 177,
+      "reference": "reference/plus/8bec9449651e3d16a989c29584c4d5bba1c669a3633acf1667777c58e2d1530e.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportAvionics.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 82,
+      "reference": "reference/plus/f7b1b96a4466bc02beb49be27d15f3f40dba4d3dbe205e627b0fcb78ae31d5f7.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportBoosterPacks.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 38,
+      "reference": "reference/plus/59b8b350b55f128cd552e78b2d6167b8bce4767e9c8dca3b1d1a3b16ee6a7898.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportBoosters.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 11,
+      "reference": "reference/plus/2c222c49a72a8f52a87bfb1885435ca8e005e0393b23615d3fa220f1dbc5c116.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportBounties.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 54,
+      "reference": "reference/plus/a53d295991e51b2c28ac1af428a417b19f0f06d458ef779e91d4479a668b9a8b.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportBundles.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 1164,
+      "reference": "reference/plus/2396b94d6fb1cec4a7a20c48ae579ce91aab57fe703dc3ccc08017df892f995d.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportChallenges.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 630,
+      "reference": "reference/plus/38dec5c4675b4c96aa2c819bace51d13c3861c396d7261a59b1e8cd323c1816c.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportCodex.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 480,
+      "reference": "reference/plus/6ace332b6369d358454a43612994051c7c49b63ae114163819318e74501e3c5f.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportCreditBundles.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 26,
+      "reference": "reference/plus/d331559e989fa65dc41b65bb24637752a68d33b553f3f2b4902cfa3e1bf2911a.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportCustoms.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 4766,
+      "reference": "reference/plus/463bfc2b00a5fac9e832a64a2c1d92d0d4a1aa45c1ddbd24658d09c0b384734e.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportDojoRecipes.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 3264,
+      "reference": "reference/plus/80a4ac52916ce5ee0f1a4c828ceb328d58c3b98a4d790146b3cfc6c5f3b68ca1.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportDrones.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 6,
+      "reference": "reference/plus/000da15ed0197f2d497bacfd6a2d67a0274c01b238c6a1ba74da24dae70bcd01.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportEmailItems.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 54,
+      "reference": "reference/plus/4ca4008772d49ca3d191954ca9b74c15f724e306c7b0e0b25ce67e84b2f35289.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportEnemies.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 5563,
+      "reference": "reference/plus/7328d7f92a5df9b0ce646d8cfbe56dab7bb05ff4e070c634bdefb1f290921dda.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportFactions.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 12,
+      "reference": "reference/plus/fc940c5432724bfff0d02902373ec0cdd7cb0bdca2735489b547d75ad7b5a7ea.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportFlavour.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 2630,
+      "reference": "reference/plus/b21fe8f9404a97fc5cb3c21e48bf6051c6357d876ec9959faa5e4ed3c50b30ab.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportFocusUpgrades.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 105,
+      "reference": "reference/plus/d1b8bba034e56eaf29819dec727e899ad14413add87357099f532788c4bc7256.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportFusionBundles.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 51,
+      "reference": "reference/plus/f831834c4d5a8b183ee15c33532bf3327b03916852e277ec76c4f3f160b2c52e.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportGear.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 180,
+      "reference": "reference/plus/023c7912655f76d6bf6f64b6afcbe089f63ee38c9fd736415af6bab8a52ca91b.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportImages.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/fdce85c475a60a879c8a26526e37c8cc50af62fee3d87fde3d9842e98acd6101.json",
+      "source": "plus",
+      "status": "reference"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportIntrinsics.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 5,
+      "reference": "reference/plus/206662b0f51af60ec69e8f1d15a4bcd7c830a23037fa13135a82b57d3cc47648.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportKeys.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 578,
+      "reference": "reference/plus/dbb8053270ba44a40c7105aaafbbf4841a2d6c704d1d719a7661713f302da17c.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportMissionTypes.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 46,
+      "reference": "reference/plus/886768768dce18c70bd92acc58e77accd78dc8f22f17199e7dd45bef71eea847.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportModSet.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 19,
+      "reference": "reference/plus/512831e3e639ccf56a5ce4291caf131431befc44aa62bce284a549cd006f7d95.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportNightwave.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 406,
+      "reference": "reference/plus/ea0f5ed496f4a98f0f30f2a74bfd406ae8235ff3498195d1e60ceb661e7680bf.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportRailjackWeapons.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 155,
+      "reference": "reference/plus/6e5e23c07067144faa8ef54df8b32c798cd7533d4ae9ebfdef834845b613e104.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportRecipes.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 2005,
+      "reference": "reference/plus/6c4437137302d17f2b7848e6e4ce5a39aa6da9d87862ee51362faa7055ef4984.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportRegions.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 354,
+      "reference": "reference/plus/56baa9b44520e1cadb4e045dd3af065edf8f15287257e4b3f48a40d153822072.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportRelics.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 3089,
+      "reference": "reference/plus/bd90729e2ca97cc7cce3a128771581db68ef89f19b8e4f891b07e8483ac41299.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportResources.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 3524,
+      "reference": "reference/plus/27263bfcc4b35909b88fadf90ba838f877e7aaeb49a4441505d459354a9cc855.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportRewards.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/8dc2f72831a49a1a9c0306ef92932562e510f9bb9b8dffc872239476974ef524.json",
+      "source": "plus",
+      "status": "reference"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportSentinels.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 38,
+      "reference": "reference/plus/aed4f77404508dc57406d471a8a7a60f880ae62c197c223a8be8b8ecc907dfa0.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportSyndicates.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 40,
+      "reference": "reference/plus/f6311abaf009a1e88862b7744d0e08e71982e5023ee6988e1139d30f12a65f3d.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportSystems.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 25,
+      "reference": "reference/plus/9747f84c8ce5953d7d7129fa13a52989a8255e1c06db43d9d42ffdbf0d255707.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportTextIcons.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/e156ee252e9d53c4c8a3fa666bab410ea237e803db8e10eb05ca77340b7fd46f.json",
+      "source": "plus",
+      "status": "reference"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportTilesets.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 28,
+      "reference": "reference/plus/2c49f2a5874b17134280df8f6deb8be9e81e1b6d503f44d129c5bc38b95ccc19.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 1604,
+      "reference": "reference/plus/d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportVendors.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 96,
+      "reference": "reference/plus/5dbcc887574dd15f7a8d59c14a1ac9dc1beceb999f9643909942cc21c872b7fc.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportVirtuals.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 172,
+      "reference": "reference/plus/d96264c584a32cb617185e41544342675437521db97d3639850458b0e8804473.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportWarframes.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 125,
+      "reference": "reference/plus/bc2cd57ac43a3983aed93b6efd380060215e0843399760c4d0944ea8250ad4b0.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/ExportWeapons.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 842,
+      "reference": "reference/plus/a0fe031227c3cf903230b79672d75dc8873364353666e277d5894526118b6c63.json",
+      "source": "plus",
+      "status": "merged"
+    },
+    {
+      "file": "git/warframe-public-export-plus/README.md",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/27b90f9795b5a76dd2a7427dee64a4dfbf18c0a9b3402a4fd07b8108d14d1346.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.en.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/ab82babcde2cb4b2c741d33db1d99b4a523695988768a8cc91d7d6b9465ae9d0.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/55e32260a545bcc24a3ed6febb82133b55eb998eed3c3baab1c8c8a5f7f328b5.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/726e409342952b1b1a67f8629ea00e6aca999d5359081a2039c8943a24553ebc.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/c889eebaee2a85a58c91637944c49df8a8456ffc6e4953062920dc50138bcec0.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/288b771b9458eafad1b253365b24bc42e7268e59956b6416e07fbcf4d0913c79.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/cb9ff3d336b12e8aaa9ae2e0d710ff1968265623f0a392840d5aa1f6989d8d7f.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/20ea489400f815a855ad6d5d65e7aba33934314b6641e282acd85cc3b84e6c73.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/3de14478665b66ec3efc237b8bfb780bc36e542abae557b9a2ebf4fd7c7718d0.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/73358148649e4b4d64fa00394fff7ae0491fe78ebbcf1f3c15fdbf26de6ccb26.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/9e4776fd0c1ea289bf0edb38c41f2f218f731087fec0f0ce928c407a609284aa.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/94833aa49b5471477a9fe1a01b527be8bb8ac75eb5fc75d47fc6a7f3d3b663f8.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/630de589616ecafd8dc221806b364f4c62a98484f292f658b1834e640c06c6aa.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/380ab1858f8f919720a3c783f6d49679c37ef2b4887db634e42436816a7af76a.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/dict.zh.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/plus/d12114e0351d675bf1d189f7b710688d056979a2fbdf1a6d8a3d46bbaa3427e8.json",
+      "source": "plus",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/warframe-public-export-plus/index.d.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/index.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/index.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/package-lock.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/package.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/supplementals/getScaledPowersuitValues.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/supplementals/getScaledPowersuitValues.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/supplementals/relic-chances.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/supplementals/riven_unrollables.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/supplementals/weapons-graph.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/supplementals/weight-calc.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/validate-keys.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/warframe-public-export-plus/validate-typings.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "plus",
+      "status": "excluded"
+    },
+    {
+      "file": "git/wf.browse.oracle/README.md",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "oracle",
+      "status": "excluded"
+    },
+    {
+      "file": "git/wf.browse.oracle/arbitration.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "oracle",
+      "status": "excluded"
+    },
+    {
+      "file": "git/wf.browse.oracle/bounty-cycle.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "oracle",
+      "status": "excluded"
+    },
+    {
+      "file": "git/wf.browse.oracle/data/EidolonJobManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/3100a7d62ece1436b38ed3e069a94642ee237aee840f837d5d8618400e197269.json",
+      "source": "oracle",
+      "status": "reference"
+    },
+    {
+      "file": "git/wf.browse.oracle/data/EntratiLabsJobManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/bca7f7c2914e9cf08fb721aaae55729f91545511933929980ca49ed6330d33b5.json",
+      "source": "oracle",
+      "status": "reference"
+    },
+    {
+      "file": "git/wf.browse.oracle/data/ExportMissionTypes.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/d6a517fa5b94a546a1b660f1590717b1f3baef4b853d85ff98928cd4fd427061.json",
+      "source": "oracle",
+      "status": "reference"
+    },
+    {
+      "file": "git/wf.browse.oracle/data/MicroplanetJobManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/8d5b40b680370ab8c218755530c2487d20fd4f203aa6f995e0eaa9c89159eb07.json",
+      "source": "oracle",
+      "status": "reference"
+    },
+    {
+      "file": "git/wf.browse.oracle/data/VenusJobManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/40a07ba7442d99f728be3d66f980c91f907153f6799a920d3e693e733ff72dd8.json",
+      "source": "oracle",
+      "status": "reference"
+    },
+    {
+      "file": "git/wf.browse.oracle/data/WF1999JobManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/300455cbda6b33264549fd84cd11543219ca2c6bb223bc7c466e5982b67762ef.json",
+      "source": "oracle",
+      "status": "reference"
+    },
+    {
+      "file": "git/wf.browse.oracle/data/ZarimanJobManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/4f9065a43fd2d8401d663cf030a3dd257035dd3a72d9c8033eb3fc4fdbc4bd0c.json",
+      "source": "oracle",
+      "status": "reference"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/6a54378e546c274b0f5cfe1a6083a65da42441b5507d042e38fa4f187c4c3830.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/en.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/b5ebdfd97e21d88ba48e82ebc904f434eac522072eb9e03247c7db2a7bca31d9.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/0d371d03122d2aa1585d2d60770cc6405e60274a2581c2d36ed628b62b4333c2.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/28d48d2bea6d1459c5f5d6b916b469393738fd31e4de212dc4aa3ab927fcae8b.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/4abb8d1db95874c2b84accf2f2ddeec9de7dec02f483bf463d678fafea06478e.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/fbb9d2d924c27fe720a392f275d1b120f9f66b496621bc7615d43b8dc4de069a.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/235f090c87674d9d03bd85fc7ea3208422f6e645bbd0ba7c74137a4ece28ccc0.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/7b4630712073472cffb9fb122a5365567604dc04586aa80ed5250ea592a328f6.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/e91be8b508756c0461f2f2c2f108e02c59154a3d1de8692f39a76401c9a0f30a.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/0a07c95a60405222f22797b89702b7b82fd098b73aad81e618b5c45fc594cf7e.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/29a9c9475f20025fd68e6964aeca5366d01b38e8ec410a604b107ef0cb863ae7.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/1d2a4f94d013c904c7e0f7256a3843f27f876a5a6ad61ce8b2dee326ada7933e.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/16bbfa1d8c90f34b88112c6e0347ea0a2c01a2dcdecfec74b7b8744610bd21dd.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/bf8f520e4e0f5140e5550ceb8faa6d7723dd6fa87b84b53c52e11686946b7fdc.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/dicts/zh.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/oracle/2bc399658201dc4e5e91ddc6992388b9188ee2567bd21e0db0eee5c16e58d2de.json",
+      "source": "oracle",
+      "status": "dictionary"
+    },
+    {
+      "file": "git/wf.browse.oracle/invasions.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "oracle",
+      "status": "excluded"
+    },
+    {
+      "file": "git/wf.browse.oracle/invigorations.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "oracle",
+      "status": "excluded"
+    },
+    {
+      "file": "git/wf.browse.oracle/location-bounties.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "oracle",
+      "status": "excluded"
+    },
+    {
+      "file": "git/wf.browse.oracle/min.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "oracle",
+      "status": "excluded"
+    },
+    {
+      "file": "git/wf.browse.oracle/pluto_backend/invoke.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "oracle",
+      "status": "excluded"
+    },
+    {
+      "file": "git/wf.browse.oracle/pluto_backend/runtime.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "oracle",
+      "status": "excluded"
+    },
+    {
+      "file": "git/wf.browse.oracle/pluto_backend/templating-engine.pluto",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "oracle",
+      "status": "excluded"
+    },
+    {
+      "file": "git/wf.browse.oracle/redtext.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "oracle",
+      "status": "excluded"
+    },
+    {
+      "file": "git/wf.browse.oracle/weekly.php",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "oracle",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_de.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_en.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_es.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_fr.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_it.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_ja.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_ko.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_pl.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_pt.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_ru.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_tc.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_th.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_tr.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_uk.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/indexes/index_zh.txt",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "official",
+      "status": "excluded"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportCustoms_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/ca8199fb969787b09d779ff55f33a4d622da422e47f803814a9b3745742c3cac.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportDrones_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/33be62c15d3eef01db1c25215869e4d46f0d73202dbe38302f9096a0315b0553.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportFlavour_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/28c30e25620d28323ae8cd80fcd948ecf416f516dbbef31240446312a78b708e.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportFusionBundles_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/85aef2c0d7e0dc1b968593bc4f91d87ecaa98197efe9905328a8d56880f9e8b9.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportGear_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/950f9e6488dd8121334bdd7459b9d2ee34d9b800ad9f4f87f503d3b6b1dc447b.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportKeys_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/be7ddf897ffd36a9dcf7a4a8dde79a5c775811d88b8631cb918972d124c91186.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportRecipes_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportRegions_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/9375860ce4e4f075aad0c58e500ff1187f7a61bffad5de2f7a97fdac3f5dfd3b.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportRelicArcane_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/428e96040c9c7602456fb7a4423897e07cfcc250d6f3ea5b9a0bd4c8d5edbeb8.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportResources_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/0b9eec1449ea2bd9f9c5aacc8859f6fdc1c632ad2c5b71e0acea5a707fee12d2.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportSentinels_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/f4bab0e66454749ba772a8db60b0e1defedcbea42c27b89dee9098232849484a.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportSortieRewards_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/e79b4dbec1d527d21fc156cdd82d9f3aa2c523a145e21fe2ee4f036dd6e40c79.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportUpgrades_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/3ba1fc06b40a4c69b72ae18647942c950d3d5185d16488becdd3e758ee8fca24.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportWarframes_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/4c949cee86ae0ba5dd0b749f8f045317d236036be654ed3cf1728a56d27ea5b3.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/de/ExportWeapons_de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/6025b423bea60e5445c891238db46da6855f98be1c78ad0d24d0750c7b5f7024.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportCustoms_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 4834,
+      "reference": "reference/official/146170e8c2e0b99ca705ab7cf6591cee9ad3d017a782a8af36d6ff601f17674d.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportDrones_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 6,
+      "reference": "reference/official/335197edd9f775b13b47957989e29473d3ba132d24261133561e9beedf539882.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportFlavour_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 2683,
+      "reference": "reference/official/868f7aafa24bca5632b424ce2575b3585667439e4ca178299863dcb8c122f1df.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportFusionBundles_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 51,
+      "reference": "reference/official/5b4e4ba28531c88a2e3811cdd46014bdba78244c642700ccf1f05614bf2987fe.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportGear_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 180,
+      "reference": "reference/official/c4fa7dbe5679e54c735fb377ad1e7a598034644025b4f80eb2545ee5d05b07d6.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportKeys_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 49,
+      "reference": "reference/official/6777aac365eebe7c0a19a4418163d826892dc9687b4a5a8597d8087635bbe51f.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportRecipes_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 1885,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportRegions_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 269,
+      "reference": "reference/official/b7ba9f17beca545ee2caae0f53f4c1f8edef9ff9269a4e7de303c7aa99ae4b67.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportRelicArcane_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 3369,
+      "reference": "reference/official/1f9a781bb61d66bff756ab84f8bed7adc7158161e04118df7c5f66edac837289.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportResources_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 3549,
+      "reference": "reference/official/7b1bfbeaa800904210c24304796d87150d637856905619b1d8855b7343db2651.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportSentinels_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 34,
+      "reference": "reference/official/eca3669f489ac648908dbfbcffe2381ff2833b98cc823ea910c70ab0b90157ff.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportSortieRewards_en.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/f7f818f9c746de83910111766f133e421638c1d74c626ed3a29c45f508c21e38.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportUpgrades_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 1622,
+      "reference": "reference/official/8f89b7dec792afb3951b68d26b676472677c1b004d192ff2e4d8cfb37ec78843.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportWarframes_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 140,
+      "reference": "reference/official/0e329e584d0a0440f34c42743708f4e0e8a0293e0cbb9ca10b50f155a14bfe2d.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/en/ExportWeapons_en.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 984,
+      "reference": "reference/official/73dd0dc246b90e87051d7675ae3d91572cc40a8fb7f8656d1510a132d55783cd.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportCustoms_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/ff4df9eaf4307710d3b8ddfeafee201f39c2859422ba794e944c7d210ff376c0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportDrones_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/06a700599cc6e9f124870eb1c92ceb02b56e2cc5a4ec0a9bafbba9687302a2b8.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportFlavour_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/6251a1850e52fdf1bf810b3fb49f99ffdf5f8630c07cf12e6b37f407209f764a.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportFusionBundles_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/f796e0a85b41b72c6309196f780e35ba0f29c5bb76ca9f034ac33ef4a46442fd.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportGear_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/3d6331040d8432727819fa6f3efed1d5379f15bd96a2fb6ff0daa6ca67193d96.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportKeys_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/761c76b7e5229a12ddc4cdf526b0b465a7e0015fac04ecdfa6fe240c65b39cd8.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportRecipes_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportRegions_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/2f677cd3fcfe2b24a0a3ddbdea2f119e63c6b6b5fea092ef8f93bc4c77618b62.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportRelicArcane_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/14a941dba93c8da8086e5507c64006220a638618c79f67a994b3a846fd709638.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportResources_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/108d93b1cf423b487efe42f8cfce4dce89cf066eb64c50b47d70d436d45550f9.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportSentinels_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/724a0d3041477a9419a7c73006ac6bbf2c2f093139f73d773283810692af2bbe.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportSortieRewards_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/447d162a5044fddcbee3e6491ffb897c5f694743d1cfd8d9cc46e68446038b90.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportUpgrades_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/e93df5dca93e3d387ad78384e37ad307d45e2162b3f2ebb41d49b3356a9514c0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportWarframes_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/4fa3e529c267ea8de9309305fbddee529ca9df34eb0e71e3e11be1639feb117d.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/es/ExportWeapons_es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/1e17bc2b23350126e17d2fe7c67b93db55fc713c775850e6051982a022e152c5.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportCustoms_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/1396534f90f4390a983846cb31a7d1e4b19edcb4be09cd8d7a29c06440919f3f.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportDrones_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/6c8696fdda1c195b9b12b241f1dd8ac4480c41c1ac1d859c615b2fd9157f1da4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportFlavour_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/0bc9d70a63acf1b296dfa06396a82a39fc980ad96cc2f176b2f5f000baf0b4b1.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportFusionBundles_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/323bae041818a2a4c8135a4872a96c62b67b9902185b8a11cb9b8c0808f95caf.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportGear_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/33cca6757b5ebd963798294a668d5de20fe4b52ac2a72cfc661e4ded4339f172.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportKeys_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/c8572c32ddceb1445f5107051fbbcb7a41f502256dd56a0cdad418ac29b64d7b.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportRecipes_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportRegions_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/aae6277ecbbd0fefbbdd080421997e1f8a0c771c5d7d93ff64b1c7644d06ac6a.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportRelicArcane_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/aebb2a25cf39dfdf4e30c438ec43a01ffd3a0dc06b0dfa0f1ee618057e8c1fdd.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportResources_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/14a56e2d1157d60661305c43cf8c5d1bae85934bcba550978b7c389f597ef0ac.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportSentinels_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/091fad1c140b4e7c34d2284f072bca7cd388861084a4f754d789b24cea0b3988.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportSortieRewards_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/3958b2e0825114b161165b0e36092e150fd7c7a72fa3863af21482e28a9a9e91.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportUpgrades_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/2baa8b81a579fd8a5ae4dc8c0f2a00c1ded57106f4609aeb530c9bac38a753ef.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportWarframes_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/75fcfe21f9c55452422b9c0f38115e483c34578d0346fac6c8a12ac9d6ae87c9.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/fr/ExportWeapons_fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/1d150dfe21288b802f64c4006afc5fcccd75cbd1a05e9ffa3bf5b4b9aba5825c.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportCustoms_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/147da82a45f8e7512e9eb90d9fc17dcf772db5efb84afa5ea062154892b025ce.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportDrones_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/c9cd5372610ee921f83afb0bb98814e7c5116c1569ed0d21e5b8b4767e443c4b.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportFlavour_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/18a7df6498560957e44cf30c66798c39549fa0799a1e06e7d6a7d6e18497e3e9.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportFusionBundles_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/931bae3f1f8b06740e465ae5749a5564eff2b33079e2461374f06204f7db99af.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportGear_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/6a347c6c8bcd771622172d5935cc6fc25201376b7a2be6b23d5e8203d5934138.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportKeys_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/eaf1ba81356fc574cf1974295b263d7c7d008cc92632892f7b5dd9d5fc87c308.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportRecipes_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportRegions_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/19c9cbf12d728e21af176698adea0ddeaa760a675cb007adbff82586dd50fc82.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportRelicArcane_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/0f5a0232dc621214b471881a58f989b4ec7e34933cd8d3ab8a7d639761539720.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportResources_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/4a2518071093a249406ea48a4866e0d5f144f4213704270dd345e342d5ba6040.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportSentinels_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/39d6bfebe3df104a4b7d26e128b0d5ca792be14e2f358ff0ce9ae8b538fb45ca.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportSortieRewards_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/7401828a6a83e9d0bcc6812c574e33eb84b0ea7cb6cf0af89efc9fa96a4aa78f.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportUpgrades_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/c6e31c6ba3f6c1d45161fb685614086282806e2f9c73b9eaae21d8144f9edf6d.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportWarframes_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/3cf689c7fb34c089ee2ef82bc6975584a7b0aef7eea8337c800607a8f7f6c60a.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/it/ExportWeapons_it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/e739142a149cbc397de705083affe8fa0964f6a607b6090ec42c19b8f12408d5.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportCustoms_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/b7bd8cc01b636ec29311a66b1b0a8de60b935adecf2f42dfb92e3b50354f0090.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportDrones_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/4031dad9de0c650a9b38b024b06aed4e1c45375e373f5dbb360076a49f297e89.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportFlavour_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/3a9cb665f6ac1f75dc69bb7ee011acbadfc2cc865489fa63deb1177fab0e4b16.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportFusionBundles_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/dcf701a151f9c096cfd1e2a636ec72ff2da1c8436ddfc3c8260de3d6871f8ad0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportGear_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/f65395aa5240dee0f7638928cc4ca25db862839f7e4fd4124c89d2184c36e729.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportKeys_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/54b0fa7505828bb86d4d6a9bee3e8112ab5a0752f7896f03bb0c9a4774e75670.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportRecipes_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportRegions_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/6deaffce1226ee7ff178b1385dd1c48e6ff41d4a4839afc1699dabe975472346.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportRelicArcane_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/b5a518804336f0146467ccc8118be6141651a85b005b643decbe51cb6f621dcf.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportResources_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/821b0f8f958bd7346a628910894ecec8c5f70431efdd849f743ee4d32059b2f6.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportSentinels_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/f5c0d1a14bc8000e7425bf7e113f14365e8bbfd18ef1b61479b4139ae20e6d64.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportSortieRewards_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/67c2f421211007f6cd1f38541b92f84913f0ea8ec233f1cc4e0d61869b2d650b.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportUpgrades_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/0d66d5e4a045b0bd4d88192d174ece57cd99ce310946ababa887f52b04c71922.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportWarframes_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/eeba6016150a8c55835715a39f5803b57ffe46518e949be30301d23b6f3e434e.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ja/ExportWeapons_ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/4d870d5dc6c9db9c8ff646e998a4a80ea419b713b5d93682b0a9d952accaf991.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportCustoms_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/1f4f033a416b4c76c58c9bb6cba8b1ae3b9696a4a1146f3bdaf8b532afd21a43.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportDrones_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/aac3d827f9ae41412ff7914a00dd0273fae8e8009b23e11072726efd0e86230a.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportFlavour_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/f94ca352ffbf704a135e2088a102b3ad4af8118eff924c2e75ff5084cdad0465.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportFusionBundles_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/53de49f7f379ecadf101aa078118d6b3ce05f4cd1e5a272c58b04fd1bb57f1dc.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportGear_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/11a50e1dbdac0741efeb09d60803e2de3e64e33a174aaa6ecc646feadaa48ff9.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportKeys_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/19fee990662876fc2f2abfd02590137f2b7c484fd60fe56077f1412650fc9b27.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportRecipes_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportRegions_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/42a851604b4ed238997eb8e8e25b9770e1ea21f9fc5c64f31579b61e7eb56cf1.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportRelicArcane_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/1234688ef669007e78248192bc882c5d4be8be9038dc27593b5c935be5a9dc7b.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportResources_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/6f70357b06971242632972712187109018f945b59d7bee557e82b92b9aa19edd.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportSentinels_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/411a4c94a13bc2142249fecdee8c1fd816d49ed85c95ed30ad2173599dc48831.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportSortieRewards_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/f38e81516f29981b09f8ccaa3bf1d3491d52829ab9682b8b40741bb3e5be1299.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportUpgrades_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/d371e8cc525033b1aed7b8d7915ae9db5b2ec762d66ddab4d963fc635edc3dd1.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportWarframes_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/7320bf1eb5e5255a10986ba26437ce66769233809c23d971b9e2588b40b1e00a.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ko/ExportWeapons_ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/39df2a24b7d69866a6918eed1ae9d5e4f61b28fb4e48554a65cd070b0a4e955f.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportCustoms_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/60e05268a8a89887e1738219b1be0615b19810784bb0668ee0eee0f76b46b865.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportDrones_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/7b8036d76f8c61bb0e5277f503196b62b41e8b3d19f4b8bcd4dd295adeb04143.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportFlavour_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/71f0256da3b6d336f7a4ad0fd6b9239077cca2693f311dc87ba87e982540d1d1.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportFusionBundles_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/c7853f18219138cd2f806de34e4782e90b6b721f52521f0b22914b7a73910803.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportGear_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/0f41d5b1eb268466385125df4fa029efa5fe6694ade05517820ce17898445583.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportKeys_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/22151e04838bc2e9cedbfc014bb86a73f330ca1544d06de0fb83eb12e1c9449f.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportRecipes_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportRegions_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/03781d5420226caa748d62b3bb091e23a9c78a864845c4a6965145c8f9d6c0fb.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportRelicArcane_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/74498f85251f356f3fff846474408cdc95e41ed4658052e5b1fe37106d4de70c.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportResources_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/cfec923aeb67ff4a82fe7435385421990fac7d1d79280a696a85f498f55e0f18.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportSentinels_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/5da7da227fb6ba55ec5e3202a69dfe1fe430113fb5f5f02d4b64035b9629a626.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportSortieRewards_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/15d635c30a7ef5500a32d78888e9ef710f907f697098b7bc967094254abb1ae9.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportUpgrades_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/c704e97c1c81fb96cecf2f718e3929c6016ddd566949d40c80cc8904e0a070bd.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportWarframes_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/13b92e084fdaf2a98a2297ddbf648a606aa8d65bb8784e4055aaba9bc4733359.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pl/ExportWeapons_pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/8f5b4be3a5e654eabd9bd08293a306fa3a9d20ca9ff553f5766be75b3abef616.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportCustoms_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/1e273a191c492a8b886b6325bf0465b8cda3ec53a052cd8a0b3a3d13cf9ab857.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportDrones_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/2f5ba56786dfcd771bdb7460a68b110bae48659e81285b474396db8672ce92b5.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportFlavour_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/c285ad6a69188a5143368e3aec0011a211934c9fb83f678c77bd577c934c88ae.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportFusionBundles_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/4adbeb5c75c50adc92560cd0f6770f9bf159a6427ab4cf3c84aa44aa05bbc342.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportGear_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/80ec3f8e7b43bc7e236154ca7e0c64c917f8958ad09ade00c50a5de287dc3039.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportKeys_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/e55e5852643792a9bf466f88af41fffefae46e1a024d06e71b6eba31672adf50.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportRecipes_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportRegions_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/e138d6592acf31571c7b2b883f26d1676adb51fcf44363033ce3fe0a14fbf063.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportRelicArcane_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/b47c9edef8bec5515ac2e9535ffa0709c99d700ee8c807b8125eb13616cce9f8.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportResources_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/d49a84e5a442e3787a0d48df7b200232402f021be4835184fa4a6d13dc811ef4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportSentinels_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/a37ce1822eb9e530747b87a5d793d3cdddcda5a8899524d9154227f722a1f02c.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportSortieRewards_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/cb0c7f211a25c97f71dcc6d01daa77da1c3dfed4923079bf0a8b824780fa0b10.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportUpgrades_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/2ce607abfaf50a6eb837f4f0ec5aa8940ae799546e7b8bc5d2721d01053e02a4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportWarframes_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bab33a9030ceadbc818d66f3794c6987ea594ef7f4ec8aaf2c7b89b88c63e4f7.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/pt/ExportWeapons_pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/1719591c09fafaa886529d8ef594995f547e6a1f3d72b11f85ada5a633f0b3ef.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportCustoms_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/e2ae7c5dca1781eeaa790419172cd8c40352ebbc8c6872eb45989f9c1cd58763.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportDrones_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/b154a787005993fbe9c675e09d3d8461aea09af60245e001bb8f5d50a8bc4ca5.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportFlavour_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/d0213630dd77dc29dcb887baff6a5d7b919ad6ab3e8c77c67f710cf04e8b9636.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportFusionBundles_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/50b0e1bb17c90e00fbd68a8b3fc7c40781c75f5d4dc3f3133e5e5c92ad602ab8.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportGear_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/9df87adebab54382af1c4384e19cb96c34854a6491f20561fb04b02815f21282.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportKeys_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/81ecac4079a6924b4994e1f8f2a0554222d618c3af15480e46bf162ddfcb5696.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportRecipes_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportRegions_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/a0a75cb3e03ea44115288ab4d6ad3e68db2b68834b109fc1dcb4cc3acc6b57e9.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportRelicArcane_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/dd767308d3899e8b7d6918a9484b9669045e79a044bd7d3e6e6813dfbe60d2a4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportResources_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/6032cd5e074892c266e7a27bb7495892eb4ec4d5818d7a28e372a6ef684ba942.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportSentinels_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/a5cf4f2165321d8e662b4e30855f39c3cd295ac142ec643184db8771547cded6.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportSortieRewards_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/caaf768511e53116c2fd8ad9c0c2dd8bf6ccde42861bff4df17d470da5a7b6d2.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportUpgrades_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/35ed74aea006f44f63ca2a4554a040630ef67fa93551f7199ea74d8ec4bed670.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportWarframes_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/ab754f08e8d516d3d10974fff40726a994d779caf01bf6c30c2e6d274dc0f903.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/ru/ExportWeapons_ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/65098c515a008b28f715d3933bd2793df4cf6d5e0a9f80f8338e17148a2f17cc.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportCustoms_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/3ae9512e3524f29543d7dc4097b65b8f3c322fa931dd5b29966f700c076c43a2.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportDrones_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/0e971b32eeb8ac9a62d75ae878956403a58aee18183cf86867c5f74bb8f2243b.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportFlavour_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/d128522b1e784bcf9b89087cedc83990f4445776cb7a73909335e73e43b91c07.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportFusionBundles_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/03169dbc887547d6dc908cbd8199c83066300988e63913124a06d245d1aa0ca6.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportGear_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/7cb3cbd1294bafe96e423d39402a50e0294ac346f742c673c796a92b982521ea.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportKeys_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/37fb953ce034b632e5af74b723842b73eabd156483465db58749c27030744842.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportRecipes_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportRegions_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/cb7921aa4522abc9f053c9c41a9ed69d73bc32379d3c2f467b2d44429a255d61.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportRelicArcane_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/1445d5446fd78d684da18ad61a241d3cb2b195f6214436e4e5f429f6ae76f366.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportResources_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/d748b9974b5fe4f892f371bb4a4d7f9412f68764023c3f828a7e3cc0fdc8f49a.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportSentinels_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/445cf416ebb3e2fe3189dee097b5a5843078939fabecc780b6cf5d2b5923f994.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportSortieRewards_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/3e38a03539ea87ec641f11700df0e3611e963bcabb2e18e9164bf06a436c33cd.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportUpgrades_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/0f3198fc298e5f3b886b2cf64bae8c863280c2f21b14106c4b28226f47b66d59.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportWarframes_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/a27cec1b1e87a08296a02366ef2022d725ec888d4d1381759d7d6887eb87ab0c.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tc/ExportWeapons_tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/2661b3669a9b6fc8eeed4b7f0f11e876dc786a9654a5caeabff6e91c05a24e6a.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportCustoms_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/21aeef4f23e6c2db8050c9ce59bd12325bc8c3700d5fdf7108c5ebb3f14b885a.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportDrones_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/e845d9c4d38ac60cb6f764609d0316ea350e9515c6c0bd343da1dbc777c70945.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportFlavour_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/ebcf7efed7ec6a98c30797cb37ee07142fecc3b38b2ab438bda8b74fae76203c.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportFusionBundles_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/9187da9e9a6419c4b18364baca4b01c0532159e97594e0d4d90b5418cf18935b.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportGear_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/62ed5c45d1c184506ce6f4d4408cb8e79e27a568a57c6c7fe6bfaceec8973e9b.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportKeys_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/76750a742fcb5d1e0b7b97098d26cd74070f909eeaf36e63dc4ba88260d9213d.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportRecipes_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportRegions_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/a6a0b2c306cc7a2d4cb3b8122dcf9541060ce1079858e76570d04d27a24cce74.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportRelicArcane_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/f1a519967ba066bcbeb1055230534bd352917c90c1a352fcd551c16ed5f19264.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportResources_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/e477182d6d9cb3d4f3e0024b95fa3496c7248fd1f5aae896fd1c03ef192f2adb.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportSentinels_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/620ea7315c4f1585446f506be048f8e9a3d3067227850c886f66886bf125308b.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportSortieRewards_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/3663bbabffacdd5b116328e4a007ee8bd776dc027a514d1256c96cf6136c2d6e.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportUpgrades_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/55ab785b730543ade1528d73b5a4cc7e0496704ad7d68c007fcb1eeb6562b609.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportWarframes_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/df04872fb37e88cb721381b7d77f00bbfabca228af3472ff95b4473c01242b85.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/th/ExportWeapons_th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/8da9c2d540e52422276404dbac74b08b625945d0e574080086281aa527b482e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportCustoms_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/30eef412f9020fd67ebd6d7860a25e9caa6612bd85b42af4e3e10831a60cd57b.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportDrones_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/4e0000eb3e529de9d1932ee55c7a619ec568d8ef40ff098214d8f6c66b5b47b2.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportFlavour_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/a3be40bd378dfcb74de2e1c51d408561152faf54e2fefd325342e1cda9f3ad7a.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportFusionBundles_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/1068c8a5728442cbdbd4bcd85b46e43b04207eb368ae1b7bb1650340e3973175.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportGear_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/c18c8d3cedb5458e7b6b9d202f09a8226bda953471f77f349ac9dc1f45f69fad.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportKeys_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/cc71cba38bedea247ea86feb0b52af6818e734dded223c5d3c858354b42442f8.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportRecipes_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportRegions_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/fb1517d4022adc7df4ae2c51fe5a110fb8958cbe127469de23afb08fe446cb8c.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportRelicArcane_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/39236e34ed5cc1a53cf59063e9ec30a62eb07896320ed8f37eca4c32817012ab.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportResources_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/9a9305d3b0ede773e57e490c83debbe09d04c63aaca6198fc224287d4b49cf7d.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportSentinels_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/6557be915485edaab278523d5b45713438b68181d4b75c0f80496f82f99f65e3.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportSortieRewards_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/26745c718349bbf707fbf19692870e28c2f833bf2aac3802b10c54d1b98b6d7e.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportUpgrades_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/61d5d65583dd644b383bc19f0c9b0be9d346240202ad49e02a959f150f8000fd.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportWarframes_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/315402bca0a7c6409ab02941c53e206cc39fb946fe1e2dce3c2e67015f81acbc.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/tr/ExportWeapons_tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/486300f995704035d03d86d571e5e3f3c74ce3477fcea22af1531b03edcabee0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportCustoms_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bb03fde9c708f9f8b40e6070ce1fc63928c2bc0e68fad4fed089600c2827f586.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportDrones_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/8d3c0780fa2f488d5ee67081e6d9aa5a7e1b35242ad1881592ec128e0602778f.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportFlavour_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/83856dff35d0dbca7647b4010e32b1fbcca90f6b583fc436d90014f9e806ddb9.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportFusionBundles_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/772e1b3e5452e9ead7c34449d4942117d029774c5abf6fa78fc41289403aacd7.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportGear_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/b3bad4b36ff4ac10c59563fe26e012f7144fdb68eaca142a3cfa459bfa748599.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportKeys_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/a886afb8ca6d33fca9e083ec22ff9467e3c9cd0bdece84ba0e637d1b1278fe69.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportRecipes_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportRegions_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/0e56c4519c6ddf1023bfe48549475c3bfc5fcbd7170964154c455091f8ea2bd8.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportRelicArcane_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/a4f70eaccc17049e0836780ec841e8f1b2cceb745c6bf43d609d29c3ae1a8734.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportResources_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/a28e7359c260a4f1736437da267db6fe44b415592c1b412aae47354bf8352328.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportSentinels_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/f255f7691ebcb5dff87af9a4baca03a2951607ff64c01b0ddcccdf0d847ff842.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportSortieRewards_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/fce7d4e57383e901c5e6f51a6d55b0c5bc22ddcaa0e478bbf66b145dca46802f.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportUpgrades_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/5ae9ae25da446e89a307259474f18e79b521708f0ea4c81d2f502910d78b573c.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportWarframes_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/1abb068a0455f856692ee8a50249ec2a17198b1b74bca56d701005a71cd119f8.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/uk/ExportWeapons_uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/385d0865a23a4f9747164ce3505df3a144d4f9bbf56b6fded96eec946359a708.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportCustoms_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 4834,
+      "reference": "reference/official/b47c77ef5a3d30689e35bd4c94f0cb3333f8eef90b82486514c03e9579dc2ed2.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportDrones_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 6,
+      "reference": "reference/official/fca7c7404dc07252d69b79bae09f69f9b7eea9f461e5d3cada9ef3c366390a4c.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportFlavour_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 2683,
+      "reference": "reference/official/589de64363d9305389a138898420e083f5bfb65565e938bbd38bfe14ebcc2f71.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportFusionBundles_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 51,
+      "reference": "reference/official/521857b675ba6c8eb091602c140f3908de6b3576d5cd27a38c2aee64f42173dd.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportGear_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 180,
+      "reference": "reference/official/ed902d4c5198d94bc4a37af4ef322bdb42339f19083a666b4fac4116e114fe4f.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportKeys_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 49,
+      "reference": "reference/official/b8992238ce452165508041a7d1cd8fabfd7d76fe8a97ae35153cda2a0ab8195f.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportManifest.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/bac6eecd828a358732c82835747da58c8875d7339c5a36edfa116af1d8cf21d4.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportRecipes_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 1885,
+      "reference": "reference/official/403228eeb67f4b8b73d5470127cc54d9f82752a6f371e254c540926b0a9280e0.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportRegions_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 269,
+      "reference": "reference/official/22434621a877bd4150713fd8373ba3a44c8fed5d428f79f003f8aa2ea580d32e.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportRelicArcane_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 3369,
+      "reference": "reference/official/3e566c5b05b787d84055518d0149f1b4ba53b895dc5a0077a4e82f98718edd98.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportResources_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 3549,
+      "reference": "reference/official/194f54307e4cfa0922c64f91be41ba6ebea224dd69661d22a0d69785fb1ed953.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportSentinels_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 34,
+      "reference": "reference/official/3209a3eb6a26ab36fefd184f3f73c1febfac297c90a7461f73f307fc57eb0d95.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportSortieRewards_zh.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/official/cb8dfdfc1f98e51ac45f877ba6734038134c5e68569d905a8cdad0881c9c4c10.json",
+      "source": "official",
+      "status": "reference"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportUpgrades_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 1622,
+      "reference": "reference/official/bec46c0747c49bb6b7569c7617b8108e71b2d2636d52f5fed00941fc0f0a4b21.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportWarframes_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 140,
+      "reference": "reference/official/1dcff68db583a6efa7cdcff00500deccd714e7ac0336c2fe07e442a3529fba4b.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "official-public-export/manifests/zh/ExportWeapons_zh.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 984,
+      "reference": "reference/official/aade7e857d637b4a2bce4a2c01e86f3628edb8bc6dfec87c833c50636d488627.json",
+      "source": "official",
+      "status": "merged"
+    },
+    {
+      "file": "snapshot-manifest.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "archive",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items-snapshot.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "archive",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/.babelrc.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/.commitlintrc.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/.lintstagedrc.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/CONTRIBUTING.md",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/README.md",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/build.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/dedupe.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/eslint.config.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/hashManager.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/network.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/objectsort.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/package.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/parser.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/progress.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/proxyAgent.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/readJson.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/scraper.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/sleep.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/stringify.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/tradable.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/tsconfig.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/types/@wfcd.d.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/types/image-downloader.d.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/types/shared.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/types/socks5-http-client.d.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/JSON.lua",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/WikiaDataScraper.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/scrapers/ArcaneScraper.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/scrapers/ArchwingScraper.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/scrapers/CompanionScraper.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/scrapers/HonoriaScraper.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/scrapers/ModScraper.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/scrapers/NecramechScraper.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/scrapers/VaultScraper.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/scrapers/VersionScraper.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/scrapers/WarframeScraper.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/scrapers/WeaponScraper.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/transformers/elements.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/transformers/polarities.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/transformers/transformArcanes.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/transformers/transformCompanion.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/transformers/transformHonoria.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/transformers/transformMod.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/transformers/transformNecramech.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/transformers/transformPolarity.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/transformers/transformVersion.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/transformers/transformWarframe.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/transformers/transformWeapon.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/build/wikia/transformers/transformerArchwing.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/config/bpConflicts.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/config/damageTypes.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/config/dropLocations.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/config/dt_map.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/config/endpoints.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/config/itemTypes.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/config/locales.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/config/masterableCategories.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/config/overrides.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/config/polarities.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/config/relicGrades.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/config/variants.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/config/wikiaNameOverrides.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/data/cache/.export.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/data/cache/.images.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/data/json/Arcanes.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 172,
+      "reference": "reference/wfcd/6eadb7c36894dad2cc48b78b422b28582771c872642653db65a99fcfaebceb07.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Arch-Gun.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 20,
+      "reference": "reference/wfcd/6bf2bcf241fee2ee3207848fa532fe9eb5dfefa97d4e817ee8651967ab43d0db.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Arch-Melee.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 9,
+      "reference": "reference/wfcd/2cc3aee93351bc10bd98e16b2bc8cbe5e27408a78b52a443cf4e0e3bc09ad6ed.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Archwing.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 5,
+      "reference": "reference/wfcd/ebe76f869ddd1509ae19cf45e27ad3f1e3ae20449be7f17f978b63dd31abd169.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Components.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 2225,
+      "reference": "reference/wfcd/b4f4a9203296aebd64742f3eb44586e9abb0b1239281b44a46268343d936c242.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Enemy.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 638,
+      "reference": "reference/wfcd/4583d4bd324e717c381a8a144d33e0d44c96f616fbfa12d8e7aab88d07cfde59.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Fish.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 126,
+      "reference": "reference/wfcd/4cbb7ab86eb988426354f9ecf8a9c8a09748de79b5991e67144e04f3724d2231.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Gear.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 184,
+      "reference": "reference/wfcd/6470bbe75a995ad374d79262be40ab7c468fae832d27cd3a3baf8610471121fe.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Glyphs.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 1723,
+      "reference": "reference/wfcd/cb6212e4f9aa389bc5dca86bc1d5859813135ea3eaade1ab3a0f1196f88a2b9f.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Honoria.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 219,
+      "reference": "reference/wfcd/3a6d74e6206f5661d295560cb0fb9b9ac66e4c753530948e17929f606d6a54e8.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Melee.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 269,
+      "reference": "reference/wfcd/5b07ce0588c3b1cc30c1362d7676ad00323652c10424930fcbca9791cb258407.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Misc.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 1264,
+      "reference": "reference/wfcd/f42bcdaac35360fbbbaa3ae66fdae6686d5fe3bdb5df74c15d4734c733209237.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Mods.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 1809,
+      "reference": "reference/wfcd/fe329cb832d99153f8dc21ed5e6a14b62e701cd2da86e9b1546c4ff8c3f6e3b4.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Node.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 269,
+      "reference": "reference/wfcd/07f3d1e200de43aac45fa64c1b1621cbfa28260bb3cc75915aecfd23153b5b56.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Pets.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 66,
+      "reference": "reference/wfcd/69247ca8b6c0def4d4bc0ada2937edb9d450b3285c2c85b195b7a103386111ba.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Primary.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 197,
+      "reference": "reference/wfcd/f2ffdce41b8d741fad9701843640cde1dea9dcb3ac448e4b29f60759cc39d5a0.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Quests.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 49,
+      "reference": "reference/wfcd/51f04d708e39dea88fe270699a0695c3c519f88d283696cb034430c9133cac61.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Railjack.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 143,
+      "reference": "reference/wfcd/73658fd6b615945019cbff1c005d8c0317fb0f75b7a38f6d94d386da43c7cee9.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Relics.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 3204,
+      "reference": "reference/wfcd/4733ab645a81330a709b1a7c5b8b0369f7baa2b8024371e875f433011b7b3fb3.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Resources.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 242,
+      "reference": "reference/wfcd/1266968802544331ba287042f701c4c4f3da73a521354da9de40517689ef5339.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Secondary.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 149,
+      "reference": "reference/wfcd/98562b34773daf100fce743cbadb2204fb658d5936f576282e132fa7e662c2dd.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/SentinelWeapons.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 24,
+      "reference": "reference/wfcd/23232a109ff8a374e917f8bbdf14a3e76296930646578e987424237a257fabcb.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Sentinels.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 17,
+      "reference": "reference/wfcd/3ba97ec86e7c80aef7c1a743c3c0272099457635544dfc5cfe37108f3ff9615f.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Sigils.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 337,
+      "reference": "reference/wfcd/26288e40a80123517e0c09701de340b0ffc93a35ac7dbab238a7b884daa3f4d0.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Skins.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 6677,
+      "reference": "reference/wfcd/919f2bd8c461ba5b82c106c19a9b8897fca50a7fc6a8a3a8f1fd89ede7b6df18.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/Warframes.json",
+      "reason": "按分类规则统一实体，完整原结构另行保留",
+      "records": 123,
+      "reference": "reference/wfcd/8212da092f96ae1c297676729d800166fedf30dee8b93b00b2195bf72b3a4b6b.json",
+      "source": "wfcd",
+      "status": "merged"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/de.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/14856b844560e620959c6652a46dd51ecf6dbd62749916cd9c0b66604cc982e4.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/es.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/c9b0fdb2a218f2dbbf08871d276b74c46761e513516dd2c1465ecec20afc1817.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/fr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/729498818a6c2c594760cc0bfc2eb21d5f2391b3b742ede99af7765cd3cee1a1.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/it.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/d4e6194bdb848d90ac69de08baf9978ab6a6f459e3dbc9d7e55694e54e3eefb8.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/ja.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/c7382193cb6851437126e65c1d58436200524954f99f96a06b95e8fd315b171d.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/ko.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/606b7d078ec54db6b3ab27d0b2d1e027d85e4b8f1d699b88b231b4f2641944ee.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/pl.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/b0af68b60b147d4cb5cfce1bfa86f6cf7446584335b714c812676565c0be0148.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/pt.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/ee7049fd9a40d48147d3ca1904cde878d1c2afcf7d3d5b94fbb82fbd51b61e46.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/ru.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/72ce03e5bca559beb82433d7a1e94ed67e971984bc8d7f07096912ec088206bf.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/tc.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/1a46e058c3c3648e57f2d1416531dfeda80faddc6d82d9e3e6f91c6362ffcada.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/th.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/24e2aed26058b2436da09be5d449413504b86387c7e4db9d95c6e59b7bd755a5.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/tr.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/34b9fd3325421cb31786b3f3e641a951b3917b30f36417264f556862cab7145f.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/uk.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/fc88ae7b616e1d83c3042e7884d4addc299fe6e20e7df37ff05115c08ba0e401.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/json/i18n/zh.json",
+      "reason": "完整保留参考／其他语言／规则数据，不伪装成物品",
+      "records": 0,
+      "reference": "reference/wfcd/029a7dd62e9ef32f035a0741b0ad5e898d1db0e6b2b7da3a4942edddf72c68af.json",
+      "source": "wfcd",
+      "status": "dictionary"
+    },
+    {
+      "file": "wfcd-items/data/warnings.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/eslint.config.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/index.d.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/index.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/index.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/nyc.config.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/package-lock.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/package.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/test/build.integrity.spec.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/test/fixtures/wikia.fixture.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/test/index.regression.spec.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/test/index.spec.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/test/lookup.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/test/parser.components.spec.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/test/parser.damage.spec.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/test/parser.wikia.spec.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/test/utilities/find.spec.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/test/utilities/pixel.spec.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/test/utilities/resolveComponents.spec.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/test/utilities/title.spec.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/test/utilities/utils.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/tsconfig.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/tsconfig.schema.json",
+      "reason": "构建配置、缓存索引或来源清单；不作为游戏实体",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/utilities/Pixel.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/utilities/colors.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/utilities/find.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/utilities/index.d.ts",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/utilities/index.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/utilities/resolveComponents.js",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    },
+    {
+      "file": "wfcd-items/utilities/resolveComponents.mjs",
+      "reason": "说明／源码／排期文本，继续由原模块使用",
+      "source": "wfcd",
+      "status": "excluded"
+    }
+  ],
+  "kinds": {
+    "ability": 372,
+    "achievement": 376,
+    "animal": 285,
+    "arcane": 177,
+    "blueprint": 2024,
+    "booster": 11,
+    "bounty": 54,
+    "bundle": 1202,
+    "challenge": 649,
+    "codex": 479,
+    "companion": 38,
+    "cosmetic": 7521,
+    "dojo": 2964,
+    "enemy": 5524,
+    "extractor": 6,
+    "faction": 12,
+    "focus": 105,
+    "gear": 184,
+    "intrinsic": 5,
+    "misc": 15,
+    "mission-type": 46,
+    "mod": 1690,
+    "mod-set": 19,
+    "quest": 581,
+    "quest-item": 54,
+    "reference": 28,
+    "region": 354,
+    "relic": 3204,
+    "resource": 3476,
+    "syndicate": 40,
+    "system": 25,
+    "tileset": 28,
+    "vendor": 96,
+    "warframe": 128,
+    "weapon": 1169
+  },
+  "limitations": [
+    "嵌套对象按子字段合并；完整 ID 数组按身份合并，无 ID 数组保留整组候选",
+    "仅 zh-CN/en 名称规范化；其他语言与未规范化分组完整保存在 reference",
+    "来源缺失引用显式标记 reference；存在数据问题则 review-required",
+    "稀有度不猜概率；不确认实时轮次或任务阶段"
+  ],
+  "missingTranslations": 3926,
+  "nestedEntities": 308,
+  "nestedRecords": 2037,
+  "recipes": 2024,
+  "relationKinds": {
+    "augmented-by": 333,
+    "has-ability": 521,
+    "has-component": 6025,
+    "has-exalted": 65,
+    "includes-item": 808,
+    "produces": 2024,
+    "requires": 7188,
+    "rewards": 11509,
+    "subsumed-ability": 75
+  },
+  "relations": 28548,
+  "rewardItems": 11509,
+  "rewardTables": 1102,
+  "scope": {
+    "id": "full-static",
+    "label": "全量静态资料",
+    "maxEntities": 200000,
+    "mode": "full"
+  },
+  "unmodeled": [
+    "abilityName",
+    "abilityUniqueName",
+    "accuracy",
+    "alignments",
+    "alwaysAvailable",
+    "armor",
+    "attacks",
+    "aura",
+    "availableChallenges",
+    "avatarTypes",
+    "backgroundColour",
+    "base",
+    "baseDrain",
+    "baseFocusPointCost",
+    "baseLevel",
+    "bayonetOtherWeaponType",
+    "behaviours",
+    "binCapacity",
+    "binCount",
+    "blockingAngle",
+    "bpCost",
+    "buffSet",
+    "buildPrice",
+    "buildQuantity",
+    "buildTime",
+    "bundledPlatinum",
+    "cacheRewardManifest",
+    "canGiveDuplicates",
+    "capacity",
+    "capacityCost",
+    "capacityMultiplier",
+    "capacityMultipliers",
+    "category",
+    "chainStages",
+    "challenges",
+    "children",
+    "codexScansRequired",
+    "codexSecret",
+    "color",
+    "colour",
+    "comboDuration",
+    "compat",
+    "compatName",
+    "compatibilityTags",
+    "compatibleItems",
+    "conclave",
+    "conservation",
+    "consumeOnBuild",
+    "consumeOnUse",
+    "countedRewards",
+    "creditsCost",
+    "criticalChance",
+    "criticalMultiplier",
+    "customAdvancedSpawners",
+    "dailyChallenges",
+    "dailyLimitBin",
+    "damage",
+    "damageAtten",
+    "damageChance",
+    "damageController",
+    "damagePerShot",
+    "darkSectorData",
+    "deco",
+    "decoCapacity",
+    "defaultUpgrades",
+    "defaultWeapon",
+    "destructionTime",
+    "dissectionParts",
+    "distillPointValue",
+    "dojoCapacityCost",
+    "donationStandingBonus",
+    "droneDamage",
+    "drops",
+    "droptable",
+    "ducats",
+    "durability",
+    "enemySpec",
+    "energy",
+    "energyConsumptionOverTime",
+    "era",
+    "estimatedVaultDate",
+    "exaltedSlot",
+    "excludeFromCodex",
+    "excludeFromMarket",
+    "excludeFromSimulacrum",
+    "excludedPlatforms",
+    "exilusPolarity",
+    "extraEnemySpec",
+    "faction",
+    "factionIndex",
+    "factionResistanceKeyword",
+    "favours",
+    "fillRate",
+    "flavour",
+    "followThrough",
+    "founders",
+    "fusionLimit",
+    "giftingBonus",
+    "guildXpValue",
+    "gunType",
+    "health",
+    "heavyAttackDamage",
+    "heavySlamAttack",
+    "heavySlamRadialDamage",
+    "heavySlamRadius",
+    "helminthSnack",
+    "hexColours",
+    "hidden",
+    "hint",
+    "hitProxies",
+    "holsterCategory",
+    "image",
+    "incompatibilityTags",
+    "index",
+    "ingredients",
+    "initiationReward",
+    "initiationSacrifice",
+    "introduced",
+    "introducedAt",
+    "isAugment",
+    "isDynamic",
+    "isExilus",
+    "isFrivolous",
+    "isOneBinPerCycle",
+    "isPrime",
+    "isStarter",
+    "isUtility",
+    "itemCount",
+    "items",
+    "killXPReward",
+    "legacyColours",
+    "levelOverride",
+    "levelStats",
+    "locations",
+    "longDescription",
+    "marketCost",
+    "marketInfo",
+    "masterable",
+    "masteryExp",
+    "masteryReq",
+    "maxEnemyLevel",
+    "maxLevelCap",
+    "medallions",
+    "medallionsCappedByDailyLimit",
+    "message",
+    "minEnemyLevel",
+    "miscItemFee",
+    "mission",
+    "missionIndex",
+    "missionName",
+    "missionReward",
+    "missionType",
+    "missions",
+    "modSet",
+    "modSetValues",
+    "multishot",
+    "nemesisUpgradeTag",
+    "nextNodes",
+    "nodeType",
+    "noise",
+    "num",
+    "numItems",
+    "numItemsPerBin",
+    "numUpgradesInSet",
+    "oneTimePurchasable",
+    "packageDiscount",
+    "parentName",
+    "parents",
+    "partType",
+    "patchlogs",
+    "pickupQuantity",
+    "platinumBundlePair",
+    "platinumCost",
+    "polarities",
+    "polarity",
+    "price",
+    "primeOmegaAttenuation",
+    "primeSellingPrice",
+    "probabilities",
+    "probability",
+    "productCategory",
+    "progressIndicatorFreq",
+    "purchaseQuantity",
+    "quality",
+    "questReq",
+    "questReqs",
+    "randomItemPricesPerBin",
+    "randomSeedType",
+    "randomisedUpgrades",
+    "range",
+    "ranks",
+    "rarityWeightsPerRoll",
+    "regionBits",
+    "releaseDate",
+    "relicRewards",
+    "repairRate",
+    "replayable",
+    "replicatePrice",
+    "req",
+    "reqScans",
+    "required",
+    "requiredCount",
+    "requiredGoalTag",
+    "requiredInVault",
+    "requirement",
+    "resistances",
+    "resources",
+    "resultType",
+    "rewardManifest",
+    "rewardManifests",
+    "rewardName",
+    "rewards",
+    "secondaryFaction",
+    "secret",
+    "secretIngredientAction",
+    "secretIngredients",
+    "secretTransmission",
+    "sendOnlyOnce",
+    "sentinel",
+    "sex",
+    "shield",
+    "showInInventory",
+    "skipBuildTimePrice",
+    "skipTimePrice",
+    "slamAttack",
+    "slamRadialDamage",
+    "slamRadius",
+    "slideAttack",
+    "slot",
+    "sockets",
+    "song",
+    "specialities",
+    "sprint",
+    "stages",
+    "stamina",
+    "stancePolarity",
+    "standing",
+    "standingBonus",
+    "stats",
+    "subroutines",
+    "subtype",
+    "suit",
+    "syndicateStandingChange",
+    "syndicateTag",
+    "systemIndex",
+    "systemName",
+    "tags",
+    "techPrereq",
+    "tier",
+    "tileset",
+    "time",
+    "tip",
+    "tipIcon",
+    "title",
+    "titleAffix",
+    "titleTag",
+    "titles",
+    "transmutable",
+    "trigger",
+    "type",
+    "typeName",
+    "unhandledProcTypes",
+    "upgradeEntries",
+    "variantType",
+    "vaultDate",
+    "vaulted",
+    "vaultedAt",
+    "vipAgent",
+    "weeklyChallenges",
+    "wikiAvailable",
+    "wikiaThumbnail",
+    "wikiaUrl",
+    "windUp"
+  ],
+  "unresolved": 28
+}

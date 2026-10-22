@@ -6,3 +6,6 @@ dist/
 artifacts/
 **/.git/
 __pycache__/
+assets/content/
+.cache/
+输出/

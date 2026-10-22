@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: workbench-image:; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-src 'none'">
   <title>上游资料工作台</title>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="workspace.css">
 </head>
 <body>
   <header>
     <div class="brand"><span class="brand-icon">◈</span><div>上游资料工作台<small>SOURCE WORKBENCH <b>01</b></small></div></div>
-    <nav aria-label="功能页面"><button class="nav active" data-panel="browser">资料浏览</button><button class="nav" data-panel="oracle">推算实验室</button><button class="nav" data-panel="updates">更新与版本</button><button class="nav" data-panel="settings">配置</button></nav>
-    <span class="version">v0.6.0 <i>本地工作台</i></span>
+    <nav aria-label="功能页面"><button class="nav active" data-panel="browser">资料浏览</button><button class="nav" data-panel="merged">合并汇总</button><button class="nav" data-panel="gallery">图片资源</button><button class="nav" data-panel="rules">合并规则</button><button class="nav" data-panel="oracle">推算实验室</button><button class="nav" data-panel="updates">更新与版本</button><button class="nav" data-panel="documents">文档阅读</button><button class="nav" data-panel="settings">配置</button></nav>
+    <div class="header-tools"><span class="version">v0.13.3</span><select id="theme-select" aria-label="外观主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">暗色</option></select></div>
   </header>
   <div id="notice" role="status" hidden></div>
   <main>
@@ -27,17 +29,41 @@
         <div id="files" role="list" class="file-list"></div>
       </aside>
       <article class="viewer">
-        <div id="empty" class="empty"><div class="empty-symbol">{ }</div><h1>从原始资料开始</h1><p>打开资料包，选择一份 JSON 查看结构与内容。</p><p class="muted">官方 · Plus · WFCD · Oracle · browse.wf</p><button id="empty-choose" class="primary">打开资料目录</button><div class="scope-note">第一版保留各来源原貌。合并汇总与邮件通知后续接入。</div></div>
+        <div id="empty" class="empty"><div class="empty-symbol">{ }</div><h1>从原始资料开始</h1><p>打开资料包，选择一份 JSON 查看结构与内容。</p><p class="muted">官方 · Plus · WFCD · Oracle · browse.wf</p><button id="empty-choose" class="primary">打开资料目录</button><div class="scope-note">P3 离线梳理：字段结构与用途先行，各来源原文保留。</div></div>
         <div id="document" hidden>
           <div class="document-heading"><div><small id="file-source">SOURCE</small><h1 id="file-title"></h1><p id="file-path" class="muted"></p></div><div class="actions"><button id="copy" class="small">复制</button><button id="export" class="small">导出</button></div></div>
           <div class="document-stats" id="document-stats"></div>
-          <div class="view-toolbar"><div class="segmented"><button data-view="table" class="selected">表格</button><button data-view="tree">结构</button><button data-view="raw">原文</button><button data-view="cards">卡片</button></div><input id="content-filter" placeholder="搜索当前层级的键、名称或记录内容…" aria-label="搜索记录"></div>
+          <div class="view-toolbar"><div class="segmented"><button data-view="table" class="selected">表格</button><button data-view="tree">结构</button><button data-view="raw">原文</button><button data-view="cards">卡片</button><button data-view="schema">数据结构</button></div><input id="content-filter" placeholder="搜索当前层级的键、名称或记录内容…" aria-label="搜索记录"></div>
           <div class="pointer-bar"><button id="parent" class="small">↑ 上一级</button><input id="pointer" placeholder="JSON Pointer：/ExportResources" aria-label="JSON 路径"><button id="go-pointer" class="small">跳转</button></div>
           <div id="doc-warning" class="hint" hidden></div>
           <div id="data-view" class="data-view"></div>
           <div class="pagination"><span id="page-info"></span><div><button id="previous" class="small">上一页</button><button id="next" class="small">下一页</button></div></div>
         </div>
       </article>
+    </section>
+    <section id="merged" class="panel page">
+      <div class="page-heading"><div><small>P3 / OFFLINE DATASET</small><h1>合并汇总</h1><p>全量静态资料：统一实体、配方与奖励引用，逐字段保留来源和差异。</p></div><div class="actions"><button id="merge-copy" class="small" disabled>复制清单</button><button id="merge-export" class="small" disabled>导出数据包</button><button id="merge-build" class="primary">构建全量资料</button></div></div>
+      <div id="merge-summary" class="hint"></div>
+      <p class="merge-scope-note">所有分类与奖励表按规则扫描；未规范化分组和其他语言完整保存在参考文件。存在待复核问题的产物不自动视为上线资料。</p>
+      <div id="merge-error" class="hint error" role="status" hidden></div>
+      <div class="merge-toolbar"><label class="actions">内容语言 <select id="merge-locale" aria-label="合并内容语言"><option value="zh-CN">简体中文</option><option value="en">English</option></select></label><div class="segmented"><button data-merge-view="catalog" class="selected">统一资料</button><button data-merge-view="rewards">赏金奖励</button><button data-merge-view="issues">问题与覆盖</button><button data-merge-view="changes">构建差异</button></div><div id="merge-filters" class="actions"><select id="merge-kind" aria-label="合并物品类别"><option value="">全部类别</option><option value="weapon">武器</option><option value="warframe">战甲</option><option value="resource">资源／部件</option><option value="blueprint">蓝图</option><option value="mod">Mod</option></select><label id="merge-internal-filter" class="check"><input id="merge-internal" type="checkbox">显示内部定义</label><input id="merge-search" placeholder="搜索中文、英文或物品路径…" aria-label="搜索合并资料"></div></div>
+      <div id="merge-content" aria-live="polite"><p class="merge-empty">选择资料目录后，点击“构建全量资料”生成离线数据。</p></div>
+    </section>
+    <section id="gallery" class="panel page" data-background="checker" data-size="medium">
+      <div class="page-heading"><div><small>ASSET LIBRARY / OFFLINE</small><h1>图片资源</h1><p>按中文、英文、原始图名或物品 ID 查找素材，选好即可复制或导出。</p></div><span class="pill">WFCD · DE 官方 · 文本图标</span></div>
+      <div class="gallery-filters"><input id="gallery-search" type="search" placeholder="搜索图片…  ⌘ / Ctrl K" aria-label="搜索图片"><label>来源<select id="gallery-provider"><option value="wfcd">WFCD</option><option value="official">DE 官方</option><option value="text-icons">Plus 文本图标</option><option value="all">全部来源</option></select></label><label>类别<select id="gallery-category"><option value="">全部类别</option></select></label><label>图片状态<select id="gallery-availability"><option value="available">有图片</option><option value="missing">暂无图片</option><option value="all">全部</option></select></label><button id="gallery-reset" class="small">重置</button></div>
+      <div class="gallery-options"><div class="actions"><label>底色<select id="gallery-background"><option value="checker">透明棋盘</option><option value="light">浅色</option><option value="dark">深色</option></select></label><label>卡片<select id="gallery-size"><option value="small">紧凑</option><option value="medium">标准</option><option value="large">大图</option></select></label><label>复制与导出名称<select id="gallery-naming"><option value="both">中文 + 英文</option><option value="zh">中文</option><option value="en">英文</option></select></label></div><label class="check"><input type="checkbox" id="gallery-selected-only">只看已选</label></div>
+      <p id="gallery-status" class="muted" role="status">正在读取离线资源…</p>
+      <div class="gallery-selection-bar"><div class="actions"><strong id="gallery-selection-count">已选 0 项</strong><button id="gallery-select-page" class="small">选择本页</button><button id="gallery-clear" class="small">清空选择</button></div><div class="actions"><button id="gallery-open-folder" class="small">打开导出位置</button><button id="gallery-cancel-export" class="small" hidden>停止导出</button><button id="gallery-export" class="primary" disabled>导出所选图片</button></div></div>
+      <div id="gallery-grid" class="gallery-grid" aria-label="图片列表" aria-busy="false"></div>
+      <div class="pagination"><span id="gallery-page-info"></span><div><button id="gallery-previous" class="small" disabled>上一页</button><button id="gallery-next" class="small" disabled>下一页</button></div></div>
+    </section>
+    <section id="rules" class="panel page">
+      <div class="page-heading"><div><small>P3 / EDITABLE RULES</small><h1>合并规则</h1><p>分类、字段映射、引用别名与人工修订。保存规则后重新构建，原始 JSON 保持只读。</p></div><div class="actions"><button id="rules-export" class="small">导出规则</button><label class="button small">导入规则<input id="rules-import" type="file" accept=".json,application/json" hidden></label></div></div>
+      <p id="rules-state" class="hint">正在读取规则…</p>
+      <div class="segmented rules-tabs"><button data-rules-tab="general" class="selected">版本与流程</button><button data-rules-tab="catalogs">分类</button><button data-rules-tab="fields">字段映射</button><button data-rules-tab="nested">嵌套与关系</button><button data-rules-tab="aliases">路径别名</button><button data-rules-tab="overrides">人工修订</button><button data-rules-tab="json">完整 JSON</button></div>
+      <div id="rules-content"></div>
+      <div class="rules-savebar"><input id="rules-note" placeholder="本次修改说明（保存必填）" aria-label="规则修改说明"><button id="rules-previous" class="small">载入上一版为草稿</button><button id="rules-validate" class="small">校验规则</button><button id="rules-save" class="primary">保存规则</button></div>
     </section>
     <section id="updates" class="panel page">
       <div class="page-heading"><div><small>UPSTREAM / RELEASES</small><h1>更新与版本</h1><p>校验全部启用来源后发布快照，检查失败时继续使用上一版本。</p></div><button id="update-now" class="primary">检查上游并更新</button></div>
@@ -76,12 +102,17 @@
         </div>
       </div>
     </section>
+    <section id="documents" class="panel docs-panel">
+      <aside class="docs-sidebar"><div class="aside-title"><span>项目文档</span><button id="docs-refresh" class="small">刷新</button></div><input id="docs-search" type="search" placeholder="搜索标题、路径或全文…" aria-label="全文搜索项目文档"><select id="docs-group" aria-label="文档分组"><option>当前文档</option><option>全部</option><option>总览</option><option>新人入门</option><option>深入理解</option><option>AI 协作</option><option>工具</option><option>归档</option></select><p id="docs-list-status" class="muted"></p><div id="docs-list" class="docs-file-list"></div></aside>
+      <div class="docs-main"><div class="docs-toolbar"><div class="actions"><button id="docs-back" class="small" disabled>← 返回</button><button id="docs-home" class="small">文档总览</button></div><div class="actions"><label>字号 <select id="docs-font"><option>14</option><option selected>16</option><option>18</option></select></label><button id="docs-copy" class="small">复制 Markdown</button></div></div><div class="docs-body"><div id="docs-reading" class="docs-reading"><div class="docs-document-heading"><small id="docs-reading-status">本地文档</small><h1 id="docs-title">项目文档</h1><p id="docs-path" class="root-path"></p><p id="docs-archive-note" class="hint" hidden>这是一份历史过程记录，可能包含旧路径和旧数量。当前约定请以“文档总览”和深入文档为准。</p></div><article id="docs-article" tabindex="0"></article></div><nav id="docs-outline" class="docs-outline" aria-label="本文目录"></nav></div></div>
+    </section>
     <section id="settings" class="panel page">
       <div class="page-heading"><div><small>WORKSPACE / SETTINGS</small><h1>来源配置</h1><p>配置只影响新检查；历史快照继续保留原有来源记录。</p></div><button id="save-config" class="primary">保存配置</button></div>
-      <div class="settings-grid"><div><textarea id="config-text" spellcheck="false" aria-label="来源配置 JSON"></textarea></div><div class="card"><h2>第一版范围</h2><p>已接入官方、Plus、WFCD、Oracle、browse.wf 与 Plus 生成器文本资料。</p><p>图片二进制不下载，图片名称、链接和哈希索引继续保留。</p><p>跨来源合并汇总（P3）与邮件通知保留后续接入位置，当前均未实现。</p><h2>定时运行</h2><p>应用内定时检查需要保持应用运行。服务器可运行同一核心的 CLI watch。</p><h2>资料路径</h2><p id="store-path" class="root-path"></p><p>GitHub 私有凭据仅从启动环境中的 GITHUB_TOKEN 读取，不写入配置。</p></div></div>
+      <div class="settings-grid"><div><textarea id="config-text" spellcheck="false" aria-label="来源配置 JSON"></textarea></div><div class="card"><h2>当前范围</h2><p>已接入官方、Plus、WFCD、Oracle、browse.wf 与 Plus 生成器文本资料。</p><p>P3 全量静态合并提供实体、配方、奖励、来源和差异；在“合并规则”维护分类、字段与修订。邮件通知继续预留。</p><h2>共享图片资源</h2><button id="choose-images" class="small">选择资源目录</button><p id="image-path" class="root-path"></p><p>默认使用本项目 assets/content。“图片资源”提供 WFCD 与官方素材的查询、复制和导出；哈希文件名通过完整清单关联。</p><h2>外观与快捷键</h2><p>右上角切换浅色、暗色或跟随系统，自动记住选择。⌘ / Ctrl K 搜索当前页面；Esc 关闭图片详情。</p><h2>定时运行</h2><p>应用内定时检查需要保持应用运行。服务器可运行同一核心的 CLI watch。</p><h2>资料路径</h2><p id="store-path" class="root-path"></p><p>GitHub 私有凭据仅从启动环境中的 GITHUB_TOKEN 读取，不写入配置。</p></div></div>
     </section>
   </main>
+  <dialog id="gallery-dialog" aria-labelledby="gallery-detail-title"><div class="gallery-dialog-heading"><span id="gallery-detail-source" class="muted"></span><button id="gallery-close" class="small" aria-label="关闭图片详情">关闭 · Esc</button></div><div class="gallery-detail-layout"><div class="gallery-detail-preview"><div id="gallery-detail-picture"></div><label class="gallery-zoom-control">缩放<input type="range" id="gallery-zoom" min="25" max="300" value="100" step="25"></label><p id="gallery-detail-dimensions" class="muted"></p></div><div class="gallery-detail-content"><h2 id="gallery-detail-title"></h2><p id="gallery-detail-english" class="muted"></p><div class="gallery-detail-actions"><button id="gallery-copy-image" class="primary">复制图片</button><button id="gallery-save">保存图片</button><button id="gallery-copy-name">复制名称</button><button id="gallery-open-entity" class="small">查看合并资料 ↗</button></div><p id="gallery-detail-description"></p><dl id="gallery-detail-fields"></dl><div id="gallery-detail-relations"></div></div></div></dialog>
   <footer><span class="status-dot"></span><span id="status-text">离线资料预览就绪</span><span id="footer-context">各来源独立 · 原文保留</span></footer>
-  <script type="module" src="app.js"></script>
+  <script type="module" src="bootstrap.js"></script>
 </body>
 </html>

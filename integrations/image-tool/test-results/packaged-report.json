@@ -1,0 +1,11 @@
+{
+  "platform": "darwin",
+  "packaged": true,
+  "appArchive": "/Users/dream/Desktop/给写攻略人员准备的图片提取工具/dist/攻略图片工具-win32-x64/resources/app.asar",
+  "sourceMatches": true,
+  "offlineCatalogLoaded": true,
+  "packagedImageLoaded": true,
+  "nameClipboard": true,
+  "enemyReferenceLoaded": true,
+  "note": "Windows app.asar executed inside a packaged macOS shell; this does not execute the Windows PE binary."
+}

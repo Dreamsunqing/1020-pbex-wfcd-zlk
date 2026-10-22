@@ -1,0 +1,252 @@
+{
+  "version": "0.10.0",
+  "datasetVersion": "844619c2be459d869ffe62296ae1d412c48acf4ffa3ecba1e9d22dde279d417d",
+  "modelingVersion": "nested-links-2",
+  "summary": {
+    "conflicts": 22473,
+    "entities": 32941,
+    "issues": 39812,
+    "recipes": 2024,
+    "relations": 28548,
+    "rewardItems": 11509,
+    "rewardTables": 1102,
+    "unresolved": 28
+  },
+  "inputs": 374,
+  "outputs": 395,
+  "outputBytes": 772268239,
+  "inventory": {
+    "excluded": 196,
+    "reference": 233,
+    "metadata": 2,
+    "merged": 95,
+    "dictionary": 44
+  },
+  "issueCodes": {
+    "duplicate-record": 273,
+    "missing-translation": 3898,
+    "field-conflict": 22473,
+    "category-difference": 4686,
+    "invalid-value": 5,
+    "unresolved-reference": 28,
+    "nested-reference-invalid": 8396,
+    "ability-link-unmatched": 8,
+    "recipe-cycle": 45
+  },
+  "kinds": {
+    "ability": 372,
+    "achievement": 376,
+    "animal": 285,
+    "arcane": 177,
+    "blueprint": 2024,
+    "booster": 11,
+    "bounty": 54,
+    "bundle": 1202,
+    "challenge": 649,
+    "codex": 479,
+    "companion": 38,
+    "cosmetic": 7521,
+    "dojo": 2964,
+    "enemy": 5524,
+    "extractor": 6,
+    "faction": 12,
+    "focus": 105,
+    "gear": 184,
+    "intrinsic": 5,
+    "misc": 15,
+    "mission-type": 46,
+    "mod": 1690,
+    "mod-set": 19,
+    "quest": 581,
+    "quest-item": 54,
+    "reference": 28,
+    "region": 354,
+    "relic": 3204,
+    "resource": 3476,
+    "syndicate": 40,
+    "system": 25,
+    "tileset": 28,
+    "vendor": 96,
+    "warframe": 128,
+    "weapon": 1169
+  },
+  "fields": 598621,
+  "nestedEntities": 308,
+  "nestedRecords": 2037,
+  "relationKinds": {
+    "augmented-by": 333,
+    "has-ability": 521,
+    "has-component": 6025,
+    "has-exalted": 65,
+    "includes-item": 808,
+    "produces": 2024,
+    "requires": 7188,
+    "rewards": 11509,
+    "subsumed-ability": 75
+  },
+  "abilityLinks": {
+    "donorFrames": 66,
+    "limitations": [
+      "强化 Mod 关联不代表集团商店当前可购买；非集团武器强化使用“强化卡”徽章",
+      "可移植指同系技能；Prime／Umbra／竞技场变体不作为献出材料",
+      "不从名称相似度或技能序号猜测关联；未唯一匹配者保留待复核"
+    ],
+    "skillAugments": 205,
+    "transferableAbilities": 66,
+    "unmatched": [
+      {
+        "id": "/Lotus/Powersuits/Infestation/InfestPassiveAugmentCard",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 959,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Infestation~1InfestPassiveAugmentCard/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Powersuits/Frost/FrostPassiveAugmentCard",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 3253,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Frost~1FrostPassiveAugmentCard/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Powersuits/Pirate/LiquifyAugmentCard",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 6207,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Pirate~1LiquifyAugmentCard/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Types/Sentinels/SentinelPrecepts/Events/ProjectNightwatch/SentinelHealthRegenPreceptNightwatchMod",
+        "reason": "武器强化缺少可确认的兼容实体，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 16188,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Types~1Sentinels~1SentinelPrecepts~1Events~1ProjectNightwatch~1SentinelHealthRegenPreceptNightwatchMod/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Powersuits/Temple/TemplePassiveAugment1Card",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 22593,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Temple~1TemplePassiveAugment1Card/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Powersuits/Brawler/BrawlerPassiveAugmentCard",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 22965,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Brawler~1BrawlerPassiveAugmentCard/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Powersuits/Alchemist/AlchemistPassiveAugmentCard",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 28261,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Alchemist~1AlchemistPassiveAugmentCard/compat",
+            "source": "plus"
+          }
+        ]
+      },
+      {
+        "id": "/Lotus/Powersuits/Excalibur/ExcaliburUmbraPassiveAugmentCard",
+        "reason": "技能强化没有唯一明确目标，未生成徽章",
+        "sources": [
+          {
+            "file": "git/warframe-public-export-plus-gen/extras/wiki/Mods.lua",
+            "hash": "effeab677468c13a67c9c04b27f8fc61c2828187cea26a5665ccfad9f2111577",
+            "line": 29622,
+            "pointer": "",
+            "source": "plus-gen"
+          },
+          {
+            "file": "git/warframe-public-export-plus/ExportUpgrades.json",
+            "hash": "d2a917e7364c6ce03af25963aa0a958023d74322b96c7e50362c7b3f9eec67f3",
+            "pointer": "/~1Lotus~1Powersuits~1Excalibur~1ExcaliburUmbraPassiveAugmentCard/compat",
+            "source": "plus"
+          }
+        ]
+      }
+    ],
+    "weaponAugments": 128
+  }
+}

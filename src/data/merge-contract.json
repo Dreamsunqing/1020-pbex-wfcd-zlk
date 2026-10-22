@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "mappingVersion": "p3-pilot-1",
+  "builderVersion": "1.0.0",
+  "locales": [
+    "zh-CN",
+    "en"
+  ],
+  "priority": [
+    "official",
+    "plus",
+    "wfcd",
+    "oracle"
+  ],
+  "scope": {
+    "id": "acceltra-gauss-zariman-a",
+    "label": "迅发电浆炮 · Gauss · 扎里曼 A 档",
+    "seeds": [
+      "/Lotus/Weapons/Tenno/LongGuns/SapientPrimary/SapientPrimaryWeapon",
+      "/Lotus/Powersuits/Runner/Runner"
+    ],
+    "rewardTables": [
+      "/Lotus/Types/Game/MissionDecks/ZarimanJobMissionRewards/TierATableRewards"
+    ],
+    "manifest": "data/ZarimanJobManifest.json",
+    "tier": 0,
+    "maxEntities": 300
+  },
+  "fields": [
+    {
+      "path": "masteryRank",
+      "key": "masteryReq",
+      "label": "段位要求",
+      "kinds": [
+        "weapon",
+        "warframe"
+      ],
+      "type": "integer",
+      "min": 0,
+      "unit": "段"
+    },
+    {
+      "path": "tradable",
+      "key": "tradable",
+      "label": "可交易",
+      "kinds": [
+        "*"
+      ],
+      "type": "boolean"
+    },
+    {
+      "path": "stats.criticalChance",
+      "key": "criticalChance",
+      "label": "基础暴击率",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "max": 1,
+      "precision": 6,
+      "unit": "比例",
+      "description": "0～1；展示时乘 100。仅基础面板，攻击模式单独保留。",
+      "required": true
+    },
+    {
+      "path": "stats.criticalMultiplier",
+      "key": "criticalMultiplier",
+      "label": "暴击倍率",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "倍"
+    },
+    {
+      "path": "stats.statusChance",
+      "key": "procChance",
+      "label": "基础触发率",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "max": 1,
+      "precision": 6,
+      "unit": "比例"
+    },
+    {
+      "path": "stats.fireRate",
+      "key": "fireRate",
+      "label": "射速",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 5,
+      "unit": "次/秒"
+    },
+    {
+      "path": "stats.magazineSize",
+      "key": "magazineSize",
+      "label": "弹匣容量",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "integer",
+      "min": 0,
+      "unit": "发"
+    },
+    {
+      "path": "stats.reloadSeconds",
+      "key": "reloadTime",
+      "label": "装填时间",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "秒"
+    },
+    {
+      "path": "stats.totalDamage",
+      "key": "totalDamage",
+      "label": "基础总伤害",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 5,
+      "unit": "点",
+      "description": "来源基础面板总伤害；不与独立攻击模式相加。"
+    },
+    {
+      "path": "stats.rivenCoefficient",
+      "key": "omegaAttenuation",
+      "label": "紫卡系数",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "系数"
+    },
+    {
+      "path": "stats.rivenDisposition",
+      "key": "disposition",
+      "label": "紫卡倾向档位",
+      "kinds": [
+        "weapon"
+      ],
+      "type": "integer",
+      "min": 1,
+      "max": 5,
+      "unit": "档"
+    },
+    {
+      "path": "stats.health",
+      "key": "health",
+      "label": "基础生命",
+      "kinds": [
+        "warframe"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "点"
+    },
+    {
+      "path": "stats.shield",
+      "key": "shield",
+      "label": "基础护盾",
+      "kinds": [
+        "warframe"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "点"
+    },
+    {
+      "path": "stats.armor",
+      "key": "armor",
+      "label": "基础护甲",
+      "kinds": [
+        "warframe"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "点"
+    },
+    {
+      "path": "stats.energy",
+      "key": "power",
+      "label": "基础能量容量",
+      "kinds": [
+        "warframe"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "点",
+      "description": "战甲基础容量，不读取配色 energy 字段。",
+      "required": true
+    },
+    {
+      "path": "stats.sprintSpeed",
+      "key": "sprintSpeed",
+      "label": "冲刺速度",
+      "kinds": [
+        "warframe"
+      ],
+      "type": "number",
+      "min": 0,
+      "precision": 6,
+      "unit": "系数"
+    },
+    {
+      "path": "bundle.credits",
+      "key": "credits",
+      "label": "每包现金",
+      "kinds": [
+        "resource"
+      ],
+      "type": "integer",
+      "min": 0,
+      "unit": "现金"
+    },
+    {
+      "path": "bundle.endo",
+      "key": "fusionPoints",
+      "label": "每包内融核心",
+      "kinds": [
+        "resource"
+      ],
+      "type": "integer",
+      "min": 0,
+      "unit": "内融核心"
+    }
+  ]
+}

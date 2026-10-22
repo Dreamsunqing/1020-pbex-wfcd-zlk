@@ -13,7 +13,7 @@ def main():
     parser.add_argument("--include-git", action="store_true", help="额外核验原始资料包保留的上游 .git 历史；GitHub 普通克隆无需此项")
     args = parser.parse_args()
     root = args.root.resolve()
-    manifest = json.loads((root / "文档/当前文件校验清单.json").read_text(encoding="utf-8"))
+    manifest = json.loads((root / "文档/归档/数据报告/当前文件校验清单.json").read_text(encoding="utf-8"))
     in_scope = lambda p: args.include_git or ".git" not in Path(p).parts
     expected = {item["path"]: item for item in manifest["files"] if in_scope(item["path"])}
     actual = {str(p.relative_to(root)) for p in (root / "世界状态上游").rglob("*") if p.is_file() and in_scope(p.relative_to(root))}

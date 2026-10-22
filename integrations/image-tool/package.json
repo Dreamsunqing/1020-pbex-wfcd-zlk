@@ -1,0 +1,22 @@
+{
+  "name": "warframe-guide-images",
+  "version": "1.0.1",
+  "private": true,
+  "description": "面向中文攻略作者的离线 Warframe 图片工具",
+  "main": "src/main.cjs",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "data:sync": "python3 scripts/prepare-data.py",
+    "test": "node --test tests/core.test.cjs && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test:app": "node scripts/smoke-test.cjs",
+    "build:win": "node scripts/package.mjs win32 x64",
+    "build:mac": "node scripts/package.mjs darwin arm64"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "@playwright/test": "1.64.1",
+    "archiver": "7.0.1",
+    "electron": "44.9.0"
+  }
+}

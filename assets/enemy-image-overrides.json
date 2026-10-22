@@ -1,0 +1,227 @@
+{
+  "description": "Reviewed by enemy uniqueName; only images from the same WFCD source snapshot. Reference images must remain labeled.",
+  "overrides": {
+    "/Lotus/Types/Enemies/Corpus/Vip/AladV/AladBossAvatar": {
+      "name": "Alad V",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageCorpusAladV",
+      "expectedImageName": "CorpusAvatarAladV.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 Alad V Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Infested/AiWeek/Ancients/HealingAncientAvatar": {
+      "name": "Ancient Healer",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/AncientHealerBall",
+      "expectedImageName": "BallSpawnerAncientHealer.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Ancient Protector Specter。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Infested/AiWeek/Ancients/HealingAncientAvatarLeader": {
+      "name": "Ancient Healer",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/AncientHealerBall",
+      "expectedImageName": "BallSpawnerAncientHealer.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Ancient Protector Specter。不是该敌人条目的独立原图。该内部变体使用基础外观参考，不代表变体独有外观。"
+    },
+    "/Lotus/Types/Enemies/Grineer/Vip/Avatars/CaptainVorBossAvatar": {
+      "name": "Captain Vor",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageGrineerCaptainVor",
+      "expectedImageName": "CaptainVorAvatar.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 Captain Vor Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Infested/AiWeek/Quadrupeds/QuadrupedAvatar": {
+      "name": "Charger",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/ChargerBall",
+      "expectedImageName": "BallSpawnerCharger.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Charger Specter。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Infested/AiWeek/Quadrupeds/QuadrupedAvatarLeader": {
+      "name": "Charger",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/ChargerBall",
+      "expectedImageName": "BallSpawnerCharger.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Charger Specter。不是该敌人条目的独立原图。该内部变体使用基础外观参考，不代表变体独有外观。"
+    },
+    "/Lotus/Types/Enemies/TennoReplicants/TennoReplicantChromaAvatar": {
+      "name": "Chroma",
+      "sourceId": "/Lotus/Powersuits/Dragon/Dragon",
+      "expectedImageName": "Chroma.png",
+      "note": "同角色战甲外观参考图；取自 WFCD 的 Chroma。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Orokin/OrokinRocketBombardAvatar": {
+      "name": "Corrupted Bombard",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/CorruptedBombardBall",
+      "expectedImageName": "BallSpawnerCorruptedBombard.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Corrupted Bombard Specter。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Orokin/OrokinRocketBombardAvatarLeader": {
+      "name": "Corrupted Bombard",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/CorruptedBombardBall",
+      "expectedImageName": "BallSpawnerCorruptedBombard.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Corrupted Bombard Specter。不是该敌人条目的独立原图。该内部变体使用基础外观参考，不代表变体独有外观。"
+    },
+    "/Lotus/Types/Enemies/Orokin/OrokinHeavyFemaleAvatar": {
+      "name": "Corrupted Heavy Gunner",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/CorruptedHeavyGunnerBall",
+      "expectedImageName": "BallSpawnerCorruptedHeavyGunner.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Corrupted Heavy Gunner Specter。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Orokin/OrokinHeavyFemaleLeaderAvatar": {
+      "name": "Corrupted Heavy Gunner",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/CorruptedHeavyGunnerBall",
+      "expectedImageName": "BallSpawnerCorruptedHeavyGunner.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Corrupted Heavy Gunner Specter。不是该敌人条目的独立原图。该内部变体使用基础外观参考，不代表变体独有外观。"
+    },
+    "/Lotus/Types/Enemies/Orokin/RifleLancerAvatar": {
+      "name": "Corrupted Lancer",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/CorruptedLancerBall",
+      "expectedImageName": "BallSpawnerCorruptedLancer.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Corrupted Lancer Specter。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Orokin/RifleLancerLeaderAvatar": {
+      "name": "Corrupted Lancer",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/CorruptedLancerBall",
+      "expectedImageName": "BallSpawnerCorruptedLancer.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Corrupted Lancer Specter。不是该敌人条目的独立原图。该内部变体使用基础外观参考，不代表变体独有外观。"
+    },
+    "/Lotus/Types/Enemies/Corpus/Spaceman/AIWeek/RifleSpacemanAvatar": {
+      "name": "Crewman",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageCorpusCrewman",
+      "expectedImageName": "CorpusAvatarCrewman.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 Crewman Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Corpus/Spaceman/AIWeek/RifleSpacemanAvatarLeader": {
+      "name": "Crewman",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageCorpusCrewman",
+      "expectedImageName": "CorpusAvatarCrewman.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 Crewman Glyph。不是该敌人条目的独立原图。该内部变体使用基础外观参考，不代表变体独有外观。"
+    },
+    "/Lotus/Types/NeutralCreatures/CreatureAvatars/SandRayAvatar": {
+      "name": "Desert Skate",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/SkateBall",
+      "expectedImageName": "BallSpawnerSkate.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Desert Skate Specter。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/GrineerChampions/GrineerChampionHealerAvatar": {
+      "name": "Executioner Dok Thul",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageGrineerChampionHealer",
+      "expectedImageName": "GrineerChampionHealer.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 Executioner Dok Thul Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/GrineerChampions/GrineerChampionChargerAvatar": {
+      "name": "Executioner Garesh",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageGrineerChampionCharger",
+      "expectedImageName": "GrineerChampionCharger.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 Executioner Garesh Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/GrineerChampions/GrineerChampionTankAvatar": {
+      "name": "Executioner Gorth",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageGrineerChampionTank",
+      "expectedImageName": "GrineerChampionTank.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 Executioner Gorth Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/GrineerChampions/GrineerChampionSniperAvatar": {
+      "name": "Executioner Harkonar",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageGrineerChampionSniper",
+      "expectedImageName": "GrineerChampionSniper.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 Executioner Harkonar Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/GrineerChampions/GrineerChampionGruntAvatar": {
+      "name": "Executioner Nok",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageGrineerChampionGrunt",
+      "expectedImageName": "GrineerChampionGrunt.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 Executioner Nok Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/GrineerChampions/GrineerChampionEngineerAvatar": {
+      "name": "Executioner Reth",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageGrineerChampionEngineer",
+      "expectedImageName": "GrineerChampionEngineer.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 Executioner Reth Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/GrineerChampions/GrineerChampionJetpackAvatar": {
+      "name": "Executioner Vay Molta",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageGrineerChampionHellion",
+      "expectedImageName": "GrineerChampionHellion.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 Executioner Vay Molta Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/GrineerChampions/GrineerChampionBeastmasterAvatar": {
+      "name": "Executioner Zura",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageGrineerChampionBeastMaster",
+      "expectedImageName": "GrineerChampionBeastMaster.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 Executioner Zura Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Corpus/QuadRobot/QuadRobotAvatar": {
+      "name": "Jackal",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageCorpusJackal",
+      "expectedImageName": "CorpusAvatarJackal.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 The Jackal Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Corpus/Venus/Heavies/QuadAvatar": {
+      "name": "Jackal",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageCorpusJackal",
+      "expectedImageName": "CorpusAvatarJackal.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 The Jackal Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Corpus/Venus/Heavies/QuadLeaderAvatar": {
+      "name": "Jackal",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageCorpusJackal",
+      "expectedImageName": "CorpusAvatarJackal.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 The Jackal Glyph。不是该敌人条目的独立原图。该内部变体使用基础外观参考，不代表变体独有外观。"
+    },
+    "/Lotus/Types/Enemies/Grineer/Vip/KelaDeThaym/KelaDeThaymAvatar": {
+      "name": "Kela De Thaym",
+      "sourceId": "/Lotus/Types/StoreItems/AvatarImages/ImageGrineerKelaDeThaym",
+      "expectedImageName": "KelaDeThaymAvatarAvatar.png",
+      "note": "同角色浮印头像参考图；取自 WFCD 的 Kela De Thaym Glyph。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Corpus/BipedRobot/AIWeek/LaserCannonBipedAvatar": {
+      "name": "Moa",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/MoaBall",
+      "expectedImageName": "BallSpawnerMoa.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Moa Specter。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Corpus/BipedRobot/AIWeek/LaserCannonBipedAvatarLeader": {
+      "name": "Moa",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/MoaBall",
+      "expectedImageName": "BallSpawnerMoa.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Moa Specter。不是该敌人条目的独立原图。该内部变体使用基础外观参考，不代表变体独有外观。"
+    },
+    "/Lotus/Types/Enemies/Grineer/AIWeek/Avatars/RollingDroneAvatar": {
+      "name": "Roller",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/RollerBall",
+      "expectedImageName": "BallSpawnerRoller.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Roller Specter。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Grineer/AIWeek/Avatars/RollingDroneAvatarLeader": {
+      "name": "Roller",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/RollerBall",
+      "expectedImageName": "BallSpawnerRoller.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Roller Specter。不是该敌人条目的独立原图。该内部变体使用基础外观参考，不代表变体独有外观。"
+    },
+    "/Lotus/Types/Enemies/Grineer/AIWeek/Avatars/MacheteWomanAvatar": {
+      "name": "Scorpion",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/MacheteWomanBall",
+      "expectedImageName": "MacheteWomanAvatar.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Scorpion Specter。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Grineer/AIWeek/Avatars/MacheteWomanAvatarLeader": {
+      "name": "Scorpion",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/MacheteWomanBall",
+      "expectedImageName": "MacheteWomanAvatar.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Scorpion Specter。不是该敌人条目的独立原图。该内部变体使用基础外观参考，不代表变体独有外观。"
+    },
+    "/Lotus/Types/Enemies/Corpus/Drones/AIWeek/ShieldDroneAvatar": {
+      "name": "Shield Osprey",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/ShieldDroneBall",
+      "expectedImageName": "BallSpawnerShieldDrone.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Shield Osprey Specter。不是该敌人条目的独立原图。"
+    },
+    "/Lotus/Types/Enemies/Corpus/Drones/AIWeek/ShieldDroneAvatarLeader": {
+      "name": "Shield Osprey",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/ShieldDroneBall",
+      "expectedImageName": "BallSpawnerShieldDrone.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Shield Osprey Specter。不是该敌人条目的独立原图。该内部变体使用基础外观参考，不代表变体独有外观。"
+    },
+    "/Lotus/Types/Enemies/Stalker/StalkerAvatar": {
+      "name": "Stalker",
+      "sourceId": "/Lotus/Types/Restoratives/Consumable/StalkerBall",
+      "expectedImageName": "Stalker.png",
+      "note": "同角色幽魂外观参考图；取自 WFCD 的 Stalker Specter。不是该敌人条目的独立原图。"
+    }
+  }
+}

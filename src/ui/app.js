@@ -7,6 +7,7 @@ import { createMergeUI } from './merge.js';
 import { createGalleryUI } from './gallery.js';
 import { createDocumentsUI } from './documents.js';
 import { createLiveStateUI } from './live-state.js';
+import { createWmUI } from './wm.js';
 const api = window.workbench;
 const $ = id => document.getElementById(id);
 const mergeUI = createMergeUI({ api, guarded, notify, openSource: async source => {
@@ -22,6 +23,7 @@ const galleryUI = createGalleryUI({ api, guarded, notify, openEntity: async id =
 } });
 const documentsUI = createDocumentsUI({ api, guarded, notify });
 const liveUI = createLiveStateUI({ api, guarded, notify });
+const wmUI = createWmUI({ api, guarded, notify });
 const state = { files: [], selected: null, pointer: '', query: '', offset: 0, view: 'table', page: null, requests: 0, releases: [], busy: false, cardReturn: null };
 const element = (tag, className, text) => { const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) { if (tag === 'pre' || tag === 'code') node.textContent = text; else renderGameText(node, text, /^h[1-6]$/.test(tag) || /title|original|heading/.test(className ?? '') ? 'name' : 'description'); } return node; };
 const size = bytes => bytes < 1024 ? `${bytes} B` : bytes < 1048576 ? `${(bytes / 1024).toFixed(1)} KiB` : `${(bytes / 1048576).toFixed(1)} MiB`;
@@ -127,6 +129,7 @@ function activate(panel) {
   for (const node of document.querySelectorAll('.panel')) node.classList.toggle('active', node.id === panel);
   for (const node of document.querySelectorAll('.nav')) { node.classList.toggle('active', node.dataset.panel === panel); node.setAttribute('aria-current', node.dataset.panel === panel ? 'page' : 'false'); }
   if (panel === 'world') guarded(() => liveUI.enter());
+  if (panel === 'wm') guarded(() => wmUI.enter());
   if (panel === 'updates') guarded(loadHistory);
   if (panel === 'merged') guarded(() => mergeUI.enter());
   if (panel === 'rules') guarded(() => rulesUI.enter());
@@ -693,7 +696,7 @@ document.addEventListener('keydown', event => {
   if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
     event.preventDefault();
     const active = document.querySelector('.panel.active')?.id;
-    const target = ({ documents: 'docs-search', gallery: 'gallery-search', merged: 'merge-search', browser: 'file-filter' })[active];
+    const target = ({ wm: 'wm-search', documents: 'docs-search', gallery: 'gallery-search', merged: 'merge-search', browser: 'file-filter' })[active];
     if (target) { $(target).focus(); $(target).select(); }
   }
 });
@@ -715,4 +718,4 @@ window.runSmoke = async () => {
   report.ok = report.mergedEntities === 51 && report.mergedRecipes === 14 && report.files >= 403 && report.resourceCount === 3549 && report.offers === 3 && report.arbitrations === 24 && report.cycles === 4 && report.teshin === 4 && report.circuitFrames === 3 && report.circuitWeapons === 5 && report.incursionDays === 7 && report.incursionNodes === 6 && report.oracleBounties === 17 && report.oracleLocations > 0 && report.isolated; return report;
 };
 guarded(async () => { applyLibrary(await api.call('init')); window.smokeReady = true; });
-export { $, state, mergeUI, rulesUI, galleryUI, documentsUI, liveUI, selections, filteredFiles, resetFilters, renderFiles, selectFile, go, openCard, renderDocument, activate, loadOracleOptions, predict, queryArb, queryBrowse, selectLab, applyLibrary, queryOracle, loadOracleState, oracleResults, refreshAndQuery };
+export { $, state, mergeUI, rulesUI, galleryUI, documentsUI, liveUI, wmUI, selections, filteredFiles, resetFilters, renderFiles, selectFile, go, openCard, renderDocument, activate, loadOracleOptions, predict, queryArb, queryBrowse, selectLab, applyLibrary, queryOracle, loadOracleState, oracleResults, refreshAndQuery };

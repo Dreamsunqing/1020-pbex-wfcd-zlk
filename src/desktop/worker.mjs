@@ -1,5 +1,6 @@
 import { rewardContexts } from '../core/merge/reward-context.mjs';
 import { LiveStateStore } from '../core/live-state/service.mjs';
+import { WmService } from '../core/wm/service.mjs';
 import { loadWorldCatalog } from '../core/live-state/catalog.mjs';
 import { buildWorldView } from '../core/live-state/view.mjs';
 import { LocalImages } from '../core/local-images.mjs';
@@ -31,6 +32,7 @@ import { mergeContext, mergedStatus, datasetFor, mergedList, mergedDetail, expan
 
 const store = new Store(workerData.storeRoot);
 const liveState = new LiveStateStore(path.join(workerData.userData, 'world-state'));
+const wm = new WmService(path.join(workerData.userData, 'wm'));
 let liveCatalog = null;
 async function liveView(server, refresh = false, imported = null) {
   const snapshot = imported ?? (refresh ? await liveState.refresh(server, { proxyUrl: config.network?.proxyUrl }) : await liveState.current(server));
@@ -128,6 +130,9 @@ function schedule() {
   if (preferences.autoUpdate) timer = setTimeout(async () => { try { await update(); } catch (error) { progress({ message: error.message, error: true }); } finally { schedule(); } }, config.intervalMinutes * 60000);
 }
 const handlers = {
+  async wmSearch(args) { return wm.search(args, { proxyUrl: config.network?.proxyUrl }); },
+  async wmOrders(args) { return wm.orders(args, { proxyUrl: config.network?.proxyUrl }); },
+  async wmStatistics(args) { return wm.statistics(args, { proxyUrl: config.network?.proxyUrl }); },
   async liveState({ server = 'de', refresh = false } = {}) { if (typeof refresh !== 'boolean') throw new Error('刷新参数无效'); return liveView(server, refresh); },
   async importLiveState({ server, file }) { return liveView(server, false, await liveState.import(server, file)); },
   async documentsList(args) { return documents.list(args); },

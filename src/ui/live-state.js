@@ -10,7 +10,7 @@ const button=(text,cl,fn)=>{const n=el('button',cl,text);n.type='button';n.oncli
 const when=time=>time?new Date(time).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}):'';
 function countdown(start,end){const now=Date.now();let left=(Date.parse(start)>now?Date.parse(start):Date.parse(end))-now;if(!Number.isFinite(left))return '';const prefix=Date.parse(start)>now?'还有 ':'';if(left<=0)return '已结束';const m=Math.floor(left/60000),h=Math.floor(m/60),d=Math.floor(h/24);return prefix+(d?`${d}天 ${h%24}时`:h?`${h}时 ${m%60}分`:`${m}分`)+(prefix?'开始':'后结束');}
 function nestedCount(row){return (row.rewards?.length??0)+(row.items?.length??0)+(row.terms?.length??0)+(row.steps?.reduce((sum,s)=>sum+(s.terms?.length??0),0)??0);}
-export function createLiveStateUI({api,guarded,notify}){
+export function createLiveStateUI({api,guarded,notify,openLibrary}){
  const $=id=>document.getElementById(id),state={server:'de',group:'quick',query:'',data:null,detail:null,offset:0,filters:{},sequence:0,busy:false,loaded:false,scroll:0,auto:false},cache=new Map();
  let timer=null,rewardDialog=null,bountyDetail=null,newsPage=0;
  const facets={},derivedModules=new Map();let ranks={};try{ranks=JSON.parse(localStorage.getItem('ws-syndicate-ranks')||'{}');if(!ranks||typeof ranks!=='object'||Array.isArray(ranks))ranks={};}catch{}
@@ -24,11 +24,16 @@ export function createLiveStateUI({api,guarded,notify}){
    }
  });
  const page=()=> $('world');
- function image(row,card,images){if(row.id||row.icon||row.imageName)images.push({...row,card,label:row.name??row.title});}
+ function image(row,card,images){if(row.id||row.imageId||row.icon||row.imageName)images.push({...row,id:row.imageId??row.id,card,label:row.name??row.title});}
+ function libraryLink(row,card,product=false){if(!row.libraryId||!openLibrary)return;card.dataset.libraryId=row.libraryId;
+  const open=()=>guarded(async()=>{await openLibrary(row.libraryId,row.libraryVersion);if(rewardDialog?.open)rewardDialog.close();});
+  if(product){const link=button('资料库 →','ws-library-link',event=>open());link.setAttribute('aria-label','在资料库查看 '+(row.name??row.title));card.append(link);}
+  else{card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','在资料库查看 '+(row.name??row.title));card.onclick=open;card.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}};card.title='查看资料库 →';}
+ }
  function timeBadge(row){const n=el('span','ws-time');n.dataset.start=row.startsAt??'';n.dataset.end=row.endsAt??'';n.title=[when(row.startsAt),when(row.endsAt)].filter(Boolean).join(' — ');const content=countdown(row.startsAt,row.endsAt);n.hidden=!content;n.append(icon('clock'),document.createTextNode(content));return n;}
  function chips(values){const n=el('div','ws-chips');for(const value of values??[])if(value)n.append(el('span','ws-chip',value));return n;}
  function loot(values,images,full=false){const grid=el('div','ws-loot-grid');for(const row of full?values:values.slice(0,4)){
-   const card=el('div','ws-loot');image(row,card,images);card.append(el('strong','ws-loot-name',row.name??row.title),el('span','ws-loot-quantity',(Number.isFinite(row.quantity)?'×'+row.quantity:'')));
+   const card=el('div','ws-loot');image(row,card,images);libraryLink(row,card);if(row.iconToken==='CREDITS'&&!row.icon&&!row.imageName){const currency=el('span','ws-currency-art');renderGameText(currency,'<CREDITS>');card.append(currency);}card.append(el('strong','ws-loot-name',row.name??row.title),el('span','ws-loot-quantity',(Number.isFinite(row.quantity)?'×'+row.quantity:'')));
    if(Number.isFinite(row.probability))card.append(el('small','ws-probability',(row.probability*100).toFixed(2).replace(/\.00$/,'')+'%'+(row.pool?' · 池 '+row.pool:'')));
    if(row.rarity&&!Number.isFinite(row.probability))card.append(el('small','ws-probability',({COMMON:'常见',UNCOMMON:'罕见',RARE:'稀有',LEGENDARY:'传说'})[row.rarity]??row.rarity));
    if(row.localization==='missing')card.append(el('small','ws-entry-note','译名待补充'));
@@ -52,7 +57,7 @@ export function createLiveStateUI({api,guarded,notify}){
    if(row.rewards?.length&&row.collapsedRewards){card.append(button('查看奖励 · '+row.rewards.length+' 项 →','ws-reward-link',()=>openLoot(row.title+' · 奖励',row.rewards)));}
    else if(row.rewards?.length){const heading=el('div','ws-mini-heading',module.id==='circuit'?'本周可选':'奖励 · '+row.rewards.length+' 项');card.append(heading,loot(row.rewards,images,full||module.id==='circuit'));}
    if(row.items?.length){const list=el('div','ws-items');for(const r of full?row.items:row.items.slice(0,3)){
-     const child=el('div','ws-shop-item');image(r,child,images);child.append(el('strong','',r.title??r.name));if(r.description&&full)child.append(el('p','ws-description',r.description));if(r.stats?.length)child.append(el('p','ws-item-price',r.stats.join(' · ')));if(r.rewards?.length)child.append(el('small','ws-item-price',r.rewards.length+' 项候选奖励'));if(full&&r.rewards?.length)child.append(loot(r.rewards,images,true));list.append(child);
+     const child=el('div','ws-shop-item');image(r,child,images);child.append(el('strong','',r.title??r.name));if(r.description&&full)child.append(el('p','ws-description',r.description));if(r.stats?.length)child.append(el('p','ws-item-price',r.stats.join(' · ')));if(r.rewards?.length)child.append(el('small','ws-item-price',r.rewards.length+' 项候选奖励'));if(full&&r.rewards?.length)child.append(loot(r.rewards,images,true));libraryLink(r,child,true);list.append(child);
    }card.append(list);}
    if(row.stats?.length)card.append(chips(row.stats));
    if(Number.isFinite(row.progress)&&row.invasion){const track=el('div','ws-invasion-bar');track.setAttribute('role','img');track.setAttribute('aria-label',row.sides.map((side,i)=>side.name+' '+(i?100-row.progress:row.progress).toFixed(1)+'%').join(' / '));for(const [i,side] of row.sides.entries()){const part=el('span','ws-invasion-part');part.dataset.faction=side.tone;part.style.width=(i?100-row.progress:row.progress)+'%';track.append(part);}const labels=el('div','ws-invasion-labels');for(const [i,side] of row.sides.entries()){const label=el('span','',((i?100-row.progress:row.progress).toFixed(1))+'%');label.dataset.faction=side.tone;labels.append(label);}card.append(labels,track);}
@@ -153,7 +158,7 @@ export function createLiveStateUI({api,guarded,notify}){
  const priceText=item=>(item.prices??[]).map(p=>p.amount.toLocaleString('zh-CN')+' '+p.currency).join(' + ');
  function shopItem(item,images){
    const card=el('article','ws-product');image(item,card,images);card.tabIndex=0;card.append(el('strong','',item.name??item.title));
-   const hint=el('div','ws-product-hint');if(item.description)hint.append(el('p','',item.description));hint.append(el('strong','',priceText(item)||item.note||'价格待公布'));if(Number.isFinite(item.discount)&&item.discount>0)hint.append(el('small','','优惠 '+item.discount+'%'));card.append(hint);return card;
+   const hint=el('div','ws-product-hint');if(item.description)hint.append(el('p','',item.description));hint.append(el('strong','',priceText(item)||item.note||'价格待公布'));if(Number.isFinite(item.discount)&&item.discount>0)hint.append(el('small','','优惠 '+item.discount+'%'));card.append(hint);libraryLink(item,card,true);return card;
  }
  function renderShop(body,rows,module,images,full,limit){
    body.classList.add('ws-shop-grid');

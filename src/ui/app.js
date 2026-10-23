@@ -23,9 +23,9 @@ const galleryUI = createGalleryUI({ api, guarded, notify, openEntity: async id =
   await mergeUI.enter(); await mergeUI.showDetail(id); activate('merged');
 } });
 const documentsUI = createDocumentsUI({ api, guarded, notify });
-const liveUI = createLiveStateUI({ api, guarded, notify });
+const liveUI = createLiveStateUI({ api, guarded, notify, openLibrary: async (id,version) => { await playerLibraryUI.openFromWorld(id,version); activate('codex'); } });
 const wmUI = createWmUI({ api, guarded, notify });
-const playerLibraryUI = createPlayerLibraryUI({ api, guarded, openMerge: () => activate('merged') });
+const playerLibraryUI = createPlayerLibraryUI({ api, guarded, openMerge: () => activate('merged'), returnToWorld: () => activate('world') });
 const state = { files: [], selected: null, pointer: '', query: '', offset: 0, view: 'table', page: null, requests: 0, releases: [], busy: false, cardReturn: null };
 const element = (tag, className, text) => { const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) { if (tag === 'pre' || tag === 'code') node.textContent = text; else renderGameText(node, text, /^h[1-6]$/.test(tag) || /title|original|heading/.test(className ?? '') ? 'name' : 'description'); } return node; };
 const size = bytes => bytes < 1024 ? `${bytes} B` : bytes < 1048576 ? `${(bytes / 1024).toFixed(1)} KiB` : `${(bytes / 1048576).toFixed(1)} MiB`;

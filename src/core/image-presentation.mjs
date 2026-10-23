@@ -8,3 +8,12 @@ export const shardPairs = Object.freeze(Object.fromEntries(['Amar', 'Boreal', 'N
 })));
 export const iconFilename = value => typeof value === 'string' && /^\/Lotus\/Interface\//.test(value) ? value.split('/').at(-1) : undefined;
 export const isAbilityIcon = (icon, imageName) => /\/Icons\/Abilities\//.test(icon ?? '') || imageName === 'AtlasRockPunch.png';
+// Illustration-only fallback for generic boosters absent from the public image manifest.
+// Keep the reward ID, duration and library target unchanged; never alias timed variants.
+export const boosterArtAliases = Object.freeze(Object.fromEntries([
+  ['AffinityBoosterStoreItem','AffinityBooster3DayStoreItem'],
+  ['CreditBoosterStoreItem','CreditBooster3DayStoreItem'],
+  ['ResourceAmountBoosterStoreItem','ResourceAmount3DayStoreItem'],
+  ['ResourceDropChanceBoosterStoreItem','ResourceDropChance3DayStoreItem'],
+  ['ModDropChanceBoosterStoreItem','ModDropChanceBooster3DayStoreItem']
+].map(([from,to])=>['/Lotus/Types/StoreItems/Boosters/'+from,'/Lotus/Types/StoreItems/Boosters/'+to])));

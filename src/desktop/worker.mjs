@@ -1,3 +1,5 @@
+import {boosterArtAliases} from '../core/image-presentation.mjs';
+import {enrichWorldRewardArt} from '../core/live-state/reward-art.mjs';
 import { loadPlayerBundle } from '../core/player-bundle.mjs';
 import { playerLibraryList, playerLibraryDetail } from '../core/player-library.mjs';
 import { rewardContexts } from '../core/merge/reward-context.mjs';
@@ -48,7 +50,7 @@ async function liveView(server, refresh = false, imported = null) {
     catalog = await loadWorldCatalog(files, read);
     if ((mode === 'snapshot' ? release?.id : library?.root ?? 'empty') === contextKey) liveCatalog = {key:contextKey,value:catalog};
   }
-  return buildWorldView(snapshot, catalog);
+  return enrichWorldRewardArt(buildWorldView(snapshot, catalog),await playerDataset());
 }
 const ruleStore = new RuleStore(path.join(workerData.userData, 'merge-rules'));
 let mergeBusy = false;
@@ -158,13 +160,17 @@ const handlers = {
     const images = await localImages.batch(requests);
     let remaining = 16 * 1024 * 1024 - images.flatMap(image => image?.layers ?? (image ? [image] : [])).reduce((sum, image) => sum + Math.ceil((image.dataUrl?.length ?? 0) * 3 / 4), 0);
     for (let i = 0; i < requests.length; i++) if (!images[i] && requests[i].id?.startsWith('/Lotus/') && !requests[i].blueprint && !requests[i].resultId) {
-      try {
-        const asset = await gallery.asset('official:' + requests[i].id);
-        if (asset.bytes > 2 * 1024 * 1024 || asset.bytes > remaining) continue;
-        const bytes = await fs.readFile(asset.file); if (bytes.length > remaining || bytes.length > 2 * 1024 * 1024) continue;
-        remaining -= bytes.length;
-        images[i] = { dataUrl: `data:${asset.mime};base64,${bytes.toString('base64')}`, file: path.basename(asset.file), original: asset.item.imageName, provider: 'official', method: 'official-exact-id', abilityIcon: asset.item.category === 'Abilities' };
-      } catch { /* No exact local official match: retain a text card. */ }
+      for(const candidate of [requests[i].id,boosterArtAliases[requests[i].id]].filter(Boolean)) {
+        try {
+          const asset=await gallery.asset('official:'+candidate);
+          if(asset.bytes>2*1024*1024||asset.bytes>remaining)continue;
+          const bytes=await fs.readFile(asset.file);if(bytes.length>remaining||bytes.length>2*1024*1024)continue;
+          remaining-=bytes.length;
+          const borrowed=candidate!==requests[i].id;
+          images[i]={dataUrl:`data:${asset.mime};base64,${bytes.toString('base64')}`,file:path.basename(asset.file),original:asset.item.imageName,provider:'official',method:borrowed?'reviewed-booster-illustration':'official-exact-id',...(borrowed?{note:'通用加成借用同类型 3 天档插画，仅作图示；不改变奖励时长或资料关联。',illustrationId:candidate}:{}),abilityIcon:asset.item.category==='Abilities'};
+          break;
+        } catch { /* Exact missing asset: only try an explicitly reviewed illustration. */ }
+      }
     }
     return images;
   },

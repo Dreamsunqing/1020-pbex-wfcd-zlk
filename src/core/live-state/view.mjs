@@ -45,8 +45,16 @@ export function buildWorldView(snapshot,catalog,{now=Date.now()}={}) {
     const steps=array(row.missions).map(m=>{const d=array(m.difficulties).find(x=>x?.type==='CD_HARD') ?? m.difficulties?.[0];return {title:mission(m.missionType),subtitle:'精英难度',description:detailTerm(prefix,d?.deviation).name,terms:[detailTerm(prefix,d?.deviation),...array(d?.risks).map(k=>detailTerm('/Lotus/Language/Conquest/Condition_',k==='EMPBlackHole'?'MagneticHounds':k))]};});
     return entry(lab?'实验室 · 深层科研':row.type==='CT_HEX'?'Hex · 时光科研':row.type,'本周任务与个人限制',{...windowOf(row),steps,terms:array(row.variables).map(k=>detailTerm('/Lotus/Language/Conquest/PersonalMod_',k==='DullBlades'?'ComboCountChance':k==='Undersupplied'?'MaxAmmo':k)),iconToken:'RESEARCH'});
   }),{layout:'mission',wide:true,preview:2});
-  add('calendar','1999 日历','weekly',rows('knownCalendarSeasons').filter(active).flatMap(row=>array(row.days).filter(day=>day.events?.length).map(day=>entry('游戏日 '+day.day,translate(row.season,row.season),{...windowOf(row),rewards:array(day.events).filter(e=>e.rewardKey).map(e=>item(e.rewardKey)),terms:array(day.events).filter(e=>!e.rewardKey).map(e=>{const key=e.challengeKey ?? e.upgradeKey;const c=catalog.challenge(key);return {name:c.name,description:c.description};}),iconToken:'CALENDAR'}))),{layout:'tiles',preview:3,note:'游戏日期；不对应现实今日奖励'});
-  add('descents','沉沦之地','weekly',rows('descents').filter(active).flatMap(row=>array(row.challenges).map(c=>{const a=catalog.item(c.auras?.[0] ?? c.challengeKey),name=a.localized?a.name:c.challengeKey;return entry('第 '+c.index+' 层',name,{...windowOf(row),description:a.description,chips:[c.type],note:a.localized?'':'该挑战尚无可靠中文映射',iconToken:'DESCENT'});})),{layout:'tiles',preview:3});
+  add('calendar','1999 日历','weekly',rows('knownCalendarSeasons').filter(active).flatMap(row=>array(row.days).filter(day=>day.events?.length).map(day=>entry('游戏日 '+day.day,catalog.weekly.season(row.season).name,{
+    ...windowOf(row),rewards:array(day.events).filter(e=>e.rewardKey).map(e=>item(e.rewardKey)),
+    terms:array(day.events).filter(e=>!e.rewardKey).map(e=>catalog.weekly.calendarEvent(e)),
+    reference:{season:row.season,yearIteration:row.yearIteration,day:day.day,events:day.events,localization:array(day.events).filter(e=>!e.rewardKey).map(e=>catalog.weekly.calendarEvent(e)),upgradeAvailabilityRequirements:row.upgradeAvailabilityRequirements},iconToken:'CALENDAR'
+  }))),{layout:'tiles',preview:3,showTerms:true,note:'游戏日期；强化为三选一。强化中文为社区资料整理，来源见详情。'});
+  add('descents','沉沦之地','weekly',rows('descents').filter(active).flatMap(row=>array(row.challenges).map(c=>{
+    const info=catalog.weekly.descent(c),known=info.detail.localized;
+    return entry('第 '+c.index+' 层',info.type.name,{...windowOf(row),terms:[info.detail,...info.auras.filter(a=>a.localized),...info.specs.filter(s=>s.localized)].filter(t=>t.name!==info.type.name||t.description),
+      reference:{...c,localization:info},note:known?'':'附加条件说明待补充；详情保留上游数据',iconToken:'DESCENT'});
+  })),{layout:'tiles',preview:3,showTerms:true,note:'按上游楼层顺序。名称及苦行加护采用明确映射；未核实机制不补写。'});
   for(const [id,title] of [['voidTraders','虚空商人'],['primeVaultTraders','Prime 重生活动']]) {
     const cards=rows(id).map(row=>{const started=Date.parse(row.startsAt)<=at,ended=Date.parse(row.endsAt)<=at;const state=ended?'已离开':started?'正在停留':'即将到来';
       // A future trader's manifest is not the upcoming inventory.

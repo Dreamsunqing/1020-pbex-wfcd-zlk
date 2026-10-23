@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-23",
+  "sources": {
+    "wfcd-calendar-project-translation": {
+      "source": "warframe-worldstate-data@3.16.10 dist/data/zh/languages.json",
+      "url": "https://github.com/WFCD/warframe-worldstate-data",
+      "note": "社区英文说明的项目中文整理，非 Plus 官方译文；数值沿用社区快照。",
+      "sha256": "ce3486db272edab957eac0db93d16f71d30e5244622f1b1caa22230d5604f1a0"
+    },
+    "official-u41-project-token-map": {
+      "url": "https://www.warframe.com/zh-hans/patch-notes/pc/41-0-0",
+      "note": "官方更新说明中的名称与简述；token 对应由项目维护，非 Plus 直接导出。"
+    },
+    "project-descent-type-label": {
+      "note": "沉沦之地类型的项目显示标签；DT_* 不转换为 MT_*。"
+    },
+    "project-scoped-descent-label": {
+      "note": "按 Type + Challenge 精准维护的显示标签；无描述时不生成机制。"
+    },
+    "project-calendar-season-label": {
+      "note": "CST_* 季节枚举的项目中文标签，不根据季节推算现实日期。"
+    }
+  },
+  "seasons": {
+    "CST_WINTER": {
+      "name": "冬季",
+      "source": "project-calendar-season-label"
+    },
+    "CST_SPRING": {
+      "name": "春季",
+      "source": "project-calendar-season-label"
+    },
+    "CST_SUMMER": {
+      "name": "夏季",
+      "source": "project-calendar-season-label"
+    },
+    "CST_FALL": {
+      "name": "秋季",
+      "source": "project-calendar-season-label"
+    },
+    "CST_AUTUMN": {
+      "name": "秋季",
+      "source": "project-calendar-season-label"
+    }
+  },
+  "calendarUpgrades": {
+    "/Lotus/Upgrades/Calendar/AbilityStrength": {
+      "name": "力量增长",
+      "description": "技能强度 +25%。",
+      "englishName": "Power Gains",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/Armor": {
+      "name": "厚实皮肤",
+      "description": "护甲 +250。",
+      "englishName": "Thick Skin",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/AttackAndMovementSpeedOnCritMelee": {
+      "name": "一击即走",
+      "description": "近战暴击有几率使攻击和移动速度提高 5%，持续 10 秒。",
+      "englishName": "Hit'N'Split",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/BlastEveryXShots": {
+      "name": "爆炸狂欢",
+      "description": "每第 10 次射击命中时施加 10 层爆炸异常。",
+      "englishName": "Have A Blast",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/CompanionDamage": {
+      "name": "后盾支援",
+      "description": "魅影和同伴伤害 +250%。",
+      "englishName": "Got Your Back",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/CompanionsBuffNearbyPlayer": {
+      "name": "人多势众",
+      "description": "20 米内每有一名非 Tenno 友军，范围内这些友军获得 +5% 近战攻速和 +20% 射速。",
+      "englishName": "More the Merrier",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/CompanionsRadiationChance": {
+      "name": "友方辐射",
+      "description": "魅影或同伴的攻击有 25% 几率造成辐射异常。",
+      "englishName": "Friendly Fallout",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/ElectricStatusDamageAndChance": {
+      "name": "瓶中闪电",
+      "description": "所有武器增加 25% 异常伤害及电击异常几率。",
+      "englishName": "Bottled Lightning",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/EnergyOrbToAbilityRange": {
+      "name": "开阔视野",
+      "description": "拾取能量时技能范围 +10%，持续 10 秒。",
+      "englishName": "Broadened Horizons",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/EnergyRestoration": {
+      "name": "浓缩能量",
+      "description": "每秒能量恢复 +2。",
+      "englishName": "Espresso Shots",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/EnergyWavesOnCombo": {
+      "name": "连击能量波",
+      "description": "达到 7 倍连击倍率后，近战攻击发射能量波。",
+      "englishName": "Combo Wave",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/FinisherChancePerComboMultiplier": {
+      "name": "连击杀手",
+      "description": "近战命中后，敌人可被处决的几率随连击倍率提高，每倍率 +5%；Venka Prime 最高 65%。",
+      "englishName": "Combo Killer",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/GasChanceToPrimaryAndSecondary": {
+      "name": "毒气射击",
+      "description": "主要和次要武器增加 25% 毒气异常几率。",
+      "englishName": "Toxic Shot",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/GenerateOmniOrbsOnWeakKill": {
+      "name": "不自主输血",
+      "description": "弱点击杀有 25% 几率生成通用球。",
+      "englishName": "Involuntary Transfusion",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/GuidingMissilesChance": {
+      "name": "追踪射击",
+      "description": "每次命中使发射追踪弹的几率增加 10%；开火使该几率降低 5%。",
+      "englishName": "Tickshots",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/HealingEffects": {
+      "name": "紧急医疗",
+      "description": "拾取球体的各类恢复效果提高 25%。",
+      "englishName": "Emergency Medicine",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/MagazineCapacity": {
+      "name": "重型弹匣",
+      "description": "弹匣容量 +25%。",
+      "englishName": "Heavy Mags",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/MagnetStatusPull": {
+      "name": "吸引之力",
+      "description": "磁力异常会牵引周围敌人，每层提供 1 米牵引范围。",
+      "englishName": "Force Of Attraction",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/MagnitizeWithinRangeEveryXCasts": {
+      "name": "磁力威胁",
+      "description": "每第 5 次施放技能，对前方 50 米内一名敌人施加磁力异常。",
+      "englishName": "Magnetic Menace",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/MeleeAttackSpeed": {
+      "name": "毫不留情",
+      "description": "近战攻击速度 +25%。",
+      "englishName": "No Quarter",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/MeleeCritChance": {
+      "name": "精准练习",
+      "description": "近战暴击几率 +20%，重击效果翻倍。",
+      "englishName": "Practiced Precision",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/OrbsDuplicateOnPickup": {
+      "name": "定向医疗",
+      "description": "射击生命球可拾取它；拾取时有 25% 几率复制生命球。",
+      "englishName": "Targeted Medicine",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/OvershieldCap": {
+      "name": "护盾强化",
+      "description": "超量护盾上限 +50%；击杀获得 50 护盾。",
+      "englishName": "Harden Up",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/PowerStrengthAndEfficiencyPerEnergySpent": {
+      "name": "超载施法",
+      "description": "施法每消耗 1 点能量，使技能强度 +2%、效率 -1%，持续 5 秒。",
+      "englishName": "Overpower",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/PunchToPrimary": {
+      "name": "穿透打卡",
+      "description": "主要武器穿透 +1.5 米。",
+      "englishName": "Punchcard",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/RadiationProcOnTakeDamage": {
+      "name": "灵能反馈",
+      "description": "受伤时有 10% 几率触发 5 米范围、250 伤害的辐射爆炸。",
+      "englishName": "Psionic Feedback",
+      "source": "wfcd-calendar-project-translation"
+    },
+    "/Lotus/Upgrades/Calendar/RefundBulletOnStatusProc": {
+      "name": "免费射击",
+      "description": "触发异常状态有 10% 几率将该发子弹返还弹匣。",
+      "englishName": "Free Shot",
+      "source": "wfcd-calendar-project-translation"
+    }
+  },
+  "descentTypes": {
+    "DT_ALCHEMY": {
+      "name": "炼金",
+      "source": "project-descent-type-label"
+    },
+    "DT_BOSS": {
+      "name": "头目战",
+      "source": "project-descent-type-label"
+    },
+    "DT_BREAK_TARGETS": {
+      "name": "摧毁目标",
+      "source": "project-descent-type-label"
+    },
+    "DT_CAPTURE": {
+      "name": "捕获",
+      "source": "project-descent-type-label"
+    },
+    "DT_COLLECTION": {
+      "name": "收集",
+      "source": "project-descent-type-label"
+    },
+    "DT_DEFENSE": {
+      "name": "防御",
+      "source": "project-descent-type-label"
+    },
+    "DT_EXCAVATION": {
+      "name": "挖掘",
+      "source": "project-descent-type-label"
+    },
+    "DT_EXTERMINATE": {
+      "name": "歼灭",
+      "source": "project-descent-type-label"
+    },
+    "DT_INFESTED_SALVAGE": {
+      "name": "净化",
+      "source": "project-descent-type-label"
+    },
+    "DT_INTERCEPTION": {
+      "name": "移动拦截",
+      "source": "project-descent-type-label"
+    },
+    "DT_LOOT_CREATURES": {
+      "name": "猎杀贪囤断肢",
+      "source": "project-descent-type-label"
+    },
+    "DT_MIMICS": {
+      "name": "容器搜寻",
+      "source": "project-descent-type-label"
+    },
+    "DT_NETRACELLS": {
+      "name": "定点清除",
+      "source": "project-descent-type-label"
+    },
+    "DT_PRESURE_GAUGE": {
+      "name": "压力挑战",
+      "source": "project-descent-type-label"
+    },
+    "DT_PROTOFRAME": {
+      "name": "原型战甲",
+      "source": "project-descent-type-label"
+    },
+    "DT_RACE": {
+      "name": "限时竞速",
+      "source": "project-descent-type-label"
+    },
+    "DT_SABOTAGE_DEFENSE": {
+      "name": "破坏与防御",
+      "source": "project-descent-type-label"
+    },
+    "DT_SABOTAGE_HIVE": {
+      "name": "摧毁肿瘤",
+      "source": "project-descent-type-label"
+    },
+    "DT_SHRINE_DEFENSE": {
+      "name": "神殿防御",
+      "source": "project-descent-type-label"
+    },
+    "DT_UNIQUE": {
+      "name": "特殊挑战",
+      "source": "project-descent-type-label"
+    }
+  },
+  "descentChallenges": {
+    "ArbitrationDrones": {
+      "name": "仲裁无人机",
+      "description": "敌人有无人机保护。",
+      "source": "official-u41-project-token-map"
+    },
+    "Escapist": {
+      "name": "秘密撤离",
+      "description": "敌人半血时会短暂无敌并传送。",
+      "source": "official-u41-project-token-map"
+    },
+    "SpicyKnife": {
+      "name": "拆弹",
+      "description": "击杀可延缓自身爆炸。",
+      "source": "official-u41-project-token-map"
+    },
+    "FireChain": {
+      "name": "烈焰枷锁",
+      "description": "接触连接敌人的火链会受伤。",
+      "source": "official-u41-project-token-map"
+    },
+    "PoisonGas": {
+      "name": "化学战",
+      "description": "毒气覆盖战场，靠近敌人周围的安全区躲避。",
+      "source": "official-u41-project-token-map"
+    },
+    "FreezeInShoot": {
+      "name": "冰封之光",
+      "description": "极寒、能量吸取、翠玉之光卓越者。",
+      "source": "official-u41-project-token-map"
+    },
+    "FireAndIce": {
+      "name": "火与冰",
+      "description": "极寒、纵火、闪击卓越者。",
+      "source": "official-u41-project-token-map"
+    },
+    "JadeGuardian": {
+      "name": "翠玉守护",
+      "description": "守护者、翠玉之光、电击卓越者。",
+      "source": "official-u41-project-token-map"
+    },
+    "PowerHouse": {
+      "name": "权欲",
+      "description": "纵火、闪击、翠玉之光卓越者。",
+      "source": "official-u41-project-token-map"
+    },
+    "ShockingLeech": {
+      "name": "电击吸血",
+      "description": "吸血、电击、剧毒卓越者。",
+      "source": "official-u41-project-token-map"
+    },
+    "ToxicFire": {
+      "name": "剧毒火焰",
+      "description": "纵火、电击、剧毒卓越者。",
+      "source": "official-u41-project-token-map"
+    },
+    "VeryToxic": {
+      "name": "剧毒水蛭",
+      "description": "能量吸取、吸血、剧毒卓越者。",
+      "source": "official-u41-project-token-map"
+    },
+    "FieryTrail": {
+      "name": "防火道",
+      "description": "敌人经过会留下伤人的火迹。",
+      "source": "official-u41-project-token-map"
+    },
+    "FieryTrailRollers": {
+      "name": "火球滚轮",
+      "description": "滚子留下火迹。",
+      "source": "official-u41-project-token-map"
+    },
+    "HeavyWeaponsOnly": {
+      "name": "易受曲翼枪械攻击的敌人",
+      "description": "本层限制使用已装备的曲翼枪械。",
+      "source": "official-u41-project-token-map"
+    },
+    "GrenadesOnly": {
+      "name": "易受元素瓶攻击的敌人",
+      "description": "需利用场景中生成的元素瓶。",
+      "source": "official-u41-project-token-map"
+    },
+    "SlipAndSlide": {
+      "name": "无摩擦",
+      "description": "移动摩擦大幅降低。",
+      "source": "official-u41-project-token-map"
+    },
+    "GiantRealm": {
+      "name": "巨人症",
+      "description": "敌人体型增大且移速降低。",
+      "source": "official-u41-project-token-map"
+    },
+    "GlassMaker": {
+      "name": "玻璃匠中枢人",
+      "description": "先破坏玻璃，才能伤害被玻璃覆盖的敌人。",
+      "source": "official-u41-project-token-map"
+    },
+    "JumpSmash": {
+      "name": "跺头者",
+      "description": "踩踏对小型化敌人造成更高伤害。",
+      "source": "official-u41-project-token-map"
+    },
+    "UnseenFoes": {
+      "name": "潜在威胁",
+      "description": "敌人攻击前隐形。",
+      "source": "official-u41-project-token-map"
+    },
+    "SecuritySpin": {
+      "name": "激光炼狱",
+      "description": "躲避周期生成的旋转激光。",
+      "source": "official-u41-project-token-map"
+    },
+    "Manics": {
+      "name": "躁狂症",
+      "description": "敌人变为狂躁者。",
+      "source": "official-u41-project-token-map"
+    },
+    "NarmerPhobia": {
+      "name": "合一众执事",
+      "description": "执事视野内的玩家会减速。",
+      "source": "official-u41-project-token-map"
+    },
+    "HeadShotsOnly": {
+      "name": "只有弱点才会受到伤害",
+      "description": "攻击弱点以外部位效果很低。",
+      "source": "official-u41-project-token-map"
+    },
+    "Darkness": {
+      "name": "放逐之阳",
+      "description": "本层环境黑暗。",
+      "source": "official-u41-project-token-map"
+    },
+    "Sunlight": {
+      "name": "太阳神之怒",
+      "description": "避开敌人的伤害光环。",
+      "source": "official-u41-project-token-map"
+    },
+    "HordeWeakpoints": {
+      "name": "弱点敌群",
+      "description": "敌人围攻，且弱点以外部位抗伤。",
+      "source": "official-u41-project-token-map"
+    },
+    "DT_LOOT_CREATURES:BasicLootCreatures": {
+      "name": "猎杀贪囤断肢",
+      "source": "project-scoped-descent-label"
+    },
+    "DT_RACE:BasicRace": {
+      "name": "限时竞速",
+      "source": "project-scoped-descent-label"
+    },
+    "DT_MIMICS:BasicMimics": {
+      "name": "开启容器",
+      "source": "project-scoped-descent-label"
+    },
+    "DT_BREAK_TARGETS:BasicBreakTargets": {
+      "name": "摧毁目标",
+      "source": "project-scoped-descent-label"
+    },
+    "DT_COLLECTION:CollectionBasic": {
+      "name": "收集目标",
+      "source": "project-scoped-descent-label"
+    },
+    "DT_UNIQUE:RaceHorse": {
+      "name": "绝灵骥竞速",
+      "source": "project-scoped-descent-label"
+    },
+    "DT_BOSS:Kullervo": {
+      "name": "Kullervo",
+      "source": "project-scoped-descent-label"
+    },
+    "DT_BOSS:99TankP1": {
+      "name": "艾弗旺坦克",
+      "source": "project-scoped-descent-label"
+    },
+    "DT_BOSS:CorruptedVor": {
+      "name": "堕落 Vor",
+      "source": "project-scoped-descent-label"
+    },
+    "DT_BOSS:Phorid": {
+      "name": "Phorid",
+      "source": "project-scoped-descent-label"
+    },
+    "DT_PROTOFRAME:Wisp": {
+      "name": "玛丽的祝福",
+      "description": "本层为检查点，可选择祝福。",
+      "source": "official-u41-project-token-map"
+    },
+    "DT_PROTOFRAME:Harrow": {
+      "name": "里昂的祝福",
+      "description": "本层为检查点，可选择祝福。",
+      "source": "official-u41-project-token-map"
+    },
+    "DT_PROTOFRAME:Devil": {
+      "name": "罗瑟的遗忘",
+      "description": "最终头目战。",
+      "source": "official-u41-project-token-map"
+    }
+  }
+}

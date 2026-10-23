@@ -1,6 +1,7 @@
 import { renderGameText } from './game-text.js';
 import { decorateImages } from './images.js';
 const groups=[['all','总览'],['missions','任务'],['weekly','周常'],['trade','商店'],['activity','动态']];
+const moduleOrder=['fissures','sortie','archonHunt','alerts','invasions','bounties','syndicates','nodeOverrides','nightwave','circuit','conquests','calendar','descents','vaultBonus','voidTraders','primeVaultTraders','dailyDeals','flashSales','market','goals','events','boosters','construction','synthesis'];
 const svgPaths={world:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM3 12h18M12 3c-5 5-5 13 0 18M12 3c5 5 5 13 0 18',sun:'M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5',moon:'M20 14a8.5 8.5 0 0 1-10-10 8.5 8.5 0 1 0 10 10Z',spark:'m12 2 3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7Z',target:'M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM12 1v5m0 12v5M1 12h5m12 0h5',calendar:'M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm-2 5h18M8 2v4m8-4v4M7 13h3m4 0h3m-10 4h3',shop:'m3 9 2-6h14l2 6M3 9v11h18V9M3 9c0 4 4 4 4 0 0 4 5 4 5 0 0 4 5 4 5 0 0 4 4 4 4 0M8 20v-6h8v6',arrow:'M4 12h16m-6-6 6 6-6 6',back:'M20 12H4m6-6-6 6 6 6',refresh:'M20 8a8 8 0 1 0 0 8M20 3v5h-5',clock:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4v5l3 2',info:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 7v7m0-10v1'};
 function icon(kind='spark'){const node=document.createElementNS('http://www.w3.org/2000/svg','svg');node.setAttribute('viewBox','0 0 24 24');node.setAttribute('fill','none');node.setAttribute('stroke','currentColor');node.setAttribute('stroke-width','1.5');node.setAttribute('stroke-linecap','round');node.setAttribute('stroke-linejoin','round');node.setAttribute('aria-hidden','true');const p=document.createElementNS(node.namespaceURI,'path');p.setAttribute('d',svgPaths[kind] ?? svgPaths.spark);node.append(p);return node;}
 const el=(tag,cl,text)=>{const n=document.createElement(tag);if(cl)n.className=cl;if(text!==undefined)renderGameText(n,text,/^h/.test(tag)?'name':'description');return n;};
@@ -20,7 +21,7 @@ export function createLiveStateUI({api,guarded,notify}){
    if(Number.isFinite(row.probability))card.append(el('small','ws-probability',(row.probability*100).toFixed(2).replace(/\.00$/,'')+'%'+(row.pool?' · 池 '+row.pool:'')));
    if(row.stats?.length)card.append(el('small','ws-item-price',row.stats.join(' · ')));grid.append(card);
  }return grid;}
- function terms(values,full=false){const box=el('div','ws-terms');for(const row of values??[]){const n=el('div','ws-term');n.append(el('strong','',row.name));if(row.description)n.append(el('p','',row.description));box.append(n);}return box;}
+ function terms(values,full=false){const box=el('div','ws-terms');for(const row of values??[]){const n=el('div','ws-term');if(row.source)n.title='翻译来源：'+row.source;n.append(el('strong','',row.name));if(row.description)n.append(el('p','',row.description));box.append(n);}return box;}
  function renderEntry(row,module,images,full=false){
    const card=el('article','ws-entry');image(row,card,images);card.dataset.moduleEntry=module.id;
    const head=el('div','ws-entry-head');head.append(el('h3','ws-entry-title',row.title));if(row.endsAt||row.startsAt)head.append(timeBadge(row));card.append(head);
@@ -34,7 +35,7 @@ export function createLiveStateUI({api,guarded,notify}){
      if(step.terms?.length)content.append(full?terms(step.terms,true):chips(step.terms.map(t=>t.name)));li.append(content);steps.append(li);
    }card.append(steps);}
    if(row.sides){const sides=el('div','ws-sides');for(const side of row.sides){const block=el('div','ws-side');block.append(el('strong','',side.name),loot(side.rewards,images,true));sides.append(block);}card.append(sides);}
-   if(row.terms?.length)card.append(full?terms(row.terms,true):chips(row.terms.map(t=>t.name)));
+   if(row.terms?.length)card.append(full||module.showTerms?terms(row.terms,true):chips(row.terms.map(t=>t.name)));
    if(row.rewards?.length){const heading=el('div','ws-mini-heading',module.id==='circuit'?'本周可选':'奖励 · '+row.rewards.length+' 项');card.append(heading,loot(row.rewards,images,full||module.id==='circuit'));}
    if(row.items?.length){const list=el('div','ws-items');for(const r of full?row.items:row.items.slice(0,3)){
      const child=el('div','ws-shop-item');image(r,child,images);child.append(el('strong','',r.title??r.name));if(r.description&&full)child.append(el('p','ws-description',r.description));if(r.stats?.length)child.append(el('p','ws-item-price',r.stats.join(' · ')));if(r.rewards?.length)child.append(el('small','ws-item-price',r.rewards.length+' 项候选奖励'));if(full&&r.rewards?.length)child.append(loot(r.rewards,images,true));list.append(child);
@@ -42,6 +43,7 @@ export function createLiveStateUI({api,guarded,notify}){
    if(row.stats?.length)card.append(chips(row.stats));
    if(Number.isFinite(row.progress)){const track=el('progress','ws-progress');track.max=100;track.value=row.progress;track.setAttribute('aria-label',row.note??'进度');card.append(track);}
    if(row.note)card.append(el('p','ws-entry-note',row.note));
+   if(full&&row.reference){const reference=el('details','ws-reference');reference.append(el('summary','','映射来源与上游字段'));const pre=el('pre','');pre.textContent=JSON.stringify(row.reference,null,2);reference.append(pre);card.append(reference);}
    if(row.url){try{const u=new URL(row.url);if(['https:','http:'].includes(u.protocol)&&!u.username&&!u.password)card.append(button('阅读公告 ↗','ws-news-link',()=>guarded(()=>api.openDocumentLink(u.href))));}catch{}}
    return card;
  }
@@ -84,7 +86,9 @@ export function createLiveStateUI({api,guarded,notify}){
    const content=$('ws-content'),images=[];content.replaceChildren();const detail=data.modules.find(m=>m.id===state.detail);
    if(detail)content.append(renderDetail(detail,images));else{
      const cycles=data.modules.find(m=>m.id==='cycles');if(cycles&&(state.group==='all'||state.group==='now')&&!state.query)content.append(renderCycles(cycles));
-     const grid=el('div','ws-module-grid');for(const module of data.modules){if(module.id==='cycles'||state.group!=='all'&&module.group!==state.group)continue;const n=renderModule(module,images);if(n)grid.append(n);}if(!grid.childElementCount)grid.append(el('p','ws-empty','没有匹配的状态'));content.append(grid);
+     const grid=el('div','ws-module-grid');
+     const order=id=>{const index=moduleOrder.indexOf(id);return index<0?moduleOrder.length:index;};
+     for(const module of [...data.modules].sort((a,b)=>order(a.id)-order(b.id))){if(module.id==='cycles'||state.group!=='all'&&module.group!==state.group)continue;const n=renderModule(module,images);if(n)grid.append(n);}if(!grid.childElementCount)grid.append(el('p','ws-empty','没有匹配的状态'));content.append(grid);
    }
    decorateImages(api,images);updateTimes();
  }

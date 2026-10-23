@@ -14,7 +14,7 @@ export function checkServer(server) {if (!Object.hasOwn(LIVE_SOURCES,server)) th
 async function download(url,{proxyUrl}={}) {
   const dispatcher=proxyUrl?new ProxyAgent(proxyUrl):envAgent;
   try {
-    const response=await fetch(url,{dispatcher,signal:AbortSignal.timeout(18000),headers:{accept:'application/json','User-Agent':'SourceWorkbench/0.14.0'}});
+    const response=await fetch(url,{dispatcher,signal:AbortSignal.timeout(18000),headers:{accept:'application/json','User-Agent':'SourceWorkbench/0.14.1'}});
     if (!response.ok) {await response.body?.cancel();throw new Error('HTTP '+response.status);}
     const chunks=[];let size=0;
     for await (const chunk of response.body) {size+=chunk.length;if(size>MAX) {throw new Error('世界状态响应超过 16 MiB');}chunks.push(chunk);}

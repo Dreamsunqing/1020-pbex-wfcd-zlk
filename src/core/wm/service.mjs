@@ -8,7 +8,7 @@ const agent = new EnvHttpProxyAgent();
 async function download(url, {platform = 'pc', crossplay = false, proxyUrl} = {}) {
   const dispatcher = proxyUrl ? new ProxyAgent(proxyUrl) : agent;
   try {
-    const res = await fetch(url, {dispatcher, signal: AbortSignal.timeout(20000), redirect:'error', headers:{Accept:'application/json', Language:'zh-hans', Platform:platform, Crossplay:String(crossplay), 'User-Agent':'SourceWorkbench/0.14.0 (local Warframe reference tool; WM read-only integration)'}});
+    const res = await fetch(url, {dispatcher, signal: AbortSignal.timeout(20000), redirect:'error', headers:{Accept:'application/json', Language:'zh-hans', Platform:platform, Crossplay:String(crossplay), 'User-Agent':'SourceWorkbench/0.14.1 (local Warframe reference tool; WM read-only integration)'}});
     if (!res.ok) { await res.body?.cancel(); throw new Error(`WM 返回 HTTP ${res.status}${res.status === 429 ? '，请稍后刷新' : ''}`); }
     const chunks = []; let size = 0;
     for await (const chunk of res.body) { size += chunk.length; if (size > MAX_BYTES) throw new Error('WM 响应超过 16 MiB'); chunks.push(chunk); }

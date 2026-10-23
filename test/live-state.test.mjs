@@ -45,3 +45,23 @@ test('旧快照保留捕获时有效项目，缺失/新增字段不会导致整�
 test('多层结构含空记录或错误字段时，其他模块和原始数据仍可用',()=>{
  const r=raw();r.Conquests=[{Activation:date(r.Time*1000-1000),Expiry:date(r.Time*1000+60000),Type:'CT_LAB',Missions:[null],Variables:[],RandomSeed:1}];r.InGameMarket={LandingPage:{Categories:[null]}};r.ActiveMissions='invalid';const c=catalog();const result=buildWorldView(snapshot(r),c,{now:r.Time*1000});assert.ok(result.modules.find(m=>m.id==='cycles'));assert.ok(result.diagnostics.errors.includes('fissures'));assert.equal(r.ActiveMissions,'invalid');assert.equal(createWorldCatalog({plus:{ExportWeapons:{[id]:{name:123}}}}).item(id).name,'Example');
 });
+
+test('日历依事件类型关联挑战、强化和奖励；中文保留计数、来源且不修改原始事件',async()=>{
+ const weeklyRules=JSON.parse(await fs.readFile(new URL('../src/data/live-state/weekly-semantics.json',import.meta.url),'utf8'));
+ const c=createWorldCatalog({weeklyRules,plus:{'dict.zh':{'/Lotus/Language/TestName':'近战挑战','/Lotus/Language/TestDesc':'击杀 |COUNT| 名敌人'},ExportChallenges:{[key]:{name:'/Lotus/Language/TestName',description:'/Lotus/Language/TestDesc',requiredCount:300}}}});
+ const r=raw(),ms=r.Time*1000;r.KnownCalendarSeasons=[{Activation:date(ms-1),Expiry:date(ms+1000),Season:'CST_WINTER',YearIteration:24,Version:19,UpgradeAvaliabilityRequirements:[],Days:[{day:3,events:[{type:'CET_CHALLENGE',challenge:key}]},{day:20,events:[{type:'CET_UPGRADE',upgrade:'/Lotus/Upgrades/Calendar/GasChanceToPrimaryAndSecondary'}]},{day:21,events:[{type:'CET_REWARD',reward:id}]}]}];
+ const original=structuredClone(r),entries=buildWorldView(snapshot(r),c,{now:ms}).modules.find(m=>m.id==='calendar').entries;
+ assert.equal(entries[0].subtitle,'冬季');assert.equal(entries[0].terms[0].description,'击杀 300 名敌人');assert.equal(entries[1].terms[0].name,'毒气射击');assert.match(entries[1].terms[0].description,/25%/);assert.equal(entries[1].reference.localization[0].source,'wfcd-calendar-project-translation');assert.equal(entries[2].rewards[0].id,id);assert.deepEqual(r,original);
+ // Official entities take precedence over maintained community translations.
+ const official=createWorldCatalog({weeklyRules,official:[{uniqueName:'/Lotus/Upgrades/Calendar/AbilityStrength',name:'官方强化',description:'官方说明'}]});assert.equal(official.weekly.calendarEvent({type:'CET_UPGRADE',upgradeKey:'/Lotus/Upgrades/Calendar/AbilityStrength'}).name,'官方强化');
+});
+
+test('沉沦之地按类型区分同名键、保留全部光环配置；未知键不按叶名或前缀猜中文',async()=>{
+ const weeklyRules=JSON.parse(await fs.readFile(new URL('../src/data/live-state/weekly-semantics.json',import.meta.url),'utf8'));
+ const c=createWorldCatalog({weeklyRules,plus:{ExportResources:{'/Lotus/AuraOne':{name:'光环一',description:'第一条说明'},'/Lotus/AuraTwo':{name:'光环二',description:'第二条说明'},'/Lotus/Unrelated/FreezeInShoot':{name:'不相关物品'}}}});
+ const r=raw(),ms=r.Time*1000;const row={Index:1,Type:'DT_EXTERMINATE',Challenge:'FreezeInShoot',Level:'/Lotus/Level',Specs:['/Lotus/EnemySpec'],Auras:['/Lotus/AuraOne','/Lotus/AuraTwo']};
+ r.Descents=[{Activation:date(ms-1),Expiry:date(ms+1000),RandSeed:5,Challenges:[row,{...row,Index:2,Type:'DT_PROTOFRAME',Challenge:'Wisp'},{...row,Index:3,Type:'DT_RACE',Challenge:'NC_NewUnverified'}]}];
+ const original=structuredClone(r),entries=buildWorldView(snapshot(r),c,{now:ms}).modules.find(m=>m.id==='descents').entries;
+ assert.equal(entries[0].subtitle,'歼灭');assert.equal(entries[0].terms[0].name,'冰封之光');assert.equal(entries[0].terms[1].description,'第一条说明');assert.equal(entries[0].terms[2].description,'第二条说明');assert.equal(entries[0].reference.localization.specs.length,1);assert.equal(entries[1].terms[0].name,'玛丽的祝福');assert.equal(entries[2].terms[0].localized,false);assert.equal(entries[2].terms[0].name,'附加条件待补充');assert.equal(entries[2].reference.challengeKey,'NC_NewUnverified');assert.deepEqual(r,original);
+ assert.equal(c.weekly.descent({type:'DT_EXTERMINATE',challengeKey:'Wisp'}).detail.localized,false);
+});

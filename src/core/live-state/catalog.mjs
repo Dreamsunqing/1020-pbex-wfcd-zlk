@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { sha256 } from '../io.mjs';
+import { createWeeklyResolver } from './weekly.mjs';
 const readBundled = async name => JSON.parse(await readFile(new URL('../../data/' + name, import.meta.url), 'utf8'));
 const tail = value => typeof value === 'string' ? value.split('/').at(-1) : '';
 const han = value => typeof value === 'string' && /\p{Script=Han}/u.test(value);
@@ -18,10 +19,11 @@ export async function loadWorldCatalog(files, read) {
     else if (file.source === 'official') official.push(data);
     else plus[file.source === 'oracle' ? 'oracleZh' : 'wfcdZh'] = data;
   } catch (error) { warnings.push(`${file.name}：${error.message}`); }
-  const [fallback,wg,supplement,contract] = await Promise.all(['live-state/community-fallback.json','live-state/wg-nodes.json','oracle-weekly.zh.json','merge-full-contract.json'].map(readBundled));
-  return createWorldCatalog({plus,official,fallback,wg,supplement,aliases:contract.aliases,evidence,warnings});
+  const [fallback,wg,supplement,contract,weeklyRules] = await Promise.all(['live-state/community-fallback.json','live-state/wg-nodes.json','oracle-weekly.zh.json','merge-full-contract.json','live-state/weekly-semantics.json'].map(readBundled));
+  evidence.push({file:'bundled/live-state/weekly-semantics.json',hash:sha256(Buffer.from(JSON.stringify(weeklyRules)))});
+  return createWorldCatalog({plus,official,fallback,wg,supplement,weeklyRules,aliases:contract.aliases,evidence,warnings});
 }
-export function createWorldCatalog({plus={},official=[],fallback={},wg={},supplement={},aliases=[],evidence=[],warnings=[]}={}) {
+export function createWorldCatalog({plus={},official=[],fallback={},wg={},supplement={},weeklyRules={},aliases=[],evidence=[],warnings=[]}={}) {
   const dictionary = {...plus.oracleZh,...plus['dict.zh']}, english = plus['dict.en'] ?? {}, objects = new Map(), englishNames = new Map();
   const canonical = value => {
     const alias = [...aliases].sort((a,b)=>b.from.length-a.from.length).find(a=>a.mode==='exact'?value===a.from:value?.startsWith(a.from));
@@ -76,10 +78,11 @@ export function createWorldCatalog({plus={},official=[],fallback={},wg={},supple
     name ||= shared;
     return {key,name:name || key,fallback:!name,source:name?(source ?? 'community-fallback'):null};
   };
-  return {plus,dictionary,objects,evidence,warnings,canonical,text,item,label,
+  const challenge = (key,params={})=>{const record=objects.get(canonical(key)) ?? {};const value=item(key);const count=record.required ?? record.requiredCount;
+    return {...value,standing:record.standing,required:count,description:value.description.replace(/\|([A-Z_]+)\|/g,(all,token)=>String(params[token] ?? (token==='COUNT'?count ?? all:all)))};};
+  return {plus,dictionary,objects,evidence,warnings,canonical,text,item,label,challenge,
+    weekly:createWeeklyResolver({rules:weeklyRules,item,challenge,dictionary}),
     modifierDescription:key=>fallback.sortie?.modifierDescriptions?.[key] ?? null,
     choice:name=>{const id=englishNames.get(name?.toLocaleLowerCase());return id?item(id):{id:null,name,description:'',localized:han(name)};},
-    challenge:(key,params={})=>{const record=objects.get(canonical(key)) ?? {};const value=item(key);const count=record.required ?? record.requiredCount;
-      return {...value,standing:record.standing,required:count,description:value.description.replace(/\|([A-Z_]+)\|/g,(all,token)=>String(params[token] ?? (token==='COUNT'?count ?? all:all)))};}
   };
 }

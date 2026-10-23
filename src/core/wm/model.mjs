@@ -18,9 +18,18 @@ export function normalizeItems(data) {
     maxRank: Number.isInteger(i.maxRank) && i.maxRank >= 0 && i.maxRank <= 100 ? i.maxRank : null,
     maxCharges: Number.isInteger(i.maxCharges) ? i.maxCharges : null,
     subtypes: Array.isArray(i.subtypes) ? i.subtypes : [], bulkTradable: !!i.bulkTradable,
+    setRoot: i.setRoot === true, setParts: Array.isArray(i.setParts) ? i.setParts.filter(id => typeof id === 'string') : [],
+    quantityInSet: Number.isInteger(i.quantityInSet) && i.quantityInSet > 0 ? i.quantityInSet : null,
   }));
   if (!rows.length) throw new Error('WM 目录没有有效物品');
   return rows;
+}
+export function normalizeSet(raw, slug) {
+  const data = raw?.data;
+  if (raw?.error || !data || typeof data.id !== 'string' || !Array.isArray(data.items) || data.items.length > 500) throw new Error('WM 套装关系格式无效');
+  const items = normalizeItems(data.items), selected = items.find(i => i.id === data.id && i.slug === slug);
+  if (!selected || new Set(items.map(i => i.id)).size !== items.length) throw new Error('WM 套装关系缺少当前物品或包含重复成员');
+  return {id: data.id, items: items.sort((a,b) => Number(b.setRoot)-Number(a.setRoot) || a.name.localeCompare(b.name,'zh-CN'))};
 }
 export function searchItems(items, query, limit = 12) {
   if (typeof query !== 'string' || query.length > 180 || !Number.isInteger(limit) || limit < 1 || limit > 30) throw new Error('WM 搜索参数无效');

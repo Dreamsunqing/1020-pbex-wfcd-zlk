@@ -1,5 +1,6 @@
 import {boosterArtAliases} from '../core/image-presentation.mjs';
 import {enrichWorldRewardArt} from '../core/live-state/reward-art.mjs';
+import {resolvePlayerDataset} from '../core/player-dataset.mjs';
 import { loadPlayerBundle } from '../core/player-bundle.mjs';
 import { playerLibraryList, playerLibraryDetail } from '../core/player-library.mjs';
 import { rewardContexts } from '../core/merge/reward-context.mjs';
@@ -75,13 +76,8 @@ async function initializeImages(root) {
 async function playerDataset(expectedVersion) {
   const bundled=await loadPlayerBundle();
   if(expectedVersion===bundled.manifest.datasetVersion)return bundled;
-  if(library||mode==='snapshot'){
-    const ctx=await mergeContext({library,release,mode,store});
-    const current=await readJson(path.join(ctx.repository.root,'current.json')).catch(e=>{if(e.code==='ENOENT')return null;throw e;});
-    if(current&&current.datasetVersion!==bundled.manifest.datasetVersion)return datasetFor(ctx,expectedVersion);
-  }
-  if(expectedVersion&&expectedVersion!==bundled.manifest.datasetVersion)throw new Error('资料库版本已变化，请重新进入资料库');
-  return bundled;
+  const ctx=(library||mode==='snapshot')?await mergeContext({library,release,mode,store}):null;
+  return resolvePlayerDataset(bundled,ctx?.repository,expectedVersion);
 }
 const progress = value => parentPort.postMessage({ event: 'progress', value });
 const savePreferences = () => atomicJson(preferencesFile, preferences);

@@ -12,7 +12,7 @@ export function createPlayerBundle(data){
  const images=imageDescriptors(data,items);for(const image of Object.values(images))delete image.cardArt;
  const output={'items/all.json':items,'relations.json':data.output['relations.json'],'recipes.json':data.output['recipes.json'],'contract.json':{fields:data.output['contract.json'].fields},'player/description-sources.json':descriptionSources,'player/hidden.json':[...internalItems(data)],'player/images.json':images,'reports/source-records.json':[],'reports/coverage.json':{files:[]}};
  for(const locale of data.manifest.locales){const localizations={};for(const [id,fields] of Object.entries(data.output['localizations/'+locale+'.json']??{})){const selected=Object.fromEntries(Object.entries(fields).filter(([key])=>!key.startsWith('attributes.')||attributes.has(key.split('.')[1])).map(([key,entry])=>[key,{value:entry.value,locale}]));if(Object.keys(selected).length)localizations[id]=selected;}output['localizations/'+locale+'.json']=localizations;}
- return {manifest:{datasetVersion:data.manifest.datasetVersion,locales:data.manifest.locales,inputs:[],summary:data.manifest.summary,bundled:true},output};
+ return {manifest:{datasetVersion:data.manifest.datasetVersion,modelingVersion:data.manifest.modelingVersion,locales:data.manifest.locales,inputs:[],summary:data.manifest.summary,bundled:true},output};
 }
 let cached;
 export async function loadPlayerBundle(directory=new URL('../data/player-library/',import.meta.url)){

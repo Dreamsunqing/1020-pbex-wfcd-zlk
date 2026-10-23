@@ -3,7 +3,7 @@ import { maxRankText } from '../localized-text.mjs';
 import { buildAbilityLinks } from './ability-links.mjs';
 import { buildIncarnonLinks } from './incarnon-links.mjs';
 import { sha256 } from '../io.mjs';
-import { assign, compareText, digest, normalize, pointer, stable, valid } from './contract.mjs';
+import { FULL_MODELING_VERSION, assign, compareText, digest, normalize, pointer, stable, valid } from './contract.mjs';
 import { fullInputs, entityId } from './full-inputs.mjs';
 import { verifyInputs } from './inputs.mjs';
 import { validateRules } from './rules.mjs';
@@ -263,7 +263,7 @@ export async function buildFull(options) {
   for (const file of Object.keys(output).filter(file=>file.startsWith('localizations/'))) output[file]=compactEvidence(output[file]);
   onProgress({ message: `校验 ${documents.length} 份输入与 ${items.length} 个实体，准备发布…` });
   const files = Object.entries(output).sort(([a], [b]) => compareText(a, b)).map(([file, value]) => ({ file, hash: sha256(stable(value, true)), bytes: Buffer.byteLength(stable(value, true)) }));
-  const identity = { modelingVersion: 'incarnon-links-1', schemaVersion: contract.schemaVersion, locales:contract.locales, encoding: 'compact-json', mappingVersion: contract.mappingVersion, builderVersion: contract.builderVersion, contractHash: digest(contract), overridesHash: digest(overrides), inputs: documents.map(({ file, source, hash, bytes }) => ({ file, source, hash, bytes })), files, scope: contract.scope, quality: issues.some(i => i.severity === 'warning') ? 'review-required' : 'full-static', summary: { entities: items.length, recipes: recipes.length, rewardTables: rewardTables.length, relations: relations.length, issues: issues.length, conflicts: coverage.conflicts, unresolved: coverage.unresolved, rewardItems: coverage.rewardItems } };
+  const identity = { modelingVersion: FULL_MODELING_VERSION, schemaVersion: contract.schemaVersion, locales:contract.locales, encoding: 'compact-json', mappingVersion: contract.mappingVersion, builderVersion: contract.builderVersion, contractHash: digest(contract), overridesHash: digest(overrides), inputs: documents.map(({ file, source, hash, bytes }) => ({ file, source, hash, bytes })), files, scope: contract.scope, quality: issues.some(i => i.severity === 'warning') ? 'review-required' : 'full-static', summary: { entities: items.length, recipes: recipes.length, rewardTables: rewardTables.length, relations: relations.length, issues: issues.length, conflicts: coverage.conflicts, unresolved: coverage.unresolved, rewardItems: coverage.rewardItems } };
   await verifyInputs(documents, read);
   return { manifest: { ...identity, datasetVersion: digest(identity) }, output };
 }

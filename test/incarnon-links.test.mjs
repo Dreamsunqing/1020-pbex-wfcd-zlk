@@ -31,6 +31,6 @@ test('玩家武器筛选与灵化之源双向跳转，分类交集、未知状�
  assert.equal(playerLibraryList(data,{group:'weapon',selected:{incarnon:'genesis'}}).total,2);
  assert.equal(playerLibraryList(data,{group:'weapon',selected:{incarnon:'genesis',variant:'PRIME'}}).rows[0].id,p.id);
  assert.deepEqual(playerLibraryList(data,{group:'weapon',selected:{incarnon:'unlinked'}}).rows.map(r=>r.id),[n.id]);
- assert.deepEqual(playerLibraryList(data,{group:'weapon'}).options.incarnon.map(o=>o.label).sort(),['可安装灵化之源','未关联灵化之源'].sort());assert.equal(playerLibraryList(data,{group:'resource'}).options.incarnon,undefined);
+ assert.deepEqual(playerLibraryList(data,{group:'weapon'}).options.incarnon.map(o=>o.label).sort(),['灵化武器','其他武器'].sort());assert.equal(playerLibraryList(data,{group:'resource'}).options.incarnon,undefined);
  assert.equal(playerLibraryDetail(data,w.id).relations[0].label,'灵化之源');assert.equal(playerLibraryDetail(data,w.id).relations[0].rows[0].id,a.id);assert.equal(playerLibraryDetail(data,a.id).relations[0].label,'适配武器');assert.equal(playerLibraryDetail(data,a.id).relations[0].rows.length,2);assert.equal(playerLibraryDetail(data,n.id).relations.length,0);assert.equal(JSON.stringify(data),before);
 });

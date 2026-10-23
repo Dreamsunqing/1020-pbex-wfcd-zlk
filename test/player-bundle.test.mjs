@@ -6,7 +6,7 @@ test('shipped snapshot is verified and directly browsable without source files o
 
 test('bundled Incarnon index joins actual weapon variants to adapters and excludes innate Incarnon weapons',async()=>{
  const d=await loadPlayerBundle(),page=playerLibraryList(d,{group:'weapon',selected:{incarnon:'genesis'}});
- assert.equal(page.total,89);assert.equal(new Set(d.output['relations.json'].filter(r=>r.kind==='incarnon-adapter').map(r=>r.to)).size,45);
+ assert.equal(page.total,89);assert.ok(page.options.incarnon.some(o=>o.label==='灵化武器'));const burston=playerLibraryDetail(d,'/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston');assert.equal(burston.relations.find(g=>g.label==='灵化之源').rows[0].title,'伯斯顿灵化之源');assert.equal(new Set(d.output['relations.json'].filter(r=>r.kind==='incarnon-adapter').map(r=>r.to)).size,45);
  const adapter='/Lotus/Types/Items/MiscItems/IncarnonAdapters/Primary/BratonIncarnonUnlocker';
  const detail=playerLibraryDetail(d,adapter);const weapons=detail.relations.find(r=>r.label==='适配武器').rows;
  assert.deepEqual(weapons.map(w=>w.english).sort(),['Braton','Braton Prime','Braton Vandal','MK1-Braton'].sort());

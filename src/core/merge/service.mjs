@@ -8,7 +8,7 @@ import { KINDS } from './rules.mjs';
 import { describeField } from '../field-guide.mjs';
 import { nestedRules } from './nested.mjs';
 import { pointerValue } from '../library.mjs';
-import { compareText, digest } from './contract.mjs';
+import { FULL_MODELING_VERSION, compareText, digest } from './contract.mjs';
 import { allItems, MergeRepository } from './repository.mjs';
 import { readLibraryFile, snapshotEntry, snapshotFiles } from '../library.mjs';
 
@@ -22,7 +22,7 @@ export async function mergeContext({ library, release, mode, store }) {
 }
 export async function mergedStatus(ctx) {
   const data = await ctx.repository.current();
-  return data ? { available: true, context: ctx.context, manifest: data.manifest, needsRebuild: data.manifest.schemaVersion === 2 && data.manifest.modelingVersion !== 'localized-text-3', previousVersion: data.previousVersion } : { available: false, context: ctx.context };
+  return data ? { available: true, context: ctx.context, manifest: data.manifest, needsRebuild: data.manifest.schemaVersion === 2 && data.manifest.modelingVersion !== FULL_MODELING_VERSION, previousVersion: data.previousVersion } : { available: false, context: ctx.context };
 }
 export async function datasetFor(ctx, expectedVersion) {
   const data = await ctx.repository.current();

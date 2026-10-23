@@ -4,6 +4,7 @@ import { internalItems } from './merge/display-policy.mjs';
 import { imageDescriptors } from './merge/service.mjs';
 import { applyLocalizedFields, selectLocalizedField } from './text-localization.mjs';
 import {blueprintDescriptionSources} from './player-descriptions.mjs';
+import {playerGroupOverride,playerFacetValues,comparePlayerFacets} from './player-facets.mjs';
 import {EXTRA_LABELS} from './player-labels.mjs';
 import {RELIC_ERAS,RELIC_QUALITIES,relicIdentity,relicDrops,relicIndex} from './player-relics.mjs';
 import { plainGameText } from './inline-tokens.mjs';
@@ -22,10 +23,10 @@ export const LIBRARY_GROUPS = [
   ['life','生态与敌人',['animal','enemy'],'认识始源星系的生灵'],
   ['explore','星系与成长',['quest','quest-item','focus','intrinsic','syndicate','faction','system','region','tileset','vendor','dojo','bundle','codex','achievement','challenge','bounty','mission-type'],'探索星系、任务与成长路线']
 ].map(([id,label,kinds,subtitle])=>({id,label,kinds,subtitle}));
-const LABELS = {Primary:'主武器',Secondary:'副武器',Melee:'近战',Warframes:'战甲',Warframe:'战甲',Archwing:'Archwing 飞行器',Necramech:'殁世机甲',Pets:'宠物',Sentinels:'守护',Sentinel:'守护',Misc:'其他',Components:'组件',MiscItems:'资源与物品',Relics:'遗物',Resources:'资源',Gear:'装备',Cosmetics:'外观',WarframeComponent:'战甲组件',Mods:'Mod',Rifle:'步枪',Pistol:'手枪',Launcher:'发射器',Sniper:'狙击枪',Shotgun:'霰弹枪',Bow:'弓',Amp:'增幅器','Dual Pistols':'双持手枪',Throwing:'投掷武器','Exalted Weapon':'显赫武器','Companion Weapon':'同伴武器','Pet Parts':'宠物部件','Pet Resource':'宠物资源','Conservation Prey':'保育动物','K-Drive Component':'K式悬浮板组件','Zaw Component':'Zaw 组件','Kitgun Component':'组合枪组件','Railjack Turret':'九重天炮台',Railjack:'九重天','Railjack Mod':'九重天 Mod','Arch-Gun':'Archwing 枪械','Arch-Melee':'Archwing 近战',COMMON:'常见',UNCOMMON:'罕见',RARE:'稀有',LEGENDARY:'传说',NORMAL:'普通',PRIME:'Prime',VARIANT:'特殊变体',KUVA:'赤毒',STARTER:'入门',SYNDICATE:'集团',Fish:'鱼类',WARFRAME:'战甲',ARCHWING:'Archwing 飞行器',PRIMARY:'主武器',SECONDARY:'副武器',MELEE:'近战',STANCE:'架势',AURA:'光环',KAVAT:'库娃',KUBROW:'库狛',SENTINEL:'守护',PARAZON:'灭骸之刃','HELMINTH CHARGER':'Helminth 疾冲者'};
+const LABELS = {Primary:'主武器',Secondary:'副武器',Melee:'近战',Warframes:'战甲',Warframe:'战甲',Archwing:'Archwing 飞行器',Necramech:'殁世机甲',Pets:'宠物',Sentinels:'守护',Sentinel:'守护',Misc:'其他',Components:'组件',MiscItems:'资源与物品',Relics:'遗物',Resources:'资源',Gear:'装备',Cosmetics:'外观',WarframeComponent:'战甲组件',Mods:'Mod',Rifle:'步枪',Pistol:'手枪',Launcher:'发射器',Sniper:'狙击枪',Shotgun:'霰弹枪',Bow:'弓',Amp:'增幅器','Dual Pistols':'双持手枪',Throwing:'投掷武器','Exalted Weapon':'显赫武器','Companion Weapon':'同伴武器','Pet Parts':'宠物部件','Pet Resource':'宠物资源','Conservation Prey':'保育动物','K-Drive Component':'K式悬浮板组件','Zaw Component':'Zaw 组件','Kitgun Component':'组合枪组件','Railjack Turret':'九重天炮台',Railjack:'九重天','Railjack Mod':'未融合的神器','Arch-Gun':'Archwing 枪械','Arch-Melee':'Archwing 近战',COMMON:'常见',UNCOMMON:'罕见',RARE:'稀有',LEGENDARY:'传说',NORMAL:'普通',PRIME:'Prime',VARIANT:'特殊变体',KUVA:'赤毒',STARTER:'入门',SYNDICATE:'集团',Fish:'鱼类',WARFRAME:'战甲',ARCHWING:'Archwing 飞行器',PRIMARY:'主武器',SECONDARY:'副武器',MELEE:'近战',STANCE:'架势',AURA:'战甲光环',KAVAT:'库娃',KUBROW:'库狛',SENTINEL:'守护',PARAZON:'灭骸之刃','HELMINTH CHARGER':'Helminth 疾冲者'};
 const INCARNON_LABELS={genesis:'灵化武器',unlinked:'其他武器'};
 export const playerLabel = value => INCARNON_LABELS[value] ?? LABELS[value] ?? EXTRA_LABELS[value] ?? value;
-const groupFor = item => LIBRARY_GROUPS.find(g=>g.kinds.includes(item.kind))?.id;
+const groupFor = item => playerGroupOverride(item)??LIBRARY_GROUPS.find(g=>g.kinds.includes(item.kind))?.id;
 const title = (item,locale) => plainGameText(item.name?.[locale] ?? item.name?.en ?? '未命名物品','name');
 const desc = (item,locale) => item.description?.[locale] ?? item.description?.en ?? '';
 const cache = new WeakMap();
@@ -60,10 +61,10 @@ function projected(data,item,locale) {
 }
 function facets(item,idx) {
   const a=item.attributes ?? {};
-  return {incarnon:item.kind==='weapon'?(idx?.incarnon.has(item.id)?'genesis':'unlinked'):'',era:relicIdentity(item)?.era??'',category:typeof a.category==='string'?a.category:'',type:typeof a.type==='string'?a.type:'',trigger:typeof a.trigger==='string'?a.trigger:'',variant:typeof a.variantType==='string'?a.variantType.replace(/^VT_/,''):a.isPrime===true?'PRIME':a.isPrime===false?'NORMAL':'',rarity:item.rarity ?? '',tradable:item.tradable===true?'yes':item.tradable===false?'no':''};
+  return {incarnon:item.kind==='weapon'?(idx?.incarnon.has(item.id)?'genesis':'unlinked'):'',era:relicIdentity(item)?.era??'',...playerFacetValues(item),trigger:typeof a.trigger==='string'?a.trigger:'',variant:typeof a.variantType==='string'?a.variantType.replace(/^VT_/,''):a.isPrime===true?'PRIME':a.isPrime===false?'NORMAL':'',rarity:item.rarity ?? '',tradable:item.tradable===true?'yes':item.tradable===false?'no':''};
 }
 function summary(item,locale,idx) {
-  const f=facets(item,idx);return {id:item.id,kind:item.kind,group:groupFor(item),title:title(item,locale),english:plainGameText(item.name?.en ?? '', 'name'),description:desc(item,locale),facets:f,tags:[playerLabel(f.type||f.category),f.variant==='PRIME'?'Prime':null,Number.isFinite(item.masteryRank)?'段位 '+item.masteryRank:null,item.helminth?.transferable?'可移植':null,f.incarnon==='genesis'?'可安装灵化之源':null].filter(Boolean),masteryRank:item.masteryRank,stats:item.stats ?? {}};
+  const f=facets(item,idx);return {id:item.id,kind:item.kind,group:groupFor(item),title:title(item,locale),english:plainGameText(item.name?.en ?? '', 'name'),description:desc(item,locale),facets:f,tags:[...(f.category==='Companion Resources'?['同伴资源']:[]),playerLabel(f.type||f.category),f.variant==='PRIME'?'Prime':null,Number.isFinite(item.masteryRank)?'段位 '+item.masteryRank:null,item.helminth?.transferable?'可移植':null,f.incarnon==='genesis'?'可安装灵化之源':null].filter(Boolean),masteryRank:item.masteryRank,stats:item.stats ?? {}};
 }
 const filters=['incarnon','era','category','type','trigger','variant','rarity','tradable'];
 function validate(data,args) {
@@ -78,7 +79,7 @@ export function playerLibraryList(data,{group='warframe',query='',locale='zh-CN'
   const groups=LIBRARY_GROUPS.map(g=>({...g,count:visible.filter(i=>inGroup(i,g.id)).length}));
   const candidates=visible.filter(i=>inGroup(i,group)&&(!q||plainGameText([...Object.values(i.name ?? {}),...Object.values(i.description ?? {}),...(i.kind==='blueprint'?Object.values(idx.byId.get(idx.recipes.get(i.id)?.resultId)?.description??{}):[])].join(' ')).toLocaleLowerCase().includes(q))&&(!mastery||(Number.isFinite(i.masteryRank)&&(mastery==='15+'?i.masteryRank>=15:i.masteryRank>=Number(mastery.split('-')[0])&&i.masteryRank<=Number(mastery.split('-')[1])))));
   const match=(i,except)=>{const f=facets(i,idx);return filters.every(k=>k===except||!selected[k]||f[k]===selected[k]);};
-  const options=Object.fromEntries((group==='relic'?['era']:filters.filter(k=>k!=='era'&&(k!=='incarnon'||group==='weapon'))).map(key=>{const counts=new Map();for(const i of candidates.filter(i=>match(i,key))){const v=facets(i,idx)[key];if(v)counts.set(v,(counts.get(v)??0)+1);}return [key,[...counts].sort(([a],[b])=>key==='era'?RELIC_ERAS.findIndex(e=>e[0]===a)-RELIC_ERAS.findIndex(e=>e[0]===b):playerLabel(a).localeCompare(playerLabel(b),'zh-CN')).map(([value,count])=>({value,label:key==='era'?RELIC_ERAS.find(e=>e[0]===value)?.[1]??value:key==='tradable'?(value==='yes'?'可交易':'不可交易'):playerLabel(value),count}))];}));
+  const options=Object.fromEntries((group==='relic'?['era']:filters.filter(k=>k!=='era'&&(k!=='incarnon'||group==='weapon'))).map(key=>{const counts=new Map();for(const i of candidates.filter(i=>match(i,key))){const v=facets(i,idx)[key];if(v)counts.set(v,(counts.get(v)??0)+1);}return [key,[...counts].sort(([a],[b])=>key==='era'?RELIC_ERAS.findIndex(e=>e[0]===a)-RELIC_ERAS.findIndex(e=>e[0]===b):comparePlayerFacets(key,a,b,playerLabel)).map(([value,count])=>({value,label:key==='era'?RELIC_ERAS.find(e=>e[0]===value)?.[1]??value:key==='tradable'?(value==='yes'?'可交易':'不可交易'):playerLabel(value),count}))];}));
   const result=candidates.filter(i=>match(i));
   result.sort((a,b)=>{if(sort==='name')return title(a,locale).localeCompare(title(b,locale),'zh-CN')||a.id.localeCompare(b.id);const val=i=>sort==='mastery'?i.masteryRank:i.stats?.[{damage:'totalDamage',crit:'criticalChance',fireRate:'fireRate'}[sort]];const av=val(a),bv=val(b);return Number.isFinite(av)&&Number.isFinite(bv)?(sort==='mastery'?av-bv:bv-av)||a.id.localeCompare(b.id):Number.isFinite(av)?-1:Number.isFinite(bv)?1:a.id.localeCompare(b.id);});
   const page=result.slice(offset,offset+limit),images=imageDescriptors(data,page,locale);

@@ -4,11 +4,11 @@ export async function decorateImages(api, entries, detail = false) {
   // Keep each response below the byte budget; a dense page must not starve its last images.
   if (entries.length > 16) { for (let i = 0; i < entries.length; i += 16) await decorateImages(api, entries.slice(i, i + 16), detail); return; }
   try {
-    const images = await api.images(entries.map(({ id, imageName, blueprint, resultId, resultImageName, icon, abilityIcon }) => ({ id, imageName, blueprint, resultId, resultImageName, icon, abilityIcon })));
+    const images = await api.images(entries.map(({ id, imageName, blueprint, resultId, resultImageName, icon, abilityIcon, cardArt }) => ({ id, imageName, blueprint, resultId, resultImageName, icon, abilityIcon, hasCardArt: cardArt !== undefined })));
     await Promise.all(images.map(async (image, index) => {
       const { card, label } = entries[index];
       if (!image || !card.isConnected || card.querySelector(':scope > .local-item-image')) return;
-      const art=await composeCardArt(image,entries[index],detail);
+      const art=await composeCardArt(image,{...entries[index],cardArt:entries[index].cardArt??image.cardArt});
       if(!card.isConnected)return;
       const original=image;
       if(art)image={...image,dataUrl:art.dataUrl};

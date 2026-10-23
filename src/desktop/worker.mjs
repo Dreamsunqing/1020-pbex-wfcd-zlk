@@ -1,3 +1,4 @@
+import {allItems} from '../core/merge/repository.mjs';
 import {boosterArtAliases} from '../core/image-presentation.mjs';
 import {enrichWorldRewardArt} from '../core/live-state/reward-art.mjs';
 import {resolvePlayerDataset} from '../core/player-dataset.mjs';
@@ -33,7 +34,7 @@ import { scanStructure, sliceStructure, recordDetail, isRecordMap } from '../cor
 import { pointerValue } from '../core/library.mjs';
 import { RuleStore, validateRules } from '../core/merge/rules.mjs';
 import { exportMerged } from '../core/merge/repository.mjs';
-import { mergeContext, mergedStatus, datasetFor, mergedList, mergedDetail, expandEvidence, imageDescriptors } from '../core/merge/service.mjs';
+import { mergeContext, mergedStatus, datasetFor, mergedList, mergedDetail, expandEvidence, imageDescriptors, localizedCardArt } from '../core/merge/service.mjs';
 
 const store = new Store(workerData.storeRoot);
 const liveState = new LiveStateStore(path.join(workerData.userData, 'world-state'));
@@ -65,6 +66,7 @@ let library = null, release = null, mode = 'local', cached = null, busy = false;
 const previewTitles = new PreviewTitles();
 let structureCache = null;
 const localImages = new LocalImages();
+const imageItemIndexes = new WeakMap();
 const documents = new DocumentLibrary(workerData.documentsRoot ?? workerData.defaultRoot);
 let gallery = new ImageGallery(workerData.contentRoot, path.join(workerData.defaultRoot, '世界状态上游'));
 async function initializeImages(root) {
@@ -168,6 +170,17 @@ const handlers = {
         } catch { /* Exact missing asset: only try an explicitly reviewed illustration. */ }
       }
     }
+    // ID-only requests (JSON preview / WM) share the same presentation as the library.
+    // Existing descriptors retain their dataset and language; never replace them.
+    if(images.some((image,i)=>image&&!requests[i].hasCardArt))try {
+      const data=await playerDataset();
+      if(!imageItemIndexes.has(data.output))imageItemIndexes.set(data.output,new Map(allItems(data).filter(item=>['mod','arcane'].includes(item.kind)).map(item=>[item.id,item])));
+      const items=imageItemIndexes.get(data.output);
+      for(let i=0;i<images.length;i++)if(images[i]&&!requests[i].hasCardArt){
+        const item=items.get(requests[i].id);
+        if(item)images[i]={...images[i],cardArt:localizedCardArt(data,item)};
+      }
+    } catch { /* Optional presentation must not block raw local images. */ }
     return images;
   },
   async galleryList(args) { return gallery.list(args); },

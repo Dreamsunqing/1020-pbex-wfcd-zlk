@@ -313,3 +313,6 @@
 @media(max-width:720px) { .merge-reward-catalog { grid-template-columns:1fr; }.reward-item-grid { grid-template-columns:repeat(auto-fill,minmax(135px,1fr)); } }
 .local-item-image.wfcd-ability-image { background:var(--c-244b4b);border-radius:7px;padding:5px; }
 .card .oracle-reward-context { font-size:11px;color:var(--c-647e73);line-height:1.6;margin:6px 0; }
+
+/* Share full portrait Mod art without changing each host card or image slot. */
+.local-item-image.full-mod-card { object-fit:contain;object-position:center;filter:none; }

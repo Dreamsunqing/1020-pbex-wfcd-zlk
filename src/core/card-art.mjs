@@ -1,7 +1,7 @@
 // Layout data only. PNG assets are copied locally by scripts/sync-card-assets.mjs.
 const prefixes={COMMON:'Bronze',UNCOMMON:'Silver',RARE:'Gold',LEGENDARY:'Legendary'};
 const polarities={AP_ATTACK:'Madurai',AP_DEFENSE:'Vazarin',AP_TACTIC:'Naramon',AP_POWER:'Zenurik',AP_PRECEPT:'Penjaga',AP_UMBRA:'Umbra',madurai:'Madurai',vazarin:'Vazarin',naramon:'Naramon',zenurik:'Zenurik',unairu:'Unairu',penjaga:'Penjaga',umbra:'Umbra'};
-export function cardArt(item) {
+export function cardArt(item,locale='zh-CN') {
   const rarity=String(item.rarity??'').toUpperCase(),prefix=prefixes[rarity];if(!prefix)return null;
   if(item.kind==='arcane')return {kind:'arcane',background:'arcanes/'+({COMMON:'Common',UNCOMMON:'Uncommon',RARE:'Rare',LEGENDARY:'Rare-Legendary'}[rarity])+'.png'};
   if(item.kind!=='mod')return null;
@@ -16,5 +16,5 @@ export function cardArt(item) {
   files.lowerTab??=standard.lowerTab;files.drainBacker??=standard.drainBacker;
   const rank=stats.fusionLimit??a.fusionLimit,base=stats.baseDrain??a.baseDrain,slots=Number.isInteger(rank)&&rank>=0&&rank<=20?rank:0;
   const lines=a.levelStats?.at(-1)?.stats;
-  return {kind:'mod',variant,assets:Object.fromEntries(Object.entries(files).map(([k,v])=>[k,'mods/wiki/'+v])),slots,drain:Number.isFinite(base)?Math.abs(base+(base<0?-slots:slots)):null,polarity:polarities[a.polarity]?'mods/polarities/'+polarities[a.polarity]+'.png':null,polarityText:['AP_UNIVERSAL','universal'].includes(a.polarity)?'◎':['aura'].includes(a.polarity)?'A':'',type:a.compatName??a.type??'',effects:Array.isArray(lines)?lines:[],description:item.description??{}};
+  return {kind:'mod',locale,title:item.name?.[locale]??item.name?.en??'',variant,assets:Object.fromEntries(Object.entries(files).map(([k,v])=>[k,'mods/wiki/'+v])),slots,drain:Number.isFinite(base)?Math.abs(base+(base<0?-slots:slots)):null,polarity:polarities[a.polarity]?'mods/polarities/'+polarities[a.polarity]+'.png':null,polarityText:['AP_UNIVERSAL','universal'].includes(a.polarity)?'◎':['aura'].includes(a.polarity)?'A':'',type:a.compatName??a.type??'',effects:Array.isArray(lines)?lines:[],description:item.description??{}};
 }

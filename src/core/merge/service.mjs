@@ -62,13 +62,20 @@ const imageNames = data => {
   }
   return imageCache.get(data.output);
 };
-export const imageDescriptors = (data, items) => {
-  if(data.output['player/images.json'])return Object.fromEntries(items.map(item=>[item.id,{...data.output['player/images.json'][item.id],cardArt:cardArt(item)}]));
+// Project nested effects/type for the requested language before drawing a card.
+export function localizedCardArt(data,item,locale='zh-CN') {
+  if(!['mod','arcane'].includes(item.kind))return null;
+  const keys=new Set(['en',locale].flatMap(language=>Object.keys(data.output['localizations/'+language+'.json']?.[item.id]??{})));
+  const fields=Object.fromEntries([...keys].map(field=>[field,selectLocalizedField(data,item.id,field,locale)]).filter(([,entry])=>entry));
+  return cardArt(applyLocalizedFields(item,fields),locale);
+}
+export const imageDescriptors = (data, items,locale='zh-CN') => {
+  if(data.output['player/images.json'])return Object.fromEntries(items.map(item=>[item.id,{...data.output['player/images.json'][item.id],cardArt:localizedCardArt(data,item,locale)}]));
   const names = imageNames(data), recipes = new Map(data.output['recipes.json'].map(row => [row.id, row]));
   return Object.fromEntries(items.map(item => {
     const resultId = recipes.get(item.id)?.resultId;
     const icon = iconCache.get(data.output)?.[item.id];
-    return [item.id, { id: item.id, cardArt: cardArt(item), imageName: names[item.id] ?? iconFilename(icon), icon, abilityIcon: isAbilityIcon(icon, names[item.id]), blueprint: item.kind === 'blueprint', resultId, resultImageName: names[resultId] }];
+    return [item.id, { id: item.id, cardArt: localizedCardArt(data,item,locale), imageName: names[item.id] ?? iconFilename(icon), icon, abilityIcon: isAbilityIcon(icon, names[item.id]), blueprint: item.kind === 'blueprint', resultId, resultImageName: names[resultId] }];
   }));
 };
 const itemTitle = (item,locale) => item?.name?.[locale] ?? item?.name?.en ?? item?.id?.split('/').at(-1);
@@ -85,7 +92,7 @@ export function mergedList(data, { query = '', kind = '', offset = 0, limit = 80
   const matching = allItems(data).filter(item => (!kind || item.kind === kind) && (!search || `${item.id} ${Object.values(item.name).join(' ')} ${Object.values(item.name).map(value => plainGameText(value, 'name')).join(' ')}`.toLocaleLowerCase().includes(search)));
   const rows = matching.filter(item => includeInternal || !hidden.has(item.id)).sort((a, b) => kindOrder.indexOf(a.kind) - kindOrder.indexOf(b.kind) || compareText(a.id, b.id));
   const page = rows.slice(offset, offset + limit), names = imageNames(data);
-  return { locale, locales:data.manifest.locales ?? ['zh-CN','en'], kinds: KINDS, datasetVersion: data.manifest.datasetVersion, rows: page.map(item => ({ ...item, internalReason: hidden.get(item.id) })), hiddenCount: matching.filter(item => hidden.has(item.id)).length, includeInternal, badges: itemBadges(data, page.map(i => i.id),locale), images: imageDescriptors(data, page), imageNames: Object.fromEntries(page.map(row => [row.id, names[row.id]])), total: rows.length, hasMore: offset + limit < rows.length };
+  return { locale, locales:data.manifest.locales ?? ['zh-CN','en'], kinds: KINDS, datasetVersion: data.manifest.datasetVersion, rows: page.map(item => ({ ...item, internalReason: hidden.get(item.id) })), hiddenCount: matching.filter(item => hidden.has(item.id)).length, includeInternal, badges: itemBadges(data, page.map(i => i.id),locale), images: imageDescriptors(data, page,locale), imageNames: Object.fromEntries(page.map(row => [row.id, names[row.id]])), total: rows.length, hasMore: offset + limit < rows.length };
 }
 export function mergedDetail(data, id, {locale='zh-CN'}={}) {
   if (!(data.manifest.locales ?? ['zh-CN','en']).includes(locale)) throw new Error('未构建该语言');
@@ -104,7 +111,7 @@ export function mergedDetail(data, id, {locale='zh-CN'}={}) {
   const relatedIds = new Set([id, ...Object.keys(references)]);
   for (const relation of data.output['relations.json']) if (relation.from === id || relation.to === id) relatedIds.add(relation.from === id ? relation.to : relation.from);
   return {
-    locale, locales:data.manifest.locales ?? ['zh-CN','en'], datasetVersion: data.manifest.datasetVersion, item, internalReason: internalItems(data).get(id), image: imageDescriptors(data, [item])[id], imageName: imageNames(data)[id], recipe: expandEvidence(data, data.output['recipes.json'].find(row => row.id === id) ?? null),
+    locale, locales:data.manifest.locales ?? ['zh-CN','en'], datasetVersion: data.manifest.datasetVersion, item, internalReason: internalItems(data).get(id), image: imageDescriptors(data, [item],locale)[id], imageName: imageNames(data)[id], recipe: expandEvidence(data, data.output['recipes.json'].find(row => row.id === id) ?? null),
     fields: expandEvidence(data, data.output['reports/provenance.json'].filter(row => row.entityId === id)).map(field => {
       const candidates = field.candidates.map(candidate => {
         if (!candidate.compact) return candidate;
@@ -121,7 +128,7 @@ export function mergedDetail(data, id, {locale='zh-CN'}={}) {
     }),
     issues: expandEvidence(data, data.output['reports/issues.json'].filter(row => row.entityId === id)),
     relations: expandEvidence(data, data.output['relations.json'].filter(row => row.from === id || row.to === id)).map(row => ({ ...row, fromLabel: names.get(row.from) ?? row.from.split('/').at(-1), toLabel: names.get(row.to) ?? row.to.split('/').at(-1), navigable: row.from === id ? names.has(row.to) : names.has(row.from) })),
-    sources, references, images: imageDescriptors(data, [...relatedIds].map(id => entities.get(id)).filter(Boolean)), badges: itemBadges(data, [...relatedIds],locale),
+    sources, references, images: imageDescriptors(data, [...relatedIds].map(id => entities.get(id)).filter(Boolean),locale), badges: itemBadges(data, [...relatedIds],locale),
     relationDefinitions: Object.fromEntries([...nestedRules(data.output['contract.json'])].reverse().map(r => [r.relation, r.label])),
     collectionDefinitions: Object.fromEntries([...nestedRules(data.output['contract.json'])].reverse().map(r => [r.path, r.label]).concat([['augments', '集团卡／强化 Mod'], ['helminth.listedFrames', '可移植技能所属战甲']])),
     definitions: data.output['contract.json'].fields

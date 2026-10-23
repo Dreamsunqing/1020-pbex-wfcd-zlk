@@ -81,7 +81,7 @@ export function playerLibraryList(data,{group='warframe',query='',locale='zh-CN'
   const options=Object.fromEntries((group==='relic'?['era']:filters.filter(k=>k!=='era'&&(k!=='incarnon'||group==='weapon'))).map(key=>{const counts=new Map();for(const i of candidates.filter(i=>match(i,key))){const v=facets(i,idx)[key];if(v)counts.set(v,(counts.get(v)??0)+1);}return [key,[...counts].sort(([a],[b])=>key==='era'?RELIC_ERAS.findIndex(e=>e[0]===a)-RELIC_ERAS.findIndex(e=>e[0]===b):playerLabel(a).localeCompare(playerLabel(b),'zh-CN')).map(([value,count])=>({value,label:key==='era'?RELIC_ERAS.find(e=>e[0]===value)?.[1]??value:key==='tradable'?(value==='yes'?'可交易':'不可交易'):playerLabel(value),count}))];}));
   const result=candidates.filter(i=>match(i));
   result.sort((a,b)=>{if(sort==='name')return title(a,locale).localeCompare(title(b,locale),'zh-CN')||a.id.localeCompare(b.id);const val=i=>sort==='mastery'?i.masteryRank:i.stats?.[{damage:'totalDamage',crit:'criticalChance',fireRate:'fireRate'}[sort]];const av=val(a),bv=val(b);return Number.isFinite(av)&&Number.isFinite(bv)?(sort==='mastery'?av-bv:bv-av)||a.id.localeCompare(b.id):Number.isFinite(av)?-1:Number.isFinite(bv)?1:a.id.localeCompare(b.id);});
-  const page=result.slice(offset,offset+limit),images=imageDescriptors(data,page);
+  const page=result.slice(offset,offset+limit),images=imageDescriptors(data,page,locale);
   return {datasetVersion:data.manifest.datasetVersion,locales:data.manifest.locales,groups,options,selectedLabels:Object.fromEntries(Object.entries(selected).map(([k,v])=>[k,k==='era'?RELIC_ERAS.find(e=>e[0]===v)?.[1]??v:k==='tradable'?(v==='yes'?'可交易':'不可交易'):playerLabel(v)])),total:result.length,offset,hasMore:offset+limit<result.length,rows:page.map(i=>{const row=summary(i,locale,idx);delete row.description;return {...row,image:images[i.id]};})};
 }
 export function playerRadar(item,peers) {
@@ -126,7 +126,7 @@ export function playerLibraryDetail(data,id,{locale='zh-CN'}={}) {
   if(blueprintSources.size)related.set('蓝图获取遗物',blueprintSources);
   const order=['灵化之源','适配武器','技能','显赫武器','强化 Mod','可移植技能','组件与材料','制造材料','制作成品','制作蓝图','附带物品'];
   const relationGroups=[...related].sort(([a],[b])=>(order.includes(a)?order.indexOf(a):99)-(order.includes(b)?order.indexOf(b):99)).map(([label,rows])=>({label,rows:[...rows.values()].sort((a,b)=>(a.slot??0)-(b.slot??0))}));
-  const all=[item,...[...related.values()].flatMap(rows=>[...rows.keys()].map(id=>idx.byId.get(id)))],images=imageDescriptors(data,all);
+  const all=[item,...[...related.values()].flatMap(rows=>[...rows.keys()].map(id=>idx.byId.get(id)))],images=imageDescriptors(data,all,locale);
   for(const g of relationGroups)for(const row of g.rows)row.image=images[row.id];
   const f=facets(item,idx),peers=idx.rows.filter(i=>i.kind===item.kind&&facets(i).category===f.category&&facets(i).type===f.type);
   const definitions=data.output['contract.json']?.fields ?? [];

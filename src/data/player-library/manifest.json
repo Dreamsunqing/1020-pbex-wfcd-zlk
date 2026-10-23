@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetVersion": "875c7be2dd974bad7648ed9a760e576964650b5cced8439e164e13da0bcaf01e",
+  "datasetVersion": "3ed4e4fe8982c235230d486479324b3f2c10f01ba95ff50281926b1a576896a0",
   "sourceContext": null,
   "sourceInputs": [
     {
@@ -67,6 +67,21 @@
       "source": "plus-gen",
       "file": "git/warframe-public-export-plus-gen/extras/wiki/Warframes.lua",
       "hash": "875ffaab0268127d2b15f097cc8d0115d398f4651cfb71212ead278e9808c2a9"
+    },
+    {
+      "source": "plus-gen",
+      "file": "git/warframe-public-export-plus-gen/extras/wiki/Weapons/melee.lua",
+      "hash": "58a65f1bfc06819841b769ea8bf204c88a2b819da4b4c5d78fbfec79189e7f8c"
+    },
+    {
+      "source": "plus-gen",
+      "file": "git/warframe-public-export-plus-gen/extras/wiki/Weapons/primary.lua",
+      "hash": "080f1d6881e4166eaf64b8e8f6d0af05dd92ca7fb9d07eb9dc7586460497c883"
+    },
+    {
+      "source": "plus-gen",
+      "file": "git/warframe-public-export-plus-gen/extras/wiki/Weapons/secondary.lua",
+      "hash": "49c026b478dd18f9237d348a6469b9e45b5af511600c0f8c7ca94d6f041ea381"
     },
     {
       "source": "plus",
@@ -1874,13 +1889,13 @@
       "hash": "029a7dd62e9ef32f035a0741b0ad5e898d1db0e6b2b7da3a4942edddf72c68af"
     }
   ],
-  "preparedAt": "2026-10-23T19:42:46.643Z",
+  "preparedAt": "2026-10-23T20:57:27.571Z",
   "entities": 32941,
   "locales": [
     "zh-CN",
     "en"
   ],
-  "bytes": 3837045,
-  "jsonBytes": 49366201,
-  "sha256": "4f81671e5ec4b6837a5417d021d09fecc16f91f59095243612ff2f7b3c3ff67b"
+  "bytes": 3840212,
+  "jsonBytes": 49419810,
+  "sha256": "bebbff7feaea4fc864d1c9dcf49a7911c712bb84c39122e17609fb1ea2d48fdb"
 }

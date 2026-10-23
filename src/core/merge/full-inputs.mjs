@@ -16,7 +16,7 @@ export async function fullInputs({ files, read, contract }) {
     }
   }
   for (const file of [...files].sort((a, b) => compareText(a.id, b.id))) {
-    const wikiMetadata = file.source === 'plus-gen' && /\/extras\/wiki\/(Warframes|Mods)\.lua$/.test(file.id);
+    const wikiMetadata = file.source === 'plus-gen' && /\/extras\/wiki\/(Warframes|Mods|Weapons\/(primary|secondary|melee))\.lua$/.test(file.id);
     if (!/\.jsonc?$/.test(file.id) && !wikiMetadata) { inventory.push({ file: file.id, source: file.source, status: 'excluded', reason: '说明／源码／排期文本，继续由原模块使用' }); continue; }
     const matched = rules.filter(r => file.source === r.source && (file.id === `${r.source}/${r.file}` || file.id.endsWith('/' + r.file)));
     const dictionary = (file.source === 'plus' && /\/dict\.[a-z]+\.json$/.test(file.id)) || (file.source === 'oracle' && /\/dicts\/[a-z]+\.json$/.test(file.id));
@@ -38,7 +38,7 @@ export async function fullInputs({ files, read, contract }) {
     inventory.push(item);
     const lang = dictionary ? /(?:dict\.|dicts\/)([a-z]+)\.json$/.exec(file.id)?.[1] : itemDictionary ? /\/i18n\/([a-z]+)\.json$/.exec(file.id)?.[1] : null;
     if (lang && contract.locales.includes(normalizeLocale(lang))) dictionaries.push({ ...doc, locale: normalizeLocale(lang), shape: itemDictionary ? 'item' : 'language' });
-    if (wikiMetadata) { item.status = 'metadata'; item.reason = '只读提取明确的 Subsumed／强化标记；Lua 不执行，原文另行保留'; continue; }
+    if (wikiMetadata) { item.status = 'metadata'; item.reason = '只读提取技能、强化及武器家族／灵化元数据；Lua 不执行，原文另行保留'; continue; }
     const seen = new Set();
     for (const rule of matched) {
       const add = (key, record, at) => {

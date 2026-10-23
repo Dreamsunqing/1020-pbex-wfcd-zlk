@@ -2,14 +2,17 @@ import { pointer, compareText } from './contract.mjs';
 
 // Read the generated wiki snapshots as data only. Exact indentation bounds each
 // record; nested display tables cannot masquerade as top-level metadata fields.
-export function wikiRecords(text) {
+export function wikiRecords(text, { depth = 2, fields = ['InternalName','Name','Description','Subsumed','Type','IsAbilityAugment','IsWeaponAugment'] } = {}) {
   const clean = text.replace(/"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|--\[(=*)\[[\s\S]*?\]\1\]|--[^\r\n]*/g, part => part.startsWith('--') ? part.replace(/[^\r\n]/g, ' ') : part);
   const result = [], starts = [0];
   for (let i = 0; i < clean.length; i++) if (clean[i] === '\n') starts.push(i + 1);
   const lineAt = at => { let lo = 0, hi = starts.length; while (lo < hi) { const mid = (lo + hi) >>> 1; if (starts[mid] <= at) lo = mid + 1; else hi = mid; } return lo; };
-  for (const match of clean.matchAll(/^\t\t[^\r\n]+ = \{\r?\n([\s\S]*?)^\t\t\}[,\r]?$/gm)) {
+  const indent = '\t'.repeat(depth);
+  const records = new RegExp('^' + indent + '[^\\r\\n]+ = \\{\\r?\\n([\\s\\S]*?)^' + indent + '\\}[,\\r]?$', 'gm');
+  for (const match of clean.matchAll(records)) {
     const value = {}, lines = {};
-    for (const field of match[1].matchAll(/^\t\t\t(InternalName|Name|Description|Subsumed|Type|IsAbilityAugment|IsWeaponAugment) = ("(?:\\.|[^"\\])*"|true|false)[,\r]?$/gm)) {
+    for (const field of match[1].matchAll(new RegExp('^' + indent + '\t([A-Za-z]+) = ("(?:\\\\.|[^"\\\\])*"|true|false)[,\\r]?$', 'gm'))) {
+      if (!fields.includes(field[1])) continue;
       let parsed; try { parsed = field[2] === 'true' ? true : field[2] === 'false' ? false : JSON.parse(field[2]); } catch { continue; }
       value[field[1]] = parsed;
       lines[field[1]] = lineAt(match.index + match[0].indexOf(match[1]) + field.index);

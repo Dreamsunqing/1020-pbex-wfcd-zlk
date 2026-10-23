@@ -35,7 +35,7 @@ const schemas = {
   } },
   FlashSales: { list: {
     TypeName: str("itemType"), StartDate: date("startsAt"), EndDate: date("endsAt"),
-    Discount: num("discount", false), PremiumOverride: num("premiumOverride", false),
+    Discount: num("discount", false), PremiumOverride: num("premiumOverride", false), RegularOverride: num("regularOverride", false),
     ShowInMarket: bool("showInMarket"), HideFromMarket: bool("hideFromMarket"),
     DailySaleGenerated: bool("dailySaleGenerated"), UrlOverride: str("urlOverride", false),
   } },

@@ -1,0 +1,671 @@
+{
+  "schemaVersion": 1,
+  "source": "https://www.warframe.com/droptables",
+  "retrievedAt": "2026-10-23T12:04:54.398468+00:00",
+  "sourceHash": "c31c421954adbd46ec962d40f71d7e7360df3248bd43ce8885d89b7375ddd3d9",
+  "tables": {
+    "The Descendia: Infernum 20 Triple Arcane Rewards": {
+      "source": "https://www.warframe.com/droptables#thedescendia:infernum20triplearcanerewards",
+      "rewards": [
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Utility/GolemArcaneAimGlideOnHeadshot",
+          "englishName": "Arcane Consequence",
+          "rawName": "3X Arcane Consequence",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/FireProcResist",
+          "englishName": "Arcane Ice",
+          "rawName": "3X Arcane Ice",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/GolemArcaneSniperSpeedOnCrit",
+          "englishName": "Arcane Momentum",
+          "rawName": "3X Arcane Momentum",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/MagneticProcResist",
+          "englishName": "Arcane Nullifier",
+          "rawName": "3X Arcane Nullifier",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/GolemArcaneShotgunSpeedOnCrit",
+          "englishName": "Arcane Tempo",
+          "rawName": "3X Arcane Tempo",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/FreezeProcResist",
+          "englishName": "Arcane Warmth",
+          "rawName": "3X Arcane Warmth",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/SlashProcResist",
+          "englishName": "Arcane Deflection",
+          "rawName": "3X Arcane Deflection",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/RadiationProcResist",
+          "englishName": "Arcane Healing",
+          "rawName": "3X Arcane Healing",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/ElectricityProcResist",
+          "englishName": "Arcane Resistance",
+          "rawName": "3X Arcane Resistance",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/HealthRegenOnHeadshot",
+          "englishName": "Arcane Victory",
+          "rawName": "3X Arcane Victory",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/LongGunSpeedOnCrit",
+          "englishName": "Arcane Acceleration",
+          "rawName": "3X Arcane Acceleration",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/SpeedOnDamage",
+          "englishName": "Arcane Agility",
+          "rawName": "3X Arcane Agility",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Utility/PistolDamageOnReload",
+          "englishName": "Arcane Awakening",
+          "rawName": "3X Arcane Awakening",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Utility/RadialKnockdownOnEnergyPickup",
+          "englishName": "Arcane Eruption",
+          "rawName": "3X Arcane Eruption",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/SpeedOnParry",
+          "englishName": "Arcane Phantasm",
+          "rawName": "3X Arcane Phantasm",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/MeleeSpeedOnHit",
+          "englishName": "Arcane Strike",
+          "rawName": "3X Arcane Strike",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/GolemArcanePistolDamageOnHeadshot",
+          "englishName": "Arcane Precision",
+          "rawName": "3X Arcane Precision",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Utility/RadialHealOnHealthPickup",
+          "englishName": "Arcane Pulse",
+          "rawName": "3X Arcane Pulse",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/GolemArcaneArmorOnFinisher",
+          "englishName": "Arcane Ultimatum",
+          "rawName": "3X Arcane Ultimatum",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/InvisibilityOnFinisher",
+          "englishName": "Arcane Trickery",
+          "rawName": "3X Arcane Trickery",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/GolemArcanePistolSpeedOnCrit",
+          "englishName": "Arcane Velocity",
+          "rawName": "3X Arcane Velocity",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Utility/GolemArcaneBonusDamageOnWallLatch",
+          "englishName": "Arcane Arachne",
+          "rawName": "3X Arcane Arachne",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/CritChanceOnDamage",
+          "englishName": "Arcane Avenger",
+          "rawName": "3X Arcane Avenger",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/GolemArcaneMeleeDamageOnCrit",
+          "englishName": "Arcane Fury",
+          "rawName": "3X Arcane Fury",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/LongGunDamageOnHeadshot",
+          "englishName": "Arcane Rage",
+          "rawName": "3X Arcane Rage",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/GolemArcaneShieldRegenOnDamage",
+          "englishName": "Arcane Aegis",
+          "rawName": "3X Arcane Aegis",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/ArmourOnDamage",
+          "englishName": "Arcane Guardian",
+          "rawName": "3X Arcane Guardian",
+          "quantity": 3,
+          "probability": 0.037000000000000005,
+          "stats": []
+        }
+      ]
+    },
+    "The Descendia: Infernum 6 and 13 Arcane Rewards (Steel Path)": {
+      "source": "https://www.warframe.com/droptables#thedescendia:infernum6and13arcanerewards(steelpath)",
+      "rewards": [
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/DamageForBonusArmour",
+          "englishName": "Primary Bulwark",
+          "rawName": "Primary Bulwark",
+          "quantity": 1,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Utility/FreezeEnemiesOnRoll",
+          "englishName": "Melee Careen",
+          "rawName": "Melee Careen",
+          "quantity": 1,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/MultishotForMaxEnergy",
+          "englishName": "Primary Overcharge",
+          "rawName": "Primary Overcharge",
+          "quantity": 1,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/ShieldMaxForAbilityStrength",
+          "englishName": "Arcane Expertise",
+          "rawName": "Arcane Expertise",
+          "quantity": 1,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/MaxDPSTakenForArmour",
+          "englishName": "Arcane Persistence",
+          "rawName": "Arcane Persistence",
+          "quantity": 1,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/StealDefensiveStatsOnRoll",
+          "englishName": "Arcane Circumvent",
+          "rawName": "Arcane Circumvent",
+          "quantity": 1,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/RadialDamageOnMaxRadiationStackHit",
+          "englishName": "Secondary Irradiate",
+          "rawName": "Secondary Irradiate",
+          "quantity": 1,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Utility/AbilityDurationOnCast",
+          "englishName": "Arcane Concentration",
+          "rawName": "Arcane Concentration",
+          "quantity": 1,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SplitStatusProcsOnStackedStatusHit",
+          "englishName": "Primary Debilitate",
+          "rawName": "Primary Debilitate",
+          "quantity": 1,
+          "probability": 0.11109999999999999,
+          "stats": []
+        }
+      ]
+    },
+    "The Descendia: Common Rewards (Steel Path)": {
+      "source": "https://www.warframe.com/droptables#thedescendia:commonrewards(steelpath)",
+      "rewards": [
+        {
+          "id": "/Lotus/Types/Gameplay/Tau/Resources/CoHResourceCommonItem",
+          "englishName": "Ignia",
+          "rawName": "75X Ignia",
+          "quantity": 75,
+          "probability": 0.5,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Gameplay/Tau/Resources/CoHResourceRareItem",
+          "englishName": "Maphica",
+          "rawName": "15X Maphica",
+          "quantity": 15,
+          "probability": 0.5,
+          "stats": []
+        }
+      ]
+    },
+    "The Descendia: Rare Rewards (Steel Path)": {
+      "source": "https://www.warframe.com/droptables#thedescendia:rarerewards(steelpath)",
+      "rewards": [
+        {
+          "id": "/Lotus/Types/Recipes/Components/OrokinCatalystBlueprint",
+          "englishName": "Orokin Catalyst Blueprint",
+          "rawName": "Orokin Catalyst Blueprint",
+          "quantity": 1,
+          "probability": 0.1936,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Recipes/Components/OrokinReactorBlueprint",
+          "englishName": "Orokin Reactor Blueprint",
+          "rawName": "Orokin Reactor Blueprint",
+          "quantity": 1,
+          "probability": 0.1936,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Recipes/Components/FormaAuraBlueprint",
+          "englishName": "Omni Forma Blueprint",
+          "rawName": "Omni Forma Blueprint",
+          "quantity": 1,
+          "probability": 0.1936,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Recipes/Lens/GenericLensOstronBlueprint",
+          "englishName": "Eidolon Lens Blueprint",
+          "rawName": "Eidolon Lens Blueprint",
+          "quantity": 1,
+          "probability": 0.1936,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Gameplay/NarmerSorties/ArchonCrystalAmar",
+          "englishName": "Crimson Archon Shard",
+          "rawName": "Crimson Archon Shard",
+          "quantity": 1,
+          "probability": 0.07519999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Gameplay/NarmerSorties/ArchonCrystalBoreal",
+          "englishName": "Azure Archon Shard",
+          "rawName": "Azure Archon Shard",
+          "quantity": 1,
+          "probability": 0.07519999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Gameplay/NarmerSorties/ArchonCrystalNira",
+          "englishName": "Amber Archon Shard",
+          "rawName": "Amber Archon Shard",
+          "quantity": 1,
+          "probability": 0.07519999999999999,
+          "stats": []
+        }
+      ]
+    },
+    "The Descendia: Uncommon Rewards (Steel Path)": {
+      "source": "https://www.warframe.com/droptables#thedescendia:uncommonrewards(steelpath)",
+      "rewards": [
+        {
+          "id": "/Lotus/Types/Recipes/Components/FormaBlueprint",
+          "englishName": "Forma Blueprint",
+          "rawName": "Forma Blueprint",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/Mods/Randomized/RawMeleeRandomMod",
+          "englishName": "Melee Riven Mod",
+          "rawName": "Melee Riven Mod",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/Mods/Randomized/RawPistolRandomMod",
+          "englishName": "Pistol Riven Mod",
+          "rawName": "Pistol Riven Mod",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/Mods/Randomized/RawRifleRandomMod",
+          "englishName": "Rifle Riven Mod",
+          "rawName": "Rifle Riven Mod",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/Mods/Randomized/RawShotgunRandomMod",
+          "englishName": "Shotgun Riven Mod",
+          "rawName": "Shotgun Riven Mod",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/Mods/Randomized/RawModularMeleeRandomMod",
+          "englishName": "Zaw Riven Mod",
+          "rawName": "Zaw Riven Mod",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/Mods/Randomized/RawModularPistolRandomMod",
+          "englishName": "Kitgun Riven Mod",
+          "rawName": "Kitgun Riven Mod",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Items/MiscItems/WeaponPrimaryArcaneUnlocker",
+          "englishName": "Primary Arcane Adapter",
+          "rawName": "Primary Arcane Adapter",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Items/MiscItems/WeaponSecondaryArcaneUnlocker",
+          "englishName": "Secondary Arcane Adapter",
+          "rawName": "Secondary Arcane Adapter",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Items/MiscItems/WeaponMeleeArcaneUnlocker",
+          "englishName": "Melee Arcane Adapter",
+          "rawName": "Melee Arcane Adapter",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Items/MiscItems/WeaponAmpArcaneUnlocker",
+          "englishName": "Amp Arcane Adapter",
+          "rawName": "Amp Arcane Adapter",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/StoreItems/Boosters/AffinityBoosterStoreItem",
+          "englishName": "3 Day Affinity Booster",
+          "rawName": "3 Day Affinity Booster",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": [
+            "3 天"
+          ]
+        },
+        {
+          "id": "/Lotus/Types/StoreItems/Boosters/ResourceDropChanceBoosterStoreItem",
+          "englishName": "3 Day Resource Drop Chance Booster",
+          "rawName": "3 Day Resource Drop Chance Booster",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": [
+            "3 天"
+          ]
+        },
+        {
+          "id": "/Lotus/Types/StoreItems/Boosters/ModDropChanceBoosterStoreItem",
+          "englishName": "3 Day Mod Drop Chance Booster",
+          "rawName": "3 Day Mod Drop Chance Booster",
+          "quantity": 1,
+          "probability": 0.07139999999999999,
+          "stats": [
+            "3 天"
+          ]
+        }
+      ]
+    },
+    "The Descendia: Steel Essence Rewards (Steel Path)": {
+      "source": "https://www.warframe.com/droptables#thedescendia:steelessencerewards(steelpath)",
+      "rewards": [
+        {
+          "id": "/Lotus/Types/Items/MiscItems/SteelEssence",
+          "englishName": "Steel Essence",
+          "rawName": "25X Steel Essence",
+          "quantity": 25,
+          "probability": 1.0,
+          "stats": []
+        }
+      ]
+    },
+    "The Descendia: Infernum 20 Triple Arcane Rewards (Steel Path)": {
+      "source": "https://www.warframe.com/droptables#thedescendia:infernum20triplearcanerewards(steelpath)",
+      "rewards": [
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/DamageForBonusArmour",
+          "englishName": "Primary Bulwark",
+          "rawName": "3X Primary Bulwark",
+          "quantity": 3,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Utility/FreezeEnemiesOnRoll",
+          "englishName": "Melee Careen",
+          "rawName": "3X Melee Careen",
+          "quantity": 3,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/MultishotForMaxEnergy",
+          "englishName": "Primary Overcharge",
+          "rawName": "3X Primary Overcharge",
+          "quantity": 3,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/ShieldMaxForAbilityStrength",
+          "englishName": "Arcane Expertise",
+          "rawName": "3X Arcane Expertise",
+          "quantity": 3,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/MaxDPSTakenForArmour",
+          "englishName": "Arcane Persistence",
+          "rawName": "3X Arcane Persistence",
+          "quantity": 3,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Defensive/StealDefensiveStatsOnRoll",
+          "englishName": "Arcane Circumvent",
+          "rawName": "3X Arcane Circumvent",
+          "quantity": 3,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/RadialDamageOnMaxRadiationStackHit",
+          "englishName": "Secondary Irradiate",
+          "rawName": "3X Secondary Irradiate",
+          "quantity": 3,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Utility/AbilityDurationOnCast",
+          "englishName": "Arcane Concentration",
+          "rawName": "3X Arcane Concentration",
+          "quantity": 3,
+          "probability": 0.11109999999999999,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SplitStatusProcsOnStackedStatusHit",
+          "englishName": "Primary Debilitate",
+          "rawName": "3X Primary Debilitate",
+          "quantity": 3,
+          "probability": 0.11109999999999999,
+          "stats": []
+        }
+      ]
+    },
+    "The Descendia: Roathe": {
+      "source": "https://www.warframe.com/droptables#thedescendia:roathe",
+      "rewards": [
+        {
+          "id": "/Lotus/Types/Recipes/WarframeRecipes/UrielChassisBlueprint",
+          "englishName": "Uriel Chassis Blueprint",
+          "rawName": "Uriel Chassis Blueprint",
+          "quantity": 1,
+          "probability": 0.125,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Recipes/WarframeRecipes/UrielHelmetBlueprint",
+          "englishName": "Uriel Neuroptics Blueprint",
+          "rawName": "Uriel Neuroptics Blueprint",
+          "quantity": 1,
+          "probability": 0.125,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Recipes/WarframeRecipes/UrielSystemsBlueprint",
+          "englishName": "Uriel Systems Blueprint",
+          "rawName": "Uriel Systems Blueprint",
+          "quantity": 1,
+          "probability": 0.125,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Recipes/Weapons/WeaponParts/VinquibusBarrelBlueprint",
+          "englishName": "Vinquibus Barrel Blueprint",
+          "rawName": "Vinquibus Barrel Blueprint",
+          "quantity": 1,
+          "probability": 0.125,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Recipes/Weapons/WeaponParts/VinquibusBladeBlueprint",
+          "englishName": "Vinquibus Blade Blueprint",
+          "rawName": "Vinquibus Blade Blueprint",
+          "quantity": 1,
+          "probability": 0.125,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Recipes/Weapons/WeaponParts/VinquibusReceiverBlueprint",
+          "englishName": "Vinquibus Receiver Blueprint",
+          "rawName": "Vinquibus Receiver Blueprint",
+          "quantity": 1,
+          "probability": 0.125,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Types/Recipes/Weapons/WeaponParts/VinquibusStockBlueprint",
+          "englishName": "Vinquibus Stock Blueprint",
+          "rawName": "Vinquibus Stock Blueprint",
+          "quantity": 1,
+          "probability": 0.125,
+          "stats": []
+        },
+        {
+          "id": "/Lotus/Weapons/Tenno/Bayonet/TnBayonetRifleBlueprint",
+          "englishName": "Vinquibus Blueprint",
+          "rawName": "Vinquibus Blueprint",
+          "quantity": 1,
+          "probability": 0.125,
+          "stats": []
+        }
+      ]
+    }
+  },
+  "unresolved": []
+}

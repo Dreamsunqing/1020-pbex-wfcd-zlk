@@ -103,18 +103,20 @@ function sourceTimeMs(raw) {
 /** 读取指定集团任务的到期时间，它是部分开放世界周期的 raw 边界。 */
 function syndicateExpiryMs(raw, tag, warnings) {
   if (!Array.isArray(raw?.SyndicateMissions)) return null;
-  const entry = raw.SyndicateMissions.find((mission) => mission?.Tag === tag);
-  if (!entry) {
-    warnings.push(`CYCLE_SYNDICATE_MISSING:${tag}`);
+  const entries = raw.SyndicateMissions.filter(mission => mission?.Tag === tag);
+  if (!entries.length) { warnings.push(`CYCLE_SYNDICATE_MISSING:${tag}`); return null; }
+  const now = sourceTimeMs(raw);
+  const current = entries.flatMap(entry => {
+    const expiry = Date.parse(readExtendedJsonDate(entry.Expiry) ?? '');
+    const activation = entry.Activation ? Date.parse(readExtendedJsonDate(entry.Activation) ?? '') : -Infinity;
+    return activation <= now && now < expiry ? [expiry] : [];
+  });
+  const expiries = [...new Set(current)];
+  if (expiries.length !== 1) {
+    warnings.push(`CYCLE_SYNDICATE_${expiries.length ? 'AMBIGUOUS' : 'NO_ACTIVE_WINDOW'}:${tag}`);
     return null;
   }
-
-  const expiry = readExtendedJsonDate(entry.Expiry);
-  if (!expiry) {
-    warnings.push(`CYCLE_SYNDICATE_EXPIRY_INVALID:${tag}`);
-    return null;
-  }
-  return Date.parse(expiry);
+  return expiries[0];
 }
 
 /** 输出六类周期共用的稳定 DTO，名称字段始终紧跟 raw 状态键。 */

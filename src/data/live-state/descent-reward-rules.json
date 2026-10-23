@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "verifiedForServers": [
+    "de"
+  ],
+  "milestoneSource": "https://www.warframe.com/zh-hans/patch-notes/pc/41-0-0",
+  "checkedAt": "2026-10-23",
+  "notes": [
+    "Descents provides one shared challenge schedule, not separate difficulty payloads.",
+    "Public drop tables are candidate pools, not this week’s chosen reward.",
+    "Normal common Ignia quantity differs between official zh/en notes; omit quantity until verified.",
+    "Normal 6/13 arcane candidates use the documented same arcane category as floor 20; their individual probabilities are not separately published."
+  ],
+  "checkpoints": [
+    7,
+    14
+  ],
+  "pools": {
+    "normalCommon": {
+      "label": "常见资源",
+      "source": "https://www.warframe.com/zh-hans/patch-notes/pc/41-0-0",
+      "candidates": [
+        {
+          "id": "/Lotus/Types/PickUps/Credits/10000Credits",
+          "quantity": 3
+        },
+        {
+          "id": "/Lotus/Upgrades/Mods/FusionBundles/JunctionRewardNPFusionBundleA",
+          "quantity": 1,
+          "stats": [
+            "2,500 内融核心"
+          ]
+        },
+        {
+          "id": "/Lotus/Types/Items/MiscItems/DistillPoints",
+          "quantity": 50
+        },
+        {
+          "id": "/Lotus/Types/Gameplay/Tau/Resources/CoHResourceCommonItem",
+          "quantity": null,
+          "stats": [
+            "数量待核实"
+          ]
+        },
+        {
+          "id": "/Lotus/Types/Gameplay/Tau/Resources/CoHResourceRareItem",
+          "quantity": 5
+        }
+      ]
+    },
+    "normalArcane": {
+      "label": "夜灵赋能",
+      "table": "The Descendia: Infernum 20 Triple Arcane Rewards",
+      "quantityOverride": 1,
+      "omitProbability": true,
+      "note": "候选范围参考普通第 20 层赋能表；本层概率未单独公布。"
+    },
+    "normalTriple": {
+      "label": "夜灵赋能 ×3",
+      "table": "The Descendia: Infernum 20 Triple Arcane Rewards",
+      "note": "抽中一种赋能，获得相同的 3 个。"
+    },
+    "normalRare": {
+      "label": "稀有奖励",
+      "source": "https://www.warframe.com/zh-hans/patch-notes/pc/41-0-0",
+      "candidates": [
+        {
+          "id": "/Lotus/Types/Recipes/Components/FormaBlueprint",
+          "quantity": 1
+        },
+        {
+          "id": "/Lotus/Types/Items/MiscItems/WeaponPrimaryArcaneUnlocker",
+          "quantity": 1
+        },
+        {
+          "id": "/Lotus/Types/Items/MiscItems/WeaponSecondaryArcaneUnlocker",
+          "quantity": 1
+        },
+        {
+          "id": "/Lotus/Types/Items/MiscItems/WeaponMeleeArcaneUnlocker",
+          "quantity": 1
+        },
+        {
+          "id": "/Lotus/Types/Items/MiscItems/WeaponAmpArcaneUnlocker",
+          "quantity": 1
+        }
+      ]
+    },
+    "steelCommon": {
+      "label": "常见资源",
+      "table": "The Descendia: Common Rewards (Steel Path)"
+    },
+    "steelUncommon": {
+      "label": "罕见奖励",
+      "table": "The Descendia: Uncommon Rewards (Steel Path)"
+    },
+    "steelArcane": {
+      "label": "沉沦之地专属赋能",
+      "table": "The Descendia: Infernum 6 and 13 Arcane Rewards (Steel Path)"
+    },
+    "steelTriple": {
+      "label": "专属赋能 ×3",
+      "table": "The Descendia: Infernum 20 Triple Arcane Rewards (Steel Path)",
+      "note": "抽中一种赋能，获得相同的 3 个。"
+    },
+    "steelEssence": {
+      "label": "钢铁精华",
+      "table": "The Descendia: Steel Essence Rewards (Steel Path)"
+    },
+    "steelRare": {
+      "label": "稀有奖励",
+      "table": "The Descendia: Rare Rewards (Steel Path)"
+    },
+    "roathe": {
+      "label": "罗瑟掉落 · 可重复",
+      "table": "The Descendia: Roathe",
+      "note": "与每周层数奖励分开；这里展示 Boss 候选掉落，不表示本周已获得。"
+    }
+  },
+  "floors": {
+    "normal": {
+      "2": "normalCommon",
+      "4": "normalCommon",
+      "9": "normalCommon",
+      "11": "normalCommon",
+      "16": "normalCommon",
+      "18": "normalCommon",
+      "6": "normalArcane",
+      "13": "normalArcane",
+      "20": "normalTriple",
+      "21": "normalRare"
+    },
+    "steel": {
+      "2": "steelCommon",
+      "9": "steelCommon",
+      "16": "steelCommon",
+      "4": "steelUncommon",
+      "11": "steelUncommon",
+      "6": "steelArcane",
+      "13": "steelArcane",
+      "18": "steelEssence",
+      "20": "steelTriple",
+      "21": "steelRare"
+    }
+  }
+}

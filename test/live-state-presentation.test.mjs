@@ -1,0 +1,58 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {cycleTimeline,invasionProgress,traderPrices,salePrices,resurgenceNames,syndicateTasks,worldStatistics} from '../src/core/live-state/presentation.mjs';
+import {createWorldCatalog} from '../src/core/live-state/catalog.mjs';
+import {buildWorldView} from '../src/core/live-state/view.mjs';
+import {normalizeCycles} from '../src/core/live-state/normalizers/cycles.mjs';
+import {normalizeFlashSales} from '../src/core/live-state/normalizers/commerce-fields.mjs';
+const date=ms=>({$date:{$numberLong:String(ms)}});
+test('六类周期的24小时阶段连续覆盖查询窗，首尾裁剪且保留跨日日期',()=>{
+ const at=Date.parse('2026-10-24T23:58:00+08:00');
+ for(const [id,state] of [['earth','day'],['cetus','day'],['cambion','fass'],['vallis','cold'],['zariman','corpus'],['duviri','fear']]){
+  const timeline=cycleTimeline({id,state,activation:new Date(at-120000).toISOString()},at);
+  assert.equal(Date.parse(timeline[0].startsAt),at);assert.equal(Date.parse(timeline.at(-1).endsAt),at+86400000);assert.ok(timeline[0].current);
+  for(let n=1;n<timeline.length;n++)assert.equal(timeline[n].startsAt,timeline[n-1].endsAt);
+  assert.ok(timeline.every(p=>Date.parse(p.endsAt)>Date.parse(p.startsAt)));
+ }
+ assert.deepEqual(cycleTimeline({id:'unknown'},at),[]);
+});
+test('货币依据价格字段；现金1和0不漏掉，缺少覆盖价格不虚构1现金',()=>{
+ assert.deepEqual(traderPrices({primePrice:3,regularPrice:1},true),[{amount:3,currency:'御品阿耶'},{amount:1,currency:'阿耶精华'}]);
+ assert.deepEqual(traderPrices({ducats:100,regularCredits:20000}),[{amount:100,currency:'杜卡德金币'},{amount:20000,currency:'现金'}]);
+ assert.deepEqual(salePrices({regularOverride:1}),[{amount:1,currency:'现金'}]);assert.deepEqual(salePrices({premiumOverride:0}),[{amount:0,currency:'白金'}]);assert.deepEqual(salePrices({}),[]);
+ const raw={FlashSales:[{TypeName:'/Lotus/Test',StartDate:date(0),EndDate:date(1000),RegularOverride:1}]};assert.equal(normalizeFlashSales(raw,{server:'de'}).data[0].regularOverride,1);
+});
+test('重生从单体组合包去重提取，兼容多角色并剔除双重组合包',()=>{
+ const items=[{id:'SinglePack',name:'Ivara Prime 组合包'},{id:'SinglePack2',name:'Protea Prime 组合包'},{id:'SinglePack3',name:'Ash Prime 组合包'},{id:'DualPack',name:'Ivara Prime 和 Protea Prime 双重组合包'},{id:'Other',name:'Ivara Prime 组合包'},{id:'Lex',name:'Lex Prime'}];
+ assert.deepEqual(resurgenceNames(items),['Ivara Prime','Protea Prime','Ash Prime']);
+});
+test('集团1–5级对应连续三个任务，各等级互相重叠；入侵进度边界与Infested负计数',()=>{
+ const steps=Array.from({length:7},(_,i)=>i+1);for(let rank=1;rank<=5;rank++)assert.deepEqual(syndicateTasks(steps,rank),[rank,rank+1,rank+2]);
+ assert.equal(invasionProgress(0,100),50);assert.equal(invasionProgress(-100,100),0);assert.equal(invasionProgress(100,100),100);assert.equal(invasionProgress(-50,100,true),50);assert.equal(invasionProgress(-110,100,true),0);assert.equal(invasionProgress(0,0),null);
+});
+test('科研普通与精英风险按结构比较，裂缝按结束时间排序；默认隐藏特殊节点及商店精选',()=>{
+ const ms=1792800000000,now=new Date(ms).toISOString(),end=date(ms+600000),start=date(ms-1000);
+ const catalog=createWorldCatalog({plus:{ExportRegions:{A:{name:'节点A',systemName:'地球',missionType:'MT_EXTERMINATION'}},ExportMissionTypes:{MT_EXTERMINATION:{name:'歼灭'}},ExportRewards:{}}});
+ const raw={Time:ms/1000,SyndicateMissions:[],Sorties:[],ActiveMissions:[{_id:'late',Activation:start,Expiry:end,Node:'A',MissionType:'MT_EXTERMINATION',Modifier:'VoidT1'},{_id:'soon',Activation:start,Expiry:date(ms+10000),Node:'A',MissionType:'MT_EXTERMINATION',Modifier:'VoidT4'}],Conquests:[{Activation:start,Expiry:end,Type:'CT_LAB',Variables:[],RandomSeed:1,Missions:[{faction:'FC_MITW',missionType:'MT_EXTERMINATION',difficulties:[{type:'CD_NORMAL',deviation:'X',risks:['A']},{type:'CD_HARD',deviation:'X',risks:['A','B']}]}]}]};
+ const original=structuredClone(raw),view=buildWorldView({raw,server:'de',kind:'network',source:'test',fetchedAt:now},{...catalog},{now:ms});
+ const fissures=view.modules.find(m=>m.id==='fissures');assert.equal(fissures.preview,3);assert.equal(fissures.noPagination,true);assert.equal(fissures.entries[0].tier,4);assert.equal(fissures.entries[0].planet,'地球');
+ const terms=view.modules.find(m=>m.id==='conquests').entries[0].steps[0].terms;assert.deepEqual(terms.map(t=>t.mode),['common','common','elite']);assert.equal(terms[2].label,'精英追加风险');assert.ok(!view.modules.some(m=>['nodeOverrides','market'].includes(m.id)));assert.deepEqual(raw,original);
+});
+test('回廊以完整选项组识别轮次，各服独立；奖励图标解析到灵化之源而非原武器',()=>{
+ const resource='/Lotus/Types/Items/MiscItems/IncarnonAdapters/Secondary/SicarusIncarnonUnlocker';
+ const c=createWorldCatalog({circuitRules:{frames:[['F1','F2','F3'],['F4','F5','F6']],weapons:[['W1','W2','W3','W4','W5']]},plus:{'dict.en':{F1:'Hydroid',F2:'Mirage',F3:'Limbo',F4:'Ash',F5:'Frost',F6:'Nyx',W1:'Sicarus',W2:'Dera',W3:'Cestra',W4:'Okina',W5:'Sybaris'},ExportResources:{[resource]:{name:'暗杀者灵化之源',icon:'/Adapter.png'}}}});
+ assert.equal(c.circuitRotation(['Limbo','Hydroid','Mirage']).index,1);assert.equal(c.circuitRotation(['Hydroid','Mirage','Ash']).matched,false);assert.equal(c.circuitRotation(['Ash','Frost','Nyx']).index,2);assert.equal(c.circuitChoice('Sicarus',true).id,resource);assert.equal(c.circuitChoice('Sicarus',true).icon,'/Adapter.png');
+});
+
+test('周期锚点选覆盖快照的窗口，不误用未来记录，重叠矛盾窗口拒绝推算',()=>{
+ const at=Date.parse('2026-10-24T00:00:00Z'),active={Tag:'CetusSyndicate',Activation:date(at-1000),Expiry:date(at+600000)},future={Tag:'CetusSyndicate',Activation:date(at+600000),Expiry:date(at+9600000)};
+ const raw={Time:at/1000,SyndicateMissions:[future,active]};
+ const result=normalizeCycles(raw,{server:'de',language:'zh'});assert.ok(result.data.some(r=>r.id==='cetus'));
+ const ambiguous=normalizeCycles({...raw,SyndicateMissions:[active,{...active,Expiry:date(at+900000)}]},{server:'de',language:'zh'});assert.ok(!ambiguous.data.some(r=>r.id==='cetus'));assert.ok(ambiguous.warnings.includes('CYCLE_SYNDICATE_AMBIGUOUS:CetusSyndicate'));
+});
+
+test('统计按完整任务和商品计数，不把地区、商人、科研模块当作条目',()=>{
+ const modules=[{id:'fissures',entries:[{kind:'normal'},{kind:'normal'},{kind:'hard'},{kind:'storm'}]},{id:'bounties',entries:[{items:[1,2,3]},{items:[1,2]}]},{id:'conquests',entries:[{steps:[1,2,3]},{steps:[1,2,3]}]},{id:'calendar',entries:[{rewards:[1,2]},{terms:[1]},{rewards:[1]}]},{id:'voidTraders',entries:[{items:[1,2,3]}]},{id:'primeVaultTraders',entries:[{items:[1,2]}]},{id:'flashSales',entries:[1,2,3,4]}];
+ const metrics=worldStatistics(modules).flatMap(g=>g.metrics),count=(id,filter)=>metrics.find(m=>m.id===id&&m.filter===filter).value;
+ assert.equal(count('fissures','normal'),2);assert.equal(count('fissures','hard'),1);assert.equal(count('bounties'),5);assert.equal(count('conquests'),6);assert.equal(count('calendar'),2);assert.equal(count('voidTraders'),3);assert.equal(count('primeVaultTraders'),2);assert.equal(count('flashSales'),4);assert.equal(count('alerts'),0);assert.equal(worldStatistics().flatMap(g=>g.metrics).every(m=>m.value===0),true);
+});

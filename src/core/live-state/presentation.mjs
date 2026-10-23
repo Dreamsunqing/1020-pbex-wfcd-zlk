@@ -24,7 +24,9 @@ export function traderPrices(row,prime=false){
   const result=[];
   const add=(v,currency)=>{if(Number.isFinite(v)&&v>=0)result.push({amount:v,currency});};
   if(prime){add(row.primePrice,'御品阿耶');add(row.regularPrice,'阿耶精华');}
-  else{add(row.ducats,'杜卡德金币');add(row.regularCredits,'现金');}
+  // DE's two traders share field names, not currencies. Explicit legacy aliases
+  // remain fallbacks; never let them replace a valid official value (including 0).
+  else{add(Number.isFinite(row.primePrice)?row.primePrice:row.ducats,'杜卡德金币');add(Number.isFinite(row.regularPrice)?row.regularPrice:row.regularCredits,'现金');}
   return result;
 }
 export function salePrices(row){

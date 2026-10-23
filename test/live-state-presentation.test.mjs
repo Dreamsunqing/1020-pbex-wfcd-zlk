@@ -19,6 +19,10 @@ test('六类周期的24小时阶段连续覆盖查询窗，首尾裁剪且保留
 test('货币依据价格字段；现金1和0不漏掉，缺少覆盖价格不虚构1现金',()=>{
  assert.deepEqual(traderPrices({primePrice:3,regularPrice:1},true),[{amount:3,currency:'御品阿耶'},{amount:1,currency:'阿耶精华'}]);
  assert.deepEqual(traderPrices({ducats:100,regularCredits:20000}),[{amount:100,currency:'杜卡德金币'},{amount:20000,currency:'现金'}]);
+ assert.deepEqual(traderPrices({primePrice:100,regularPrice:20000}),[{amount:100,currency:'杜卡德金币'},{amount:20000,currency:'现金'}]);
+ assert.deepEqual(traderPrices({primePrice:0,regularPrice:1,ducats:999,regularCredits:999}),[{amount:0,currency:'杜卡德金币'},{amount:1,currency:'现金'}]);
+ assert.deepEqual(traderPrices({primePrice:null,regularPrice:null,ducats:100,regularCredits:20000}),[{amount:100,currency:'杜卡德金币'},{amount:20000,currency:'现金'}]);
+ assert.deepEqual(traderPrices({}),[]);
  assert.deepEqual(salePrices({regularOverride:1}),[{amount:1,currency:'现金'}]);assert.deepEqual(salePrices({premiumOverride:0}),[{amount:0,currency:'白金'}]);assert.deepEqual(salePrices({}),[]);
  const raw={FlashSales:[{TypeName:'/Lotus/Test',StartDate:date(0),EndDate:date(1000),RegularOverride:1}]};assert.equal(normalizeFlashSales(raw,{server:'de'}).data[0].regularOverride,1);
 });

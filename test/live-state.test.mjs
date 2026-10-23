@@ -145,3 +145,14 @@ test('六个沉沦之地时间窗仅选当期21层，两难度共享排期而非
  const c=createWorldCatalog({plus:{ExportRecipes:{'/Lotus/TestRecipe':{resultType:id}},ExportResources:{[id]:{name:'测试物品'}}}});
  assert.equal(c.item('/Lotus/TestRecipe').name,'测试物品 蓝图');assert.equal(c.item('/Lotus/TestRecipe').localized,true);
 });
+
+test('同名官方价格字段按商店解释：虚空商人为杜卡德金币和现金，Prime重生为御品阿耶和阿耶精华',()=>{
+ for(const server of ['de','wg']){
+  const r=raw(),ms=r.Time*1000,merchant={_id:{$oid:'merchant'},Activation:date(ms-1000),Expiry:date(ms+60000),Node:'SolNode1',Manifest:[{ItemType:id,PrimePrice:100,RegularPrice:20000}]};
+  r.VoidTraders=[structuredClone(merchant)];r.PrimeVaultTraders=[{...structuredClone(merchant),InitialStartDate:date(ms-1000),EvergreenManifest:[],ScheduleInfo:[]}];const original=structuredClone(r);
+  const view=buildWorldView(snapshot(r,server),catalog(),{now:ms});
+  const baro=view.modules.find(m=>m.id==='voidTraders').entries[0].items[0],prime=view.modules.find(m=>m.id==='primeVaultTraders').entries[0].items[0];
+  assert.deepEqual(baro.prices,[{amount:100,currency:'杜卡德金币'},{amount:20000,currency:'现金'}]);assert.deepEqual(baro.stats,['100 杜卡德金币','20,000 现金']);
+  assert.deepEqual(prime.prices,[{amount:100,currency:'御品阿耶'},{amount:20000,currency:'阿耶精华'}]);assert.deepEqual(r,original);
+ }
+});

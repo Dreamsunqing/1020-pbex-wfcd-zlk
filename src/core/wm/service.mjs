@@ -1,8 +1,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { fetch, EnvHttpProxyAgent, ProxyAgent } from 'undici';
 import { atomicJson } from '../io.mjs';
-import { checkSlug, checkContext, normalizeItems, normalizeOrders, normalizeStatistics, searchItems } from './model.mjs';
+import { checkSlug, checkContext, normalizeItems, normalizeSet, normalizeOrders, normalizeStatistics, searchItems } from './model.mjs';
+import { normalizeRivenWeapons, normalizeRivenAttributes, auctionQuery, normalizeAuctions, filterAuctionWindow } from './auctions.mjs';
 const API = 'https://api.warframe.market', MAX_BYTES = 16 * 1024 * 1024;
 const agent = new EnvHttpProxyAgent();
 async function download(url, {platform = 'pc', crossplay = false, proxyUrl} = {}) {
@@ -57,6 +59,28 @@ export class WmService {
     return {...meta, total:data.length, items:searchItems(data, query)};
   }
   async item(slug, options) {checkSlug(slug); const catalog = await this.catalog(options); const item = catalog.data.find(i => i.slug === slug); if (!item) throw new Error('WM 目录中没有此物品，请刷新目录'); return item;}
+  async itemSet({slug, refresh = false} = {}, options = {}) {
+    checkSlug(slug); if (typeof refresh !== 'boolean') throw new Error('刷新参数无效');
+    const result = await this.cached('set-'+slug,API+'/v2/item/'+slug+'/set',24*3600000,raw=>normalizeSet(raw,slug),{...options,refresh});
+    const {data,...meta}=result;return {...meta,...data};
+  }
+  async rivenCatalog({refresh = false} = {}, options = {}) {
+    if (typeof refresh !== 'boolean') throw new Error('刷新参数无效');
+    const [weapons,attributes] = await Promise.all([
+      this.cached('riven-weapons',API+'/v2/riven/weapons',24*3600000,normalizeRivenWeapons,{...options,refresh}),
+      this.cached('riven-attributes',API+'/v2/riven/attributes',24*3600000,normalizeRivenAttributes,{...options,refresh}),
+    ]);
+    return {weapons:weapons.data,attributes:attributes.data,fetchedAt:[weapons.fetchedAt,attributes.fetchedAt].sort()[0],stale:weapons.stale||attributes.stale,cached:weapons.cached&&attributes.cached,error:[weapons.error,attributes.error].filter(Boolean).join('；')||null};
+  }
+  async auctions({platform = 'pc',filters = {},refresh = false} = {}, options = {}) {
+    checkContext(platform); if (typeof refresh !== 'boolean') throw new Error('刷新参数无效');
+    const catalog = await this.rivenCatalog({},options), params = auctionQuery(filters,catalog.weapons,catalog.attributes), query=params.toString();
+    const latest=!params.has('weapon_url_name')&&!params.has('positive_stats');
+    const url=API+(latest?'/v1/auctions?type=riven':'/v1/auctions/search?'+query), hash=createHash('sha256').update(query).digest('hex');
+    const key=latest?`auctions-latest-${platform}`:`auctions-${platform}-${hash}`;
+    const result=await this.cached(key,url,60000,normalizeAuctions,{...options,platform,crossplay:false,refresh});
+    const {data,...meta}=result;return {...meta,platform,auctions:latest?filterAuctionWindow(data,filters):data,windowCount:data.length,latest,limitReached:data.length>=100,legacy:true,catalogError:catalog.error};
+  }
   async orders({slug, platform = 'pc', crossplay = false, refresh = false} = {}, options = {}) {
     checkSlug(slug); const context = checkContext(platform,crossplay); if (typeof refresh !== 'boolean') throw new Error('刷新参数无效');
     const item = await this.item(slug, options);

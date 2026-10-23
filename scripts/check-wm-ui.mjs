@@ -10,6 +10,7 @@ const statRows=Array.from({length:90},(_,i)=>({datetime:new Date(Date.UTC(2026,7
 const stats={payload:{statistics_closed:{'90days':[...statRows,...statRows.map(r=>({...r,mod_rank:10,median:r.median+40}))],'48hours':statRows.slice(-48).map((r,i)=>({...r,datetime:new Date(Date.UTC(2026,9,21,i)).toISOString()}))}}};
 async function cache(name,source,raw){await fs.writeFile(path.join(profile,'wm',name+'.json'),JSON.stringify({source,raw,fetchedAt:new Date().toISOString()}));}
 await cache('items-zh-hans','https://api.warframe.market/v2/items',{data:[item,{...item,id:'test-other',slug:'chamber',i18n:{en:{name:'Chamber'},'zh-hans':{name:'分裂膛室'}}}]});
+await cache('set-'+slug,'https://api.warframe.market/v2/item/'+slug+'/set',{data:{id,items:[item]}});
 await cache('orders-pc-false-'+slug,'https://api.warframe.market/v2/orders/item/'+slug,{data:rawOrders});
 await cache('statistics-pc-'+slug,'https://api.warframe.market/v1/items/'+slug+'/statistics',stats);
 await cache('orders-switch-false-'+slug,'https://api.warframe.market/v2/orders/item/'+slug,{data:rawOrders.slice(1,3).map(r=>({...r,user:{...r.user,platform:'switch'}}))});

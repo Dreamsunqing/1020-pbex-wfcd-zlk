@@ -1,5 +1,6 @@
 import { filterOrders, buildWhisper, orderAttributes } from '../core/wm/model.mjs';
 import { decorateImages } from './images.js';
+import { createRivenUI } from './wm-rivens.js';
 const el = (tag, cl, text) => {const n=document.createElement(tag);if(cl)n.className=cl;if(text!==undefined)n.textContent=text;return n;};
 const button = (text,cl,fn) => {const n=el('button',cl,text);n.type='button';n.onclick=fn;return n;};
 const date = value => value ? new Date(value).toLocaleString('zh-CN',{hour12:false}) : '尚未获取';
@@ -8,7 +9,8 @@ const statusNames={ingame:'游戏中',online:'在线',offline:'离线'};
 const svg = (tag,attrs={},text) => {const n=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,String(v));if(text!==undefined)n.textContent=text;return n;};
 export function createWmUI({api,guarded,notify}) {
  const $=id=>document.getElementById(id);
- const state={loaded:false,item:null,orders:null,stats:null,tab:'orders',suggestions:[],active:-1,searchSeq:0,orderSeq:0,statsSeq:0,offset:0,busy:false,statsBusy:false,window:'90days',statsRank:'',series:{median:true,moving_avg:true,donch:true,candles:false,avg_price:false}};
+ const state={loaded:false,item:null,orders:null,stats:null,tab:'orders',mode:'items',setData:null,setSeq:0,suggestions:[],active:-1,searchSeq:0,orderSeq:0,statsSeq:0,offset:0,busy:false,statsBusy:false,window:'90days',statsRank:'',series:{median:true,moving_avg:true,donch:true,candles:false,avg_price:false}};
+ const rivens=createRivenUI({api,guarded});
  let timer;
  function context(){return {platform:$('wm-platform').value,crossplay:$('wm-crossplay').checked};}
  function message(node,text,error=false){node.textContent=text;node.classList.toggle('error',error);node.hidden=!text;}
@@ -34,14 +36,37 @@ export function createWmUI({api,guarded,notify}) {
  }
  function setTab(tab){state.tab=tab;for(const b of document.querySelectorAll('[data-wm-tab]')){b.classList.toggle('selected',b.dataset.wmTab===tab);b.setAttribute('aria-selected',String(b.dataset.wmTab===tab));}$('wm-order-panel').hidden=tab!=='orders';$('wm-stat-panel').hidden=tab!=='statistics';if(tab==='statistics'&&state.item&&!state.stats&&!state.statsBusy)void guarded(()=>loadStats());}
  async function choose(item){
-  clearTimeout(timer);state.searchSeq++;hideHints();state.suggestions=[];state.item=item;state.orders=null;state.stats=null;state.statsSeq++;state.statsBusy=false;state.offset=0;
+  item=state.setData?.items.find(i=>i.id===item.id)??item;
+  clearTimeout(timer);state.searchSeq++;state.orderSeq++;hideHints();state.suggestions=[];state.item=item;state.orders=null;state.stats=null;state.statsSeq++;state.statsBusy=false;state.statsRank='';state.offset=0;
   $('wm-search').value=item.name;$('wm-item').hidden=false;$('wm-welcome').hidden=true;
-  const title=$('wm-item-heading');title.replaceChildren(el('h2','',item.name),el('p','muted',item.english));
+  const title=el('div','wm-item-heading');title.id='wm-item-heading';$('wm-item-heading').replaceWith(title);title.append(el('h2','',item.name),el('p','muted',item.english));
   if(item.gameRef)void decorateImages(api,[{id:item.gameRef,card:title,label:item.name}]);
   $('wm-item-tags').textContent=[item.maxRank!==null?`最高等级 ${item.maxRank}`:'',...item.tags.slice(0,4)].filter(Boolean).join(' · ');
   const ranks=$('wm-rank');ranks.replaceChildren(new Option('全部等级',''));if(item.maxRank!==null)for(let i=0;i<=item.maxRank;i++)ranks.append(new Option(`等级 ${i}${i===item.maxRank?'（满级）':''}`,String(i)));
-  $('wm-rank-label').hidden=item.maxRank===null;$('wm-min').value='';$('wm-max').value='';setTab('orders');
-  $('wm-stat-chart').replaceChildren();message($('wm-stat-error'),'');await loadOrders();
+  $('wm-rank-label').hidden=item.maxRank===null;
+  $('wm-stat-chart').replaceChildren();message($('wm-stat-error'),'');
+  void loadSet();setTab(state.tab);await loadOrders();
+ }
+ function renderSet(){
+  const box=$('wm-set-members');box.replaceChildren();const data=state.setData;if(!data)return;
+  $('wm-set-meta').textContent=(data.items.length>1?'套装与部件 · ':'此物品没有套装成员 · ')+meta(data);
+  message($('wm-set-error'),data.error?`${data.error}；以下为已缓存的套装关系。`:'',!!data.error);
+  if(data.items.length<2)return;
+  const pictures=[];
+  for(const item of data.items){
+   const b=button('','wm-set-member',()=>guarded(()=>choose(item)));b.dataset.slug=item.slug;b.classList.toggle('selected',item.id===state.item?.id);b.setAttribute('aria-pressed',String(item.id===state.item?.id));
+   b.append(el('strong','',item.name),el('small','',item.setRoot?'整套':item.quantityInSet?`套装需要 ×${item.quantityInSet}`:item.english));box.append(b);
+   if(item.gameRef)pictures.push({id:item.gameRef,card:b,label:item.name});
+  }
+  void decorateImages(api,pictures);
+ }
+ async function loadSet(refresh=false){
+  const seq=++state.setSeq,slug=state.item?.slug;if(!slug)return;
+  if(!refresh&&state.setData?.items.some(i=>i.slug===slug)){renderSet();return;}
+  state.setData=null;$('wm-set-members').replaceChildren();$('wm-set-meta').textContent='正在读取套装关系…';message($('wm-set-error'),'');$('wm-set-refresh').disabled=true;
+  try{const data=await api.call('wmItemSet',{slug,refresh});if(seq!==state.setSeq)return;state.setData=data;renderSet();}
+  catch(error){if(seq!==state.setSeq)return;$('wm-set-meta').textContent='套装关系暂不可用';message($('wm-set-error'),error.message+'；仍可搜索物品和查看订单。',true);}
+  finally{if(seq===state.setSeq)$('wm-set-refresh').disabled=false;}
  }
  async function loadOrders(refresh=false){
   if(!state.item)return;const seq=++state.orderSeq,slug=state.item.slug,args=context();state.busy=true;$('wm-orders-refresh').disabled=true;
@@ -125,6 +150,14 @@ export function createWmUI({api,guarded,notify}) {
  document.addEventListener('pointerdown',event=>{if(!$('wm-search-box').contains(event.target))hideHints();});
  $('wm-catalog-refresh').onclick=()=>guarded(async()=>{const b=$('wm-catalog-refresh');b.disabled=true;try{await search(true);}finally{b.disabled=false;}});
  $('wm-orders-refresh').onclick=()=>guarded(()=>loadOrders(true));$('wm-stat-refresh').onclick=()=>guarded(()=>loadStats(true));
+ $('wm-set-refresh').onclick=()=>guarded(()=>loadSet(true));
+ for(const b of document.querySelectorAll('[data-wm-mode]'))b.onclick=()=>guarded(async()=>{
+  state.mode=b.dataset.wmMode;hideHints();
+  for(const n of document.querySelectorAll('[data-wm-mode]')){n.classList.toggle('selected',n===b);n.setAttribute('aria-pressed',String(n===b));}
+  $('wm-items-view').hidden=state.mode!=='items';$('wm-rivens-view').hidden=state.mode!=='rivens';
+  $('wm-catalog-refresh').hidden=state.mode==='rivens';
+  if(state.mode==='rivens')await rivens.enter();
+ });
  for(const id of ['wm-order-type','wm-status','wm-rank','wm-sort','wm-min','wm-max'])$(id).addEventListener(['wm-min','wm-max'].includes(id)?'input':'change',()=>{state.offset=0;renderOrders();});
  function pageOrders(delta){state.offset=Math.max(0,state.offset+delta);renderOrders();$('wm-order-list').scrollIntoView({block:'start'});}
  $('wm-previous').onclick=()=>pageOrders(-40);$('wm-next').onclick=()=>pageOrders(40);
@@ -134,6 +167,6 @@ export function createWmUI({api,guarded,notify}) {
  for(const node of document.querySelectorAll('[data-wm-window]'))node.onclick=()=>{state.window=node.dataset.wmWindow;renderStats();};
  $('wm-stat-rank').onchange=()=>{state.statsRank=$('wm-stat-rank').value;renderStats();};
  for(const node of document.querySelectorAll('[data-wm-series]'))node.onchange=()=>{state.series[node.dataset.wmSeries]=node.checked;renderStats();};
- $('wm-original').onclick=()=>guarded(()=>api.openDocumentLink(state.item?'https://warframe.market/items/'+state.item.slug:'https://warframe.market/'));
- return {state,search,choose,loadOrders,loadStats,renderOrders,renderStats,async enter(){if(!state.loaded){$('wm-catalog-meta').textContent='正在获取可交易物品目录…';await search();}}};
+ $('wm-original').onclick=()=>guarded(()=>api.openDocumentLink(state.mode==='rivens'?'https://warframe.market/auctions/search?type=riven'+(rivens.state.weapon?'&weapon_url_name='+encodeURIComponent(rivens.state.weapon.slug):''):state.item?'https://warframe.market/items/'+state.item.slug:'https://warframe.market/'));
+ return {state,rivens,search,choose,loadOrders,loadStats,loadSet,renderOrders,renderStats,async enter(){if(state.mode==='rivens'){await rivens.enter();return;}if(!state.loaded){$('wm-catalog-meta').textContent='正在获取可交易物品目录…';await search();}}};
 }

@@ -1,4 +1,4 @@
-import {cycleTimeline,factionTone,invasionProgress,traderPrices,salePrices,resurgenceNames} from './presentation.mjs';
+import {cycleTimeline,factionTone,invasionProgress,traderPrices,salePrices,resurgenceNames,fleetProgress,worldBoosters} from './presentation.mjs';
 import { calendarCardState, descentCardState } from './card-states.mjs';
 import { buildWorldBounties } from './bounties.mjs';
 import { IMPLEMENTED_MODULE_NORMALIZERS, RAW_FIELD_MODULES } from './normalizers/index.mjs';
@@ -31,7 +31,8 @@ export function buildWorldView(snapshot,catalog,{now=Date.now()}={}) {
   add('cycles','世界周期','now',rows('cycles').map(row=>entry(row.regionName,row.stateName,{...windowOf(row),endsAt:row.expiry,startsAt:row.activation,tone:row.state,timeline:cycleTimeline(row,at),basis:row.sourceFields.join(' + '),derived:true,iconToken:{day:'SUN',night:'MOON',warm:'SUN',cold:'DT_FREEZE',fass:'DT_VIRAL',vome:'DT_RADIANT',corpus:'DT_ELECTRICITY',grineer:'DT_FIRE'}[row.state],next:row.nextStateName})),{layout:'cycles',preview:6});
   const fissureEntry=(row,storm=false)=>{
     const region=catalog.plus.ExportRegions?.[row.node?.key],planet=translate(region?.systemName)||text(row.node).split(/[·(（]/).at(-1)?.replace(/[)）]/g,'').trim()||'未知星球';
-    return entry(good(row.node),storm?mission(region?.missionType):good(row.missionType),{...windowOf(row),planet,missionType:storm?mission(region?.missionType):good(row.missionType),era:good(storm?row.tier:row.modifier),tier:(storm?row.tier:row.modifier)?.tier,kind:storm?'storm':row.isHard?'hard':'normal',iconToken:storm?'RAILJACK':'VOID'});
+    const resolvedType=storm?mission(region?.missionType):good(row.missionType),missionType=storm&&resolvedType==='名称待补充'?'':resolvedType;
+    return entry(good(row.node),missionType,{...windowOf(row),planet,missionType,era:good(storm?row.tier:row.modifier),tier:(storm?row.tier:row.modifier)?.tier,kind:storm?'storm':row.isHard?'hard':'normal',iconToken:storm?'RAILJACK':'VOID'});
   };
   const fissures=[...rows('fissures').filter(active).map(r=>fissureEntry(r)),...rows('voidStorms').filter(active).map(r=>fissureEntry(r,true))].sort((a,b)=>Date.parse(a.endsAt)-Date.parse(b.endsAt));
   add('fissures','虚空裂缝','missions',fissures,{layout:'fissures',wide:true,preview:3,noPagination:true,filters:[['all','全部'],['normal','始源'],['hard','钢铁'],['storm','九重天']]});
@@ -80,7 +81,8 @@ export function buildWorldView(snapshot,catalog,{now=Date.now()}={}) {
     });
     add(id,title,'trade',cards,{layout:'shop',preview:1,noPagination:true});
   }
-  add('construction','舰队建造','activity',rows('constructionProjects').filter(active).map(row=>entry(node(row.node),'建造项目',{...windowOf(row),terms:array(row.tooltipKeys).map(key=>({name:translate(key,'项目说明')})),chips:array(row.tasks).map(key=>translate(key,key))})),{layout:'tiles',preview:2});
+  add('construction','舰队建造','activity',fleetProgress(modules.projectPct?.data??[]),{layout:'fleet',preview:2});
+  add('relayConstruction','中继站重建','activity',rows('constructionProjects').filter(active).map(row=>entry(node(row.node),'中继站项目',{...windowOf(row),terms:array(row.tooltipKeys).map(key=>({name:translate(key,'项目说明')})),chips:array(row.tasks).map(key=>translate(key,key))})),{layout:'tiles',preview:2});
   add('dailyDeals','每日特惠','trade',rows('dailyDeals').filter(active).map(row=>entry(catalog.item(row.itemType).name,'',{...catalog.item(row.itemType),...windowOf(row),title:catalog.item(row.itemType).name,stats:[number(row.salePrice)+' 白金',row.discount!==null?'优惠 '+number(row.discount)+'%':null].filter(Boolean),progress:row.amountTotal?clip(100*(row.amountTotal-row.amountSold)/row.amountTotal):null,note:row.amountTotal?'余量 '+number(Math.max(0,row.amountTotal-row.amountSold))+' / '+number(row.amountTotal):'',iconToken:'PLATINUM'})),{layout:'tiles',preview:2});
   add('flashSales','限时商店','trade',rows('flashSales').filter(row=>active(row)&&!row.hideFromMarket).map(row=>{
     const info=catalog.item(row.itemType),prices=salePrices(row);
@@ -99,7 +101,7 @@ export function buildWorldView(snapshot,catalog,{now=Date.now()}={}) {
   })),{layout:'syndicates',preview:6,noPagination:true,note:'等级决定可接取的连续 3 个任务；高档任务声望更高，具体数值以游戏结算为准。'});
   add('events','新闻与公告','activity',rows('events').map(row=>entry(translate(row.messages?.[0]?.text ?? row.messages?.[0]?.message,row.community?'社区公告':'公告'),'',{icon:array(raw.Events).find(e=>(e._id?.$oid ?? e._id)===row.id)?.Icon,url:row.links?.[0]?.url ?? row.prop ?? row.liveUrl,...windowOf(row)})),{layout:'news',preview:3});
   add('goals','活动与行动','activity',rows('goals').filter(active).map(row=>entry(translate(row.descriptionKey,'限时行动'),row.node?good(row.node):'',{...windowOf(row),description:translate(row.tooltipKey),rewards:reward(row.reward),icon:row.icon,progress:row.healthPct!==null?clip(row.healthPct*100):null,stats:row.goal?['目标 '+number(row.goal),'当前 '+number(row.count)]:[]})),{layout:'tiles',preview:2});
-  add('boosters','全服加成','activity',rows('globalUpgrades').filter(active).map(row=>entry(translate(row.nameKey,row.upgradeType),translate(row.descriptionKey),{...windowOf(row),stats:row.value!==null?['数值 '+row.value]:[],iconToken:'BOOSTER'})),{layout:'tiles',preview:2});
+  add('boosters','全服加成','activity',worldBoosters(modules.globalUpgrades?.status==='error'?null:rows('globalUpgrades'),at,{translate,node}),{layout:'boosters',preview:6,noPagination:true,note:'全服 2× × 同类个人加成 2× = 4×；仅计算这两项。节点限定加成只在标注区域生效。'});
   add('synthesis','精选氏族','activity',rows('featuredGuilds').map(row=>entry(row.name,'',{stats:row.tier!==null?['规模 '+row.tier]:[]})),{layout:'guilds',preview:10,noPagination:true});
   const covered=new Set(Object.keys(RAW_FIELD_MODULES)), extraFields=Object.keys(raw).filter(key=>!covered.has(key));
   const visible=output.filter(module=>module.entries.length || ['fissures','sortie','archonHunt','alerts','voidTraders'].includes(module.id));

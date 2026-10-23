@@ -60,3 +60,8 @@ test('统计按完整任务和商品计数，不把地区、商人、科研模�
  const metrics=worldStatistics(modules).flatMap(g=>g.metrics),count=(id,filter)=>metrics.find(m=>m.id===id&&m.filter===filter).value;
  assert.equal(count('fissures','normal'),2);assert.equal(count('fissures','hard'),1);assert.equal(count('bounties'),5);assert.equal(count('conquests'),6);assert.equal(count('calendar'),2);assert.equal(count('voidTraders'),3);assert.equal(count('primeVaultTraders'),2);assert.equal(count('flashSales'),4);assert.equal(count('alerts'),0);assert.equal(worldStatistics().flatMap(g=>g.metrics).every(m=>m.value===0),true);
 });
+
+test('九重天未知任务类型不显示占位徽章，节点和纪元仍保留',()=>{
+ const at=Date.parse('2026-10-24T00:00:00Z'),raw={Time:at/1000,ActiveMissions:[],Sorties:[],SyndicateMissions:[],VoidStorms:[{_id:{$oid:'storm'},Activation:date(at-1000),Expiry:date(at+60000),Node:'CrewBattle',ActiveMissionTier:1}]},catalog=createWorldCatalog({plus:{ExportRegions:{CrewBattle:{name:'克姆地带',systemName:'地球比邻星域'}}}}),view=buildWorldView({raw,server:'de',kind:'sample'},catalog,{now:at}),storm=view.modules.find(m=>m.id==='fissures').entries[0];
+ assert.ok(storm);assert.equal(storm.kind,'storm');assert.equal(storm.missionType,'');assert.equal(storm.subtitle,'');assert.equal(storm.title,'克姆地带 · 地球比邻星域');assert.equal(storm.planet,'地球比邻星域');
+});

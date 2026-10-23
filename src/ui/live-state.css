@@ -109,3 +109,20 @@ header>nav{overflow-x:auto;scrollbar-width:none;flex-shrink:1}header>.brand,head
 .ws-fissure>.ws-time{flex:none;white-space:nowrap}
 @media(max-width:1100px){.ws-overview{flex-direction:column;gap:12px}.ws-overview>p{padding-top:0}.ws-statistics{justify-content:flex-start}.ws-stat-group{gap:6px}}
 @media(max-width:560px){.ws-statistics{gap:12px}.ws-stat{padding:5px 6px}.ws-stat strong{font-size:18px}.ws-stat-group{width:100%}.ws-facet-row{gap:8px}.ws-facet{flex-basis:100%}}
+
+.ws-fleets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.ws-fleet{--fleet-color:#dd913d;padding:16px;border:1px solid var(--line);border-radius:10px;background:var(--surface-soft);min-width:0}.ws-fleet[data-faction=corpus]{--fleet-color:#4e8ed4}.ws-fleet .ws-entry-head{align-items:center;gap:12px}.ws-fleet small{font-size:10px;color:var(--muted)}.ws-fleet h3{font-size:13px;margin:6px 0 0}.ws-fleet-value{color:var(--fleet-color);white-space:nowrap;font-size:18px;font-variant-numeric:tabular-nums}.ws-fleet-progress{display:block;width:100%;height:7px;border:0;margin-top:16px;accent-color:var(--fleet-color)}.ws-fleet-progress::-webkit-progress-bar{background:var(--line);border-radius:6px}.ws-fleet-progress::-webkit-progress-value{background:var(--fleet-color);border-radius:6px}
+.ws-layout-boosters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.ws-booster[data-booster-status=inactive],.ws-booster[data-booster-status=unavailable]{opacity:.65}.ws-booster[data-booster-status=active]{border-top:3px solid var(--accent)}.ws-booster[data-scope=nodes]{border-top-color:#dd913d}.ws-booster .ws-description{font-size:11px}.ws-booster .ws-chips{gap:4px}.ws-booster .ws-chip{font-size:9px}
+@media(max-width:1100px){.ws-fleets{grid-template-columns:1fr}.ws-layout-boosters{grid-template-columns:repeat(auto-fit,minmax(175px,1fr))}}
+
+/* A picker has one focus ring around the combined label/control. */
+.ws-facet select:focus,.ws-facet select:focus-visible{outline:none;box-shadow:none}.ws-facet:focus-within{outline:2px solid var(--accent);outline-offset:2px}.ws-facet select{border-radius:0}
+/* Nested invasion rewards must not inherit the three-column detail reward grid. */
+.ws-entry[data-module-entry=invasions] .ws-side .ws-loot-grid{grid-template-columns:minmax(0,1fr)}
+.ws-entry[data-module-entry=alerts]>.ws-loot-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr))}
+.ws-entry[data-module-entry=invasions] .ws-loot,.ws-entry[data-module-entry=alerts] .ws-loot{min-height:68px}
+.ws-detail-grid.ws-detail-missions{align-items:stretch}.ws-detail-missions>.ws-entry{height:100%;box-sizing:border-box}
+.ws-time[hidden]{display:none}
+
+.ws-research-lines{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-direction:column;gap:8px}.ws-research-line{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:8px 0;border-top:1px solid var(--line);font-size:11px}.ws-research-line>.ws-step-index{margin:0;flex:none}.ws-elite-label{font-size:9px;color:light-dark(#956421,#e5b568);margin-left:auto;white-space:nowrap}.ws-research-line .ws-research-risk{font-size:11px;border:0;border-radius:5px;padding:4px 7px;background:light-dark(#f7edde,#322b20);color:light-dark(#92601e,#e8bd7b)}.ws-research-summary .ws-entry-head h3{font-size:13px}
+
+.ws-invasion-labels{display:flex;justify-content:space-between;gap:12px;margin-top:12px;font-size:11px;font-variant-numeric:tabular-nums}.ws-invasion-labels span{white-space:nowrap}.ws-invasion-labels [data-faction=corpus]{color:light-dark(#367fb5,#8bbcff)}.ws-invasion-labels [data-faction=grineer]{color:light-dark(#a56c20,#efb566)}.ws-invasion-labels [data-faction=infested]{color:light-dark(#ad3a48,#eea0ab)}.ws-entry[data-module-entry=invasions] .ws-invasion-bar{height:8px;margin-top:6px}

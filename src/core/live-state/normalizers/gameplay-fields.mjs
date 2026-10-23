@@ -107,6 +107,7 @@ function normalize(raw, options, field, schema, required = [], localized = true)
       continue;
     }
     const item = { id: idOf(entry._id) };
+    if (field === "GlobalUpgrades") item.scopeKnown = !own(entry, "Nodes") || (Array.isArray(entry.Nodes) && entry.Nodes.every(v => typeof v === "string" && v.length > 0));
     for (const [key, [output, type]] of Object.entries(schema)) {
       const value = read(entry, key, type === "node" || type === "faction" || type === "tier" ? "string" : type === "mission" ? "object" : type, path, warnings, required.includes(key));
       item[output] = type === "node" || type === "faction" ? localizeStaticKey(value, type === "node" ? "nodes" : "factions", context, warnings) : type === "tier" ? localizeFissureModifier(value, context, warnings) : type === "mission" ? mission(value, context, `${path}.${key}`, warnings) : value;
@@ -123,7 +124,7 @@ function normalize(raw, options, field, schema, required = [], localized = true)
         item[output] = value.map((v, j) => {
           if (key === "Nodes") {
             if (typeof v !== "string") { warnings.add(`INVALID_FIELD:${path}.${key}.${j}:string`); return null; }
-            return localizeStaticKey(v, "nodes", context, warnings);
+            return field === "GlobalUpgrades" ? v : localizeStaticKey(v, "nodes", context, warnings);
           }
           if (!object(v)) { warnings.add(`INVALID_FIELD:${path}.${key}.${j}:object`); return null; }
           validateKnown(v, { jobType: "string", rewards: "string", masteryReq: "number", minEnemyLevel: "number", maxEnemyLevel: "number", xpAmounts: "array", endless: "boolean", locationTag: "string", isVault: "boolean", requiredItems: "array", useRequiredItemsAsMiscItemFee: "boolean" }, `${path}.${key}.${j}`, warnings);
@@ -175,7 +176,7 @@ export function normalizeGoals(raw, options = {}) {
 
 export function normalizeGlobalUpgrades(raw, options = {}) {
   return normalize(raw, options, "GlobalUpgrades", {
-    Activation: ["activation", "date"], ExpiryDate: ["expiry", "date"], UpgradeType: ["upgradeType", "string"], OperationType: ["operationType", "string"], Value: ["value", "number"], LocalizeTag: ["nameKey", "string"], LocalizeDescTag: ["descriptionKey", "string"],
+    Activation: ["activation", "date"], ExpiryDate: ["expiry", "date"], UpgradeType: ["upgradeType", "string"], OperationType: ["operationType", "string"], Value: ["value", "number"], LocalizeTag: ["nameKey", "string"], LocalizeDescTag: ["descriptionKey", "string"], Nodes: ["nodes", "array"],
   }, ["Activation", "ExpiryDate", "UpgradeType", "OperationType", "Value"], false);
 }
 

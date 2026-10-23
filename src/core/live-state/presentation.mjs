@@ -55,3 +55,28 @@ export function worldStatistics(modules=[]){
     {label:'商店',metrics:[...[["voidTraders","虚空商人"],["primeVaultTraders","Prime 重生"]].map(([id,label])=>metric(id,label,rows(id).reduce((n,r)=>n+(r.items?.length??0),0),'件')),metric('flashSales','限时商品',rows('flashSales').length,'件'),metric('dailyDeals','每日特惠',rows('dailyDeals').length,'件')]}
   ];
 }
+
+export function fleetProgress(percentages=[]){
+ return [['fomorian','巨人战舰','G · Grineer','grineer'],['razorback','利刃豺狼战舰','C · Corpus','corpus']].map(([id,title,subtitle,faction],index)=>({id,title,subtitle,faction,progress:Number.isFinite(percentages[index])?Math.max(0,Math.min(100,percentages[index])):null,reference:{field:'ProjectPct',index,value:percentages[index]??null}}));
+}
+const boosterKinds={
+ GAMEPLAY_MONEY_REWARD_AMOUNT:{kind:'credits',name:'现金',effect:'任务现金奖励',iconToken:'CREDITS'},
+ GAMEPLAY_MONEY_PICKUP_AMOUNT:{kind:'credits',name:'现金',effect:'现金拾取',iconToken:'CREDITS'},
+ GAMEPLAY_PICKUP_AMOUNT:{kind:'resources',name:'资源',effect:'资源获取数量',iconToken:'BOOSTER'},
+ GAMEPLAY_KILL_XP_AMOUNT:{kind:'affinity',name:'经验',effect:'任务击杀经验',iconToken:'BOOSTER'}
+};
+export function worldBoosters(upgrades,at,{translate=(_,fallback)=>fallback,node=key=>key}={}){
+ const available=Array.isArray(upgrades),result=[],globalKinds=new Set();
+ for(const row of upgrades??[]){
+  const start=Date.parse(row.activation),end=Date.parse(row.expiry);if(!Number.isFinite(start)||!Number.isFinite(end)||end<=start||end<=at)continue;
+  const known=boosterKinds[row.upgradeType],nodes=(row.nodes??[]).filter(n=>typeof n==='string'&&n),scope=row.scopeKnown===false?'unknown':nodes.length?'nodes':'global',future=start>at;
+  if(known&&scope==='global')globalKinds.add(known.kind);
+  const multiply=row.operationType==='MULTIPLY'&&Number.isFinite(row.value)&&row.value>0;
+  const title=known?known.name+(multiply&&row.value===2?'双倍':'加成'):translate(row.nameKey,row.upgradeType??'其他加成');
+  result.push({id:row.id,title,subtitle:known?.effect??translate(row.descriptionKey,''),kind:known?.kind??'other',scope,status:future?'upcoming':'active',startsAt:row.activation,endsAt:row.expiry,iconToken:known?.iconToken??'BOOSTER',
+   chips:[scope==='nodes'?'节点限定':scope==='unknown'?'范围待确认':'全星系',future?'即将开始':'生效中',...nodes.map(node)],
+   stats:[multiply?row.value+'×':Number.isFinite(row.value)?(row.operationType??'运算待确认')+' '+row.value:'数值未提供'],description:multiply&&known?(future?'生效后，':'')+'搭配同类个人加成 2× → '+(row.value*2)+'×':'' ,reference:{upgradeType:row.upgradeType,operationType:row.operationType,value:row.value,nodes:row.nodes,scopeKnown:row.scopeKnown}});
+ }
+ for(const [kind,title] of [['credits','现金'],['resources','资源'],['affinity','经验']])if(!globalKinds.has(kind))result.push({id:kind+'-inactive',title:title+'双倍',subtitle:available?'当前未开启全星系加成':'当前快照未提供加成数据',kind,scope:'global',status:available?'inactive':'unavailable'});
+ return result.sort((a,b)=>({active:0,upcoming:1,inactive:2,unavailable:3})[a.status]-({active:0,upcoming:1,inactive:2,unavailable:3})[b.status]);
+}

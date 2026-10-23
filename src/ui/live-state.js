@@ -2,7 +2,7 @@ import {syndicateTasks,worldStatistics} from '../core/live-state/presentation.mj
 import { renderGameText } from './game-text.js';
 import { decorateImages } from './images.js';
 const groups=[['quick','快速入口'],['all','总览'],['missions','任务'],['weekly','周常'],['trade','商店'],['activity','动态']];
-const moduleOrder=['goals','fissures','sortie','archonHunt','alerts','invasions','bounties','syndicates','nodeOverrides','nightwave','circuit','conquests','calendar','descents','vaultBonus','voidTraders','primeVaultTraders','dailyDeals','flashSales','market','goals','events','boosters','construction','synthesis'];
+const moduleOrder=['goals','fissures','sortie','archonHunt','alerts','invasions','bounties','syndicates','nodeOverrides','nightwave','circuit','conquests','calendar','descents','vaultBonus','voidTraders','primeVaultTraders','dailyDeals','flashSales','market','goals','events','boosters','construction','relayConstruction','synthesis'];
 const svgPaths={world:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM3 12h18M12 3c-5 5-5 13 0 18M12 3c5 5 5 13 0 18',sun:'M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5',moon:'M20 14a8.5 8.5 0 0 1-10-10 8.5 8.5 0 1 0 10 10Z',spark:'m12 2 3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7Z',target:'M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM12 1v5m0 12v5M1 12h5m12 0h5',calendar:'M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm-2 5h18M8 2v4m8-4v4M7 13h3m4 0h3m-10 4h3',shop:'m3 9 2-6h14l2 6M3 9v11h18V9M3 9c0 4 4 4 4 0 0 4 5 4 5 0 0 4 5 4 5 0 0 4 4 4 4 0M8 20v-6h8v6',arrow:'M4 12h16m-6-6 6 6-6 6',back:'M20 12H4m6-6-6 6 6 6',refresh:'M20 8a8 8 0 1 0 0 8M20 3v5h-5',clock:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4v5l3 2',info:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 7v7m0-10v1'};
 function icon(kind='spark'){const node=document.createElementNS('http://www.w3.org/2000/svg','svg');node.setAttribute('viewBox','0 0 24 24');node.setAttribute('fill','none');node.setAttribute('stroke','currentColor');node.setAttribute('stroke-width','1.5');node.setAttribute('stroke-linecap','round');node.setAttribute('stroke-linejoin','round');node.setAttribute('aria-hidden','true');const p=document.createElementNS(node.namespaceURI,'path');p.setAttribute('d',svgPaths[kind] ?? svgPaths.spark);node.append(p);return node;}
 const el=(tag,cl,text)=>{const n=document.createElement(tag);if(cl)n.className=cl;if(text!==undefined)renderGameText(n,text,/^h/.test(tag)?'name':'description');return n;};
@@ -25,7 +25,7 @@ export function createLiveStateUI({api,guarded,notify}){
  });
  const page=()=> $('world');
  function image(row,card,images){if(row.id||row.icon||row.imageName)images.push({...row,card,label:row.name??row.title});}
- function timeBadge(row){const n=el('span','ws-time');n.dataset.start=row.startsAt??'';n.dataset.end=row.endsAt??'';n.title=[when(row.startsAt),when(row.endsAt)].filter(Boolean).join(' — ');n.append(icon('clock'),document.createTextNode(countdown(row.startsAt,row.endsAt)));return n;}
+ function timeBadge(row){const n=el('span','ws-time');n.dataset.start=row.startsAt??'';n.dataset.end=row.endsAt??'';n.title=[when(row.startsAt),when(row.endsAt)].filter(Boolean).join(' — ');const content=countdown(row.startsAt,row.endsAt);n.hidden=!content;n.append(icon('clock'),document.createTextNode(content));return n;}
  function chips(values){const n=el('div','ws-chips');for(const value of values??[])if(value)n.append(el('span','ws-chip',value));return n;}
  function loot(values,images,full=false){const grid=el('div','ws-loot-grid');for(const row of full?values:values.slice(0,4)){
    const card=el('div','ws-loot');image(row,card,images);card.append(el('strong','ws-loot-name',row.name??row.title),el('span','ws-loot-quantity',(Number.isFinite(row.quantity)?'×'+row.quantity:'')));
@@ -55,7 +55,7 @@ export function createLiveStateUI({api,guarded,notify}){
      const child=el('div','ws-shop-item');image(r,child,images);child.append(el('strong','',r.title??r.name));if(r.description&&full)child.append(el('p','ws-description',r.description));if(r.stats?.length)child.append(el('p','ws-item-price',r.stats.join(' · ')));if(r.rewards?.length)child.append(el('small','ws-item-price',r.rewards.length+' 项候选奖励'));if(full&&r.rewards?.length)child.append(loot(r.rewards,images,true));list.append(child);
    }card.append(list);}
    if(row.stats?.length)card.append(chips(row.stats));
-   if(Number.isFinite(row.progress)&&row.invasion){const track=el('div','ws-invasion-bar');track.setAttribute('role','img');track.setAttribute('aria-label',row.sides.map((side,i)=>side.name+' '+(i?100-row.progress:row.progress).toFixed(1)+'%').join(' / '));for(const [i,side] of row.sides.entries()){const part=el('span','ws-invasion-part',((i?100-row.progress:row.progress).toFixed(1))+'%');part.dataset.faction=side.tone;part.style.width=(i?100-row.progress:row.progress)+'%';track.append(part);}card.append(track);}
+   if(Number.isFinite(row.progress)&&row.invasion){const track=el('div','ws-invasion-bar');track.setAttribute('role','img');track.setAttribute('aria-label',row.sides.map((side,i)=>side.name+' '+(i?100-row.progress:row.progress).toFixed(1)+'%').join(' / '));for(const [i,side] of row.sides.entries()){const part=el('span','ws-invasion-part');part.dataset.faction=side.tone;part.style.width=(i?100-row.progress:row.progress)+'%';track.append(part);}const labels=el('div','ws-invasion-labels');for(const [i,side] of row.sides.entries()){const label=el('span','',((i?100-row.progress:row.progress).toFixed(1))+'%');label.dataset.faction=side.tone;labels.append(label);}card.append(labels,track);}
    else if(Number.isFinite(row.progress)){const track=el('progress','ws-progress');track.max=100;track.value=row.progress;track.setAttribute('aria-label',row.note??'进度');card.append(track);}
    if(row.note)card.append(el('p','ws-entry-note',row.note));
    if(full&&row.reference){const reference=el('details','ws-reference');reference.append(el('summary','','映射来源与上游字段'));const pre=el('pre','');pre.textContent=JSON.stringify(row.reference,null,2);reference.append(pre);card.append(reference);}
@@ -168,7 +168,7 @@ export function createLiveStateUI({api,guarded,notify}){
  }
  function renderFissures(body,rows){
    body.classList.add('ws-fissure-list');for(const row of rows){const card=el('article','ws-fissure ws-kind-'+row.kind);card.dataset.kind=row.kind;
-     const name=el('div','ws-fissure-name');name.append(el('strong','',row.title.split(/[·(（]/)[0].trim()),el('span','ws-planet',row.planet),el('span','ws-mission-badge ws-color-'+colorIndex(row.missionType),row.missionType));
+     const name=el('div','ws-fissure-name');name.append(el('strong','',row.title.split(/[·(（]/)[0].trim()),el('span','ws-planet',row.planet));if(row.missionType&&!(row.kind==='storm'&&row.missionType==='名称待补充'))name.append(el('span','ws-mission-badge ws-color-'+colorIndex(row.missionType),row.missionType));
      const badges=el('div','ws-fissure-badges');badges.append(el('span','ws-era-badge ws-color-'+(row.tier??colorIndex(row.era)),row.era),el('small','',({normal:'始源',hard:'钢铁之路',storm:'九重天'})[row.kind]));card.append(name,badges,timeBadge(row));body.append(card);}
  }
  function colorIndex(value){return [...value??''].reduce((sum,c)=>sum+c.charCodeAt(0),0)%6;}
@@ -207,8 +207,20 @@ export function createLiveStateUI({api,guarded,notify}){
    }
    if(!visible.length)body.append(el('p','ws-empty','奖励规则待核实，请进入完整内容查看楼层任务。'));
  }
+ function renderResearchOverview(body,rows){
+   for(const row of rows){const card=el('article','ws-entry ws-research-summary'),head=el('div','ws-entry-head');head.append(el('h3','ws-entry-title',row.title),timeBadge(row));card.append(head);const list=el('ol','ws-research-lines');for(const [index,step] of (row.steps??[]).entries()){const line=el('li','ws-research-line');line.append(el('span','ws-step-index',String(index+1)),el('strong','',step.title));const risks=(step.terms??[]).filter(t=>t.mode==='elite'&&t.label==='精英追加风险');if(risks.length){line.append(el('span','ws-elite-label','精英追加风险'));for(const risk of risks){const label=el('span','ws-elite ws-research-risk',risk.name);if(risk.description)label.title=risk.description;line.append(label);}}else line.append(el('small','ws-entry-note','无精英追加风险'));list.append(line);}card.append(list);body.append(card);
+   }
+ }
+ function renderFleets(body,rows){
+   body.classList.add('ws-fleets');for(const row of rows){const card=el('article','ws-fleet');card.dataset.faction=row.faction;const head=el('div','ws-entry-head'),copy=el('div','');copy.append(el('small','',row.subtitle),el('h3','ws-entry-title',row.title));head.append(copy,el('strong','ws-fleet-value',Number.isFinite(row.progress)?row.progress.toFixed(2)+'%':'数据未提供'));card.append(head);
+     if(Number.isFinite(row.progress)){const track=el('progress','ws-fleet-progress');track.max=100;track.value=row.progress;track.setAttribute('aria-label',row.title+'建造进度 '+row.progress.toFixed(2)+'%');card.append(track);}body.append(card);
+   }
+ }
  function renderCards(body,rows,module,images,full,limit=Infinity){
    if(module.id==='cycles'){body.append(renderCycles(module));return;}
+   if(module.id==='conquests'&&!full){renderResearchOverview(body,rows.slice(0,limit));return;}
+   if(module.layout==='fleet'){renderFleets(body,rows);return;}
+   if(module.layout==='boosters'){for(const row of rows.slice(0,limit)){const card=renderEntry(row,module,images,full);card.classList.add('ws-booster');card.dataset.boosterStatus=row.status;card.dataset.boosterKind=row.kind;card.dataset.scope=row.scope;body.append(card);}return;}
    if(module.id==='invigorations'){renderInvigorations(body,images);return;}
    if(module.id==='fissures'){renderFissures(body,rows.slice(0,limit));return;}
    if(module.layout==='shop'||module.layout==='sale'){renderShop(body,rows,module,images,full,limit);return;}
@@ -236,7 +248,7 @@ export function createLiveStateUI({api,guarded,notify}){
    const entries=filteredEntries(module);if(!entries.length&&state.query)return null;
    const section=el('section','ws-module'+(module.wide?' ws-wide':''));section.dataset.module=module.id;
    const head=el('div','ws-module-head'),title=el('div','ws-module-title');title.append(icon(module.group==='weekly'?'calendar':module.group==='trade'?'shop':module.group==='activity'?'world':'target'),el('h2','',module.title),el('span','ws-count',module.id==='descents'?entries.length+' 层':String(entries.length)));head.append(title);
-   const isLong=!['circuit','syndicates','synthesis'].includes(module.id)&&(module.layout==='shop'||module.id==='calendar'||entries.length>module.preview||entries.some(r=>nestedCount(r)>4||(r.items?.length??0)>3));
+   const isLong=!['circuit','syndicates','synthesis'].includes(module.id)&&(module.layout==='shop'||module.id==='calendar'||module.id==='conquests'||entries.length>module.preview||entries.some(r=>nestedCount(r)>4||(r.items?.length??0)>3));
    if(isLong){const action=button(module.id==='alerts'?'完整内容':entries.length>module.preview?'全部 '+entries.length+(module.id==='descents'?' 层':' 项'):'完整内容','ws-more',()=>openDetail(module));action.append(icon('arrow'));head.append(action);}
    section.append(head);
    if(module.filters)section.append(renderFilters(module));
@@ -250,7 +262,7 @@ export function createLiveStateUI({api,guarded,notify}){
    const all=filteredEntries(module);head.append(el('span','ws-count',all.length+(module.id==='descents'?' 层':' 项')));container.append(head);
    if(module.filters)container.append(renderFilters(module));
    if(module.note)container.append(el('p','ws-module-note',module.note));
-   const body=el('div','ws-detail-grid');renderCards(body,module.noPagination?all:all.slice(state.offset,state.offset+24),module,images,true);if(!all.length&&module.id!=='invigorations'&&!module.note?.startsWith('读取'))body.append(el('p','ws-empty',module.empty??'当前快照暂无内容'));container.append(body);
+   const body=el('div','ws-detail-grid');if(['alerts','invasions'].includes(module.id))body.classList.add('ws-detail-missions');renderCards(body,module.noPagination?all:all.slice(state.offset,state.offset+24),module,images,true);if(!all.length&&module.id!=='invigorations'&&!module.note?.startsWith('读取'))body.append(el('p','ws-empty',module.empty??'当前快照暂无内容'));container.append(body);
    if(all.length>24&&!module.noPagination){const pager=el('div','ws-pagination');const previous=button('上一页','',()=>{state.offset-=24;render();page().scrollTop=0;});previous.disabled=state.offset===0;const next=button('下一页','',()=>{state.offset+=24;render();page().scrollTop=0;});next.disabled=state.offset+24>=all.length;pager.append(previous,el('span','',`${state.offset+1}–${Math.min(all.length,state.offset+24)} / ${all.length}`),next);container.append(pager);}
    return container;
  }
@@ -327,7 +339,7 @@ export function createLiveStateUI({api,guarded,notify}){
    for(const row of rows.slice(newsPage*3,newsPage*3+3)){const action=button(row.title,'ws-news-title',()=>guarded(()=>api.openDocumentLink(row.url)));action.title=row.title;action.disabled=!row.url;target.append(action);}
  }
  const newsTimer=setInterval(()=>{if(page().classList.contains('active')&&!document.querySelector('.ws-hero:hover')&&!document.querySelector('.ws-hero:focus-within')){newsPage++;renderNews();}},9000);
- function updateTimes(){if(state.data?.kind==='network'&&!state.data.stale&&Math.abs(Date.now()-Date.parse(state.data.sourceTime))>=600000){state.data.stale=true;$('ws-status').textContent='缓存快照';$('ws-status').classList.remove('is-live');$('ws-status').classList.add('is-stale');$('ws-banner').hidden=false;$('ws-banner').textContent='快照已过期，刷新获取最新状态。';}for(const n of $('ws-content').querySelectorAll('.ws-time')){const content=countdown(n.dataset.start,n.dataset.end);n.lastChild.textContent=content;n.classList.toggle('ended',content==='已结束');}}
+ function updateTimes(){if(state.data?.kind==='network'&&!state.data.stale&&Math.abs(Date.now()-Date.parse(state.data.sourceTime))>=600000){state.data.stale=true;$('ws-status').textContent='缓存快照';$('ws-status').classList.remove('is-live');$('ws-status').classList.add('is-stale');$('ws-banner').hidden=false;$('ws-banner').textContent='快照已过期，刷新获取最新状态。';}for(const n of $('ws-content').querySelectorAll('.ws-time')){const content=countdown(n.dataset.start,n.dataset.end);n.lastChild.textContent=content;n.hidden=!content;n.classList.toggle('ended',content==='已结束');}}
  async function load(refresh=false,silent=false){
    const sequence=++state.sequence,server=state.server;state.busy=true;$('ws-refresh').disabled=true;$('ws-refresh').classList.toggle('loading',true);$('ws-content').setAttribute('aria-busy','true');
    try{const data=await api.call('liveState',{server,refresh});cache.set(server,data);if(sequence!==state.sequence)return;state.data=data;derivedModules.clear();invigResult=null;state.loaded=true;render();if(refresh&&!silent)notify(data.refreshError?'刷新失败，保留已有快照':'世界状态已更新',Boolean(data.refreshError));}

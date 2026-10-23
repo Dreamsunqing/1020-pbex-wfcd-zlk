@@ -77,6 +77,15 @@ export async function buildFull(options) {
         result.push({ value: ranked.text, rawValue: ranked.lines, locale, rank: ranked.rank, transform: 'max-rank-stats', source: { ...row.source, pointer: row.source.pointer + ranked.pointer } });
       }
     }
+    if (!result.length && key === 'description') {
+      const recipe=rows.find(r=>r.kind==='blueprint'&&typeof r.value.resultType==='string');
+      if(recipe){
+        const raw=recipe.value.resultType,alias=[...contract.aliases].sort((a,b)=>b.from.length-a.from.length).find(a=>a.mode==='exact'?raw===a.from:raw.startsWith(a.from));
+        const resultId=alias?(alias.mode==='exact'?alias.to:alias.to+raw.slice(alias.from.length)):raw;
+        const descriptions=texts(resultId,key,locale,new Set([...visiting,id]));
+        if(descriptions.length)result.push({...candidate(recipe,'resultType',descriptions[0].value,'derived-blueprint-description'),resultSource:descriptions[0]});
+      }
+    }
     if (!result.length && key === 'name' && ['zh-CN','en'].includes(locale)) {
       const recipe = rows.find(r => typeof r.value.resultType === 'string');
       if (recipe) { const names = texts(recipe.value.resultType, key, locale, new Set([...visiting, id])); if (names.length) result.push({ ...candidate(recipe, 'resultType', names[0].value + (locale === 'zh-CN' ? ' 蓝图' : ' Blueprint'), 'derived-blueprint-name'), resultSource: names[0] }); }
@@ -252,7 +261,7 @@ export async function buildFull(options) {
   for (const file of Object.keys(output).filter(file=>file.startsWith('localizations/'))) output[file]=compactEvidence(output[file]);
   onProgress({ message: `校验 ${documents.length} 份输入与 ${items.length} 个实体，准备发布…` });
   const files = Object.entries(output).sort(([a], [b]) => compareText(a, b)).map(([file, value]) => ({ file, hash: sha256(stable(value, true)), bytes: Buffer.byteLength(stable(value, true)) }));
-  const identity = { modelingVersion: 'localized-text-3', schemaVersion: contract.schemaVersion, locales:contract.locales, encoding: 'compact-json', mappingVersion: contract.mappingVersion, builderVersion: contract.builderVersion, contractHash: digest(contract), overridesHash: digest(overrides), inputs: documents.map(({ file, source, hash, bytes }) => ({ file, source, hash, bytes })), files, scope: contract.scope, quality: issues.some(i => i.severity === 'warning') ? 'review-required' : 'full-static', summary: { entities: items.length, recipes: recipes.length, rewardTables: rewardTables.length, relations: relations.length, issues: issues.length, conflicts: coverage.conflicts, unresolved: coverage.unresolved, rewardItems: coverage.rewardItems } };
+  const identity = { modelingVersion: 'localized-text-4', schemaVersion: contract.schemaVersion, locales:contract.locales, encoding: 'compact-json', mappingVersion: contract.mappingVersion, builderVersion: contract.builderVersion, contractHash: digest(contract), overridesHash: digest(overrides), inputs: documents.map(({ file, source, hash, bytes }) => ({ file, source, hash, bytes })), files, scope: contract.scope, quality: issues.some(i => i.severity === 'warning') ? 'review-required' : 'full-static', summary: { entities: items.length, recipes: recipes.length, rewardTables: rewardTables.length, relations: relations.length, issues: issues.length, conflicts: coverage.conflicts, unresolved: coverage.unresolved, rewardItems: coverage.rewardItems } };
   await verifyInputs(documents, read);
   return { manifest: { ...identity, datasetVersion: digest(identity) }, output };
 }

@@ -17,7 +17,7 @@
     <div class="brand"><span class="brand-icon">◈</span><div>上游资料工作台<small>SOURCE WORKBENCH <b>01</b></small></div></div>
     <nav aria-label="功能页面"><button class="nav active" data-panel="browser">资料浏览</button><button class="nav" data-panel="world">世界状态</button>
       <button class="nav" data-panel="codex">资料库</button><button class="nav" data-panel="wm">WM</button><button class="nav" data-panel="merged">合并汇总</button><button class="nav" data-panel="gallery">图片资源</button><button class="nav" data-panel="rules">合并规则</button><button class="nav" data-panel="oracle">推算实验室</button><button class="nav" data-panel="updates">更新与版本</button><button class="nav" data-panel="documents">文档阅读</button><button class="nav" data-panel="settings">配置</button></nav>
-    <div class="header-tools"><span class="version">v0.15.1</span><select id="theme-select" aria-label="外观主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">暗色</option></select></div>
+    <div class="header-tools"><span class="version">v0.16.0</span><select id="theme-select" aria-label="外观主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">暗色</option></select></div>
   </header>
   <div id="notice" role="status" hidden></div>
   <main>
@@ -163,7 +163,7 @@
       </div>
     </section>
     <section id="documents" class="panel docs-panel">
-      <aside class="docs-sidebar"><div class="aside-title"><span>项目文档</span><button id="docs-refresh" class="small">刷新</button></div><input id="docs-search" type="search" placeholder="搜索标题、路径或全文…" aria-label="全文搜索项目文档"><select id="docs-group" aria-label="文档分组"><option>当前文档</option><option>全部</option><option>总览</option><option>新人入门</option><option>深入理解</option><option>AI 协作</option><option>工具</option><option>归档</option></select><p id="docs-list-status" class="muted"></p><div id="docs-list" class="docs-file-list"></div></aside>
+      <aside class="docs-sidebar"><div class="aside-title"><span>项目文档</span><button id="docs-refresh" class="small">刷新</button></div><input id="docs-search" type="search" placeholder="搜索标题、路径或全文…" aria-label="全文搜索项目文档"><select id="docs-group" aria-label="文档分组"><option>当前文档</option><option>全部</option><option>总览</option><option>新人入门</option><option>深入理解</option><option>WM</option><option>AI 协作</option><option>工具</option><option>归档</option></select><p id="docs-list-status" class="muted"></p><div id="docs-list" class="docs-file-list"></div></aside>
       <div class="docs-main"><div class="docs-toolbar"><div class="actions"><button id="docs-back" class="small" disabled>← 返回</button><button id="docs-home" class="small">文档总览</button></div><div class="actions"><label>字号 <select id="docs-font"><option>14</option><option selected>16</option><option>18</option></select></label><button id="docs-copy" class="small">复制 Markdown</button></div></div><div class="docs-body"><div id="docs-reading" class="docs-reading"><div class="docs-document-heading"><small id="docs-reading-status">本地文档</small><h1 id="docs-title">项目文档</h1><p id="docs-path" class="root-path"></p><p id="docs-archive-note" class="hint" hidden>这是一份历史过程记录，可能包含旧路径和旧数量。当前约定请以“文档总览”和深入文档为准。</p></div><article id="docs-article" tabindex="0"></article></div><nav id="docs-outline" class="docs-outline" aria-label="本文目录"></nav></div></div>
     </section>
     <section id="settings" class="panel page">

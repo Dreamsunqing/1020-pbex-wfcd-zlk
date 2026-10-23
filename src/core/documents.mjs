@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const inside = (root, file) => { const relative = path.relative(root, file); return relative && relative !== '..' && !relative.startsWith('..' + path.sep) && !path.isAbsolute(relative); };
-const category = id => id.startsWith('文档/归档/') ? '归档' : id.startsWith('文档/入门/') ? '新人入门' : id.startsWith('文档/深入/') ? '深入理解' : id.startsWith('文档/AI/') ? 'AI 协作' : id.startsWith('工具/') ? '工具' : '总览';
+const category = id => id.startsWith('文档/WM/') || id.startsWith('文档/参考资料/WarframeMarket/') ? 'WM' : id.startsWith('文档/归档/') ? '归档' : id.startsWith('文档/入门/') ? '新人入门' : id.startsWith('文档/深入/') ? '深入理解' : id.startsWith('文档/AI/') ? 'AI 协作' : id.startsWith('工具/') ? '工具' : '总览';
 
 export class DocumentLibrary {
   constructor(root) { this.root = path.resolve(root); }
@@ -30,7 +30,7 @@ export class DocumentLibrary {
     return { id, title: text.match(/^#\s+(.+)$/m)?.[1] ?? path.basename(id, '.md'), group: category(id), bytes: stat.size, modifiedAt: stat.mtime.toISOString(), text };
   }
   async list({ query = '', group = '全部' } = {}) {
-    if (typeof query !== 'string' || query.length > 300 || !['全部', '总览', '新人入门', '深入理解', 'AI 协作', '工具', '归档'].includes(group)) throw new Error('文档筛选无效');
+    if (typeof query !== 'string' || query.length > 300 || !['全部', 'WM', '总览', '新人入门', '深入理解', 'AI 协作', '工具', '归档'].includes(group)) throw new Error('文档筛选无效');
     const tokens = query.normalize('NFKC').toLocaleLowerCase().split(/\s+/).filter(Boolean), rows = [];
     const known = await this.catalog();
     for (const id of known) {

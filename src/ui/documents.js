@@ -91,8 +91,8 @@ export function createDocumentsUI({ api, guarded, notify }) {
     $('docs-list-status').textContent = '正在查找…';
     const result = await api.call('documentsList', { query: $('docs-search').value, group: group === '当前文档' ? '全部' : group });
     if (listing !== state.listing) return;
-    const rows = result.rows.filter(row => group !== '当前文档' || row.group !== '归档'), container = $('docs-list'); container.replaceChildren();
-    for (const name of ['总览', '新人入门', '深入理解', 'AI 协作', '工具', '归档']) {
+    const rows = result.rows.filter(row => group !== '当前文档' || !['归档','WM'].includes(row.group)), container = $('docs-list'); container.replaceChildren();
+    for (const name of ['总览', '新人入门', '深入理解', 'AI 协作', '工具', 'WM', '归档']) {
       const entries = rows.filter(row => row.group === name); if (!entries.length) continue;
       container.append(el('h3', '', `${name} · ${entries.length}`));
       for (const row of entries) { const button = el('button', 'docs-file', row.title); button.dataset.id = row.id; button.title = row.id; button.classList.toggle('active', row.id === state.current?.id); button.onclick = () => guarded(() => open(row.id)); container.append(button); }

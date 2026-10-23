@@ -1,17 +1,23 @@
+import {composeCardArt} from './card-art.js';
 export async function decorateImages(api, entries, detail = false) {
   if (!entries.length) return;
   // Keep each response below the byte budget; a dense page must not starve its last images.
   if (entries.length > 16) { for (let i = 0; i < entries.length; i += 16) await decorateImages(api, entries.slice(i, i + 16), detail); return; }
   try {
     const images = await api.images(entries.map(({ id, imageName, blueprint, resultId, resultImageName, icon, abilityIcon }) => ({ id, imageName, blueprint, resultId, resultImageName, icon, abilityIcon })));
-    images.forEach((image, index) => {
+    await Promise.all(images.map(async (image, index) => {
       const { card, label } = entries[index];
       if (!image || !card.isConnected || card.querySelector(':scope > .local-item-image')) return;
+      const art=await composeCardArt(image,entries[index],detail);
+      if(!card.isConnected)return;
+      const original=image;
+      if(art)image={...image,dataUrl:art.dataUrl};
       const composite = Array.isArray(image.layers);
       const picture = document.createElement(composite ? 'span' : 'img');
-      picture.className = `local-item-image${detail ? ' detail-image' : ''}${composite ? ' blueprint-image' : ''}${image.kind === 'tau-shard' ? ' tau-shard-image' : ''}${image.abilityIcon ? ' wfcd-ability-image' : ''}`;
+      picture.className = `local-item-image${detail ? ' detail-image' : ''}${composite ? ' blueprint-image' : ''}${image.kind === 'tau-shard' ? ' tau-shard-image' : ''}${image.abilityIcon ? ' wfcd-ability-image' : ''}${art ? ' composed-card-art '+art.kind+'-card-art'+(art.full?' full-mod-card':'') : ''}`;
       const layers = composite ? image.layers : [image];
       picture.title = layers.map(layer => `本地 ${layer.provider === 'official' ? 'DE 官方' : 'WFCD'} 图片 · ${layer.original ?? layer.file}\n匹配方式：${layer.method}`).join('\n');
+      if(art){picture.dataset.composed=art.kind;picture.title='本地拼接 · '+art.kind+' · '+(original.original??original.file)+'\n'+picture.title;}
       if (composite) { picture.setAttribute('role', 'img'); picture.setAttribute('aria-label', label ?? '蓝图'); }
       layers.forEach(layer => {
         const img = composite ? document.createElement('img') : picture;
@@ -23,6 +29,6 @@ export async function decorateImages(api, entries, detail = false) {
         if (composite) picture.append(img);
       });
       card.prepend(picture);
-    });
+    }));
   } catch { /* Optional imagery must never prevent browsing data. */ }
 }

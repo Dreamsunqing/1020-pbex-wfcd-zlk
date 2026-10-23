@@ -1,3 +1,4 @@
+import { cardArt } from '../card-art.mjs';
 import { selectLocalizedField, applyLocalizedFields } from '../text-localization.mjs';
 import path from 'node:path';
 import { internalItems } from './display-policy.mjs';
@@ -62,11 +63,12 @@ const imageNames = data => {
   return imageCache.get(data.output);
 };
 export const imageDescriptors = (data, items) => {
+  if(data.output['player/images.json'])return Object.fromEntries(items.map(item=>[item.id,{...data.output['player/images.json'][item.id],cardArt:cardArt(item)}]));
   const names = imageNames(data), recipes = new Map(data.output['recipes.json'].map(row => [row.id, row]));
   return Object.fromEntries(items.map(item => {
     const resultId = recipes.get(item.id)?.resultId;
     const icon = iconCache.get(data.output)?.[item.id];
-    return [item.id, { id: item.id, imageName: names[item.id] ?? iconFilename(icon), icon, abilityIcon: isAbilityIcon(icon, names[item.id]), blueprint: item.kind === 'blueprint', resultId, resultImageName: names[resultId] }];
+    return [item.id, { id: item.id, cardArt: cardArt(item), imageName: names[item.id] ?? iconFilename(icon), icon, abilityIcon: isAbilityIcon(icon, names[item.id]), blueprint: item.kind === 'blueprint', resultId, resultImageName: names[resultId] }];
   }));
 };
 const itemTitle = (item,locale) => item?.name?.[locale] ?? item?.name?.en ?? item?.id?.split('/').at(-1);

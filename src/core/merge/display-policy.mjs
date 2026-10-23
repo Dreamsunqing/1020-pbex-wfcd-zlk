@@ -8,7 +8,7 @@ export function internalItems(data) {
     if (!origins.has(row.entityId)) origins.set(row.entityId, []);
     origins.get(row.entityId).push(source);
   }
-  const hidden = new Map();
+  const hidden = new Map(data.output['player/hidden.json'] ?? []);
   for (const [id, sources] of origins) if (sources.length && sources.every(source => source?.source === 'plus' && /\/ExportVirtuals\.json$/.test(source.file))) {
     hidden.set(id, '仅来自 ExportVirtuals 的内部继承／兼容定义，无独立物品记录；完整实体与引用仍保留。');
   }

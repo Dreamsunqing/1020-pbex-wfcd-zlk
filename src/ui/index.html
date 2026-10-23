@@ -10,12 +10,14 @@
   <link rel="stylesheet" href="workspace.css">
   <link rel="stylesheet" href="live-state.css">
   <link rel="stylesheet" href="wm.css">
+  <link rel="stylesheet" href="player-library.css">
 </head>
 <body>
   <header>
     <div class="brand"><span class="brand-icon">◈</span><div>上游资料工作台<small>SOURCE WORKBENCH <b>01</b></small></div></div>
-    <nav aria-label="功能页面"><button class="nav active" data-panel="browser">资料浏览</button><button class="nav" data-panel="world">世界状态</button><button class="nav" data-panel="wm">WM</button><button class="nav" data-panel="merged">合并汇总</button><button class="nav" data-panel="gallery">图片资源</button><button class="nav" data-panel="rules">合并规则</button><button class="nav" data-panel="oracle">推算实验室</button><button class="nav" data-panel="updates">更新与版本</button><button class="nav" data-panel="documents">文档阅读</button><button class="nav" data-panel="settings">配置</button></nav>
-    <div class="header-tools"><span class="version">v0.14.1</span><select id="theme-select" aria-label="外观主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">暗色</option></select></div>
+    <nav aria-label="功能页面"><button class="nav active" data-panel="browser">资料浏览</button><button class="nav" data-panel="world">世界状态</button>
+      <button class="nav" data-panel="codex">资料库</button><button class="nav" data-panel="wm">WM</button><button class="nav" data-panel="merged">合并汇总</button><button class="nav" data-panel="gallery">图片资源</button><button class="nav" data-panel="rules">合并规则</button><button class="nav" data-panel="oracle">推算实验室</button><button class="nav" data-panel="updates">更新与版本</button><button class="nav" data-panel="documents">文档阅读</button><button class="nav" data-panel="settings">配置</button></nav>
+    <div class="header-tools"><span class="version">v0.15.0</span><select id="theme-select" aria-label="外观主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">暗色</option></select></div>
   </header>
   <div id="notice" role="status" hidden></div>
   <main>
@@ -54,6 +56,12 @@
       <div class="ws-toolbar"><nav id="ws-tabs" aria-label="世界状态分类"></nav><input id="ws-search" type="search" placeholder="搜索任务、物品、奖励…" aria-label="搜索世界状态"></div>
       <div id="ws-content" aria-live="polite"><p class="ws-empty">正在读取状态…</p></div>
       <details class="ws-diagnostics"><summary id="ws-source-info">数据来源与解析状态</summary><pre id="ws-diagnostics"></pre></details>
+    </section>
+    <section id="codex" class="panel page codex-page" aria-label="玩家资料库">
+      <div id="codex-browse">
+        <div class="codex-hero"><div><span class="codex-eyebrow">始源星系 · TENNO ARCHIVE</span><h1>装备你的下一次冒险</h1><p>战甲、武器与同伴，一处探索。</p><label class="codex-search"><span aria-hidden="true">⌕</span><input id="codex-search" type="search" maxlength="200" placeholder="搜索当前分类的中文、英文名称或描述…" aria-label="搜索资料库"><kbd>⌘ / Ctrl K</kbd></label></div><div id="codex-hero-art" aria-hidden="true"></div></div>
+        <div class="codex-layout"><div id="codex-categories" class="codex-categories" aria-label="资料分类"></div><div class="codex-results"><div class="codex-section-heading"><div><h2 id="codex-heading">战甲与机甲</h2><p id="codex-subtitle"></p></div><label class="codex-language">资料语言<select id="codex-locale" aria-label="资料库语言"><option value="zh-CN">简体中文</option><option value="en">English</option></select></label></div><div id="codex-filters" class="codex-filters"></div><div class="codex-result-meta"><span id="codex-count" role="status" aria-live="polite"></span><button id="codex-clear" class="link">重置筛选</button></div><div id="codex-grid" class="codex-grid"></div><div id="codex-more" class="codex-more"></div></div></div>
+      </div><div id="codex-detail" hidden></div>
     </section>
     <section id="wm" class="panel page wm-page" aria-label="WM 交易查询">
       <div class="wm-heading"><div><small>WARFRAME MARKET</small><h1>WM<span>交易查询</span></h1><p>查询物品订单、价格统计与裂罅拍卖。</p></div><div class="actions"><button id="wm-original" class="small">打开 WM ↗</button><button id="wm-catalog-refresh" class="small">刷新物品目录</button></div></div>

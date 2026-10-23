@@ -1,6 +1,6 @@
 {
   "name": "world-state-source-workbench",
-  "version": "0.14.1",
+  "version": "0.15.0",
   "description": "Warframe 上游资料工作台：独立来源预览、快照更新与推算",
   "private": true,
   "type": "module",
@@ -24,9 +24,11 @@
     "retain:packages": "node scripts/retain-packages.mjs",
     "prepare:text-icons": "node scripts/prepare-inline-tokens.mjs",
     "prestart": "node scripts/prepare-inline-tokens.mjs",
-    "prepack:mac": "node scripts/prepare-inline-tokens.mjs",
-    "prepack:win": "node scripts/prepare-inline-tokens.mjs",
-    "pack:win:images": "python3 scripts/package-win-images.py"
+    "prepack:mac": "node scripts/prepare-inline-tokens.mjs && node scripts/prepare-player-library.mjs --check",
+    "prepack:win": "node scripts/prepare-inline-tokens.mjs && node scripts/prepare-player-library.mjs --check",
+    "pack:win:images": "python3 scripts/package-win-images.py",
+    "prepare:player-library": "node scripts/prepare-player-library.mjs",
+    "prepare:card-assets": "node scripts/sync-card-assets.mjs"
   },
   "build": {
     "appId": "local.worldstate.sourceworkbench",

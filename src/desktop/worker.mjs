@@ -1,3 +1,5 @@
+import { loadPlayerBundle } from '../core/player-bundle.mjs';
+import { playerLibraryList, playerLibraryDetail } from '../core/player-library.mjs';
 import { rewardContexts } from '../core/merge/reward-context.mjs';
 import { LiveStateStore } from '../core/live-state/service.mjs';
 import { WmService } from '../core/wm/service.mjs';
@@ -66,6 +68,18 @@ async function initializeImages(root) {
   if (localImages.root) { gallery = new ImageGallery(localImages.root, root); return; }
   const candidates = [workerData.imageRoot, preferences.imageRoot, workerData.contentRoot, path.resolve(root, '../assets/content'), path.resolve(root, 'assets/content')].filter(Boolean);
   for (const candidate of candidates) try { await localImages.select(candidate); gallery = new ImageGallery(localImages.root, root); return; } catch { /* Try the next known local location. */ }
+}
+// Player pages can start without the source directory or an on-device merge build.
+async function playerDataset(expectedVersion) {
+  const bundled=await loadPlayerBundle();
+  if(expectedVersion===bundled.manifest.datasetVersion)return bundled;
+  if(library||mode==='snapshot'){
+    const ctx=await mergeContext({library,release,mode,store});
+    const current=await readJson(path.join(ctx.repository.root,'current.json')).catch(e=>{if(e.code==='ENOENT')return null;throw e;});
+    if(current&&current.datasetVersion!==bundled.manifest.datasetVersion)return datasetFor(ctx,expectedVersion);
+  }
+  if(expectedVersion&&expectedVersion!==bundled.manifest.datasetVersion)throw new Error('资料库版本已变化，请重新进入资料库');
+  return bundled;
 }
 const progress = value => parentPort.postMessage({ event: 'progress', value });
 const savePreferences = () => atomicJson(preferencesFile, preferences);
@@ -173,6 +187,9 @@ const handlers = {
       return mergedStatus(ctx);
     } finally { mergeBusy = false; }
   },
+  async playerLibraryStatus() {const data=await playerDataset();return {available:true,manifest:data.manifest};},
+  async playerLibraryList(args = {}) { return playerLibraryList(await playerDataset(args.datasetVersion), args); },
+  async playerLibraryDetail(args) { return playerLibraryDetail(await playerDataset(args.datasetVersion), args.id, { locale: args.locale }); },
   async mergeList(args) { const ctx = await mergeContext({ library, release, mode, store }); return mergedList(await datasetFor(ctx, args.datasetVersion), args); },
   async mergeDetail(args) { const ctx = await mergeContext({ library, release, mode, store }); return mergedDetail(await datasetFor(ctx, args.datasetVersion), args.id, {locale:args.locale}); },
   async mergeReport({ type, datasetVersion, offset = 0, limit = 40, query = '', tableId=null }) {

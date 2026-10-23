@@ -1,0 +1,380 @@
+{
+  "schemaVersion": 1,
+  "sourceProject": "仓鼠互助洞 cangshuClient",
+  "sourceImplementation": [
+    "pages/wf-items/common/mod-assets.js",
+    "pages/wf-items/common/ModArtFrame.vue",
+    "pages/wf-items/common/ModCard.vue",
+    "pages/wf-items/common/arcane-assets.js"
+  ],
+  "modOrigin": "App README 记录：Warframe Fandom Wiki Mod Components，2026-07-25 MediaWiki API；极性为转换后的 PNG。",
+  "arcaneOrigin": "App 本地素材；未登记原始外部来源。",
+  "files": [
+    {
+      "file": "mods/wiki/AmalgamBackground.png",
+      "bytes": 11680,
+      "sha256": "1ca519d1ce428e2acdf51e22645300e06db4f766df55173b642a5826f1f309b6",
+      "source": "static/images/mods/wiki/AmalgamBackground.png"
+    },
+    {
+      "file": "mods/wiki/AmalgamFrameBottom.png",
+      "bytes": 22600,
+      "sha256": "9f2154d50f42f8943b62803ac26298b22493a73a1b743b81711b115cae8eb68e",
+      "source": "static/images/mods/wiki/AmalgamFrameBottom.png"
+    },
+    {
+      "file": "mods/wiki/AmalgamFrameTop.png",
+      "bytes": 5601,
+      "sha256": "71096b0ea6e392df3492f1930be5e743868c3f381aa7ee35834f5c8af59a7569",
+      "source": "static/images/mods/wiki/AmalgamFrameTop.png"
+    },
+    {
+      "file": "mods/wiki/AvionicModsFrameBottomBronze.png",
+      "bytes": 28666,
+      "sha256": "8f452089f063fe73be4ca3d5a54ce8b3a0087430430e3254daf5f7d5331f4f14",
+      "source": "static/images/mods/wiki/AvionicModsFrameBottomBronze.png"
+    },
+    {
+      "file": "mods/wiki/AvionicModsFrameBottomGold.png",
+      "bytes": 28775,
+      "sha256": "39f44dc56058a9499145e3b9e4208146afc3bddff45731e0e5ad3ed081e14f08",
+      "source": "static/images/mods/wiki/AvionicModsFrameBottomGold.png"
+    },
+    {
+      "file": "mods/wiki/AvionicModsFrameBottomSilver.png",
+      "bytes": 28148,
+      "sha256": "b6c12b783fd96ac8d8e342593e2d7e50ddbc05c4b5e8ea5071211c33b4df2cc6",
+      "source": "static/images/mods/wiki/AvionicModsFrameBottomSilver.png"
+    },
+    {
+      "file": "mods/wiki/AvionicModsFrameTopBronze.png",
+      "bytes": 25752,
+      "sha256": "025f70628e945677b6e00da3372d0405f956351d1bc19323d02327061cb5a1f9",
+      "source": "static/images/mods/wiki/AvionicModsFrameTopBronze.png"
+    },
+    {
+      "file": "mods/wiki/AvionicModsFrameTopGold.png",
+      "bytes": 25720,
+      "sha256": "5f8867d43462cbce3358e006d49af1ba10c603aa1ad83c649df5f5d79519ca90",
+      "source": "static/images/mods/wiki/AvionicModsFrameTopGold.png"
+    },
+    {
+      "file": "mods/wiki/AvionicModsFrameTopSilver.png",
+      "bytes": 25552,
+      "sha256": "7be9b1653c1e159977608a40519447bbed1270ce021378f0471a9aff1aaeb589",
+      "source": "static/images/mods/wiki/AvionicModsFrameTopSilver.png"
+    },
+    {
+      "file": "mods/wiki/BronzeBackground.png",
+      "bytes": 78878,
+      "sha256": "690e742d049426ff016ebd3198ceb2020f1647037e4661842d98cecfebe7548a",
+      "source": "static/images/mods/wiki/BronzeBackground.png"
+    },
+    {
+      "file": "mods/wiki/BronzeCornerLights.png",
+      "bytes": 3400,
+      "sha256": "2a4822a6aad3c0e4d573d88b7f6b12fd8a610e6fd94c743b144e6066af33822a",
+      "source": "static/images/mods/wiki/BronzeCornerLights.png"
+    },
+    {
+      "file": "mods/wiki/BronzeFrameBottom.png",
+      "bytes": 21446,
+      "sha256": "8c5f1deb3d34890cd2cbb967fc9779ba19bedbb925d7018a91df1d33c0f091c7",
+      "source": "static/images/mods/wiki/BronzeFrameBottom.png"
+    },
+    {
+      "file": "mods/wiki/BronzeFrameTop.png",
+      "bytes": 3901,
+      "sha256": "f0bf877199b1b5eabf5c16f7ca2d6fe792e3c7c0a353c6de18999c4c12ef9270",
+      "source": "static/images/mods/wiki/BronzeFrameTop.png"
+    },
+    {
+      "file": "mods/wiki/BronzeLowerTab.png",
+      "bytes": 908,
+      "sha256": "572c99d49513cb0916e90630a97318c49754f7243240aa0156b7ad61dd77ef9a",
+      "source": "static/images/mods/wiki/BronzeLowerTab.png"
+    },
+    {
+      "file": "mods/wiki/BronzeSideLight.png",
+      "bytes": 3649,
+      "sha256": "df3baedb455c39ab56388220b61499e09c59743a9f1ca0a84bd9f4348dde3659",
+      "source": "static/images/mods/wiki/BronzeSideLight.png"
+    },
+    {
+      "file": "mods/wiki/BronzeTopRightBacker.png",
+      "bytes": 530,
+      "sha256": "20b3575138ee7609e257903f52acfdd8394fc3334835551e640fd81af14a7980",
+      "source": "static/images/mods/wiki/BronzeTopRightBacker.png"
+    },
+    {
+      "file": "mods/wiki/GalvanizedBackground.png",
+      "bytes": 94960,
+      "sha256": "d748a648d87542b9c0f9b4b863558e311fc1a397a8a4d492deaebb0471b2187e",
+      "source": "static/images/mods/wiki/GalvanizedBackground.png"
+    },
+    {
+      "file": "mods/wiki/GalvanizedBottomLight.png",
+      "bytes": 2319,
+      "sha256": "8d7747cac064f0f3f570e342dd7a762da2d642b0b666d3a6f2372411305c82d6",
+      "source": "static/images/mods/wiki/GalvanizedBottomLight.png"
+    },
+    {
+      "file": "mods/wiki/GalvanizedFrameBottom.png",
+      "bytes": 80127,
+      "sha256": "252164745fc629ad8b45cbb5705a3237fd7c970f10fdf895227426b25306cf37",
+      "source": "static/images/mods/wiki/GalvanizedFrameBottom.png"
+    },
+    {
+      "file": "mods/wiki/GalvanizedFrameTop.png",
+      "bytes": 63799,
+      "sha256": "d8c25faee1b8dfd831621a4c2717c357269e6dd765e33fd7f7f429805f601ca9",
+      "source": "static/images/mods/wiki/GalvanizedFrameTop.png"
+    },
+    {
+      "file": "mods/wiki/GalvanizedSideLight.png",
+      "bytes": 11899,
+      "sha256": "009ca8b4615d9fd186dc04a04135e806e55c865fa80a9473b92312c42c8e7dd6",
+      "source": "static/images/mods/wiki/GalvanizedSideLight.png"
+    },
+    {
+      "file": "mods/wiki/GoldBackground.png",
+      "bytes": 101682,
+      "sha256": "fcc2abc9caee07f32546376700b2d286ee70e31147e096d8dccfc5fa370f6dc6",
+      "source": "static/images/mods/wiki/GoldBackground.png"
+    },
+    {
+      "file": "mods/wiki/GoldCornerLights.png",
+      "bytes": 4216,
+      "sha256": "450aa68ad53b2c0632e47b4eb4ed3b8328f1921c551a2ce7f3c8769c7009ee4c",
+      "source": "static/images/mods/wiki/GoldCornerLights.png"
+    },
+    {
+      "file": "mods/wiki/GoldFrameBottom.png",
+      "bytes": 19245,
+      "sha256": "3dd9db46ed3cb6a74565b8748dedda654b013d6b1e6bbc43d9f0ef8e65778794",
+      "source": "static/images/mods/wiki/GoldFrameBottom.png"
+    },
+    {
+      "file": "mods/wiki/GoldFrameTop.png",
+      "bytes": 4341,
+      "sha256": "338a9b74f408e04bb6d19f91ae9c8fd77800e35ba889a6f735184f5d9e7c2d52",
+      "source": "static/images/mods/wiki/GoldFrameTop.png"
+    },
+    {
+      "file": "mods/wiki/GoldLowerTab.png",
+      "bytes": 994,
+      "sha256": "190ec599317f6c4ae6f6916597fcd91577917d156cea8c681bc5409835cc0c53",
+      "source": "static/images/mods/wiki/GoldLowerTab.png"
+    },
+    {
+      "file": "mods/wiki/GoldSideLight.png",
+      "bytes": 3364,
+      "sha256": "e3dd7ba51957d3f96fc7631482871d4e514aff8436841e5e63b900e882527caa",
+      "source": "static/images/mods/wiki/GoldSideLight.png"
+    },
+    {
+      "file": "mods/wiki/GoldTopRightBacker.png",
+      "bytes": 572,
+      "sha256": "498152e4595a84e0300d0e5eafb1488313d9eb7968e6ee30252caa455ef34c52",
+      "source": "static/images/mods/wiki/GoldTopRightBacker.png"
+    },
+    {
+      "file": "mods/wiki/LegendaryBackground.png",
+      "bytes": 27903,
+      "sha256": "7e4ccecce4e0aca5c63de52c1a22f9b9fec46c20bb7e607507b95b9ffcae074f",
+      "source": "static/images/mods/wiki/LegendaryBackground.png"
+    },
+    {
+      "file": "mods/wiki/LegendaryCornerLights.png",
+      "bytes": 3515,
+      "sha256": "e00ac65df3ae3e3ef6688f959be6f0385d4db430fc74231015af29bc1b22395e",
+      "source": "static/images/mods/wiki/LegendaryCornerLights.png"
+    },
+    {
+      "file": "mods/wiki/LegendaryFrameBottom.png",
+      "bytes": 15086,
+      "sha256": "3afe0f5958671f59a29175a44c98b5fa479496f90ba213bf46821b3ffd917724",
+      "source": "static/images/mods/wiki/LegendaryFrameBottom.png"
+    },
+    {
+      "file": "mods/wiki/LegendaryFrameTop.png",
+      "bytes": 4131,
+      "sha256": "fe18488c9a80dd561726634ffef2fdbd51a9d448942f32313e36fbeac8ec10e7",
+      "source": "static/images/mods/wiki/LegendaryFrameTop.png"
+    },
+    {
+      "file": "mods/wiki/LegendaryLowerTab.png",
+      "bytes": 762,
+      "sha256": "57314b8e99e0a953cce0f5ab1e2c9e2b9d4374d271cca3069c0e043770e0d8c1",
+      "source": "static/images/mods/wiki/LegendaryLowerTab.png"
+    },
+    {
+      "file": "mods/wiki/LegendarySideLight.png",
+      "bytes": 2125,
+      "sha256": "a0638941bcc5eaac006821ed06d0eac233b707c0b04f57d8b0c443a4fe194dac",
+      "source": "static/images/mods/wiki/LegendarySideLight.png"
+    },
+    {
+      "file": "mods/wiki/LegendaryTopRightBacker.png",
+      "bytes": 511,
+      "sha256": "3617adf21a1a7f314ae8aa0aaa80a0605ca69d31ab0f86ade3b1d5abd939d984",
+      "source": "static/images/mods/wiki/LegendaryTopRightBacker.png"
+    },
+    {
+      "file": "mods/wiki/RankCompleteLine.png",
+      "bytes": 338,
+      "sha256": "af2599f1f2023e9ca559e943d60d2abc2e211b0dfa5f00559e11e4dafb795082",
+      "source": "static/images/mods/wiki/RankCompleteLine.png"
+    },
+    {
+      "file": "mods/wiki/RankSlotActive.png",
+      "bytes": 439,
+      "sha256": "343202fdf10a93e04d3b71796742402a024c79986d73b1b08e7cd1d70d05842f",
+      "source": "static/images/mods/wiki/RankSlotActive.png"
+    },
+    {
+      "file": "mods/wiki/RivenCornerLights.png",
+      "bytes": 3503,
+      "sha256": "46d4e3395dc9b781b18c4553061897564da09f352fc7a1c99187537b680a98dd",
+      "source": "static/images/mods/wiki/RivenCornerLights.png"
+    },
+    {
+      "file": "mods/wiki/RivenFrameBottom.png",
+      "bytes": 48522,
+      "sha256": "122fd6dd8d45cecd8706c70f2721afdfba8dafd8cedfedf14ae46167e69b536e",
+      "source": "static/images/mods/wiki/RivenFrameBottom.png"
+    },
+    {
+      "file": "mods/wiki/RivenFrameTop.png",
+      "bytes": 32509,
+      "sha256": "1eb5fbf78460cad65c854240e2484c7343b31308bfadee44ffdc862745e958f3",
+      "source": "static/images/mods/wiki/RivenFrameTop.png"
+    },
+    {
+      "file": "mods/wiki/RivenLowerTab.png",
+      "bytes": 1206,
+      "sha256": "b52dc8bb3eff7a014fa81be61498c217bb8e6d2befbf44fca01f8f171f75d38a",
+      "source": "static/images/mods/wiki/RivenLowerTab.png"
+    },
+    {
+      "file": "mods/wiki/RivenSideLight.png",
+      "bytes": 1985,
+      "sha256": "718ed1e926ed0895083daa1ac20b01642c50a621add1f77bf7ba6fe519f2c4c5",
+      "source": "static/images/mods/wiki/RivenSideLight.png"
+    },
+    {
+      "file": "mods/wiki/RivenTopRightBacker.png",
+      "bytes": 974,
+      "sha256": "a2d119019518725fc7e04d1f6d4f21eb64889f905de434b84c448fa87084ca35",
+      "source": "static/images/mods/wiki/RivenTopRightBacker.png"
+    },
+    {
+      "file": "mods/wiki/SilverBackground.png",
+      "bytes": 87591,
+      "sha256": "c5f1362ffc1d4e19891fb8c59095325ef0e6ac5c3af3a1ea15fc7a412853066a",
+      "source": "static/images/mods/wiki/SilverBackground.png"
+    },
+    {
+      "file": "mods/wiki/SilverCornerLights.png",
+      "bytes": 1941,
+      "sha256": "4c09a4897be69afb3cd31133c9858661d141cc8a010de78c780c31ea78810c9c",
+      "source": "static/images/mods/wiki/SilverCornerLights.png"
+    },
+    {
+      "file": "mods/wiki/SilverFrameBottom.png",
+      "bytes": 20767,
+      "sha256": "eaef41cf36e33894e27c155587e5c4ab035393a25a565c1c53514764cb2055b0",
+      "source": "static/images/mods/wiki/SilverFrameBottom.png"
+    },
+    {
+      "file": "mods/wiki/SilverFrameTop.png",
+      "bytes": 4155,
+      "sha256": "0ecc1dcfd5ace42de77332d84a152c4fec8f20bc3a2ad7c35bcd6bf5d22f922b",
+      "source": "static/images/mods/wiki/SilverFrameTop.png"
+    },
+    {
+      "file": "mods/wiki/SilverLowerTab.png",
+      "bytes": 903,
+      "sha256": "a8288d17c72d1d35406f8039768fecc500e36b0ffffd6783706ac92ec8e86a0b",
+      "source": "static/images/mods/wiki/SilverLowerTab.png"
+    },
+    {
+      "file": "mods/wiki/SilverSideLight.png",
+      "bytes": 2616,
+      "sha256": "63e258bcb284b767e286d7188089ff905174be2fb4ad4975c821f46ac9f6ade9",
+      "source": "static/images/mods/wiki/SilverSideLight.png"
+    },
+    {
+      "file": "mods/wiki/SilverTopRightBacker.png",
+      "bytes": 531,
+      "sha256": "b7fc013bd327d666da9c9b5057b8d0fe653d8953a55cc9d181243890dd6eff52",
+      "source": "static/images/mods/wiki/SilverTopRightBacker.png"
+    },
+    {
+      "file": "mods/polarities/Madurai.png",
+      "bytes": 1273,
+      "sha256": "88a1531eb1f60e8a430e092caad139de37157b93edba76e4dc52797cf0cd4800",
+      "source": "static/images/mods/polarities/Madurai.png"
+    },
+    {
+      "file": "mods/polarities/Naramon.png",
+      "bytes": 756,
+      "sha256": "80e69332c527dc7e383ff89c4a5a63d75414fd6a78f42930e6ac48ac88fd33b5",
+      "source": "static/images/mods/polarities/Naramon.png"
+    },
+    {
+      "file": "mods/polarities/Penjaga.png",
+      "bytes": 1038,
+      "sha256": "1baad78721e9188f57aaca8b44d5765b9fa49284c35040631a1b41cc181c3422",
+      "source": "static/images/mods/polarities/Penjaga.png"
+    },
+    {
+      "file": "mods/polarities/Umbra.png",
+      "bytes": 1712,
+      "sha256": "e5b7c8cc4032485eeb170b778e91dff6b1ddd6637040c3d04981b61f5062a031",
+      "source": "static/images/mods/polarities/Umbra.png"
+    },
+    {
+      "file": "mods/polarities/Unairu.png",
+      "bytes": 1084,
+      "sha256": "40a3ea880d9d3983d3227dc7fc8dad6303a5d3aff92d35de95dcb1559984060a",
+      "source": "static/images/mods/polarities/Unairu.png"
+    },
+    {
+      "file": "mods/polarities/Vazarin.png",
+      "bytes": 1409,
+      "sha256": "c4ae3c0ea3130f8b0336acb4a71012960c963fc866a6c38938288b9d5a183fea",
+      "source": "static/images/mods/polarities/Vazarin.png"
+    },
+    {
+      "file": "mods/polarities/Zenurik.png",
+      "bytes": 1090,
+      "sha256": "2f021cddfa950dcb6a85f1fdb9a3a082b3adeefb781856e949f48e30121d3ae5",
+      "source": "static/images/mods/polarities/Zenurik.png"
+    },
+    {
+      "file": "arcanes/Common.png",
+      "bytes": 158718,
+      "sha256": "77a7ff7e05c9288f33dc440959492007475510e1a9e04e18f4ff17811f372f66",
+      "source": "static/images/arcanes/Common.png"
+    },
+    {
+      "file": "arcanes/Rare-Legendary.png",
+      "bytes": 175410,
+      "sha256": "0d3aafb96f6ccc47c594feed9e87aa2b1ce81435f92e1fe6d519f74120689ef3",
+      "source": "static/images/arcanes/Rare-Legendary.png"
+    },
+    {
+      "file": "arcanes/Rare.png",
+      "bytes": 181579,
+      "sha256": "8f6b85095bb9e8b184fdb2845c7631ccf4556ad454569ecbf48b388ad301b67c",
+      "source": "static/images/arcanes/Rare.png"
+    },
+    {
+      "file": "arcanes/Uncommon.png",
+      "bytes": 166147,
+      "sha256": "5bb3577550b6a25fe63b7d5d558858389f0bc04b68d56e04fa39c43989b1826c",
+      "source": "static/images/arcanes/Uncommon.png"
+    }
+  ]
+}

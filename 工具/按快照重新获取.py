@@ -112,7 +112,7 @@ def main():
             name = item["versionedName"].split("!", 1)[0]
             if not name.endswith(".json"):
                 raise ValueError("Manifest 后缀无效")
-            (directory / name).write_text(pretty(raw.decode("utf-8-sig")), encoding="utf-8")
+            (directory / name).write_bytes(raw)
         print(f"官方 {language}：{len(entry['files'])} 份", flush=True)
     for repo in manifest["repositories"]:
         directory = root / "git" / repo["name"]
@@ -130,6 +130,19 @@ def main():
             "--output", str(root / "wfcd-items"),
             "--manifest-output", str(root / "wfcd-items-snapshot.json"),
         ], check=True)
+    for item in manifest.get("droptables", {}).get("files", []):
+        relative = Path(item["path"])
+        if relative.is_absolute() or ".." in relative.parts:
+            raise ValueError("掉落表路径无效")
+        saved = args.snapshot.resolve().parent / relative
+        if not saved.is_file():
+            raise ValueError("恢复固定掉落表需随快照保留原文和解析文件；实时 URL 可能已变，不能代替旧版")
+        raw = saved.read_bytes()
+        if len(raw) != item["size"] or sha(raw) != item["sha256"]:
+            raise ValueError("固定掉落表文件校验失败")
+        target = root / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(raw)
     (root / "snapshot-manifest.json").write_bytes(args.snapshot.read_bytes())
     print("完成：数据来源版本已核对。Git 使用 detached HEAD；原始快照记录保持原样。")
 

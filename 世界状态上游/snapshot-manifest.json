@@ -1,22 +1,22 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-10-04T05:07:47.230Z",
-  "output": "/Users/dream/Desktop/世界状态数据/世界状态重构/临时目录/世界状态上游",
-  "refresh": false,
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-24T06:41:36.831Z",
+  "output": "世界状态上游",
+  "refresh": true,
+  "releaseId": "1ec1731fbb449b2b3ff667bd1c7c25d86f5fee2a588f34cd2887f409defbd143",
   "official": [
     {
       "language": "de",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_de.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_de.txt.lzma",
       "indexFile": "official-public-export/indexes/index_de.txt",
-      "compressedSha256": "e351caa179a7b004c9f3d599198afc4eddac1169ba08ad804541df69cef7b70a",
-      "indexSha256": "eec4d119666177d542003f4057a89a5f2243dfa9ab1f39de81aaf5c0ce1a17c1",
+      "compressedSha256": "609e31f558bbfaebc31b4b036d274e2451d904f80d21d86ab6605befffc6c352",
+      "indexSha256": "fe0e42b21f3acc6f51095aae9004009df8f4168924575d3db86e70478776e6c3",
       "files": [
         {
-          "versionedName": "ExportCustoms_de.json!00_95QVagVhylv9FDADIh+H4g",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_de.json!00_95QVagVhylv9FDADIh+H4g",
-          "size": 1036850,
-          "sha256": "90d672f045dfdd88eeb08475340d0ff49d3e6f39bd8ae2e9dc78e200e6cfd61a"
+          "versionedName": "ExportCustoms_de.json!00_hA8W0I7vhCrNXLfFAvRRyw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_de.json!00_hA8W0I7vhCrNXLfFAvRRyw",
+          "size": 1037292,
+          "sha256": "185a2e881cc32bb71b2fcbcc1f8af05190848c699cb3f2cab20e5260dd88b649"
         },
         {
           "versionedName": "ExportDrones_de.json!00_-Ko-xxuprAbdfUHh1sY97g",
@@ -26,7 +26,7 @@
         },
         {
           "versionedName": "ExportFlavour_de.json!00_NVLp0wIsPf7wi9BC5VNJ+Q",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_de.json!00_NVLp0wIsPf7wi9BC5VNJ+Q",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_de.json!00_NVLp0wIsPf7wi9BC5VNJ%2BQ",
           "size": 709449,
           "sha256": "036f9739dffaca922bd3817ea7916ce9d494b4994a4db4341fb4f69f5d7e51c8"
         },
@@ -50,7 +50,7 @@
         },
         {
           "versionedName": "ExportRecipes_de.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_de.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_de.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
@@ -61,16 +61,16 @@
           "sha256": "b1b431389c8d44d331b66923cfca3c22733c00fd66b5eebd7f164934a995689a"
         },
         {
-          "versionedName": "ExportRelicArcane_de.json!00_vfrJnj2TZykGN8h7f96xDA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_de.json!00_vfrJnj2TZykGN8h7f96xDA",
-          "size": 3405342,
-          "sha256": "a9bab15177615ad9b3eb9b2962be4ed6c059f204015adc46674eb74c115ccfc2"
+          "versionedName": "ExportRelicArcane_de.json!00_A-qAoJCKXXm-z6SNXEqVPw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_de.json!00_A-qAoJCKXXm-z6SNXEqVPw",
+          "size": 3409477,
+          "sha256": "f7a1c21929195f4c1f94b6627c420d7c84af46bbfdae1eba79c84f7371f41d9f"
         },
         {
-          "versionedName": "ExportResources_de.json!00_KDn2QzLkqpHptB+DhpFffw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_de.json!00_KDn2QzLkqpHptB+DhpFffw",
-          "size": 1068164,
-          "sha256": "8cbbbc538c49b651214085d7b750d060427179162f8921390b6026394442e498"
+          "versionedName": "ExportResources_de.json!00_Lp7TwLxQkRAyflauQ3aYng",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_de.json!00_Lp7TwLxQkRAyflauQ3aYng",
+          "size": 1069281,
+          "sha256": "7564bf552cc4946c7c6ca2cd2c4236c3d010df690aca4829c02431fd0d86a1ff"
         },
         {
           "versionedName": "ExportSentinels_de.json!00_oLKeqvNiY1EZxgPscedN3A",
@@ -85,48 +85,48 @@
           "sha256": "ec7d04da9db5e4a986cd9c56936b6ac9e63b37ce90f89d6d6522434bb50662ac"
         },
         {
-          "versionedName": "ExportUpgrades_de.json!00_o2orlq9xQ69-NSOIb4TKQw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_de.json!00_o2orlq9xQ69-NSOIb4TKQw",
-          "size": 3157324,
-          "sha256": "99e5530bd7c7ec53f87b6336862a9ef1c79e315c77a57c95ef0d73d7a9b3e237"
+          "versionedName": "ExportUpgrades_de.json!00_j9iDqXZFO57KALum1KjS3Q",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_de.json!00_j9iDqXZFO57KALum1KjS3Q",
+          "size": 3157307,
+          "sha256": "7eef6022bb6b7424ba6796962df1ab3de494922f22b669cea4fa17e72ec7601c"
         },
         {
-          "versionedName": "ExportWarframes_de.json!00_0rlV8q4MFkbHixaFn6AuHw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_de.json!00_0rlV8q4MFkbHixaFn6AuHw",
-          "size": 262452,
-          "sha256": "67eff2471551de7ec785da8ffb91735eca47c66d2d93ce3214bb415062d070b2"
+          "versionedName": "ExportWarframes_de.json!00_Mx279ZuwjsCjJVK-kZGGTQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_de.json!00_Mx279ZuwjsCjJVK-kZGGTQ",
+          "size": 262681,
+          "sha256": "a59befdf96bd8218f472e34258bbc04f146c4cbb1713d76cc58c068b3011aafd"
         },
         {
-          "versionedName": "ExportWeapons_de.json!00_hcRhxXKjgm3giF0r33fFeg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_de.json!00_hcRhxXKjgm3giF0r33fFeg",
-          "size": 644348,
-          "sha256": "7768c2fa92eca40e7e2ac3f83d299dc7cd9b8d4df1bb0c67b5906cfe3d88220b"
+          "versionedName": "ExportWeapons_de.json!00_Pl9jjtBtqrAMLisnRt866A",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_de.json!00_Pl9jjtBtqrAMLisnRt866A",
+          "size": 634621,
+          "sha256": "71b7a11d18c287b0e9037ecaf751e02a91cbb1868636514276febaadd3a0c8aa"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_de.txt.lzma"
     },
     {
       "language": "en",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_en.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_en.txt.lzma",
       "indexFile": "official-public-export/indexes/index_en.txt",
-      "compressedSha256": "7b409ba3d4ee1cb88c119b6fde5dc29ce49b9bf9510749ccad0d1f781362b37a",
-      "indexSha256": "37ce0b0ea112e2976d30fe2b86f78dde723a75926ff46c1898a0ce90f968f0b2",
+      "compressedSha256": "919981fe854a899aa5a7515c3ecbd54a5402c9fbed91aaf3d76494390dc59a8e",
+      "indexSha256": "72b77c6bbc590c083f24f83da8824a7f8feaf8d26544893c6a7a5d90e7954825",
       "files": [
         {
-          "versionedName": "ExportCustoms_en.json!00_MF5sDpWD7PosDHldUdWmlA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_en.json!00_MF5sDpWD7PosDHldUdWmlA",
-          "size": 985034,
-          "sha256": "f878bba1b002c7d6d9b07f6d77caec5e3a094e91297eb88fdc150b42cac4c77d"
+          "versionedName": "ExportCustoms_en.json!00_FtAAUKgb6W6tkcdqlAFUqA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_en.json!00_FtAAUKgb6W6tkcdqlAFUqA",
+          "size": 985449,
+          "sha256": "c6c8402f31e7e28b9135229ae92c2cbdbc95426f1bdc90f3969c1009b5ca8f24"
         },
         {
           "versionedName": "ExportDrones_en.json!00_-2N+QHfciQUZhljJlrdz-w",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportDrones_en.json!00_-2N+QHfciQUZhljJlrdz-w",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportDrones_en.json!00_-2N%2BQHfciQUZhljJlrdz-w",
           "size": 2499,
           "sha256": "3c949c8366adb89fce5a7301e1ef43678e0b2b41cf125285b2be23f08da9b8f3"
         },
@@ -144,19 +144,19 @@
         },
         {
           "versionedName": "ExportGear_en.json!00_qpt7NDCXJLc-Km1+pY4-Ow",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_en.json!00_qpt7NDCXJLc-Km1+pY4-Ow",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_en.json!00_qpt7NDCXJLc-Km1%2BpY4-Ow",
           "size": 54737,
           "sha256": "b394bc7e33088fd32dfbdbba258852677eebadbaf59d7eaa96bed0d8c8f1ce94"
         },
         {
           "versionedName": "ExportKeys_en.json!00_R7ERo2sfH9Q+oEbNG3cztg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportKeys_en.json!00_R7ERo2sfH9Q+oEbNG3cztg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportKeys_en.json!00_R7ERo2sfH9Q%2BoEbNG3cztg",
           "size": 13081,
           "sha256": "2e19eea8674b464e7ca0bd1344d3808215d9f04dcfbd69706957905875a1b1c8"
         },
         {
           "versionedName": "ExportRecipes_en.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_en.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_en.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
@@ -167,16 +167,16 @@
           "sha256": "2c88839a179c2037a48913471639a28c0514bad1d5a4b26c015096d074642941"
         },
         {
-          "versionedName": "ExportRelicArcane_en.json!00_yfpUexy9C05OPU7UR+f6pA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_en.json!00_yfpUexy9C05OPU7UR+f6pA",
-          "size": 3355475,
-          "sha256": "1783c4a3dd100029b26b300e38c553547ee3b1bb9b363f0016b3917c087bff6d"
+          "versionedName": "ExportRelicArcane_en.json!00_BPSU5+RTY0mdOW9AmkGU5A",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_en.json!00_BPSU5%2BRTY0mdOW9AmkGU5A",
+          "size": 3359538,
+          "sha256": "3475b6fbd4bd636428a822377cce93e8d388490486b99431284457d3d46b0b7d"
         },
         {
-          "versionedName": "ExportResources_en.json!00_hO4KL9tgb7TICHB2pzvIyQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_en.json!00_hO4KL9tgb7TICHB2pzvIyQ",
-          "size": 1008333,
-          "sha256": "215ea91970f842a3a66c0083b4f8c51740531b99ec060331d0ec06824bf1f839"
+          "versionedName": "ExportResources_en.json!00_mRQJYDTv1fo4EzjedmibAA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_en.json!00_mRQJYDTv1fo4EzjedmibAA",
+          "size": 1009336,
+          "sha256": "a9a8aef16df5c624d5ceb58fc1b760adb245809c42cfacfc2937b08a847b3fda"
         },
         {
           "versionedName": "ExportSentinels_en.json!00_8iGr2T9MTskXt5zeKEVNmQ",
@@ -186,49 +186,49 @@
         },
         {
           "versionedName": "ExportSortieRewards_en.json!00_Bt+LyatkTjWOKpnU6GPeng",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_en.json!00_Bt+LyatkTjWOKpnU6GPeng",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_en.json!00_Bt%2BLyatkTjWOKpnU6GPeng",
           "size": 79718,
           "sha256": "e2466b27179797ccb17eb403fc896618e2bf4b5a9f6eb6c448422169bfeb988b"
         },
         {
-          "versionedName": "ExportUpgrades_en.json!00_B5pgGuO9+GC2rNx1azlaNg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_en.json!00_B5pgGuO9+GC2rNx1azlaNg",
-          "size": 3006786,
-          "sha256": "f78393906d4ade7cbf66c81d8ef0d47c817ba68491814bf0ad5f5b14638689de"
+          "versionedName": "ExportUpgrades_en.json!00_iIR9VcbRzLg4-0-6Yn7IrA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_en.json!00_iIR9VcbRzLg4-0-6Yn7IrA",
+          "size": 3006834,
+          "sha256": "df5c898b3e4b8574b9a2c39170c8a8756ba75d6caec1317d260b9aee49105ad2"
         },
         {
-          "versionedName": "ExportWarframes_en.json!00_67ldvOzz0UQvIZjyuFkxuw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_en.json!00_67ldvOzz0UQvIZjyuFkxuw",
-          "size": 236705,
-          "sha256": "0ef3343756482414e2350f4dc87e38af8200e7cd67aa7863f79aa41c811c7250"
+          "versionedName": "ExportWarframes_en.json!00_AIDVHigS64IrZQVY2GdWfg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_en.json!00_AIDVHigS64IrZQVY2GdWfg",
+          "size": 236701,
+          "sha256": "67a983f9be0f193a6692d47b2c33b320dc4c337c9ca18678013d37789e008895"
         },
         {
-          "versionedName": "ExportWeapons_en.json!00_FuKbwyzXM3qkMcnw5ntUCw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_en.json!00_FuKbwyzXM3qkMcnw5ntUCw",
-          "size": 623052,
-          "sha256": "1955923c506d7cec1b7b06abea49648f849780f29ae19fbc96792ac82a97913c"
+          "versionedName": "ExportWeapons_en.json!00_Lp7tYn3OPr4R3amRyHcSaA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_en.json!00_Lp7tYn3OPr4R3amRyHcSaA",
+          "size": 613322,
+          "sha256": "c40c2bc40f770d0f9eedb5110c5a2225275509bfec1f77389422fd28018db62b"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_en.txt.lzma"
     },
     {
       "language": "es",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_es.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_es.txt.lzma",
       "indexFile": "official-public-export/indexes/index_es.txt",
-      "compressedSha256": "cdfe5153b06321e50480a65905069c71d2819ddde9996f3c5fe4523d0ef79ad9",
-      "indexSha256": "b350ccb016e80eddccfd0adeb47a859f03b1399b526bbd6e6ebbf0a42ab42a96",
+      "compressedSha256": "06673e04fd577da92f15c4af6c526988c53ba5bc9d5b2dbc69ba0b4890300d96",
+      "indexSha256": "a4555b42b5e893f38f062a744e2529f09e78a632dc8d5b39669201deb00fd8dc",
       "files": [
         {
-          "versionedName": "ExportCustoms_es.json!00_flL79TGKO8eMreS7EAE-Bw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_es.json!00_flL79TGKO8eMreS7EAE-Bw",
-          "size": 1043241,
-          "sha256": "b176a69508b95695837eb0b6e03ad132d5b5508f2522df7eda44b4ebaa89655c"
+          "versionedName": "ExportCustoms_es.json!00_ktqXUWMYU30V5iQadTMlfA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_es.json!00_ktqXUWMYU30V5iQadTMlfA",
+          "size": 1043634,
+          "sha256": "ca5fab82743aced8658607f7e5138c5800072f641b43c1fedc2b56ca469dbd2b"
         },
         {
           "versionedName": "ExportDrones_es.json!00_OXVMB5wkwM0puMjdl0KGdg",
@@ -238,7 +238,7 @@
         },
         {
           "versionedName": "ExportFlavour_es.json!00_T4mO7Ezrtcd1a2YPL31+3A",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_es.json!00_T4mO7Ezrtcd1a2YPL31+3A",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_es.json!00_T4mO7Ezrtcd1a2YPL31%2B3A",
           "size": 708646,
           "sha256": "3ba576dcc00ca00437d9a4e8e21b68126abb85e43cc107028ac783dfb3d0c039"
         },
@@ -256,13 +256,13 @@
         },
         {
           "versionedName": "ExportKeys_es.json!00_ltI1qf7dM5W+MHIVzedmWQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportKeys_es.json!00_ltI1qf7dM5W+MHIVzedmWQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportKeys_es.json!00_ltI1qf7dM5W%2BMHIVzedmWQ",
           "size": 13940,
           "sha256": "e2406e13c1b4ab3c3aabad83eedf76d9bf9d088105509c5844d4d815acc840b8"
         },
         {
           "versionedName": "ExportRecipes_es.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_es.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_es.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
@@ -273,16 +273,16 @@
           "sha256": "8cc62552bfe88d6bf1628b9aba53de8471bb7ab3f0fcf3c8e85123ba9633426e"
         },
         {
-          "versionedName": "ExportRelicArcane_es.json!00_GQiR63kf60op6Ki+vFHhdg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_es.json!00_GQiR63kf60op6Ki+vFHhdg",
-          "size": 3410515,
-          "sha256": "bb587ea79bfb7b9ecc58b8d47d3eef71cd7c405c158e60df1d1de3f72461b2d7"
+          "versionedName": "ExportRelicArcane_es.json!00_5+9DrarfASmAvrEK6MSIUQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_es.json!00_5%2B9DrarfASmAvrEK6MSIUQ",
+          "size": 3414650,
+          "sha256": "57c53015d2c305b5006e53971e9acaebd1abbf544ca9dc967b6be82f8259d069"
         },
         {
-          "versionedName": "ExportResources_es.json!00_b04Iyow6pv2ymnF85st3LQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_es.json!00_b04Iyow6pv2ymnF85st3LQ",
-          "size": 1072713,
-          "sha256": "118026a79ab938fc6ed6d4b69ea62b9d142a54e7185317efa483012969c9fe52"
+          "versionedName": "ExportResources_es.json!00_rDxYbbCP3C0kbhoZK4dceA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_es.json!00_rDxYbbCP3C0kbhoZK4dceA",
+          "size": 1073905,
+          "sha256": "5929babab8be9810872602898dcc140fc6075d9116da20f8dbd352d1c098ce46"
         },
         {
           "versionedName": "ExportSentinels_es.json!00_nHbRbbeyMPAU57rSdXYIiw",
@@ -297,44 +297,44 @@
           "sha256": "b605dce3bfe5aa9d1caabd63dba3a09f577aa0d6e58b9675ba94742dfce6d082"
         },
         {
-          "versionedName": "ExportUpgrades_es.json!00_iub3LjWOAIPQj2vvNMGWfA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_es.json!00_iub3LjWOAIPQj2vvNMGWfA",
-          "size": 3205037,
-          "sha256": "0cf61058cfa561563630d7fc9b99f33166d16131655e60fb30d9d8039de38215"
+          "versionedName": "ExportUpgrades_es.json!00_WOr98gw4MlI+yGdHLDIh3w",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_es.json!00_WOr98gw4MlI%2ByGdHLDIh3w",
+          "size": 3204867,
+          "sha256": "009f9eac3d9d073e0e654fd8e745f47c04c0d00ed7dd7768c804263426b66273"
         },
         {
-          "versionedName": "ExportWarframes_es.json!00_zE5-qQ3BZOFAOe0wu14PtA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_es.json!00_zE5-qQ3BZOFAOe0wu14PtA",
-          "size": 261492,
-          "sha256": "fca99fa421c6b1e8d5a9e5a485ec7c78cd63cdb5f5a02679412461ab9f8008e8"
+          "versionedName": "ExportWarframes_es.json!00_irS4pJU7xXpl85xEE7sHPg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_es.json!00_irS4pJU7xXpl85xEE7sHPg",
+          "size": 261745,
+          "sha256": "fee73c8caff900b9c9c7e80955ac7eca98265f803adc1f26d2954402d00e7f15"
         },
         {
-          "versionedName": "ExportWeapons_es.json!00_i8N0d5AFGElFrKQgnHtrjg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_es.json!00_i8N0d5AFGElFrKQgnHtrjg",
-          "size": 642146,
-          "sha256": "662b4bd3069aa9794445dfb68601bff4f2662c6f4419eeb0593cdeb0e3b1c8fd"
+          "versionedName": "ExportWeapons_es.json!00_XdXgWEhi70xwVAwT12ygBQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_es.json!00_XdXgWEhi70xwVAwT12ygBQ",
+          "size": 632419,
+          "sha256": "51fe6d1e3817d3e8aabf1b143f1de1914732288d9956661d80ac5f7ca73411c1"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_es.txt.lzma"
     },
     {
       "language": "fr",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_fr.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_fr.txt.lzma",
       "indexFile": "official-public-export/indexes/index_fr.txt",
-      "compressedSha256": "559b2190674c1e5d1c45ef441ad0010d972638cb380fb98d19019c41db1adf29",
-      "indexSha256": "1e0d5e9995eae007826b7fc8c2fcb1cfbd94943dcf4742513b88e288ae5fe187",
+      "compressedSha256": "1f2f7d680913e6a8d5f6921e35e767599ddc93619769df84a86e446f1d136c12",
+      "indexSha256": "d80ffbee8c12665e81fe917f7e94dd090706e4f563744706fb173ac7b9269e11",
       "files": [
         {
-          "versionedName": "ExportCustoms_fr.json!00_Yg9dLIPnkkbE5kx9qCXoKA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_fr.json!00_Yg9dLIPnkkbE5kx9qCXoKA",
-          "size": 1034117,
-          "sha256": "d79ab8a9302df8073fbd098a064bbbe325f335b10a51d587a90cadc4332ae144"
+          "versionedName": "ExportCustoms_fr.json!00_i911Yf6JgNAzLYPYJkn84w",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_fr.json!00_i911Yf6JgNAzLYPYJkn84w",
+          "size": 1034578,
+          "sha256": "06892c5e904ca0a653df123646f509f364424d5ea2d68190e235d728e8ab929a"
         },
         {
           "versionedName": "ExportDrones_fr.json!00_ACtEKtBu-fBU6M0QG3amLw",
@@ -356,7 +356,7 @@
         },
         {
           "versionedName": "ExportGear_fr.json!00_k0geIuGPX4vnAp+Zu-Bjpw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_fr.json!00_k0geIuGPX4vnAp+Zu-Bjpw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_fr.json!00_k0geIuGPX4vnAp%2BZu-Bjpw",
           "size": 60610,
           "sha256": "97539adb72b6ef1f9c0f8db59885eb314b126ada328f4122f2de115a912f2080"
         },
@@ -368,7 +368,7 @@
         },
         {
           "versionedName": "ExportRecipes_fr.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_fr.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_fr.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
@@ -379,16 +379,16 @@
           "sha256": "ec1722841b57c63fefac2f1907ba478c3ded76412fdc13de8c0fd6d330a14d4f"
         },
         {
-          "versionedName": "ExportRelicArcane_fr.json!00_TebYX05wNmwKCQSclBQpfg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_fr.json!00_TebYX05wNmwKCQSclBQpfg",
-          "size": 3414917,
-          "sha256": "8f5d61d0ce2547a730d583d632b00c0ec1cdef78061755beb163b494caa12f89"
+          "versionedName": "ExportRelicArcane_fr.json!00_Zcxn1WPnJjzlMU7-XW2fkQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_fr.json!00_Zcxn1WPnJjzlMU7-XW2fkQ",
+          "size": 3419052,
+          "sha256": "82a205fe1185e6716e73399e2de849e05f931ac60ab3b74197fc1c85efbbd47e"
         },
         {
-          "versionedName": "ExportResources_fr.json!00_DH30+nQ6A92IuMI0KCubWQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_fr.json!00_DH30+nQ6A92IuMI0KCubWQ",
-          "size": 1081984,
-          "sha256": "12b8c3e0a098d8e10424720099d38cc5012a8b9d14a1a834bf45a679ab1d895e"
+          "versionedName": "ExportResources_fr.json!00_rTbWDUOYn8CQaW61JRQTfg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_fr.json!00_rTbWDUOYn8CQaW61JRQTfg",
+          "size": 1083193,
+          "sha256": "ec34054665842282e1c45e829e934127be22a98f59309274866a31716ca59f14"
         },
         {
           "versionedName": "ExportSentinels_fr.json!00_LvcPECgYUYVPTauzJQVsFg",
@@ -403,44 +403,44 @@
           "sha256": "8d3e704136cd8f43db55a58af0355b539a8e2b2ba4cc69dca0253c51f15c2a89"
         },
         {
-          "versionedName": "ExportUpgrades_fr.json!00_56OBiAIcKT-+zA2E-+gPZQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_fr.json!00_56OBiAIcKT-+zA2E-+gPZQ",
-          "size": 3224571,
-          "sha256": "c13e4a690fdfd7b0c7af454ad8fdcfe7c05f8ab9e77cfdf4fb5a980e8fd33771"
+          "versionedName": "ExportUpgrades_fr.json!00_qisS1ZMivtsFh0qRmQ4odQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_fr.json!00_qisS1ZMivtsFh0qRmQ4odQ",
+          "size": 3224417,
+          "sha256": "328dd5bbb6e87e3d1ee7a8d1e30469cf3526521527597631829b1d2a15f53896"
         },
         {
-          "versionedName": "ExportWarframes_fr.json!00_YuJf6IoZPMOrGsmddlWj5A",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_fr.json!00_YuJf6IoZPMOrGsmddlWj5A",
-          "size": 268757,
-          "sha256": "174d1b933894c3ebed134b84f7e25f6d57952f077c3a57aa1e8923486bcceed9"
+          "versionedName": "ExportWarframes_fr.json!00_-LpQOiQimRG5Hh9Q1jTejQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_fr.json!00_-LpQOiQimRG5Hh9Q1jTejQ",
+          "size": 268984,
+          "sha256": "6e320707fc7ea65ea38cae1d49a09dc73258fcb52347eece996687b00ae9ae95"
         },
         {
-          "versionedName": "ExportWeapons_fr.json!00_feuTmYkJyxKatA6AGrmy3A",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_fr.json!00_feuTmYkJyxKatA6AGrmy3A",
-          "size": 646282,
-          "sha256": "adcd4206830ce525719b419b85f809537569b951282a8eafc8192d279ccd6acc"
+          "versionedName": "ExportWeapons_fr.json!00_yYv7amaAeRMur7z+59Y8dg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_fr.json!00_yYv7amaAeRMur7z%2B59Y8dg",
+          "size": 636555,
+          "sha256": "2281e6211269a583eefd4409d1d2767a8953967d0c40446bc8546442f2647a8f"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_fr.txt.lzma"
     },
     {
       "language": "it",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_it.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_it.txt.lzma",
       "indexFile": "official-public-export/indexes/index_it.txt",
-      "compressedSha256": "b805133a97f22d5ffaffb6ccd7b7e18f24ac8035b773162b63c5dc30fa5c2b87",
-      "indexSha256": "30fac5f78f08bbf9a92f00f47f99645390114b2f72f453b0470fe2f871203bc5",
+      "compressedSha256": "a954fbff4dc463c0a3aa687d8b661d97512586006ca729d85c514d1fa8ac4671",
+      "indexSha256": "7690af66d691d2e0a82cbb2d5324d91a68434ca35cfcfd99723d3744126aeb62",
       "files": [
         {
-          "versionedName": "ExportCustoms_it.json!00_PUweMaQUekEPZQj9iaAsiw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_it.json!00_PUweMaQUekEPZQj9iaAsiw",
-          "size": 1009526,
-          "sha256": "c30b86e96b4934d80ae272e86c7b86603b4aa0362c35ad04b80ebc0688775109"
+          "versionedName": "ExportCustoms_it.json!00_2HaRONJ7r2tkczCmszrVmQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_it.json!00_2HaRONJ7r2tkczCmszrVmQ",
+          "size": 1009958,
+          "sha256": "30514c3423f50922f7f1e426c68fba369b23e808b3a5332fd552075593a9482c"
         },
         {
           "versionedName": "ExportDrones_it.json!00_sZ2ubKL2joxg6pf8rWRHCA",
@@ -450,7 +450,7 @@
         },
         {
           "versionedName": "ExportFlavour_it.json!00_eKI8CVW+wIkvxGWizpLlWw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_it.json!00_eKI8CVW+wIkvxGWizpLlWw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_it.json!00_eKI8CVW%2BwIkvxGWizpLlWw",
           "size": 691822,
           "sha256": "c1542a01a1d5a265f420e811aa26de15aea544a6103b9de952dcca18c66710a6"
         },
@@ -462,19 +462,19 @@
         },
         {
           "versionedName": "ExportGear_it.json!00_macmrlHEXHcT+GfpxwXNDw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_it.json!00_macmrlHEXHcT+GfpxwXNDw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_it.json!00_macmrlHEXHcT%2BGfpxwXNDw",
           "size": 57609,
           "sha256": "19b9b1b14c1e06bba877a8c0ccb2d0f6b4ff807dc69bb83723d10a98e7be0785"
         },
         {
           "versionedName": "ExportKeys_it.json!00_GlYxyG-W8HqR+FAHNLAQzw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportKeys_it.json!00_GlYxyG-W8HqR+FAHNLAQzw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportKeys_it.json!00_GlYxyG-W8HqR%2BFAHNLAQzw",
           "size": 13757,
           "sha256": "f2819068cc071aa54844a444ebb65b90a84783eb7399151577794450ff2097a3"
         },
         {
           "versionedName": "ExportRecipes_it.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_it.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_it.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
@@ -485,20 +485,20 @@
           "sha256": "9f0ee951686f7b48216dbbb816cd3a3e5d6092ad805851f9a86463582e1430e5"
         },
         {
-          "versionedName": "ExportRelicArcane_it.json!00_n9l80ypDHGAaoC+Foi2J4g",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_it.json!00_n9l80ypDHGAaoC+Foi2J4g",
-          "size": 3402930,
-          "sha256": "61db292c656d303b56595446311b8f1f8a3550ec0b51749cc97c8f3cfa87d674"
+          "versionedName": "ExportRelicArcane_it.json!00_zspj629CeZQiFGuoQbnaOg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_it.json!00_zspj629CeZQiFGuoQbnaOg",
+          "size": 3407061,
+          "sha256": "7dedd03d942ce9fd1d160db74220a0563eef0ebec96809c9f5f89b89f2bc6ab0"
         },
         {
-          "versionedName": "ExportResources_it.json!00_Mdp58Yw6sMsGLFwmfKV1Fw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_it.json!00_Mdp58Yw6sMsGLFwmfKV1Fw",
-          "size": 1061370,
-          "sha256": "bbfc83c3ac78437a09ff941b86dde9bc600263780d9e4d58a0bf837b7ac5684e"
+          "versionedName": "ExportResources_it.json!00_3R2zhFqOvf8vaQSAJbv4UA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_it.json!00_3R2zhFqOvf8vaQSAJbv4UA",
+          "size": 1062431,
+          "sha256": "391ba3c602ca8fe54322168816c96cb1a0231b06a56716d7c653c12ac23940b2"
         },
         {
           "versionedName": "ExportSentinels_it.json!00_sf3t5UT5lqd2ZsZll+j89w",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSentinels_it.json!00_sf3t5UT5lqd2ZsZll+j89w",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSentinels_it.json!00_sf3t5UT5lqd2ZsZll%2Bj89w",
           "size": 11924,
           "sha256": "35a352ffe51da52389e65e23649bb740ad18765e23beb0c57b79a7391288ea85"
         },
@@ -509,48 +509,48 @@
           "sha256": "3c5ccffeed302314a2fc8d79d177169febd44ed4ca8c9009f3481796c172bf37"
         },
         {
-          "versionedName": "ExportUpgrades_it.json!00_AkyiGM8-sLeBI1M+BUMX3A",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_it.json!00_AkyiGM8-sLeBI1M+BUMX3A",
-          "size": 3146602,
-          "sha256": "60b2edad3189c624778c94fa18de4511c467b30190f61e01a3914ab0c68d45b4"
+          "versionedName": "ExportUpgrades_it.json!00_IuP3yWc89JWTeQVv0F88sA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_it.json!00_IuP3yWc89JWTeQVv0F88sA",
+          "size": 3146434,
+          "sha256": "538e6a01ccc77cb22f6db205dd73fc72d5895c2de9aa30112e50b1488cb9f043"
         },
         {
-          "versionedName": "ExportWarframes_it.json!00_vWKU5UmlHv3zS3V3A8HPeQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_it.json!00_vWKU5UmlHv3zS3V3A8HPeQ",
-          "size": 254905,
-          "sha256": "ddc4485445486cf2ff9b12dc27f769e2d9e2589e133112ebea77cb65fcdcef59"
+          "versionedName": "ExportWarframes_it.json!00_JCsoMvbGSa9DS-slnDXrRg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_it.json!00_JCsoMvbGSa9DS-slnDXrRg",
+          "size": 255087,
+          "sha256": "480b5d563719715937e45cfc4312c353f1e8960a92b19a10f2a215870bca9474"
         },
         {
-          "versionedName": "ExportWeapons_it.json!00_1GOjJTNWcXMX0gjiEk5Lww",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_it.json!00_1GOjJTNWcXMX0gjiEk5Lww",
-          "size": 640963,
-          "sha256": "2850a40134fa5cd09c2d7d6543268801aa5cf68678273b21bc47be56a9f5fb3d"
+          "versionedName": "ExportWeapons_it.json!00_exrWyY2YsQL5RFQs6CCKHg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_it.json!00_exrWyY2YsQL5RFQs6CCKHg",
+          "size": 631236,
+          "sha256": "fb4c26898a43a7e19b778a60666cf7eea829f75661fb1da5ee297578d383c965"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_it.txt.lzma"
     },
     {
       "language": "ja",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_ja.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_ja.txt.lzma",
       "indexFile": "official-public-export/indexes/index_ja.txt",
-      "compressedSha256": "14bc311716d1178a5ee772d4061c0ad0b384bb97c2c78281fc82c6d938582cbf",
-      "indexSha256": "d472ee89c83de3d7095b50dcd74ed533d0d913359602ea4705a2d17f68e7378e",
+      "compressedSha256": "da5fd593aa4188755cb9989d0207338bd3f0221b9de3553239cf5bb8b015a4f6",
+      "indexSha256": "2c85eb22c8301a0db994dae8ad4372bded947e1ef362ccafd439cf11f9f91df5",
       "files": [
         {
-          "versionedName": "ExportCustoms_ja.json!00_kFh67g-brYtHJrHAeQRCuQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_ja.json!00_kFh67g-brYtHJrHAeQRCuQ",
-          "size": 1069093,
-          "sha256": "73e4b8a62cd494cbaf1d69efeafe46a98f169dfd913f4de71971cf2398c7ba57"
+          "versionedName": "ExportCustoms_ja.json!00_nUHADL-zl3-J9YeluWY6EA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_ja.json!00_nUHADL-zl3-J9YeluWY6EA",
+          "size": 1069647,
+          "sha256": "10c3619e1ed6bd31bf96fce27ee714bab749bd06082d9b3faece2d8820eb1d4e"
         },
         {
           "versionedName": "ExportDrones_ja.json!00_TE8aELSmjnxa9kkx8nC+hA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportDrones_ja.json!00_TE8aELSmjnxa9kkx8nC+hA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportDrones_ja.json!00_TE8aELSmjnxa9kkx8nC%2BhA",
           "size": 2831,
           "sha256": "8496dd6ad3ebe79ba922f6ba5334227c752291e3797abd4b30da466285ce2674"
         },
@@ -568,7 +568,7 @@
         },
         {
           "versionedName": "ExportGear_ja.json!00_8mzB5lDmakw+zyomXweZEw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_ja.json!00_8mzB5lDmakw+zyomXweZEw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_ja.json!00_8mzB5lDmakw%2BzyomXweZEw",
           "size": 61962,
           "sha256": "d72b6684b7f7acd4a0be8f10d6b04db67e4fa5a8ea9ff1e597d874fe437d8627"
         },
@@ -580,7 +580,7 @@
         },
         {
           "versionedName": "ExportRecipes_ja.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_ja.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_ja.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
@@ -591,68 +591,68 @@
           "sha256": "2c219818f039c34ecaf01768782b00938c65199526f0d6bf1ab3edb28572f506"
         },
         {
-          "versionedName": "ExportRelicArcane_ja.json!00_wnCdESa7o16Aly3dV70OaA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_ja.json!00_wnCdESa7o16Aly3dV70OaA",
-          "size": 3414050,
-          "sha256": "083247551d6d9fbe89bdef81d1da2cbadd6d3708574b7628d55711d4ea1d7159"
+          "versionedName": "ExportRelicArcane_ja.json!00_MKtQYXUAcFZgkmCSV73kBw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_ja.json!00_MKtQYXUAcFZgkmCSV73kBw",
+          "size": 3418177,
+          "sha256": "de7f45bb43cea4d89646998a57460bfea013d2608cbfc0517062f43d1510bdd7"
         },
         {
-          "versionedName": "ExportResources_ja.json!00_9WROfQnsMGxJmbwXuPtK+w",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_ja.json!00_9WROfQnsMGxJmbwXuPtK+w",
-          "size": 1106204,
-          "sha256": "746ef47208580823dbf35ddf8585a19c2d6ca44fb19019e4882095cc0d43519e"
+          "versionedName": "ExportResources_ja.json!00_Vtvyv2aBy2cZ+TkgnHQQdQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_ja.json!00_Vtvyv2aBy2cZ%2BTkgnHQQdQ",
+          "size": 1107798,
+          "sha256": "cccaf79c69d0a3d5f385f71de3d22935ce734bb59f83712823f0068dbefa396d"
         },
         {
           "versionedName": "ExportSentinels_ja.json!00_c8B4VjxWy1ngsjm+G2-nTQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSentinels_ja.json!00_c8B4VjxWy1ngsjm+G2-nTQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSentinels_ja.json!00_c8B4VjxWy1ngsjm%2BG2-nTQ",
           "size": 13020,
           "sha256": "bc8ed3b4f9bf38c065c485e17cb9dd2dc826647ff8296428dc00aa9cb61a0c9e"
         },
         {
           "versionedName": "ExportSortieRewards_ja.json!00_pPt1G+28N3a92TuCDFs9qw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_ja.json!00_pPt1G+28N3a92TuCDFs9qw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_ja.json!00_pPt1G%2B28N3a92TuCDFs9qw",
           "size": 87715,
           "sha256": "ff9250e262e986e4065e99fab98873fc45b42732b11533ba05cc157090c97f3f"
         },
         {
-          "versionedName": "ExportUpgrades_ja.json!00_r3tw+Twh-MT48BIk0fGgbw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_ja.json!00_r3tw+Twh-MT48BIk0fGgbw",
-          "size": 3203990,
-          "sha256": "46495218bbb7c31b42fced1dc03c7aae766fd9f44a9b86bb60d77c8c15cbdd46"
+          "versionedName": "ExportUpgrades_ja.json!00_UXo+o5axJrvGaU39rmF-tQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_ja.json!00_UXo%2Bo5axJrvGaU39rmF-tQ",
+          "size": 3203870,
+          "sha256": "81478e090fd881f411ff8ecadd62b74348102a893da71d594c5e23262b3b5653"
         },
         {
-          "versionedName": "ExportWarframes_ja.json!00_FSl8ZvH77CuaNBkGMD76Tw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_ja.json!00_FSl8ZvH77CuaNBkGMD76Tw",
-          "size": 262409,
-          "sha256": "af0b3315dac54e0e422b426f3b2ec7ac18250d222934a68f3968e41458146bfb"
+          "versionedName": "ExportWarframes_ja.json!00_SS+GK5+gnuewoab-xbkw-w",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_ja.json!00_SS%2BGK5%2Bgnuewoab-xbkw-w",
+          "size": 262685,
+          "sha256": "ba34444cc33843863d64ce7371f790208c02e36a16631397717166c6ad771358"
         },
         {
-          "versionedName": "ExportWeapons_ja.json!00_dAUdcIh76JQD42z585qiZw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_ja.json!00_dAUdcIh76JQD42z585qiZw",
-          "size": 646747,
-          "sha256": "275c3cefaa5198fb51d7f9c239cfce3830afac5f41c4781217afca5d9b736d9d"
+          "versionedName": "ExportWeapons_ja.json!00_Fu8ZGRSGEDUglxG2xx5UoQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_ja.json!00_Fu8ZGRSGEDUglxG2xx5UoQ",
+          "size": 637020,
+          "sha256": "9587d5b97ff9c1c896f7fbb354fbad98bed4150a9b6d03052597a402acf0e2ac"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_ja.txt.lzma"
     },
     {
       "language": "ko",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_ko.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_ko.txt.lzma",
       "indexFile": "official-public-export/indexes/index_ko.txt",
-      "compressedSha256": "bdb02ae90fc97cc42c12aa2d3588fe780bd10c8bd88e7c6c0d31e9f86cd56d89",
-      "indexSha256": "f809cdb2f6c5cfadffd138ff1c637aa17f8bc01a7da7e3a973f6e10d8ba58439",
+      "compressedSha256": "bc4988e179ffd64fa33eb0b4023a8d4015fb283790d90ad79dafbf740b2f411e",
+      "indexSha256": "bd2674c291ddef522c17b1f365381500a1faf91278337803ac8c71d7b402f1fc",
       "files": [
         {
-          "versionedName": "ExportCustoms_ko.json!00_8FvQlPIXYTIbnSbnJ-PQ7w",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_ko.json!00_8FvQlPIXYTIbnSbnJ-PQ7w",
-          "size": 1153044,
-          "sha256": "fd5d03a66b77afb64b662d6bc5171536f6a33bcbb601f5823e008f27df4bdaf9"
+          "versionedName": "ExportCustoms_ko.json!00_KVTA5InIBcxVLd+JEECMEQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_ko.json!00_KVTA5InIBcxVLd%2BJEECMEQ",
+          "size": 1153524,
+          "sha256": "d4da4dadcf5fbe90a3bc9937c76f44c50981eaf73bd3bc7406f890d0503fbad1"
         },
         {
           "versionedName": "ExportDrones_ko.json!00_MKbtPGsaHPFUlB3aPW4zaQ",
@@ -662,7 +662,7 @@
         },
         {
           "versionedName": "ExportFlavour_ko.json!00_R10xUSTtZT48C+gxhNjYHA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_ko.json!00_R10xUSTtZT48C+gxhNjYHA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_ko.json!00_R10xUSTtZT48C%2BgxhNjYHA",
           "size": 761843,
           "sha256": "95946d5012a22e3589ce3227a55da9a39f00bcb7b2de9087876483c7173ce335"
         },
@@ -679,38 +679,38 @@
           "sha256": "4646c545a930725aef9e9e2d950bf87d8b2dde106d5a3d940f450cbdfc551986"
         },
         {
-          "versionedName": "ExportKeys_ko.json!00_-FY4SIWgVEN9qvkeZhspGg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportKeys_ko.json!00_-FY4SIWgVEN9qvkeZhspGg",
-          "size": 16124,
-          "sha256": "6562c58a724a14d3b60057d5044e5333fffae08fce5603a4b137b2e9b30d71ab"
+          "versionedName": "ExportKeys_ko.json!00_8Xgp7E+EPM0hdBWabnjd7Q",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportKeys_ko.json!00_8Xgp7E%2BEPM0hdBWabnjd7Q",
+          "size": 16244,
+          "sha256": "cf3ab33543b4bc2053d5158f16ebb80ff3a220090c15f652128b01bf8439eb2d"
         },
         {
           "versionedName": "ExportRecipes_ko.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_ko.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_ko.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
         {
           "versionedName": "ExportRegions_ko.json!00_BjWxIUnc5MUhenH+xkIIKg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRegions_ko.json!00_BjWxIUnc5MUhenH+xkIIKg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRegions_ko.json!00_BjWxIUnc5MUhenH%2BxkIIKg",
           "size": 50336,
           "sha256": "771906b8f19c09935b03d7c3e2870d3447d138ba8ef3cf55d221b7fe69563a1c"
         },
         {
-          "versionedName": "ExportRelicArcane_ko.json!00_5OaIaIV3sowLQXpLYmgeXw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_ko.json!00_5OaIaIV3sowLQXpLYmgeXw",
-          "size": 3428152,
-          "sha256": "8742407f75e1844a966acdb3776df1d1a1c4afcf4485263a5df561343892f367"
+          "versionedName": "ExportRelicArcane_ko.json!00_ULm+uHT2tj+X2Ec4NmVAQg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_ko.json!00_ULm%2BuHT2tj%2BX2Ec4NmVAQg",
+          "size": 3432307,
+          "sha256": "0c5f17631e51c772e57d907856cb7234ce6fbf4a98cc4b93381731df7358770f"
         },
         {
-          "versionedName": "ExportResources_ko.json!00_m9d1kxQwSmajP4ghjiLqJw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_ko.json!00_m9d1kxQwSmajP4ghjiLqJw",
-          "size": 1133899,
-          "sha256": "b9f1a09038cb78ee4352123b1d32933d8501b0772ce25ed0316f36bca8e796cc"
+          "versionedName": "ExportResources_ko.json!00_bpv5nAfVUnv9x4HDBwi6Jw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_ko.json!00_bpv5nAfVUnv9x4HDBwi6Jw",
+          "size": 1135363,
+          "sha256": "3743ef64e93e1b629f1ec46704f9cbdc79fa735891d1ce86988be6f29ddd3888"
         },
         {
           "versionedName": "ExportSentinels_ko.json!00_dt+3G4-R-cf2hAOlCde9VA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSentinels_ko.json!00_dt+3G4-R-cf2hAOlCde9VA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSentinels_ko.json!00_dt%2B3G4-R-cf2hAOlCde9VA",
           "size": 13534,
           "sha256": "6ed033269bfefd28e2a183250b5afcfc9c8b97911ec307cc7611fe701ea8dd62"
         },
@@ -721,44 +721,44 @@
           "sha256": "522d98955d7e3ef8e080d44acdf1991be5cbe70496fb3eb096bc5d8ae1335758"
         },
         {
-          "versionedName": "ExportUpgrades_ko.json!00_xi+TN7p2Vax4F4GqMKvUGw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_ko.json!00_xi+TN7p2Vax4F4GqMKvUGw",
-          "size": 3223494,
-          "sha256": "f4e65eba53e0c7d1d44d760c1a55967146540254232753152aeed184d27cd682"
+          "versionedName": "ExportUpgrades_ko.json!00_FKhmE3IOPRSIhNtklI-uPw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_ko.json!00_FKhmE3IOPRSIhNtklI-uPw",
+          "size": 3223645,
+          "sha256": "6fafdac9fcdd585e024ba08e18a21158e39f8b935a8e89c4d8bc0058d4c98d92"
         },
         {
-          "versionedName": "ExportWarframes_ko.json!00_0X8zoHewGGqaXGClYa7j1w",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_ko.json!00_0X8zoHewGGqaXGClYa7j1w",
-          "size": 295357,
-          "sha256": "abe6908d129421bb69732b59feccc19e465a91e9800c439d51cdcdcc568bf185"
+          "versionedName": "ExportWarframes_ko.json!00_QFVtxgRBSL8gQEdykt4m6A",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_ko.json!00_QFVtxgRBSL8gQEdykt4m6A",
+          "size": 295842,
+          "sha256": "67351be02428128d7c3764fb27909141484c8f7c4cabb5d11063e1edeb96192e"
         },
         {
-          "versionedName": "ExportWeapons_ko.json!00_HdtQv+RPmY2HNLAeDBkSXA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_ko.json!00_HdtQv+RPmY2HNLAeDBkSXA",
-          "size": 666445,
-          "sha256": "18638fd8c9cdd48afd8f5e5f9a14c65c4381348dc9f65e19772b878a86fb7639"
+          "versionedName": "ExportWeapons_ko.json!00_9S8lJkDIJHre9oYxP1FhJA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_ko.json!00_9S8lJkDIJHre9oYxP1FhJA",
+          "size": 656718,
+          "sha256": "f6586c32fdfb18c313a9c89415749b925034e14a9fe5cc43bc2504e61b3edfb8"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_ko.txt.lzma"
     },
     {
       "language": "pl",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_pl.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_pl.txt.lzma",
       "indexFile": "official-public-export/indexes/index_pl.txt",
-      "compressedSha256": "d5fee20f28f42647e2f1fb6b1cc38d805f3c33db34feb19a92db1634fd0479a2",
-      "indexSha256": "7ec863287fd03f3c69cc56784ce0885bb5332671af8cfc78f7d5afe9e9e623f1",
+      "compressedSha256": "4964f9dc9851b3bcf0478e211dede3d0c7ea6cb56e22c79b6856c241364b970d",
+      "indexSha256": "4c16587bba1772568f6d945686db014c8d5474f1d3f261034b75e13b643ec770",
       "files": [
         {
-          "versionedName": "ExportCustoms_pl.json!00_bu4ws0YSWaLbZa6oxAmZUw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_pl.json!00_bu4ws0YSWaLbZa6oxAmZUw",
-          "size": 1017842,
-          "sha256": "a6f222938338a49fe49027d33feeb16fcba8bcd94354e3f703f237e7d6963648"
+          "versionedName": "ExportCustoms_pl.json!00_fgLQVZJ466fV4iuPPxVwXg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_pl.json!00_fgLQVZJ466fV4iuPPxVwXg",
+          "size": 1018284,
+          "sha256": "15d76bca6f902f5088d1056f3df9c72f8c5aa3bcab14f14310336e5ce6b9ae9b"
         },
         {
           "versionedName": "ExportDrones_pl.json!00_xq6ugw4iqbOrrqBu1oIGHw",
@@ -792,7 +792,7 @@
         },
         {
           "versionedName": "ExportRecipes_pl.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_pl.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_pl.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
@@ -803,16 +803,16 @@
           "sha256": "76630f47a250fa13bb1789aece321df61f21f37269dbdda2aa7ba80fbb3e7fa2"
         },
         {
-          "versionedName": "ExportRelicArcane_pl.json!00_Q+uIa2pTclq1NTQB6y9irA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_pl.json!00_Q+uIa2pTclq1NTQB6y9irA",
-          "size": 3397673,
-          "sha256": "00f8ab3fa35d041a2582d73f2cb7934dcd82d8c13c47141612b7b669665f4edc"
+          "versionedName": "ExportRelicArcane_pl.json!00_2kzuPu+IOm3nrVgCjPj4qg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_pl.json!00_2kzuPu%2BIOm3nrVgCjPj4qg",
+          "size": 3401796,
+          "sha256": "09c7f19244144aec3935bd03f8b05207a74c015061bceb4f2279552553ed5fb8"
         },
         {
-          "versionedName": "ExportResources_pl.json!00_HrYbstLKuK8qd1kEwaQOqw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_pl.json!00_HrYbstLKuK8qd1kEwaQOqw",
-          "size": 1035109,
-          "sha256": "8ece14c1ee73f59fc73271b3ee36045c335a1be6ecdd80678c56a2a367ecb2bb"
+          "versionedName": "ExportResources_pl.json!00_2ayImU0Du6gMiSTKmTkcVw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_pl.json!00_2ayImU0Du6gMiSTKmTkcVw",
+          "size": 1036219,
+          "sha256": "6d4c5e612e425c74272eaf20009d66a19dd94bd3ed88f91bb7af8fe93985ae78"
         },
         {
           "versionedName": "ExportSentinels_pl.json!00_yCTqmYgkQWW5rDa5h8Rdvg",
@@ -827,54 +827,54 @@
           "sha256": "1f230f13d7bd62860c63731b6f33b1665f61edd48303d63b1e407c5d65f4c667"
         },
         {
-          "versionedName": "ExportUpgrades_pl.json!00_hgr0zH8mclQLriFdZByFcg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_pl.json!00_hgr0zH8mclQLriFdZByFcg",
-          "size": 3198008,
-          "sha256": "3bc1e36f7b03848efc055605bd0cfaab2de5f84877f84fc7eae2cf64d1053a3b"
+          "versionedName": "ExportUpgrades_pl.json!00_ZtL+MVkMTHL1flCc5sEbkA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_pl.json!00_ZtL%2BMVkMTHL1flCc5sEbkA",
+          "size": 3197908,
+          "sha256": "60881108110c532d89663c5e50bf999e8f2f1f8d30e4667e35eea86b750914db"
         },
         {
-          "versionedName": "ExportWarframes_pl.json!00_TjfvD6KUDSzgB98B6CCg5g",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_pl.json!00_TjfvD6KUDSzgB98B6CCg5g",
-          "size": 258885,
-          "sha256": "d819538e854593599848bf548d7f1f8d1bf4e36e0ad8eeb76ce3f68e3752428c"
+          "versionedName": "ExportWarframes_pl.json!00_Q4j0fTVF8niS1WNY1wQzUQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_pl.json!00_Q4j0fTVF8niS1WNY1wQzUQ",
+          "size": 259126,
+          "sha256": "8a908516dc863c736ebf4dfbcdd5cdfb15172b6e2117d7bf589c58ff5a25eb23"
         },
         {
-          "versionedName": "ExportWeapons_pl.json!00_XsI2gZ5RvxF8jLrBBYJg+Q",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_pl.json!00_XsI2gZ5RvxF8jLrBBYJg+Q",
-          "size": 641937,
-          "sha256": "d9a5d88487f129a0de9156cf3f09b4632aa817e6bd3ff4bf6d06c9e83ac33c28"
+          "versionedName": "ExportWeapons_pl.json!00_koUE411a1ShnMNJHR0DtCQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_pl.json!00_koUE411a1ShnMNJHR0DtCQ",
+          "size": 632210,
+          "sha256": "12ad02eff0a5eaed54348aba240a9fa06f2f0c266402bf10945b058e72fcc5a9"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_pl.txt.lzma"
     },
     {
       "language": "pt",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_pt.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_pt.txt.lzma",
       "indexFile": "official-public-export/indexes/index_pt.txt",
-      "compressedSha256": "335e9a2d0ee200a6052e43539e9bfad2d3d1375a0d9336afd5f4679255b16b45",
-      "indexSha256": "0289ecfa607b4541cf59eacdfb1c8626bd1262e98d0b2d47eaaf0560e9e9e732",
+      "compressedSha256": "25f9c093cb0a0f2e94217c53ba6feea82507ddd587d892fa8087bec3766f77f9",
+      "indexSha256": "c688c66b5cfa4eeac7f31a9d44d09a0978a0e31c244e3aefdd8955a3e435b144",
       "files": [
         {
-          "versionedName": "ExportCustoms_pt.json!00_N7s2k0JMyfpS8k7x9pvQYA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_pt.json!00_N7s2k0JMyfpS8k7x9pvQYA",
-          "size": 1035996,
-          "sha256": "2fafc098124c6c50870155d457bfd8e5199581b2991072ec2894bd5eb84df006"
+          "versionedName": "ExportCustoms_pt.json!00_ORki4Uuq4RvIVgmzBTreOw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_pt.json!00_ORki4Uuq4RvIVgmzBTreOw",
+          "size": 1036443,
+          "sha256": "50b0ad71ac64a413b42ff905f7b92a5fa54fc8044b7facc1b3dd4574f08d3163"
         },
         {
           "versionedName": "ExportDrones_pt.json!00_bBz+-fGiD8Q6BDpOMUX0CQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportDrones_pt.json!00_bBz+-fGiD8Q6BDpOMUX0CQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportDrones_pt.json!00_bBz%2B-fGiD8Q6BDpOMUX0CQ",
           "size": 2597,
           "sha256": "d1f150f1892cc8f34e45a13b005150747c5ebe9783d06e897f5bb1ab1e2ab01d"
         },
         {
           "versionedName": "ExportFlavour_pt.json!00_KGD+Qnq845XOJZorzDpo-w",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_pt.json!00_KGD+Qnq845XOJZorzDpo-w",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_pt.json!00_KGD%2BQnq845XOJZorzDpo-w",
           "size": 695178,
           "sha256": "990a99280dd4ef5c3dd580f0ef767981bc8c28be4214ac3dc95bc7747c4f2f0d"
         },
@@ -898,7 +898,7 @@
         },
         {
           "versionedName": "ExportRecipes_pt.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_pt.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_pt.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
@@ -909,16 +909,16 @@
           "sha256": "4cfab09c47c37dff332cb22d76451703a16ad06632c8c68ed1dbaaa719f0543a"
         },
         {
-          "versionedName": "ExportRelicArcane_pt.json!00_8IfAfd3ztmH76etMzvx8dw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_pt.json!00_8IfAfd3ztmH76etMzvx8dw",
-          "size": 3388435,
-          "sha256": "d1717a62a9954657afc4bbeca6517af4b9d2235e14d73d878ddce997c4a32901"
+          "versionedName": "ExportRelicArcane_pt.json!00_XzAdKr9jjgwMTjfb6O496Q",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_pt.json!00_XzAdKr9jjgwMTjfb6O496Q",
+          "size": 3392538,
+          "sha256": "1de70f0af6fcde5c7a5a5f4c84a653677bcd88d28e6fcea7fa063822ad5c95cd"
         },
         {
-          "versionedName": "ExportResources_pt.json!00_sScwb7gF8rUlwoZ4+ENGVw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_pt.json!00_sScwb7gF8rUlwoZ4+ENGVw",
-          "size": 1061030,
-          "sha256": "ce1b94c38adbe96ae11d7718272dbdf0606a6fba5237db256373b1a3c7ef1a78"
+          "versionedName": "ExportResources_pt.json!00_QYfu-0tt-bZCyZTFhwVm2g",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_pt.json!00_QYfu-0tt-bZCyZTFhwVm2g",
+          "size": 1062122,
+          "sha256": "175999ede26c088f6835f7650a4227540b63e35638695b9d8d826307367c0846"
         },
         {
           "versionedName": "ExportSentinels_pt.json!00_NnEBNBa3ToJjwXx-NpcoEw",
@@ -928,49 +928,49 @@
         },
         {
           "versionedName": "ExportSortieRewards_pt.json!00_w6yd3SW+CZwXWwg7fPMR5A",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_pt.json!00_w6yd3SW+CZwXWwg7fPMR5A",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_pt.json!00_w6yd3SW%2BCZwXWwg7fPMR5A",
           "size": 84569,
           "sha256": "86389c236613a8dc0cbd36609a50b0e8a13b2defba7d0e2df69e7ed080bc5429"
         },
         {
-          "versionedName": "ExportUpgrades_pt.json!00_nd1pr+EXoT4KkkqNM+h41A",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_pt.json!00_nd1pr+EXoT4KkkqNM+h41A",
-          "size": 3214559,
-          "sha256": "e91ce531057827080bd720d6f9fd3d4364f61d1c8fa333a3cf60ef7dc0a89063"
+          "versionedName": "ExportUpgrades_pt.json!00_+JnLtWvv5+JoNsVv8EHuCg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_pt.json!00_%2BJnLtWvv5%2BJoNsVv8EHuCg",
+          "size": 3214259,
+          "sha256": "423b0c6c21c0f70b2941c34b44b7de9b120d4dd79299364473cc21367394c81c"
         },
         {
-          "versionedName": "ExportWarframes_pt.json!00_5L9f67DAhJE8pJXi2L0NAw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_pt.json!00_5L9f67DAhJE8pJXi2L0NAw",
-          "size": 270664,
-          "sha256": "c67ecbb504f137e493ce47811264543218d3e0a9835344e75148eccde1203f30"
+          "versionedName": "ExportWarframes_pt.json!00_3wEcVOOKdCIm8ExQez1r2Q",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_pt.json!00_3wEcVOOKdCIm8ExQez1r2Q",
+          "size": 270841,
+          "sha256": "39ab9e128d2da14b16d74e5e77ba9c08bc1cb2d43bf1b15ed4c3c650c0776b11"
         },
         {
-          "versionedName": "ExportWeapons_pt.json!00_OiL8Z1v4WyTREpd2h+pmgg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_pt.json!00_OiL8Z1v4WyTREpd2h+pmgg",
-          "size": 643114,
-          "sha256": "a5318c71bd88a366ad0b7025ac5c95045c60ca7c2c09261d1ca4d84f18e6e45b"
+          "versionedName": "ExportWeapons_pt.json!00_Nmm9dbdzzSWmKb8qrcghpA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_pt.json!00_Nmm9dbdzzSWmKb8qrcghpA",
+          "size": 633387,
+          "sha256": "8210fb5367c3bbc910b6edce6a0ec396f986cdb645ae6c8f9d33492170284fdb"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_pt.txt.lzma"
     },
     {
       "language": "ru",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_ru.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_ru.txt.lzma",
       "indexFile": "official-public-export/indexes/index_ru.txt",
-      "compressedSha256": "7f1c268060eeef22984e22a954558b7f54519ec736ca4967d6c94e6233e42ca1",
-      "indexSha256": "ef2c4d7cd075c77a02e0056a6a5784c717de4480dc2d567abddd114bfcbb83c2",
+      "compressedSha256": "42e751016904558316110b67c87b4be0ef7ed407c33925b2d64855ee9ca56fa2",
+      "indexSha256": "2ed8a8f34dba80423a435b4cd9b72fdf1f330eea6b7eea2b27799642346a763a",
       "files": [
         {
-          "versionedName": "ExportCustoms_ru.json!00_94WFOYk63x6+H4zQZdjNXQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_ru.json!00_94WFOYk63x6+H4zQZdjNXQ",
-          "size": 1312009,
-          "sha256": "50bdff96cbc02a2d3acaa90624e66e218ec58e909122185be2d03b1ea909d589"
+          "versionedName": "ExportCustoms_ru.json!00_RrV3X8yoX0h53bAQ3fkYlg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_ru.json!00_RrV3X8yoX0h53bAQ3fkYlg",
+          "size": 1312646,
+          "sha256": "630643c678d040543f00bc6d08cc063df11c168fab8b6f7ce94a1086fc8d79b9"
         },
         {
           "versionedName": "ExportDrones_ru.json!00_j80gbgNJWpZOlvaFVuEdQQ",
@@ -997,14 +997,14 @@
           "sha256": "03a84253d8c2a6ecaeaedaa9d9c202de3feba10dceda5a9685415609aa225b56"
         },
         {
-          "versionedName": "ExportKeys_ru.json!00_xD4qqAWddX5a+4i6+t6KPw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportKeys_ru.json!00_xD4qqAWddX5a+4i6+t6KPw",
-          "size": 18945,
-          "sha256": "14a9432006bece265c71e7fff2de04de8f9c534bf9117cc5e8520940a5da098b"
+          "versionedName": "ExportKeys_ru.json!00_GhHJrzp-vn+pDFghzjrYPw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportKeys_ru.json!00_GhHJrzp-vn%2BpDFghzjrYPw",
+          "size": 18951,
+          "sha256": "886f98c7ccda0b5b3b6f6d1637c60c7a3431a33de1b0ff528ae8959942e4596e"
         },
         {
           "versionedName": "ExportRecipes_ru.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_ru.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_ru.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
@@ -1015,16 +1015,16 @@
           "sha256": "346cc1b470baec13caa6e03811e8b0653bc847122eccaa1d38af0f83b0a51182"
         },
         {
-          "versionedName": "ExportRelicArcane_ru.json!00_bBWdCY8gNlllMOa5vDUoNg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_ru.json!00_bBWdCY8gNlllMOa5vDUoNg",
-          "size": 3697913,
-          "sha256": "af5922e45dd55d9df56ca0e3f33a1bd282cd4f44945bc177ab9a110efe6b2760"
+          "versionedName": "ExportRelicArcane_ru.json!00_ii+ukt3wnm36iI5mZXYf9g",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_ru.json!00_ii%2Bukt3wnm36iI5mZXYf9g",
+          "size": 3702320,
+          "sha256": "7e525d9e9be44423b5d68c66f7eec885e860bc5c144fee75ac04be04dc4c9405"
         },
         {
-          "versionedName": "ExportResources_ru.json!00_P6-Fs7FxLIdFaioQO9NosQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_ru.json!00_P6-Fs7FxLIdFaioQO9NosQ",
-          "size": 1293385,
-          "sha256": "9946c8615373a1dba968eab18bca27680c6b1c668a3a6b74be827ad5d89b3c6e"
+          "versionedName": "ExportResources_ru.json!00_yzdql10ouIKqXjARc5pXiw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_ru.json!00_yzdql10ouIKqXjARc5pXiw",
+          "size": 1294788,
+          "sha256": "596c5b1869a254e96e43f35a6f9cf3dfb34f439b91b8859db10267c593ef5525"
         },
         {
           "versionedName": "ExportSentinels_ru.json!00_GeOakfEUq01mM0D9vW43qg",
@@ -1039,44 +1039,44 @@
           "sha256": "944ecdfeb0a55562f45137be294e6b372c75449dc7eb8a33a331b16612f72ab4"
         },
         {
-          "versionedName": "ExportUpgrades_ru.json!00_0mXOJ-CJwU4wFVbrJM85SA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_ru.json!00_0mXOJ-CJwU4wFVbrJM85SA",
-          "size": 3666608,
-          "sha256": "f9c7186bf8ee1e35ee9530f80db0613d7f0ab42693322cda94acf4b8853e39d2"
+          "versionedName": "ExportUpgrades_ru.json!00_EFfvNLcL0ELsW88Fle8j+w",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_ru.json!00_EFfvNLcL0ELsW88Fle8j%2Bw",
+          "size": 3669854,
+          "sha256": "f1b1542a230f797ecda7b4b612863c9eb04a408d5947876b1bdaf2db17111a05"
         },
         {
-          "versionedName": "ExportWarframes_ru.json!00_xV1vyfOmbRMSw1B9dYB4aw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_ru.json!00_xV1vyfOmbRMSw1B9dYB4aw",
-          "size": 370056,
-          "sha256": "ce2468355ea7db46a7100023be25b2669d398151ba6f7cfc99e74ae094f4aec1"
+          "versionedName": "ExportWarframes_ru.json!00_LotmIp2T+Pw8pyOcJjkaFw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_ru.json!00_LotmIp2T%2BPw8pyOcJjkaFw",
+          "size": 371322,
+          "sha256": "6a8ed8ae6ba8146982e37e11e4c4d46d3d6212ac6a4133e0fcae44ea18cd0cee"
         },
         {
-          "versionedName": "ExportWeapons_ru.json!00_K38pQr5t3MtCQbydSa611w",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_ru.json!00_K38pQr5t3MtCQbydSa611w",
-          "size": 743163,
-          "sha256": "db35d725e3f3f7ddde11919a109d657d47c479f7855815fde17a118bb81280e4"
+          "versionedName": "ExportWeapons_ru.json!00_-eZsNf-U8M1-mRwldfJK6A",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_ru.json!00_-eZsNf-U8M1-mRwldfJK6A",
+          "size": 733436,
+          "sha256": "0402aab4ee39cb3690dac2b76723ffbaaee374c4a47252828f8ebcdc41115f38"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_ru.txt.lzma"
     },
     {
       "language": "tc",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_tc.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_tc.txt.lzma",
       "indexFile": "official-public-export/indexes/index_tc.txt",
-      "compressedSha256": "e132d7eb2a35c43b51eefafcec3ba6ff11f8110d350188f82b817153a1809e5b",
-      "indexSha256": "c548202ce012caa829199e1d3165a8c6b74722d749e243e09142f581fabc1892",
+      "compressedSha256": "d61f4f6e3e45f287fc35b7be43fe8842a8429e33bd20b20b4b09d19de4677679",
+      "indexSha256": "2fbd9f878aa4aab4048ac5414edbc943fa9db78e2d98236f17cc962f9cdea01c",
       "files": [
         {
-          "versionedName": "ExportCustoms_tc.json!00_GLlpJbqeNdgr24wBEGDTyg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_tc.json!00_GLlpJbqeNdgr24wBEGDTyg",
-          "size": 961683,
-          "sha256": "5d7ef653934e0b06e92fe20e383a7579dd2bf8663444bda6f51965fea25760e9"
+          "versionedName": "ExportCustoms_tc.json!00_gePL9b3J+jRKOicWYDrXfg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_tc.json!00_gePL9b3J%2BjRKOicWYDrXfg",
+          "size": 962056,
+          "sha256": "0b9a3c5735ed71cbfe74694e3d5e79b799a0fa85d07d55517b3576eb89c4fb67"
         },
         {
           "versionedName": "ExportDrones_tc.json!00_2GSUXl8rRxVStzItnR7QiQ",
@@ -1110,27 +1110,27 @@
         },
         {
           "versionedName": "ExportRecipes_tc.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_tc.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_tc.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
         {
           "versionedName": "ExportRegions_tc.json!00_cfGlhWotmXC+H8qMVl78zw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRegions_tc.json!00_cfGlhWotmXC+H8qMVl78zw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRegions_tc.json!00_cfGlhWotmXC%2BH8qMVl78zw",
           "size": 50075,
           "sha256": "b0f43b5dfe73db4cc2e3912012910e709b352713d7f73a94997d7757a0c03f3f"
         },
         {
-          "versionedName": "ExportRelicArcane_tc.json!00_5CQa4H7ITsiCRJ0WKirN5w",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_tc.json!00_5CQa4H7ITsiCRJ0WKirN5w",
-          "size": 3340653,
-          "sha256": "09f1d1290ee3eae5e3d017ce4d0a70dfd4a4d28403481bc039291af90227c337"
+          "versionedName": "ExportRelicArcane_tc.json!00_5FHUIspDD1QxHSD+yNRYdw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_tc.json!00_5FHUIspDD1QxHSD%2ByNRYdw",
+          "size": 3344724,
+          "sha256": "0f626cec98026ac5693b3cf0f4bbd9a74e8049981876812bd30be4129c3922b5"
         },
         {
-          "versionedName": "ExportResources_tc.json!00_jI0vTQgUfbjNjdTpIcfexA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_tc.json!00_jI0vTQgUfbjNjdTpIcfexA",
-          "size": 1001541,
-          "sha256": "aca2cb8e23f6a766ee1bdb4c2fcaf43db408de27c26695f9b4340e15eb2f46fb"
+          "versionedName": "ExportResources_tc.json!00_62BU+hNOLxbM--xH+41WfA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_tc.json!00_62BU%2BhNOLxbM--xH%2B41WfA",
+          "size": 1002424,
+          "sha256": "672dfc4c1a8362b8d7a71c8faf52f6a60cf5cf1d7ae7ebf8733d6ed70adc1aef"
         },
         {
           "versionedName": "ExportSentinels_tc.json!00_W3Xkv1C6VjB0Bxl44OLQIQ",
@@ -1140,49 +1140,49 @@
         },
         {
           "versionedName": "ExportSortieRewards_tc.json!00_fAtzw0aErL60F9+L3WW-WA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_tc.json!00_fAtzw0aErL60F9+L3WW-WA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_tc.json!00_fAtzw0aErL60F9%2BL3WW-WA",
           "size": 79785,
           "sha256": "3c89d39b588481a92f7092122efc57ac51cace9b013cf3c06ca8ad2d76b397f1"
         },
         {
-          "versionedName": "ExportUpgrades_tc.json!00_newaQw-ZgZvOjfPaGf3r0g",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_tc.json!00_newaQw-ZgZvOjfPaGf3r0g",
-          "size": 3064177,
-          "sha256": "c580d174cf2f44af596b97f94ad34e38d52d61250c217274e2821d8eae7c04a1"
+          "versionedName": "ExportUpgrades_tc.json!00_LFBLa4IBcxUNGql805ZCnQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_tc.json!00_LFBLa4IBcxUNGql805ZCnQ",
+          "size": 3064097,
+          "sha256": "7d82155435c1f3482dd769f5f3723d7f4b59df4c0e68e4eb38b4b8947dda45e5"
         },
         {
-          "versionedName": "ExportWarframes_tc.json!00_hIbTVijJ-Cj0iAbNe0zj4w",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_tc.json!00_hIbTVijJ-Cj0iAbNe0zj4w",
-          "size": 234284,
-          "sha256": "f6bf1b0504e49aeed92a15aa83fd8ed376dacf736bf6c31508ef4fd40f2aee7f"
+          "versionedName": "ExportWarframes_tc.json!00_KF0FSPn1egQOwm3H3ovo5g",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_tc.json!00_KF0FSPn1egQOwm3H3ovo5g",
+          "size": 234401,
+          "sha256": "5003f7d1f2efe1fba8432badc3685ef208f8af4ddb21cb97efd701e6c40bddfc"
         },
         {
-          "versionedName": "ExportWeapons_tc.json!00_PlQf01zyBPWE05jhoa570Q",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_tc.json!00_PlQf01zyBPWE05jhoa570Q",
-          "size": 642194,
-          "sha256": "719531eecf49a15554ac091bfef2bdc7a8bd08b4060cfa9f363c4bf0b17db253"
+          "versionedName": "ExportWeapons_tc.json!00_YA43DiMAwxku-VmHI6duHw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_tc.json!00_YA43DiMAwxku-VmHI6duHw",
+          "size": 632467,
+          "sha256": "85cf2f8cb092f901dca62facb96c03deb83e8f94184c10eec637886f98f8ca97"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_tc.txt.lzma"
     },
     {
       "language": "th",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_th.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_th.txt.lzma",
       "indexFile": "official-public-export/indexes/index_th.txt",
-      "compressedSha256": "f154dfcd2d90bd739a4d7ca87aa424a9dc17eaee933518f26fab6c7b1b9349ed",
-      "indexSha256": "4dd2c7d3d5c4dab6737a39ffcfde016c7efb5fe4d0fc72e5052d7b104cedcf52",
+      "compressedSha256": "85ec75537fb41b11e2e5dd66398866802284f55c59ee4e0307f8aa903047eba8",
+      "indexSha256": "05e42fcbc8eafb6c2826142141a63fee4674777a1a93e1ad20015530b982639a",
       "files": [
         {
-          "versionedName": "ExportCustoms_th.json!00_g6O9jJ2OTFMwdMp16lqbDQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_th.json!00_g6O9jJ2OTFMwdMp16lqbDQ",
-          "size": 1561914,
-          "sha256": "6d9d89b4d21163ea300be3ddd18f98fe338a390a22924bef91624f54ba2b8e54"
+          "versionedName": "ExportCustoms_th.json!00_5qj4Ul+vDD2yibja-dEfCA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_th.json!00_5qj4Ul%2BvDD2yibja-dEfCA",
+          "size": 1562510,
+          "sha256": "d094959d8d2adc4cdd68327ab65168558f88bfb752fb7bfc3ff26a857aad57cd"
         },
         {
           "versionedName": "ExportDrones_th.json!00_qBm3xoXP21KKJp0BCnaAyw",
@@ -1198,7 +1198,7 @@
         },
         {
           "versionedName": "ExportFusionBundles_th.json!00_0H6L6C8k+gkOjz5ywCOS3Q",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFusionBundles_th.json!00_0H6L6C8k+gkOjz5ywCOS3Q",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFusionBundles_th.json!00_0H6L6C8k%2BgkOjz5ywCOS3Q",
           "size": 14509,
           "sha256": "ee3a383dbff2b45d8acb5483cd43614619c22fbc82e15b2c87c472017d20eb1c"
         },
@@ -1210,13 +1210,13 @@
         },
         {
           "versionedName": "ExportKeys_th.json!00_1Eo1xRlA1P+HTXNVv8B6yA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportKeys_th.json!00_1Eo1xRlA1P+HTXNVv8B6yA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportKeys_th.json!00_1Eo1xRlA1P%2BHTXNVv8B6yA",
           "size": 23676,
           "sha256": "093e10f06d21a1d62cca680d3817294de06e4df3613264433488357393850e6e"
         },
         {
           "versionedName": "ExportRecipes_th.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_th.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_th.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
@@ -1227,16 +1227,16 @@
           "sha256": "cc49ed509805807697b9074c59d31ba417032c0cf79d13f72c60bf6ee2b28e68"
         },
         {
-          "versionedName": "ExportRelicArcane_th.json!00_PMZnaOekEINkVqHHanRSAw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_th.json!00_PMZnaOekEINkVqHHanRSAw",
-          "size": 3906573,
-          "sha256": "ce2abea5064d6678600727f4728bb969a467525b9b25ed71003a238e98643c55"
+          "versionedName": "ExportRelicArcane_th.json!00_8CgNH4Vg+qGP-4O-DceJJQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_th.json!00_8CgNH4Vg%2BqGP-4O-DceJJQ",
+          "size": 3911148,
+          "sha256": "5080e05ea7e25e39456ac65624b1a4e7210156ac98c5f17b805784da5435b02b"
         },
         {
-          "versionedName": "ExportResources_th.json!00_ErlDujUosEoJzbWILE3xCQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_th.json!00_ErlDujUosEoJzbWILE3xCQ",
-          "size": 1539213,
-          "sha256": "14d6315c87dc124768af8d64b292ac297f71cd854892bbc61f6f1f6dd9e855cf"
+          "versionedName": "ExportResources_th.json!00_sCMI89AUahSmCnNxqcl4ZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_th.json!00_sCMI89AUahSmCnNxqcl4ZA",
+          "size": 1541268,
+          "sha256": "705c0605b63c20292f32aea222efa6f688128c03a219a22626a36c9e1084438c"
         },
         {
           "versionedName": "ExportSentinels_th.json!00_8Iv5atLfNhR8XdVvhfxbTw",
@@ -1251,44 +1251,44 @@
           "sha256": "8c358bce8cfa00466d14df38b9579c8df7e9404762e4a1536ffa2d1b1aa3d40e"
         },
         {
-          "versionedName": "ExportUpgrades_th.json!00_BZPcrnCiU-DgT1lmuK1hpA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_th.json!00_BZPcrnCiU-DgT1lmuK1hpA",
-          "size": 3974286,
-          "sha256": "e5559f58cece35d1fc417adbcabe0d10824b2ec2c340a690f12059ef43dadb9f"
+          "versionedName": "ExportUpgrades_th.json!00_tQQMIA-YvyWs7Biio1eW7A",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_th.json!00_tQQMIA-YvyWs7Biio1eW7A",
+          "size": 3973554,
+          "sha256": "4e60c9ab353288eaf2a63eb71288627b185cdea62df6e13ea96ab1234876bb0b"
         },
         {
-          "versionedName": "ExportWarframes_th.json!00_5BPuxXRUawCmSuN+r0ZTTw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_th.json!00_5BPuxXRUawCmSuN+r0ZTTw",
-          "size": 463294,
-          "sha256": "25cc66ea38f4545334a7c8d56f36758b6b1ff2817d3d2d0c25491ae4e842484f"
+          "versionedName": "ExportWarframes_th.json!00_KVvIQaqj-WQ3ipQPgZ7OLw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_th.json!00_KVvIQaqj-WQ3ipQPgZ7OLw",
+          "size": 463773,
+          "sha256": "b37bcbcbf56ede0f9ff7f70ed1613870d62e3d2d434c437bfd40c0b5f5d8fc8d"
         },
         {
-          "versionedName": "ExportWeapons_th.json!00_ao7AKvvyilEp6kAmyQdyyw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_th.json!00_ao7AKvvyilEp6kAmyQdyyw",
-          "size": 826474,
-          "sha256": "9f867bea802d34561924648ba818ed9022c613852db18f7326154630b1f9072c"
+          "versionedName": "ExportWeapons_th.json!00_YhFdM3N5MaEyx41D+oyD6Q",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_th.json!00_YhFdM3N5MaEyx41D%2BoyD6Q",
+          "size": 816747,
+          "sha256": "e591619f26b57afcf19fff91eb9eaa54f0f2a7f022e176e86ca85044fcf92886"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_th.txt.lzma"
     },
     {
       "language": "tr",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_tr.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_tr.txt.lzma",
       "indexFile": "official-public-export/indexes/index_tr.txt",
-      "compressedSha256": "c045af56040de0b7b526d72353325be1ca47cca5651846cec20d3f2309e8df40",
-      "indexSha256": "b82010af5221dbaf491489426ce30f167e6bd5a0e278465443e877820ce512e1",
+      "compressedSha256": "69b74226b738b52ed0058f9c95be04c6e95a9b4b816660482093330b7de2faa6",
+      "indexSha256": "f8b5adea1f18646e1fa18729cbe6366904b26c369ee6fa77589e0f96de5ee696",
       "files": [
         {
-          "versionedName": "ExportCustoms_tr.json!00_fecLvZXPlG3G-DzEhGyRHQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_tr.json!00_fecLvZXPlG3G-DzEhGyRHQ",
-          "size": 1016106,
-          "sha256": "fc2928171a8f66e2eda0ffd0b27ab3d14bda86e34183b9cf63db33f191d2b578"
+          "versionedName": "ExportCustoms_tr.json!00_E6UD8Zz9c-fXDTACo1jStw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_tr.json!00_E6UD8Zz9c-fXDTACo1jStw",
+          "size": 1016555,
+          "sha256": "bc27f28f22d396b6960e6c8c5c51e21f14c68f67b97e3c751257d24b4f69d005"
         },
         {
           "versionedName": "ExportDrones_tr.json!00_VL6xBgJyOCdOtoMQ3dqHZA",
@@ -1310,7 +1310,7 @@
         },
         {
           "versionedName": "ExportGear_tr.json!00_NyU+vo7mr-HkvLo+rWSwYA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_tr.json!00_NyU+vo7mr-HkvLo+rWSwYA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_tr.json!00_NyU%2Bvo7mr-HkvLo%2BrWSwYA",
           "size": 58555,
           "sha256": "fd8177d503f0a0793ea32d397977950afa172f16dea6ef09ec12aa1358ae95e3"
         },
@@ -1322,7 +1322,7 @@
         },
         {
           "versionedName": "ExportRecipes_tr.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_tr.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_tr.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
@@ -1333,16 +1333,16 @@
           "sha256": "ad0fcb49c4028411c58c4abff04c3fd5b7fae34f4403708629bdcbe696becdd1"
         },
         {
-          "versionedName": "ExportRelicArcane_tr.json!00_A2Kq2rLLfiNLryIOgFhSTg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_tr.json!00_A2Kq2rLLfiNLryIOgFhSTg",
-          "size": 3379612,
-          "sha256": "b1769d37ae6f7a522f33e403de1c7af13da2341d96492d4dc2f8b6d6932719ec"
+          "versionedName": "ExportRelicArcane_tr.json!00_xxxj61rgy0TSnUsWAd2Ncg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_tr.json!00_xxxj61rgy0TSnUsWAd2Ncg",
+          "size": 3383715,
+          "sha256": "4ebeb5b6f464f06fa002baa08460f5aaafe6539c606be1555de42c2c4f7e4908"
         },
         {
-          "versionedName": "ExportResources_tr.json!00_-LfG5Uxgycu49vPW2g2qqg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_tr.json!00_-LfG5Uxgycu49vPW2g2qqg",
-          "size": 1046921,
-          "sha256": "7c28c4e6e01e245a8d6ea978a2f565f6bcfd79ad1a8bd5481e7784c98d83ccdb"
+          "versionedName": "ExportResources_tr.json!00_Cb+ucamA96h2HPhpHD-5Yw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_tr.json!00_Cb%2BucamA96h2HPhpHD-5Yw",
+          "size": 1047978,
+          "sha256": "a20c20ccc458cad0c822522f47ab6c30b5a63f72f98bb245d5cffc820c3e658b"
         },
         {
           "versionedName": "ExportSentinels_tr.json!00_riT3m3IccG-QPETcIOKG5Q",
@@ -1352,49 +1352,49 @@
         },
         {
           "versionedName": "ExportSortieRewards_tr.json!00_6MmA4sdGY-buuxI+GmdWGw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_tr.json!00_6MmA4sdGY-buuxI+GmdWGw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_tr.json!00_6MmA4sdGY-buuxI%2BGmdWGw",
           "size": 82640,
           "sha256": "90bf0e4e5a5c0afe4aaae3add5a8896ed016a3022bd360ebd041a175e46b2988"
         },
         {
-          "versionedName": "ExportUpgrades_tr.json!00_g+MJHeWzWA2XL4OQ3xqDxw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_tr.json!00_g+MJHeWzWA2XL4OQ3xqDxw",
-          "size": 3151954,
-          "sha256": "fbeed1e9288991b5ab2a9c78efe03f9e802cb9c2b07985db42044b22fda8abb6"
+          "versionedName": "ExportUpgrades_tr.json!00_1vYDV3-cIKz0FiKtpx1hdQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_tr.json!00_1vYDV3-cIKz0FiKtpx1hdQ",
+          "size": 3151770,
+          "sha256": "ac41a4d10b082c79e6edf105c20e943f24ba8b29c86630653ea7afb295b2e724"
         },
         {
-          "versionedName": "ExportWarframes_tr.json!00_zARB-RZgJVIwqGAK4JMw5Q",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_tr.json!00_zARB-RZgJVIwqGAK4JMw5Q",
-          "size": 262145,
-          "sha256": "cb635b7652690e47ec54eb4ecd760dbc7b9918712604d576469679551c3bfe55"
+          "versionedName": "ExportWarframes_tr.json!00_ZJfkMgkwC9eAB4HenUvGIw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_tr.json!00_ZJfkMgkwC9eAB4HenUvGIw",
+          "size": 262315,
+          "sha256": "c6214c0cd12effce986c88aac9ccd615cbd5937246e1ba51b037d3ad6348eb03"
         },
         {
-          "versionedName": "ExportWeapons_tr.json!00_tnu39qQMSKdFND7tHwEvmA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_tr.json!00_tnu39qQMSKdFND7tHwEvmA",
-          "size": 641285,
-          "sha256": "f58df6f12893ae26b772aed65ea9790f49192be8ff6af242272303562cdf928f"
+          "versionedName": "ExportWeapons_tr.json!00_Nt8+kI6qTvVgcWM3+8uV6g",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_tr.json!00_Nt8%2BkI6qTvVgcWM3%2B8uV6g",
+          "size": 631558,
+          "sha256": "8da063d50648717ea0ab7ffb4dddc2c0f22e29ea324824300dbea69650842ce9"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_tr.txt.lzma"
     },
     {
       "language": "uk",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_uk.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_uk.txt.lzma",
       "indexFile": "official-public-export/indexes/index_uk.txt",
-      "compressedSha256": "964ec94bc0f086c011813c520405bfcd0f0c56aac3c6f5a2f7918260c9192bb2",
-      "indexSha256": "d0a51cb57f81463b7876b41b6500ef75e62bfea11b58eceb83ccd886c04bac84",
+      "compressedSha256": "c86c3c718d8cc7ae808fcf1e7f208193d13ad9a2f173b6bd399771093d1108d3",
+      "indexSha256": "5d425b16adae365d02891b535c3ce23d81b37d4a5876a0385132c47b5de5370d",
       "files": [
         {
-          "versionedName": "ExportCustoms_uk.json!00_6X7BmSnerW68q599GiUK3g",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_uk.json!00_6X7BmSnerW68q599GiUK3g",
-          "size": 1339166,
-          "sha256": "b6342b056d5e121c8a1329fac7d1a2e620ec2b15169774cbd8c106766aa3373c"
+          "versionedName": "ExportCustoms_uk.json!00_drv4V0rC02ApT4zUavlr0g",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_uk.json!00_drv4V0rC02ApT4zUavlr0g",
+          "size": 1339053,
+          "sha256": "86f683dd8222a8916b3741cbe96582fab5f1a09d0fa37962fea9e14aa53128e3"
         },
         {
           "versionedName": "ExportDrones_uk.json!00_y0eiBBuLDtmc9JggBeLq5w",
@@ -1403,10 +1403,10 @@
           "sha256": "678f7394784adec5c1ab18a97a48e928a38037334ac63dd719873712746fa29b"
         },
         {
-          "versionedName": "ExportFlavour_uk.json!00_ooXWI4it57h6gz7mfU5gsA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_uk.json!00_ooXWI4it57h6gz7mfU5gsA",
-          "size": 830258,
-          "sha256": "5b3bbbda92fb46466309ce2fe855115ec2d9203c71504c5607f21427ad92d08b"
+          "versionedName": "ExportFlavour_uk.json!00_ro+jHj7vk+2+FMaDBE83Aw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_uk.json!00_ro%2BjHj7vk%2B2%2BFMaDBE83Aw",
+          "size": 830256,
+          "sha256": "504dd58b47d0d394db211844c084c7c4e9d43bf74c84e4b8ae170fb39312d6c3"
         },
         {
           "versionedName": "ExportFusionBundles_uk.json!00_0BbrcGNP1sCsdpotClHqtw",
@@ -1416,7 +1416,7 @@
         },
         {
           "versionedName": "ExportGear_uk.json!00_Pfhz0b4rXKa+YYuqJGJrCw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_uk.json!00_Pfhz0b4rXKa+YYuqJGJrCw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_uk.json!00_Pfhz0b4rXKa%2BYYuqJGJrCw",
           "size": 74946,
           "sha256": "a065ccdbf3023e731e0bd3db8b7067e0458fbd5d3333d3158a552fbe4c96227b"
         },
@@ -1428,7 +1428,7 @@
         },
         {
           "versionedName": "ExportRecipes_uk.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_uk.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_uk.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
@@ -1439,16 +1439,16 @@
           "sha256": "e8c0282a8e2f87653c12e81141a53d4bcca8a2c65247b439b4fc2e3796bafb22"
         },
         {
-          "versionedName": "ExportRelicArcane_uk.json!00_IEDfn5GDZm5HQeITYE8Csw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_uk.json!00_IEDfn5GDZm5HQeITYE8Csw",
-          "size": 3692999,
-          "sha256": "67161862f9dfdfc4bd6bec6f031c644b6695dbe851c17b0e610223d47815399c"
+          "versionedName": "ExportRelicArcane_uk.json!00_3eaKMcbhzUO+OCbj3yTo5w",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_uk.json!00_3eaKMcbhzUO%2BOCbj3yTo5w",
+          "size": 3697382,
+          "sha256": "7c19bcdb5df49853313e4d043ec5416f6c8c1683be26aa92887d92e2744ca5ba"
         },
         {
-          "versionedName": "ExportResources_uk.json!00_S+9exX44K01EXdrS7unJ2g",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_uk.json!00_S+9exX44K01EXdrS7unJ2g",
-          "size": 1270899,
-          "sha256": "8304139e17a14eb06fb5921e4bf89064ca57a4eca3aeb797d88056a6cf47112a"
+          "versionedName": "ExportResources_uk.json!00_ZGwOe+XL0T9yuOWvHx4sdQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_uk.json!00_ZGwOe%2BXL0T9yuOWvHx4sdQ",
+          "size": 1272423,
+          "sha256": "048726b59a4e5b1331d128fdb17be58d96a4fef789b38b69c3daf00fe7126550"
         },
         {
           "versionedName": "ExportSentinels_uk.json!00_0Hl9PsXdUwsi9Or-7FfZUw",
@@ -1458,61 +1458,61 @@
         },
         {
           "versionedName": "ExportSortieRewards_uk.json!00_RDJbgwTVgDZGWUyd3r+0jw",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_uk.json!00_RDJbgwTVgDZGWUyd3r+0jw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_uk.json!00_RDJbgwTVgDZGWUyd3r%2B0jw",
           "size": 103498,
           "sha256": "35e6928585a732004f2399a754bba64940225d9586190a8ed83ea06a90bdc723"
         },
         {
-          "versionedName": "ExportUpgrades_uk.json!00_Fo1MS7PFfohp76a0bFFvDQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_uk.json!00_Fo1MS7PFfohp76a0bFFvDQ",
-          "size": 3743412,
-          "sha256": "dd3eb0572612071e80c490e0e03d5a3e76bfb4ac6f419125cbbfb3d1ef2fa3ef"
+          "versionedName": "ExportUpgrades_uk.json!00_GIji1fykm73k3QGzZVQrOA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_uk.json!00_GIji1fykm73k3QGzZVQrOA",
+          "size": 3745080,
+          "sha256": "23f2d9e11623e5666123f739a5fcb102df9979518a72a93a899f79c286d4304d"
         },
         {
-          "versionedName": "ExportWarframes_uk.json!00_AuZAzico-MKmOkcFhmd-AQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_uk.json!00_AuZAzico-MKmOkcFhmd-AQ",
-          "size": 351089,
-          "sha256": "284bfb176e166361018deb252611dd44ea8dad17142895dda86e266a714a26a0"
+          "versionedName": "ExportWarframes_uk.json!00_behgP2H3fVwBoKHZFE6rvw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_uk.json!00_behgP2H3fVwBoKHZFE6rvw",
+          "size": 352464,
+          "sha256": "3f37378ce162b4f0f8cef4b96baf6f68de34ee596b1827ecf5fd0314d598dc6a"
         },
         {
-          "versionedName": "ExportWeapons_uk.json!00_ZcIFJGTdl6M1G6P3hlw6XQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_uk.json!00_ZcIFJGTdl6M1G6P3hlw6XQ",
-          "size": 729726,
-          "sha256": "41e5eb6d8b7053e4dc405664dd2bf024ee5a651bf3973bcd662ea8e20c11a7bc"
+          "versionedName": "ExportWeapons_uk.json!00_k32BrBfSNmjas62AW0qwBg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_uk.json!00_k32BrBfSNmjas62AW0qwBg",
+          "size": 719999,
+          "sha256": "88bfabe92c2885e9fc44914e1a7c635a871e5aeb230b5a147e7dd2658c3fec1c"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_uk.txt.lzma"
     },
     {
       "language": "zh",
       "indexUrl": "https://origin.warframe.com/PublicExport/index_zh.txt.lzma",
-      "lzmaFile": "official-public-export/lzma/index_zh.txt.lzma",
       "indexFile": "official-public-export/indexes/index_zh.txt",
-      "compressedSha256": "f02ce88cad198d329f2b5d8aa42b51d98e8b8e787b3d144806b30536001399c4",
-      "indexSha256": "67aed97635b0c224e6a39d9750a045d2777e2d414f9a5995f810d34f603decb7",
+      "compressedSha256": "94003f1a16cb3ae1056e51d0b68be08ceaf312aed21fec2ab3fc038888828ab0",
+      "indexSha256": "defeb78fa63a130804a36ee0592f021d2ff5165462c428123539237c6510db6d",
       "files": [
         {
-          "versionedName": "ExportCustoms_zh.json!00_aJJ2O5FJdAw0HbCfAIxVWA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_zh.json!00_aJJ2O5FJdAw0HbCfAIxVWA",
-          "size": 965450,
-          "sha256": "c7ae1b0a8f1e24a101468868480b75abf0f42d237bed336b45d0bdbb539f5aa5"
+          "versionedName": "ExportCustoms_zh.json!00_GCYCClL4STq0L9IIcjGwjA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportCustoms_zh.json!00_GCYCClL4STq0L9IIcjGwjA",
+          "size": 965835,
+          "sha256": "cdce4096b0c8e81e886b404c915697f4996b90b43690c3eb4577d16df24ca14d"
         },
         {
           "versionedName": "ExportDrones_zh.json!00_drdgnw2FAjdyNqF+sh2nBQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportDrones_zh.json!00_drdgnw2FAjdyNqF+sh2nBQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportDrones_zh.json!00_drdgnw2FAjdyNqF%2Bsh2nBQ",
           "size": 2316,
           "sha256": "f17e2dd52f0ba6978b26496de9d6d16d4201c1f8d4b6fb4e2a5ef2c85bfd2d14"
         },
         {
-          "versionedName": "ExportFlavour_zh.json!00_Z8uncH5bgugpY6H3cgpoDA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_zh.json!00_Z8uncH5bgugpY6H3cgpoDA",
-          "size": 668691,
-          "sha256": "f57ae889cea9af0d6ef2a63d81313d28f07af8e65dc6738dd210c71d3272253c"
+          "versionedName": "ExportFlavour_zh.json!00_n1cUchdqm4O7saOhVngIHQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportFlavour_zh.json!00_n1cUchdqm4O7saOhVngIHQ",
+          "size": 668689,
+          "sha256": "d7633071628c66af31229ea0af98f110ee73be7f15bbdc0829eb1105b0cf8844"
         },
         {
           "versionedName": "ExportFusionBundles_zh.json!00_6zFK3IslPUqUex7U9GnMMw",
@@ -1522,7 +1522,7 @@
         },
         {
           "versionedName": "ExportGear_zh.json!00_wj6IFgoRo+7W6KM5mwb-7A",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_zh.json!00_wj6IFgoRo+7W6KM5mwb-7A",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportGear_zh.json!00_wj6IFgoRo%2B7W6KM5mwb-7A",
           "size": 54330,
           "sha256": "1215fb656cedf46c561ab71a30a45e422c9b590a357244d73f34f149325a0e2b"
         },
@@ -1534,7 +1534,7 @@
         },
         {
           "versionedName": "ExportRecipes_zh.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_zh.json!00_oac+LCAtIyqDxZF8Qe1ZZA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRecipes_zh.json!00_oac%2BLCAtIyqDxZF8Qe1ZZA",
           "size": 1307697,
           "sha256": "c6259273a2e138d0b10e6133ac425d03cf87f6f0beac197fbe56ee8f29fc8ef3"
         },
@@ -1545,16 +1545,16 @@
           "sha256": "1e0f1693ccb9fd176a301f8d15ee46a2cba36bc23745b74b8df81f587fdaa6ae"
         },
         {
-          "versionedName": "ExportRelicArcane_zh.json!00_IiCftpg3wZAycJs2RLvHHg",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_zh.json!00_IiCftpg3wZAycJs2RLvHHg",
-          "size": 3344842,
-          "sha256": "878d855e5a9195771dc6e7bad49061357137f36d224848e27628cc01c27679fc"
+          "versionedName": "ExportRelicArcane_zh.json!00_9xY4slaLNP--zaEjeX98-A",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_zh.json!00_9xY4slaLNP--zaEjeX98-A",
+          "size": 3348917,
+          "sha256": "0bf6372a72e655a90ff10d0e5243edf0e41048c293486c4e0aab0e71ddbe91a2"
         },
         {
-          "versionedName": "ExportResources_zh.json!00_qHCXLjOH5W47t2GBzcw2pQ",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_zh.json!00_qHCXLjOH5W47t2GBzcw2pQ",
-          "size": 1007186,
-          "sha256": "e30867c7d8d6a696f46715d4ef51ebcb94239a5774dd0a838a50e887946d828a"
+          "versionedName": "ExportResources_zh.json!00_UeKBHcyCLEvfAXnns1EPeQ",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportResources_zh.json!00_UeKBHcyCLEvfAXnns1EPeQ",
+          "size": 1008032,
+          "sha256": "3ed29b435f6f13270f458972865ba1874fdc436a38670b5eab22e111a140589a"
         },
         {
           "versionedName": "ExportSentinels_zh.json!00_9XVxUBzLu5VzVKtKO8rVFg",
@@ -1564,81 +1564,98 @@
         },
         {
           "versionedName": "ExportSortieRewards_zh.json!00_2qiPChHg5OTEylz4HqQh+g",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_zh.json!00_2qiPChHg5OTEylz4HqQh+g",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportSortieRewards_zh.json!00_2qiPChHg5OTEylz4HqQh%2Bg",
           "size": 79719,
           "sha256": "8349cfa43fc3f1bb472d4e546f0ede460bc911a655899e9f13fd5036eeddd160"
         },
         {
-          "versionedName": "ExportUpgrades_zh.json!00_F5wjh-cLGAjowIgBEL5urA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_zh.json!00_F5wjh-cLGAjowIgBEL5urA",
-          "size": 3068168,
-          "sha256": "9575159508d91d25292885d7c2a69c36d737f5c47d55bda38862b099cf2272dd"
+          "versionedName": "ExportUpgrades_zh.json!00_JY+uvKO3UHGgu-xP6mzMqg",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_zh.json!00_JY%2BuvKO3UHGgu-xP6mzMqg",
+          "size": 3068274,
+          "sha256": "3d7ff4ad00fe8d10639a70495ea4d873fb62e393febc06818c171fc6e7036bd8"
         },
         {
-          "versionedName": "ExportWarframes_zh.json!00_cKcs6HhjvhYKM0WJ55qG7g",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_zh.json!00_cKcs6HhjvhYKM0WJ55qG7g",
-          "size": 237699,
-          "sha256": "a037e6d3391723e7c0b0fc454cde60502ab6259d7305d7ccc3b0537c5b06439e"
+          "versionedName": "ExportWarframes_zh.json!00_JdkQ9kJydzj6ausbzkerbA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWarframes_zh.json!00_JdkQ9kJydzj6ausbzkerbA",
+          "size": 237864,
+          "sha256": "c1193e52a73c61f574e47ee8b80de23b8767268e5976a04ef9ca75ce5137f9de"
         },
         {
-          "versionedName": "ExportWeapons_zh.json!00_+389jITu3rzu8I-rxKaS0g",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_zh.json!00_+389jITu3rzu8I-rxKaS0g",
-          "size": 641316,
-          "sha256": "99d8f8c5584922c8587569042594780c92d89e648cf98d7dd30581c8e59a514e"
+          "versionedName": "ExportWeapons_zh.json!00_RSIgNmJSEIkshD6uzJ34YA",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_zh.json!00_RSIgNmJSEIkshD6uzJ34YA",
+          "size": 631589,
+          "sha256": "58c462a19b61982dc85c41a01465086bf1bada1b0b99bc808b2f448eb02ad9ce"
         },
         {
-          "versionedName": "ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_11LMFAHtTnZR5s-N9vXyIA",
-          "size": 3836487,
-          "sha256": "c1b252855a579fec6d7b66fcf77a3e3412f8ea380d8250b05990e020638623c2"
+          "versionedName": "ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_ctbDG9gRd4GzkO0LrBP9Kw",
+          "size": 3838178,
+          "sha256": "98a25660b1c3d8c419995d3eb6d098428ed3c3e97bac0bae4c434420418433de"
         }
-      ]
+      ],
+      "lzmaFile": "official-public-export/lzma/index_zh.txt.lzma"
     }
   ],
   "repositories": [
     {
       "name": "warframe-public-export-plus",
-      "url": "https://github.com/calamity-inc/warframe-public-export-plus.git",
+      "url": "https://github.com/calamity-inc/warframe-public-export-plus",
       "directory": "git/warframe-public-export-plus",
       "branch": "senpai",
-      "commit": "8404b343a4ffb3e272564c24ee7abbfbd79445bc",
-      "commitDate": "2026-09-29T18:23:31+02:00",
-      "remoteRef": "refs/remotes/origin/senpai",
-      "remoteCommit": "8404b343a4ffb3e272564c24ee7abbfbd79445bc",
-      "clean": true
-    },
-    {
-      "name": "warframe-public-export-plus-gen",
-      "url": "https://github.com/calamity-inc/warframe-public-export-plus-gen.git",
-      "directory": "git/warframe-public-export-plus-gen",
-      "branch": "senpai",
-      "commit": "2df14d28507c996e95d50bec4464ea5ec74f2e92",
-      "commitDate": "2026-09-29T18:27:57+02:00",
-      "remoteRef": "refs/remotes/origin/senpai",
-      "remoteCommit": "2df14d28507c996e95d50bec4464ea5ec74f2e92",
-      "clean": true
+      "commit": "513105d5c4e56d2a3238b7c7914e8ef4e87e829a",
+      "commitDate": null,
+      "checkedAt": "2026-10-24T06:41:36.831Z",
+      "exportMode": "snapshot-source-bytes"
     },
     {
       "name": "wf.browse.oracle",
-      "url": "https://github.com/calamity-inc/wf.browse.oracle.git",
+      "url": "https://github.com/calamity-inc/wf.browse.oracle",
       "directory": "git/wf.browse.oracle",
       "branch": "senpai",
       "commit": "afb0f4b1de6a30d3bcb05901979d830aad848223",
-      "commitDate": "2026-07-30T10:16:44+02:00",
-      "remoteRef": "refs/remotes/origin/senpai",
-      "remoteCommit": "afb0f4b1de6a30d3bcb05901979d830aad848223",
-      "clean": true
+      "commitDate": null,
+      "checkedAt": "2026-10-24T06:41:36.831Z",
+      "exportMode": "snapshot-source-bytes"
     },
     {
       "name": "browse.wf",
-      "url": "https://github.com/calamity-inc/browse.wf.git",
+      "url": "https://github.com/calamity-inc/browse.wf",
       "directory": "git/browse.wf",
       "branch": "senpai",
-      "commit": "d2ac3e2eff2f45583ef07b062d1317ca5e3c54b3",
-      "commitDate": "2026-09-29T17:05:20+02:00",
-      "remoteRef": "refs/remotes/origin/senpai",
-      "remoteCommit": "d2ac3e2eff2f45583ef07b062d1317ca5e3c54b3",
-      "clean": true
+      "commit": "119ea9635706ef4e6cf0fdd90b639f58bcee6e46",
+      "commitDate": null,
+      "checkedAt": "2026-10-24T06:41:36.831Z",
+      "exportMode": "snapshot-source-bytes"
+    },
+    {
+      "name": "warframe-public-export-plus-gen",
+      "url": "https://github.com/calamity-inc/warframe-public-export-plus-gen",
+      "directory": "git/warframe-public-export-plus-gen",
+      "branch": "senpai",
+      "commit": "278279498abc9f15a1eb5642f82aae55a4f80221",
+      "commitDate": null,
+      "checkedAt": "2026-10-24T06:41:36.831Z",
+      "exportMode": "snapshot-source-bytes"
     }
-  ]
+  ],
+  "droptables": {
+    "version": "c31c421954adbd46ec962d40f71d7e7360df3248bd43ce8885d89b7375ddd3d9",
+    "rawFile": "official-drop-tables/droptables.html.txt",
+    "parsedFile": "official-drop-tables/parsed.json",
+    "files": [
+      {
+        "path": "official-drop-tables/droptables.html.txt",
+        "size": 4484205,
+        "sha256": "c31c421954adbd46ec962d40f71d7e7360df3248bd43ce8885d89b7375ddd3d9",
+        "url": "https://warframe.com/droptables"
+      },
+      {
+        "path": "official-drop-tables/parsed.json",
+        "size": 7928379,
+        "sha256": "951699555599b598789c5061c11ec4d04a342f01b30b038239b25403169dfbb5",
+        "url": "https://warframe.com/droptables"
+      }
+    ]
+  },
+  "note": "官方原文及索引字节均已按 Store 哈希校验；WFCD 使用独立无图片快照清单，不重复克隆。"
 }

@@ -65,3 +65,15 @@ test('九重天未知任务类型不显示占位徽章，节点和纪元仍保�
  const at=Date.parse('2026-10-24T00:00:00Z'),raw={Time:at/1000,ActiveMissions:[],Sorties:[],SyndicateMissions:[],VoidStorms:[{_id:{$oid:'storm'},Activation:date(at-1000),Expiry:date(at+60000),Node:'CrewBattle',ActiveMissionTier:1}]},catalog=createWorldCatalog({plus:{ExportRegions:{CrewBattle:{name:'克姆地带',systemName:'地球比邻星域'}}}}),view=buildWorldView({raw,server:'de',kind:'sample'},catalog,{now:at}),storm=view.modules.find(m=>m.id==='fissures').entries[0];
  assert.ok(storm);assert.equal(storm.kind,'storm');assert.equal(storm.missionType,'');assert.equal(storm.subtitle,'');assert.equal(storm.title,'克姆地带 · 地球比邻星域');assert.equal(storm.planet,'地球比邻星域');
 });
+
+test('九重天裂缝按实例提供任务类型，同一节点的静态类型不能覆盖实例',()=>{
+ const at=Date.parse('2026-10-24T00:00:00Z'),base={Activation:date(at-1000),Expiry:date(at+60000),Node:'CrewBattle',ActiveMissionTier:1},catalog=createWorldCatalog({plus:{ExportRegions:{CrewBattle:{name:'节点',systemName:'地球比邻星域',missionType:'MT_DEFENSE'}},ExportMissionTypes:{MT_DEFENSE:{name:'防御'},MT_EXTERMINATION:{name:'歼灭'},MT_SURVIVAL:{name:'生存'}}}});
+ const view=buildWorldView({raw:{Time:at/1000,VoidStorms:[{...base,_id:'a',MissionType:'MT_EXTERMINATION'},{...base,_id:'b',MissionType:'MT_SURVIVAL'},{...base,_id:'c'}]},server:'de',kind:'sample'},catalog,{now:at});
+ const rows=view.modules.find(m=>m.id==='fissures').entries;assert.deepEqual(rows.map(r=>r.missionType),['歼灭','生存','']);assert.deepEqual(rows.map(r=>r.missionBasis),['instance','instance','unavailable']);
+});
+
+
+test('arbitration statistics distinguish unknown, partial and fully rated days',()=>{
+ const count=quality=>worldStatistics([{id:'arbitration',quality}]).flatMap(g=>g.metrics).find(m=>m.id==='arbitration').value;
+ assert.equal(count({covered:true,unknown:24,high:0}),'—');assert.equal(count({covered:true,unknown:1,high:2}),'2+');assert.equal(count({covered:true,unknown:0,high:2}),2);assert.equal(count({covered:true,unknown:0,high:0}),0);assert.equal(count({covered:false,unknown:0,high:0}),'—');
+});

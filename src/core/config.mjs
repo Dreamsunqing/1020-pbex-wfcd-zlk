@@ -18,7 +18,7 @@ export async function loadConfig(file = new URL('../../config/default.json', imp
     ids.add(source.id);
     safeRelative(source.localPath);
     if (typeof source.enabled !== 'boolean') throw new Error('来源 enabled 必须是布尔值');
-    if (!['official', 'github'].includes(source.kind)) throw new Error('未知来源类型');
+    if (!['official', 'github', 'droptables'].includes(source.kind)) throw new Error('未知来源类型');
     if (source.kind === 'github' && (!/^[\w.-]+\/[\w.-]+$/.test(source.repository) || typeof source.branch !== 'string' || !source.branch)) throw new Error('GitHub 来源配置无效');
   }
   if (config.notifications?.email?.enabled) throw new Error('第一版尚未实现邮件通知，请保持 enabled=false');

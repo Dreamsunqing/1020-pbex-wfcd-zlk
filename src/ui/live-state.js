@@ -1,3 +1,4 @@
+import {renderArbitrationCalendar} from './arbitration-calendar.js';
 import {syndicateTasks,worldStatistics} from '../core/live-state/presentation.mjs';
 import { renderGameText } from './game-text.js';
 import { decorateImages } from './images.js';
@@ -10,9 +11,11 @@ const button=(text,cl,fn)=>{const n=el('button',cl,text);n.type='button';n.oncli
 const when=time=>time?new Date(time).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}):'';
 function countdown(start,end){const now=Date.now();let left=(Date.parse(start)>now?Date.parse(start):Date.parse(end))-now;if(!Number.isFinite(left))return '';const prefix=Date.parse(start)>now?'还有 ':'';if(left<=0)return '已结束';const m=Math.floor(left/60000),h=Math.floor(m/60),d=Math.floor(h/24);return prefix+(d?`${d}天 ${h%24}时`:h?`${h}时 ${m%60}分`:`${m}分`)+(prefix?'开始':'后结束');}
 function nestedCount(row){return (row.rewards?.length??0)+(row.items?.length??0)+(row.terms?.length??0)+(row.steps?.reduce((sum,s)=>sum+(s.terms?.length??0),0)??0);}
-export function createLiveStateUI({api,guarded,notify,openLibrary}){
+export function createLiveStateUI({api,guarded,notify,openLibrary,openWM}){
  const $=id=>document.getElementById(id),state={server:'de',group:'quick',query:'',data:null,detail:null,offset:0,filters:{},sequence:0,busy:false,loaded:false,scroll:0,auto:false},cache=new Map();
  let timer=null,rewardDialog=null,bountyDetail=null,newsPage=0;
+ const localDay=()=>new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);
+ let arbDate=localDay(),arbMonth=arbDate.slice(0,7),arbCalendar=null,arbToday=null,arbSeq=0;
  const facets={},derivedModules=new Map();let ranks={};try{ranks=JSON.parse(localStorage.getItem('ws-syndicate-ranks')||'{}');if(!ranks||typeof ranks!=='object'||Array.isArray(ranks))ranks={};}catch{}
  const stateGridObserver=new ResizeObserver(entries=>{
    for(const {target,contentRect} of entries){
@@ -28,7 +31,7 @@ export function createLiveStateUI({api,guarded,notify,openLibrary}){
  function libraryLink(row,card,product=false){if(!row.libraryId||!openLibrary)return;card.dataset.libraryId=row.libraryId;
   const open=()=>guarded(async()=>{await openLibrary(row.libraryId,row.libraryVersion);if(rewardDialog?.open)rewardDialog.close();});
   if(product){const link=button('资料库 →','ws-library-link',event=>open());link.setAttribute('aria-label','在资料库查看 '+(row.name??row.title));card.append(link);}
-  else{card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','在资料库查看 '+(row.name??row.title));card.onclick=open;card.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}};card.title='查看资料库 →';}
+  else{card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','在资料库查看 '+(row.name??row.title));card.onclick=open;card.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}};card.title='查看资料库 →';}if(row.tradable===true&&openWM){const market=button('WM搜索','ws-wm-link',event=>{event.stopPropagation();guarded(async()=>{if(rewardDialog?.open)rewardDialog.close();await openWM({...row,id:row.libraryId});});});market.onkeydown=e=>e.stopPropagation();card.append(market);}
  }
  function timeBadge(row){const n=el('span','ws-time');n.dataset.start=row.startsAt??'';n.dataset.end=row.endsAt??'';n.title=[when(row.startsAt),when(row.endsAt)].filter(Boolean).join(' — ');const content=countdown(row.startsAt,row.endsAt);n.hidden=!content;n.append(icon('clock'),document.createTextNode(content));return n;}
  function chips(values){const n=el('div','ws-chips');for(const value of values??[])if(value)n.append(el('span','ws-chip',value));return n;}
@@ -43,7 +46,7 @@ export function createLiveStateUI({api,guarded,notify,openLibrary}){
  function renderEntry(row,module,images,full=false){
    const card=el('article','ws-entry');image(row,card,images);card.dataset.moduleEntry=module.id;
    const head=el('div','ws-entry-head');head.append(el('h3','ws-entry-title',row.title));if(row.endsAt||row.startsAt)head.append(timeBadge(row));card.append(head);
-   if(row.subtitle)card.append(el('p','ws-entry-subtitle',row.subtitle));
+   if(row.subtitle)card.append(el('p',module.id==='arbitration'?'ws-arb-mission':'ws-entry-subtitle',row.subtitle));if(module.id==='arbitration'){card.append(el('p','ws-arb-time',[row.startsAt,row.endsAt].map(value=>new Date(value).toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit',hour12:false})).join(' – ')));const quality=el('div','ws-arb-quality');quality.dataset.quality=row.quality??'unknown';quality.append(el('span','ws-chip',row.quality==='high'?'高质量':row.quality==='normal'?'普通':'待评级'));quality.append(el('small','',Number.isFinite(row.yieldPerHour)?row.yieldPerHour+' '+(row.unit??'')+'/时':'收益数据待接入'));card.append(quality);}
    if(row.chips?.length)card.append(chips(row.chips));
    if(row.description)card.append(el('p','ws-description',row.description));
    if(row.steps?.length){const steps=el('ol','ws-steps');for(const [index,step] of row.steps.entries()){
@@ -267,7 +270,8 @@ export function createLiveStateUI({api,guarded,notify,openLibrary}){
    const all=filteredEntries(module);head.append(el('span','ws-count',all.length+(module.id==='descents'?' 层':' 项')));container.append(head);
    if(module.filters)container.append(renderFilters(module));
    if(module.note)container.append(el('p','ws-module-note',module.note));
-   const body=el('div','ws-detail-grid');if(['alerts','invasions'].includes(module.id))body.classList.add('ws-detail-missions');renderCards(body,module.noPagination?all:all.slice(state.offset,state.offset+24),module,images,true);if(!all.length&&module.id!=='invigorations'&&!module.note?.startsWith('读取'))body.append(el('p','ws-empty',module.empty??'当前快照暂无内容'));container.append(body);
+   if(module.id==='arbitration'&&arbCalendar&&state.server==='de')container.append(renderArbitrationCalendar({data:arbCalendar,date:arbDate,onDate:date=>{arbDate=date;updateArbitration();render();},onMonth:month=>guarded(()=>loadArbitration(month))}));
+   const body=el('div','ws-detail-grid');if(module.id==='arbitration')body.classList.add('ws-arbitration-list');if(['alerts','invasions'].includes(module.id))body.classList.add('ws-detail-missions');renderCards(body,module.noPagination?all:all.slice(state.offset,state.offset+24),module,images,true);if(!all.length&&module.id!=='invigorations'&&!module.note?.startsWith('读取'))body.append(el('p','ws-empty',module.empty??'当前快照暂无内容'));container.append(body);
    if(all.length>24&&!module.noPagination){const pager=el('div','ws-pagination');const previous=button('上一页','',()=>{state.offset-=24;render();page().scrollTop=0;});previous.disabled=state.offset===0;const next=button('下一页','',()=>{state.offset+=24;render();page().scrollTop=0;});next.disabled=state.offset+24>=all.length;pager.append(previous,el('span','',`${state.offset+1}–${Math.min(all.length,state.offset+24)} / ${all.length}`),next);container.append(pager);}
    return container;
  }
@@ -311,9 +315,10 @@ export function createLiveStateUI({api,guarded,notify,openLibrary}){
    }return box;
  }
  async function openQuick(id,title){
-   const existing=state.data.modules.find(m=>m.id===id);if(existing){openDetail(existing);return;}
+   const existing=state.data.modules.find(m=>m.id===id);if(existing){openDetail(existing);if(id==='arbitration'&&!arbCalendar)await loadArbitration();return;}
    const at=Date.parse(state.data.at),server=state.server,sequence=state.sequence;
    const module={id,title,group:'quick',layout:'tiles',noPagination:true,entries:[],note:''};
+   if(id==='arbitration'){if(server!=='de')module.note='此推算来源仅验证国际服，国服暂不套用国际服排期。';derivedModules.set(id,module);openDetail(module);await loadArbitration();return;}
    if(id==='invigorations'){module.note='账号相关条件推算；复用推算实验室，不会查询账号。';derivedModules.set(id,module);openDetail(module);return;}
    if(!['arbitration','incursions','teshin'].includes(id)){module.note='当前快照暂无内容。';derivedModules.set(id,module);openDetail(module);return;}
    module.note='读取推算实验室规则…';derivedModules.set(id,module);openDetail(module);
@@ -321,7 +326,7 @@ export function createLiveStateUI({api,guarded,notify,openLibrary}){
      if(server!=='de')throw new Error('此推算来源仅验证国际服，国服暂不套用国际服排期。');
      const method={arbitration:'arbitration',incursions:'browseIncursions',teshin:'browseWeekly'}[id],result=await api.call(method,{at,count:id==='arbitration'?24:id==='incursions'?7:8});
      module.note=(state.data.stale?'按快照时间查询 · ':'')+(result.warnings??[]).join('；');
-     if(id==='arbitration')module.entries=result.entries.map(r=>({title:[r.name,r.system].filter(Boolean).join(' · '),subtitle:r.missionName??r.missionType,startsAt:r.startsAt,endsAt:r.endsAt}));
+     if(id==='arbitration'){await loadArbitration(arbMonth);return;}
      if(id==='incursions')module.entries=result.entries.map(r=>({title:new Date(r.startsAt).toLocaleDateString('zh-CN')+' · '+r.nodes.length+' 个任务',startsAt:r.startsAt,endsAt:r.endsAt,steps:r.nodes.map(n=>({title:[n.name,n.system].filter(Boolean).join(' · '),subtitle:n.missionName,description:n.minLevel!==null?'等级 '+n.minLevel+'–'+n.maxLevel:''}))}));
      if(id==='teshin')module.entries=result.entries.map(r=>({title:r.teshin.label,subtitle:'Teshin 周商品 · 规则推算',startsAt:r.startsAt,endsAt:r.endsAt}));
    }catch(error){module.note=error.message;}
@@ -347,16 +352,21 @@ export function createLiveStateUI({api,guarded,notify,openLibrary}){
  function updateTimes(){if(state.data?.kind==='network'&&!state.data.stale&&Math.abs(Date.now()-Date.parse(state.data.sourceTime))>=600000){state.data.stale=true;$('ws-status').textContent='缓存快照';$('ws-status').classList.remove('is-live');$('ws-status').classList.add('is-stale');$('ws-banner').hidden=false;$('ws-banner').textContent='快照已过期，刷新获取最新状态。';}for(const n of $('ws-content').querySelectorAll('.ws-time')){const content=countdown(n.dataset.start,n.dataset.end);n.lastChild.textContent=content;n.hidden=!content;n.classList.toggle('ended',content==='已结束');}}
  async function load(refresh=false,silent=false){
    const sequence=++state.sequence,server=state.server;state.busy=true;$('ws-refresh').disabled=true;$('ws-refresh').classList.toggle('loading',true);$('ws-content').setAttribute('aria-busy','true');
-   try{const data=await api.call('liveState',{server,refresh});cache.set(server,data);if(sequence!==state.sequence)return;state.data=data;derivedModules.clear();invigResult=null;state.loaded=true;render();if(refresh&&!silent)notify(data.refreshError?'刷新失败，保留已有快照':'世界状态已更新',Boolean(data.refreshError));}
+   try{const data=await api.call('liveState',{server,refresh});cache.set(server,data);if(sequence!==state.sequence)return;state.data=data;derivedModules.clear();invigResult=null;state.loaded=true;render();void loadArbitration();if(refresh&&!silent)notify(data.refreshError?'刷新失败，保留已有快照':'世界状态已更新',Boolean(data.refreshError));}
    catch(error){if(sequence!==state.sequence)return;if(!state.data)$('ws-content').replaceChildren(el('p','ws-empty',error.message));throw error;}
    finally{if(sequence===state.sequence){state.busy=false;$('ws-refresh').disabled=false;$('ws-refresh').classList.remove('loading');$('ws-content').setAttribute('aria-busy','false');}}
  }
+ function updateArbitration(){if(!arbCalendar||!state.data)return;const day=arbCalendar.days.find(d=>d.date===arbDate),today=arbCalendar.days.find(d=>d.date===localDay())??arbToday;if(today)arbToday=today;
+  const module={id:'arbitration',title:'仲裁',group:'missions',layout:'arbitration',wide:true,noPagination:true,preview:3,entries:(day?.tasks??[]).map(r=>({...r,subtitle:r.missionName??r.missionType})),quality:today?{...today,tasks:undefined}:null,note:arbDate+' · 本地时区排期；收益评级独立维护'};
+  state.data.modules=state.data.modules.filter(m=>m.id!=='arbitration');state.data.modules.push(module);derivedModules.set('arbitration',module);
+ }
+ async function loadArbitration(month=arbMonth){if(state.server!=='de')return;const seq=++arbSeq,server=state.server;try{const data=await api.call('arbitrationCalendar',{month,offsetMinutes:-new Date().getTimezoneOffset()});if(seq!==arbSeq||server!==state.server)return;arbMonth=month;arbCalendar=data;if(!arbDate.startsWith(month))arbDate=month+'-01';updateArbitration();render();}catch(error){if(state.detail==='arbitration')notify(error.message,true);}}
  async function enter(){if(!state.loaded)await load();}
- function reset(){derivedModules.clear();invigPool=null;invigResult=null;invigForm.observed=[];state.loaded=false;cache.clear();state.sequence++;state.data=null;state.detail=null;state.busy=false;$('ws-refresh').disabled=false;$('ws-refresh').classList.remove('loading');if(page().classList.contains('active'))guarded(()=>load());}
+ function reset(){arbSeq++;arbCalendar=null;derivedModules.clear();invigPool=null;invigResult=null;invigForm.observed=[];state.loaded=false;cache.clear();state.sequence++;state.data=null;state.detail=null;state.busy=false;$('ws-refresh').disabled=false;$('ws-refresh').classList.remove('loading');if(page().classList.contains('active'))guarded(()=>load());}
  $('ws-refresh').append(icon('refresh'),document.createTextNode('刷新世界状态'));$('ws-refresh').onclick=()=>guarded(()=>load(true));
  for(const n of document.querySelectorAll('[data-ws-server]'))n.onclick=()=>guarded(async()=>{if(state.server===n.dataset.wsServer)return;state.sequence++;derivedModules.clear();invigResult=null;state.server=n.dataset.wsServer;state.detail=null;state.offset=0;state.data=cache.get(state.server)??null;for(const b of document.querySelectorAll('[data-ws-server]')){b.classList.toggle('selected',b.dataset.wsServer===state.server);b.setAttribute('aria-pressed',String(b.dataset.wsServer===state.server));}if(state.data)render();else {$('ws-server-label').textContent=state.server==='de'?'国际服 · DE':'国服 · WG';$('ws-status').textContent='读取中';$('ws-timestamp').textContent='';$('ws-date').textContent='';$('ws-banner').hidden=true;$('ws-content').replaceChildren(el('p','ws-empty','正在读取状态…'));}await load();});
  let searchTimer; $('ws-search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{state.query=$('ws-search').value.trim();state.offset=0;render();},150);};
- $('ws-import').onclick=()=>guarded(async()=>{if(state.busy)return;const sequence=++state.sequence,server=state.server;const data=await api.importLiveState(server);if(data&&sequence===state.sequence){cache.set(server,data);state.data=data;derivedModules.clear();state.detail=null;render();notify('已导入'+(server==='de'?'国际服':'国服')+'快照');}});
+ $('ws-import').onclick=()=>guarded(async()=>{if(state.busy)return;const sequence=++state.sequence,server=state.server;const data=await api.importLiveState(server);if(data&&sequence===state.sequence){cache.set(server,data);state.data=data;derivedModules.clear();state.detail=null;render();void loadArbitration();notify('已导入'+(server==='de'?'国际服':'国服')+'快照');}});
  $('ws-auto').onchange=()=>{state.auto=$('ws-auto').checked;clearInterval(timer);if(state.auto)timer=setInterval(()=>{if(page().classList.contains('active')&&!state.busy)guarded(()=>load(true,true));},60000);};
  const clock=setInterval(()=>{if(page().classList.contains('active'))updateTimes();},30000);window.addEventListener('beforeunload',()=>{clearInterval(clock);clearInterval(newsTimer);clearInterval(timer);stateGridObserver.disconnect();});
  return{state,enter,load,reset,render};

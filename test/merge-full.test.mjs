@@ -87,7 +87,7 @@ test('快照及对象只保留当前和上一版，包轮换只保留当前和�
 });
 test('真实全量静态资料覆盖全部规则、全部奖励及可回查源字段', { timeout: 180000 }, async () => {
   const library = await scanLibrary('.'); const data = await buildMerged({ files: library.files, read: id => readLibraryFile(library.root, id), contract: FULL_CONTRACT });
-  assert.equal(data.manifest.summary.entities, 32941); assert.equal(data.manifest.summary.recipes, 2024); assert.equal(data.manifest.summary.rewardTables, 1102); assert.equal(data.manifest.summary.rewardItems, 11509);
+  assert.equal(data.manifest.summary.entities, 32946); assert.equal(data.manifest.summary.recipes, 2024); assert.equal(data.manifest.summary.rewardTables, 1103); assert.equal(data.manifest.summary.rewardItems, 11519);
   const coverage = data.output['reports/coverage.json']; assert.equal(coverage.kinds.arcane, 177); assert.equal(coverage.modSetLinks.sets,19); assert.equal(coverage.modSetLinks.members,72); assert.equal(coverage.modSetLinks.unmatched.length,0); assert.equal(coverage.incarnonLinks.adapters,45); assert.equal(coverage.incarnonLinks.weapons,89); assert.equal(coverage.incarnonLinks.unmatched.length,0); assert.equal(coverage.files.length, library.files.length);
   assert.ok(!data.output['reports/issues.json'].some(i => i.code === 'optional-input-missing'));
   const names = mergedList(data, { query: '迅发电浆炮' }); assert.ok(names.rows.length > 0);

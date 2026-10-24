@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {gzipSync} from 'node:zlib';
+import {Store} from '../src/core/store.mjs';
+import {sha256} from '../src/core/io.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),store=new Store(path.join(root,'.workbench')),release=await store.current(),source=release?.sources.droptables;
+if(!source)throw Error('请先刷新官方掉落表');
+const raw=await store.bytes(source.files['parsed.json']),snapshot=JSON.parse(raw);
+if(snapshot.schemaVersion!==1||snapshot.hash!==source.version||!snapshot.groups?.length)throw Error('快照结构或原文哈希不符');
+const bytes=gzipSync(raw,{level:9}),out=path.join(root,'src/data/drop-tables');await fs.mkdir(out,{recursive:true});await fs.writeFile(path.join(out,'snapshot.json.gz'),bytes);
+const manifest={schemaVersion:1,hash:snapshot.hash,fetchedAt:snapshot.fetchedAt,url:snapshot.url,groups:snapshot.groups.length,rowCount:snapshot.rowCount,bytes:bytes.length,sha256:sha256(bytes)};
+await fs.writeFile(path.join(out,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');console.log(JSON.stringify(manifest));

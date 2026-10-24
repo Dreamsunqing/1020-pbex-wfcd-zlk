@@ -1,8 +1,5 @@
--- Before running this script, ensure datafiles & materials in extras have been extracted, and verify the following checkout directories:
-$define PE_BASE = "../warframe-public-export" -- https://github.com/calamity-inc/warframe-public-export
-$define OUTPUT_BASE = "../warframe-public-export-plus/"
-$define LANGUAGES_BASE = "../warframe-languages-bin-data/" -- https://github.com/calamity-inc/warframe-languages-bin-data
-$define PACKAGES_BIN_BASE = [[F:\warframe-packages-bin-data]] -- https://github.com/calamity-inc/warframe-packages-bin-data
+-- Before running this script, ensure datafiles & materials in extras have been extracted, and verify the checkout directories in deps.pluto.
+$include "deps.pluto"
 
 $define MSGPACK = false
 
@@ -35,6 +32,7 @@ local function path_get_parent(path)
 	return parts:concat("/")
 end
 
+local resolve_cache = {}
 local function obj_resolve_path(path, rel)
 	if #rel == 0 then
 		return nil
@@ -42,14 +40,25 @@ local function obj_resolve_path(path, rel)
 	if rel[1] == '/' then
 		return rel
 	end
+	-- The result only depends on the directory of 'path', so cache by that to avoid repeated filesystem checks.
+	local key = path:match("^(.*)/") .. "|" .. rel
+	local cached = resolve_cache[key]
+	if cached ~= nil then
+		return cached or nil
+	end
+	local result
 	local base = path
 	repeat
 		base = path_get_parent(base)
 		if #base == 0 then
-			return nil
+			break
 		end
-	until io.exists(PACKAGES_BIN_BASE .. base .. "/" .. rel .. ".json")
-	return base .. "/" .. rel
+		if io.exists(PACKAGES_BIN_BASE .. base .. "/" .. rel .. ".json") then
+			result = base .. "/" .. rel
+		end
+	until result
+	resolve_cache[key] = result or false
+	return result
 end
 
 local obj_has_parent
@@ -519,36 +528,36 @@ for LANGS as lang do
 			end
 		end
 	end
-	for {
-		"/Lotus/Upgrades/Skins/Horse/HorseHelmetDrapery",
-		"/Lotus/Upgrades/Skins/Horse/HorseSaddleDrapery",
-		"/Lotus/Upgrades/Skins/Horse/HorseTailDrapery",
-	} as uniqueName do
-		local name = obj_find_property(uniqueName, "LocalizeTag")
-		local description = obj_find_property(uniqueName, "LocalizeDescTag")
-		import_from_languages_bin(name)
-		import_from_languages_bin(description)
-		ExportCustoms.ExportCustoms:insert({
-			__order = { "name", "codexSecret", "description", "icon", "productCategory", "tradable" },
-			uniqueName = uniqueName,
-			name = name,
-			codexSecret = false,
-			description = description,
-			icon = obj_find_property(uniqueName, "Icon"),
-			productCategory = "WeaponSkins",
-			tradable = (obj_find_property(uniqueName, "TradeCapability") == "RO_ALWAYS"),
-		})
-	end
-	for ExportCustoms.ExportCustoms as item do
-		item.__order:insert("platinumCost")
-		item.platinumCost = obj_find_property(item.uniqueName, "PremiumPrice")
-
-		if obj_find_property(to_storeitem(item.uniqueName), "ShowInMarket") == 0 then
-			item.__order:insert("excludeFromMarket")
-			item.excludeFromMarket = true
-		end
-	end
 	if lang == "en" then
+		for {
+			"/Lotus/Upgrades/Skins/Horse/HorseHelmetDrapery",
+			"/Lotus/Upgrades/Skins/Horse/HorseSaddleDrapery",
+			"/Lotus/Upgrades/Skins/Horse/HorseTailDrapery",
+		} as uniqueName do
+			local name = obj_find_property(uniqueName, "LocalizeTag")
+			local description = obj_find_property(uniqueName, "LocalizeDescTag")
+			import_from_languages_bin(name)
+			import_from_languages_bin(description)
+			ExportCustoms.ExportCustoms:insert({
+				__order = { "name", "codexSecret", "description", "icon", "productCategory", "tradable" },
+				uniqueName = uniqueName,
+				name = name,
+				codexSecret = false,
+				description = description,
+				icon = obj_find_property(uniqueName, "Icon"),
+				productCategory = "WeaponSkins",
+				tradable = (obj_find_property(uniqueName, "TradeCapability") == "RO_ALWAYS"),
+			})
+		end
+		for ExportCustoms.ExportCustoms as item do
+			item.__order:insert("platinumCost")
+			item.platinumCost = obj_find_property(item.uniqueName, "PremiumPrice")
+
+			if obj_find_property(to_storeitem(item.uniqueName), "ShowInMarket") == 0 then
+				item.__order:insert("excludeFromMarket")
+				item.excludeFromMarket = true
+			end
+		end
 		write_mapped_data_file("ExportCustoms.json", ExportCustoms.ExportCustoms)
 	end
 end
@@ -607,41 +616,43 @@ do
 				store_tag(lang, item, "description", obj_find_property(item.uniqueName, "LocalizeDescTag"))
 			end
 
-			item.__order:insert(4, "icon")
-			item.icon = obj_find_property(item.uniqueName, "Icon")
+			if lang == "en" then
+				item.__order:insert(4, "icon")
+				item.icon = obj_find_property(item.uniqueName, "Icon")
 
-			item.__order:insert(5, "base")
-			item.base = obj_find_base(item.uniqueName)
+				item.__order:insert(5, "base")
+				item.base = obj_find_base(item.uniqueName)
 
-			item.__order:insert("alwaysAvailable")
-			item.alwaysAvailable = (obj_find_property(item.uniqueName, "AlwaysAvailable") == 1) ? true : nil
+				item.__order:insert("alwaysAvailable")
+				item.alwaysAvailable = (obj_find_property(item.uniqueName, "AlwaysAvailable") == 1) ? true : nil
 
-			item.__order:insert("platinumCost")
-			item.platinumCost = obj_find_property(item.uniqueName, "PremiumPrice")
+				item.__order:insert("platinumCost")
+				item.platinumCost = obj_find_property(item.uniqueName, "PremiumPrice")
 
-			if obj_find_property(to_storeitem(item.uniqueName), "ShowInMarket") == 0 then
-				item.__order:insert("excludeFromMarket")
-				item.excludeFromMarket = true
-			end
+				if obj_find_property(to_storeitem(item.uniqueName), "ShowInMarket") == 0 then
+					item.__order:insert("excludeFromMarket")
+					item.excludeFromMarket = true
+				end
 
-			if item.hexColours and lang == "en" then
-				local name_en = dicts.en[item.name]
-				if palette := palettes:find(|x| -> x.options and x.options.legacy and x.name == name_en) then
-					item.__order:insert("legacyColours")
-					item.legacyColours = {}
-					for palette.colors as colour do
-						local r = (colour >> 16) & 0xff
-						local g = (colour >> 8) & 0xff
-						local b = colour & 0xff
-						item.legacyColours:insert(format_colour(r, g, b))
+				if item.hexColours and lang == "en" then
+					local name_en = dicts.en[item.name]
+					if palette := palettes:find(|x| -> x.options and x.options.legacy and x.name == name_en) then
+						item.__order:insert("legacyColours")
+						item.legacyColours = {}
+						for palette.colors as colour do
+							local r = (colour >> 16) & 0xff
+							local g = (colour >> 8) & 0xff
+							local b = colour & 0xff
+							item.legacyColours:insert(format_colour(r, g, b))
+						end
 					end
 				end
-			end
 
-			if TitleTag := obj_find_property(item.uniqueName, "TitleTag") then
-				item.__order:insert("titleTag")
-				item.titleTag = TitleTag
-				import_from_languages_bin(TitleTag)
+				if TitleTag := obj_find_property(item.uniqueName, "TitleTag") then
+					item.__order:insert("titleTag")
+					item.titleTag = TitleTag
+					import_from_languages_bin(TitleTag)
+				end
 			end
 		end
 		if lang == "en" then
@@ -699,28 +710,30 @@ for LANGS as lang do
 			store_tag(lang, item, "description", obj_find_property(item.uniqueName, "LocalizeDescTag"))
 		end
 
-		item.__order:insert(4, "icon")
-		item.icon = obj_find_property(item.uniqueName, "Icon")
+		if lang == "en" then
+			item.__order:insert(4, "icon")
+			item.icon = obj_find_property(item.uniqueName, "Icon")
 
-		--item.__order:insert(7, "productCategory")
-		--item.productCategory = obj_find_property(to_storeitem(item.uniqueName), "ProductCategory")
+			--item.__order:insert(7, "productCategory")
+			--item.productCategory = obj_find_property(to_storeitem(item.uniqueName), "ProductCategory")
 
-		item.__order:insert("purchaseQuantity")
-		item.purchaseQuantity = obj_find_property(item.uniqueName, "PurchaseQuantity")
+			item.__order:insert("purchaseQuantity")
+			item.purchaseQuantity = obj_find_property(item.uniqueName, "PurchaseQuantity")
 
-		item.__order:insert("creditsCost")
-		item.creditsCost = obj_find_property(item.uniqueName, "RegularPrice")
+			item.__order:insert("creditsCost")
+			item.creditsCost = obj_find_property(item.uniqueName, "RegularPrice")
 
-		item.__order:insert("platinumCost")
-		item.platinumCost = obj_find_property(item.uniqueName, "PremiumPrice")
+			item.__order:insert("platinumCost")
+			item.platinumCost = obj_find_property(item.uniqueName, "PremiumPrice")
 
-		if obj_find_property(to_storeitem(item.uniqueName), "ShowInMarket") == 0 then
-			item.__order:insert("excludeFromMarket")
-			item.excludeFromMarket = true
-		end
+			if obj_find_property(to_storeitem(item.uniqueName), "ShowInMarket") == 0 then
+				item.__order:insert("excludeFromMarket")
+				item.excludeFromMarket = true
+			end
 
-		if name := dicts.en[item.name] then
-			name_to_storeitem_map[name:lower()] = to_storeitem(item.uniqueName)
+			if name := dicts.en[item.name] then
+				name_to_storeitem_map[name:lower()] = to_storeitem(item.uniqueName)
+			end
 		end
 	end
 	if lang == "en" then
@@ -936,7 +949,7 @@ for LANGS as lang do
 	end
 	if lang == "en" then
 		for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Types/Keys", true) as path do
-			if io.isfile(path) then
+			if path:endswith(".json") then
 				local uniqueName = path:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/")
 				if obj_has_parent(uniqueName, "/Lotus/Types/Game/KeyItem") and not ExportKeys[uniqueName] then
 					add_key(uniqueName)
@@ -1058,6 +1071,15 @@ local MissionData do
 	table.sort=function() end
 	MissionData = load("-- @pluto_warnings disable-all\n"..io.contents("extras/Missions.lua"))()
 	table.sort=_sort
+end
+local wiki_mission_by_name, wiki_mission_by_internal_name = {}, {}
+for ipairs(MissionData.MissionDetails) as mission do
+	if mission.Name then
+		wiki_mission_by_name[mission.Name] ??= mission
+	end
+	if mission.InternalName then
+		wiki_mission_by_internal_name[mission.InternalName] ??= mission
+	end
 end
 local DropTables = dofile("extras/DropTables.lua")
 do
@@ -1197,7 +1219,7 @@ do
 			local outgoing = {}
 			if mission.NextNodes then
 				for mission.NextNodes as nextNode do
-					if nextNodeData := MissionData.MissionDetails:find(|x| -> x.Name == nextNode) then
+					if nextNodeData := wiki_mission_by_name[nextNode] then
 						if nextNodeData.InternalName and nextNodeData.InternalName ~= "" then
 							outgoing:insert(nextNodeData.InternalName)
 						end
@@ -1263,7 +1285,7 @@ do
 
 				item.__order:insert("rewardManifests")
 				item.rewardManifests = {}
-				if wiki_data := MissionData.MissionDetails:find(|x| -> x.InternalName == item.uniqueName) then
+				if wiki_data := wiki_mission_by_internal_name[item.uniqueName] then
 					item.masteryExp = wiki_data.MasteryExp or 0
 
 					if type(wiki_data.Enemy) == "table" then
@@ -1354,6 +1376,15 @@ do
 
 			-- insert missing solnodes based on wiki data
 			-- nodeType, in order: NT_MISSION, NT_EVENT, NT_PVP, NT_HUB, NT_CLAN, NT_EMPTY, NT_SHORTCUT, NT_JUNCTION, NT_BONUS_MISSION
+			-- Regions are only ever appended below, so the index is lazily extended with new entries on each lookup.
+			local region_exists, num_indexed_regions = {}, 0
+			local function has_region(uniqueName)
+				while num_indexed_regions < #ExportRegions.ExportRegions do
+					++num_indexed_regions
+					region_exists[ExportRegions.ExportRegions[num_indexed_regions].uniqueName] = true
+				end
+				return region_exists[uniqueName]
+			end
 			for ipairs(MissionData.MissionDetails) as mission do
 				if mission.InternalName ~= ""
 					and mission.InternalName ~= "ToggleBootLevel"
@@ -1361,7 +1392,7 @@ do
 					and mission.InternalName ~= "GrendelKeyBMissionName"
 					and mission.InternalName ~= "GrendelKeyCMissionName"
 					and mission.InternalName ~= "/Lotus/Types/Keys/SyndicateCacheHuntBaseKeyItem"
-					and not ExportRegions.ExportRegions:find(|x| -> x.uniqueName == mission.InternalName)
+					and not has_region(mission.InternalName)
 				then
 					if mission.InternalName == "EventNode763" then
 						ExportRegions.ExportRegions:insert({
@@ -1666,7 +1697,10 @@ local function dofile_patched(path)
 	return assert(load(src, "@" .. path))()
 end
 
-local wikiVoid = dofile_patched("extras/wiki/Void.lua").RelicData:values()
+local wiki_relic_by_name = {}
+for dofile_patched("extras/wiki/Void.lua").RelicData:values() as relic do
+	wiki_relic_by_name[relic.Name] ??= relic
+end
 local wikiVersionData = dofile("extras/wiki/Version.lua")
 local ExportRewards = { __order = {} }
 do
@@ -1674,6 +1708,7 @@ do
 	for LANGS as lang do
 		local ExportRelicArcane = io.contents(PE_BASE .. "/ExportRelicArcane_" .. lang .. ".json") |> json.decode|json.withorder|
 		local ExportArcanes = {}
+		local arcane_exists = {}
 		local ExportRelics = {}
 		for ExportRelicArcane.ExportRelicArcane as item do
 			if item.relicRewards then
@@ -1720,7 +1755,7 @@ do
 						name_to_storeitem_map[$"{item.era} {item.category} (Radiant)":lower()] = to_storeitem(item.uniqueName) -- Wiki
 					end
 
-					if wiki_data := wikiVoid:find(|x| -> x.Name == $"{item.era} {item.category}") then
+					if wiki_data := wiki_relic_by_name[$"{item.era} {item.category}"] then
 						local version = (wikiVersionData.Versions[wiki_data.Introduced] or wikiVersionData.Aliases[wiki_data.Introduced])
 						item.__order:insert("introducedAt")
 						item.introducedAt = version.Timestamp
@@ -1755,12 +1790,13 @@ do
 						name_to_storeitem_map[dicts.en[item.name]:lower()] = to_storeitem(item.uniqueName)
 					end
 					ExportArcanes:insert(item)
+					arcane_exists[item.uniqueName] = true
 				end
 			end
 		end
 		if lang == "en" then
 			for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Upgrades/CosmeticEnhancers", true) as file do
-				if io.isfile(file) then
+				if file:endswith(".json") then
 					local path = file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/")
 					local obj = obj_from_path(path)
 					if obj.parent == "/Lotus/Types/Game/BaseAntiqueCosmeticEnhancer" then
@@ -1776,8 +1812,9 @@ do
 							fusionLimit = fusion_level_to_rank(obj_find_property(path, "FusionLimit") or "QA_MEDIUM"),
 							distillPointValue = obj_find_property(path, "BaseDistillPointValue"),
 						}
-						assert(not ExportArcanes:find(|x| -> x.uniqueName == path))
+						assert(not arcane_exists[path])
 						ExportArcanes:insert(arcane)
+						arcane_exists[path] = true
 						name_to_storeitem_map[dicts.en[LocalizeTag]:lower()] = to_storeitem(path)
 					end
 				end
@@ -1977,62 +2014,64 @@ for LANGS as lang do
 		store_tag(lang, item, "name", obj_find_property(item.uniqueName, "LocalizeTag"))
 		store_tag(lang, item, "description", obj_find_property(item.uniqueName, "LocalizeDescTag"))
 
-		item.__order:insert(3, "icon")
-		item.icon = obj_find_property(item.uniqueName, "Icon")
+		if lang == "en" then
+			item.__order:insert(3, "icon")
+			item.icon = obj_find_property(item.uniqueName, "Icon")
 
-		item.__order:insert("defaultWeapon")
-		item.defaultWeapon = obj_find_property(item.uniqueName, "DefaultWeapon")
+			item.__order:insert("defaultWeapon")
+			item.defaultWeapon = obj_find_property(item.uniqueName, "DefaultWeapon")
 
-		item.__order:insert("exalted")
-		item.exalted = obj_find_property(item.uniqueName, "AdditionalItems")--?:map(|x| -> obj_resolve_path(item.uniqueName, x))
+			item.__order:insert("exalted")
+			item.exalted = obj_find_property(item.uniqueName, "AdditionalItems")--?:map(|x| -> obj_resolve_path(item.uniqueName, x))
 
-		export_defaultUpgrades(item)
-	end
-	for {
-		"/Lotus/Types/Friendly/Pets/MoaPets/MoaPetPowerSuit",
-		"/Lotus/Types/Friendly/Pets/ZanukaPets/ZanukaPetAPowerSuit",
-		"/Lotus/Types/Friendly/Pets/ZanukaPets/ZanukaPetBPowerSuit",
-		"/Lotus/Types/Friendly/Pets/ZanukaPets/ZanukaPetCPowerSuit",
-	} as uniqueName do
-		local name = obj_find_property(uniqueName, "LocalizeTag")
-		local description = obj_find_property(uniqueName, "LocalizeDescTag")
-		import_from_languages_bin(name)
-		import_from_languages_bin(description)
-		local defaultWeapon = obj_find_property(uniqueName, "DefaultWeapon")
-		if defaultWeapon then
-			defaultWeapon	= obj_resolve_path(uniqueName, defaultWeapon)
-		end
-		local item = {
-			__order = { "name", "icon", "codexSecret", "description", "productCategory", "defaultWeapon", "exalted" },
-			uniqueName = uniqueName,
-			name = name,
-			icon = obj_find_property(uniqueName, "Icon"),
-			codexSecret = false,
-			description = description,
-			productCategory = "MoaPets",
-			defaultWeapon = defaultWeapon,
-			exalted = obj_find_property(uniqueName, "AdditionalItems"),
-		}
-		export_defaultUpgrades(item)
-		ExportSentinels:insert(item)
-	end
-	for ExportSentinels as item do
-		item.__order:insert("platinumCost")
-		item.platinumCost = obj_find_property(item.uniqueName, "PremiumPrice")
-
-		if obj_find_property(to_storeitem(item.uniqueName), "ShowInMarket") == 0 then
-			item.__order:insert("excludeFromMarket")
-			item.excludeFromMarket = true
+			export_defaultUpgrades(item)
 		end
 	end
 	if lang == "en" then
+		for {
+			"/Lotus/Types/Friendly/Pets/MoaPets/MoaPetPowerSuit",
+			"/Lotus/Types/Friendly/Pets/ZanukaPets/ZanukaPetAPowerSuit",
+			"/Lotus/Types/Friendly/Pets/ZanukaPets/ZanukaPetBPowerSuit",
+			"/Lotus/Types/Friendly/Pets/ZanukaPets/ZanukaPetCPowerSuit",
+		} as uniqueName do
+			local name = obj_find_property(uniqueName, "LocalizeTag")
+			local description = obj_find_property(uniqueName, "LocalizeDescTag")
+			import_from_languages_bin(name)
+			import_from_languages_bin(description)
+			local defaultWeapon = obj_find_property(uniqueName, "DefaultWeapon")
+			if defaultWeapon then
+				defaultWeapon	= obj_resolve_path(uniqueName, defaultWeapon)
+			end
+			local item = {
+				__order = { "name", "icon", "codexSecret", "description", "productCategory", "defaultWeapon", "exalted" },
+				uniqueName = uniqueName,
+				name = name,
+				icon = obj_find_property(uniqueName, "Icon"),
+				codexSecret = false,
+				description = description,
+				productCategory = "MoaPets",
+				defaultWeapon = defaultWeapon,
+				exalted = obj_find_property(uniqueName, "AdditionalItems"),
+			}
+			export_defaultUpgrades(item)
+			ExportSentinels:insert(item)
+		end
+		for ExportSentinels as item do
+			item.__order:insert("platinumCost")
+			item.platinumCost = obj_find_property(item.uniqueName, "PremiumPrice")
+
+			if obj_find_property(to_storeitem(item.uniqueName), "ShowInMarket") == 0 then
+				item.__order:insert("excludeFromMarket")
+				item.excludeFromMarket = true
+			end
+		end
 		write_mapped_data_file("ExportSentinels.json", ExportSentinels)
 	end
 end
 
 print "Processing ExportUpgrades..."
 do
-	local exclude_mods = io.contents("../warframe-build-evaluator/data-generator/exclude-mods.json") |> json.decode
+	local exclude_mods = io.contents(BUILD_EVALUATOR_BASE .. "data-generator/exclude-mods.json") |> json.decode
 	local wikiMods = dofile("extras/wiki/Mods.lua").Mods:values()
 	for LANGS as lang do
 		local ExportUpgrades = io.contents(PE_BASE .. "/ExportUpgrades_" .. lang .. ".json") |> json.decode|json.withorder|
@@ -2137,6 +2176,23 @@ do
 								sub.locTag = UpgradeEntries[i].Upgrades[j].Schema.LocTag
 								import_from_languages_bin(sub.locTag)
 							end
+						end
+					end
+					if MergeOptions := obj_find_property(upgrade.uniqueName, "MergeOptions") then
+						local mergeOptions = {}
+						for MergeOptions as option do
+							if option.ResultTag ~= "" then
+								mergeOptions:insert({
+									__order = { "resultTag", "primaryIngredient", "secondaryIngredient" },
+									resultTag = option.ResultTag,
+									primaryIngredient = option.PrimaryIngredient,
+									secondaryIngredient = option.SecondaryIngredient
+								})
+							end
+						end
+						if #mergeOptions ~= 0 then
+							upgrade.__order:insert(upgrade.__order:findindex(|x| -> x == "upgradeEntries") + 1, "mergeOptions")
+							upgrade.mergeOptions = mergeOptions
 						end
 					end
 				elseif not upgrade.isStarter and not upgrade.isFrivolous then
@@ -2438,7 +2494,19 @@ for LANGS as lang do
 	end
 end
 
-local wikiWarframes = dofile("extras/wiki/Warframes.lua")
+local function index_wiki_by_internal_name(categories)
+	local index = {}
+	for categories as category do
+		for category as entry do
+			if entry.InternalName then
+				index[entry.InternalName] ??= entry
+			end
+		end
+	end
+	return index
+end
+
+local wiki_warframe_by_internal_name = index_wiki_by_internal_name(dofile("extras/wiki/Warframes.lua"))
 
 print "Processing ExportWarframes..."
 local baseSuitToInnateDamageTag = {}
@@ -2607,13 +2675,10 @@ for LANGS as lang do
 				warframe.excludeFromMarket = true
 			end
 
-			for wikiWarframes as category do
-				if wiki_data := category:find(|x| -> x.InternalName == warframe.uniqueName) then
-					local version = (wikiVersionData.Versions[wiki_data.Introduced] or wikiVersionData.Aliases[wiki_data.Introduced])
-					warframe.__order:insert("introducedAt")
-					warframe.introducedAt = version.Timestamp
-					break
-				end
+			if wiki_data := wiki_warframe_by_internal_name[warframe.uniqueName] then
+				local version = (wikiVersionData.Versions[wiki_data.Introduced] or wikiVersionData.Aliases[wiki_data.Introduced])
+				warframe.__order:insert("introducedAt")
+				warframe.introducedAt = version.Timestamp
 			end
 		end
 	end
@@ -2624,17 +2689,17 @@ for LANGS as lang do
 	if lang == "en" then
 		local paths = {}
 		for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Types/Friendly/PlayerControllable/Abilities") as file do
-			if io.isfile(file) then
+			if file:endswith(".json") then
 				paths:insert(file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/"))
 			end
 		end
 		for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Powersuits/PowersuitAbilities") as file do
-			if io.isfile(file) then
+			if file:endswith(".json") then
 				paths:insert(file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/"))
 			end
 		end
 		for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Types/Vehicles/Motorcycle") as file do
-			if io.isfile(file) then
+			if file:endswith(".json") then
 				paths:insert(file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/"))
 			end
 		end
@@ -2666,11 +2731,11 @@ for LANGS as lang do
 	end
 end
 
-local wikiWeapons = {
-	primary = dofile("extras/wiki/Weapons/primary.lua"),
-	secondary = dofile("extras/wiki/Weapons/secondary.lua"),
-	melee = dofile("extras/wiki/Weapons/melee.lua"),
-}
+local wiki_weapon_by_internal_name = index_wiki_by_internal_name({
+	dofile("extras/wiki/Weapons/primary.lua"),
+	dofile("extras/wiki/Weapons/secondary.lua"),
+	dofile("extras/wiki/Weapons/melee.lua"),
+})
 
 print "Processing ExportWeapons..."
 local damageTypes = {
@@ -2927,13 +2992,10 @@ for LANGS as lang do
 					weapon.donationStandingBonus = DonationStandingBonus
 				end
 
-				for wikiWeapons as category do
-					if wiki_data := category:find(|x| -> x.InternalName == weapon.uniqueName) then
-						local version = (wikiVersionData.Versions[wiki_data.Introduced] or wikiVersionData.Aliases[wiki_data.Introduced])
-						weapon.__order:insert("introducedAt")
-						weapon.introducedAt = version.Timestamp
-						break
-					end
+				if wiki_data := wiki_weapon_by_internal_name[weapon.uniqueName] then
+					local version = (wikiVersionData.Versions[wiki_data.Introduced] or wikiVersionData.Aliases[wiki_data.Introduced])
+					weapon.__order:insert("introducedAt")
+					weapon.introducedAt = version.Timestamp
 				end
 
 				ExportWeapons_dedup.__order:insert(weapon.uniqueName)
@@ -2974,7 +3036,7 @@ for LANGS as lang do
 		write_data_file("ExportWeapons.json", ExportWeapons_dedup)
 
 		for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Weapons/CrewShip/Missiles", true) as file do
-			if io.isfile(file) then
+			if file:endswith(".json") then
 				local path = file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/")
 				if path ~= "/Lotus/Weapons/CrewShip/Missiles/GhostShipMissileLauncherWeapon"
 					and obj_has_parent(path, "/Lotus/Weapons/CrewShip/RailjackOrdnanceWeapon")
@@ -3030,7 +3092,7 @@ print "Creating ExportAnimals..."
 do
 	local ExportAnimals = { __order = {} }
 	for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Types/NeutralCreatures/Conservation", true) as file do
-		if io.isfile(file) then
+		if file:endswith(".json") then
 			local path = file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/")
 			local ItemReward = obj_find_property_2(path, "HuntingInfo", "ItemReward")
 			if ItemReward and ItemReward ~= "" then
@@ -3066,7 +3128,7 @@ print "Creating ExportBoosterPacks..."
 do
 	local ExportBoosterPacks = { __order = {} }
 	for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Types/BoosterPacks", true) as file do
-		if io.isfile(file) then
+		if file:endswith(".json") then
 			local path = file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/")
 			--local obj = obj_from_path(path)
 			if path ~= "/Lotus/Types/BoosterPacks/EntratiLabsArcanePackBase"
@@ -3122,7 +3184,7 @@ local booster_store_items = {}
 do
 	local ExportBoosters = { __order = {} }
 	for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Types/StoreItems/Boosters", true) as file do
-		if io.isfile(file) then
+		if file:endswith(".json") then
 			local path = file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/")
 			local obj = obj_from_path(path)
 			if obj.parent == "/Lotus/Types/Game/StoreItem" --[[and obj.data.ProductCategory == "Boosters"]]
@@ -3350,7 +3412,7 @@ do
 		end
 	end
 	for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Types/Challenges/Seasons", true) as file do
-		if io.isfile(file) then
+		if file:endswith(".json") then
 			local challenge = file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/")
 			if Standing := obj_find_property(challenge, "Standing") then
 				local name = challenge:split("/"):back()
@@ -3371,7 +3433,7 @@ do
 		end
 	end
 	for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Types/Challenges/Calendar1999", true) as file do
-		if io.isfile(file) then
+		if file:endswith(".json") then
 			local challenge = file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/")
 			if challenge:sub(-5) ~= "Base" then
 				if name := obj_find_property(challenge, "name") then
@@ -3419,7 +3481,7 @@ do
 		"/Lotus/Types/Challenges/Titles"
 	} as path do
 		for io.listdir(PACKAGES_BIN_BASE .. path) as file do
-			if io.isfile(file) then
+			if file:endswith(".json") then
 				local challenge = file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/")
 				if challenge:sub(-5) ~= "Base" then
 					paths:insert(challenge)
@@ -3661,12 +3723,12 @@ print "Creating ExportEmailItems..."
 do
 	local paths = {}
 	for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Types/Items/EmailItems", true) as file do
-		if io.isfile(file) then
+		if file:endswith(".json") then
 			paths:insert(file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/"))
 		end
 	end
 	for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Types/Keys", true) as file do
-		if io.isfile(file) then
+		if file:endswith(".json") then
 			paths:insert(file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/"))
 		end
 	end
@@ -3740,7 +3802,7 @@ local function computerify_drop(type, probability)
 		probability = probability
 	}
 end
-dofile("../pluto-query/query.pluto")
+dofile(PLUTO_QUERY_BASE .. "query.pluto")
 local html = (io.contents("extras/droptables.html"):gsub("</?tbody>", "")) |> xml.decode|"html"|
 do
 	local function prepare_deck(deck_name)
@@ -4179,6 +4241,7 @@ local function computerify_drop_from_wiki(reward)
 		probability = reward[3] / 100
 	}
 end
+DropTables.Missions.Razorback.InternalName ??= "/Supplementals/BossMissionRewards/RazorbackRewards"
 for DropTables.Missions as mission do
 	if not mission.InternalName then
 		continue
@@ -4212,7 +4275,7 @@ for DropTables.Missions as mission do
 		end
 		for mission.InternalName as InternalName do
 			if not ExportRewards[InternalName] then
-				if InternalName ~= "/Lotus/Types/Game/MissionDecks/EventMissionRewards/ScarletSpearRailjackRewards" and InternalName ~= "/Lotus/Types/Game/MissionDecks/EventMissionRewards/ScarletSpearCondrixRewards" then
+				if InternalName:sub(1, 15) ~= "/Supplementals/" and InternalName ~= "/Lotus/Types/Game/MissionDecks/EventMissionRewards/ScarletSpearRailjackRewards" and InternalName ~= "/Lotus/Types/Game/MissionDecks/EventMissionRewards/ScarletSpearCondrixRewards" then
 					validate_path(InternalName)
 				end
 				ExportRewards.__order:insert(InternalName)
@@ -4291,7 +4354,9 @@ do
 				if processed_enemy_names[enemy_name] then
 					enemy_name ..= " (duplicate)"
 				end
-				if not processed_enemy_names[enemy_name] then
+				if enemy_name == "void surplus" then
+					items = nil
+				elseif not processed_enemy_names[enemy_name] then
 					processed_enemy_names[enemy_name] = true
 					items = {}
 					drops_by_enemy_name[enemy_name] ??= {}
@@ -4523,9 +4588,18 @@ do
 		end
 	end
 	for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Types/Enemies", true) as file do
-		if io.isfile(file) then
+		if file:endswith(".json") then
 			local path = file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/")
-			local obj = obj_from_path(path)
+			local obj = obj_cache[path]
+			if not obj then
+				-- Most of the ~15k files here don't have AvatarTypes, so check the raw text before paying for json.decode.
+				local data = io.contents(file)
+				if not data:find('"AvatarTypes"', 1, true) then
+					continue
+				end
+				obj = data |> json.decode|json.withorder|
+				obj_cache[path] = obj
+			end
 			if obj.data?.AvatarTypes then
 				if obj_has_parent(path, "/EE/Types/Npc/NpcAgent") then
 					local avatarTypes = {
@@ -4691,7 +4765,7 @@ do
 	local ExportSyndicates = { __order = {} }
 	-- Note: These are also listed in LotusGameConfig
 	for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Syndicates", true) as file do
-		if io.isfile(file) then
+		if file:endswith(".json") then
 			local path = file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/")
 			local obj = obj_from_path(path)
 			if obj.parent == "/Lotus/Types/Game/Syndicate" then
@@ -4838,7 +4912,7 @@ end
 do
 	local ExportTilesets = { __order = {} }
 	for io.listdir(PACKAGES_BIN_BASE .. "/Lotus/Types/Game/RegionTilesets", true) as file do
-		if io.isfile(file) then
+		if file:endswith(".json") then
 			local path = file:sub(#PACKAGES_BIN_BASE + 1, -6):replace("\\", "/")
 			local obj = obj_from_path(path)
 			if obj.data.MissionPermutations then

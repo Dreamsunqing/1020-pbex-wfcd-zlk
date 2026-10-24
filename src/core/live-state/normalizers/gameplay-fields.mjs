@@ -109,8 +109,8 @@ function normalize(raw, options, field, schema, required = [], localized = true)
     const item = { id: idOf(entry._id) };
     if (field === "GlobalUpgrades") item.scopeKnown = !own(entry, "Nodes") || (Array.isArray(entry.Nodes) && entry.Nodes.every(v => typeof v === "string" && v.length > 0));
     for (const [key, [output, type]] of Object.entries(schema)) {
-      const value = read(entry, key, type === "node" || type === "faction" || type === "tier" ? "string" : type === "mission" ? "object" : type, path, warnings, required.includes(key));
-      item[output] = type === "node" || type === "faction" ? localizeStaticKey(value, type === "node" ? "nodes" : "factions", context, warnings) : type === "tier" ? localizeFissureModifier(value, context, warnings) : type === "mission" ? mission(value, context, `${path}.${key}`, warnings) : value;
+      const value = read(entry, key, type === "node" || type === "faction" || type === "missionType" || type === "tier" ? "string" : type === "mission" ? "object" : type, path, warnings, required.includes(key));
+      item[output] = type === "node" || type === "faction" || type === "missionType" ? localizeStaticKey(value, type === "node" ? "nodes" : type === "missionType" ? "missionTypes" : "factions", context, warnings) : type === "tier" ? localizeFissureModifier(value, context, warnings) : type === "mission" ? mission(value, context, `${path}.${key}`, warnings) : value;
       if (type === "reward" && value !== null) validateReward(value, `${path}.${key}`, warnings);
       if (field === "Alerts" && key === "MissionInfo" && value !== null) {
         for (const requiredKey of ["location", "missionType", "faction"]) read(value, requiredKey, "string", `${path}.${key}`, warnings, true);
@@ -198,5 +198,5 @@ export function normalizePersistentEnemies(raw, options = {}) {
 }
 
 export function normalizeVoidStorms(raw, options = {}) {
-  return normalize(raw, options, "VoidStorms", { ...dates, Node: ["node", "node"], ActiveMissionTier: ["tier", "tier"] }, ["Activation", "Expiry", "Node", "ActiveMissionTier"]);
+  return normalize(raw, options, "VoidStorms", { ...dates, MissionType:["missionType","missionType"], Node: ["node", "node"], ActiveMissionTier: ["tier", "tier"] }, ["Activation", "Expiry", "Node", "ActiveMissionTier"]);
 }

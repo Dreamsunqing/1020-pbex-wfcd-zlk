@@ -30,7 +30,7 @@ test('实际 JSON 多选：同维或、跨维且；计数不限制当前维度',
   selected.category = new Set(['weapons']);
   assert.ok(json.filter(file => matchesFacets(file, selected)).length < matches.length);
   selected.kind = new Set(['dictionary']); assert.equal(json.filter(file => matchesFacets(file, selected)).length, 0);
-  for (const values of Object.values(selected)) values.clear(); assert.equal(json.filter(file => matchesFacets(file, selected)).length, 403);
+  for (const values of Object.values(selected)) values.clear(); assert.equal(json.filter(file => matchesFacets(file, selected)).length, 404);
 });
 
 test('本地与历史快照按同一相对文件路径标记，不改写原快照', async () => {

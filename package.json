@@ -1,6 +1,6 @@
 {
   "name": "world-state-source-workbench",
-  "version": "0.16.9",
+  "version": "0.17.0",
   "description": "Warframe 上游资料工作台：独立来源预览、快照更新与推算",
   "private": true,
   "type": "module",
@@ -44,7 +44,10 @@
       "使用说明.md",
       "README.md",
       "文档/**/*.md",
-      "工具/README.md"
+      "工具/README.md",
+      "文档/图示/*.png",
+      "文档/图示/*.svg",
+      "文档/图示/*.json"
     ],
     "artifactName": "SourceWorkbench-${version}-${os}-${arch}.${ext}",
     "mac": {

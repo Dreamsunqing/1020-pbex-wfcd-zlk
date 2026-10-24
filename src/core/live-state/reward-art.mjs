@@ -14,6 +14,6 @@ export function enrichWorldRewardArt(view,data){const {byId,names}=index(data),t
  };
  for(const module of view.modules){visit(module.entries);if(module.id==='boosters')for(const row of module.entries){const item=byId.get(boosterIds[row.kind]);if(item)targets.push({row,item,link:false});}}
  const descriptors=imageDescriptors(data,[...new Map(targets.map(t=>[t.item.id,t.item])).values()]);
- for(const {row,item,link} of targets){for(const [key,value] of Object.entries(descriptors[item.id]??{}))if(key!=='id'&&value!==undefined&&value!==null)row[key]=value;row.imageId=item.id;if(link){row.libraryId=item.id;row.libraryVersion=data.manifest.datasetVersion;}if(typeof row.name==='string'&&!/\p{Script=Han}/u.test(row.name)&&item.name?.['zh-CN'])row.name=item.name['zh-CN'];}
+ for(const {row,item,link} of targets){for(const [key,value] of Object.entries(descriptors[item.id]??{}))if(key!=='id'&&value!==undefined&&value!==null)row[key]=value;row.imageId=item.id;if(link){row.libraryId=item.id;row.libraryVersion=data.manifest.datasetVersion;row.tradable=item.tradable;row.english=item.name?.en;}if(typeof row.name==='string'&&!/\p{Script=Han}/u.test(row.name)&&item.name?.['zh-CN'])row.name=item.name['zh-CN'];}
  return view;
 }

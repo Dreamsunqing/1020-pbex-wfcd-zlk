@@ -48,7 +48,7 @@ else app.whenReady().then(async () => {
   worker.on('exit', code => rejectPending(new Error(`后台进程已退出（${code}），请重启应用`)));
   const allowed = new Set(['init', 'refresh', 'page', 'detail', 'schema', 'raw', 'galleryList', 'galleryDetail', 'rulesGet', 'rulesValidate', 'rulesSave', 'rulesPrevious', 'playerLibraryStatus', 'playerLibraryList', 'playerLibraryDetail', 'mergeStatus', 'mergeBuild', 'mergeList', 'mergeDetail', 'mergeReport', 'update', 'import', 'history', 'snapshot', 'rollback', 'diff', 'oracleOptions', 'invigorations', 'arbitration', 'browseCycles', 'browseWeekly', 'browseIncursions', 'refreshWorldState', 'oracleCycle', 'oracleLocations', 'oracleInvasions', 'oracleWeekly', 'oracleStateStatus', 'refreshOracleState', 'autoUpdate', 'config', 'saveConfig']);
   allowed.add('documentsList'); allowed.add('documentsRead');
-  allowed.add('liveState');
+  allowed.add('liveState');allowed.add('dropTables');allowed.add('arbitrationCalendar');
   for (const method of ['wmSearch', 'wmOrders', 'wmStatistics', 'wmItemSet', 'wmRivenCatalog', 'wmAuctions']) allowed.add(method);
   function checkSender(event) { if (event.sender !== win?.webContents || event.senderFrame !== win.webContents.mainFrame) throw new Error('不允许的调用来源'); }
   ipcMain.handle('workbench:call', (event, method, args) => { checkSender(event); if (!allowed.has(method)) throw new Error('不允许的操作'); return invoke(method, args); });

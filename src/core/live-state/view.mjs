@@ -31,8 +31,8 @@ export function buildWorldView(snapshot,catalog,{now=Date.now()}={}) {
   add('cycles','世界周期','now',rows('cycles').map(row=>entry(row.regionName,row.stateName,{...windowOf(row),endsAt:row.expiry,startsAt:row.activation,tone:row.state,timeline:cycleTimeline(row,at),basis:row.sourceFields.join(' + '),derived:true,iconToken:{day:'SUN',night:'MOON',warm:'SUN',cold:'DT_FREEZE',fass:'DT_VIRAL',vome:'DT_RADIANT',corpus:'DT_ELECTRICITY',grineer:'DT_FIRE'}[row.state],next:row.nextStateName})),{layout:'cycles',preview:6});
   const fissureEntry=(row,storm=false)=>{
     const region=catalog.plus.ExportRegions?.[row.node?.key],planet=translate(region?.systemName)||text(row.node).split(/[·(（]/).at(-1)?.replace(/[)）]/g,'').trim()||'未知星球';
-    const resolvedType=storm?mission(region?.missionType):good(row.missionType),missionType=storm&&resolvedType==='名称待补充'?'':resolvedType;
-    return entry(good(row.node),missionType,{...windowOf(row),planet,missionType,era:good(storm?row.tier:row.modifier),tier:(storm?row.tier:row.modifier)?.tier,kind:storm?'storm':row.isHard?'hard':'normal',iconToken:storm?'RAILJACK':'VOID'});
+    const resolvedType=good(row.missionType),missionType=storm&&resolvedType==='名称待补充'?'':resolvedType;
+    return entry(good(row.node),missionType,{instanceId:row.id,missionBasis:row.missionType?.key&&!row.missionType.fallback?'instance':'unavailable',...windowOf(row),planet,missionType,era:good(storm?row.tier:row.modifier),tier:(storm?row.tier:row.modifier)?.tier,kind:storm?'storm':row.isHard?'hard':'normal',iconToken:storm?'RAILJACK':'VOID'});
   };
   const fissures=[...rows('fissures').filter(active).map(r=>fissureEntry(r)),...rows('voidStorms').filter(active).map(r=>fissureEntry(r,true))].sort((a,b)=>Date.parse(a.endsAt)-Date.parse(b.endsAt));
   add('fissures','虚空裂缝','missions',fissures,{layout:'fissures',wide:true,preview:3,noPagination:true,filters:[['all','全部'],['normal','始源'],['hard','钢铁'],['storm','九重天']]});

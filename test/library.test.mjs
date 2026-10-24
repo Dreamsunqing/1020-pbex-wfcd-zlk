@@ -20,9 +20,9 @@ test('路径转义、原有顺序、搜索与分页', () => {
   assert.equal(preview([1, 2, 3], { offset: 2, limit: 1 }).hasMore, false);
   assert.equal(preview(data).rows[0].key, '/Lotus/a~b');
 });
-test('实际资料包 403 份 JSON 全部可解析（含隐藏索引）', async () => {
+test('实际资料包 404 份 JSON 全部可解析（含隐藏索引）', async () => {
   const library = await scanLibrary('.'); const files = library.files.filter(f => f.format === 'json');
-  assert.equal(files.length, 403);
+  assert.equal(files.length, 404);
   assert.ok(files.some(x => x.id.endsWith('/data/cache/.images.json')));
   let jsonc = 0;
   for (const file of files) { const { bytes } = await readLibraryFile(library.root, file.id); if (parseDocument(bytes.toString('utf8'), file.id).format === 'jsonc') jsonc++; }

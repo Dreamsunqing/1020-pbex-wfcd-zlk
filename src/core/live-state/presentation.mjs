@@ -50,7 +50,7 @@ export function worldStatistics(modules=[]){
   const rows=id=>modules.find(m=>m.id===id)?.entries??[];
   const metric=(id,label,value,unit='项',filter)=>({id,label,value,unit,filter});
   return [
-    {label:'任务',metrics:[...[["normal","始源裂缝"],["hard","钢铁裂缝"],["storm","九重天"]].map(([kind,label])=>metric('fissures',label,rows('fissures').filter(r=>r.kind===kind).length,'个',kind)),metric('alerts','警报',rows('alerts').length),metric('invasions','入侵',rows('invasions').length),metric('bounties','赏金',rows('bounties').reduce((n,r)=>n+(r.items?.length??0),0))]},
+    {label:'任务',metrics:[...[["normal","始源裂缝"],["hard","钢铁裂缝"],["storm","九重天"]].map(([kind,label])=>metric('fissures',label,rows('fissures').filter(r=>r.kind===kind).length,'个',kind)),metric('alerts','警报',rows('alerts').length),metric('invasions','入侵',rows('invasions').length),metric('bounties','赏金',rows('bounties').reduce((n,r)=>n+(r.items?.length??0),0)),...(()=>{const q=modules.find(m=>m.id==='arbitration')?.quality;return q?[metric('arbitration','本日高质量仲裁',q.covered&&q.unknown===0?q.high:q.high?q.high+'+':'—','场')]:[];})()]},
     {label:'周常',metrics:[metric('nightwave','电波挑战',rows('nightwave').length),metric('conquests','科研任务',rows('conquests').reduce((n,r)=>n+(r.steps?.length??0),0)),metric('calendar','日历奖励日',rows('calendar').filter(r=>r.rewards?.length).length,'天'),metric('descents','沉沦之地',rows('descents').length,'层')]},
     {label:'商店',metrics:[...[["voidTraders","虚空商人"],["primeVaultTraders","Prime 重生"]].map(([id,label])=>metric(id,label,rows(id).reduce((n,r)=>n+(r.items?.length??0),0),'件')),metric('flashSales','限时商品',rows('flashSales').length,'件'),metric('dailyDeals','每日特惠',rows('dailyDeals').length,'件')]}
   ];

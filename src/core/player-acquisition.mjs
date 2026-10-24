@@ -1,14 +1,16 @@
+import {officialRelicOdds} from './player-relic-odds.mjs';
+import {dropLocation,dropNameKey} from './drop-localization.mjs';
 import { allItems } from './merge/repository.mjs';
 import { rewardContexts } from './merge/reward-context.mjs';
 import { selectLocalizedField } from './text-localization.mjs';
 import { plainGameText } from './inline-tokens.mjs';
 import { relicIdentity, relicIndex, relicDrops, RELIC_QUALITIES } from './player-relics.mjs';
 
-const normalize = value => plainGameText(value, 'name').trim().replace(/[’]/g, "'").replace(/\s+/g, ' ').toLowerCase();
+const normalize = dropNameKey;
 const cache = new WeakMap();
 const relicCache = new WeakMap();
 function sourceRelics(data) {
-  if (!relicCache.has(data.output)) relicCache.set(data.output, relicIndex(allItems(data)));
+  if (!relicCache.has(data.output)) relicCache.set(data.output, relicIndex(allItems(data),officialRelicOdds(data)));
   return relicCache.get(data.output);
 }
 const title = (item, locale) => plainGameText(item?.name?.[locale] ?? item?.name?.en ?? '', 'name');
@@ -81,20 +83,22 @@ export function acquisitionIndex(data) {
       const rotation = /,\s*Rotation\s+([A-Z])$/i.exec(drop.location), place = drop.location.replace(/,\s*Rotation\s+[A-Z]$/i, '');
       const node = /^([^/]+)\/([^()]+?)(?:\s*\((.*)\))?$/.exec(place);
       let matches = names.get(normalize(node?.[2] ?? place)) ?? [];
-      if (node) matches = matches.filter(i => i.kind === 'region' && normalize(field(data, i, 'systemName', 'en') ?? '') === normalize(node[1]));
+      if (node) matches = matches.filter(i => i.kind === 'region' && (normalize(field(data, i, 'systemName', 'en') ?? '') === normalize(node[1]) || i.id.startsWith('wf:region/CrewBattleNode') && normalize(field(data,i,'systemName','en')??'')===normalize(node[1]+' Proxima')));
       let target = matches.length === 1 ? matches[0] : null;
       // WFCD component drops carry the source relic's full identity; that
       // identity points to Bronze even when location explicitly says Radiant.
-      const family = relics.byId.get(drop.uniqueName), sourceQuality = /\((Intact|Exceptional|Flawless|Radiant)\)$/i.exec(place)?.[1]?.toLowerCase();
+      const relicName=/^((?:Lith|Meso|Neo|Axi|Requiem) [A-Za-z0-9]+)(?: Relic)?(?: \((?:Intact|Exceptional|Flawless|Radiant)\))?$/.exec(place),namedFamilies=relicName?[...relics.families.values()].filter(f=>normalize(f.item.name?.en??'').replace(/ (?:relic|intact|exceptional|flawless|radiant)$/,'')===normalize(relicName[1])):[];
+      const family = relics.byId.get(drop.uniqueName)??(namedFamilies.length===1?namedFamilies[0]:null), sourceQuality = /\((Intact|Exceptional|Flawless|Radiant)\)$/i.exec(place)?.[1]?.toLowerCase();
       const qualityKey = ({intact:'Bronze',exceptional:'Silver',flawless:'Gold',radiant:'Platinum'})[sourceQuality] ?? relicIdentity(byId.get(drop.uniqueName) ?? {})?.quality;
       if (family) target = family.variants.get(qualityKey) ?? family.item;
       const locales = data.manifest.locales ?? ['zh-CN', 'en'];
       const localized = !target && !node ? enemyNameConsensus(matches, locales) : {};
       const consensus = Object.keys(localized).length > 0;
       if (target) for (const locale of data.manifest.locales ?? ['zh-CN', 'en']) localized[locale] = [target.kind === 'region' ? field(data, target, 'systemName', locale) : '', title(target, locale), target.kind === 'region' ? field(data, target, 'missionName', locale) : '', family ? (locale.startsWith('zh') ? RELIC_QUALITIES.find(([key])=>key===qualityKey)?.[1] : ({Bronze:'Intact',Silver:'Exceptional',Gold:'Flawless',Platinum:'Radiant'})[qualityKey]) : ''].filter(Boolean).join(' · ');
+      if(node&&target?.kind==='region')for(const locale of locales){const resolved=dropLocation(data,place,locale);if(resolved)localized[locale]=resolved.text;}
       const chance = Number.isFinite(drop.chance) && drop.chance >= 0 && drop.chance <= 100 ? drop.chance : null;
       const quality = relic ? /(?:\s|\()(Intact|Exceptional|Flawless|Radiant)\)?$/i.exec(drop.type)?.[1] : null;
-      const row = { method: 'drop', title: localized, original: place, rotation: rotation?.[1] ?? null, ...(quality ? { rewardVariant: { intact:'完整遗物',exceptional:'无暇遗物',flawless:'良好遗物',radiant:'光辉遗物' }[quality.toLowerCase()] } : {}), chance, quantity: quantity && Number(quantity[1]) > 0 ? Number(quantity[1]) : null, links: target ? [target.id] : [], source: 'WFCD', basis: family ? 'exact-relic-source-id' : target ? 'unique-location' : consensus ? 'enemy-name-consensus' : 'source-text', ...(consensus ? { nameCandidates: matches.map(item => item.id) } : {}) };
+      const row = { method: 'drop', title: localized, original: place, rotation: rotation?.[1] ?? null, ...(quality ? { rewardVariant: { intact:'完整遗物',exceptional:'无暇遗物',flawless:'良好遗物',radiant:'光辉遗物' }[quality.toLowerCase()] } : {}), chance, quantity: quantity && Number(quantity[1]) > 0 ? Number(quantity[1]) : null, links: target ? [target.id] : [], source: 'WFCD', basis: family ? (relics.byId.has(drop.uniqueName) ? 'exact-relic-source-id' : 'exact-relic-name-quality') : target ? 'unique-location' : consensus ? 'enemy-name-consensus' : 'source-text', ...(consensus ? { nameCandidates: matches.map(item => item.id) } : {}) };
       const key = JSON.stringify(row); if (seen.has(key)) continue; seen.add(key);
       const source = dropSources.get(item.id); if (source) row.evidence = { source: source.source, file: source.file, hash: source.hash, pointer: source.pointer + '/' + at };
       add(item.id, row); report.drops++;
@@ -143,13 +147,13 @@ export function playerAcquisition(data, item, locale = 'zh-CN') {
   for (const { family, row, drops } of groups.values()) {
     const qualities = RELIC_QUALITIES.some(([key]) => family.variants.has(key)) ? RELIC_QUALITIES : [['Unrefinable', '固定品质']];
     row.probabilities = qualities.map(([key, label]) => {
-      const variant = family.variants.get(key), rewards = variant ? relicDrops(variant).filter(r => r.id === item.id) : [];
+      const variant = family.variants.get(key), rewards = variant ? relicDrops(variant,officialRelicOdds(data)).filter(r => r.id === item.id) : [];
       const values = new Set(rewards.map(r => r.probability));
       let probability = values.size === 1 ? [...values][0] : null;
       // Explicit WFCD source-quality odds can fill a missing value, but an
       // unqualified pool probability must never be copied into all qualities.
       if (variant && probability === null && rewards.length <= 1) {
-        const known = new Set(drops.filter(r => r.method === 'drop' && r.basis === 'exact-relic-source-id' && r.links.length === 1 && relicIdentity({ id: r.links[0], kind: 'relic' })?.quality === key && Number.isFinite(r.chance) && r.chance >= 0 && r.chance <= 100).map(r => r.chance));
+        const known = new Set(drops.filter(r => r.method === 'drop' && ['exact-relic-source-id','exact-relic-name-quality'].includes(r.basis) && r.links.length === 1 && relicIdentity({ id: r.links[0], kind: 'relic' })?.quality === key && Number.isFinite(r.chance) && r.chance >= 0 && r.chance <= 100).map(r => r.chance));
         if (known.size === 1) probability = [...known][0];
       }
       return { key, label, available: !!variant, probability };

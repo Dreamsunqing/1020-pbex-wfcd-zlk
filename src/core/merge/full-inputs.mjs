@@ -24,7 +24,7 @@ export async function fullInputs({ files, read, contract }) {
     const official = file.source === 'official' && /\/manifests\//.test(file.id);
     const plus = file.source === 'plus' && /\/Export[^/]+\.json$/.test(file.id);
     const oracle = file.source === 'oracle' && /\/(data|dicts)\//.test(file.id);
-    const auxiliary = (file.source === 'browse' && !/package(-lock)?\.json$/.test(file.id)) || (file.source === 'plus-gen' && !/package(-lock)?\.json$/.test(file.id));
+    const auxiliary = file.source==='droptables' && file.id.endsWith('/parsed.json') || (file.source === 'browse' && !/package(-lock)?\.json$/.test(file.id)) || (file.source === 'plus-gen' && !/package(-lock)?\.json$/.test(file.id));
     if (!matched.length && !dictionary && !itemDictionary && !official && !plus && !oracle && !auxiliary) { inventory.push({ file: file.id, source: file.source, status: 'excluded', reason: '构建配置、缓存索引或来源清单；不作为游戏实体' }); continue; }
     const { bytes, hash } = await read(file.id); if (sha256(bytes) !== hash) throw new Error('输入哈希不一致：' + file.id);
     const { value, format } = parseDocument(bytes.toString('utf8'), file.id);

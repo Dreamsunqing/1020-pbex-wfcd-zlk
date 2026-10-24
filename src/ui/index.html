@@ -11,13 +11,14 @@
   <link rel="stylesheet" href="live-state.css">
   <link rel="stylesheet" href="wm.css">
   <link rel="stylesheet" href="player-library.css">
+  <link rel="stylesheet" href="drop-tables.css">
 </head>
 <body>
   <header>
     <div class="brand"><span class="brand-icon">◈</span><div>上游资料工作台<small>SOURCE WORKBENCH <b>01</b></small></div></div>
     <nav aria-label="功能页面"><button class="nav active" data-panel="browser">资料浏览</button><button class="nav" data-panel="world">世界状态</button>
-      <button class="nav" data-panel="codex">资料库</button><button class="nav" data-panel="wm">WM</button><button class="nav" data-panel="merged">合并汇总</button><button class="nav" data-panel="gallery">图片资源</button><button class="nav" data-panel="rules">合并规则</button><button class="nav" data-panel="oracle">推算实验室</button><button class="nav" data-panel="updates">更新与版本</button><button class="nav" data-panel="documents">文档阅读</button><button class="nav" data-panel="settings">配置</button></nav>
-    <div class="header-tools"><span class="version">v0.16.9</span><select id="theme-select" aria-label="外观主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">暗色</option></select></div>
+      <button class="nav" data-panel="codex">资料库</button><button class="nav" data-panel="drops">掉落表</button><button class="nav" data-panel="wm">WM</button><button class="nav" data-panel="merged">合并汇总</button><button class="nav" data-panel="gallery">图片资源</button><button class="nav" data-panel="rules">合并规则</button><button class="nav" data-panel="oracle">推算实验室</button><button class="nav" data-panel="updates">更新与版本</button><button class="nav" data-panel="documents">文档阅读</button><button class="nav" data-panel="settings">配置</button></nav>
+    <div class="header-tools"><span class="version">v0.17.0</span><select id="theme-select" aria-label="外观主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">暗色</option></select></div>
   </header>
   <div id="notice" role="status" hidden></div>
   <main>
@@ -45,6 +46,7 @@
         </div>
       </article>
     </section>
+    <section id="drops" class="panel page" aria-label="掉落表"></section>
     <section id="world" class="panel page ws-page" aria-label="世界状态">
       <div class="ws-hero">
         <div class="ws-hero-main"><div class="ws-eyebrow">ORIGIN SYSTEM / LIVE OPERATIONS</div><h1>世界状态<span class="ws-orbit-dot" aria-hidden="true"></span></h1><div class="ws-hero-meta"><strong id="ws-server-label">国际服 · DE</strong><span id="ws-status" class="ws-status">读取中</span><span id="ws-timestamp"></span></div><p id="ws-date" class="ws-hero-date"></p></div>

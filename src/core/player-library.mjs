@@ -1,3 +1,5 @@
+import {officialRelicOdds} from './player-relic-odds.mjs';
+import {variantIndex} from './player-variants.mjs';
 // Read-only player projection over the verified P3 build. Never mutates source entities.
 import { modSetBonus } from './mod-sets.mjs';
 import { playerWikiLinks, playerAcquisition } from './player-acquisition.mjs';
@@ -40,14 +42,14 @@ function index(data) {
   if(cache.has(data.output))return cache.get(data.output);
   const all=allItems(data), hidden=internalItems(data), byId=new Map(all.map(i=>[i.id,i])), links=new Map();
   for(const r of data.output['relations.json'] ?? [])for(const id of new Set([r.from,r.to])){if(!links.has(id))links.set(id,[]);links.get(id).push(r);}
-  const relics=relicIndex(all), prime=new Set(), recipes=new Map((data.output['recipes.json']??[]).map(r=>[r.id,r])),products=new Map();
+  const relics=relicIndex(all,officialRelicOdds(data)), prime=new Set(), recipes=new Map((data.output['recipes.json']??[]).map(r=>[r.id,r])),products=new Map();
   for(const recipe of recipes.values()){if(!products.has(recipe.resultId))products.set(recipe.resultId,[]);products.get(recipe.resultId).push(recipe.id);}
   const primeName=i=>i&&(i.attributes?.isPrime===true||i.attributes?.variantType==='VT_PRIME'||Object.values(i.name??{}).some(name=>/\bPrime\b/i.test(name)));
   const addPrime=(id,confirmed=false)=>{const i=byId.get(id);if(i&&['blueprint','resource'].includes(i.kind)&&(confirmed||primeName(i)))prime.add(id);};
   for(const i of all)if(primeName(i))for(const r of links.get(i.id)??[]){if(r.from===i.id&&r.kind==='has-component')addPrime(r.to);if(r.to===i.id&&r.kind==='produces')addPrime(r.from,true);}
   for(const id of relics.sources.keys())addPrime(id);
   const incarnon=new Set((data.output['relations.json']??[]).filter(r=>r.kind==='incarnon-adapter'&&byId.get(r.from)?.kind==='weapon'&&byId.get(r.to)?.kind==='resource').map(r=>r.from));
-  const rows=all.filter(i=>groupFor(i)&&!hidden.has(i.id)&&!(i.kind==='relic'&&!relicIdentity(i)&&!relicDrops(i).length));const result={all,rows,byId,links,relics,prime,recipes,products,incarnon,descriptionSources:blueprintDescriptionSources(data)};cache.set(data.output,result);return result;
+  const rows=all.filter(i=>groupFor(i)&&!hidden.has(i.id)&&!(i.kind==='relic'&&!relicIdentity(i)&&!relicDrops(i).length));const result={variants:variantIndex(rows),all,rows,byId,links,relics,prime,recipes,products,incarnon,descriptionSources:blueprintDescriptionSources(data)};cache.set(data.output,result);return result;
 }
 function projected(data,item,locale) {
   const fields=Object.keys(data.output['localizations/'+locale+'.json']?.[item.id] ?? {});
@@ -70,7 +72,7 @@ function facets(item,idx) {
   return {incarnon:item.kind==='weapon'?(idx?.incarnon.has(item.id)?'genesis':'unlinked'):'',era:relicIdentity(item)?.era??'',...playerFacetValues(item),trigger:typeof a.trigger==='string'?a.trigger:'',variant:typeof a.variantType==='string'?a.variantType.replace(/^VT_/,''):a.isPrime===true?'PRIME':a.isPrime===false?'NORMAL':'',rarity:item.rarity ?? '',tradable:item.tradable===true?'yes':item.tradable===false?'no':''};
 }
 function summary(item,locale,idx) {
-  const f=facets(item,idx);return {id:item.id,kind:item.kind,group:groupFor(item),title:title(item,locale),english:plainGameText(item.name?.en ?? '', 'name'),description:desc(item,locale),facets:f,tags:[...(f.category==='Companion Resources'?['同伴资源']:[]),playerLabel(f.type||f.category),f.variant==='PRIME'?'Prime':null,Number.isFinite(item.masteryRank)?'段位 '+item.masteryRank:null,item.helminth?.transferable?'可移植':null,f.incarnon==='genesis'?'可安装灵化之源':null].filter(Boolean),masteryRank:item.masteryRank,stats:item.stats ?? {}};
+  const f=facets(item,idx);return {id:item.id,kind:item.kind,group:groupFor(item),title:title(item,locale),english:plainGameText(item.name?.en ?? '', 'name'),tradable:item.tradable,description:desc(item,locale),facets:f,tags:[...(f.category==='Companion Resources'?['同伴资源']:[]),playerLabel(f.type||f.category),f.variant==='PRIME'?'Prime':null,Number.isFinite(item.masteryRank)?'段位 '+item.masteryRank:null,item.helminth?.transferable?'可移植':null,f.incarnon==='genesis'?'可安装灵化之源':null].filter(Boolean),masteryRank:item.masteryRank,stats:item.stats ?? {}};
 }
 const filters=['incarnon','era','category','type','trigger','variant','rarity','tradable'];
 function validate(data,args) {
@@ -107,12 +109,13 @@ export function playerLibraryDetail(data,id,{locale='zh-CN'}={}) {
     if(!related.has(label))related.set(label,new Map());
     const rows=related.get(label);if(!rows.has(target.id))rows.set(target.id,{...summary(projected(data,target,locale),locale,idx),quantity:relation.quantity,slot:relation.slot});
   }
+  const variants=idx.variants.get(id);if(variants?.length)related.set('其他变体',new Map(variants.map(target=>[target.id,summary(projected(data,target,locale),locale,idx)])));
   let relic=null;
   const family=idx.relics.byId.get(id);
   const comparison=family&&RELIC_QUALITIES.some(([q])=>family.variants.has(q));
   if(item.kind==='relic'){
     const rows=new Map(), variants=comparison?RELIC_QUALITIES.map(([key,label])=>({key,label,available:family.variants.has(key)})):[];
-    for(const variant of family?[...family.variants.values()]:[item])for(const r of relicDrops(variant)){
+    for(const variant of family?[...family.variants.values()]:[item])for(const r of relicDrops(variant,officialRelicOdds(data))){
       const target=idx.byId.get(r.id);if(!target)continue;
       if(!rows.has(r.id))rows.set(r.id,{...summary(projected(data,target,locale),locale,idx),quantity:r.quantity,probability:comparison?null:r.probability,probabilities:{},rewardRarity:playerLabel(r.rarity)});
       if(comparison)rows.get(r.id).probabilities[relicIdentity(variant).quality]=r.probability;

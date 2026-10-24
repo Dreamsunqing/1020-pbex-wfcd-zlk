@@ -70,7 +70,7 @@ test('actual bundle localizes Commandeered enemy drops through Plus names withou
   const data=await loadPlayerBundle(),id='/Lotus/Upgrades/Mods/Antiques/DashDistanceSchools';
   const rows=playerLibraryDetail(data,id).acquisition.filter(r=>r.original?.startsWith('Commandeered'));
   assert.equal(rows.length,6);
-  for(const row of rows){assert.equal(row.title,'被控制的 '+row.original.slice('Commandeered '.length).trim());assert.equal(row.chance,2.5);assert.equal(row.basis,'enemy-name-consensus');assert.equal(row.links.length,0);assert.ok(row.nameCandidates.length>1);assert.equal(row.evidence.file,'wfcd-items/data/json/Mods.json');}
+  for(const row of rows){assert.equal(row.title,'被控制的 '+row.original.slice('Commandeered '.length).trim());assert.equal(row.chance,2.5);assert.equal(row.basis,'enemy-name-consensus');assert.equal(row.links.length,0);assert.ok(row.nameCandidates.length>1);assert.match(row.evidence.file,/^(?:wfcd|wfcd-items)\/data\/json\/Mods\.json$/);}
 });
 
 test('actual bundle exposes Mod drop sources, generic relic acquisition, and suppresses weapon skin false drops',async()=>{

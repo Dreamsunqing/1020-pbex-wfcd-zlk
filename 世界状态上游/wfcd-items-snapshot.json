@@ -3,8 +3,8 @@
   "repository": "WFCD/warframe-items",
   "url": "https://github.com/WFCD/warframe-items",
   "branch": "master",
-  "commit": "20f8d9427a5a62268817853eefd8962d18c0b70e",
-  "commitDate": "2026-10-18T02:44:10Z",
+  "commit": "51c6f620efffb99042c41d24824c50cf681a1113",
+  "commitDate": null,
   "exportMode": "tracked-files-without-images-and-without-git-history",
   "excludedImageExtensions": [
     ".avif",
@@ -62759,1234 +62759,1100 @@
     {
       "path": ".babelrc.json",
       "size": 141,
+      "sha256": "47695de4884ada244f3af39de306bf6af7027f693d9e79ce0b8ea3a22c48708e",
       "gitBlobSha1": "7bfea90304bbe57bb6e0efe13b5d24c76a55786c",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.babelrc.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.babelrc.json",
-      "sha256": "47695de4884ada244f3af39de306bf6af7027f693d9e79ce0b8ea3a22c48708e"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/.babelrc.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/.babelrc.json"
     },
     {
       "path": ".commitlintrc.mjs",
       "size": 137,
+      "sha256": "8a3465e4167a4eac57531709b2329ca69cc4a04d5def18752134266f6e66cf57",
       "gitBlobSha1": "dfd538b300f115a9e46b610d9c02b1656a4beb60",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.commitlintrc.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.commitlintrc.mjs",
-      "sha256": "8a3465e4167a4eac57531709b2329ca69cc4a04d5def18752134266f6e66cf57"
-    },
-    {
-      "path": ".github/CODEOWNERS",
-      "size": 284,
-      "gitBlobSha1": "a5a1f26d7bee5e757ae0d35ff8d7cf5305a8f1af",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/CODEOWNERS",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/CODEOWNERS",
-      "sha256": "3a840a7a2d28d4d377946fce772bba767d75fa1537926c2e71a14367060fd2b2"
-    },
-    {
-      "path": ".github/ISSUE_TEMPLATE/BUG-REPORT.yaml",
-      "size": 1525,
-      "gitBlobSha1": "83253351012bd0bfbec862067d72b7a614bacb18",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/ISSUE_TEMPLATE/BUG-REPORT.yaml",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/ISSUE_TEMPLATE/BUG-REPORT.yaml",
-      "sha256": "67e2128f2add2ae8a923f3d2490b43882a4afb82f673d8de1bcb0b2096bb10a7"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/.commitlintrc.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/.commitlintrc.mjs"
     },
     {
       "path": ".github/ISSUE_TEMPLATE/enhancement.md",
       "size": 761,
+      "sha256": "e43a114a452517e10ac8e2b6534b86b14775c8cb5bd94ceb38f3c87c7bf4aba7",
       "gitBlobSha1": "f68e7eaecf4329b38caaf8680c48f0599e6c9e33",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/ISSUE_TEMPLATE/enhancement.md",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/ISSUE_TEMPLATE/enhancement.md",
-      "sha256": "e43a114a452517e10ac8e2b6534b86b14775c8cb5bd94ceb38f3c87c7bf4aba7"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/.github/ISSUE_TEMPLATE/enhancement.md",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/.github/ISSUE_TEMPLATE/enhancement.md"
     },
     {
       "path": ".github/ISSUE_TEMPLATE/feature_request.md",
       "size": 732,
+      "sha256": "8eda026834425aef9b667f406bc6ce9910534442bbd5f23da7ded45b4bf14527",
       "gitBlobSha1": "637b12c5c6bd3b09d3b20a7d4a3838ae9dfdcc0b",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/ISSUE_TEMPLATE/feature_request.md",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/ISSUE_TEMPLATE/feature_request.md",
-      "sha256": "8eda026834425aef9b667f406bc6ce9910534442bbd5f23da7ded45b4bf14527"
-    },
-    {
-      "path": ".github/dependabot.yml",
-      "size": 861,
-      "gitBlobSha1": "009ad2a7a895765430097e267170246454081e4d",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/dependabot.yml",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/dependabot.yml",
-      "sha256": "e6921a671ece6ab5bd7a52756854b9a0b390c8ee7dbdcd9f54b4d67919f55812"
-    },
-    {
-      "path": ".github/workflows/build.yaml",
-      "size": 2084,
-      "gitBlobSha1": "8d2180c35bb4868ede3a34b14277f2400f2f9ff0",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/workflows/build.yaml",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/workflows/build.yaml",
-      "sha256": "40a777616e08e9a52ad029760dd89f9829ea484101ae801c71bc9c3f4b4b4997"
-    },
-    {
-      "path": ".github/workflows/codeql-analysis.yml",
-      "size": 800,
-      "gitBlobSha1": "74580441519180ca7c39ab998da3cf9e5ad46e8c",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/workflows/codeql-analysis.yml",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/workflows/codeql-analysis.yml",
-      "sha256": "83c332cc20b7fb9d19b1ec5b8b1dfa634fc57e596d62c7a3a588ab2d032a6181"
-    },
-    {
-      "path": ".github/workflows/regression.sh",
-      "size": 196,
-      "gitBlobSha1": "15314edcbba7b4b101306c9b2fdf808045fdb188",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/workflows/regression.sh",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/workflows/regression.sh",
-      "sha256": "6ce79538e5e761020d88e1caffe114555bbe1a9186c05ad3232c9044faafcc83"
-    },
-    {
-      "path": ".github/workflows/regression.yaml",
-      "size": 584,
-      "gitBlobSha1": "b26f117c369c9e337ca1dcca72975b767232b284",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/workflows/regression.yaml",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/workflows/regression.yaml",
-      "sha256": "40f2cc6d5b42e5455b22d6d59cfc6bcb58e6d5ddeb7ae7ea9db0c0994c0412f7"
-    },
-    {
-      "path": ".github/workflows/release.yaml",
-      "size": 1047,
-      "gitBlobSha1": "26d3baf77f496117a8db4a700dcfe2a60324b6f0",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/workflows/release.yaml",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/workflows/release.yaml",
-      "sha256": "fc569d7fdf4927d2f7e62175122812e68a656ed2c6fae0f83e4f36c76b91a8ab"
-    },
-    {
-      "path": ".github/workflows/static.yaml",
-      "size": 3314,
-      "gitBlobSha1": "29c53138e006987f0afccb0d90cafbb90580f8ef",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/workflows/static.yaml",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.github/workflows/static.yaml",
-      "sha256": "19da88f5fda25442aa49941e7d73fabc0ef4476848350c50a41d413b38f2b98d"
-    },
-    {
-      "path": ".gitignore",
-      "size": 190,
-      "gitBlobSha1": "d50ee4c046efeb6ce89e3075d825721626515759",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.gitignore",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.gitignore",
-      "sha256": "11a2302f8e3b2a6dcc8d81180d438bc46b2d3e164877cc1aba06e58f2fb6fb46"
-    },
-    {
-      "path": ".husky/commit-msg",
-      "size": 33,
-      "gitBlobSha1": "0a4b97de53ae4f83db224a73981e6c0aaf581203",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.husky/commit-msg",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.husky/commit-msg",
-      "sha256": "4f351f65f6c0c6e76279fb88bf6b5d56ff0c5c5f33465b4c6fb4839ce66a4754"
-    },
-    {
-      "path": ".husky/pre-commit",
-      "size": 16,
-      "gitBlobSha1": "2312dc587f61186ccf0d627d678d851b9eef7b82",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.husky/pre-commit",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.husky/pre-commit",
-      "sha256": "e2b7c9733375d7182af2033bda9a7d2a05d0db5eef5be53d26eb7b5f3df8fbc3"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/.github/ISSUE_TEMPLATE/feature_request.md",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/.github/ISSUE_TEMPLATE/feature_request.md"
     },
     {
       "path": ".lintstagedrc.mjs",
       "size": 337,
+      "sha256": "61a5b43d863aa3c7429deaf577c7e1d2e0287076afe150c6f33be2453ca4ec7a",
       "gitBlobSha1": "d65187cb84a5305a41b8a0a0fc9602a47b248fe4",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.lintstagedrc.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.lintstagedrc.mjs",
-      "sha256": "61a5b43d863aa3c7429deaf577c7e1d2e0287076afe150c6f33be2453ca4ec7a"
-    },
-    {
-      "path": ".mocharc.yml",
-      "size": 52,
-      "gitBlobSha1": "1eeb393e8c0cf6f914861ead68488a764f73fbb0",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.mocharc.yml",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.mocharc.yml",
-      "sha256": "35465b283a69cd3d9d7444813d31ead1a963a66643fe3dbed623f94ef214626a"
-    },
-    {
-      "path": ".npmignore",
-      "size": 280,
-      "gitBlobSha1": "748fcf5179635f7da316ebea01868478bb992aeb",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.npmignore",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.npmignore",
-      "sha256": "9708e2c92d562b39f876556e0272361bd412e4e788965e4efdb4665f76c5dd05"
-    },
-    {
-      "path": ".nvmrc",
-      "size": 12,
-      "gitBlobSha1": "b03f40867e5d5c0482ceab05deb7aff77cfe39a9",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.nvmrc",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.nvmrc",
-      "sha256": "99d924cba0f1108bda49db624f2532cdd75ecba5a5f151dff62b32878179e037"
-    },
-    {
-      "path": ".releaserc.yaml",
-      "size": 17,
-      "gitBlobSha1": "e1f1b77c43a44bba8613b3abc49cefb37dc27d67",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/.releaserc.yaml",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/.releaserc.yaml",
-      "sha256": "309a759b678fcc5a28dca3b351a06146dbf969d7f50e2d53134497aecce8890e"
-    },
-    {
-      "path": "CONTRIBUTING.md",
-      "size": 1263,
-      "gitBlobSha1": "8e42ff9caa282c5a8a1c757197deea19dae725c2",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/CONTRIBUTING.md",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/CONTRIBUTING.md",
-      "sha256": "e82128ebd5155047228e096119f817514a710708ef7e6ee51ce67f307978ed8a"
-    },
-    {
-      "path": "LICENSE",
-      "size": 1064,
-      "gitBlobSha1": "877b03138c1459f24e4f732c3fc5fd27f3b7e565",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/LICENSE",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/LICENSE",
-      "sha256": "673c2edd935e4386a055f1a51242917a6bd9d943e0aa8eed2d71accd24095b38"
-    },
-    {
-      "path": "README.md",
-      "size": 9201,
-      "gitBlobSha1": "f375b859cd2c6df7a55e70f69a3800fbd10edfaf",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/README.md",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/README.md",
-      "sha256": "528f01e19662ca166a70d3ba6054bef84bbc998defa2f8f1752846a291a242b6"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/.lintstagedrc.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/.lintstagedrc.mjs"
     },
     {
       "path": "build/build.ts",
       "size": 17192,
+      "sha256": "d939e7de99736a8cebc251ff0a4e8f48ce2525cffd4a32fe189743a1d82639bc",
       "gitBlobSha1": "c97313ecdded7b54ea4a1273f17ab113ab1dd000",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/build.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/build.ts",
-      "sha256": "d939e7de99736a8cebc251ff0a4e8f48ce2525cffd4a32fe189743a1d82639bc"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/build.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/build.ts"
     },
     {
       "path": "build/dedupe.ts",
       "size": 708,
+      "sha256": "2b8ac7944fb92e816ee9c6341e104f5a4f6c0b3c83e314fc11790b6e6b669fe0",
       "gitBlobSha1": "e37d7539d77dbe201a1a28c618fc85af25399d9a",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/dedupe.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/dedupe.ts",
-      "sha256": "2b8ac7944fb92e816ee9c6341e104f5a4f6c0b3c83e314fc11790b6e6b669fe0"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/dedupe.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/dedupe.ts"
     },
     {
       "path": "build/eslint.config.ts",
       "size": 486,
+      "sha256": "165aa5a4ce05bbe42e953b953c7da36d0c4ac0bf25ec58e1d521c3a673f9131c",
       "gitBlobSha1": "51a4822484622969063ce88f65f05f215a159904",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/eslint.config.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/eslint.config.ts",
-      "sha256": "165aa5a4ce05bbe42e953b953c7da36d0c4ac0bf25ec58e1d521c3a673f9131c"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/eslint.config.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/eslint.config.ts"
     },
     {
       "path": "build/hashManager.ts",
       "size": 3034,
+      "sha256": "5f92fc69c4a9bdec0a1f3c3a57645a5583c6aceb8a377f40179e690c3f88d465",
       "gitBlobSha1": "8ab93295e4ac16aefc87c60edcc1efddc53f84a5",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/hashManager.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/hashManager.ts",
-      "sha256": "5f92fc69c4a9bdec0a1f3c3a57645a5583c6aceb8a377f40179e690c3f88d465"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/hashManager.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/hashManager.ts"
     },
     {
       "path": "build/network.ts",
       "size": 1538,
+      "sha256": "965980d0d1d0b2d000c2bac3c6a55196f5fe2cc04a82e1198c676b4a870ec2ea",
       "gitBlobSha1": "d6455dae6ca8a0a6f270f5a0641b0efaad1e56df",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/network.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/network.ts",
-      "sha256": "965980d0d1d0b2d000c2bac3c6a55196f5fe2cc04a82e1198c676b4a870ec2ea"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/network.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/network.ts"
     },
     {
       "path": "build/objectsort.ts",
       "size": 426,
+      "sha256": "3c2d0210c43ffcf572f69ce5b96a6fbd7f5b7782ff087a53b4380144f90c56ef",
       "gitBlobSha1": "b17b1f5127c62f2bcb5a032e7d09e5cab0e35661",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/objectsort.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/objectsort.ts",
-      "sha256": "3c2d0210c43ffcf572f69ce5b96a6fbd7f5b7782ff087a53b4380144f90c56ef"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/objectsort.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/objectsort.ts"
     },
     {
       "path": "build/package.json",
       "size": 101,
+      "sha256": "1b2796bc4d71c01047246cb812f1c67f129fc8797abbb44540144f2fd2d1989e",
       "gitBlobSha1": "705383be91f93a100a4c8057a46afdcdfe715cab",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/package.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/package.json",
-      "sha256": "1b2796bc4d71c01047246cb812f1c67f129fc8797abbb44540144f2fd2d1989e"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/package.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/package.json"
     },
     {
       "path": "build/parser.ts",
       "size": 57144,
+      "sha256": "75667a9f1e94a9a1fdf5c1d2764fc4c9adecbf950bcc287f116165c13c3e1810",
       "gitBlobSha1": "458f61ff9d4e5604424e6dc4d7842d3d572a38cb",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/parser.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/parser.ts",
-      "sha256": "75667a9f1e94a9a1fdf5c1d2764fc4c9adecbf950bcc287f116165c13c3e1810"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/parser.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/parser.ts"
     },
     {
       "path": "build/progress.ts",
       "size": 1180,
+      "sha256": "b29e140fe6b1beb7c3038ca3ccd24f4e3ba7e12624c3feeb17032b7450bf91c8",
       "gitBlobSha1": "4816e3dc9f5d723969aa53b2821cf41c287cc0f0",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/progress.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/progress.ts",
-      "sha256": "b29e140fe6b1beb7c3038ca3ccd24f4e3ba7e12624c3feeb17032b7450bf91c8"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/progress.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/progress.ts"
     },
     {
       "path": "build/proxyAgent.ts",
       "size": 1267,
+      "sha256": "8ba75bbdbd14704ecbd586dceda9cfc349d73d47d0f42004f342ca236fafb699",
       "gitBlobSha1": "c57f94ac7a9e4f542faaedb65cbd2a6ff3d792de",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/proxyAgent.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/proxyAgent.ts",
-      "sha256": "8ba75bbdbd14704ecbd586dceda9cfc349d73d47d0f42004f342ca236fafb699"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/proxyAgent.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/proxyAgent.ts"
     },
     {
       "path": "build/readJson.ts",
       "size": 429,
+      "sha256": "476c919998937641bbcb7effb62a3b701fcd074822ccfbc7c18b2613a991385a",
       "gitBlobSha1": "0914ad40bbeb396f413af4d114d6d685e5ffd212",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/readJson.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/readJson.ts",
-      "sha256": "476c919998937641bbcb7effb62a3b701fcd074822ccfbc7c18b2613a991385a"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/readJson.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/readJson.ts"
     },
     {
       "path": "build/scraper.ts",
       "size": 12378,
+      "sha256": "3cd422398a15cc45abb3a7ee133a92046ed2af3612072cdfcaaf98406571cee7",
       "gitBlobSha1": "9df1f0234ef7a0a18805e61da21f46c40114fc23",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/scraper.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/scraper.ts",
-      "sha256": "3cd422398a15cc45abb3a7ee133a92046ed2af3612072cdfcaaf98406571cee7"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/scraper.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/scraper.ts"
     },
     {
       "path": "build/sleep.ts",
       "size": 337,
+      "sha256": "11a5d7e0cc9232fe647882a4d78642f755446f8a42cea7c87198ef96be574dd1",
       "gitBlobSha1": "79c3ed27b28569fe8c123b9a2efd68e002b5f9dd",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/sleep.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/sleep.ts",
-      "sha256": "11a5d7e0cc9232fe647882a4d78642f755446f8a42cea7c87198ef96be574dd1"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/sleep.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/sleep.ts"
     },
     {
       "path": "build/stringify.ts",
       "size": 1653,
+      "sha256": "97688220cec1d7d103ab1612d017b62500751feb2eb2f2c360b245b37231db78",
       "gitBlobSha1": "2226f50c6302fcc1e70c9711fe097cc8a77ec8a9",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/stringify.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/stringify.ts",
-      "sha256": "97688220cec1d7d103ab1612d017b62500751feb2eb2f2c360b245b37231db78"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/stringify.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/stringify.ts"
     },
     {
       "path": "build/tradable.ts",
       "size": 3706,
+      "sha256": "55cb00efaed45a4fcf2f9deebde12d1c387d4051a67d7376f366de866206a4e7",
       "gitBlobSha1": "463c7c8f4032257fd85d33a94809f0c64e203b9e",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/tradable.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/tradable.ts",
-      "sha256": "55cb00efaed45a4fcf2f9deebde12d1c387d4051a67d7376f366de866206a4e7"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/tradable.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/tradable.ts"
     },
     {
       "path": "build/tsconfig.json",
       "size": 128,
+      "sha256": "3e808a6157539734dbe1ef1ce85be40f83757050fefdd0d974749d27f3234ec3",
       "gitBlobSha1": "9258156a9da53fdaba9160d803caa959d9b5bd4a",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/tsconfig.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/tsconfig.json",
-      "sha256": "3e808a6157539734dbe1ef1ce85be40f83757050fefdd0d974749d27f3234ec3"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/tsconfig.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/tsconfig.json"
     },
     {
       "path": "build/types/@wfcd.d.ts",
       "size": 446,
+      "sha256": "5268b4fbc05063dc284f3d47c18e84cd1119bb0023c0318937f8f6a4257b82c4",
       "gitBlobSha1": "7489ff4c124934b3ea17daeeaa106ce23236bf69",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/types/%40wfcd.d.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/types/%40wfcd.d.ts",
-      "sha256": "5268b4fbc05063dc284f3d47c18e84cd1119bb0023c0318937f8f6a4257b82c4"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/types/%40wfcd.d.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/types/%40wfcd.d.ts"
     },
     {
       "path": "build/types/image-downloader.d.ts",
       "size": 369,
+      "sha256": "fb071b69639cbabeddaeeacdef4df2d1fbb30b960512ef089fd7dcaf19ab7e7d",
       "gitBlobSha1": "cd5f055b7826acaa4b88d2b8611e144f303000f3",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/types/image-downloader.d.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/types/image-downloader.d.ts",
-      "sha256": "fb071b69639cbabeddaeeacdef4df2d1fbb30b960512ef089fd7dcaf19ab7e7d"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/types/image-downloader.d.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/types/image-downloader.d.ts"
     },
     {
       "path": "build/types/shared.ts",
       "size": 8972,
+      "sha256": "f91829b440b9fca523ab659982aef53471971f698a5bd7bbb057d30e0e3123b6",
       "gitBlobSha1": "0c5c914be025d5dfdfc83569a2621353ecfc9100",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/types/shared.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/types/shared.ts",
-      "sha256": "f91829b440b9fca523ab659982aef53471971f698a5bd7bbb057d30e0e3123b6"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/types/shared.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/types/shared.ts"
     },
     {
       "path": "build/types/socks5-http-client.d.ts",
       "size": 330,
+      "sha256": "577d5713f5d65062a649e6d1fea78a4a780e921fefaf0d3d344a5c4e984f2241",
       "gitBlobSha1": "a72938d5711a02c622102aacdaf896e4ede8146f",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/types/socks5-http-client.d.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/types/socks5-http-client.d.ts",
-      "sha256": "577d5713f5d65062a649e6d1fea78a4a780e921fefaf0d3d344a5c4e984f2241"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/types/socks5-http-client.d.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/types/socks5-http-client.d.ts"
     },
     {
       "path": "build/wikia/JSON.lua",
       "size": 69100,
+      "sha256": "d536afcef0904370ad6d202758bc1b2b9b0debd19a4c7fa0402030cd1ecd65c5",
       "gitBlobSha1": "c98b38d7249ec06c9bd4f852ce8548cdabfe5bce",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/JSON.lua",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/JSON.lua",
-      "sha256": "d536afcef0904370ad6d202758bc1b2b9b0debd19a4c7fa0402030cd1ecd65c5"
-    },
-    {
-      "path": "build/wikia/WikiaDataScraper.ts",
-      "size": 7674,
-      "gitBlobSha1": "065cd74aff99a4283c19a0f387b7dd2c36670109",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/WikiaDataScraper.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/WikiaDataScraper.ts",
-      "sha256": "e3bc667911205d8c374dc1d1d638f593a93899a1dc726086b2f7ee26e213c9aa"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/JSON.lua",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/JSON.lua"
     },
     {
       "path": "build/wikia/scrapers/ArcaneScraper.ts",
       "size": 373,
+      "sha256": "f02983e19e79ed74ad3c38c1d8dcf5fcae45b7287b20e120609edcbe48c9b085",
       "gitBlobSha1": "ab505c6fd2d6554b01f9bc6621282c1331ba1fa4",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/ArcaneScraper.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/ArcaneScraper.ts",
-      "sha256": "f02983e19e79ed74ad3c38c1d8dcf5fcae45b7287b20e120609edcbe48c9b085"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/ArcaneScraper.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/ArcaneScraper.ts"
     },
     {
       "path": "build/wikia/scrapers/ArchwingScraper.ts",
       "size": 387,
+      "sha256": "093fc71f42d03962d3e9352eecb5116c936e1d6ded05ceed530968452c328a56",
       "gitBlobSha1": "4dfa1abe690c6401989df3841cc666d23286108f",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/ArchwingScraper.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/ArchwingScraper.ts",
-      "sha256": "093fc71f42d03962d3e9352eecb5116c936e1d6ded05ceed530968452c328a56"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/ArchwingScraper.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/ArchwingScraper.ts"
     },
     {
       "path": "build/wikia/scrapers/CompanionScraper.ts",
       "size": 395,
+      "sha256": "8ce8eb6146589ea9ed746603c509773002f36b51c2cae7f5597d01b3f9754a63",
       "gitBlobSha1": "b5cd290323b927f570a7818f9ecb2c85751414d1",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/CompanionScraper.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/CompanionScraper.ts",
-      "sha256": "8ce8eb6146589ea9ed746603c509773002f36b51c2cae7f5597d01b3f9754a63"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/CompanionScraper.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/CompanionScraper.ts"
     },
     {
       "path": "build/wikia/scrapers/HonoriaScraper.ts",
       "size": 382,
+      "sha256": "4e454b6da22eb3829d4d5d924e62253a4cdc490794ad1f1b63a81f951aaa1504",
       "gitBlobSha1": "14ba545ebdcb996dcc46178b99263958d054a16f",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/HonoriaScraper.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/HonoriaScraper.ts",
-      "sha256": "4e454b6da22eb3829d4d5d924e62253a4cdc490794ad1f1b63a81f951aaa1504"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/HonoriaScraper.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/HonoriaScraper.ts"
     },
     {
       "path": "build/wikia/scrapers/ModScraper.ts",
       "size": 347,
+      "sha256": "6c609b58cd061fa85dd10bb7536634a22860c331158e5279bcbd4c96cd448f61",
       "gitBlobSha1": "3e8a1798832f47b6cefb91816aef86e283ef5661",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/ModScraper.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/ModScraper.ts",
-      "sha256": "6c609b58cd061fa85dd10bb7536634a22860c331158e5279bcbd4c96cd448f61"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/ModScraper.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/ModScraper.ts"
     },
     {
       "path": "build/wikia/scrapers/NecramechScraper.ts",
       "size": 394,
+      "sha256": "9a94a5586ae1dc377110251ed9535c42fcd31e2e88dc406f573edc6b54a1fd4c",
       "gitBlobSha1": "5bbb28d4b73debf33012b6ec48223fab1a2d97b5",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/NecramechScraper.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/NecramechScraper.ts",
-      "sha256": "9a94a5586ae1dc377110251ed9535c42fcd31e2e88dc406f573edc6b54a1fd4c"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/NecramechScraper.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/NecramechScraper.ts"
     },
     {
       "path": "build/wikia/scrapers/VaultScraper.ts",
       "size": 2811,
+      "sha256": "6218f8d22bf654d84259abc728e0d02b165d7c5e1c46173527d2fcca92fb3293",
       "gitBlobSha1": "1d58c3efd144a2b7b9e082181f800290c5305462",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/VaultScraper.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/VaultScraper.ts",
-      "sha256": "6218f8d22bf654d84259abc728e0d02b165d7c5e1c46173527d2fcca92fb3293"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/VaultScraper.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/VaultScraper.ts"
     },
     {
       "path": "build/wikia/scrapers/VersionScraper.ts",
       "size": 378,
+      "sha256": "bb5a123d008636d04f92461aa1f8e69da5b1aa599e1b542425972354ce6b6a48",
       "gitBlobSha1": "99047227b8ed358e4550e88b94c8ef97e62b1acc",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/VersionScraper.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/VersionScraper.ts",
-      "sha256": "bb5a123d008636d04f92461aa1f8e69da5b1aa599e1b542425972354ce6b6a48"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/VersionScraper.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/VersionScraper.ts"
     },
     {
       "path": "build/wikia/scrapers/WarframeScraper.ts",
       "size": 387,
+      "sha256": "4f8ec411f753e60a8f52f3eec1b6afab1bec848ba57b443f22f4c9f737f0d970",
       "gitBlobSha1": "e394021cdc441577d6a5b238a9afb951982e806e",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/WarframeScraper.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/WarframeScraper.ts",
-      "sha256": "4f8ec411f753e60a8f52f3eec1b6afab1bec848ba57b443f22f4c9f737f0d970"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/WarframeScraper.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/WarframeScraper.ts"
     },
     {
       "path": "build/wikia/scrapers/WeaponScraper.ts",
       "size": 602,
+      "sha256": "93bc7fece61c8d30d21b378d1fb5afb1e30450482eddb7653f696fec5dfb8a7a",
       "gitBlobSha1": "1eb457d130ba80f159d3d484ec70e1f4f4a0099b",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/WeaponScraper.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/scrapers/WeaponScraper.ts",
-      "sha256": "93bc7fece61c8d30d21b378d1fb5afb1e30450482eddb7653f696fec5dfb8a7a"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/WeaponScraper.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/scrapers/WeaponScraper.ts"
     },
     {
       "path": "build/wikia/transformers/elements.ts",
       "size": 293,
+      "sha256": "12aee743a02b2e30ebc83c8f78002fea26876c7fe5214f3ee85eef8134402983",
       "gitBlobSha1": "dea880e74c568031ce2f0d6a8a25d60962423251",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/elements.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/elements.ts",
-      "sha256": "12aee743a02b2e30ebc83c8f78002fea26876c7fe5214f3ee85eef8134402983"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/elements.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/elements.ts"
     },
     {
       "path": "build/wikia/transformers/polarities.ts",
       "size": 220,
+      "sha256": "9af3fde3d2be3550df0a18a226dccda208417bf87661d5e7955055fa98c00a10",
       "gitBlobSha1": "5db8f252b3ea78323398346886367896de2c6dae",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/polarities.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/polarities.ts",
-      "sha256": "9af3fde3d2be3550df0a18a226dccda208417bf87661d5e7955055fa98c00a10"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/polarities.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/polarities.ts"
     },
     {
       "path": "build/wikia/transformers/transformArcanes.ts",
       "size": 1064,
+      "sha256": "447026cf2f7b11a96e1f8f0f131b955497d47980033969b03148460b456b9a91",
       "gitBlobSha1": "e566d0591301d97ab85140e4a680407cc8a1b26b",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformArcanes.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformArcanes.ts",
-      "sha256": "447026cf2f7b11a96e1f8f0f131b955497d47980033969b03148460b456b9a91"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformArcanes.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformArcanes.ts"
     },
     {
       "path": "build/wikia/transformers/transformCompanion.ts",
       "size": 1725,
+      "sha256": "a0eece80d3ed8853c74490fba0157367e58e910cce93005b5ede5f80a8b20341",
       "gitBlobSha1": "637c2ebd7c4c7952f0ebb0b7722bdd09fb10bf10",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformCompanion.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformCompanion.ts",
-      "sha256": "a0eece80d3ed8853c74490fba0157367e58e910cce93005b5ede5f80a8b20341"
-    },
-    {
-      "path": "build/wikia/transformers/transformHonoria.ts",
-      "size": 2019,
-      "gitBlobSha1": "f3246aff4978e18c80068137cfa4fb8a6aea8f56",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformHonoria.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformHonoria.ts",
-      "sha256": "da485daeb31d90fec1d5fd35167255817306e31a7d930afd7ce2c9c44ef847c1"
-    },
-    {
-      "path": "build/wikia/transformers/transformMod.ts",
-      "size": 902,
-      "gitBlobSha1": "063b12d3be8778a5d0cb872a787cbbfba0aa4df8",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformMod.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformMod.ts",
-      "sha256": "665626e3a0493f7cdb5d4f629a6fd4eb3ca2ba9571585de946870a17402277ba"
-    },
-    {
-      "path": "build/wikia/transformers/transformNecramech.ts",
-      "size": 1735,
-      "gitBlobSha1": "d8542fc29fb41976fc72b5c1b9c2e985c1440eca",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformNecramech.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformNecramech.ts",
-      "sha256": "45de36816a87ac9960f5770041698f07e5ff11cf163f0c1acc0a61dfcd00b021"
-    },
-    {
-      "path": "build/wikia/transformers/transformPolarity.ts",
-      "size": 1781,
-      "gitBlobSha1": "d19e5188e6fe5097aa0f7902987fd1ab835d0654",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformPolarity.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformPolarity.ts",
-      "sha256": "4da9d10367aab45b18cb5d5cc93e1905adcfc886954d9fd407e91f55797d67ba"
-    },
-    {
-      "path": "build/wikia/transformers/transformVersion.ts",
-      "size": 823,
-      "gitBlobSha1": "9f69f76a0eafca40ca73e31756ad4bac9e746c90",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformVersion.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformVersion.ts",
-      "sha256": "4ac054e9fd22fe427e4f3057a7eb0020e6d5e0ac369205210e94d345d927cd08"
-    },
-    {
-      "path": "build/wikia/transformers/transformWarframe.ts",
-      "size": 2797,
-      "gitBlobSha1": "bda6e7ae4ada46d646a88ae1f0abde79acae4d5e",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformWarframe.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformWarframe.ts",
-      "sha256": "c45e4ec11d6618f70c4af6458351769c5ce726f91d4282d8b64dcd6a331e18f7"
-    },
-    {
-      "path": "build/wikia/transformers/transformWeapon.ts",
-      "size": 8637,
-      "gitBlobSha1": "15e93d9664d3685a620a72c0213c9820188929fe",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformWeapon.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformWeapon.ts",
-      "sha256": "06f10f4972c059b7366e116e1877c2edb0fb4291fd7fb08266b7f7b59be92332"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformCompanion.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformCompanion.ts"
     },
     {
       "path": "build/wikia/transformers/transformerArchwing.ts",
       "size": 1453,
+      "sha256": "22139c2630d7d6a09e9d7629f217183f2cea66c9f729f6e578045a8549f0f610",
       "gitBlobSha1": "1d3624d830cc297659def81dc4e5a776e5b572fe",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformerArchwing.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/build/wikia/transformers/transformerArchwing.ts",
-      "sha256": "22139c2630d7d6a09e9d7629f217183f2cea66c9f729f6e578045a8549f0f610"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformerArchwing.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformerArchwing.ts"
+    },
+    {
+      "path": "build/wikia/transformers/transformHonoria.ts",
+      "size": 2019,
+      "sha256": "da485daeb31d90fec1d5fd35167255817306e31a7d930afd7ce2c9c44ef847c1",
+      "gitBlobSha1": "f3246aff4978e18c80068137cfa4fb8a6aea8f56",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformHonoria.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformHonoria.ts"
+    },
+    {
+      "path": "build/wikia/transformers/transformMod.ts",
+      "size": 902,
+      "sha256": "665626e3a0493f7cdb5d4f629a6fd4eb3ca2ba9571585de946870a17402277ba",
+      "gitBlobSha1": "063b12d3be8778a5d0cb872a787cbbfba0aa4df8",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformMod.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformMod.ts"
+    },
+    {
+      "path": "build/wikia/transformers/transformNecramech.ts",
+      "size": 1735,
+      "sha256": "45de36816a87ac9960f5770041698f07e5ff11cf163f0c1acc0a61dfcd00b021",
+      "gitBlobSha1": "d8542fc29fb41976fc72b5c1b9c2e985c1440eca",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformNecramech.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformNecramech.ts"
+    },
+    {
+      "path": "build/wikia/transformers/transformPolarity.ts",
+      "size": 1781,
+      "sha256": "4da9d10367aab45b18cb5d5cc93e1905adcfc886954d9fd407e91f55797d67ba",
+      "gitBlobSha1": "d19e5188e6fe5097aa0f7902987fd1ab835d0654",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformPolarity.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformPolarity.ts"
+    },
+    {
+      "path": "build/wikia/transformers/transformVersion.ts",
+      "size": 823,
+      "sha256": "4ac054e9fd22fe427e4f3057a7eb0020e6d5e0ac369205210e94d345d927cd08",
+      "gitBlobSha1": "9f69f76a0eafca40ca73e31756ad4bac9e746c90",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformVersion.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformVersion.ts"
+    },
+    {
+      "path": "build/wikia/transformers/transformWarframe.ts",
+      "size": 2797,
+      "sha256": "c45e4ec11d6618f70c4af6458351769c5ce726f91d4282d8b64dcd6a331e18f7",
+      "gitBlobSha1": "bda6e7ae4ada46d646a88ae1f0abde79acae4d5e",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformWarframe.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformWarframe.ts"
+    },
+    {
+      "path": "build/wikia/transformers/transformWeapon.ts",
+      "size": 8637,
+      "sha256": "06f10f4972c059b7366e116e1877c2edb0fb4291fd7fb08266b7f7b59be92332",
+      "gitBlobSha1": "15e93d9664d3685a620a72c0213c9820188929fe",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformWeapon.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/transformers/transformWeapon.ts"
+    },
+    {
+      "path": "build/wikia/WikiaDataScraper.ts",
+      "size": 7674,
+      "sha256": "e3bc667911205d8c374dc1d1d638f593a93899a1dc726086b2f7ee26e213c9aa",
+      "gitBlobSha1": "065cd74aff99a4283c19a0f387b7dd2c36670109",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/WikiaDataScraper.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/build/wikia/WikiaDataScraper.ts"
     },
     {
       "path": "config/bpConflicts.json",
       "size": 129,
+      "sha256": "f9f018108fbfba315f13db14c5d8f377435a82bba4cada534156c876b3e4f8eb",
       "gitBlobSha1": "2c80492ebe04c5444845685dc87551c3b325cdda",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/config/bpConflicts.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/config/bpConflicts.json",
-      "sha256": "f9f018108fbfba315f13db14c5d8f377435a82bba4cada534156c876b3e4f8eb"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/config/bpConflicts.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/config/bpConflicts.json"
     },
     {
       "path": "config/damageTypes.json",
       "size": 258,
+      "sha256": "7df8a3b61b61f87ef353218876dd8faa6be4ed51a78439863e5d62838645b5eb",
       "gitBlobSha1": "e636c9f0e82055327d936c9a576e517459b67131",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/config/damageTypes.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/config/damageTypes.json",
-      "sha256": "7df8a3b61b61f87ef353218876dd8faa6be4ed51a78439863e5d62838645b5eb"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/config/damageTypes.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/config/damageTypes.json"
     },
     {
       "path": "config/dropLocations.json",
       "size": 993,
+      "sha256": "b0e09a3b7758020a665399194c88798404cfc615dba6ef3e3c49c073421fc556",
       "gitBlobSha1": "284c309c7288339821e63e27c2300f783fdd0670",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/config/dropLocations.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/config/dropLocations.json",
-      "sha256": "b0e09a3b7758020a665399194c88798404cfc615dba6ef3e3c49c073421fc556"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/config/dropLocations.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/config/dropLocations.json"
     },
     {
       "path": "config/dt_map.json",
       "size": 379,
+      "sha256": "321460c08fc3939e04acdf32c4f90a4183919adbfd5c8b65c05b83d69520a9e3",
       "gitBlobSha1": "41c9bb6bb92ca57fcba4c28d1a64079831f798b1",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/config/dt_map.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/config/dt_map.json",
-      "sha256": "321460c08fc3939e04acdf32c4f90a4183919adbfd5c8b65c05b83d69520a9e3"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/config/dt_map.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/config/dt_map.json"
     },
     {
       "path": "config/endpoints.json",
       "size": 969,
+      "sha256": "a084af769e4b54ddc115405fd6708df71a74b0652223792e66b3591cd88705b0",
       "gitBlobSha1": "00d2818bbf30fd92edcc1ee32bec9d1b5f36cbe1",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/config/endpoints.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/config/endpoints.json",
-      "sha256": "a084af769e4b54ddc115405fd6708df71a74b0652223792e66b3591cd88705b0"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/config/endpoints.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/config/endpoints.json"
     },
     {
       "path": "config/itemTypes.json",
       "size": 21689,
+      "sha256": "f6c5dcf46ca5f54d8508859967e18e0e219e255bbeed85ebe7ed33e40b6c1350",
       "gitBlobSha1": "5e986ff4545ee3002e4569fd5b675fce5c2153d4",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/config/itemTypes.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/config/itemTypes.json",
-      "sha256": "f6c5dcf46ca5f54d8508859967e18e0e219e255bbeed85ebe7ed33e40b6c1350"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/config/itemTypes.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/config/itemTypes.json"
     },
     {
       "path": "config/locales.json",
       "size": 85,
+      "sha256": "ce0ee426723c2c3a3324bb6793a140e8be90b88c3a05b749537a41c844587c79",
       "gitBlobSha1": "c8e32d83b9b0ebd9b6843ea3c4dd1a063a35b1a3",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/config/locales.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/config/locales.json",
-      "sha256": "ce0ee426723c2c3a3324bb6793a140e8be90b88c3a05b749537a41c844587c79"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/config/locales.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/config/locales.json"
     },
     {
       "path": "config/masterableCategories.json",
       "size": 305,
+      "sha256": "12861504cb550928d829733bfbe67a4e896ad9e23233749a26ae21f5b0b77f98",
       "gitBlobSha1": "a4d305a12fd5f9388a744a62acc1834dc656c99a",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/config/masterableCategories.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/config/masterableCategories.json",
-      "sha256": "12861504cb550928d829733bfbe67a4e896ad9e23233749a26ae21f5b0b77f98"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/config/masterableCategories.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/config/masterableCategories.json"
     },
     {
       "path": "config/overrides.json",
       "size": 9825,
+      "sha256": "ec70914f86780f087f911a84f6610be926924bdad2aba000972524fb50297723",
       "gitBlobSha1": "6b54c15b034340acc3da2bf3eedb6c9fdbbe364d",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/config/overrides.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/config/overrides.json",
-      "sha256": "ec70914f86780f087f911a84f6610be926924bdad2aba000972524fb50297723"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/config/overrides.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/config/overrides.json"
     },
     {
       "path": "config/polarities.json",
       "size": 483,
+      "sha256": "d84faf829795874d61471e3e761f84819dfb75fca7683b9e26763a9a6db950e1",
       "gitBlobSha1": "51f5c956a637f2c0ae24b463b0d3c48b5bfbb01e",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/config/polarities.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/config/polarities.json",
-      "sha256": "d84faf829795874d61471e3e761f84819dfb75fca7683b9e26763a9a6db950e1"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/config/polarities.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/config/polarities.json"
     },
     {
       "path": "config/relicGrades.json",
       "size": 195,
+      "sha256": "3ebc48cbc69e045300ad8b806549dc555ef27fb1cb7043c6c02b6a43940d420f",
       "gitBlobSha1": "39570acb120730fbba14e07d122065f415ef8678",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/config/relicGrades.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/config/relicGrades.json",
-      "sha256": "3ebc48cbc69e045300ad8b806549dc555ef27fb1cb7043c6c02b6a43940d420f"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/config/relicGrades.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/config/relicGrades.json"
     },
     {
       "path": "config/variants.json",
       "size": 466,
+      "sha256": "9d7fb31c47a0491bcfc8bb8f988faadaaceb57bc3d851e084e0c69d7af30f30b",
       "gitBlobSha1": "73a209141f34b8184b3a0496f9672c1854cd2aac",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/config/variants.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/config/variants.json",
-      "sha256": "9d7fb31c47a0491bcfc8bb8f988faadaaceb57bc3d851e084e0c69d7af30f30b"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/config/variants.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/config/variants.json"
     },
     {
       "path": "config/wikiaNameOverrides.json",
       "size": 92,
+      "sha256": "ec4b66c2384423d65f7a5bd12d19b1298763fc29cadca8a89d4d8a267e9b6c6c",
       "gitBlobSha1": "630218fa69cc17934ff319d888797cc0b75df135",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/config/wikiaNameOverrides.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/config/wikiaNameOverrides.json",
-      "sha256": "ec4b66c2384423d65f7a5bd12d19b1298763fc29cadca8a89d4d8a267e9b6c6c"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/config/wikiaNameOverrides.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/config/wikiaNameOverrides.json"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 1263,
+      "sha256": "e82128ebd5155047228e096119f817514a710708ef7e6ee51ce67f307978ed8a",
+      "gitBlobSha1": "8e42ff9caa282c5a8a1c757197deea19dae725c2",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/CONTRIBUTING.md",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/CONTRIBUTING.md"
     },
     {
       "path": "data/cache/.export.json",
       "size": 15513,
-      "gitBlobSha1": "6a192bc02f78d600227f8d15b62a1628b86114e4",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/cache/.export.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/cache/.export.json",
-      "sha256": "b22029f0075d4bb6fd475e7037476d8514d893ca393e09a369436e8bcbb7a6ca"
+      "sha256": "3278f65687682d5e3259cdc8b6ebe016c7d28c76e42d689cf7a83e3cad9433de",
+      "gitBlobSha1": "bf960e45cd37be9c7334377277db92b674f11f23",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/cache/.export.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/cache/.export.json"
     },
     {
       "path": "data/cache/.images.json",
-      "size": 1841008,
-      "gitBlobSha1": "a76e84ff65b561f61c325343d1365515d2df6e4c",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/cache/.images.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/cache/.images.json",
-      "sha256": "581842588353eaf5e5599bd896903c1fba57d79d38fdc5bfdff15b0459814c92"
+      "size": 1841161,
+      "sha256": "fc724fd95f93d28f88247e78b74cd84dfb77430851ee2c2601e2da61f0b05f9d",
+      "gitBlobSha1": "b941964ce180b91f7d9f41610cf2fb1a00e2f7eb",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/cache/.images.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/cache/.images.json"
     },
     {
       "path": "data/json/Arcanes.json",
-      "size": 287942,
-      "gitBlobSha1": "1ae5c89ae94253d2960944dc81407e4df535d742",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Arcanes.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Arcanes.json",
-      "sha256": "6eadb7c36894dad2cc48b78b422b28582771c872642653db65a99fcfaebceb07"
+      "size": 287904,
+      "sha256": "0ad1515a900031625da7542b8ccd6618ac94f4785387451e292ce133f36ef083",
+      "gitBlobSha1": "76b0bbd867e41f6a463609a5d74d5b4482af08c7",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Arcanes.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Arcanes.json"
     },
     {
       "path": "data/json/Arch-Gun.json",
-      "size": 48573,
-      "gitBlobSha1": "d707a38d307101787f6cbbca892ac5624a7fa8f4",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Arch-Gun.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Arch-Gun.json",
-      "sha256": "6bf2bcf241fee2ee3207848fa532fe9eb5dfefa97d4e817ee8651967ab43d0db"
+      "size": 48541,
+      "sha256": "9287ba7a9e26039d5b316a7edcff7559fc843b8e4effa0af3e45a1d174c70d9c",
+      "gitBlobSha1": "d7e261df82f25ddb751fb355a289b51dcb55424a",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Arch-Gun.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Arch-Gun.json"
     },
     {
       "path": "data/json/Arch-Melee.json",
       "size": 19445,
-      "gitBlobSha1": "40bd698c034d6b029e6e10786ecc5cc557c3724c",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Arch-Melee.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Arch-Melee.json",
-      "sha256": "2cc3aee93351bc10bd98e16b2bc8cbe5e27408a78b52a443cf4e0e3bc09ad6ed"
+      "sha256": "6b8812dec2457b378417b44d68de250f8baa6bcd4e622dd3a04c1c69b21c3b31",
+      "gitBlobSha1": "8a74bfddb30d28b13971bf42999d056487e3d5a5",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Arch-Melee.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Arch-Melee.json"
     },
     {
       "path": "data/json/Archwing.json",
       "size": 12604,
+      "sha256": "ebe76f869ddd1509ae19cf45e27ad3f1e3ae20449be7f17f978b63dd31abd169",
       "gitBlobSha1": "aa72c1e6837b540d4eac556dcdbb8a9887012ae9",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Archwing.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Archwing.json",
-      "sha256": "ebe76f869ddd1509ae19cf45e27ad3f1e3ae20449be7f17f978b63dd31abd169"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Archwing.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Archwing.json"
     },
     {
       "path": "data/json/Components.json",
-      "size": 4457148,
-      "gitBlobSha1": "b0f64fbcce5fa76165d4c152f7b1c125d1733d91",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Components.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Components.json",
-      "sha256": "b4f4a9203296aebd64742f3eb44586e9abb0b1239281b44a46268343d936c242"
+      "size": 2942967,
+      "sha256": "0d91f24cbfd3fcb80d9f10b06f7d997977d993f35df6db90c9157d08c2494a82",
+      "gitBlobSha1": "0d05855ab2a50ffaad11d37a075653d93c0e1c94",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Components.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Components.json"
     },
     {
       "path": "data/json/Enemy.json",
       "size": 2799680,
+      "sha256": "4583d4bd324e717c381a8a144d33e0d44c96f616fbfa12d8e7aab88d07cfde59",
       "gitBlobSha1": "1c54de87cb8d8f1029e812793ce7c08e9e5c9447",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Enemy.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Enemy.json",
-      "sha256": "4583d4bd324e717c381a8a144d33e0d44c96f616fbfa12d8e7aab88d07cfde59"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Enemy.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Enemy.json"
     },
     {
       "path": "data/json/Fish.json",
       "size": 70844,
+      "sha256": "4cbb7ab86eb988426354f9ecf8a9c8a09748de79b5991e67144e04f3724d2231",
       "gitBlobSha1": "8252484e379498e8ace4a3baf8803b0dc3c846c8",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Fish.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Fish.json",
-      "sha256": "4cbb7ab86eb988426354f9ecf8a9c8a09748de79b5991e67144e04f3724d2231"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Fish.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Fish.json"
     },
     {
       "path": "data/json/Gear.json",
-      "size": 109276,
-      "gitBlobSha1": "652aa6ad4891a5e32b16a3e1029fd89c57d58712",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Gear.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Gear.json",
-      "sha256": "6470bbe75a995ad374d79262be40ab7c468fae832d27cd3a3baf8610471121fe"
+      "size": 109353,
+      "sha256": "57cde118d5a88c386f33a926c4b4b345dc543d08a6265333d5494b2b6f651379",
+      "gitBlobSha1": "0b0522aecf2689e588467af6571f2e34a75abb98",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Gear.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Gear.json"
     },
     {
       "path": "data/json/Glyphs.json",
       "size": 516209,
+      "sha256": "cb6212e4f9aa389bc5dca86bc1d5859813135ea3eaade1ab3a0f1196f88a2b9f",
       "gitBlobSha1": "fc32ed1ae8db25210d30d705455de3a6c007271a",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Glyphs.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Glyphs.json",
-      "sha256": "cb6212e4f9aa389bc5dca86bc1d5859813135ea3eaade1ab3a0f1196f88a2b9f"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Glyphs.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Glyphs.json"
     },
     {
       "path": "data/json/Honoria.json",
       "size": 102264,
-      "gitBlobSha1": "c356f0b79f77b47dd7af2dae81cecb8e6cd61175",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Honoria.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Honoria.json",
-      "sha256": "3a6d74e6206f5661d295560cb0fb9b9ac66e4c753530948e17929f606d6a54e8"
+      "sha256": "f9bd3347aee87533ff9bba4343ab29b8df0b4577b0c7ed8e24bfa0828ad1b332",
+      "gitBlobSha1": "b8fb75c6d468e9fd5fc3928d0ec6e1026fbd3987",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Honoria.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Honoria.json"
+    },
+    {
+      "path": "data/json/i18n/de.json",
+      "size": 4461745,
+      "sha256": "fce54bc2e6681644bfb3a9cf42f213126d576671ba2949b33d4f252c7757dec0",
+      "gitBlobSha1": "d31cc49f7f71d79e7144c8a91bac92ae2ed0d5c2",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/de.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/de.json"
+    },
+    {
+      "path": "data/json/i18n/es.json",
+      "size": 4534028,
+      "sha256": "10e9b44b28a2f59cd2758a6a9b22a87bc8f33a27b1af57888ce63a95a0833630",
+      "gitBlobSha1": "a0938051fc1bd52e14665c04d36db94ab3379f4a",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/es.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/es.json"
+    },
+    {
+      "path": "data/json/i18n/fr.json",
+      "size": 4557197,
+      "sha256": "aa77ad59c2d88c96bba8ef71f2a529d217b9e0af82df4c94bffb82950124e67d",
+      "gitBlobSha1": "fedb444953b5b57325ab6e099a12ead1f9884ca8",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/fr.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/fr.json"
+    },
+    {
+      "path": "data/json/i18n/it.json",
+      "size": 4385750,
+      "sha256": "acd511a2e6785d9303cd2e3d02d3b0214e5199770794b67d75e6742266908cfb",
+      "gitBlobSha1": "7ef137b38bbb279393a3ce399110384fffe7f493",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/it.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/it.json"
+    },
+    {
+      "path": "data/json/i18n/ja.json",
+      "size": 4608048,
+      "sha256": "a2f874730a2a79b8e65251b3b4e90a83e0ffed493b0b09e668fefb538ac5e0d9",
+      "gitBlobSha1": "c6424a8e2fadf31edd867357d594b0f0a12d93d9",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/ja.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/ja.json"
+    },
+    {
+      "path": "data/json/i18n/ko.json",
+      "size": 4842560,
+      "sha256": "874b449cee787ffbc3e626e6bba7fc3e42e4a31b864888299c5b7f1b83efc69e",
+      "gitBlobSha1": "be032859953cd336238365de3a404b16cba488ff",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/ko.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/ko.json"
+    },
+    {
+      "path": "data/json/i18n/pl.json",
+      "size": 4415509,
+      "sha256": "9d47f973e91263a6d7199949acb9dff216953850c3e7fe9f2a392f32cd5aacd5",
+      "gitBlobSha1": "66f2fecfc82bebf3e6c6b7f2120a1db61969b677",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/pl.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/pl.json"
+    },
+    {
+      "path": "data/json/i18n/pt.json",
+      "size": 4487958,
+      "sha256": "634b8583651be5408a3e24e3a454685c6b5b5d06fbbc77d7065a76c6df5e7dd8",
+      "gitBlobSha1": "24babed304f9b0c233e75af185cca7af3b11ae48",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/pt.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/pt.json"
+    },
+    {
+      "path": "data/json/i18n/ru.json",
+      "size": 6108342,
+      "sha256": "ff5225f62441ce1716a27cfbe47eb0334dbfebcfab19ac021228af9d17e32699",
+      "gitBlobSha1": "2eee676873a448eb364be118f030fee521a72898",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/ru.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/ru.json"
+    },
+    {
+      "path": "data/json/i18n/tc.json",
+      "size": 4095182,
+      "sha256": "eaf1cfac71518fc05f8bf1c5e0f53f560c1902acbefc5d94ef8d89dcac54e8e0",
+      "gitBlobSha1": "aab073b86c4d5c0f14f0cfbbad48086669d1823f",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/tc.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/tc.json"
+    },
+    {
+      "path": "data/json/i18n/th.json",
+      "size": 7466439,
+      "sha256": "32ac2a9c345f8fb3291ca463406f63b3fb43f713ce5ae13a308522de2738af45",
+      "gitBlobSha1": "2fa5403067447f47eddb5ae92cf4cb58cfcd1c58",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/th.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/th.json"
+    },
+    {
+      "path": "data/json/i18n/tr.json",
+      "size": 4359572,
+      "sha256": "25a91606eaf7306dabca78445cde3b5d1bf53e2e1bbe815620a11e0a226ee19f",
+      "gitBlobSha1": "b88cdb43f188537b2491228ad6a64ffd70f5bbdf",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/tr.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/tr.json"
+    },
+    {
+      "path": "data/json/i18n/uk.json",
+      "size": 6146545,
+      "sha256": "af6ea302e78d3d12586f57da628f208473a4ac07181542680b178b7f83b8332d",
+      "gitBlobSha1": "4b7dff594e89ade3306f1aee669a69a85ec3c11c",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/uk.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/uk.json"
+    },
+    {
+      "path": "data/json/i18n/zh.json",
+      "size": 4104257,
+      "sha256": "0e8774c6b80c5f92ed6ca1be84b4a3d1eb023a1ce2fd91144cac1f95ca0363c7",
+      "gitBlobSha1": "0fc472e506cc388e85d391c73262fbfe4f2cc854",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/zh.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/i18n/zh.json"
     },
     {
       "path": "data/json/Melee.json",
-      "size": 656307,
-      "gitBlobSha1": "67f420d558629ee11d814118b3bf6d941b7378a2",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Melee.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Melee.json",
-      "sha256": "5b07ce0588c3b1cc30c1362d7676ad00323652c10424930fcbca9791cb258407"
+      "size": 655767,
+      "sha256": "3384c94220ae379105965cdc65235503b64b1656ab95f9affdaca349eb698bc6",
+      "gitBlobSha1": "0e092f3fcbab4fa6fb1ba83bb5a4e33d667567d2",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Melee.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Melee.json"
     },
     {
       "path": "data/json/Misc.json",
-      "size": 1274419,
-      "gitBlobSha1": "aecbd25bf86e67d06117b174e17d19fde8c48ec8",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Misc.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Misc.json",
-      "sha256": "f42bcdaac35360fbbbaa3ae66fdae6686d5fe3bdb5df74c15d4734c733209237"
+      "size": 1273954,
+      "sha256": "5f339de25fd35dad01462bef667a792d41e77f4d655cbf5bab44a7574330c321",
+      "gitBlobSha1": "f1aa7fd53a5a92302db6b81bd1f91552189cc4a7",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Misc.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Misc.json"
     },
     {
       "path": "data/json/Mods.json",
-      "size": 5712276,
-      "gitBlobSha1": "70bbe1c4c1d85afcb005eeb2bddf64610d8327b9",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Mods.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Mods.json",
-      "sha256": "fe329cb832d99153f8dc21ed5e6a14b62e701cd2da86e9b1546c4ff8c3f6e3b4"
+      "size": 5712204,
+      "sha256": "069e7f7eee9357d6aa7f10548be42ad528162a0515922da1b1bdb406de9b25d2",
+      "gitBlobSha1": "306b5d12a8c6a11a245410b23cebff1959d07105",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Mods.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Mods.json"
     },
     {
       "path": "data/json/Node.json",
       "size": 161861,
+      "sha256": "07f3d1e200de43aac45fa64c1b1621cbfa28260bb3cc75915aecfd23153b5b56",
       "gitBlobSha1": "531e9f46e944a0d38098dae4a2f22979ab9d4e2d",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Node.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Node.json",
-      "sha256": "07f3d1e200de43aac45fa64c1b1621cbfa28260bb3cc75915aecfd23153b5b56"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Node.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Node.json"
     },
     {
       "path": "data/json/Pets.json",
       "size": 82352,
+      "sha256": "69247ca8b6c0def4d4bc0ada2937edb9d450b3285c2c85b195b7a103386111ba",
       "gitBlobSha1": "de6efacab17e8134d9c845bd8db21a1955485500",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Pets.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Pets.json",
-      "sha256": "69247ca8b6c0def4d4bc0ada2937edb9d450b3285c2c85b195b7a103386111ba"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Pets.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Pets.json"
     },
     {
       "path": "data/json/Primary.json",
-      "size": 447365,
-      "gitBlobSha1": "55c0cf6ced7e7f6edb0d188111a7f04e9bab7f3b",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Primary.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Primary.json",
-      "sha256": "f2ffdce41b8d741fad9701843640cde1dea9dcb3ac448e4b29f60759cc39d5a0"
+      "size": 447008,
+      "sha256": "541d01598d4bb1743d77bc226c16b603d6e4f545f5fc56f71b2ee9802e562e39",
+      "gitBlobSha1": "d705244436b98958f3c6127f3cf4a9314e0b3780",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Primary.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Primary.json"
     },
     {
       "path": "data/json/Quests.json",
       "size": 22068,
-      "gitBlobSha1": "6a0f995655ac21e1e469ce0dd18c2120fb9e6a62",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Quests.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Quests.json",
-      "sha256": "51f04d708e39dea88fe270699a0695c3c519f88d283696cb034430c9133cac61"
+      "sha256": "f9012021416c1b5063581915f9df716ec46b6c652814eee9b09984fc9903c5b9",
+      "gitBlobSha1": "512f0d4ecd4f879b7d8e343eec1265681a80db02",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Quests.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Quests.json"
     },
     {
       "path": "data/json/Railjack.json",
       "size": 209925,
+      "sha256": "73658fd6b615945019cbff1c005d8c0317fb0f75b7a38f6d94d386da43c7cee9",
       "gitBlobSha1": "e1dd7d39596c281f2b3e64d2ba5bb80a405c4d7e",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Railjack.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Railjack.json",
-      "sha256": "73658fd6b615945019cbff1c005d8c0317fb0f75b7a38f6d94d386da43c7cee9"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Railjack.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Railjack.json"
     },
     {
       "path": "data/json/Relics.json",
-      "size": 8791629,
-      "gitBlobSha1": "162c2843803ec5d738007bb901f30987e29d971c",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Relics.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Relics.json",
-      "sha256": "4733ab645a81330a709b1a7c5b8b0369f7baa2b8024371e875f433011b7b3fb3"
+      "size": 2908339,
+      "sha256": "45d1e7cec24cbc5de46660613d396c4e6ac1198914bd0a2dfb6ccee72d4c9dae",
+      "gitBlobSha1": "b652ac4e43ffd0cdd2e3763fb9d12270605f5108",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Relics.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Relics.json"
     },
     {
       "path": "data/json/Resources.json",
-      "size": 291305,
-      "gitBlobSha1": "b33a07e870fe6e51cad9a40706dcb1e2ecf7f94e",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Resources.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Resources.json",
-      "sha256": "1266968802544331ba287042f701c4c4f3da73a521354da9de40517689ef5339"
+      "size": 290980,
+      "sha256": "bc2cee48f3d089ca12731cb0d9055d15c7444099ae72cd33accb13c3f8540365",
+      "gitBlobSha1": "342571aad87e3f5a3522506f1223a8dc86a978c5",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Resources.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Resources.json"
     },
     {
       "path": "data/json/Secondary.json",
-      "size": 325526,
-      "gitBlobSha1": "3b997a9cd4784cde3ac20d8e897a3d804db868bb",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Secondary.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Secondary.json",
-      "sha256": "98562b34773daf100fce743cbadb2204fb658d5936f576282e132fa7e662c2dd"
-    },
-    {
-      "path": "data/json/SentinelWeapons.json",
-      "size": 40112,
-      "gitBlobSha1": "5cbe2f05421e8b09dfcc0bd89ad1c4db82a3f457",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/SentinelWeapons.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/SentinelWeapons.json",
-      "sha256": "23232a109ff8a374e917f8bbdf14a3e76296930646578e987424237a257fabcb"
+      "size": 325290,
+      "sha256": "86d9ec7e2596bc80cb24000240bfbadb87fb77d2cafe869ef9f45ff75e72b3ec",
+      "gitBlobSha1": "617c357d84afc2b8a4fa1108107f93240b112960",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Secondary.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Secondary.json"
     },
     {
       "path": "data/json/Sentinels.json",
       "size": 23982,
+      "sha256": "3ba97ec86e7c80aef7c1a743c3c0272099457635544dfc5cfe37108f3ff9615f",
       "gitBlobSha1": "98594aac3e5a8dd3a3b6546b544bc2f851cf2425",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Sentinels.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Sentinels.json",
-      "sha256": "3ba97ec86e7c80aef7c1a743c3c0272099457635544dfc5cfe37108f3ff9615f"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Sentinels.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Sentinels.json"
+    },
+    {
+      "path": "data/json/SentinelWeapons.json",
+      "size": 40115,
+      "sha256": "08daf216004d390073f1e2b257fcda3cedba22498ef2753d05d2374a36e96229",
+      "gitBlobSha1": "475a1ea935e945b91e16ccd5f6c579f551cb9147",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/SentinelWeapons.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/SentinelWeapons.json"
     },
     {
       "path": "data/json/Sigils.json",
       "size": 106360,
+      "sha256": "26288e40a80123517e0c09701de340b0ffc93a35ac7dbab238a7b884daa3f4d0",
       "gitBlobSha1": "a552b2ae44ba48b804084269ab793111875a0cba",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Sigils.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Sigils.json",
-      "sha256": "26288e40a80123517e0c09701de340b0ffc93a35ac7dbab238a7b884daa3f4d0"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Sigils.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Sigils.json"
     },
     {
       "path": "data/json/Skins.json",
-      "size": 2525990,
-      "gitBlobSha1": "c8d4836763804a859128a8c5b09d745c432d33da",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Skins.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Skins.json",
-      "sha256": "919f2bd8c461ba5b82c106c19a9b8897fca50a7fc6a8a3a8f1fd89ede7b6df18"
+      "size": 2526177,
+      "sha256": "7dc658736114ba98a0d976229ad90b24855d52d61622ea869440723c70bcd92e",
+      "gitBlobSha1": "d92f742df2c9871a99a0aa6aed98bf9037ce6da3",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Skins.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Skins.json"
     },
     {
       "path": "data/json/Warframes.json",
       "size": 353813,
+      "sha256": "8212da092f96ae1c297676729d800166fedf30dee8b93b00b2195bf72b3a4b6b",
       "gitBlobSha1": "02c994f7a498e4674672360efb2cc372ba233bf8",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Warframes.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/Warframes.json",
-      "sha256": "8212da092f96ae1c297676729d800166fedf30dee8b93b00b2195bf72b3a4b6b"
-    },
-    {
-      "path": "data/json/i18n/de.json",
-      "size": 4460585,
-      "gitBlobSha1": "bff4dee03fa1e0066fbbbbc436dd9fe33fd58c56",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/de.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/de.json",
-      "sha256": "14856b844560e620959c6652a46dd51ecf6dbd62749916cd9c0b66604cc982e4"
-    },
-    {
-      "path": "data/json/i18n/es.json",
-      "size": 4533077,
-      "gitBlobSha1": "cd4a74591deaacf13059dc7a729b8d55b02e20a6",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/es.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/es.json",
-      "sha256": "c9b0fdb2a218f2dbbf08871d276b74c46761e513516dd2c1465ecec20afc1817"
-    },
-    {
-      "path": "data/json/i18n/fr.json",
-      "size": 4556249,
-      "gitBlobSha1": "82abb0aa945fb32fdf0fb6c88faf25f8a6b3e15b",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/fr.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/fr.json",
-      "sha256": "729498818a6c2c594760cc0bfc2eb21d5f2391b3b742ede99af7765cd3cee1a1"
-    },
-    {
-      "path": "data/json/i18n/it.json",
-      "size": 4384885,
-      "gitBlobSha1": "97150fb04c6f81b26482df130fc32abd406e08d9",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/it.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/it.json",
-      "sha256": "d4e6194bdb848d90ac69de08baf9978ab6a6f459e3dbc9d7e55694e54e3eefb8"
-    },
-    {
-      "path": "data/json/i18n/ja.json",
-      "size": 4606971,
-      "gitBlobSha1": "a28467bb713bc4ea4aeed911933da80c48830c79",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/ja.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/ja.json",
-      "sha256": "c7382193cb6851437126e65c1d58436200524954f99f96a06b95e8fd315b171d"
-    },
-    {
-      "path": "data/json/i18n/ko.json",
-      "size": 4841523,
-      "gitBlobSha1": "58ef42d86f89b04ea8c47ace3d556cffb30fd572",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/ko.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/ko.json",
-      "sha256": "606b7d078ec54db6b3ab27d0b2d1e027d85e4b8f1d699b88b231b4f2641944ee"
-    },
-    {
-      "path": "data/json/i18n/pl.json",
-      "size": 4414571,
-      "gitBlobSha1": "2c2b60134084df9b877b589e5ad08c1cfd454e9f",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/pl.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/pl.json",
-      "sha256": "b0af68b60b147d4cb5cfce1bfa86f6cf7446584335b714c812676565c0be0148"
-    },
-    {
-      "path": "data/json/i18n/pt.json",
-      "size": 4487218,
-      "gitBlobSha1": "7d41b0bd895ab7e9c2c5cdcf4dbbeabc71cdefc7",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/pt.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/pt.json",
-      "sha256": "ee7049fd9a40d48147d3ca1904cde878d1c2afcf7d3d5b94fbb82fbd51b61e46"
-    },
-    {
-      "path": "data/json/i18n/ru.json",
-      "size": 6107880,
-      "gitBlobSha1": "875cb76075ce1cbb0a3d267758826f21ef6fd5f2",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/ru.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/ru.json",
-      "sha256": "72ce03e5bca559beb82433d7a1e94ed67e971984bc8d7f07096912ec088206bf"
-    },
-    {
-      "path": "data/json/i18n/tc.json",
-      "size": 4094176,
-      "gitBlobSha1": "7ad9f67704be39576abe98299b8fffcb417c57ad",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/tc.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/tc.json",
-      "sha256": "1a46e058c3c3648e57f2d1416531dfeda80faddc6d82d9e3e6f91c6362ffcada"
-    },
-    {
-      "path": "data/json/i18n/th.json",
-      "size": 7465384,
-      "gitBlobSha1": "5cf174bc52ad422e5e6e397b350c85ce5fe1a4e8",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/th.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/th.json",
-      "sha256": "24e2aed26058b2436da09be5d449413504b86387c7e4db9d95c6e59b7bd755a5"
-    },
-    {
-      "path": "data/json/i18n/tr.json",
-      "size": 4358668,
-      "gitBlobSha1": "746cbe1ef66bd6bc62b020077237e713f2bc66cc",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/tr.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/tr.json",
-      "sha256": "34b9fd3325421cb31786b3f3e641a951b3917b30f36417264f556862cab7145f"
-    },
-    {
-      "path": "data/json/i18n/uk.json",
-      "size": 6146670,
-      "gitBlobSha1": "e0acae1109fa0732409a8d1b5390f07a4c760d82",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/uk.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/uk.json",
-      "sha256": "fc88ae7b616e1d83c3042e7884d4addc299fe6e20e7df37ff05115c08ba0e401"
-    },
-    {
-      "path": "data/json/i18n/zh.json",
-      "size": 4103154,
-      "gitBlobSha1": "8d89e961d5c09341a44bca1bc1cb0c960f799841",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/zh.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/json/i18n/zh.json",
-      "sha256": "029a7dd62e9ef32f035a0741b0ad5e898d1db0e6b2b7da3a4942edddf72c68af"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Warframes.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/json/Warframes.json"
     },
     {
       "path": "data/warnings.json",
       "size": 9148,
+      "sha256": "99156974c9a44d3cf0c572a249b91efc6572b36544e4072430abeed8989caaa8",
       "gitBlobSha1": "9682458af4cd1ed51c9a235675e1c8f757157866",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/data/warnings.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/data/warnings.json",
-      "sha256": "99156974c9a44d3cf0c572a249b91efc6572b36544e4072430abeed8989caaa8"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/data/warnings.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/data/warnings.json"
     },
     {
       "path": "eslint.config.ts",
       "size": 3457,
+      "sha256": "ceba7ac5d4eec2e0616fcf81ec765f27b765fe9752ce922d624080985ac5d7af",
       "gitBlobSha1": "85887ec3dd9662c39c8af9b6734a5260c55dffed",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/eslint.config.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/eslint.config.ts",
-      "sha256": "ceba7ac5d4eec2e0616fcf81ec765f27b765fe9752ce922d624080985ac5d7af"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/eslint.config.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/eslint.config.ts"
     },
     {
       "path": "index.d.ts",
       "size": 24045,
+      "sha256": "6430f108b18341b5dfc058cb50b3409bfbf4d822b6283b234901e268499993d7",
       "gitBlobSha1": "c5b894a0f0e8058819120d4051d85b87b63e513d",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/index.d.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/index.d.ts",
-      "sha256": "6430f108b18341b5dfc058cb50b3409bfbf4d822b6283b234901e268499993d7"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/index.d.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/index.d.ts"
     },
     {
       "path": "index.js",
       "size": 9193,
+      "sha256": "b8b6723cf2b6e2f5acf45b1ccfe7c5802917ee403e28286f3e48f658dea8385f",
       "gitBlobSha1": "29974224800403fdcd0c60c59f17821c4a553f46",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/index.js",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/index.js",
-      "sha256": "b8b6723cf2b6e2f5acf45b1ccfe7c5802917ee403e28286f3e48f658dea8385f"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/index.js",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/index.js"
     },
     {
       "path": "index.mjs",
       "size": 8870,
+      "sha256": "e2003fb224325c4fef836ddc2ea15de77542cba33d1f180f889d1d8f8750d910",
       "gitBlobSha1": "96ffb137988ca396d6c7378a859e1dfec1f4ed24",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/index.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/index.mjs",
-      "sha256": "e2003fb224325c4fef836ddc2ea15de77542cba33d1f180f889d1d8f8750d910"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/index.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/index.mjs"
     },
     {
       "path": "nyc.config.mjs",
       "size": 247,
+      "sha256": "2288e58a9e7029e1404fa8e34195518d4d88005749bf341f49c616e87e577dd5",
       "gitBlobSha1": "1592151e9e1f80291a493967c8895e41ee48d32f",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/nyc.config.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/nyc.config.mjs",
-      "sha256": "2288e58a9e7029e1404fa8e34195518d4d88005749bf341f49c616e87e577dd5"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/nyc.config.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/nyc.config.mjs"
     },
     {
       "path": "package-lock.json",
-      "size": 968224,
-      "gitBlobSha1": "cc83b9d5dc7c794245105c4f2c47237a85650a7a",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/package-lock.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/package-lock.json",
-      "sha256": "56db950168fb91389ae4078633f920e15837cfa4d67745a9f8bc34c4140604cd"
+      "size": 967450,
+      "sha256": "e14ed9ca56f750fd7e5ff62e8c20af57dda98082b1aa6a8c60941841f7b125fe",
+      "gitBlobSha1": "851a288e3cd4a049d9d7a13788016575a8e5eab4",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/package-lock.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/package-lock.json"
     },
     {
       "path": "package.json",
       "size": 3431,
-      "gitBlobSha1": "8dc55e86bfef67f304bf36a1eb3099124972386b",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/package.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/package.json",
-      "sha256": "4582f44cbb1ed7559367cb860a0aea1b5fa20d40ba7fcee0cae9f5ee8332c5b2"
+      "sha256": "7d377951a9d989b6fa33927dca2f3733b7e603b4713fc225fbf8db24c290b5e7",
+      "gitBlobSha1": "afb3a542b8978566b6686e2114f4094c70bb556a",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/package.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/package.json"
+    },
+    {
+      "path": "README.md",
+      "size": 9193,
+      "sha256": "15d02645dfb50d9d4ae70ee0ed4e225a5b79d19a5089e4fc239997b672f323ae",
+      "gitBlobSha1": "23c204db1cb1c5a4c87f0c26fc64791cb70a8950",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/README.md",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/README.md"
     },
     {
       "path": "test/build.integrity.spec.mjs",
       "size": 3721,
+      "sha256": "0c3a917fe1b0e3a0975e56af4dd52d5593de95a11133cdfe35bdd600e612d8ea",
       "gitBlobSha1": "c763b765fc3e4e041725b02aedafbbb3a8801b17",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/test/build.integrity.spec.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/test/build.integrity.spec.mjs",
-      "sha256": "0c3a917fe1b0e3a0975e56af4dd52d5593de95a11133cdfe35bdd600e612d8ea"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/test/build.integrity.spec.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/test/build.integrity.spec.mjs"
     },
     {
       "path": "test/fixtures/wikia.fixture.mjs",
       "size": 2463,
+      "sha256": "69fcc475c4d7973e485537165b6b09feae2e712414bb07799e2518eaa08405eb",
       "gitBlobSha1": "70bd9efed8830f114279fe0942619d3bcbd570fc",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/test/fixtures/wikia.fixture.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/test/fixtures/wikia.fixture.mjs",
-      "sha256": "69fcc475c4d7973e485537165b6b09feae2e712414bb07799e2518eaa08405eb"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/test/fixtures/wikia.fixture.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/test/fixtures/wikia.fixture.mjs"
     },
     {
       "path": "test/index.regression.spec.mjs",
       "size": 2157,
+      "sha256": "04731267fb3bbdd96de163c0f8e02a2c8e15437c948cfb83397d908901875f7b",
       "gitBlobSha1": "c478d5b6633477c5d5a99876f9e5d69dcdf8e19a",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/test/index.regression.spec.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/test/index.regression.spec.mjs",
-      "sha256": "04731267fb3bbdd96de163c0f8e02a2c8e15437c948cfb83397d908901875f7b"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/test/index.regression.spec.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/test/index.regression.spec.mjs"
     },
     {
       "path": "test/index.spec.mjs",
       "size": 29028,
+      "sha256": "898e0ed83085ae9f81bafe9985a7238e243e20bf06748f7a35f62c5bb394ab2c",
       "gitBlobSha1": "61d73ad30361dad7589de9bd4858c4087210d706",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/test/index.spec.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/test/index.spec.mjs",
-      "sha256": "898e0ed83085ae9f81bafe9985a7238e243e20bf06748f7a35f62c5bb394ab2c"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/test/index.spec.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/test/index.spec.mjs"
     },
     {
       "path": "test/lookup.mjs",
       "size": 789,
+      "sha256": "a3171915c309075c796e8c26ff55783a534cec976a100f75a4783bb510a9546d",
       "gitBlobSha1": "36d0e6e62403252a23c8a1f8261c6b8dcdb87649",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/test/lookup.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/test/lookup.mjs",
-      "sha256": "a3171915c309075c796e8c26ff55783a534cec976a100f75a4783bb510a9546d"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/test/lookup.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/test/lookup.mjs"
     },
     {
       "path": "test/parser.components.spec.mjs",
       "size": 4839,
+      "sha256": "3df7bbd58648fd23381a1f1d789c9863235ee538f57eb7c1e5db00375ad9927c",
       "gitBlobSha1": "8be7a8136f04ca33320fece6cee5725fc3bf90c3",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/test/parser.components.spec.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/test/parser.components.spec.mjs",
-      "sha256": "3df7bbd58648fd23381a1f1d789c9863235ee538f57eb7c1e5db00375ad9927c"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/test/parser.components.spec.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/test/parser.components.spec.mjs"
     },
     {
       "path": "test/parser.damage.spec.mjs",
       "size": 2816,
+      "sha256": "212cb5f19394304369b04c90ba39b3c16723998eca42ab34c5f87bfaa93e414f",
       "gitBlobSha1": "2b4b736c46208ab3e732d1ed66218d0f7b1578d3",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/test/parser.damage.spec.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/test/parser.damage.spec.mjs",
-      "sha256": "212cb5f19394304369b04c90ba39b3c16723998eca42ab34c5f87bfaa93e414f"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/test/parser.damage.spec.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/test/parser.damage.spec.mjs"
     },
     {
       "path": "test/parser.wikia.spec.mjs",
       "size": 11357,
+      "sha256": "af5fb6f8cf7cbe1a32f4ccdad2ef763725acec92920b698d6103a6d92aa9dcaf",
       "gitBlobSha1": "c7fdb46cee2044095798c373563422316fcd54f3",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/test/parser.wikia.spec.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/test/parser.wikia.spec.mjs",
-      "sha256": "af5fb6f8cf7cbe1a32f4ccdad2ef763725acec92920b698d6103a6d92aa9dcaf"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/test/parser.wikia.spec.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/test/parser.wikia.spec.mjs"
     },
     {
       "path": "test/utilities/find.spec.mjs",
       "size": 3960,
+      "sha256": "d05bec7b4080edb75abbc19596234b85a40a68e76f6706664483f59958714a7b",
       "gitBlobSha1": "cfff6b10d51a145277fa6747265fd8a0f12a8025",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/test/utilities/find.spec.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/test/utilities/find.spec.mjs",
-      "sha256": "d05bec7b4080edb75abbc19596234b85a40a68e76f6706664483f59958714a7b"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/test/utilities/find.spec.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/test/utilities/find.spec.mjs"
     },
     {
       "path": "test/utilities/pixel.spec.mjs",
       "size": 1049,
+      "sha256": "68d219c465cb3aa9933f052dc2689f338d6e1b91d874d8b7c09846ce3906bc74",
       "gitBlobSha1": "0cf3912f4061d4dd43ec706a8012fab450323894",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/test/utilities/pixel.spec.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/test/utilities/pixel.spec.mjs",
-      "sha256": "68d219c465cb3aa9933f052dc2689f338d6e1b91d874d8b7c09846ce3906bc74"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/test/utilities/pixel.spec.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/test/utilities/pixel.spec.mjs"
     },
     {
       "path": "test/utilities/resolveComponents.spec.mjs",
       "size": 3009,
+      "sha256": "2c5a8677d8c359412b3ad65a9cf688653893845e8639df74bf7298d110e0eca5",
       "gitBlobSha1": "9346c92279437075c873c0685cccd841f7d4d41f",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/test/utilities/resolveComponents.spec.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/test/utilities/resolveComponents.spec.mjs",
-      "sha256": "2c5a8677d8c359412b3ad65a9cf688653893845e8639df74bf7298d110e0eca5"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/test/utilities/resolveComponents.spec.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/test/utilities/resolveComponents.spec.mjs"
     },
     {
       "path": "test/utilities/title.spec.mjs",
       "size": 1167,
+      "sha256": "24ad6cd50c76e448a94e94c2f5f1d73df040cd18b0b38d4b3b923a1230365c11",
       "gitBlobSha1": "1f0488e597c2d244145c5989307633d8cc946051",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/test/utilities/title.spec.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/test/utilities/title.spec.mjs",
-      "sha256": "24ad6cd50c76e448a94e94c2f5f1d73df040cd18b0b38d4b3b923a1230365c11"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/test/utilities/title.spec.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/test/utilities/title.spec.mjs"
     },
     {
       "path": "test/utilities/utils.mjs",
       "size": 211,
+      "sha256": "cba84bd7e4c67da2b7c33eab64e383e81315eac76bba03658ab5e73ff87978a2",
       "gitBlobSha1": "49f4ee8787aa25108520205119f98191b0f7b1f4",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/test/utilities/utils.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/test/utilities/utils.mjs",
-      "sha256": "cba84bd7e4c67da2b7c33eab64e383e81315eac76bba03658ab5e73ff87978a2"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/test/utilities/utils.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/test/utilities/utils.mjs"
     },
     {
       "path": "tsconfig.json",
       "size": 600,
+      "sha256": "c980b0ed306325940177de9c744c9adbbb22dab367a125fc0372ade916b142d9",
       "gitBlobSha1": "9712079a8f4bbe5d343d853391fc0b7ae3758266",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/tsconfig.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/tsconfig.json",
-      "sha256": "c980b0ed306325940177de9c744c9adbbb22dab367a125fc0372ade916b142d9"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/tsconfig.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/tsconfig.json"
     },
     {
       "path": "tsconfig.schema.json",
       "size": 246,
+      "sha256": "78fc386990314fff2b7258561ae14acfcd15e0ad317850d078da05cef80a9e6a",
       "gitBlobSha1": "a7a8331cffab27479f5eea2c008bcf5d5c0ed1d4",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/tsconfig.schema.json",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/tsconfig.schema.json",
-      "sha256": "78fc386990314fff2b7258561ae14acfcd15e0ad317850d078da05cef80a9e6a"
-    },
-    {
-      "path": "utilities/Pixel.mjs",
-      "size": 2599,
-      "gitBlobSha1": "4360f7fcabc29d005156d9766c0f53a2c479fac7",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/Pixel.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/Pixel.mjs",
-      "sha256": "9e2e02c6c274594ab58b83c2c56bebf5f37ce9f74cda908d4a966ea59c0fa78a"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/tsconfig.schema.json",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/tsconfig.schema.json"
     },
     {
       "path": "utilities/colors.mjs",
       "size": 1511,
+      "sha256": "ceda570199d088897155ca83234864aecfd480bf6dae2bdf45e1f48b464e63d1",
       "gitBlobSha1": "a50f3254901e9490b7ab1adc07f52d2f8118462e",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/colors.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/colors.mjs",
-      "sha256": "ceda570199d088897155ca83234864aecfd480bf6dae2bdf45e1f48b464e63d1"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/utilities/colors.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/utilities/colors.mjs"
     },
     {
       "path": "utilities/find.mjs",
       "size": 2107,
+      "sha256": "3a3ff5a12dd9ce289f3f1423a3bcf18382507d3ce1af0d2543c04c90436c5db2",
       "gitBlobSha1": "ee55f035cc58bd978b8b88ffbeaa6e6dba30ca34",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/find.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/find.mjs",
-      "sha256": "3a3ff5a12dd9ce289f3f1423a3bcf18382507d3ce1af0d2543c04c90436c5db2"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/utilities/find.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/utilities/find.mjs"
     },
     {
       "path": "utilities/index.d.ts",
       "size": 802,
+      "sha256": "2d121cf4bc073998e5ba444729d8f3bac3ab3284a2b34b03da0ad89158573520",
       "gitBlobSha1": "e0920b1ec17ff619fe47eb2ba41c876de25b7620",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/index.d.ts",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/index.d.ts",
-      "sha256": "2d121cf4bc073998e5ba444729d8f3bac3ab3284a2b34b03da0ad89158573520"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/utilities/index.d.ts",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/utilities/index.d.ts"
     },
     {
       "path": "utilities/index.mjs",
       "size": 151,
+      "sha256": "ff753da95fb1daa8ce222e360e8cde5b87e42cffc4227302d62145247de453df",
       "gitBlobSha1": "ad4be37df55999ff7cabc1f210fc99df236082be",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/index.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/index.mjs",
-      "sha256": "ff753da95fb1daa8ce222e360e8cde5b87e42cffc4227302d62145247de453df"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/utilities/index.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/utilities/index.mjs"
+    },
+    {
+      "path": "utilities/Pixel.mjs",
+      "size": 2599,
+      "sha256": "9e2e02c6c274594ab58b83c2c56bebf5f37ce9f74cda908d4a966ea59c0fa78a",
+      "gitBlobSha1": "4360f7fcabc29d005156d9766c0f53a2c479fac7",
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/utilities/Pixel.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/utilities/Pixel.mjs"
     },
     {
       "path": "utilities/resolveComponents.js",
       "size": 1603,
+      "sha256": "e29cf5fd18e1ea4106cab78e2601b64d9664176a0b737729960c0923278c2626",
       "gitBlobSha1": "535a4858c2dddf7995517aa46605b1430d9b32cf",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/resolveComponents.js",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/resolveComponents.js",
-      "sha256": "e29cf5fd18e1ea4106cab78e2601b64d9664176a0b737729960c0923278c2626"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/utilities/resolveComponents.js",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/utilities/resolveComponents.js"
     },
     {
       "path": "utilities/resolveComponents.mjs",
       "size": 1583,
+      "sha256": "43e0ac6c7de4d0c1b61f66b8a57ef84acecb57b0698bda468f26abd1a334212e",
       "gitBlobSha1": "5492ec895d5f606b454ec429ced4c7c7e8b0d234",
-      "githubUrl": "https://github.com/WFCD/warframe-items/blob/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/resolveComponents.mjs",
-      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/20f8d9427a5a62268817853eefd8962d18c0b70e/utilities/resolveComponents.mjs",
-      "sha256": "43e0ac6c7de4d0c1b61f66b8a57ef84acecb57b0698bda468f26abd1a334212e"
+      "rawUrl": "https://raw.githubusercontent.com/WFCD/warframe-items/51c6f620efffb99042c41d24824c50cf681a1113/utilities/resolveComponents.mjs",
+      "githubUrl": "https://github.com/WFCD/warframe-items/blob/51c6f620efffb99042c41d24824c50cf681a1113/utilities/resolveComponents.mjs"
     }
   ],
-  "fetchedAt": "2026-10-19T15:22:01.366324+00:00",
-  "fileCount": 153,
-  "totalBytes": 101250492,
+  "fetchedAt": "2026-10-24T06:41:36.831Z",
+  "fileCount": 136,
+  "totalBytes": 93850356,
   "excludedFileCount": 12544,
   "excludedBytes": 624026156,
   "excludedEmbeddedImagePaths": [
     "data/logo.json"
-  ]
+  ],
+  "note": "文件和哈希来自当前 Store；当前 commit 日期未单独请求，不沿用旧日期。 图片排除清单延用 2026-10-18 的历史记录，不作为当前图库完整度或下载依据；本轮未扫描图库。",
+  "excludedInventoryAsOf": "2026-10-18"
 }

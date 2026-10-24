@@ -2,15 +2,91 @@
   "schemaVersion": 1,
   "intervalMinutes": 60,
   "concurrency": 4,
-  "network": { "proxyUrl": null },
-  "languages": ["de", "en", "es", "fr", "it", "ja", "ko", "pl", "pt", "ru", "tc", "th", "tr", "uk", "zh"],
-  "sources": [
-    { "id": "official", "label": "DE 官方 Public Export", "kind": "official", "localPath": "official-public-export", "enabled": true },
-    { "id": "plus", "label": "Public Export Plus", "kind": "github", "repository": "calamity-inc/warframe-public-export-plus", "branch": "senpai", "localPath": "git/warframe-public-export-plus", "enabled": true },
-    { "id": "wfcd", "label": "WFCD Items", "kind": "github", "repository": "WFCD/warframe-items", "branch": "master", "localPath": "wfcd-items", "enabled": true },
-    { "id": "oracle", "label": "WF Browse Oracle", "kind": "github", "repository": "calamity-inc/wf.browse.oracle", "branch": "senpai", "localPath": "git/wf.browse.oracle", "enabled": true },
-    { "id": "browse", "label": "browse.wf", "kind": "github", "repository": "calamity-inc/browse.wf", "branch": "senpai", "localPath": "git/browse.wf", "enabled": true },
-    { "id": "plus-gen", "label": "Plus 生成器（参考）", "kind": "github", "repository": "calamity-inc/warframe-public-export-plus-gen", "branch": "senpai", "localPath": "git/warframe-public-export-plus-gen", "enabled": true }
+  "network": {
+    "proxyUrl": null
+  },
+  "languages": [
+    "de",
+    "en",
+    "es",
+    "fr",
+    "it",
+    "ja",
+    "ko",
+    "pl",
+    "pt",
+    "ru",
+    "tc",
+    "th",
+    "tr",
+    "uk",
+    "zh"
   ],
-  "notifications": { "email": { "enabled": false, "status": "reserved-not-implemented" } }
+  "sources": [
+    {
+      "id": "official",
+      "label": "DE 官方 Public Export",
+      "kind": "official",
+      "localPath": "official-public-export",
+      "enabled": true
+    },
+    {
+      "id": "plus",
+      "label": "Public Export Plus",
+      "kind": "github",
+      "repository": "calamity-inc/warframe-public-export-plus",
+      "branch": "senpai",
+      "localPath": "git/warframe-public-export-plus",
+      "enabled": true
+    },
+    {
+      "id": "wfcd",
+      "label": "WFCD Items",
+      "kind": "github",
+      "repository": "WFCD/warframe-items",
+      "branch": "master",
+      "localPath": "wfcd-items",
+      "enabled": true
+    },
+    {
+      "id": "oracle",
+      "label": "WF Browse Oracle",
+      "kind": "github",
+      "repository": "calamity-inc/wf.browse.oracle",
+      "branch": "senpai",
+      "localPath": "git/wf.browse.oracle",
+      "enabled": true
+    },
+    {
+      "id": "browse",
+      "label": "browse.wf",
+      "kind": "github",
+      "repository": "calamity-inc/browse.wf",
+      "branch": "senpai",
+      "localPath": "git/browse.wf",
+      "enabled": true
+    },
+    {
+      "id": "plus-gen",
+      "label": "Plus 生成器（参考）",
+      "kind": "github",
+      "repository": "calamity-inc/warframe-public-export-plus-gen",
+      "branch": "senpai",
+      "localPath": "git/warframe-public-export-plus-gen",
+      "enabled": true
+    },
+    {
+      "id": "droptables",
+      "label": "DE 官方掉落表",
+      "kind": "droptables",
+      "localPath": "official-drop-tables",
+      "enabled": true
+    }
+  ],
+  "notifications": {
+    "email": {
+      "enabled": false,
+      "status": "reserved-not-implemented"
+    }
+  }
 }

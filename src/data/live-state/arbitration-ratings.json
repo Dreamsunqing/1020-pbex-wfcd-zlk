@@ -1,0 +1,5 @@
+{
+  "_schemaVersion": 1,
+  "_source": null,
+  "_note": "按节点 ID 录入 quality=high|normal、可选 yieldPerHour/unit；没有评级的数据保持 unknown，不按任务类型推测。"
+}

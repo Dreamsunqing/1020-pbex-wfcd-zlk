@@ -1,3 +1,4 @@
+import {dropTableSource} from './drop-table-store.mjs';
 import path from 'node:path';
 import { promises as fs } from 'node:fs';
 import lzma from 'lzma';
@@ -131,7 +132,7 @@ export async function runUpdate({ storeRoot, config, onProgress = () => {}, get 
         const candidatePath = path.join(store.root, 'candidates', `${source.id}.json`);
         const previous = await readJson(candidatePath).catch(() => before?.sources[source.id]);
         const configuredGet = (url, options) => get(url, { ...options, proxyUrl: config.network?.proxyUrl });
-        sources[source.id] = await (source.kind === 'official' ? officialSource : githubSource)(source, previous, config, store, configuredGet, onProgress);
+        sources[source.id] = await (source.kind === 'official' ? officialSource : source.kind === 'droptables' ? dropTableSource : githubSource)(source, previous, config, store, configuredGet, onProgress);
         await atomicJson(candidatePath, sources[source.id]);
       }
       const candidate = { sources }; const changes = changesBetween(before, candidate);

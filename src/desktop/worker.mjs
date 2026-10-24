@@ -1,3 +1,7 @@
+import {gunzipSync} from 'node:zlib';
+import {arbitrationCalendar} from '../core/live-state/arbitration-calendar.mjs';
+import {currentDropTables,refreshDropTables} from '../core/drop-table-store.mjs';
+import {dropTablePage} from '../core/drop-tables.mjs';
 import {allItems} from '../core/merge/repository.mjs';
 import {boosterArtAliases} from '../core/image-presentation.mjs';
 import {enrichWorldRewardArt} from '../core/live-state/reward-art.mjs';
@@ -61,6 +65,8 @@ const configFile = path.join(workerData.userData, 'sources.json');
 const anchorFile = path.join(store.root, 'runtime', 'world-state.json');
 const oracleStateFile = path.join(store.root, 'runtime', 'oracle-world-state.json');
 let config = await loadConfig(await exists(configFile) ? configFile : undefined);
+// Upgrade saved pre-0.17 source lists while preserving existing source choices.
+if(!config.sources.some(s=>s.id==='droptables')){config.sources.push((await loadConfig()).sources.find(s=>s.id==='droptables'));await atomicJson(configFile,config);}
 let preferences = await readJson(preferencesFile).catch(() => ({ root: workerData.defaultRoot, autoUpdate: false }));
 let library = null, release = null, mode = 'local', cached = null, busy = false;
 const previewTitles = new PreviewTitles();
@@ -118,6 +124,7 @@ async function sourceFile(sourceId, filename) {
   const id = mode === 'snapshot' ? `${sourceId}/${filename}` : `${source.localPath}/${filename}`;
   return (await readFile(id)).bytes.toString('utf8');
 }
+async function arbitrationInputs(){try{return await oracleData();}catch{return JSON.parse(gunzipSync(await fs.readFile(new URL('../data/live-state/arbitration-inputs.json.gz',import.meta.url)),{maxOutputLength:64*1024*1024}).toString());}}
 async function oracleData(includeWarframes = false) {
   const dictionary = JSON.parse(await sourceFile('plus', 'dict.zh.json'));
   if (includeWarframes) {
@@ -202,6 +209,7 @@ const handlers = {
       return mergedStatus(ctx);
     } finally { mergeBusy = false; }
   },
+  async dropTables(args={}){const snapshot=args.refresh?await refreshDropTables(store,{proxyUrl:config.network?.proxyUrl}):await currentDropTables(store);return dropTablePage(snapshot,await playerDataset(),args);},
   async playerLibraryStatus() {const data=await playerDataset();return {available:true,manifest:data.manifest};},
   async playerLibraryList(args = {}) { return playerLibraryList(await playerDataset(args.datasetVersion), args); },
   async playerLibraryDetail(args) { return playerLibraryDetail(await playerDataset(args.datasetVersion), args.id, { locale: args.locale }); },
@@ -275,6 +283,7 @@ const handlers = {
   async diff({ before, after }) { return changesBetween(await store.release(before), await store.release(after)); },
   async oracleOptions() { const data = await oracleData(true); return warframePool(data.warframes, data.dictionary); },
   async invigorations(args) { const data = await oracleData(true); return invigorations(args, data.warframes, data.dictionary, data.dataVersion); },
+  async arbitrationCalendar(args){const data=await arbitrationInputs(),ratings=await readJson(path.join(workerData.userData,'arbitration-ratings.json')).catch(()=>readJson(new URL('../data/live-state/arbitration-ratings.json',import.meta.url)));return arbitrationCalendar(data.text,{...args,ratings},data.regions,data.dictionary);},
   async arbitration(args) { const data = await oracleData(); return arbitrations(data.text, args, data.regions, data.dictionary, data.dataVersion); },
   async browseCycles(args) { const data = await loadBrowseData(sourceFile); const result = worldCycles(data.rules, { at: args.at, anchor: await cachedAnchor(anchorFile) }, data.dictionary, { releaseId: release?.id ?? null }); result.warnings.push(...data.warnings); return result; },
   async browseWeekly(args) { const data = await loadBrowseData(sourceFile); const result = weeklyRotations(data.rules, args, data.dictionary, { releaseId: release?.id ?? null }); result.warnings.push(...data.warnings); return result; },

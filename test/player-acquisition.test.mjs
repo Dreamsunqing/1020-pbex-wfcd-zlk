@@ -53,6 +53,26 @@ test('embedded index retains acquisition evidence and Wiki links without duplica
   assert.equal(playerLibraryDetail(slim,item.id).acquisition[0].links[0].title,'Cambria');
 });
 
+test('enemy variants share only unanimous localized names, never an arbitrary identity or missing-language fallback',()=>{
+  const {data,item}=fixture();data.manifest.locales.push('fr');
+  item.attributes.drops=[{location:' Commandeered Ember Prime ',type:'Test Mod',chance:2.5}];
+  const enemies=['normal','steel','quest'].map(key=>({id:'/Lotus/Test/Enemy/'+key,kind:'enemy',name:{en:'Commandeered Ember Prime ', 'zh-CN':'被控制的 Ember Prime',fr:key==='quest'?'Autre':'Ennemi'}}));
+  data.output['items/all.json'].push(...enemies);
+  const before=JSON.stringify(data),raw=acquisitionIndex(data).entries[item.id][0],row=playerAcquisition(data,item)[0];
+  assert.equal(row.title,'被控制的 Ember Prime');assert.equal(row.chance,2.5);assert.equal(row.basis,'enemy-name-consensus');assert.deepEqual(row.links,[]);assert.deepEqual(raw.nameCandidates,enemies.map(i=>i.id));assert.equal(raw.title.fr,undefined);assert.equal(playerAcquisition(data,item,'fr')[0].title,'Commandeered Ember Prime');
+  const slim=createPlayerBundle(data);assert.deepEqual(playerAcquisition(slim,allItems(slim)[0]),playerAcquisition(data,item));assert.equal(JSON.stringify(data),before);
+  const conflict=structuredClone(data);conflict.output['items/all.json'].at(-1).name['zh-CN']='另一个敌人';assert.equal(playerAcquisition(conflict,item)[0].title,'Commandeered Ember Prime');
+  const missing=structuredClone(data);delete missing.output['items/all.json'].at(-1).name['zh-CN'];assert.equal(acquisitionIndex(missing).entries[item.id][0].title['zh-CN'],undefined);
+  const mixed=structuredClone(data);mixed.output['items/all.json'].at(-1).kind='region';assert.equal(acquisitionIndex(mixed).entries[item.id][0].basis,'source-text');
+});
+
+test('actual bundle localizes Commandeered enemy drops through Plus names without conflating variants',async()=>{
+  const data=await loadPlayerBundle(),id='/Lotus/Upgrades/Mods/Antiques/DashDistanceSchools';
+  const rows=playerLibraryDetail(data,id).acquisition.filter(r=>r.original?.startsWith('Commandeered'));
+  assert.equal(rows.length,6);
+  for(const row of rows){assert.equal(row.title,'被控制的 '+row.original.slice('Commandeered '.length).trim());assert.equal(row.chance,2.5);assert.equal(row.basis,'enemy-name-consensus');assert.equal(row.links.length,0);assert.ok(row.nameCandidates.length>1);assert.equal(row.evidence.file,'wfcd-items/data/json/Mods.json');}
+});
+
 test('actual bundle exposes Mod drop sources, generic relic acquisition, and suppresses weapon skin false drops',async()=>{
   const data=await loadPlayerBundle();
   assert.ok(data.output['player/acquisition.json']);

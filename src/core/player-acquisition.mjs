@@ -14,6 +14,18 @@ function sourceRelics(data) {
 const title = (item, locale) => plainGameText(item?.name?.[locale] ?? item?.name?.en ?? '', 'name');
 const field = (data, item, key, locale) => selectLocalizedField(data, item.id, 'attributes.' + key, locale)?.value ?? item.attributes?.[key];
 
+// Several avatars can share a display name (normal, Steel Path, quest, etc.).
+// Their agreed translation is safe to display; their identities are not interchangeable.
+function enemyNameConsensus(matches, locales) {
+  const names = {};
+  if (matches.length < 2 || matches.some(item => item.kind !== 'enemy')) return names;
+  for (const locale of locales) {
+    const values = matches.map(item => typeof item.name?.[locale] === 'string' ? plainGameText(item.name[locale], 'name').trim() : '');
+    if (values.every(Boolean) && new Set(values).size === 1) names[locale] = values[0];
+  }
+  return names;
+}
+
 export function playerWikiLinks(item) {
   const links = [];
   const raw = item.attributes?.wikiaUrl ?? item.attributes?.wikiUrl;
@@ -76,11 +88,13 @@ export function acquisitionIndex(data) {
       const family = relics.byId.get(drop.uniqueName), sourceQuality = /\((Intact|Exceptional|Flawless|Radiant)\)$/i.exec(place)?.[1]?.toLowerCase();
       const qualityKey = ({intact:'Bronze',exceptional:'Silver',flawless:'Gold',radiant:'Platinum'})[sourceQuality] ?? relicIdentity(byId.get(drop.uniqueName) ?? {})?.quality;
       if (family) target = family.variants.get(qualityKey) ?? family.item;
-      const localized = {};
+      const locales = data.manifest.locales ?? ['zh-CN', 'en'];
+      const localized = !target && !node ? enemyNameConsensus(matches, locales) : {};
+      const consensus = Object.keys(localized).length > 0;
       if (target) for (const locale of data.manifest.locales ?? ['zh-CN', 'en']) localized[locale] = [target.kind === 'region' ? field(data, target, 'systemName', locale) : '', title(target, locale), target.kind === 'region' ? field(data, target, 'missionName', locale) : '', family ? (locale.startsWith('zh') ? RELIC_QUALITIES.find(([key])=>key===qualityKey)?.[1] : ({Bronze:'Intact',Silver:'Exceptional',Gold:'Flawless',Platinum:'Radiant'})[qualityKey]) : ''].filter(Boolean).join(' · ');
       const chance = Number.isFinite(drop.chance) && drop.chance >= 0 && drop.chance <= 100 ? drop.chance : null;
       const quality = relic ? /(?:\s|\()(Intact|Exceptional|Flawless|Radiant)\)?$/i.exec(drop.type)?.[1] : null;
-      const row = { method: 'drop', title: localized, original: place, rotation: rotation?.[1] ?? null, ...(quality ? { rewardVariant: { intact:'完整遗物',exceptional:'无暇遗物',flawless:'良好遗物',radiant:'光辉遗物' }[quality.toLowerCase()] } : {}), chance, quantity: quantity && Number(quantity[1]) > 0 ? Number(quantity[1]) : null, links: target ? [target.id] : [], source: 'WFCD', basis: family ? 'exact-relic-source-id' : target ? 'unique-location' : 'source-text' };
+      const row = { method: 'drop', title: localized, original: place, rotation: rotation?.[1] ?? null, ...(quality ? { rewardVariant: { intact:'完整遗物',exceptional:'无暇遗物',flawless:'良好遗物',radiant:'光辉遗物' }[quality.toLowerCase()] } : {}), chance, quantity: quantity && Number(quantity[1]) > 0 ? Number(quantity[1]) : null, links: target ? [target.id] : [], source: 'WFCD', basis: family ? 'exact-relic-source-id' : target ? 'unique-location' : consensus ? 'enemy-name-consensus' : 'source-text', ...(consensus ? { nameCandidates: matches.map(item => item.id) } : {}) };
       const key = JSON.stringify(row); if (seen.has(key)) continue; seen.add(key);
       const source = dropSources.get(item.id); if (source) row.evidence = { source: source.source, file: source.file, hash: source.hash, pointer: source.pointer + '/' + at };
       add(item.id, row); report.drops++;

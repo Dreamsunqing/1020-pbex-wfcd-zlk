@@ -28,6 +28,13 @@ function fixture() {
   const read = async file => { const bytes = Buffer.from(JSON.stringify(docs.get(file))); return { bytes, hash: sha256(bytes) }; };
   return { docs, files, read, id, blueprint, contract: structuredClone(FULL_CONTRACT) };
 }
+test('共享 Blueprint 标签通过精确配方成品生成完整名称，独立蓝图标题保持优先', async () => {
+  const f=fixture(),file='wfcd/data/json/Components.json',english='official/manifests/en/ExportWeapons_en.json';
+  f.docs.set(file,[{uniqueName:f.blueprint,name:'Blueprint'}]);f.files.push({id:file,source:'wfcd'});
+  f.docs.set(english,{ExportWeapons:[{uniqueName:f.id,name:'Test Weapon'}]});f.files.push({id:english,source:'official'});
+  let data=await buildMerged(f);assert.equal(mergedDetail(data,f.blueprint).item.name.en,'Test Weapon Blueprint');assert.equal(mergedDetail(data,f.blueprint).item.name['zh-CN'],'官方标题 蓝图');
+  f.docs.get(file)[0].name='Distinct Recipe';data=await buildMerged(f);assert.equal(mergedDetail(data,f.blueprint).item.name.en,'Distinct Recipe');
+});
 test('全量模式涵盖非样本、节点标识、技能、未知字段、稀有度奖励和缺失引用；压缩溯源可还原', async () => {
   const f = fixture(), a = await buildMerged(f), b = await buildMerged(f);
   assert.equal(a.manifest.datasetVersion, b.manifest.datasetVersion);
@@ -81,7 +88,7 @@ test('快照及对象只保留当前和上一版，包轮换只保留当前和�
 test('真实全量静态资料覆盖全部规则、全部奖励及可回查源字段', { timeout: 180000 }, async () => {
   const library = await scanLibrary('.'); const data = await buildMerged({ files: library.files, read: id => readLibraryFile(library.root, id), contract: FULL_CONTRACT });
   assert.equal(data.manifest.summary.entities, 32941); assert.equal(data.manifest.summary.recipes, 2024); assert.equal(data.manifest.summary.rewardTables, 1102); assert.equal(data.manifest.summary.rewardItems, 11509);
-  const coverage = data.output['reports/coverage.json']; assert.equal(coverage.kinds.arcane, 177); assert.equal(coverage.incarnonLinks.adapters,45); assert.equal(coverage.incarnonLinks.weapons,89); assert.equal(coverage.incarnonLinks.unmatched.length,0); assert.equal(coverage.files.length, library.files.length);
+  const coverage = data.output['reports/coverage.json']; assert.equal(coverage.kinds.arcane, 177); assert.equal(coverage.modSetLinks.sets,19); assert.equal(coverage.modSetLinks.members,72); assert.equal(coverage.modSetLinks.unmatched.length,0); assert.equal(coverage.incarnonLinks.adapters,45); assert.equal(coverage.incarnonLinks.weapons,89); assert.equal(coverage.incarnonLinks.unmatched.length,0); assert.equal(coverage.files.length, library.files.length);
   assert.ok(!data.output['reports/issues.json'].some(i => i.code === 'optional-input-missing'));
   const names = mergedList(data, { query: '迅发电浆炮' }); assert.ok(names.rows.length > 0);
   const detail = mergedDetail(data, '/Lotus/Weapons/Tenno/LongGuns/SapientPrimary/SapientPrimaryWeapon');

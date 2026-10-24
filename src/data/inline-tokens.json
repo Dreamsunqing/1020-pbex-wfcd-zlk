@@ -382,6 +382,10 @@
     },
     "br /": {
       "kind": "break"
+    },
+    "LOWER_IS_BETTER": {
+      "kind": "format",
+      "label": "数值越低越好"
     }
   }
 }

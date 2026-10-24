@@ -1,4 +1,6 @@
 // Read-only player projection over the verified P3 build. Never mutates source entities.
+import { modSetBonus } from './mod-sets.mjs';
+import { playerWikiLinks, playerAcquisition } from './player-acquisition.mjs';
 import { allItems } from './merge/repository.mjs';
 import { internalItems } from './merge/display-policy.mjs';
 import { imageDescriptors } from './merge/service.mjs';
@@ -89,8 +91,8 @@ export function playerRadar(item,peers) {
   const keys=item.kind==='weapon'?['totalDamage','criticalChance','criticalMultiplier','statusChance','fireRate']:['health','shield','armor','energy','sprintSpeed'];
   return keys.flatMap(key=>{const value=item.stats?.[key],values=peers.map(p=>p.stats?.[key]).filter(Number.isFinite);if(!Number.isFinite(value)||values.length<5||new Set(values).size<2)return [];const rank=(values.filter(v=>v<value).length+values.filter(v=>v===value).length/2)/values.length;return [{key,value,rank,samples:values.length}];});
 }
-const outgoing={'incarnon-adapter':'灵化之源',produces:'制作成品',requires:'制造材料','has-ability':'技能','has-component':'组件与材料','has-exalted':'显赫武器','includes-item':'附带物品','augmented-by':'强化 Mod','subsumed-ability':'可移植技能'};
-const incoming={'incarnon-adapter':'适配武器',produces:'制作蓝图',requires:'用于制造','has-ability':'所属战甲','has-component':'用于物品','has-exalted':'所属战甲','augmented-by':'强化对象','subsumed-ability':'献出技能的战甲'};
+const outgoing={'member-of-mod-set':'所属套装','incarnon-adapter':'灵化之源',produces:'制作成品',requires:'制造材料','has-ability':'技能','has-component':'组件与材料','has-exalted':'显赫武器','includes-item':'附带物品','augmented-by':'强化 Mod','subsumed-ability':'可移植技能'};
+const incoming={'member-of-mod-set':'套装成员','incarnon-adapter':'适配武器',produces:'制作蓝图',requires:'用于制造','has-ability':'所属战甲','has-component':'用于物品','has-exalted':'所属战甲','augmented-by':'强化对象','subsumed-ability':'献出技能的战甲'};
 export function playerLibraryDetail(data,id,{locale='zh-CN'}={}) {
   validate(data,{locale});if(typeof id!=='string'||id.length>2000)throw new Error('物品标识无效');
   const idx=index(data),canonical=idx.byId.get(id);if(!canonical)throw new Error('资料中没有该物品');
@@ -125,7 +127,7 @@ export function playerLibraryDetail(data,id,{locale='zh-CN'}={}) {
     }
   }
   if(blueprintSources.size)related.set('蓝图获取遗物',blueprintSources);
-  const order=['灵化之源','适配武器','技能','显赫武器','强化 Mod','可移植技能','组件与材料','制造材料','制作成品','制作蓝图','附带物品'];
+  const order=['所属套装','套装成员','灵化之源','适配武器','技能','显赫武器','强化 Mod','可移植技能','组件与材料','制造材料','制作成品','制作蓝图','附带物品'];
   const relationGroups=[...related].sort(([a],[b])=>(order.includes(a)?order.indexOf(a):99)-(order.includes(b)?order.indexOf(b):99)).map(([label,rows])=>({label,rows:[...rows.values()].sort((a,b)=>(a.slot??0)-(b.slot??0))}));
   const all=[item,...[...related.values()].flatMap(rows=>[...rows.keys()].map(id=>idx.byId.get(id)))],images=imageDescriptors(data,all,locale);
   for(const g of relationGroups)for(const row of g.rows)row.image=images[row.id];
@@ -134,5 +136,8 @@ export function playerLibraryDetail(data,id,{locale='zh-CN'}={}) {
   const stats=definitions.filter(d=>d.path.startsWith('stats.')&&Number.isFinite(item.stats?.[d.path.slice(6)])).map(d=>({key:d.path.slice(6),label:d.label,unit:d.unit,value:item.stats[d.path.slice(6)]}));
   const radar=['weapon','warframe','companion'].includes(item.kind)?playerRadar(item,peers):[];
   const a=item.attributes ?? {};
-  return {datasetVersion:data.manifest.datasetVersion,relic,item:{...summary(item,locale,idx),image:images[id],descriptionSource:item.descriptionSource,passive:item.passiveDescription?.[locale] ?? item.passiveDescription?.en ?? '',tradable:item.tradable,rarity:playerLabel(item.rarity),stats},radar:radar.length>=3?radar.map(r=>({...r,label:definitions.find(d=>d.path==='stats.'+r.key)?.label ?? r.key})):[],peerLabel:playerLabel(f.type||f.category),relations:relationGroups,levelStats:a.levelStats ?? [],attacks:a.attacks ?? [],damage:a.damage ?? {},build:{credits:a.buildPrice,seconds:a.buildTime,quantity:a.buildQuantity},introduced:a.releaseDate};
+  const set=canonical.kind==='mod-set'?canonical:idx.byId.get(canonical.modSetId),setInfo=set?.modSetInfo;
+  const modSet=setInfo?{id:set.id,title:title(set,locale),size:setInfo.size,buffSet:setInfo.buffSet,levels:Array.from({length:setInfo.size},(_,i)=>modSetBonus(set,i+1,locale))}:null;
+  const acquisition=playerAcquisition(data,canonical,locale).map(row=>({...row,rarity:playerLabel(row.rarity),links:row.links.flatMap(({id})=>{const target=idx.byId.get(id);return target?[{id,title:title(target,locale)}]:[];})}));
+  return {location:item.kind==='region'?{system:a.systemName,mission:a.missionName,minLevel:a.minEnemyLevel,maxLevel:a.maxEnemyLevel}:null,wikiLinks:playerWikiLinks(canonical),acquisition,modSet,datasetVersion:data.manifest.datasetVersion,relic,item:{...summary(item,locale,idx),image:images[id],descriptionSource:item.descriptionSource,passive:item.passiveDescription?.[locale] ?? item.passiveDescription?.en ?? '',tradable:item.tradable,rarity:playerLabel(item.rarity),stats},radar:radar.length>=3?radar.map(r=>({...r,label:definitions.find(d=>d.path==='stats.'+r.key)?.label ?? r.key})):[],peerLabel:playerLabel(f.type||f.category),relations:relationGroups,levelStats:item.kind==='mod-set'?[]:a.levelStats ?? [],attacks:a.attacks ?? [],damage:a.damage ?? {},build:{credits:a.buildPrice,seconds:a.buildTime,quantity:a.buildQuantity},introduced:a.releaseDate};
 }

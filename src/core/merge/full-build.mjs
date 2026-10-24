@@ -2,6 +2,7 @@ import { createTextLocalizer } from '../text-localization.mjs';
 import { maxRankText } from '../localized-text.mjs';
 import { buildAbilityLinks } from './ability-links.mjs';
 import { buildIncarnonLinks } from './incarnon-links.mjs';
+import { buildModSetLinks } from './mod-set-links.mjs';
 import { sha256 } from '../io.mjs';
 import { FULL_MODELING_VERSION, assign, compareText, digest, normalize, pointer, stable, valid } from './contract.mjs';
 import { fullInputs, entityId } from './full-inputs.mjs';
@@ -56,18 +57,19 @@ export async function buildFull(options) {
   function texts(id, key, locale, visiting = new Set()) {
     if (visiting.has(id)) return [];
     const result = [], rows = index.get(id) ?? [];
+    const genericBlueprint = value => key === 'name' && ['blueprint', '蓝图', '藍圖'].includes(String(value).trim().toLowerCase()) && rows.some(r => r.kind === 'blueprint' && typeof r.value.resultType === 'string');
     for (const source of contract.priority) {
       for (const row of rows.filter(row => row.source.source === source)) {
         const actualKey = key === 'name' && row.value.abilityName ? 'abilityName' : key;
         const raw = row.value[actualKey];
         const value=Array.isArray(raw)&&raw.length&&raw.every(v=>typeof v==='string'&&!v.startsWith('/'))?raw.join('\n'):raw;
-        if (typeof value === 'string' && value.trim() && !value.startsWith('/') && row.locale === locale) result.push(candidate(row, actualKey,value,Array.isArray(raw)?'text-lines':'identity'));
+        if (typeof value === 'string' && value.trim() && !value.startsWith('/') && row.locale === locale && !genericBlueprint(value)) result.push(candidate(row, actualKey,value,Array.isArray(raw)?'text-lines':'identity'));
       }
       for (const row of rows) {
         const actualKey = key === 'name' && row.value.abilityName ? 'abilityName' : key;
         const ref = row.value[actualKey]; if (typeof ref !== 'string' || !ref.startsWith('/')) continue;
         for (const dictionary of dictionariesByLocale.get(locale).filter(d => d.shape === 'language' && d.source === source)) {
-          const value = dictionary.value[ref]; if (typeof value === 'string' && value.trim() && !value.startsWith('/')) result.push({ ...candidate(row, actualKey, value, 'language-key'), dictionary: { source, file: dictionary.file, hash: dictionary.hash, pointer: '/' + pointer(ref) } });
+          const value = dictionary.value[ref]; if (typeof value === 'string' && value.trim() && !value.startsWith('/') && !genericBlueprint(value)) result.push({ ...candidate(row, actualKey, value, 'language-key'), dictionary: { source, file: dictionary.file, hash: dictionary.hash, pointer: '/' + pointer(ref) } });
         }
       }
 
@@ -190,6 +192,9 @@ export async function buildFull(options) {
   for (const item of items) if (item.abilities) item.abilities.sort((a, b) => a.slot - b.slot || compareText(a.itemId, b.itemId));
   const abilityLinks = buildAbilityLinks({ documents, index, items, itemMap, relations, provenance, issue });
   const incarnonLinks = buildIncarnonLinks({ documents, index, items, itemMap, relations, provenance, issue });
+  const modSetLinks = buildModSetLinks({ index, items, itemMap, relations, provenance, issue, locales: contract.locales });
+  // A derived set display name resolves an earlier missing-name observation.
+  for (let at = issues.length - 1; at >= 0; at--) if (issues[at].code === 'missing-translation' && itemMap.get(issues[at].entityId)?.name['zh-CN']) issues.splice(at, 1);
   const rewardsDoc = documents.find(d => d.source === 'plus' && /\/ExportRewards.json$/.test(d.file));
   onProgress({ message: '关联全部奖励表、赏金清单和图片索引…' });
   for (const [id, rawPools] of Object.entries(rewardsDoc.value).sort(([a], [b]) => compareText(a, b))) {
@@ -239,7 +244,7 @@ export async function buildFull(options) {
   const imageDoc = documents.find(d => d.source === 'official' && /\/ExportManifest.json$/.test(d.file));
   const images = imageDoc?.value.Manifest?.map((r, i) => ({ itemId: r.uniqueName, textureLocation: r.textureLocation, source: { source: 'official', file: imageDoc.file, hash: imageDoc.hash, pointer: '/Manifest/' + i } })) ?? [];
   const nestedRecords = records.filter(r => index.get(r.entityId)?.some(v => v.embedded && v.source.file === r.source.file && v.source.pointer === r.source.pointer));
-  const coverage = { scope: contract.scope, entities: items.length, recipes: recipes.length, rewardTables: rewardTables.length, rewardItems: rewardTables.reduce((n, t) => n + t.pools.reduce((m, p) => m + p.items.length, 0), 0), relations: relations.length, fields: provenance.length, conflicts: issues.filter(i => i.code === 'field-conflict').length, unresolved: items.filter(i => i.unresolved).length, missingTranslations: items.filter(i => !i.name['zh-CN']).length, kinds: Object.fromEntries([...new Set(items.map(i => i.kind))].sort().map(kind => [kind, items.filter(i => i.kind === kind).length])), files: captured.inventory, nestedEntities: new Set(nestedRecords.map(r => r.entityId)).size, nestedRecords: nestedRecords.length, abilityLinks, incarnonLinks, relationKinds: Object.fromEntries([...new Set(relations.map(r => r.kind))].sort().map(kind => [kind, relations.filter(r => r.kind === kind).length])), unmodeled: [...new Set(records.flatMap(r => r.unmodeled))].sort(), limitations: ['嵌套对象按子字段合并；完整 ID 数组按身份合并，无 ID 数组保留整组候选' , '按 contract.locales 输出名称、描述和嵌套字段本地化；未配置语言保存在 reference；缺失回退需标记语言', '来源缺失引用显式标记 reference；存在数据问题则 review-required', '稀有度不猜概率；不确认实时轮次或任务阶段'] };
+  const coverage = { scope: contract.scope, entities: items.length, recipes: recipes.length, rewardTables: rewardTables.length, rewardItems: rewardTables.reduce((n, t) => n + t.pools.reduce((m, p) => m + p.items.length, 0), 0), relations: relations.length, fields: provenance.length, conflicts: issues.filter(i => i.code === 'field-conflict').length, unresolved: items.filter(i => i.unresolved).length, missingTranslations: items.filter(i => !i.name['zh-CN']).length, kinds: Object.fromEntries([...new Set(items.map(i => i.kind))].sort().map(kind => [kind, items.filter(i => i.kind === kind).length])), files: captured.inventory, nestedEntities: new Set(nestedRecords.map(r => r.entityId)).size, nestedRecords: nestedRecords.length, abilityLinks, incarnonLinks, modSetLinks, relationKinds: Object.fromEntries([...new Set(relations.map(r => r.kind))].sort().map(kind => [kind, relations.filter(r => r.kind === kind).length])), unmodeled: [...new Set(records.flatMap(r => r.unmodeled))].sort(), limitations: ['嵌套对象按子字段合并；完整 ID 数组按身份合并，无 ID 数组保留整组候选' , '按 contract.locales 输出名称、描述和嵌套字段本地化；未配置语言保存在 reference；缺失回退需标记语言', '来源缺失引用显式标记 reference；存在数据问题则 review-required', '稀有度不猜概率；不确认实时轮次或任务阶段'] };
   const localizationReport={schemaVersion:1,locales:contract.locales,identity:'full-upstream-id',fallback:['requested','en','explicitly-labeled-available-locale'],languages:{}};
   for(const locale of contract.locales) {
     const fields=Object.values(localizations[locale]).flatMap(Object.values);
@@ -248,7 +253,7 @@ export async function buildFull(options) {
   const output = {'reports/localization.json':localizationReport};
   for(const [locale,entries] of Object.entries(localizations)) output['localizations/'+locale+'.json']=entries;
   for (const [kind] of Object.entries(coverage.kinds)) output[`items/${kind === 'weapon' ? 'weapons' : kind === 'warframe' ? 'warframes' : kind === 'resource' ? 'resources' : kind === 'blueprint' ? 'blueprints' : kind === 'mod' ? 'mods' : kind === 'ability' ? 'abilities' : kind + 's'}.json`] = items.filter(i => i.kind === kind);
-  Object.assign(output, { 'ExportAbilities.json': Object.fromEntries(items.filter(i => i.kind === 'ability').map(i => [i.id, i])), 'reports/ability-links.json': abilityLinks, 'reports/incarnon-links.json': incarnonLinks, 'recipes.json': recipes, 'reward-tables.json': rewardTables, 'relations.json': relations, 'search.zh-CN.json': items.map(i => ({ id: i.id, kind: i.kind, title: i.name['zh-CN'] ?? i.name.en ?? i.id.split('/').at(-1), english: i.name.en ?? null })), 'images.json': images, 'bounty-references.json': tableRefs, 'reports/provenance.json': provenance, 'reports/issues.json': issues, 'reports/coverage.json': coverage, 'reports/source-records.json': records, 'contract.json': contract, 'overrides.json': overrides, ...captured.references });
+  Object.assign(output, { 'ExportAbilities.json': Object.fromEntries(items.filter(i => i.kind === 'ability').map(i => [i.id, i])), 'reports/ability-links.json': abilityLinks, 'reports/incarnon-links.json': incarnonLinks, 'reports/mod-set-links.json': modSetLinks, 'recipes.json': recipes, 'reward-tables.json': rewardTables, 'relations.json': relations, 'search.zh-CN.json': items.map(i => ({ id: i.id, kind: i.kind, title: i.name['zh-CN'] ?? i.name.en ?? i.id.split('/').at(-1), english: i.name.en ?? null })), 'images.json': images, 'bounty-references.json': tableRefs, 'reports/provenance.json': provenance, 'reports/issues.json': issues, 'reports/coverage.json': coverage, 'reports/source-records.json': records, 'contract.json': contract, 'overrides.json': overrides, ...captured.references });
   // File identity lives once in manifest.inputs; pointers retain exact field provenance.
   const inputIndex = new Map(documents.map((doc, i) => [doc.file, i]));
   function compactEvidence(node) {

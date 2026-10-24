@@ -430,6 +430,10 @@ export default {
     "br /": {
       "kind": "break"
     },
+    "LOWER_IS_BETTER": {
+      "kind": "format",
+      "label": "数值越低越好"
+    },
     "GAMEPAD_X": {
       "kind": "icon",
       "label": "<GAMEPAD_X>",
@@ -3214,11 +3218,6 @@ export default {
       "kind": "icon",
       "label": "<CURSOR_STATIC>",
       "image": "261aced64e5258142f13147da375a53679dd379b113e942d343f7c07e25de74f.png"
-    },
-    "LOWER_IS_BETTER": {
-      "kind": "icon",
-      "label": "<LOWER_IS_BETTER>",
-      "image": "e3fb6203a1da9193aee4418f42864bba6a1529c1bf32b17129f5c960803eb28e.png"
     },
     "PICKUP_DOUBLED": {
       "kind": "icon",

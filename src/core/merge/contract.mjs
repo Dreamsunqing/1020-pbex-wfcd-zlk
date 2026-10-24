@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { sha256 } from '../io.mjs';
-export const FULL_MODELING_VERSION = 'incarnon-links-1';
+export const FULL_MODELING_VERSION = 'mod-set-acquisition-1';
 export const CONTRACT = JSON.parse(await readFile(new URL('../../data/merge-contract.json', import.meta.url), 'utf8'));
 export const DEFAULT_OVERRIDES = JSON.parse(await readFile(new URL('../../data/merge-overrides.json', import.meta.url), 'utf8'));
 export const stable = (value, compact = false) => JSON.stringify(sort(value), null, compact ? undefined : 2) + '\n';

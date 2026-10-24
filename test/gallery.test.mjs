@@ -83,5 +83,5 @@ test('文本图标独立分类、可按原标记检索；别名共享图片，�
  const asset=await gallery.asset(row.key);assert.equal(asset.mime,'image/png');assert.match(asset.file,/src\/ui\/assets\/text-icons/);
  const exported=await copyWithoutOverwrite(asset.file,root,exportFilename(row,'en'));assert.equal(path.basename(exported),'DT_ELECTRICITY_COLOR.png');assert.deepEqual(await fs.readFile(exported),await fs.readFile(asset.file));
  assert.equal((await gallery.asset('text-icon:DT_HEAT')).file,(await gallery.asset('text-icon:DT_FIRE')).file);assert.equal((await gallery.detail(row.key)).relations.length,0);
- const isolated=new ImageGallery(null),icons=await isolated.list({provider:'text-icons'});assert.equal(icons.status.libraryMissing,true);assert.equal(icons.total,624);assert.equal((await isolated.asset(row.key)).mime,'image/png');await assert.rejects(isolated.asset('text-icon:../../package.json'),/暂无/);
+ const isolated=new ImageGallery(null),icons=await isolated.list({provider:'text-icons'});assert.equal(icons.status.libraryMissing,true);assert.equal(icons.total,623);assert.equal((await isolated.list({provider:'text-icons',query:'<LOWER_IS_BETTER>'})).total,0);assert.equal((await isolated.asset(row.key)).mime,'image/png');await assert.rejects(isolated.asset('text-icon:../../package.json'),/暂无/);
 });

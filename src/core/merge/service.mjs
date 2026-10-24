@@ -1,3 +1,4 @@
+import { modSetBonus } from '../mod-sets.mjs';
 import { cardArt } from '../card-art.mjs';
 import { selectLocalizedField, applyLocalizedFields } from '../text-localization.mjs';
 import path from 'node:path';
@@ -46,6 +47,7 @@ function sourceRecords(data, id = null) {
 }
 const imageCache = new WeakMap();
 const iconCache = new WeakMap();
+const modSetCache = new WeakMap();
 const imageNames = data => {
   if (!imageCache.has(data.output)) {
     const inventory = new Map((data.output['reports/coverage.json'].files ?? []).map(f => [f.file, f]));
@@ -67,7 +69,15 @@ export function localizedCardArt(data,item,locale='zh-CN') {
   if(!['mod','arcane'].includes(item.kind))return null;
   const keys=new Set(['en',locale].flatMap(language=>Object.keys(data.output['localizations/'+language+'.json']?.[item.id]??{})));
   const fields=Object.fromEntries([...keys].map(field=>[field,selectLocalizedField(data,item.id,field,locale)]).filter(([,entry])=>entry));
-  return cardArt(applyLocalizedFields(item,fields),locale);
+  const art=cardArt(applyLocalizedFields(item,fields),locale);
+  if(art?.kind==='mod'&&item.modSetId){
+    if(!modSetCache.has(data.output))modSetCache.set(data.output,new Map(allItems(data).filter(i=>i.kind==='mod-set').map(i=>[i.id,i])));
+    const set=modSetCache.get(data.output).get(item.modSetId),bonus=modSetBonus(set,1,locale);
+    if(set?.modSetInfo){const descriptor=data.output['player/images.json']?.[set.id];
+      art.set={id:set.id,title:set.name?.[locale]??set.name?.en??'',size:set.modSetInfo.size,count:1,bonus:bonus?.text??'',fallback:bonus?.fallback??false,icon:{id:set.id,imageName:descriptor?.imageName??set.imageName,icon:descriptor?.icon??set.icon??set.attributes?.icon}};
+    }
+  }
+  return art;
 }
 export const imageDescriptors = (data, items,locale='zh-CN') => {
   if(data.output['player/images.json'])return Object.fromEntries(items.map(item=>[item.id,{...data.output['player/images.json'][item.id],cardArt:localizedCardArt(data,item,locale)}]));

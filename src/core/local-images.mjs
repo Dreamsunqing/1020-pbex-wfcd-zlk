@@ -55,6 +55,9 @@ export class LocalImages {
         if (ref && ref.name === item.assetName) ids.set(item.id, { ...ref, method: 'full-index-id' });
       }
     }
+    const enemyFile=path.join(path.dirname(catalogFile),'enemy-image-index.json');
+    const enemyIndex=await fs.stat(enemyFile).then(s=>s.isFile()&&s.size<5*1024*1024?fs.readFile(enemyFile,'utf8'):null,()=>null);
+    if(enemyIndex){let parsed;try{parsed=JSON.parse(enemyIndex);}catch{/* An optional portrait index must not disable the existing library. */}for(const row of Array.isArray(parsed?.mappings)?parsed.mappings:[])if(typeof row.id==='string'&&row.id.startsWith('/Lotus/Types/Enemies/')&&safeName(row.assetName)&&exact.has(row.assetName)&&['wiki-internal-id','wiki-agent-avatar-id'].includes(row.basis))ids.set(row.id,{name:row.assetName,original:row.imageName,provider:row.provider??'wiki',method:row.basis,note:'敌人图片按完整 ID 关联；来源 '+row.source?.url});}
     this.root = root; this.exact = exact; this.folded = folded; this.ids = ids; this.originals = originals; this.blueprintBase = blueprintBase;
     return this.status();
   }
@@ -67,6 +70,9 @@ export class LocalImages {
     }
     const ref = this.ids?.get(id);
     if (ref) return ref;
+    // Enemy names also name sigils and cosmetics. An unresolved enemy must not
+    // fall back to a similarly named portrait across unrelated key spaces.
+    if(id?.startsWith('/Lotus/Types/Enemies/'))return null;
     if (!this.root || !safeName(imageName)) return null;
     const catalog = this.originals?.get(imageName);
     if (catalog) return { ...catalog, method: 'catalog-image-name' };
@@ -86,7 +92,7 @@ export class LocalImages {
         const bytes = await fs.readFile(file), type = mime(bytes);
         if (type && bytes.length <= 2 * 1024 * 1024 && bytes.length <= remaining) {
           remaining -= bytes.length;
-          return { dataUrl: `data:${type};base64,${bytes.toString('base64')}`, file: ref.name, original: ref.original, method: ref.method, ...(ref.note ? { note: ref.note } : {}), ...(ref.abilityIcon || isAbilityIcon(null, ref.original) ? { abilityIcon: true } : {}) };
+          return { dataUrl: `data:${type};base64,${bytes.toString('base64')}`, file: ref.name, original: ref.original, method: ref.method, ...(ref.note ? { note: ref.note } : {}),...(ref.provider?{provider:ref.provider}:{}), ...(ref.abilityIcon || isAbilityIcon(null, ref.original) ? { abilityIcon: true } : {}) };
         }
       } catch { /* Missing or invalid local images leave a text card. */ }
       return null;

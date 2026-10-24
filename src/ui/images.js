@@ -25,7 +25,7 @@ export async function decorateImages(api, entries, detail = false) {
       const picture = document.createElement(composite ? 'span' : 'img');
       picture.className = `local-item-image${detail ? ' detail-image' : ''}${composite ? ' blueprint-image' : ''}${image.kind === 'tau-shard' ? ' tau-shard-image' : ''}${image.abilityIcon ? ' wfcd-ability-image' : ''}${art ? ' composed-card-art '+art.kind+'-card-art'+(art.full?' full-mod-card':'') : ''}`;
       const layers = composite ? image.layers : [image];
-      picture.title = layers.map(layer => `本地 ${layer.provider === 'official' ? 'DE 官方' : 'WFCD'} 图片 · ${layer.original ?? layer.file}\n匹配方式：${layer.method}${layer.note?'\n'+layer.note:''}`).join('\n');
+      picture.title = layers.map(layer => `本地 ${layer.provider === 'official' ? 'DE 官方' : layer.provider === 'wiki' ? 'Warframe Wiki' : 'WFCD'} 图片 · ${layer.original ?? layer.file}\n匹配方式：${layer.method}${layer.note?'\n'+layer.note:''}`).join('\n');
       if(art){picture.dataset.composed=art.kind;if(meta?.set)picture.dataset.modSet=meta.set.id;picture.title='本地拼接 · '+art.kind+' · '+(original.original??original.file)+'\n'+picture.title;if(meta?.set)picture.title+='\n'+meta.set.title+' · 1/'+meta.set.size+' 件套装效果预览';}
       if (composite) { picture.setAttribute('role', 'img'); picture.setAttribute('aria-label', label ?? '蓝图'); }
       layers.forEach(layer => {

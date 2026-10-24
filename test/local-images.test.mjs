@@ -5,6 +5,13 @@ import os from 'node:os';
 import path from 'node:path';
 import { LocalImages } from '../src/core/local-images.mjs';
 const png = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jvXcAAAAASUVORK5CYII=', 'base64');
+test('enemy portraits require explicit IDs; same-named sigils and unreviewed mappings cannot become portraits',async t=>{
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'wb-enemy-image-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));await fs.mkdir(path.join(root,'img'));for(const name of ['sigil.png','portrait.png'])await fs.writeFile(path.join(root,'img',name),png);
+ await fs.writeFile(path.join(root,'catalog.json'),JSON.stringify({items:[{id:'/Sigil',assetName:'sigil.png',imageName:'AladV.png',hasImage:true,imageKind:'original'}]}));
+ await fs.writeFile(path.join(root,'enemy-image-index.json'),JSON.stringify({mappings:[{id:'/Lotus/Types/Enemies/AladV',assetName:'portrait.png',imageName:'AladV.png',basis:'wiki-internal-id',provider:'wiki',source:{url:'https://wiki.warframe.com/w/Module:Enemies/data/corpus'}},{id:'/Lotus/Types/Enemies/Guess',assetName:'sigil.png',basis:'name-guess'}]}));
+ const images=new LocalImages();await images.select(root);const [enemy,missing,guess,sigil]=await images.batch([{id:'/Lotus/Types/Enemies/AladV',imageName:'AladV.png'},{id:'/Lotus/Types/Enemies/Unknown',imageName:'AladV.png'},{id:'/Lotus/Types/Enemies/Guess',imageName:'AladV.png'},{id:'/Sigil'}]);assert.equal(enemy.file,'portrait.png');assert.equal(enemy.provider,'wiki');assert.equal(missing,null);assert.equal(guess,null);assert.equal(sigil.file,'sigil.png');
+ await fs.writeFile(path.join(root,'enemy-image-index.json'),'{broken');await images.select(root);assert.equal((await images.batch([{id:'/Sigil'}]))[0].file,'sigil.png');assert.equal((await images.batch([{id:'/Lotus/Types/Enemies/AladV',imageName:'AladV.png'}]))[0],null);
+});
 test('local imagery: exact IDs, original catalog assets, safe paths, ambiguous case and missing files', async () => {
   const temp = await fs.mkdtemp(path.join(os.tmpdir(), 'wb-images-'));
   try {

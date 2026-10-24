@@ -35,6 +35,31 @@ def disk_name(name):
     return hashlib.sha256(name.encode('utf-8')).hexdigest()[:24] + Path(name).suffix.lower()
 
 
+def preserve_enemy_images(target, staging):
+    """A WFCD refresh must not discard independently indexed Wiki portraits."""
+    index_file = target / 'enemy-image-index.json'
+    if not index_file.is_file():
+        return
+    index = json.loads(index_file.read_text(encoding='utf-8'))
+    for row in {r['assetName']: r for r in index.get('mappings', [])}.values():
+        name = row['assetName']
+        if not re.fullmatch(r'[\w.-]+\.(?:png|jpg)', name):
+            raise ValueError('Invalid enemy asset name: ' + name)
+        source = target / 'img' / name
+        if source.is_symlink():
+            raise ValueError('Enemy image must be a local regular file: ' + name)
+        if not source.is_file():
+            continue  # Missing optional assets stay missing; the downloader can restore them.
+        content = source.read_bytes()
+        if hashlib.sha256(content).hexdigest() != row['sha256']:
+            raise ValueError('Enemy image checksum mismatch: ' + name)
+        destination = staging / 'img' / name
+        if destination.exists() and destination.read_bytes() != content:
+            raise ValueError('Enemy image name collision: ' + name)
+        if not destination.exists():
+            shutil.copy2(source, destination)
+
+
 def image_references(value):
     if isinstance(value, dict):
         if value.get('uniqueName') and value.get('imageName'):
@@ -234,6 +259,7 @@ def main():
     write_enemy_report(enemy_report, manifest, staging, ROOT)
     target = ROOT / 'assets/content/wfcd'
     if target.exists():
+        preserve_enemy_images(target, staging)
         # Only replace WFCD-owned outputs. The official library and independently
         # generated comparison reports also live in content and must survive sync.
         # Keep the old img tree until its replacement is in place, then remove it.

@@ -21,7 +21,10 @@ const descriptions = [
   ['打包程序', '仅构建 Mac x64 / Windows x64 包并执行版本保留，不运行测试'],
   ['文本标记清单', '显式扫描 JSON 文本标记并输出审阅清单，不覆盖人工登记表'],
   ['获取文本图标', '按 Plus 映射补齐真实文本图标，并更新离线运行时登记表'],
-  ['校验语言映射', '核对已构建资料的字段、字典指针、嵌套中文和中间件保真，不扫描图库']
+  ['校验语言映射', '核对已构建资料的字段、字典指针、嵌套中文和中间件保真，不扫描图库'],
+  ['准备卡面素材', '从指定 App 目录整理小型 Mod / 赋能拼图素材'],
+  ['预构建资料库', '从指定完整 P3 构建生成程序内置资料'],
+  ['获取敌人图片', '按 Wiki 完整敌人 ID 与 Plus avatar 关系补充立绘，不以同名跨源猜图']
 ];
 const help = () => console.log(`资料包工具箱\n\n${descriptions.map(([name, label], index) => `${index + 1}. ${name}：${label}`).join('\n')}\n\n用法：node 工具/资料工具.mjs <命令或编号> [参数]\n预览命令而不执行：加 --预览命令\n蓝图示例：node 工具/07-合成蓝图.mjs --id /Lotus/Types/Recipes/WarframeRecipes/RunnerBlueprint --result-id /Lotus/Powersuits/Runner/Runner\n帮助：工具/README.md。所有命令以项目根目录为工作目录；不会自动串联下载、构建或校验。`);
 
@@ -36,10 +39,13 @@ async function execute(binary, args, preview) {
 
 export async function run(command, parameters = []) {
   const preview = parameters.includes('--预览命令'), args = parameters.filter(value => value !== '--预览命令');
-  if (/^(?:[1-9]|10|11|12)$/.test(command ?? '')) command = descriptions[Number(command) - 1][0];
+  if (/^(?:[1-9]|1[0-5])$/.test(command ?? '')) command = descriptions[Number(command) - 1][0];
   if (!command || command === 'help' || command === '--help') { help(); return; }
   const at = value => path.join(root, value);
   const commands = {
+    准备卡面素材: [node, [at('scripts/sync-card-assets.mjs'), ...args]],
+    预构建资料库: [node, [at('scripts/prepare-player-library.mjs'), ...args]],
+    获取敌人图片: [node, [at('scripts/fetch-enemy-images.mjs'), ...args]],
     获取数据: [node, [at('src/cli.mjs'), 'update', '--config', at('config/default.json'), '--store', at('.workbench'), ...args]],
     处理数据: [node, [at('scripts/inventory-structure.mjs'), args[0] || root, args[1] || at('输出/数据处理/字段结构清单.json')]],
     合并数据: [node, [at('scripts/build-merge.mjs'), '--root', root, '--store', at('.workbench'), '--out', at('输出/合并数据'), ...args]],

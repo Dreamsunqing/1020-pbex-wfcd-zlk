@@ -89,6 +89,14 @@ export class ImageGallery {
       if (row.hasImage) used.add(row.assetName);
       add({ ...row, key: 'wfcd:' + row.id, provider: 'wfcd', _asset: row.assetName, _directory: wfcdDirectory });
     }
+    const enemyIndex=wfcdRoot?await read(path.join(wfcdRoot,'enemy-image-index.json')).catch(()=>({mappings:[]})):{mappings:[]};
+    this.labels.set('Enemy','敌人');
+    for(const row of enemyIndex.mappings??[])if(safe(row.assetName)&&row.id?.startsWith('/Lotus/Types/Enemies/')&&['wiki-internal-id','wiki-agent-avatar-id'].includes(row.basis)){
+      const existing=this.lookup.get('wfcd:'+row.id);
+      const fields={imageName:row.imageName,resolvedImageName:row.imageName,_asset:row.assetName,_directory:wfcdDirectory,hasImage:true,imageKind:'original',imageMatch:row.basis,imageOrigin:row.provider,imageNote:'敌人完整 ID 映射 · '+row.source?.url};
+      used.add(row.assetName);
+      if(existing)Object.assign(existing,fields);else add({...row,...fields,key:'wfcd:'+row.id,provider:'wfcd',category:'Enemy',label:row.name,englishLabel:row.name,parents:[],children:[]});
+    }
     for (const row of inventory.mappings) if (!this.lookup.has('wfcd:' + row.id)) {
       used.add(row.assetName);
       add({ ...row, key: 'wfcd:' + row.id, provider: 'wfcd', category: 'Abilities',

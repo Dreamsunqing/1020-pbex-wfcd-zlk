@@ -1,6 +1,9 @@
 // Read-only player projection over the verified P3 build. Never mutates source entities.
 import { modSetBonus } from './mod-sets.mjs';
 import { playerWikiLinks, playerAcquisition } from './player-acquisition.mjs';
+import {enemyLootIndex,enemyVariant} from './player-enemies.mjs';
+import {equipmentFacts,equipmentPolarities,equipmentTrade,attackFacts} from './player-equipment.mjs';
+import {acquisitionIndex} from './player-acquisition.mjs';
 import { playerAcquisitionPlan } from './player-acquisition-plan.mjs';
 import { allItems } from './merge/repository.mjs';
 import { internalItems } from './merge/display-policy.mjs';
@@ -130,8 +133,9 @@ export function playerLibraryDetail(data,id,{locale='zh-CN'}={}) {
   if(blueprintSources.size)related.set('蓝图获取遗物',blueprintSources);
   const order=['所属套装','套装成员','灵化之源','适配武器','技能','显赫武器','强化 Mod','可移植技能','组件与材料','制造材料','制作成品','制作蓝图','附带物品'];
   const relationGroups=[...related].sort(([a],[b])=>(order.includes(a)?order.indexOf(a):99)-(order.includes(b)?order.indexOf(b):99)).map(([label,rows])=>({label,rows:[...rows.values()].sort((a,b)=>(a.slot??0)-(b.slot??0))}));
+  const loot=item.kind==='enemy'?(enemyLootIndex(data,acquisitionIndex(data)).entries[id]??[]):[];
   const plan=playerAcquisitionPlan(data,canonical,locale);
-  const all=[item,...[...related.values()].flatMap(rows=>[...rows.keys()].map(id=>idx.byId.get(id))),...plan.groups.flatMap(g=>[g.id,...g.forIds].map(id=>idx.byId.get(id)))],images=imageDescriptors(data,all,locale);
+  const all=[item,...loot.map(r=>idx.byId.get(r.id)).filter(Boolean),...[...related.values()].flatMap(rows=>[...rows.keys()].map(id=>idx.byId.get(id))),...plan.groups.flatMap(g=>[g.id,...g.forIds].map(id=>idx.byId.get(id)))],images=imageDescriptors(data,all,locale);
   for(const g of relationGroups)for(const row of g.rows)row.image=images[row.id];
   const f=facets(item,idx),peers=idx.rows.filter(i=>i.kind===item.kind&&facets(i).category===f.category&&facets(i).type===f.type);
   const definitions=data.output['contract.json']?.fields ?? [];
@@ -140,8 +144,11 @@ export function playerLibraryDetail(data,id,{locale='zh-CN'}={}) {
   const a=item.attributes ?? {};
   const set=canonical.kind==='mod-set'?canonical:idx.byId.get(canonical.modSetId),setInfo=set?.modSetInfo;
   const modSet=setInfo?{id:set.id,title:title(set,locale),size:setInfo.size,buffSet:setInfo.buffSet,levels:Array.from({length:setInfo.size},(_,i)=>modSetBonus(set,i+1,locale))}:null;
-  const sourceRows=rows=>rows.map(row=>({...row,rarity:playerLabel(row.rarity),links:row.links.flatMap(({id})=>{const target=idx.byId.get(id);return target?[{id,title:title(target,locale)}]:[];})}));
+  const sourceRows=rows=>rows.map(row=>({...row,enemyChoices:(row.nameCandidates??[]).flatMap(id=>{const target=idx.byId.get(id);return target?[{id,title:title(target,locale),variant:enemyVariant(target)}]:[];}),rarity:playerLabel(row.rarity),links:row.links.flatMap(({id})=>{const target=idx.byId.get(id);return target?[{id,title:title(target,locale)}]:[];})}));
   const acquisition=sourceRows(playerAcquisition(data,canonical,locale));
   const acquisitionGroups=plan.groups.map(g=>({...g,item:{...summary(projected(data,idx.byId.get(g.id),locale),locale,idx),image:images[g.id]},forItems:g.forIds.map(id=>({id,title:title(idx.byId.get(id),locale)})),sources:sourceRows(g.sources)}));
-  return {location:item.kind==='region'?{system:a.systemName,mission:a.missionName,minLevel:a.minEnemyLevel,maxLevel:a.maxEnemyLevel}:null,wikiLinks:playerWikiLinks(canonical),acquisition,acquisitionGroups,componentAcquisition:plan.componentMode,modSet,datasetVersion:data.manifest.datasetVersion,relic,item:{...summary(item,locale,idx),image:images[id],descriptionSource:item.descriptionSource,passive:item.passiveDescription?.[locale] ?? item.passiveDescription?.en ?? '',tradable:item.tradable,rarity:playerLabel(item.rarity),stats},radar:radar.length>=3?radar.map(r=>({...r,label:definitions.find(d=>d.path==='stats.'+r.key)?.label ?? r.key})):[],peerLabel:playerLabel(f.type||f.category),relations:relationGroups,levelStats:item.kind==='mod-set'?[]:a.levelStats ?? [],attacks:a.attacks ?? [],damage:a.damage ?? {},build:{credits:a.buildPrice,seconds:a.buildTime,quantity:a.buildQuantity},introduced:a.releaseDate};
+  const tradeIds=new Set((idx.links.get(id)??[]).filter(r=>r.from===id&&r.kind==='has-component'||r.to===id&&r.kind==='produces').map(r=>r.from===id?r.to:r.from));
+  for(const r of data.output['recipes.json']??[])if(r.resultId===id)for(const m of r.materials??[])tradeIds.add(m.itemId);
+  const trade=equipmentTrade(canonical,[...tradeIds].map(id=>idx.byId.get(id)).filter(Boolean));
+  return {enemyLoot:loot.flatMap(row=>{const target=idx.byId.get(row.id);return target?[{...row,item:{...summary(projected(data,target,locale),locale,idx),image:images[target.id]}}]:[];}),enemyVariant:item.kind==='enemy'?{label:enemyVariant(item),code:id.split('/').at(-1)}:null,equipmentFacts:equipmentFacts(item).map(r=>({...r,value:typeof r.value==='string'?playerLabel(r.value):r.value})),polarities:equipmentPolarities(item),trade,updateName:a.introduced?.name,attackDetails:(a.attacks??[]).map(attack=>attackFacts(attack,item)),enemyFacts:item.kind==='enemy'?[['生命',a.health],['护盾',a.shield],['护甲',a.armor],['击杀经验',a.killXPReward],['所需扫描',a.codexScansRequired]].filter(([,v])=>Number.isFinite(v)):[],location:item.kind==='region'?{system:a.systemName,mission:a.missionName,minLevel:a.minEnemyLevel,maxLevel:a.maxEnemyLevel}:null,wikiLinks:playerWikiLinks(canonical),acquisition,acquisitionGroups,componentAcquisition:plan.componentMode,modSet,datasetVersion:data.manifest.datasetVersion,relic,item:{...summary(item,locale,idx),image:images[id],descriptionSource:item.descriptionSource,passive:item.passiveDescription?.[locale] ?? item.passiveDescription?.en ?? '',tradable:item.tradable,rarity:playerLabel(item.rarity),stats},radar:radar.length>=3?radar.map(r=>({...r,label:definitions.find(d=>d.path==='stats.'+r.key)?.label ?? r.key})):[],peerLabel:playerLabel(f.type||f.category),relations:relationGroups,levelStats:item.kind==='mod-set'?[]:a.levelStats ?? [],attacks:a.attacks ?? [],damage:a.damage ?? {},build:{credits:a.buildPrice,seconds:a.buildTime,quantity:a.buildQuantity},introduced:a.releaseDate};
 }

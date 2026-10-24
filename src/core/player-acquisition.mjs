@@ -2,10 +2,15 @@ import { allItems } from './merge/repository.mjs';
 import { rewardContexts } from './merge/reward-context.mjs';
 import { selectLocalizedField } from './text-localization.mjs';
 import { plainGameText } from './inline-tokens.mjs';
-import { relicIdentity, relicIndex, RELIC_QUALITIES } from './player-relics.mjs';
+import { relicIdentity, relicIndex, relicDrops, RELIC_QUALITIES } from './player-relics.mjs';
 
 const normalize = value => plainGameText(value, 'name').trim().replace(/[’]/g, "'").replace(/\s+/g, ' ').toLowerCase();
 const cache = new WeakMap();
+const relicCache = new WeakMap();
+function sourceRelics(data) {
+  if (!relicCache.has(data.output)) relicCache.set(data.output, relicIndex(allItems(data)));
+  return relicCache.get(data.output);
+}
 const title = (item, locale) => plainGameText(item?.name?.[locale] ?? item?.name?.en ?? '', 'name');
 const field = (data, item, key, locale) => selectLocalizedField(data, item.id, 'attributes.' + key, locale)?.value ?? item.attributes?.[key];
 
@@ -33,7 +38,7 @@ export function acquisitionIndex(data) {
   if (cache.has(data.output)) return cache.get(data.output);
   const items = allItems(data), byId = new Map(items.map(i => [i.id, i])), entries = {}, report = { drops: 0, poolRows: 0, rejectedDropRows: 0, rejectedDrops: [], skippedCollections: 0 }, rejected = new Map();
   const recipes = new Map((data.output['recipes.json'] ?? []).map(r => [r.id, r]));
-  const relics = relicIndex(items);
+  const relics = sourceRelics(data);
   const expand = source => Number.isInteger(source?.input) ? { ...data.manifest.inputs[source.input], pointer: source.pointer } : source;
   const dropSources = new Map((data.output['reports/provenance.json'] ?? []).filter(p => p.field === 'attributes.drops').map(p => [p.entityId, expand(p.candidates?.[p.selected ?? 0]?.source)]));
   const add = (id, row) => { (entries[id] ??= []).push(row); };
@@ -101,6 +106,40 @@ export function acquisitionIndex(data) {
 }
 
 export function playerAcquisition(data, item, locale = 'zh-CN') {
-  const index = acquisitionIndex(data), rows = index.entries[item.id] ?? [];
-  return rows.map(row => ({ ...row, title: row.title?.[locale] ?? row.title?.en ?? row.original, links: row.links.map(id => ({ id })) }));
+  const index = acquisitionIndex(data), rows = index.entries[item.id] ?? [], relics = sourceRelics(data), groups = new Map(), result = [];
+  function group(family) {
+    if (!groups.has(family.key)) {
+      const row = { method: 'relic', basis: 'relic-family', relicKey: family.key, title: title(family.item, locale), original: family.key, links: [{ id: family.item.id }], probabilities: [] };
+      groups.set(family.key, { family, row, drops: [] }); result.push(row);
+    }
+    return groups.get(family.key);
+  }
+  for (const row of rows) {
+    const families = new Set(row.links.map(id => relics.byId.get(id)));
+    // Collapse only an unambiguous family. Never merge different relics merely
+    // because their names or reward tables happen to look alike.
+    if (families.size === 1 && !families.has(undefined)) {
+      const entry = group([...families][0]); entry.drops.push(row);
+      entry.row.evidence ??= row.evidence;
+    } else result.push({ ...row, title: row.title?.[locale] ?? row.title?.en ?? row.original, links: row.links.map(id => ({ id })) });
+  }
+  // Exact reward IDs in the relic model are sufficient even if no WFCD drops
+  // or Plus reward-pool row was available for this item.
+  for (const family of relics.sources.get(item.id)?.values() ?? []) group(family);
+  for (const { family, row, drops } of groups.values()) {
+    const qualities = RELIC_QUALITIES.some(([key]) => family.variants.has(key)) ? RELIC_QUALITIES : [['Unrefinable', '固定品质']];
+    row.probabilities = qualities.map(([key, label]) => {
+      const variant = family.variants.get(key), rewards = variant ? relicDrops(variant).filter(r => r.id === item.id) : [];
+      const values = new Set(rewards.map(r => r.probability));
+      let probability = values.size === 1 ? [...values][0] : null;
+      // Explicit WFCD source-quality odds can fill a missing value, but an
+      // unqualified pool probability must never be copied into all qualities.
+      if (variant && probability === null && rewards.length <= 1) {
+        const known = new Set(drops.filter(r => r.method === 'drop' && r.basis === 'exact-relic-source-id' && r.links.length === 1 && relicIdentity({ id: r.links[0], kind: 'relic' })?.quality === key && Number.isFinite(r.chance) && r.chance >= 0 && r.chance <= 100).map(r => r.chance));
+        if (known.size === 1) probability = [...known][0];
+      }
+      return { key, label, available: !!variant, probability };
+    });
+  }
+  return result;
 }

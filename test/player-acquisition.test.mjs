@@ -61,7 +61,7 @@ test('actual bundle exposes Mod drop sources, generic relic acquisition, and sup
   const strun=items.find(i=>i.kind==='weapon'&&i.name.en?.toLowerCase()==='strun');assert.ok(strun);assert.ok(!playerLibraryDetail(data,strun.id).acquisition.some(r=>r.method==='drop'));
   const relic=items.find(i=>i.kind==='relic'&&i.name.en==='Axi A21 Relic'&&i.id.endsWith('Bronze'));assert.ok(relic);assert.ok(playerLibraryDetail(data,relic.id).acquisition.some(r=>r.method==='drop'));
   const blueprint=items.find(i=>i.kind==='blueprint'&&i.name.en==='Forma Blueprint');assert.ok(blueprint);assert.ok(playerLibraryDetail(data,blueprint.id).wikiLinks.some(l=>l.url.endsWith('/Forma_Blueprint')));
-  const radiant=playerLibraryDetail(data,blueprint.id).acquisition.find(r=>r.original==='Axi A22 Relic (Radiant)');assert.equal(radiant.basis,'exact-relic-source-id');assert.ok(radiant.title.endsWith('光辉'));assert.ok(radiant.links[0].id.endsWith('Platinum'));assert.equal(radiant.chance,20);
+  const source=playerLibraryDetail(data,blueprint.id).acquisition.find(r=>r.title==='后纪 A22 遗物');assert.equal(source.method,'relic');assert.equal(source.links.length,1);assert.ok(source.links[0].id.endsWith('Bronze'));assert.deepEqual(source.probabilities.map(q=>q.probability),[11,13,17,20]);assert.equal(source.chance,undefined);assert.equal(source.pool,undefined);
 });
 
 test('recipe product identity resolves generic blueprints; explicit relic quality is retained; enemy loot is not enemy acquisition',()=>{
@@ -69,4 +69,20 @@ test('recipe product identity resolves generic blueprints; explicit relic qualit
   const product={id:'/Lotus/Test/Weapon',kind:'weapon',name:{en:'Test Weapon'}},blueprint={id:'/Lotus/Test/Recipe',kind:'blueprint',name:{en:'Blueprint'},attributes:{drops:[{location:'Mission',type:'Test Weapon Blueprint',chance:10}]}},relic={id:'/Lotus/Types/Game/Projections/T1VoidProjectionTestBronze',kind:'relic',name:{en:'Lith T1 Relic'},attributes:{drops:[{location:'Mission',type:'Lith T1 Relic (Radiant)',chance:5}]}},enemy={id:'/Lotus/Test/Enemy',kind:'enemy',name:{en:'Enemy'},attributes:{drops:[{location:'Test Mod',type:'Mod Locations',chance:.001}]}};
   data.output['items/all.json'].push(product,blueprint,relic,enemy);data.output['recipes.json']=[{id:blueprint.id,resultId:product.id}];
   const index=acquisitionIndex(data);assert.equal(index.entries[blueprint.id][0].chance,10);assert.equal(index.entries[relic.id][0].rewardVariant,'光辉遗物');assert.equal(index.entries[enemy.id],undefined);assert.equal(index.report.skippedCollections,1);
+});
+
+
+test('relic acquisition collapses qualities and cross-source rows by identity, preserving zero and unknown odds',()=>{
+  const {data,item}=fixture(),keys=['Bronze','Silver','Gold','Platinum'],chances=[0,.5,null,10];
+  const variants=keys.map((key,n)=>({id:'/Lotus/Types/Game/Projections/T1VoidProjectionTest'+key,kind:'relic',name:{en:'Lith T1 Relic','zh-CN':'古纪 T1 遗物'},attributes:{category:'Lith T1',rewards:[{item:{uniqueName:item.id},chance:chances[n]}]}}));
+  data.output['items/all.json'].push(...variants);data.output['player/acquisition.json']={entries:{[item.id]:[
+    ...variants.map((v,n)=>({method:'drop',basis:'exact-relic-source-id',links:[v.id],chance:chances[n],title:{en:'Quality '+n}})),
+    {method:'pool',links:variants.map(v=>v.id),chance:99,pool:1,quantity:1,rarity:'COMMON'}
+  ]}};
+  const before=JSON.stringify(data),rows=playerAcquisition(data,item);assert.equal(rows.length,1);assert.equal(rows[0].links.length,1);assert.equal(rows[0].links[0].id,variants[0].id);assert.equal(rows[0].title,'古纪 T1 遗物');assert.deepEqual(rows[0].probabilities.map(q=>q.probability),chances);assert.equal(rows[0].pool,undefined);assert.equal(rows[0].quantity,undefined);assert.equal(JSON.stringify(data),before);
+  assert.equal(playerLibraryDetail(data,item.id).acquisition[0].links.length,1);
+  assert.equal(playerAcquisition(data,item,'en')[0].title,'Lith T1 Relic');
+  // Same text is insufficient to join another family; category and identity differ.
+  const other=structuredClone(data);other.output['items/all.json'].push(...variants.map(v=>({...v,id:v.id.replace('Test','Distinct'),attributes:{...v.attributes,category:'distinct'}})));
+  assert.equal(playerAcquisition(other,item).filter(r=>r.method==='relic').length,2);
 });

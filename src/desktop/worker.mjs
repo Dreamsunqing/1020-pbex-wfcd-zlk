@@ -1,3 +1,4 @@
+import {marketEligibilityBatch} from '../core/wm/eligibility.mjs';
 import {gunzipSync} from 'node:zlib';
 import {arbitrationCalendar} from '../core/live-state/arbitration-calendar.mjs';
 import {currentDropTables,refreshDropTables} from '../core/drop-table-store.mjs';
@@ -151,6 +152,7 @@ function schedule() {
   if (preferences.autoUpdate) timer = setTimeout(async () => { try { await update(); } catch (error) { progress({ message: error.message, error: true }); } finally { schedule(); } }, config.intervalMinutes * 60000);
 }
 const handlers = {
+  async wmEligibility({ids}) { const data=await playerDataset(), catalog=await wm.catalog({proxyUrl:config.network?.proxyUrl});const {data:items,...meta}=catalog;return {...meta,total:items.length,matches:marketEligibilityBatch(data,items,ids)}; },
   async wmSearch(args) { return wm.search(args, { proxyUrl: config.network?.proxyUrl }); },
   async wmOrders(args) { return wm.orders(args, { proxyUrl: config.network?.proxyUrl }); },
   async wmStatistics(args) { return wm.statistics(args, { proxyUrl: config.network?.proxyUrl }); },
@@ -164,17 +166,17 @@ const handlers = {
   async images({ requests }) {
     const images = await localImages.batch(requests);
     let remaining = 16 * 1024 * 1024 - images.flatMap(image => image?.layers ?? (image ? [image] : [])).reduce((sum, image) => sum + Math.ceil((image.dataUrl?.length ?? 0) * 3 / 4), 0);
-    for (let i = 0; i < requests.length; i++) if (!images[i] && requests[i].id?.startsWith('/Lotus/') && !requests[i].blueprint && !requests[i].resultId) {
-      for(const candidate of [requests[i].id,boosterArtAliases[requests[i].id]].filter(Boolean)) {
-        try {
-          const asset=await gallery.asset('official:'+candidate);
+    for (let i=0;i<requests.length;i++)if(!images[i]&&requests[i].id?.startsWith('/Lotus/')){
+      for(const provider of ['official','wiki']){
+        if(provider==='official'&&(requests[i].blueprint||requests[i].resultId))continue;
+        for(const candidate of [requests[i].id,...(provider==='official'?[boosterArtAliases[requests[i].id]]:[])].filter(Boolean))try{
+          const asset=await gallery.asset(provider+':'+candidate);
           if(asset.bytes>2*1024*1024||asset.bytes>remaining)continue;
           const bytes=await fs.readFile(asset.file);if(bytes.length>remaining||bytes.length>2*1024*1024)continue;
-          remaining-=bytes.length;
-          const borrowed=candidate!==requests[i].id;
-          images[i]={dataUrl:`data:${asset.mime};base64,${bytes.toString('base64')}`,file:path.basename(asset.file),original:asset.item.imageName,provider:'official',method:borrowed?'reviewed-booster-illustration':'official-exact-id',...(borrowed?{note:'通用加成借用同类型 3 天档插画，仅作图示；不改变奖励时长或资料关联。',illustrationId:candidate}:{}),abilityIcon:asset.item.category==='Abilities'};
-          break;
-        } catch { /* Exact missing asset: only try an explicitly reviewed illustration. */ }
+          remaining-=bytes.length;const borrowed=candidate!==requests[i].id;
+          images[i]={dataUrl:`data:${asset.mime};base64,${bytes.toString('base64')}`,file:path.basename(asset.file),original:asset.item.imageName,provider,method:borrowed?'reviewed-booster-illustration':provider+'-exact-id',imageRole:asset.item.imageRole,...(borrowed?{note:'通用加成借用同类型 3 天档插画，仅作图示；不改变奖励时长或资料关联。',illustrationId:candidate}:{}),abilityIcon:asset.item.category==='Abilities'};break;
+        }catch{/* No unrelated filename fallback across providers. */}
+        if(images[i])break;
       }
     }
     // ID-only requests (JSON preview / WM) share the same presentation as the library.

@@ -1,3 +1,4 @@
+import {appendMarketLink} from './market-links.js';
 import {renderArbitrationCalendar} from './arbitration-calendar.js';
 import {syndicateTasks,worldStatistics} from '../core/live-state/presentation.mjs';
 import { renderGameText } from './game-text.js';
@@ -31,7 +32,7 @@ export function createLiveStateUI({api,guarded,notify,openLibrary,openWM}){
  function libraryLink(row,card,product=false){if(!row.libraryId||!openLibrary)return;card.dataset.libraryId=row.libraryId;
   const open=()=>guarded(async()=>{await openLibrary(row.libraryId,row.libraryVersion);if(rewardDialog?.open)rewardDialog.close();});
   if(product){const link=button('资料库 →','ws-library-link',event=>open());link.setAttribute('aria-label','在资料库查看 '+(row.name??row.title));card.append(link);}
-  else{card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','在资料库查看 '+(row.name??row.title));card.onclick=open;card.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}};card.title='查看资料库 →';}if(row.tradable===true&&openWM){const market=button('WM搜索','ws-wm-link',event=>{event.stopPropagation();guarded(async()=>{if(rewardDialog?.open)rewardDialog.close();await openWM({...row,id:row.libraryId});});});market.onkeydown=e=>e.stopPropagation();card.append(market);}
+  else{card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','在资料库查看 '+(row.name??row.title));card.onclick=open;card.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}};card.title='查看资料库 →';}void appendMarketLink({api,item:{...row,id:row.libraryId},container:card,openWM,guarded,className:'ws-wm-link',beforeOpen:()=>{if(rewardDialog?.open)rewardDialog.close();}});
  }
  function timeBadge(row){const n=el('span','ws-time');n.dataset.start=row.startsAt??'';n.dataset.end=row.endsAt??'';n.title=[when(row.startsAt),when(row.endsAt)].filter(Boolean).join(' — ');const content=countdown(row.startsAt,row.endsAt);n.hidden=!content;n.append(icon('clock'),document.createTextNode(content));return n;}
  function chips(values){const n=el('div','ws-chips');for(const value of values??[])if(value)n.append(el('span','ws-chip',value));return n;}

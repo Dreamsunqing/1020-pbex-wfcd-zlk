@@ -10,18 +10,9 @@ WFCD 或官方有名称，不代表对应立绘已经下载；即使文件名相
 node 工具/15-获取敌人图片.mjs
 ```
 
-实现：`scripts/fetch-enemy-images.mjs`。通过 Warframe Wiki MediaWiki API 读取 `Module:Enemies/data/<faction>`，只读取 Lua 文本，不执行。获取 `InternalName`、`Image`、修订号及来源行，再通过 `imageinfo` 获取原图／512px 缩略图 URL。只接受可信 HTTPS 来源，有超时、下载大小及真实 PNG/JPEG 格式检查。
+当前实现已改为 `scripts/sync-wiki-images.mjs`，旧编号 15 仅维护敌人，新增编号 18 维护完整 Wiki 文件目录及可靠关联原图。**0.17.1 起统一存放 `assets/content/wiki/`**，不再向 `wfcd/img` 新写 Wiki 图片。迁移先校验内容并发布新索引，再移除没有被 WFCD 引用的旧文件。图资源工具增加 Wiki 来源和 Wiki 来源敌人图片分类。
 
-精确关联只允许两种依据：
-
-- Wiki InternalName 就是本项目完整敌人 ID。
-- Wiki InternalName 是 Plus agents 键，通过该条 `avatarTypes` 显式连接敌人 ID。
-
-不要用英文／中文名相似、路径尾巴相同、搜索引擎第一张图，或某个敌人的纹章当立绘。存在多个互相矛盾的图片映射时保持缺失。下载只在显式维护命令执行，浏览 UI 不联网补图。
-
-图片实体继续保存 `assets/content/wfcd/img/<内容哈希前缀>.png|jpg`，不建立第三份大图库。已有 WFCD 原图 SHA256 与下载字节完全相同时复用；同文件名不算相同图片。索引 `assets/content/wfcd/enemy-image-index.json` 记录 provider=wiki、完整 ID、来源 URL、模块修订／行号／哈希、原文件名、本地文件名及图片哈希。元数据临时缓存放 `.cache/enemy-images/`；失败项保留在报告中。
-
-图片资源入口单列 **wiki来源敌人图片**，复用原有预览／导出，来源提示说明 Wiki。来源分类是索引信息，不改变共享目录规范。图库目录被 Git 忽略，因此另机恢复应运行命名脚本；打包是否携带图库按具体任务选择，不能把图片复制进源码凑包。
+完整命令、断点／增量策略、索引字段、原图和旧缩略图的区别、保守补图依据见 [Wiki 图库增量维护与交易校验](33-Wiki图库增量维护与交易校验.md)。
 
 ## 本轮维护容易出错的地方
 

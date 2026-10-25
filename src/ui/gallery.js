@@ -2,7 +2,7 @@ import { renderGameText, plainGameText } from './game-text.js';
 const $ = id => document.getElementById(id);
 const el = (tag, className, text) => { const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) renderGameText(node, text, /title|english/.test(className ?? '') ? 'name' : 'description'); return node; };
 const imageUrl = key => 'workbench-image://library/' + encodeURIComponent(key);
-const providerLabel = provider => ({wfcd:'WFCD',official:'DE 官方','text-icons':'Plus 文本图标'})[provider] ?? provider;
+const providerLabel = provider => ({wfcd:'WFCD',official:'DE 官方',wiki:'Warframe Wiki','text-icons':'Plus 文本图标'})[provider] ?? provider;
 const bytes = value => value < 1048576 ? `${(value / 1024).toFixed(1)} KiB` : `${(value / 1048576).toFixed(2)} MiB`;
 
 export function createGalleryUI({ api, guarded, notify, openEntity }) {
@@ -79,7 +79,7 @@ export function createGalleryUI({ api, guarded, notify, openEntity }) {
         for (const category of result.status.categories) { const option = el('option', '', category.label); option.value = category.id; $('gallery-category').append(option); }
         $('gallery-category').value = actual; $('gallery-category').dataset.ready = '1';
       }
-      $('gallery-status').textContent = `${result.status.libraryMissing?'外部图库未就绪，内置图标可用 · ':''}离线资源库 · WFCD ${result.status.providers.wfcd.toLocaleString()} 条 · DE 官方 ${result.status.providers.official.toLocaleString()} 条 · 文本图标 ${(result.status.providers['text-icons']??0).toLocaleString()} 条` ;
+      $('gallery-status').textContent = `${result.status.libraryMissing?'WFCD 索引未就绪，其他可用来源仍可浏览 · ':''}离线资源库 · WFCD ${result.status.providers.wfcd.toLocaleString()} 条 · DE 官方 ${result.status.providers.official.toLocaleString()} 条 · Wiki ${(result.status.providers.wiki??0).toLocaleString()} 条 · 文本图标 ${(result.status.providers['text-icons']??0).toLocaleString()} 条` ;
       renderCards(); state.entered = true;
     } catch (error) {
       if (sequence !== state.sequence) return;
@@ -99,7 +99,7 @@ export function createGalleryUI({ api, guarded, notify, openEntity }) {
     $('gallery-zoom').value = '100'; picture.style.setProperty('--image-scale', '1');
     const description = $('gallery-detail-description'); if(row.provider==='text-icons')description.textContent=row.description;else renderGameText(description, row.description || '当前记录没有描述。');
     const fields = $('gallery-detail-fields'); fields.replaceChildren();
-    for (const [label, value] of [['文本标记', row.token], ['图像来源',row.imageOrigin], ['原始图名', row.imageName], ['完整 ID', row.id], ['纹理路径', row.textureLocation], ['配图说明', row.imageNote]]) if (value) {
+    for (const [label, value] of [['文本标记', row.token], ['图像来源',row.imageOrigin], ['内容哈希',row.sha256], ['Wiki 页面',row.wikiPage], ['来源版本时间',row.timestamp??row.source?.revision], ['原始图名', row.imageName], ['完整 ID', row.id], ['纹理路径', row.textureLocation], ['配图说明', row.imageNote]]) if (value) {
       const raw=el('dd');raw.textContent=value;fields.append(el('dt', '', label), raw);
     }
     const relations = $('gallery-detail-relations'); relations.replaceChildren();

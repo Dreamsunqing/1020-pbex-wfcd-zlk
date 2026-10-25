@@ -11,6 +11,8 @@ assets/content/wfcd/img/       本地已有 WFCD 原图
 assets/content/wfcd/           catalog、完整 ID 图片索引、来源说明等
 assets/content/official/img/   本地已有官方原图
 assets/content/official/       Manifest、索引等
+assets/content/wiki/img/       Wiki 原图（0.17.1 起）
+assets/content/wiki/           实体证据索引和文件目录
 含图库版使用说明.txt
 ```
 

@@ -1,5 +1,7 @@
 import {sha256} from './io.mjs';
 import {dropLabel} from './drop-localization.mjs';
+import {allItems} from './merge/repository.mjs';
+import {imageDescriptors} from './merge/service.mjs';
 export const DROP_URL='https://warframe.com/droptables';
 export const DROP_SECTIONS={missionRewards:'任务',relicRewards:'虚空遗物',keyRewards:'钥匙任务',transientRewards:'动态地点',sortieRewards:'每日突击',cetusRewards:'希图斯赏金',solarisRewards:'奥布山谷赏金',deimosRewards:'魔胎之境赏金',zarimanRewards:'扎里曼赏金',entratiLabRewards:'实验室赏金',hexRewards:'1999 赏金',modByAvatar:'敌人 Mod',modByDrop:'Mod 来源',blueprintByAvatar:'敌人蓝图与物品',blueprintByDrop:'蓝图与物品来源',resourceByAvatar:'敌人资源',resourceByDrop:'资源来源',sigilByAvatar:'敌人纹章',additionalItemByAvatar:'敌人额外物品',relicByAvatar:'敌人遗物'};
 const EN_SECTIONS=['Missions','Void relics','Key missions','Transient locations','Sorties','Cetus bounties','Orb Vallis bounties','Cambion Drift bounties','Zariman bounties','Entrati Lab bounties','1999 bounties','Enemy Mods','Mod sources','Enemy blueprints and items','Blueprint and item sources','Enemy resources','Resource sources','Enemy sigils','Enemy additional items','Enemy relics'];
@@ -26,7 +28,12 @@ export function parseDropTables(html,{fetchedAt=new Date().toISOString()}={}){
 export function dropTablePage(snapshot,data,{locale='zh-CN',query='',section='',offset=0,limit=30}={}){
  if(!['zh-CN','en'].includes(locale)||typeof query!=='string'||query.length>500||!Number.isInteger(offset)||offset<0||!Number.isInteger(limit)||limit<1||limit>60)throw new Error('掉落表查询参数无效');
  const titleDomain=g=>g.section.endsWith('ByDrop')?'reward':g.section.endsWith('ByAvatar')?'enemy':'auto',rowDomain=g=>g.section.endsWith('ByDrop')?'enemy':'reward';
- const q=query.trim().toLowerCase(),matches=[];const project=(g,rows)=>({...g,label:dropLabel(data,g.title,locale,titleDomain(g)),rows:rows.map(r=>({...r,label:dropLabel(data,r.name,locale,rowDomain(g)),rotationLabel:dropLabel(data,r.rotation,locale).text,stageLabel:dropLabel(data,r.stage,locale).text}))});
+ const byId=new Map(allItems(data).map(i=>[i.id,i]));
+ const q=query.trim().toLowerCase(),matches=[];
+ const project=(g,rows)=>{const projected=rows.map(r=>({...r,label:dropLabel(data,r.name,locale,rowDomain(g)),rotationLabel:dropLabel(data,r.rotation,locale).text,stageLabel:dropLabel(data,r.stage,locale).text}));
+  const items=projected.flatMap(r=>byId.has(r.label.id)?[byId.get(r.label.id)]:[]),images=imageDescriptors(data,items);
+  return {...g,label:dropLabel(data,g.title,locale,titleDomain(g)),rows:projected.map(r=>{const item=byId.get(r.label.id);return {...r,...(item?{image:images[item.id],tradable:item.tradable,english:item.name?.en}:{} )};})};
+ };
  for(const g of snapshot.groups){if(section&&g.section!==section)continue;const title=dropLabel(data,g.title,locale,titleDomain(g)),all=!q||[g.title,title.text].some(s=>s.toLowerCase().includes(q));const rows=all?g.rows:g.rows.filter(r=>[r.name,dropLabel(data,r.name,locale,rowDomain(g)).text,r.rotation,r.stage].some(s=>s.toLowerCase().includes(q)));if(rows.length)matches.push({...g,rows});}
  return {fetchedAt:snapshot.fetchedAt,hash:snapshot.hash,url:snapshot.url,rowCount:snapshot.rowCount,total:matches.length,offset,hasMore:offset+limit<matches.length,sections:Object.entries(DROP_SECTIONS).map(([id,label],index)=>({id,label:locale==='en'?EN_SECTIONS[index]:label})),groups:matches.slice(offset,offset+limit).map(g=>project(g,g.rows))};
 }

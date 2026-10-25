@@ -72,7 +72,7 @@ export class ImageGallery {
       else if(row.description){row.descriptionLocale='en';row.descriptionFallback=true;}
       row.label = plainGameText(row.label.replace(/\bBlueprint\b/g, '蓝图'), 'name');
       row.englishLabel ||= name?.en || row.name || row.imageName;
-      row._search = normalize([row.label, row.englishLabel, row.imageName, row.id, row.token, row.textureLocation, row.categoryLabel,
+      row._search = normalize([row.label, row.englishLabel, row.imageName, row.id, row.token, row.textureLocation, row.categoryLabel,row.wikiPage,row.imageOrigin,row.sha256,
         ...(row.parents ?? []).flatMap(id => [titles.get(id)?.zh, titles.get(id)?.en])].join(' '));
       if (this.lookup.has(row.key)) return;
       this.rows.push(row); this.lookup.set(row.key, row);
@@ -90,13 +90,20 @@ export class ImageGallery {
       add({ ...row, key: 'wfcd:' + row.id, provider: 'wfcd', _asset: row.assetName, _directory: wfcdDirectory });
     }
     const enemyIndex=wfcdRoot?await read(path.join(wfcdRoot,'enemy-image-index.json')).catch(()=>({mappings:[]})):{mappings:[]};
-    this.labels.set('Enemy','敌人');this.labels.set('WikiEnemies','wiki来源敌人图片');
+    this.labels.set('Enemy','敌人');this.labels.set('WikiEnemies','Wiki 来源敌人图片');this.labels.set('WikiContent','Wiki 游戏素材');
     for(const row of enemyIndex.mappings??[])if(safe(row.assetName)&&row.id?.startsWith('/Lotus/Types/Enemies/')&&['wiki-internal-id','wiki-agent-avatar-id'].includes(row.basis)){
       const existing=this.lookup.get('wfcd:'+row.id);
       const fields={category:'WikiEnemies',imageName:row.imageName,resolvedImageName:row.imageName,_asset:row.assetName,_directory:wfcdDirectory,hasImage:true,imageKind:'original',imageMatch:row.basis,imageOrigin:row.provider,imageNote:'敌人完整 ID 映射 · '+row.source?.url};
       used.add(row.assetName);
       if(existing)Object.assign(existing,fields);else add({...row,...fields,key:'wfcd:'+row.id,provider:'wfcd',category:'WikiEnemies',label:row.name,englishLabel:row.name,parents:[],children:[]});
     }
+    const wiki=this.content?await read(path.join(this.content,'wiki/index.json')).catch(()=>({mappings:[],assets:[]})):{mappings:[],assets:[]};
+    const wikiUsed=new Set();
+    for(const row of wiki.mappings??[])if(safe(row.assetName)&&['wiki-internal-id','wiki-agent-avatar-id','wfcd-explicit-thumbnail','explicit-wiki-page-lead-image'].includes(row.basis)){
+      wikiUsed.add(row.assetName);
+      add({...row,key:'wiki:'+row.id,provider:'wiki',category:row.id.startsWith('/Lotus/Types/Enemies/')?'WikiEnemies':'WikiContent',label:row.name,name:row.name,imageOrigin:row.originURL??row.url,imageNote:row.basis+' · '+(row.source?.url??row.source?.file??row.wikiPage),imageMatch:row.basis,hasImage:true,imageKind:'original',parents:[],children:[],_asset:row.assetName,_directory:'wiki/img'});
+    }
+    for(const row of wiki.assets??[])if(!wikiUsed.has(row.assetName)&&safe(row.assetName))add({...row,key:'wiki-file:'+row.assetName,id:'wiki-file/'+row.assetName,provider:'wiki',category:'WikiContent',name:row.imageName,imageOrigin:row.originURL??row.url,hasImage:true,imageKind:'original',parents:[],children:[],_asset:row.assetName,_directory:'wiki/img'});
     for (const row of inventory.mappings) if (!this.lookup.has('wfcd:' + row.id)) {
       used.add(row.assetName);
       add({ ...row, key: 'wfcd:' + row.id, provider: 'wfcd', category: 'Abilities',
@@ -145,12 +152,12 @@ export class ImageGallery {
   }
   status() {
     return { root: this.content, libraryMissing:this.libraryMissing, total: this.rows.length,
-      providers: Object.fromEntries(['wfcd', 'official','text-icons'].map(p => [p, this.rows.filter(r => r.provider === p).length])),
+      providers: Object.fromEntries(['wfcd', 'official','text-icons','wiki'].map(p => [p, this.rows.filter(r => r.provider === p).length])),
       categories: [...this.labels].map(([id, label]) => ({ id, label })) };
   }
   async list({ provider = 'wfcd', category = '', query = '', availability = 'available', offset = 0, limit = 72, selectedKeys = null } = {}) {
     await this.load();
-    if (!['all', 'wfcd', 'official','text-icons'].includes(provider) || !['all', 'available', 'missing'].includes(availability)
+    if (!['all', 'wfcd', 'official','text-icons','wiki'].includes(provider) || !['all', 'available', 'missing'].includes(availability)
       || typeof query !== 'string' || query.length > 500 || typeof category !== 'string'
       || !Number.isInteger(offset) || offset < 0 || !Number.isInteger(limit) || limit < 1 || limit > 100
       || (selectedKeys !== null && (!Array.isArray(selectedKeys) || selectedKeys.length > 50000 || selectedKeys.some(k => typeof k !== 'string')))) throw new Error('图片筛选参数无效');
@@ -169,7 +176,7 @@ export class ImageGallery {
   async detail(key) {
     await this.load(); const row = this.lookup.get(key);
     if (!row) throw new Error('没有找到这条图片记录');
-    const relation = id => this.lookup.get('wfcd:' + id) ?? this.lookup.get('official:' + id);
+    const relation = id => this.lookup.get('wfcd:' + id) ?? this.lookup.get('official:' + id) ?? this.lookup.get('wiki:'+id);
     return { ...publicRow(row), relations: [...new Set([...(row.parents ?? []), ...(row.children ?? [])])].map(relation).filter(Boolean).map(publicRow) };
   }
   async asset(key) {

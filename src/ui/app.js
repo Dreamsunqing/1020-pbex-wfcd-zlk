@@ -26,7 +26,7 @@ const galleryUI = createGalleryUI({ api, guarded, notify, openEntity: async id =
 const documentsUI = createDocumentsUI({ api, guarded, notify });
 const openWM = async item => { activate('wm'); await wmUI.openFromItem(item); };
 const liveUI = createLiveStateUI({ api, guarded, notify, openWM, openLibrary: async (id,version) => { await playerLibraryUI.openFromWorld(id,version); activate('codex'); } });
-const dropTablesUI=createDropTablesUI({api,guarded,openLibrary:async id=>{await playerLibraryUI.openFromWorld(id,undefined,'drops');activate('codex');}});
+const dropTablesUI=createDropTablesUI({api,guarded,openWM,openLibrary:async id=>{await playerLibraryUI.openFromWorld(id,undefined,'drops');activate('codex');}});
 const wmUI = createWmUI({ api, guarded, notify });
 const playerLibraryUI = createPlayerLibraryUI({ api, guarded, openWM, openMerge: () => activate('merged'), returnToWorld: source => activate(source==='drops'?'drops':'world') });
 const state = { files: [], selected: null, pointer: '', query: '', offset: 0, view: 'table', page: null, requests: 0, releases: [], busy: false, cardReturn: null };

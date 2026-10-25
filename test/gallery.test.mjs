@@ -63,8 +63,9 @@ test('完整本地资源库可精确查到两种来源及技能，全部索引�
   assert.equal(skills.total, 1); assert.equal(skills.rows[0].label, '马赫冲驰');
   const files = new Set(await fs.readdir(path.join(root, 'wfcd/img')));
   const officialFiles = new Set(await fs.readdir(path.join(root, 'official/img')));
+  const wikiFiles=new Set(await fs.readdir(path.join(root,'wiki/img')).catch(()=>[]));
   const runtimeFiles=new Set(await fs.readdir(new URL('../src/ui/assets/text-icons/',import.meta.url)));
-  for (const row of gallery.rows.filter(r => r.hasImage)) assert.ok((row.provider === 'text-icons'?runtimeFiles:row.provider === 'wfcd' ? files : officialFiles).has(row._asset), row.key);
+  for (const row of gallery.rows.filter(r => r.hasImage)) assert.ok((row.provider === 'text-icons'?runtimeFiles:row.provider === 'wfcd' ? files : row.provider==='wiki'?wikiFiles:officialFiles).has(row._asset), row.key);
 });
 
 test('图库按完整 ID 读取官方中文描述及等级效果，递归补齐 WFCD 字典技能，不复用英文描述冒充中文',async t=>{

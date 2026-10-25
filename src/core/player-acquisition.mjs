@@ -139,7 +139,7 @@ export function playerAcquisition(data, item, locale = 'zh-CN') {
     if (families.size === 1 && !families.has(undefined)) {
       const entry = group([...families][0]); entry.drops.push(row);
       entry.row.evidence ??= row.evidence;
-    } else result.push({ ...row, title: row.title?.[locale] ?? row.title?.en ?? row.original, links: row.links.map(id => ({ id })) });
+    } else {const place=row.method==='drop'?dropLocation(data,row.original,locale):null;result.push({ ...row, title: place?.text??row.title?.[locale]??row.title?.en??row.original, links: place?.id?[{id:place.id}]:row.links.map(id=>({id})) });}
   }
   // Exact reward IDs in the relic model are sufficient even if no WFCD drops
   // or Plus reward-pool row was available for this item.

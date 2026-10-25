@@ -58,6 +58,11 @@ export class LocalImages {
     const enemyFile=path.join(path.dirname(catalogFile),'enemy-image-index.json');
     const enemyIndex=await fs.stat(enemyFile).then(s=>s.isFile()&&s.size<5*1024*1024?fs.readFile(enemyFile,'utf8'):null,()=>null);
     if(enemyIndex){let parsed;try{parsed=JSON.parse(enemyIndex);}catch{/* An optional portrait index must not disable the existing library. */}for(const row of Array.isArray(parsed?.mappings)?parsed.mappings:[])if(typeof row.id==='string'&&row.id.startsWith('/Lotus/Types/Enemies/')&&safeName(row.assetName)&&exact.has(row.assetName)&&['wiki-internal-id','wiki-agent-avatar-id'].includes(row.basis))ids.set(row.id,{name:row.assetName,original:row.imageName,provider:row.provider??'wiki',method:row.basis,note:'敌人图片按完整 ID 关联；来源 '+row.source?.url});}
+    const catalogRoot=path.dirname(catalogFile),contentRoot=path.basename(catalogRoot)==='wfcd'?path.dirname(catalogRoot):catalogRoot,wikiRoot=path.join(contentRoot,'wiki/img');
+    const wiki=await fs.readFile(path.join(path.dirname(wikiRoot),'index.json'),'utf8').then(text=>{try{return JSON.parse(text);}catch{return {mappings:[]};}},()=>({mappings:[]}));
+    const wikiRefs=new Map();
+    for(const row of wiki.mappings??[])if(typeof row.id==='string'&&safeName(row.assetName)&&['wiki-internal-id','wiki-agent-avatar-id','wfcd-explicit-thumbnail','explicit-wiki-page-lead-image'].includes(row.basis))wikiRefs.set(row.id,{name:row.assetName,root:wikiRoot,original:row.imageName,provider:'wiki',imageRole:row.imageRole,method:row.basis,note:'Wiki 明确身份映射 · '+(row.source?.url??row.wikiPage)});
+    this.wikiRefs=wikiRefs;this.contentRoot=contentRoot;
     this.root = root; this.exact = exact; this.folded = folded; this.ids = ids; this.originals = originals; this.blueprintBase = blueprintBase;
     return this.status();
   }
@@ -68,8 +73,10 @@ export class LocalImages {
       const replacement = this.originals?.get(override.imageName);
       if (replacement && this.exact.has(replacement.name)) return { ...replacement, method: 'reviewed-display-override', note: override.reason };
     }
+    if(id?.startsWith('/Lotus/Types/Enemies/')&&this.wikiRefs?.has(id))return this.wikiRefs.get(id);
     const ref = this.ids?.get(id);
-    if (ref) return ref;
+    if (ref && this.exact.has(ref.name)) return ref;
+    if(this.wikiRefs?.has(id))return this.wikiRefs.get(id);
     // Enemy names also name sigils and cosmetics. An unresolved enemy must not
     // fall back to a similarly named portrait across unrelated key spaces.
     if(id?.startsWith('/Lotus/Types/Enemies/'))return null;
@@ -85,14 +92,16 @@ export class LocalImages {
     const read = async ref => {
       if (!ref) return null;
       try {
-        const file = await fs.realpath(path.join(this.root, ref.name));
-        if (!inside(this.root, file)) return null;
+        const assetRoot=ref.root?await fs.realpath(ref.root):this.root;
+        if(ref.root&&!inside(this.contentRoot,assetRoot))return null;
+        const file = await fs.realpath(path.join(assetRoot, ref.name));
+        if (!inside(assetRoot, file)) return null;
         const stat = await fs.stat(file);
         if (!stat.isFile() || stat.size > 2 * 1024 * 1024 || stat.size > remaining) return null;
         const bytes = await fs.readFile(file), type = mime(bytes);
         if (type && bytes.length <= 2 * 1024 * 1024 && bytes.length <= remaining) {
           remaining -= bytes.length;
-          return { dataUrl: `data:${type};base64,${bytes.toString('base64')}`, file: ref.name, original: ref.original, method: ref.method, ...(ref.note ? { note: ref.note } : {}),...(ref.provider?{provider:ref.provider}:{}), ...(ref.abilityIcon || isAbilityIcon(null, ref.original) ? { abilityIcon: true } : {}) };
+          return { dataUrl: `data:${type};base64,${bytes.toString('base64')}`, file: ref.name, original: ref.original, method: ref.method, ...(ref.note ? { note: ref.note } : {}),...(ref.provider?{provider:ref.provider}:{}),...(ref.imageRole?{imageRole:ref.imageRole}:{}), ...(ref.abilityIcon || isAbilityIcon(null, ref.original) ? { abilityIcon: true } : {}) };
         }
       } catch { /* Missing or invalid local images leave a text card. */ }
       return null;

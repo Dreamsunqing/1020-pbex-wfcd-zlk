@@ -171,13 +171,12 @@ export function createWmUI({api,guarded,notify}) {
  async function openFromItem(item){
   state.mode='items';for(const b of document.querySelectorAll('[data-wm-mode]')){b.classList.toggle('selected',b.dataset.wmMode==='items');b.setAttribute('aria-pressed',String(b.dataset.wmMode==='items'));}
   $('wm-items-view').hidden=false;$('wm-rivens-view').hidden=true;$('wm-catalog-refresh').hidden=false;
-  const query=item.english||item.title||item.name||'';$('wm-search').value=query;
-  const seq=++state.searchSeq,data=await api.call('wmSearch',{query});if(seq!==state.searchSeq)return;
-  state.loaded=true;$('wm-catalog-meta').textContent=`${data.total.toLocaleString()} 件可交易物品 · ${meta(data)}`;
+  const seq=++state.searchSeq,data=await api.call('wmEligibility',{ids:[item.id]});if(seq!==state.searchSeq)return;
+  const target=data.matches[item.id];if(!target?.eligible)throw Error('该具体物品未确认可交易或没有唯一对应的 WM 条目');
+  $('wm-search').value=target.market.english;state.loaded=true;
+  $('wm-catalog-meta').textContent=`${data.total.toLocaleString()} 件可交易物品 · ${meta(data)}`;
   message($('wm-catalog-error'),data.error?`目录更新失败：${data.error}，正在使用已有目录。`:'');
-  const normalize=v=>String(v??'').toLowerCase().replace(/[_\s]+/g,' ').trim();
-  const byId=data.items.filter(row=>row.gameRef===item.id),exact=byId.length?byId:data.items.filter(row=>[row.name,row.english].some(n=>[item.title,item.name,item.english].filter(Boolean).some(v=>normalize(n)===normalize(v))));
-  if(exact.length===1)await choose(exact[0]);else {state.item=null;state.setData=null;$('wm-item').hidden=true;$('wm-welcome').hidden=false;await search();}
+  await choose(target.market);
  }
 
  return {state,rivens,search,choose,openFromItem,loadOrders,loadStats,loadSet,renderOrders,renderStats,async enter(){if(state.mode==='rivens'){await rivens.enter();return;}if(!state.loaded){$('wm-catalog-meta').textContent='正在获取可交易物品目录…';await search();}}};

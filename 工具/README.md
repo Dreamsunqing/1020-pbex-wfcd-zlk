@@ -70,3 +70,13 @@ node 工具/15-获取敌人图片.mjs
 - `node 工具/17-维护项目图示.mjs`：重画项目三张 PNG；加 `--write-vault` 同步当前打开的 Obsidian 库 Canvas。
 
 完整规则：[掉落表与仲裁](../文档/深入/31-官方掉落表与跨模块关联.md)、[Wiki 资源与画板](../文档/深入/32-资源维护踩坑与项目Canvas.md)。
+
+## Wiki 原图与地点审计（0.17.1）
+
+```sh
+node 工具/18-维护Wiki图片.mjs --resume
+node scripts/audit-drop-images.mjs
+node scripts/prepare-drop-terms.mjs
+```
+
+Wiki 独立目录 `assets/content/wiki/` 替代旧敌人图混入 WFCD 的约定。工具 15 仍可用，调用新同步器的 `--enemies-only` 模式。原始文件目录不等于已下载量，实际数量和失败见 `artifacts/wiki-images/report.json`，覆盖与未映射地点见 `coverage.json`。参数、迁移、索引与更新策略见 [维护文档](../文档/深入/33-Wiki图库增量维护与交易校验.md)。

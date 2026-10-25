@@ -50,9 +50,9 @@ const iconCache = new WeakMap();
 const modSetCache = new WeakMap();
 const imageNames = data => {
   if (!imageCache.has(data.output)) {
-    const inventory = new Map((data.output['reports/coverage.json'].files ?? []).map(f => [f.file, f]));
+    const inventory = new Map((data.output['reports/coverage.json']?.files ?? []).map(f => [f.file, f]));
     const names = {}, icons = {};
-    for (const row of data.output['reports/source-records.json']) {
+    for (const row of data.output['reports/source-records.json']??[]) {
       const source = expandEvidence(data, row.source), reference = inventory.get(source.file)?.reference;
       const value = row.value ?? (reference ? pointerValue(data.output[reference], source.pointer) : null);
       if (!value || typeof value !== 'object') continue;
@@ -81,7 +81,7 @@ export function localizedCardArt(data,item,locale='zh-CN') {
 }
 export const imageDescriptors = (data, items,locale='zh-CN') => {
   if(data.output['player/images.json'])return Object.fromEntries(items.map(item=>[item.id,{...data.output['player/images.json'][item.id],cardArt:localizedCardArt(data,item,locale)}]));
-  const names = imageNames(data), recipes = new Map(data.output['recipes.json'].map(row => [row.id, row]));
+  const names = imageNames(data), recipes = new Map((data.output['recipes.json']??[]).map(row => [row.id, row]));
   return Object.fromEntries(items.map(item => {
     const resultId = recipes.get(item.id)?.resultId;
     const icon = iconCache.get(data.output)?.[item.id];
@@ -112,7 +112,7 @@ export function mergedDetail(data, id, {locale='zh-CN'}={}) {
   const item=applyLocalizedFields(canonicalItem,projections);
   const names = new Map(allItems(data).map(row => [row.id, itemTitle(row,locale)]));
   const entities = new Map(allItems(data).map(i => [i.id, i]));
-  const sources = sourceRecords(data, id), inventory = new Map((data.output['reports/coverage.json'].files ?? []).map(file => [file.file, file]));
+  const sources = sourceRecords(data, id), inventory = new Map((data.output['reports/coverage.json']?.files ?? []).map(file => [file.file, file]));
   const references = {};
   const scan = value => {
     if (typeof value === 'string' && names.has(value)) references[value] = names.get(value);

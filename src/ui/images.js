@@ -17,7 +17,7 @@ export async function decorateImages(api, entries, detail = false) {
       const { card, label } = entries[index];
       if (!image || !card.isConnected || card.querySelector(':scope > .local-item-image')) return;
       const meta=entries[index].cardArt??image.cardArt;
-      const art=await composeCardArt(image,{...entries[index],cardArt:meta,setIconDataUrl:await setIcon(api,meta)});
+      const art=image.imageRole==='wiki-mod-original'?null:await composeCardArt(image,{...entries[index],cardArt:meta,setIconDataUrl:await setIcon(api,meta)});
       if(!card.isConnected)return;
       const original=image;
       if(art)image={...image,dataUrl:art.dataUrl};

@@ -5,6 +5,8 @@ import {createWorldCatalog} from '../src/core/live-state/catalog.mjs';
 import {buildWorldView} from '../src/core/live-state/view.mjs';
 import {normalizeCycles} from '../src/core/live-state/normalizers/cycles.mjs';
 import {normalizeFlashSales} from '../src/core/live-state/normalizers/commerce-fields.mjs';
+import { readFileSync } from 'node:fs';
+import { voidStormRecords, mergeStormRecords } from '../src/core/void-storm-records.mjs';
 const date=ms=>({$date:{$numberLong:String(ms)}});
 test('六类周期的24小时阶段连续覆盖查询窗，首尾裁剪且保留跨日日期',()=>{
  const at=Date.parse('2026-10-24T23:58:00+08:00');
@@ -70,6 +72,34 @@ test('九重天裂缝按实例提供任务类型，同一节点的静态类型�
  const at=Date.parse('2026-10-24T00:00:00Z'),base={Activation:date(at-1000),Expiry:date(at+60000),Node:'CrewBattle',ActiveMissionTier:1},catalog=createWorldCatalog({plus:{ExportRegions:{CrewBattle:{name:'节点',systemName:'地球比邻星域',missionType:'MT_DEFENSE'}},ExportMissionTypes:{MT_DEFENSE:{name:'防御'},MT_EXTERMINATION:{name:'歼灭'},MT_SURVIVAL:{name:'生存'}}}});
  const view=buildWorldView({raw:{Time:at/1000,VoidStorms:[{...base,_id:'a',MissionType:'MT_EXTERMINATION'},{...base,_id:'b',MissionType:'MT_SURVIVAL'},{...base,_id:'c'}]},server:'de',kind:'sample'},catalog,{now:at});
  const rows=view.modules.find(m=>m.id==='fissures').entries;assert.deepEqual(rows.map(r=>r.missionType),['歼灭','生存','']);assert.deepEqual(rows.map(r=>r.missionBasis),['instance','instance','unavailable']);
+});
+
+test('九重天使用专用 missionName 语言键，双服真实快照全部显示具体任务类型',()=>{
+ const read=name=>JSON.parse(readFileSync(new URL('../世界状态上游/git/warframe-public-export-plus/'+name+'.json',import.meta.url)));
+ const fallback=JSON.parse(readFileSync(new URL('../src/data/live-state/community-fallback.json',import.meta.url)));
+ const catalog=createWorldCatalog({plus:{ExportRegions:read('ExportRegions'),ExportMissionTypes:read('ExportMissionTypes'),'dict.zh':read('dict.zh')},fallback});
+ for(const server of ['de','wg']){
+  const raw=JSON.parse(readFileSync(new URL('../src/data/live-state/'+server+'-sample.json',import.meta.url)));
+  const rows=buildWorldView({raw,server,kind:'sample'},catalog).modules.find(m=>m.id==='fissures').entries.filter(r=>r.kind==='storm');
+  assert.equal(rows.length,raw.VoidStorms.length);assert.ok(rows.every(r=>r.missionType&&r.missionBasis==='node-mission-name'));
+  const records=voidStormRecords(raw,catalog,server);assert.equal(records.length,rows.length);
+  assert.ok(records.every(r=>r.missionType&&Object.keys(r).length===10&&r.节点&&r.遗物等级));
+  assert.ok(records.every(r=>r.快照日期==='2026-10-23'&&r.任务===r.missionType));
+  assert.deepEqual(mergeStormRecords(records,records),mergeStormRecords([],records));
+  const volatile=records.find(r=>r.node==='CrewBattleNode511');if(volatile){assert.equal(volatile.missionType,'爆发');assert.equal(volatile.节点,'卫标星环（金星）');assert.equal(volatile.遗物等级,'古纪');}
+  const midnight=voidStormRecords(raw,catalog,server,{observedAt:'2026-10-25T16:00:00Z'});assert.ok(midnight.every(r=>r.快照日期==='2026-10-26'));
+  assert.deepEqual(mergeStormRecords(records,midnight).map(r=>r.快照日期),records.map(r=>r.快照日期));
+ }
+});
+
+test('九重天实例类型优先，通用枚举可使用专用名称，缺字典不暴露语言键',()=>{
+ const at=Date.parse('2026-10-24T00:00:00Z'),key='/Lotus/Language/Missions/MissionName_RailjackVolatile';
+ const catalog=createWorldCatalog({plus:{ExportRegions:{CrewBattle:{missionType:'MT_RAILJACK',missionName:key}},'dict.zh':{[key]:'爆发'},ExportMissionTypes:{MT_SURVIVAL:{name:'生存'}}}});
+ const row={_id:'a',Activation:date(at),Expiry:date(at+5400000),Node:'CrewBattle',ActiveMissionTier:'VoidT1'},snapshot=rows=>({Time:at/1000,VoidStorms:rows});
+ for(const [extra,expected] of [[{},'爆发'],[{MissionType:'MT_RAILJACK'},'爆发'],[{MissionType:'MT_SURVIVAL'},'生存'],[{MissionType:'MT_NEW'},null],[{Node:'missing'},null]])assert.equal(voidStormRecords(snapshot([{...row,...extra}]),catalog,'de')[0].missionType,expected);
+ const missing=createWorldCatalog({plus:{ExportRegions:catalog.plus.ExportRegions}});assert.equal(voidStormRecords(snapshot([row]),missing,'de')[0].missionType,null);
+ assert.throws(()=>voidStormRecords({},catalog,'de'),/缺少/);assert.throws(()=>voidStormRecords({VoidStorms:[row]},catalog,'de'),/快照时间/);assert.throws(()=>voidStormRecords(snapshot([{...row,Expiry:null}]),catalog,'de'),/无效/);
+ const original=voidStormRecords(snapshot([row]),catalog,'de');assert.equal(mergeStormRecords(original,[{...original[0],missionType:'生存'}]).length,1);assert.equal(mergeStormRecords(original,[{...original[0],missionType:'生存'}])[0].missionType,'生存');
 });
 
 

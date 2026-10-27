@@ -41,4 +41,21 @@ export class DocumentLibrary {
     }
     return { rows, total: rows.length };
   }
+  async image({ documentId, href }) {
+    await this.read(documentId);
+    if (typeof href !== 'string' || href.length > 500 || /[\\\0]/.test(href)) throw new Error('图示链接无效');
+    const url = new URL(href, 'https://workbench-docs.invalid/' + documentId);
+    if (url.origin !== 'https://workbench-docs.invalid' || url.search || url.hash) throw new Error('仅支持项目本地图示');
+    const id = decodeURIComponent(url.pathname.slice(1));
+    if (!id.startsWith('文档/图示/') || !/\.(png|jpe?g|webp)$/i.test(id)) throw new Error('图片不在项目图示目录中');
+    const root = await fs.realpath(path.join(this.root, '文档/图示'));
+    const file = await fs.realpath(path.join(this.root, id));
+    if (!inside(root, file)) throw new Error('图示路径超出目录');
+    const stat = await fs.stat(file);
+    if (!stat.isFile() || stat.size > 8 * 1024 * 1024) throw new Error('图示超过 8 MiB');
+    const bytes = await fs.readFile(file);
+    const mime = bytes.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10])) ? 'image/png' : bytes[0] === 255 && bytes[1] === 216 && bytes[2] === 255 ? 'image/jpeg' : bytes.toString('ascii', 0, 4) === 'RIFF' && bytes.toString('ascii', 8, 12) === 'WEBP' ? 'image/webp' : null;
+    if (!mime) throw new Error('图示格式无效');
+    return { id, dataUrl: `data:${mime};base64,${bytes.toString('base64')}` };
+  }
 }

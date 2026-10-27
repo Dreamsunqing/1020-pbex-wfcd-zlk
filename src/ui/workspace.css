@@ -47,3 +47,19 @@ aside{flex-basis:272px;background:var(--surface-soft);padding:18px 14px 0}.aside
 /* Game text icons are mostly white line art. A fixed contrast tile works in both themes. */
 .game-inline-icon.has-game-text-image{padding:0 .16em;background:#163f35;color:#fff;line-height:1.3;vertical-align:-.12em}
 .game-text-image{display:inline-block;height:1.12em;width:auto;max-width:3em;object-fit:contain;vertical-align:middle}
+/* Documentation figures retain their original colors in both themes. */
+.docs-figure{margin:22px 0}.docs-figure-open{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#f5f8fc}.docs-figure img{display:block;width:100%;height:auto;opacity:1;object-fit:contain}.docs-figure figcaption{font-size:12px;color:var(--muted);text-align:center;margin-top:6px}.docs-image-dialog{width:calc(100vw - 36px);max-width:none;max-height:calc(100vh - 36px);padding:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text);overflow:auto}.docs-image-dialog::backdrop{background:#0009}.docs-image-head{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 18px;background:var(--surface);border-bottom:1px solid var(--line);z-index:1}.docs-image-dialog>img{display:block;width:100%;min-width:1100px;max-width:1800px;height:auto;margin:auto;opacity:1}
+
+/* Contract help stays beside the editor; wide rule tables scroll independently. */
+.rules-guide-link{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin:12px 0;color:var(--muted);font-size:12px}
+.rules-option-help{border:1px solid var(--line);border-radius:10px;background:var(--surface);margin:12px 0;padding:12px 16px}
+.rules-option-help summary{cursor:pointer;color:var(--accent);font-weight:600;line-height:1.7}
+.rules-option-help dl{margin:16px 0 0;max-width:1100px}
+.rules-option-help dt{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;font-size:13px}
+.rules-option-help code,.rules-setting-label code{overflow-wrap:anywhere;color:var(--accent)}
+.rules-option-help dd{margin:5px 0 16px;font-size:13px;line-height:1.8;color:var(--muted)}
+.rules-stage{font-size:11px;color:var(--muted)}
+.rules-setting-label{display:flex;flex-direction:column;gap:4px;min-width:130px;font-size:13px}
+.rules-setting input{min-width:0;width:100%}.rules-setting-help{max-width:800px;color:var(--muted);font-size:12px;line-height:1.7;margin:-7px 0 20px}
+.rules-column-key,.rules-column-stage{display:block;font-weight:400;font-size:11px;color:var(--muted);line-height:1.6}
+@media(max-width:650px){.rules-setting{flex-wrap:wrap;gap:8px}.rules-setting input{flex-basis:100%}.rules-savebar{flex-wrap:wrap}.rules-savebar input{min-width:0;flex-basis:100%}}

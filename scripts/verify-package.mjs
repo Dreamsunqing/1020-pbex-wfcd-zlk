@@ -7,7 +7,7 @@ const asar = createRequire(import.meta.url)('@electron/asar');
 const pkg = JSON.parse(await fs.readFile('package.json', 'utf8'));
 const platforms = { 'mac-x64': 'dist/mac/Source Workbench.app/Contents/Resources/app.asar', 'win-x64': 'dist/win-unpacked/resources/app.asar' };
 async function files(root) { const result = []; for (const entry of await fs.readdir(root, { withFileTypes: true })) { if (entry.name.startsWith('.')) continue; const file = path.join(root, entry.name); if (entry.isDirectory()) result.push(...await files(file)); else result.push(file); } return result; }
-const sources = [...await files('src'), ...await files('文档').then(rows => rows.filter(file => file.endsWith('.md'))), 'config/default.json', 'README.md', '使用说明.md', '工具/README.md'], results = [];
+const sources = [...await files('src'), ...await files('文档').then(rows => rows.filter(file => file.endsWith('.md') || (file.startsWith('文档/图示/') && /\.(png|svg|json)$/.test(file)))), 'config/default.json', 'README.md', '使用说明.md', '工具/README.md'], results = [];
 for (const [platform, archive] of Object.entries(platforms)) {
   for (const file of sources) assert.ok(asar.extractFile(archive, file).equals(await fs.readFile(file)), platform + ' 源码不符 ' + file);
   // electron-builder strips development metadata and rewrites package.json formatting.

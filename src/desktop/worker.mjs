@@ -11,6 +11,7 @@ import { loadPlayerBundle } from '../core/player-bundle.mjs';
 import { playerLibraryList, playerLibraryDetail } from '../core/player-library.mjs';
 import { rewardContexts } from '../core/merge/reward-context.mjs';
 import { LiveStateStore } from '../core/live-state/service.mjs';
+import { VoidStormForecastStore } from '../core/void-storm-store.mjs';
 import { WmService } from '../core/wm/service.mjs';
 import { loadWorldCatalog } from '../core/live-state/catalog.mjs';
 import { buildWorldView } from '../core/live-state/view.mjs';
@@ -43,6 +44,7 @@ import { mergeContext, mergedStatus, datasetFor, mergedList, mergedDetail, expan
 
 const store = new Store(workerData.storeRoot);
 const liveState = new LiveStateStore(path.join(workerData.userData, 'world-state'));
+const stormForecasts = new VoidStormForecastStore(path.join(workerData.userData, 'void-storm-forecast'));
 const wm = new WmService(path.join(workerData.userData, 'wm'));
 let liveCatalog = null;
 async function liveView(server, refresh = false, imported = null) {
@@ -160,9 +162,23 @@ const handlers = {
   async wmRivenCatalog(args) { return wm.rivenCatalog(args, { proxyUrl: config.network?.proxyUrl }); },
   async wmAuctions(args) { return wm.auctions(args, { proxyUrl: config.network?.proxyUrl }); },
   async liveState({ server = 'de', refresh = false } = {}) { if (typeof refresh !== 'boolean') throw new Error('刷新参数无效'); return liveView(server, refresh); },
+  async voidStormForecast({ server = 'de', refresh = false, historical = false, at } = {}) {
+    if (!['de', 'wg'].includes(server) || typeof refresh !== 'boolean' || typeof historical !== 'boolean') throw new Error('风暴预测参数无效');
+    let snapshot;
+    if (historical) {
+      const history = await stormForecasts.history();
+      const latest = history.samples.filter(row => row.server === server && !row.source.startsWith('https://')).sort((a, b) => a.observedAt.localeCompare(b.observedAt)).at(-1);
+      if (!latest) throw new Error('没有该服的历史风暴快照');
+      snapshot = { server, source: latest.source, hash: latest.hash, kind: 'history', fetchedAt: null,
+        raw: { Time: Date.parse(latest.observedAt) / 1000, data: latest.storms.map(row => ({ ...row, isStorm: true })) } };
+      at ??= Date.parse(latest.observedAt);
+    } else snapshot = refresh ? await liveState.refresh(server, { proxyUrl: config.network?.proxyUrl }) : await liveState.current(server);
+    return stormForecasts.view(snapshot, { at: at ?? Date.now() });
+  },
   async importLiveState({ server, file }) { return liveView(server, false, await liveState.import(server, file)); },
   async documentsList(args) { return documents.list(args); },
   async documentsRead({ id }) { return documents.read(id); },
+  async documentsImage(args) { return documents.image(args); },
   async images({ requests }) {
     const images = await localImages.batch(requests);
     let remaining = 16 * 1024 * 1024 - images.flatMap(image => image?.layers ?? (image ? [image] : [])).reduce((sum, image) => sum + Math.ceil((image.dataUrl?.length ?? 0) * 3 / 4), 0);

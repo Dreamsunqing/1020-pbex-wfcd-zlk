@@ -12,13 +12,14 @@
   <link rel="stylesheet" href="wm.css">
   <link rel="stylesheet" href="player-library.css">
   <link rel="stylesheet" href="drop-tables.css">
+  <link rel="stylesheet" href="void-storm.css">
 </head>
 <body>
   <header>
     <div class="brand"><span class="brand-icon">◈</span><div>上游资料工作台<small>SOURCE WORKBENCH <b>01</b></small></div></div>
     <nav aria-label="功能页面"><button class="nav active" data-panel="browser">资料浏览</button><button class="nav" data-panel="world">世界状态</button>
       <button class="nav" data-panel="codex">资料库</button><button class="nav" data-panel="drops">掉落表</button><button class="nav" data-panel="wm">WM</button><button class="nav" data-panel="merged">合并汇总</button><button class="nav" data-panel="gallery">图片资源</button><button class="nav" data-panel="rules">合并规则</button><button class="nav" data-panel="oracle">推算实验室</button><button class="nav" data-panel="updates">更新与版本</button><button class="nav" data-panel="documents">文档阅读</button><button class="nav" data-panel="settings">配置</button></nav>
-    <div class="header-tools"><span class="version">v0.17.0</span><select id="theme-select" aria-label="外观主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">暗色</option></select></div>
+    <div class="header-tools"><span class="version">v0.17.2</span><select id="theme-select" aria-label="外观主题"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">暗色</option></select></div>
   </header>
   <div id="notice" role="status" hidden></div>
   <main>
@@ -138,7 +139,14 @@
     </section>
     <section id="oracle" class="panel page">
       <div class="page-heading"><div><small>ORACLE + BROWSE.WF / COMPATIBILITY</small><h1>推算实验室</h1><p>规则与排期取自当前目录或所选快照；刷新世界状态后，按参考时间查询本页全部模块。</p></div><span class="pill">本地计算 · UTC 排期</span></div>
-      <div class="segmented lab-tabs" role="group" aria-label="推算模块"><button data-lab="browse-lab" class="selected">周期与轮换 · browse.wf</button><button data-lab="oracle-legacy">推算与周常 · Oracle</button></div>
+      <div class="segmented lab-tabs" role="group" aria-label="推算模块"><button data-lab="browse-lab" class="selected">周期与轮换 · browse.wf</button><button data-lab="oracle-legacy">推算与周常 · Oracle</button><button data-lab="void-storm-lab">九重天 · 未来 24 小时</button></div>
+      <div id="void-storm-lab" hidden>
+        <div class="card storm-intro"><small>VOID STORMS / EXPERIMENTAL</small><h2>九重天风暴 · 未来 24 小时</h2><p>每批持续 90 分钟，同一时间组每 60 分钟开启下一批，重叠 30 分钟。节点与任务类型先用每日快照的历史频次给出候选，分别展示回测准确率。</p>
+          <div class="module-controls"><label>服务器<select id="storm-server"><option value="de">国际服</option><option value="wg">国服</option></select></label><label>参考时间（北京时间）<input id="storm-at" type="datetime-local" step="1"></label><button id="storm-refresh" class="primary">刷新并预测 24 小时</button><button id="storm-recalculate">按参考时间重算</button><button id="storm-history">历史快照演示</button><button id="storm-copy" class="small" disabled>复制预测与回测 JSON</button></div>
+          <p class="muted">刷新将使用当前时间，并保存风暴观测用于后续回测。表内均为北京时间（UTC+8）；窗口按开始时间纳入未来 24 小时。</p>
+        </div>
+        <div id="storm-result" aria-live="polite"></div>
+      </div>
       <div id="browse-lab">
         <div class="browse-toolbar lab-toolbar"><label>参考时间（本地时区）<input type="datetime-local" id="browse-time" step="1"></label><button id="query-browse" class="primary">刷新并查询</button></div>
         <p class="lab-time-note">默认当前时间；修改时间后按所选时间查询。细分条件在各模块内调整后自动查询。</p>

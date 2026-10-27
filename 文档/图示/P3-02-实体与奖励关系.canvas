@@ -1,0 +1,176 @@
+{
+  "nodes": [
+    {
+      "id": "ability",
+      "type": "text",
+      "x": 560,
+      "y": 135,
+      "width": 470,
+      "height": 165,
+      "text": "## 技能实体\n\nhas-ability · 完整 abilityUniqueName\n同 ID 的内嵌 / 独立技能可汇合\nability-links.mjs · 强化与移植证据",
+      "color": "4"
+    },
+    {
+      "id": "part",
+      "type": "text",
+      "x": 30,
+      "y": 330,
+      "width": 440,
+      "height": 165,
+      "text": "## 组件实体\n\nhas-component / requires\n成员关系与配方消耗分别保留\ncount / slot / source 伴随关系",
+      "color": "5"
+    },
+    {
+      "id": "item",
+      "type": "text",
+      "x": 560,
+      "y": 430,
+      "width": 470,
+      "height": 180,
+      "text": "## 统一实体 · items/*.json\n\n完整 /Lotus/... 或 wf:<kind>/<id>\nname / description 按语言存\nrelations.json 连接各实体",
+      "color": "5"
+    },
+    {
+      "id": "manifest",
+      "type": "text",
+      "x": 1110,
+      "y": 135,
+      "width": 460,
+      "height": 165,
+      "text": "## Oracle · JobManifest.json\n\nrewards = 完整奖励表路径\nbounty-references.json 保留引用\n清单引用不等于当前轮次确认",
+      "color": "3"
+    },
+    {
+      "id": "table",
+      "type": "text",
+      "x": 1110,
+      "y": 460,
+      "width": 460,
+      "height": 180,
+      "text": "## Plus · ExportRewards.json\n\n表路径 → 池数组 → type / itemCount\nreward-tables.json 保留全部表和池\nprobability 无值时不从 rarity 猜",
+      "color": "3"
+    },
+    {
+      "id": "recipe",
+      "type": "text",
+      "x": 30,
+      "y": 750,
+      "width": 470,
+      "height": 180,
+      "text": "## 蓝图与配方 · recipes.json\n\n蓝图 --produces→ 成品\n蓝图 --requires→ 材料 × 数量\nresultType 是成品身份依据",
+      "color": "5"
+    },
+    {
+      "id": "art",
+      "type": "text",
+      "x": 560,
+      "y": 825,
+      "width": 470,
+      "height": 175,
+      "text": "## 共享图像描述与文件\n\nimages.json / service.mjs 描述符\n蓝图底纹 + recipe.resultId 成品图\nLocalImages 读取共享图库，不复制",
+      "color": "4"
+    },
+    {
+      "id": "live",
+      "type": "text",
+      "x": 1110,
+      "y": 820,
+      "width": 460,
+      "height": 180,
+      "text": "## 实时奖励是另一道判断\n\noracle-rewards.mjs\n候选表 ∩ 有效世界状态奖励表\n仅唯一命中才确认当前表",
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "p3-e0",
+      "fromNode": "item",
+      "toNode": "ability",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "has-ability"
+    },
+    {
+      "id": "p3-e1",
+      "fromNode": "item",
+      "toNode": "part",
+      "fromSide": "left",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "has-component"
+    },
+    {
+      "id": "p3-e2",
+      "fromNode": "recipe",
+      "toNode": "item",
+      "fromSide": "top",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "produces"
+    },
+    {
+      "id": "p3-e3",
+      "fromNode": "recipe",
+      "toNode": "part",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "requires"
+    },
+    {
+      "id": "p3-e4",
+      "fromNode": "manifest",
+      "toNode": "table",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "完整表路径"
+    },
+    {
+      "id": "p3-e5",
+      "fromNode": "table",
+      "toNode": "item",
+      "fromSide": "left",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "type"
+    },
+    {
+      "id": "p3-e6",
+      "fromNode": "item",
+      "toNode": "art",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "图片元数据"
+    },
+    {
+      "id": "p3-e7",
+      "fromNode": "recipe",
+      "toNode": "art",
+      "fromSide": "bottom",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "resultId"
+    },
+    {
+      "id": "p3-e8",
+      "fromNode": "table",
+      "toNode": "live",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "静态候选"
+    },
+    {
+      "id": "p3-e9",
+      "fromNode": "live",
+      "toNode": "item",
+      "fromSide": "left",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "确认后显示奖励"
+    }
+  ]
+}

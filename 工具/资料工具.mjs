@@ -27,7 +27,8 @@ const descriptions = [
   ['获取敌人图片', '按 Wiki 完整敌人 ID 与 Plus avatar 关系补充立绘，不以同名跨源猜图'],
   ['刷新官方掉落表', '只刷新官方掉落表，完整验证后发布本地快照'],
   ['维护项目图示', '同步三份 Obsidian Canvas，并生成项目 PNG（可加 --write-vault）'],
-  ['维护Wiki图片', '分页枚举 Wiki 文件并增量补图；独立 assets/content/wiki 目录']
+  ['维护Wiki图片', '分页枚举 Wiki 文件并增量补图；独立 assets/content/wiki 目录'],
+  ['获取全部Wiki图片', '默认离线预检全站图片；实际下载须先取得站方许可，单连接限速续传']
 ];
 const help = () => console.log(`资料包工具箱\n\n${descriptions.map(([name, label], index) => `${index + 1}. ${name}：${label}`).join('\n')}\n\n用法：node 工具/资料工具.mjs <命令或编号> [参数]\n预览命令而不执行：加 --预览命令\n蓝图示例：node 工具/07-合成蓝图.mjs --id /Lotus/Types/Recipes/WarframeRecipes/RunnerBlueprint --result-id /Lotus/Powersuits/Runner/Runner\n帮助：工具/README.md。所有命令以项目根目录为工作目录；不会自动串联下载、构建或校验。`);
 
@@ -42,7 +43,7 @@ async function execute(binary, args, preview) {
 
 export async function run(command, parameters = []) {
   const preview = parameters.includes('--预览命令'), args = parameters.filter(value => value !== '--预览命令');
-  if (/^(?:[1-9]|1[0-8])$/.test(command ?? '')) command = descriptions[Number(command) - 1][0];
+  if (/^(?:[1-9]|1[0-9])$/.test(command ?? '')) command = descriptions[Number(command) - 1][0];
   if (!command || command === 'help' || command === '--help') { help(); return; }
   const at = value => path.join(root, value);
   const commands = {
@@ -50,6 +51,7 @@ export async function run(command, parameters = []) {
     预构建资料库: [node, [at('scripts/prepare-player-library.mjs'), ...args]],
     获取敌人图片: [node, [at('scripts/sync-wiki-images.mjs'), '--enemies-only', ...args]],
     维护Wiki图片: [node, [at('scripts/sync-wiki-images.mjs'), ...args]],
+    获取全部Wiki图片: [node, [at('scripts/archive-wiki-images.mjs'), ...args]],
     刷新官方掉落表: [node, [at('scripts/refresh-drop-tables.mjs'), ...args]],
     获取数据: [node, [at('src/cli.mjs'), 'update', '--config', at('config/default.json'), '--store', at('.workbench'), ...args]],
     处理数据: [node, [at('scripts/inventory-structure.mjs'), args[0] || root, args[1] || at('输出/数据处理/字段结构清单.json')]],

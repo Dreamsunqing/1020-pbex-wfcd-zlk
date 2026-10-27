@@ -1,0 +1,148 @@
+{
+  "nodes": [
+    {
+      "id": "candidates",
+      "type": "text",
+      "x": 110,
+      "y": 145,
+      "width": 1380,
+      "height": 145,
+      "text": "## 同一完整实体 ID · 来自多个来源的字段候选\n\n例如：官方中文 levelStats、WFCD 英文 description、Plus 语言键\n每个候选都带 file / hash / pointer / locale；原件不修改",
+      "color": "5"
+    },
+    {
+      "id": "object",
+      "type": "text",
+      "x": 30,
+      "y": 405,
+      "width": 470,
+      "height": 200,
+      "text": "## 结构：先理解再合并\n\nnested.mjs\n对象 → 子字段递归\n有身份数组 → 按完整 ID\n匿名数组 → 整组择优",
+      "color": "5"
+    },
+    {
+      "id": "language",
+      "type": "text",
+      "x": 565,
+      "y": 405,
+      "width": 470,
+      "height": 200,
+      "text": "## 语言：三种输入分别处理\n\nfull-inputs / text-localization\n官方语言目录：同 ID 的文本\nPlus / Oracle：完整语言键查字典\nWFCD i18n：ID → 本地化对象",
+      "color": "4"
+    },
+    {
+      "id": "rank",
+      "type": "text",
+      "x": 1100,
+      "y": 405,
+      "width": 470,
+      "height": 200,
+      "text": "## 取值：可验证的规则\n\nfull-build.mjs · resolve\n字段优先级 ＞ 全局优先级\n有效人工修订：值 + 原因 + hash\nhash 过期 → 中止，不套旧修订",
+      "color": "3"
+    },
+    {
+      "id": "resolved",
+      "type": "text",
+      "x": 470,
+      "y": 755,
+      "width": 660,
+      "height": 145,
+      "text": "## 保存结果 + 所有候选的依据\n\nitems/*.json 与 localizations/{locale}.json\nreports/provenance.json 记录采用 / 冲突 / 修订",
+      "color": "4"
+    },
+    {
+      "id": "missing",
+      "type": "text",
+      "x": 30,
+      "y": 960,
+      "width": 660,
+      "height": 160,
+      "text": "## 缺失和回退仍可辨认\n\n缺名 / 缺引用 / 缺概率分别记录\n请求语言 → 英文 → 其他已构建语言\nfallback / partial 显示实际语言",
+      "color": "3"
+    },
+    {
+      "id": "display",
+      "type": "text",
+      "x": 850,
+      "y": 960,
+      "width": 720,
+      "height": 160,
+      "text": "## 展示中间件不参与身份合并\n\ninline-tokens.mjs + game-text.js\n<DT_...> 转图标；未知标记保留\n原文仍在 reference，可回查",
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "p3-e0",
+      "fromNode": "candidates",
+      "toNode": "object",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "结构"
+    },
+    {
+      "id": "p3-e1",
+      "fromNode": "candidates",
+      "toNode": "language",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "语言"
+    },
+    {
+      "id": "p3-e2",
+      "fromNode": "candidates",
+      "toNode": "rank",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "优先级"
+    },
+    {
+      "id": "p3-e3",
+      "fromNode": "object",
+      "toNode": "resolved",
+      "fromSide": "bottom",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "递归后的候选"
+    },
+    {
+      "id": "p3-e4",
+      "fromNode": "language",
+      "toNode": "resolved",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "按语言保留"
+    },
+    {
+      "id": "p3-e5",
+      "fromNode": "rank",
+      "toNode": "resolved",
+      "fromSide": "bottom",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "校验并选择"
+    },
+    {
+      "id": "p3-e6",
+      "fromNode": "resolved",
+      "toNode": "missing",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "读取时回退"
+    },
+    {
+      "id": "p3-e7",
+      "fromNode": "resolved",
+      "toNode": "display",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "最后才渲染"
+    }
+  ]
+}

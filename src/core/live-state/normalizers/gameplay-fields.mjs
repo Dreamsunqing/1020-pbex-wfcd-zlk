@@ -1,4 +1,5 @@
 import { readExtendedJsonDate } from "../raw/extended-json.mjs";
+import { resolveVoidStormMission } from "../void-storm-mission.mjs";
 import {
   createStaticLocalizationContext,
   hasStructuralWarnings,
@@ -198,5 +199,7 @@ export function normalizePersistentEnemies(raw, options = {}) {
 }
 
 export function normalizeVoidStorms(raw, options = {}) {
-  return normalize(raw, options, "VoidStorms", { ...dates, MissionType:["missionType","missionType"], Node: ["node", "node"], ActiveMissionTier: ["tier", "tier"] }, ["Activation", "Expiry", "Node", "ActiveMissionTier"]);
+  const result = normalize(raw, options, "VoidStorms", { ...dates, MissionType:["missionType","missionType"], Node: ["node", "node"], ActiveMissionTier: ["tier", "tier"] }, ["Activation", "Expiry", "Node", "ActiveMissionTier"]);
+  for (const row of result.data ?? []) row.missionType = resolveVoidStormMission(row.node?.key, row.missionType?.key, options.catalog, options.server);
+  return result;
 }

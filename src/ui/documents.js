@@ -4,6 +4,22 @@ const el = (tag, className, text) => { const node = document.createElement(tag);
 export function createDocumentsUI({ api, guarded, notify }) {
   const state = { current: null, entered: false, sequence: 0, listing: 0, history: [] };
   let timer;
+  function figure(alt, href) {
+    const box = el('figure', 'docs-figure'), button = el('button', 'docs-figure-open'), img = el('img');
+    img.alt = alt; img.decoding = 'async'; button.disabled = true; button.title = '点击放大图示';
+    button.append(img); box.append(button, el('figcaption', '', alt + ' · 点击放大'));
+    api.call('documentsImage', { documentId: state.current.id, href }).then(row => {
+      if (!box.isConnected) return;
+      img.src = row.dataUrl; button.disabled = false;
+      button.onclick = () => {
+        const dialog = el('dialog', 'docs-image-dialog'), head = el('div', 'docs-image-head'), close = el('button', 'small', '关闭 · Esc'), full = el('img');
+        full.src = row.dataUrl; full.alt = alt; close.onclick = () => dialog.close();
+        head.append(el('strong', '', alt), close); dialog.append(head, full); document.body.append(dialog);
+        dialog.addEventListener('close', () => dialog.remove(), { once: true }); dialog.showModal(); close.focus();
+      };
+    }).catch(error => { if (box.isConnected) box.replaceChildren(el('p', 'hint', alt + '：' + error.message)); });
+    return box;
+  }
   const slug = value => value.toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, '').trim().replace(/\s+/g, '-');
   function anchor(hash) {
     let id; try { id = decodeURIComponent(hash.replace(/^#/, '')); } catch { return; }
@@ -43,7 +59,9 @@ export function createDocumentsUI({ api, guarded, notify }) {
     const cells = line => line.trim().replace(/^\||\|$/g, '').split('|').map(cell => cell.trim());
     for (let i = 0; i < lines.length;) {
       const line = lines[i];
-      if (!line.trim()) { i++; continue; }
+      if (!line.trim() || /^\s*<!--.*-->\s*$/.test(line)) { i++; continue; }
+      const picture = /^!\[([^\]]*)\]\(([^\n)]+)\)\s*$/.exec(line.trim());
+      if (picture) { article.append(figure(picture[1], picture[2])); i++; continue; }
       if (/^\s*```/.test(line)) {
         const language = line.trim().slice(3), code = []; i++;
         while (i < lines.length && !/^\s*```/.test(lines[i])) code.push(lines[i++]); i++;

@@ -1,0 +1,34 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import {serviceAction,runService,dailyCheck} from '../scripts/run-wiki-archive-service.mjs';
+const now=Date.parse('2026-10-26T00:00:00Z');
+const consent={site:'https://wiki.warframe.com',scope:'all-original-images',approvedBy:'Test fixture only',reference:'Offline test',grantedAt:'2020-01-01',expiresAt:'2099-01-01',minIntervalMs:3000};
+test('background service never treats a schedule as site consent, and preserves review/cooldown',()=>{
+  assert.equal(serviceAction({now}).status,'awaiting-site-consent');
+  assert.equal(serviceAction({now,consent:{...consent,expiresAt:'2020-01-02'}}).status,'awaiting-site-consent');
+  assert.equal(serviceAction({now,consent,pause:{manualReviewRequired:true}}).status,'paused');
+  assert.equal(serviceAction({now,consent,pause:{resumeAfter:'2026-10-26T01:00:00Z'}}).status,'cooldown');
+  assert.equal(serviceAction({now,consent,pause:{resumeAfter:'2026-10-25T01:00:00Z'}}).status,'ready');
+  assert.equal(serviceAction({now,consent,stop:{}}).status,'stopped');
+  assert.equal(serviceAction({now,report:{status:'complete'}}).status,'complete');
+  assert.equal(serviceAction({now,userRequestedDownload:true}).status,'ready');
+  assert.equal(serviceAction({now,userRequestedDownload:true,pause:{manualReviewRequired:true}}).status,'paused');
+  assert.equal(serviceAction({now,userRequestedDownload:true,pause:{resumeAfter:'2026-10-26T01:00:00Z'}}).status,'cooldown');
+});
+test('unpermitted service performs only local work; daily check records state without changing download data',async t=>{
+  const home=await fs.mkdtemp(path.join(os.tmpdir(),'wiki-service-'));t.after(()=>fs.rm(home,{recursive:true,force:true}));
+  const projectRoot=path.join(home,'project'),wiki=path.join(projectRoot,'assets/content/wiki'),out=path.join(projectRoot,'artifacts/wiki-images');
+  await fs.mkdir(wiki,{recursive:true});await fs.mkdir(out,{recursive:true});
+  const inventory=JSON.stringify({complete:true,files:[]}),report=JSON.stringify({status:'offline-preflight-complete',pendingFiles:12});
+  await fs.writeFile(path.join(wiki,'inventory.json'),inventory);await fs.writeFile(path.join(out,'archive-report.json'),report);
+  const config={projectRoot,consentFile:path.join(home,'nonexistent-permit.json'),label:'test'};
+  await runService(config,home,{once:true});
+  const snapshot=await dailyCheck(config,home);assert.equal(snapshot.progress.pendingFiles,12);
+  assert.equal(snapshot.worker.status,'awaiting-site-consent');
+  assert.equal(await fs.readFile(path.join(wiki,'inventory.json'),'utf8'),inventory);
+  assert.equal(await fs.readFile(path.join(out,'archive-report.json'),'utf8'),report);
+  assert.equal(await fs.stat(path.join(wiki,'archive-receipts.jsonl')).then(()=>true,()=>false),false);
+});

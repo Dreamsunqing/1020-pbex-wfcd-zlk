@@ -80,3 +80,13 @@ node scripts/prepare-drop-terms.mjs
 ```
 
 Wiki 独立目录 `assets/content/wiki/` 替代旧敌人图混入 WFCD 的约定。工具 15 仍可用，调用新同步器的 `--enemies-only` 模式。原始文件目录不等于已下载量，实际数量和失败见 `artifacts/wiki-images/report.json`，覆盖与未映射地点见 `coverage.json`。参数、迁移、索引与更新策略见 [维护文档](../文档/深入/33-Wiki图库增量维护与交易校验.md)。
+
+## 全站图片归档与访问许可（2026-10-26）
+
+2026-10-27用户改为明确要求直接获取，后台已记录 `userRequestedDownload:true` 并启动；不冒充站方许可。手动入口 `node 工具/19-获取全部Wiki图片.mjs --download --user-requested`，仍检查robots、按随机3–10秒串行获取、遵守限流暂停。以下等待许可为此前安排，当前执行规则见第37章开头。
+
+`node 工具/19-获取全部Wiki图片.mjs --plan`：从已有完整目录离线生成全站图片计划，校验现有原件，不联网。支持 PNG/JPEG/WebP/GIF/SVG/ICO；全站归档不猜实体关系。
+
+站方条款要求自动化访问先取得同意，robots 通用规则禁止 `api.php`；**尚无许可时暂停运行15/18的在线刷新**。19的下载入口要求有效站方许可记录，采用单连接、随机3–10秒间隔，站方要求更慢时抬高下限及必要的上限；限流或异常即停并保留断点。说明与许可结构见 [全站归档文档](../文档/深入/37-Wiki全站图片归档与访问许可.md)。本轮只执行离线预检。
+
+独立后台安装：`python3 scripts/install-wiki-archive-service.py`。2026-10-26 已安装下载服务及每天北京时间00:00的本地只读检查；运行目录为 `~/Library/Application Support/WarframeWikiArchive/`，关闭聊天、Codex、终端不影响本地任务。当前等待实际站方许可，未开始下载；目录内有查看状态、立即检查和停止任务的 `.command`。配套Codex零点检查只负责通知，需应用运行。详见第37章“macOS独立后台”。

@@ -1,0 +1,158 @@
+{
+  "nodes": [
+    {
+      "id": "raw",
+      "type": "text",
+      "x": 30,
+      "y": 150,
+      "width": 460,
+      "height": 190,
+      "text": "## ① 原始来源 · 保持只读\n\n官方 Export*.json / Plus Export*.json\nWFCD 分类与 i18n / Oracle 清单\nlibrary.mjs → 文件清单与哈希",
+      "color": "5"
+    },
+    {
+      "id": "inputs",
+      "type": "text",
+      "x": 570,
+      "y": 165,
+      "width": 440,
+      "height": 180,
+      "text": "## ② 识别结构与完整 ID\n\nfull-inputs.mjs\nmap / array / group 分类\n字典单独索引；reference 留原结构",
+      "color": "5"
+    },
+    {
+      "id": "rules",
+      "type": "text",
+      "x": 1090,
+      "y": 150,
+      "width": 480,
+      "height": 190,
+      "text": "## 规则 JSON · 决定怎么处理\n\nmerge-full-contract.json\ncatalogs / fields / priority / nested\nmerge-overrides.json · 带哈希的人工修订",
+      "color": "3"
+    },
+    {
+      "id": "nested",
+      "type": "text",
+      "x": 30,
+      "y": 455,
+      "width": 460,
+      "height": 190,
+      "text": "## 深层字段与关系\n\nnested.mjs / text-localization.mjs\n对象逐字段；有 ID 数组按身份\n无 ID 数组保留整组候选",
+      "color": "4"
+    },
+    {
+      "id": "merge",
+      "type": "text",
+      "x": 570,
+      "y": 455,
+      "width": 440,
+      "height": 190,
+      "text": "## ③ 合并引擎\n\nbuild.mjs → full-build.mjs\n选择字段、解析语言、生成关系\n冲突与缺失保留可复核状态",
+      "color": "5"
+    },
+    {
+      "id": "proof",
+      "type": "text",
+      "x": 1090,
+      "y": 455,
+      "width": 480,
+      "height": 190,
+      "text": "## 与结果一起保存证据\n\nreports/provenance.json\n原文件 + hash + JSON Pointer\nissues / coverage / source-records",
+      "color": "3"
+    },
+    {
+      "id": "output",
+      "type": "text",
+      "x": 420,
+      "y": 820,
+      "width": 660,
+      "height": 180,
+      "text": "## ④ 校验后切换当前版本\n\nrepository.mjs：暂存 → 逐文件哈希 → current\nitems/*.json · recipes · relations · rewards\nlocalizations · images · manifest.json",
+      "color": "4"
+    },
+    {
+      "id": "ui",
+      "type": "text",
+      "x": 1150,
+      "y": 820,
+      "width": 420,
+      "height": 180,
+      "text": "## ⑤ 不同界面按需读取\n\nservice.mjs → 合并汇总 / 来源回查\nplayer-bundle.mjs → 预构建资料库\n世界状态 / 掉落表复用实体与图片",
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "p3-e0",
+      "fromNode": "raw",
+      "toNode": "inputs",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "读取"
+    },
+    {
+      "id": "p3-e1",
+      "fromNode": "inputs",
+      "toNode": "merge",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "按实体聚合"
+    },
+    {
+      "id": "p3-e2",
+      "fromNode": "rules",
+      "toNode": "merge",
+      "fromSide": "bottom",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "分类与优先级"
+    },
+    {
+      "id": "p3-e3",
+      "fromNode": "nested",
+      "toNode": "merge",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "递归处理"
+    },
+    {
+      "id": "p3-e4",
+      "fromNode": "merge",
+      "toNode": "proof",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "字段证据"
+    },
+    {
+      "id": "p3-e5",
+      "fromNode": "merge",
+      "toNode": "output",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "结构化产物"
+    },
+    {
+      "id": "p3-e6",
+      "fromNode": "proof",
+      "toNode": "output",
+      "fromSide": "bottom",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "纳入完整工作包"
+    },
+    {
+      "id": "p3-e7",
+      "fromNode": "output",
+      "toNode": "ui",
+      "fromSide": "bottom",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "读取 / 裁剪"
+    }
+  ]
+}

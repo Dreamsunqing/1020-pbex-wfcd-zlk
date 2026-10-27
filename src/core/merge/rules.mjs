@@ -27,6 +27,7 @@ export function validateRules({ contract, overrides }) {
   for (const field of contract.fields) {
     if (!safeKey(field.path) || !safeKey(field.key) || !/^(stats\.[A-Za-z0-9_]+|bundle\.[A-Za-z0-9_]+|masteryRank|tradable|rarity|imageName|icon|custom\.[A-Za-z0-9_]+)$/.test(field.path) || !['number', 'integer', 'string', 'boolean'].includes(field.type) || typeof field.label !== 'string' || !field.label.trim() || !Array.isArray(field.kinds) || !field.kinds.length || field.kinds.some(k => k !== '*' && !Object.hasOwn(KINDS, k))) throw new Error('字段规则的路径、类型、中文名或类别无效');
     if (paths.has(field.path)) throw new Error('字段规则路径重复：' + field.path); paths.add(field.path);
+    if (field.required !== undefined && typeof field.required !== 'boolean') throw new Error('必需字段开关须为布尔值');
     if (['min', 'max', 'precision'].some(key => field[key] !== undefined) && !['number', 'integer'].includes(field.type)) throw new Error('仅数值字段支持范围与精度');
     for (const key of ['min', 'max']) if (field[key] !== undefined && (typeof field[key] !== 'number' || !Number.isFinite(field[key]))) throw new Error('字段边界无效');
     if (field.min !== undefined && field.max !== undefined && field.min > field.max) throw new Error('字段最小值大于最大值');

@@ -1,6 +1,8 @@
 # 星际战甲上游资料工作台
 
-把分散的官方、Plus、WFCD、Oracle 和 browse.wf 资料放在一个离线工作台中：查看 JSON、说明字段和中文映射、按规则合并实体与奖励关系、查询和导出本地图片，并浏览双服世界状态、使用面向玩家的资料库、查询 WM 公开订单、双语官方掉落表与仲裁日历。当前版本 **0.17.2**。
+![GitHub Tag](https://img.shields.io/github/v/tag/Dreamsunqing/1020-pbex-wfcd-zlk?include_prereleases&color=blue&label=version)
+
+把分散的官方、Plus、WFCD、Oracle 和 browse.wf 资料放在一个离线工作台中：查看 JSON、说明字段和中文映射、按规则合并实体与奖励关系、查询和导出本地图片，并浏览双服世界状态、使用面向玩家的资料库、查询 WM 公开订单、双语官方掉落表与仲裁日历。
 
 本项目先跑通 P3 离线数据流程，再讨论仓鼠互助洞 App 的在线分发。邮件、uniCloud／ECS 部署仍待后续处理；`<xxx>` 文本标记通过统一中间件展示，已有映射使用离线真实图标。
 

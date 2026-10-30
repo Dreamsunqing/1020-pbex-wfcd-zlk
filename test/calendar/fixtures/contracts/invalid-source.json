@@ -1,0 +1,10 @@
+{
+  "contextId": "wg:CST_SPRING:24:2026-10-26T00:00:00.000Z",
+  "data": {
+    "server": "wg",
+    "kind": "live",
+    "stale": "no",
+    "sourceTime": "yesterday"
+  },
+  "seasons": []
+}

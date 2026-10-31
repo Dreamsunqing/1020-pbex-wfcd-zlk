@@ -1,0 +1,147 @@
+{
+  "server": "de",
+  "kind": "sample",
+  "source": "fixture",
+  "sourceTime": "2026-10-22T19:32:27.000Z",
+  "fetchedAt": null,
+  "hash": "fixture",
+  "stale": true,
+  "refreshError": null,
+  "at": "2026-10-22T19:32:27.000Z",
+  "modules": [
+    {
+      "id": "sortie",
+      "title": "每日突击",
+      "group": "missions",
+      "entries": [{ "title": "无关模块", "rewards": [{ "id": "/Lotus/Types/Other", "name": "不应进入日历" }] }]
+    },
+    {
+      "id": "calendar",
+      "title": "1999 日历",
+      "group": "weekly",
+      "layout": "tiles",
+      "calendarSeasons": [
+        {
+          "season": "CST_WINTER",
+          "label": "冬季",
+          "yearIteration": 24,
+          "startsAt": "2026-10-19T00:00:00.000Z",
+          "endsAt": "2026-10-26T00:00:00.000Z",
+          "listedDays": [1, 3, 19, 20, 45]
+        }
+      ],
+      "entries": [
+        {
+          "title": "游戏日 3",
+          "subtitle": "冬季",
+          "startsAt": "2026-10-19T00:00:00.000Z",
+          "endsAt": "2026-10-26T00:00:00.000Z",
+          "cardState": { "id": "challenge", "label": "挑战日" },
+          "rewards": [],
+          "terms": [
+            {
+              "id": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+              "name": "近战击杀",
+              "description": "使用近战武器击杀 150 名敌人",
+              "localized": true,
+              "source": "plus/dict.zh",
+              "key": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+              "eventType": "挑战"
+            }
+          ],
+          "reference": {
+            "season": "CST_WINTER",
+            "yearIteration": 24,
+            "day": 3,
+            "events": [
+              { "type": "CET_CHALLENGE", "challengeKey": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium", "rewardKey": null, "upgradeKey": null, "extensions": {} }
+            ],
+            "localization": [
+              { "key": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium", "name": "近战击杀", "source": "plus/dict.zh", "localized": true, "eventType": "挑战" }
+            ],
+            "upgradeAvailabilityRequirements": ["/Lotus/Upgrades/Calendar/1999UpgradeApplicationRequirement"]
+          },
+          "iconToken": "CALENDAR"
+        },
+        {
+          "title": "游戏日 19",
+          "subtitle": "冬季",
+          "startsAt": "2026-10-19T00:00:00.000Z",
+          "endsAt": "2026-10-26T00:00:00.000Z",
+          "cardState": { "id": "reward", "label": "奖励日" },
+          "rewards": [
+            {
+              "id": "/Lotus/StoreItems/Types/Items/MiscItems/Forma",
+              "name": "佛玛",
+              "description": "",
+              "localized": false,
+              "quantity": 1,
+              "imageId": "/Lotus/Types/Items/MiscItems/Forma",
+              "libraryId": "/Lotus/Types/Items/MiscItems/Forma",
+              "libraryVersion": "fixture-library-v1",
+              "tradable": false,
+              "english": "Forma"
+            },
+            {
+              "id": "/Lotus/StoreItems/Types/Gameplay/NarmerSorties/ArchonCrystalOrange",
+              "name": "ArchonCrystalOrange",
+              "description": "",
+              "localized": false,
+              "quantity": 1
+            }
+          ],
+          "terms": [],
+          "reference": {
+            "season": "CST_WINTER",
+            "yearIteration": 24,
+            "day": 19,
+            "events": [
+              { "type": "CET_REWARD", "challengeKey": null, "rewardKey": "/Lotus/StoreItems/Types/Items/MiscItems/Forma", "upgradeKey": null, "extensions": {} },
+              { "type": "CET_REWARD", "challengeKey": null, "rewardKey": "/Lotus/StoreItems/Types/Gameplay/NarmerSorties/ArchonCrystalOrange", "upgradeKey": null, "extensions": {} }
+            ],
+            "localization": [],
+            "upgradeAvailabilityRequirements": ["/Lotus/Upgrades/Calendar/1999UpgradeApplicationRequirement"]
+          },
+          "iconToken": "CALENDAR"
+        },
+        {
+          "title": "游戏日 20",
+          "subtitle": "冬季",
+          "startsAt": "2026-10-19T00:00:00.000Z",
+          "endsAt": "2026-10-26T00:00:00.000Z",
+          "cardState": { "id": "upgrade", "label": "强化日 · 三选一" },
+          "rewards": [],
+          "terms": [
+            { "key": "/Lotus/Upgrades/Calendar/GasChanceToPrimaryAndSecondary", "name": "毒气射击", "description": "主要和次要武器增加 25% 毒气异常几率。", "source": "wfcd-calendar-project-translation", "localized": true, "eventType": "强化选项" },
+            { "key": "/Lotus/Upgrades/Calendar/AbilityStrength", "name": "力量增长", "description": "技能强度 +25%。", "source": "wfcd-calendar-project-translation", "localized": true, "eventType": "强化选项" },
+            { "key": "/Lotus/Upgrades/Calendar/ElectricStatusDamageAndChance", "name": "瓶中闪电", "description": "所有武器增加 25% 异常伤害及电击异常几率。", "source": "wfcd-calendar-project-translation", "localized": true, "eventType": "强化选项" }
+          ],
+          "reference": {
+            "season": "CST_WINTER",
+            "yearIteration": 24,
+            "day": 20,
+            "events": [
+              { "type": "CET_UPGRADE", "challengeKey": null, "rewardKey": null, "upgradeKey": "/Lotus/Upgrades/Calendar/GasChanceToPrimaryAndSecondary", "extensions": {} },
+              { "type": "CET_UPGRADE", "challengeKey": null, "rewardKey": null, "upgradeKey": "/Lotus/Upgrades/Calendar/AbilityStrength", "extensions": {} },
+              { "type": "CET_UPGRADE", "challengeKey": null, "rewardKey": null, "upgradeKey": "/Lotus/Upgrades/Calendar/ElectricStatusDamageAndChance", "extensions": {} }
+            ],
+            "localization": [
+              { "key": "/Lotus/Upgrades/Calendar/GasChanceToPrimaryAndSecondary", "name": "毒气射击", "source": "wfcd-calendar-project-translation", "localized": true, "eventType": "强化选项" },
+              { "key": "/Lotus/Upgrades/Calendar/AbilityStrength", "name": "力量增长", "source": "wfcd-calendar-project-translation", "localized": true, "eventType": "强化选项" },
+              { "key": "/Lotus/Upgrades/Calendar/ElectricStatusDamageAndChance", "name": "瓶中闪电", "source": "wfcd-calendar-project-translation", "localized": true, "eventType": "强化选项" }
+            ],
+            "upgradeAvailabilityRequirements": ["/Lotus/Upgrades/Calendar/1999UpgradeApplicationRequirement"]
+          },
+          "iconToken": "CALENDAR"
+        }
+      ],
+      "count": 3,
+      "preview": 3,
+      "showTerms": true,
+      "groupCards": true,
+      "note": "按事件分组，组内按游戏日排序；强化为三选一。强化中文为社区资料整理，来源见详情。"
+    }
+  ],
+  "summary": { "missions": 0, "weekly": 1, "trade": 0 },
+  "diagnostics": { "errors": [] }
+}

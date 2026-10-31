@@ -59,11 +59,15 @@ export function buildWorldView(snapshot,catalog,{now=Date.now()}={}) {
     });
     return entry(lab?'实验室 · 深层科研':row.type==='CT_HEX'?'Hex · 时光科研':row.type,'本周任务与个人限制',{...windowOf(row),steps,terms:array(row.variables).map(k=>detailTerm('/Lotus/Language/Conquest/PersonalMod_',k==='DullBlades'?'ComboCountChance':k==='Undersupplied'?'MaxAmmo':k)),iconToken:'RESEARCH'});
   }),{layout:'mission',wide:true,preview:2});
-  add('calendar','1999 日历','weekly',rows('knownCalendarSeasons').filter(active).flatMap(row=>array(row.days).filter(day=>day.events?.length).sort((a,b)=>a.day-b.day).map(day=>entry('游戏日 '+day.day,catalog.weekly.season(row.season).name,{
+  const calendarSeasons=rows('knownCalendarSeasons').filter(active);
+  add('calendar','1999 日历','weekly',calendarSeasons.flatMap(row=>array(row.days).filter(day=>day.events?.length).sort((a,b)=>a.day-b.day).map(day=>entry('游戏日 '+day.day,catalog.weekly.season(row.season).name,{
     ...windowOf(row),cardState:calendarCardState(array(day.events)),rewards:array(day.events).filter(e=>e.rewardKey).map(e=>item(e.rewardKey)),
     terms:array(day.events).filter(e=>!e.rewardKey).map(e=>catalog.weekly.calendarEvent(e)),
     reference:{season:row.season,yearIteration:row.yearIteration,day:day.day,events:day.events,localization:array(day.events).filter(e=>!e.rewardKey).map(e=>catalog.weekly.calendarEvent(e)),upgradeAvailabilityRequirements:row.upgradeAvailabilityRequirements},iconToken:'CALENDAR'
-  }))),{layout:'tiles',preview:3,showTerms:true,groupCards:true,note:'按事件分组，组内按游戏日排序；强化为三选一。强化中文为社区资料整理，来源见详情。'});
+  }))),{layout:'tiles',preview:3,showTerms:true,groupCards:true,
+    // Entries skip days without events; the 1999 calendar adapter reads windows and every listed day from here.
+    calendarSeasons:calendarSeasons.map(row=>({season:row.season,label:catalog.weekly.season(row.season).name,yearIteration:row.yearIteration,...windowOf(row),listedDays:array(row.days).map(day=>day.day)})),
+    note:'按事件分组，组内按游戏日排序；强化为三选一。强化中文为社区资料整理，来源见详情。'});
   add('descents','沉沦之地','weekly',rows('descents').filter(active).flatMap(row=>array(row.challenges).sort((a,b)=>a.index-b.index).map(c=>{
     const info=catalog.weekly.descent(c),known=info.detail.localized;
     return entry('第 '+c.index+' 层',info.type.name,{...windowOf(row),cardState:descentCardState(c.type,info.type.localized),terms:[info.detail,...info.auras.filter(a=>a.localized),...info.specs.filter(s=>s.localized)].filter(t=>t.name!==info.type.name||t.description),

@@ -21,10 +21,14 @@
  * @property {string} name          Display name supplied by the host, already localized.
  * @property {number|null} [quantity]
  * @property {string|null} libraryId  Library target. null means no jump control is shown.
+ * @property {string|null} [libraryVersion]  Library dataset version that resolved libraryId. The host refuses a jump
+ *           when its library has moved to another version. Added in 1.1.0.
  *
  * @typedef {object} TermRef
  * @property {string} name
  * @property {string} [description]
+ * @property {string|null} [key]     Upstream challenge or upgrade key. Kept for traceability, never shown as a name. Added in 1.1.0.
+ * @property {string|null} [source]  Origin of the localized text, for example a community translation. null when unknown. Added in 1.1.0.
  *
  * @typedef {object} CalendarEntry
  * @property {number|null} ordinal  1999 annual day (1..365). Out-of-range or null entries are kept as unmapped.
@@ -60,6 +64,7 @@
  *
  * A session reads its source exactly once, when the session is created.
  * New data never flows into an existing session; the host creates a new source and session instead.
+ * adapters/world-state-source.mjs builds one from the host's world-state projection (CAL-04).
  * @typedef {object} CalendarSource
  * @property {() => CalendarDocument} read
  */
@@ -165,4 +170,5 @@
  * The same contextId restores its selection from the SelectionStore; a different contextId starts isolated.
  */
 
-export const CALENDAR_CONTRACT_VERSION = '1.0.0';
+// 1.1.0 adds the optional RewardRef.libraryVersion, TermRef.key and TermRef.source (CAL-04). Every 1.0.0 document stays valid.
+export const CALENDAR_CONTRACT_VERSION = '1.1.0';

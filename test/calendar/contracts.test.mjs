@@ -90,9 +90,24 @@ test('stored selection values are untrusted until they pass the selection contra
   }
 });
 
+test('1.1.0 optional fields are checked when present, and 1.0.0 documents without them stay valid', () => {
+  const document = fixture('valid-document.json');
+  Object.assign(document.seasons[0].entries[1].rewards[0], { libraryVersion: 'v1' });
+  Object.assign(document.seasons[0].entries[2].terms[0], { key: '/Test/Upgrade', source: null });
+  assert.deepEqual(validateCalendarDocument(document).issues, []);
+  Object.assign(document.seasons[0].entries[1].rewards[0], { libraryVersion: '' });
+  Object.assign(document.seasons[0].entries[2].terms[0], { key: 7, source: {} });
+  assert.deepEqual(validateCalendarDocument(document).issues.map(issue => issue.path), [
+    'seasons[0].entries[1].rewards[0].libraryVersion',
+    'seasons[0].entries[2].terms[0].key',
+    'seasons[0].entries[2].terms[0].source'
+  ]);
+});
+
 test('public entry exposes only the contract surface, and the vocabulary is closed', () => {
-  assert.deepEqual(Object.keys(calendar).sort(), ['CALENDAR_CONTRACT_VERSION', 'EVENT_KINDS', 'isEventKind', 'validateCalendarDocument', 'validateSelectionValue']);
-  assert.equal(calendar.CALENDAR_CONTRACT_VERSION, '1.0.0');
+  assert.deepEqual(Object.keys(calendar).sort(), ['CALENDAR_CONTRACT_VERSION', 'EVENT_KINDS', 'createWorldStateCalendarSource', 'isEventKind',
+    'validateCalendarDocument', 'validateSelectionValue']);
+  assert.equal(calendar.CALENDAR_CONTRACT_VERSION, '1.1.0');
   assert.deepEqual([...EVENT_KINDS], ['challenge', 'reward', 'upgrade', 'mixed', 'other']);
   assert.ok(Object.isFrozen(EVENT_KINDS));
   assert.equal(calendar.isEventKind('festival'), false);

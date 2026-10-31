@@ -5,3 +5,5 @@
 export { CALENDAR_CONTRACT_VERSION } from './application/ports.mjs';
 export { EVENT_KINDS, isEventKind } from './domain/event-kind.mjs';
 export { validateCalendarDocument, validateSelectionValue } from './application/contract-validation.mjs';
+// CAL-04: the host composition root turns its world-state projection into a CalendarSource with this adapter.
+export { createWorldStateCalendarSource } from './adapters/world-state-source.mjs';

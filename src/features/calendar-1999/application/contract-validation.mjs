@@ -34,6 +34,8 @@ function validateReward(reward, path, issues) {
     `${path}.quantity`, 'INVALID_REWARD', 'Reward quantity must be a non-negative integer, null or absent');
   check(issues, reward.libraryId === null || isNonEmptyString(reward.libraryId), `${path}.libraryId`, 'INVALID_REWARD',
     'libraryId must be a non-empty string or null');
+  check(issues, reward.libraryVersion === undefined || reward.libraryVersion === null || isNonEmptyString(reward.libraryVersion),
+    `${path}.libraryVersion`, 'INVALID_REWARD', 'libraryVersion must be a non-empty string, null or absent');
 }
 
 function validateEntry(entry, path, issues) {
@@ -52,6 +54,10 @@ function validateEntry(entry, path, issues) {
     check(issues, isObject(term) && isNonEmptyString(term.name), termPath, 'INVALID_TERM', 'Term needs a non-empty name');
     check(issues, !isObject(term) || term.description === undefined || typeof term.description === 'string',
       `${termPath}.description`, 'INVALID_TERM', 'description must be a string when present');
+    for (const field of ['key', 'source']) {
+      check(issues, !isObject(term) || term[field] === undefined || term[field] === null || typeof term[field] === 'string',
+        `${termPath}.${field}`, 'INVALID_TERM', `${field} must be a string, null or absent`);
+    }
   });
   check(issues, isObject(entry.evidence), `${path}.evidence`, 'MISSING_EVIDENCE', 'evidence must be an object and is never dropped');
 }

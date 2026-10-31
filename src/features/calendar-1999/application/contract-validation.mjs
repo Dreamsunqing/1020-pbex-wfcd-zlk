@@ -1,4 +1,5 @@
 import { isEventKind } from '../domain/event-kind.mjs';
+import { isAnnualDay } from '../domain/calendar.mjs';
 
 // Pure runtime checks for the contracts in ports.mjs. Inputs are never mutated.
 // Each check returns issues instead of throwing, so fixtures and hosts can report every problem at once.
@@ -19,7 +20,6 @@ function isUtcInstant(value) {
   return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day
     && date.getUTCHours() === hour && date.getUTCMinutes() === minute && date.getUTCSeconds() === second;
 }
-const isAnnualDay = value => Number.isInteger(value) && value >= 1 && value <= 365;
 
 function check(issues, condition, path, code, message) {
   if (!condition) issues.push({ path, code, message });

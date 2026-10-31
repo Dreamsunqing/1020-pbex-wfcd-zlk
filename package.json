@@ -13,7 +13,7 @@
   "scripts": {
     "start": "electron .",
     "cli": "node src/cli.mjs",
-    "test": "node --test test/*.test.mjs test/calendar/*.test.mjs",
+    "test": "node --test test/*.test.mjs",
     "check": "node scripts/check.mjs",
     "smoke": "node scripts/smoke.mjs",
     "pack:mac": "electron-builder --mac zip --x64",

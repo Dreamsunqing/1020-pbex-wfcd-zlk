@@ -10,3 +10,5 @@ export { createWorldStateCalendarSource } from './adapters/world-state-source.mj
 // CAL-03: the host composition root creates one session per snapshot from a CalendarSource and its SelectionStore.
 // application/view-model.mjs stays internal; presentation inside the feature turns session state into its model.
 export { createCalendarSession } from './application/calendar-session.mjs';
+// CAL-05: the host keeps one store for every session, so a selection survives a new snapshot of the same context.
+export { createMemorySelectionStore } from './adapters/memory-selection-store.mjs';

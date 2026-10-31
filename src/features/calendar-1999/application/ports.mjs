@@ -72,9 +72,23 @@
 /**
  * Stores UI selection per contextId. The store is owned by the host and outlives sessions,
  * which is how a selection survives a new snapshot with the same contextId.
- * Keys are opaque; values are copied on both read and write.
- * A read can return anything the host stored before, so callers must validate it
- * with validateSelectionValue and fall back to defaults when invalid.
+ * adapters/memory-selection-store.mjs implements it in memory (CAL-05); 文档/深入/45-1999日历选取存储转接器.md lists every rule.
+ *
+ * - Keys are opaque contextId strings. Isolation comes from the key alone: a store never parses a key or compares
+ *   documents, so servers, loops and season windows stay apart through the source's contextId rule (ADR-005).
+ *   All seasons of one document share its key, so a store keeps one selection per document, not one per season.
+ *   selectSeason resets the active selection under the current session contract. Per-season history and stable
+ *   restoration across changes to other seasons are follow-up work; 45 · 第十一节第 1 项 records these limits.
+ * - A store keeps one SelectionValue per key: seasonIndex, monthIndex and ordinal. It is a date on the calendar,
+ *   never personal progress, so any other field is dropped.
+ * - Values are copied on both read and write. Changing a read result or a written object never changes the store.
+ * - read returns undefined for a key without a value and never throws for missing or damaged data. A read can still
+ *   return anything an implementation kept before, so callers must validate it with validateSelectionValue and fall
+ *   back to defaults when invalid.
+ * - write is atomic: it keeps the whole value, or it throws and leaves the stored value as it was. The session relies
+ *   on this, because it never writes again to roll a store back.
+ * - A store never evicts or rewrites a value by itself. Whether a stored value still fits a new snapshot is decided by
+ *   the session when it restores.
  * @typedef {object} SelectionStore
  * @property {(contextId: string) => SelectionValue|undefined} read
  * @property {(contextId: string, value: SelectionValue) => void} write

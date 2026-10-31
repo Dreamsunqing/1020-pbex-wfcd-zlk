@@ -170,6 +170,21 @@ test('a failing store write leaves the session unchanged', () => {
   assert.deepEqual(session.read(), before);
 });
 
+test('a store that saves and then throws breaks the atomic write contract: the session neither commits nor writes again', () => {
+  // SelectionStore.write must keep the whole value or nothing (CAL-05). This store keeps the value and still throws.
+  const store = fakeStore();
+  const save = store.write;
+  store.write = (key, value) => { save(key, value); throw new Error('saved, then failed'); };
+  const session = createCalendarSession({ source: fakeSource(springDocument()), selectionStore: store });
+  const before = session.read();
+  assert.throws(() => session.selectDay(104), /saved, then failed/);
+  // The session keeps April 6 and does not try to roll the store back.
+  assert.deepEqual(session.read(), before);
+  assert.deepEqual(store.writes, [[springDocument().contextId, at(0, 0, 104)]]);
+  // Only the store could have kept its old value, so the next session restores what the broken store kept.
+  assert.deepEqual(createCalendarSession({ source: fakeSource(springDocument()), selectionStore: store }).read().selection, at(0, 0, 104));
+});
+
 test('arrow keys move by day and week across the months of the active season, never into another season', () => {
   const { session, store } = start();
   const step = key => [session.move(key), session.read().selection];
@@ -306,6 +321,24 @@ test('servers, seasons and loops keep isolated selections, and a new snapshot of
   // Opening the other contexts again returns their own choices.
   assert.deepEqual(open(variant(view => { view.server = 'wg'; })).read().selection, at(0, 0, 20));
   assert.equal(store.values.size, 4);
+});
+
+test('all seasons of one document share its context key, so returning to a season starts it again', () => {
+  // A document keeps one selection, not one per season. Isolation by season window comes from different documents
+  // having different contextIds, as in the test above; it does not apply to selectSeason inside one document.
+  // This verifies the current reset-on-season-change contract. Per-season history is follow-up scope, not an added
+  // CAL-05 requirement (文档/深入/45-1999日历选取存储转接器.md, 第十一节第 1 项).
+  const { session, store } = start();
+  const key = springDocument().contextId;
+  session.selectDay(104); // spring, April 14
+  session.selectSeason(1);
+  session.selectDay(182); // summer, July 1
+  const back = session.selectSeason(0);
+  assert.deepEqual([back.selection, back.month.month, back.selected], [at(0, 0, null), 4, null]);
+  assert.deepEqual([...store.values.keys()], [key]);
+  assert.deepEqual(store.values.get(key), at(0, 0, null));
+  // A new session of the same document restores that last choice, not April 14.
+  assert.deepEqual(createCalendarSession({ source: fakeSource(springDocument()), selectionStore: store }).read().selection, at(0, 0, null));
 });
 
 test('the session copies and freezes its snapshot, so neither the source nor callers can change it', () => {

@@ -8,7 +8,8 @@ import { validateCalendarDocument, validateSelectionValue } from './contract-val
 // - The source is read exactly once. Its document is validated, copied and frozen, so neither the source nor a
 //   caller can change the session afterwards. New data means a new source and a new session (ADR-007).
 // - read() is pure. Only an operation that changes the selection writes it to the SelectionStore. The store is
-//   written first and the session commits after, so a failing write leaves both as they were.
+//   written first and the session commits after, so a failing write leaves the session as it was. The store stays as
+//   it was only because SelectionStore.write is atomic (CAL-05); the session never writes again to roll it back.
 // - Invalid arguments throw RangeError and change nothing. Choosing the active season, month or day again is a no-op.
 // - A selection is a date on the season's calendar, never personal progress. It is keyed by contextId, which isolates
 //   servers, seasons and loops, and a stored value is trusted only after it passes validation and fits the document.

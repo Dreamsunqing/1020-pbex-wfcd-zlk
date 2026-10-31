@@ -1,0 +1,49 @@
+{
+  "contextId": "de:CST_SPRING:24:2026-10-26T00:00:00.000Z",
+  "data": {
+    "server": "de",
+    "kind": "sample",
+    "stale": true,
+    "sourceTime": "2026-10-29T00:00:00.000Z"
+  },
+  "seasons": [
+    {
+      "code": "CST_SPRING",
+      "label": "春季",
+      "yearIteration": 24,
+      "startsAt": "2026-10-26T00:00:00.000Z",
+      "endsAt": "2026-11-02T00:00:00.000Z",
+      "listedDays": [91, 96, 101, 104],
+      "entries": [
+        {
+          "ordinal": 96,
+          "kind": "challenge",
+          "title": "挑战日",
+          "rewards": [],
+          "terms": [{ "name": "测试挑战", "description": "击败 10 名敌人。" }],
+          "evidence": { "season": "CST_SPRING", "yearIteration": 24, "day": 96 }
+        },
+        {
+          "ordinal": 101,
+          "kind": "reward",
+          "title": "奖励日",
+          "rewards": [{ "id": "/Test/Reward", "name": "测试奖励", "quantity": 1, "libraryId": "/Test/Reward" }],
+          "terms": [],
+          "evidence": { "season": "CST_SPRING", "yearIteration": 24, "day": 101 }
+        },
+        {
+          "ordinal": 104,
+          "kind": "upgrade",
+          "title": "煞调变日",
+          "rewards": [],
+          "terms": [
+            { "name": "选项 1", "description": "测试效果 1" },
+            { "name": "选项 2", "description": "测试效果 2" },
+            { "name": "选项 3", "description": "测试效果 3" }
+          ],
+          "evidence": { "season": "CST_SPRING", "yearIteration": 24, "day": 104 }
+        }
+      ]
+    }
+  ]
+}

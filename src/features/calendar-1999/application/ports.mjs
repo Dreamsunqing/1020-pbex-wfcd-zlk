@@ -82,12 +82,18 @@
 
 /**
  * Operations the presentation may invoke. The session owns selection state.
+ * application/calendar-session.mjs implements them (CAL-03); 文档/深入/44-1999日历应用操作流程.md lists every rule.
  *
- * - Creation reads the source once and restores the stored selection for its contextId.
- * - read() is pure. It never writes to the SelectionStore.
- * - Mutating operations write the new selection to the SelectionStore before returning.
- * - Out-of-range indices or ordinals throw RangeError. Invalid input is never silently clamped.
- * - move() never throws for unknown keys; it returns false instead.
+ * - Creation reads the source once, then validates, copies and freezes the document. It restores the stored selection
+ *   for its contextId; any part of a stored value that no longer fits is chosen again by the initial strategy
+ *   (first month of the season, on its first day with events). Creation never writes to the SelectionStore.
+ * - read() is pure and returns a frozen CalendarState. It never writes to the SelectionStore.
+ * - Mutating operations write the new selection to the SelectionStore before returning. Choosing the active
+ *   season, month or day again changes nothing and writes nothing.
+ * - Out-of-range or non-integer indices, and ordinals outside the active month, throw RangeError. Invalid input is
+ *   never silently clamped, and a failed operation, including a failed store write, leaves the state unchanged.
+ * - move() never throws for unknown keys; it returns false instead. Arrow keys may cross into another month of the
+ *   active season, never into another season. Home and End stay in the selected week row of the active month.
  *
  * @typedef {object} CalendarDay
  * @property {number} day            Day of month, 1-based.
@@ -127,7 +133,7 @@
 /**
  * Presentation model. The grid always has 42 slots (6 weeks); empty slots are null.
  *
- * The application layer provides a pure BuildCalendarViewModel. Presentation obtains a
+ * application/view-model.mjs provides the pure buildCalendarViewModel (CAL-03). Presentation obtains a
  * CalendarState from session.read() or from an operation result, then passes it to the builder.
  * Presentation never derives cells, selection or unmapped entries by itself.
  *

@@ -13,5 +13,8 @@ export { createCalendarSession } from './application/calendar-session.mjs';
 // CAL-05: the host keeps one store for every session, so a selection survives a new snapshot of the same context.
 export { createMemorySelectionStore } from './adapters/memory-selection-store.mjs';
 // CAL-07: the host keeps one mount for its calendar slot and injects the view and the capabilities the mount guards.
-// The App composition root is src/ui/calendar-1999.js; the presentation view factory comes with CAL-08.
+// The App composition root is src/ui/calendar-1999.js.
 export { createCalendarMount } from './application/calendar-mount.mjs';
+// CAL-08: the native DOM CalendarViewFactory the host hands to its mount. Its stylesheet is presentation/calendar.css,
+// which the host page links itself; the view never adds styles to a document.
+export { createCalendarView } from './presentation/calendar-view.js';

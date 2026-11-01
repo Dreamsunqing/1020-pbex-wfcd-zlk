@@ -1,4 +1,4 @@
-import { createCalendarMount, createCalendarSession, createMemorySelectionStore, createWorldStateCalendarSource } from '../features/calendar-1999/index.mjs';
+import { createCalendarMount, createCalendarSession, createCalendarView, createMemorySelectionStore, createWorldStateCalendarSource } from '../features/calendar-1999/index.mjs';
 import { formatCountdown } from '../core/live-state/presentation.mjs';
 import { renderGameText } from './game-text.js';
 
@@ -8,8 +8,10 @@ import { renderGameText } from './game-text.js';
 // Rules, also listed in 文档/深入/47-1999日历App能力转接与组装入口.md:
 // - One SelectionStore for the lifetime of the App, shared by every session, so a selection survives a new snapshot of
 //   the same context and stays apart for other servers, seasons and loops (HANDOFF-02).
-// - show() builds a new source and session from the projection on every call (ADR-007), then mounts the view. It answers
-//   false when no view is injected yet, or when the projection or the view fails; the caller then keeps the legacy cards.
+// - show() builds a new source and session from the projection on every call (ADR-007), then mounts the view. The view is
+//   the feature's createCalendarView (CAL-08) unless another one is injected. It answers false when the view is set to
+//   null, or when the projection or the view fails; the caller then keeps the legacy cards.
+// - The view's stylesheet, features/calendar-1999/presentation/calendar.css, is linked by src/ui/index.html.
 // - tick() is the countdown beat. The host clock calls it, and it repaints through update(). When the projection's
 //   freshness changed in place, it builds a new session instead, so an outdated snapshot never keeps looking current.
 // - hide() unmounts. The host calls it whenever it replaces the content that holds the calendar.
@@ -51,13 +53,13 @@ function pictureOf(image) {
  * @param {(id: string, version?: string) => Promise<void>} [deps.openLibrary]  Opens an item in the library. Without it no
  *        reward can be opened.
  * @param {(work: () => unknown) => Promise<unknown>} [deps.guarded]  Runs App work and reports its failure to the user.
- * @param {Function|null} [deps.view]  The presentation's CalendarViewFactory, as the feature's ports define it. null until
- *        CAL-08 provides one; show() then answers false.
+ * @param {Function|null} [deps.view]  The presentation's CalendarViewFactory, as the feature's ports define it. Defaults to
+ *        the feature's createCalendarView; null keeps the legacy cards, and show() then answers false.
  * @param {(target: Element, text: string, mode: 'name'|'description') => void} [deps.renderText]
  * @param {() => number} [deps.now]
  * @param {(error: unknown, where: string) => void} [deps.onError]  Receives failures the calendar absorbs.
  */
-export function createCalendar1999Host({ api, back, openLibrary, guarded, view = null, renderText = renderGameText, now = Date.now, onError = reportError } = {}) {
+export function createCalendar1999Host({ api, back, openLibrary, guarded, view = createCalendarView, renderText = renderGameText, now = Date.now, onError = reportError } = {}) {
   if (typeof back !== 'function') throw new TypeError('Calendar host needs back() to return to the world-state page');
   const run = typeof guarded === 'function' ? guarded : work => Promise.resolve().then(work).catch(error => onError(error, 'openItem'));
   const selectionStore = createMemorySelectionStore();

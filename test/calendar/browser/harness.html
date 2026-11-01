@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-src 'none'">
+  <title>1999 日历画面检查夹具（测试用，非正式排程）</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="harness.css">
+  <link rel="stylesheet" href="/src/features/calendar-1999/presentation/calendar.css">
+  <script type="module" src="harness.mjs"></script>
+</head>
+<body>
+  <!-- A host control styled like the App, outside the calendar: the calendar stylesheet must leave it alone. -->
+  <p class="host-bar"><button id="host-probe" type="button">宿主按钮</button><small id="host-small">宿主小字</small></p>
+  <main id="slot" class="host-page"></main>
+</body>
+</html>

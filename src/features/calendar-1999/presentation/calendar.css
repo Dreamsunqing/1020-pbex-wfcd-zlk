@@ -1,0 +1,178 @@
+/* 1999 calendar (CAL-08). A self-contained light desktop, also inside the dark App shell.
+ *
+ * Scope rules, also listed in 文档/深入/48-1999日历画面重整与应用操作接入.md:
+ * - Every selector starts with .cal99, so nothing here can reach the App outside the calendar root.
+ * - Descendant rules are written as ".cal99 .x" to outweigh App element rules such as ".ws-page svg" or "button".
+ * - The custom properties below redefine App tokens (--text, --line, --surface, ...) for the calendar subtree only, so the
+ *   App's global button, select and game-text styles turn light inside the calendar. They never change the App itself.
+ * - Narrow layouts follow the calendar's own width through container queries, not the viewport.
+ */
+.cal99 {
+  --text: #26322e;
+  --muted: #65716a;
+  --accent: #325b50;
+  --line: #a7ada2;
+  --surface: #edece0;
+  --surface-soft: #e1e3d5;
+  --accent-soft: #d2dfd1;
+  --focus: #225f54;
+  color-scheme: light;
+  color: var(--text);
+  background: #d9dccf;
+  border: 2px solid;
+  border-color: #fcfcf1 #6d7a70 #6d7a70 #fcfcf1;
+  padding: 5px;
+  box-shadow: 0 0 0 1px #30483d, 5px 7px 0 #10291d15;
+  font-family: "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+  min-width: 0;
+  container-type: inline-size;
+}
+.cal99 *, .cal99 *::before, .cal99 *::after { box-sizing: border-box; }
+.cal99 [hidden] { display: none !important; }
+.cal99 button, .cal99 select {
+  font: inherit;
+  color: #26322e;
+  border-radius: 0;
+  min-width: 0;
+  min-height: 0;
+  letter-spacing: 0;
+  box-shadow: none;
+  transition: none;
+}
+.cal99 button { cursor: pointer; }
+.cal99 button:focus-visible, .cal99 select:focus-visible, .cal99 summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+.cal99 h3, .cal99 h4, .cal99 h5, .cal99 p { margin: 0; }
+.cal99 .cal99-icon { display: block; width: 34px; height: 34px; flex-shrink: 0; }
+
+.cal99 .cal99-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 9px;
+  background: linear-gradient(90deg, #2b5145, #637f69);
+  color: #f0f1df;
+}
+.cal99 .cal99-app-title { display: flex; align-items: center; gap: 9px; min-width: 0; font-size: 17px; }
+.cal99 .cal99-app-title > .cal99-icon { width: 25px; height: 25px; }
+.cal99 .cal99-app-code { margin-left: 12px; font: 10px ui-monospace, monospace; letter-spacing: 2px; opacity: .7; }
+.cal99 .cal99-close { flex-shrink: 0; background: #d4d6c6; border: 2px solid; border-color: #f5f5ea #47594b #47594b #f5f5ea; padding: 0; width: 25px; height: 25px; font-size: 23px; line-height: 19px; }
+.cal99 .cal99-close:hover { background: #e2e4d6; border-color: #f5f5ea #47594b #47594b #f5f5ea; }
+.cal99 .cal99-notice { margin: 8px 6px 0; padding: 8px 12px; border: 1px solid #b89b62; background: #f1e6cd; color: #5c4a24; font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+
+.cal99 .cal99-workspace { display: grid; grid-template-columns: minmax(0, 1.48fr) minmax(300px, 1fr); gap: 24px; padding: 24px 22px 18px; }
+.cal99 .cal99-workspace.is-single { grid-template-columns: minmax(0, 1fr); }
+.cal99 .cal99-calendar, .cal99 .cal99-detail { min-width: 0; }
+.cal99 .cal99-heading { display: flex; justify-content: space-between; gap: 12px; align-items: center; min-height: 100px; padding: 2px 0 17px; }
+.cal99 .cal99-season { min-width: 0; }
+.cal99 .cal99-season-title { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; line-height: 1; }
+.cal99 .cal99-season-title strong { font: 800 clamp(34px, 3.5vw, 52px)/1 ui-monospace, monospace; letter-spacing: -4px; color: #2c3932; }
+.cal99 .cal99-season-title > span { min-width: 0; font-size: 30px; font-weight: 750; line-height: 1.2; color: #a86272; overflow-wrap: anywhere; }
+.cal99 .cal99-ornament { display: flex; align-items: center; gap: 7px; margin-top: 7px; color: #5f8771; font-size: 16px; }
+.cal99 .cal99-ornament .cal99-icon { width: 22px; height: 22px; }
+.cal99 .cal99-season-picker { display: block; margin-top: 8px; max-width: 100%; padding: 4px 6px; background: #e8eadd; border: 2px solid; border-color: #959f90 #faf9ed #faf9ed #959f90; }
+.cal99 .cal99-month-controls { text-align: right; flex-shrink: 0; }
+.cal99 .cal99-months { display: flex; gap: 7px; justify-content: flex-end; }
+.cal99 .cal99-month { display: flex; align-items: center; gap: 5px; border: 2px solid; border-color: #f9f9ee #939c8f #939c8f #f9f9ee; padding: 6px 9px; background: #dcded1; font-size: 13px; }
+/* The pressed bevel and the inner bar mark the shown month without relying on colour. */
+.cal99 .cal99-month.is-selected { background: #c7d5c3; border-color: #687b69 #f9f9ee #f9f9ee #687b69; box-shadow: inset 0 -3px 0 #52705c; }
+.cal99 .cal99-month .cal99-icon { width: 18px; height: 18px; }
+.cal99 .cal99-deadline { display: flex; justify-content: flex-end; gap: 5px; margin-top: 10px; color: #5f6d61; font-size: 11px; }
+.cal99 .cal99-countdown { color: #355d50; font-variant-numeric: tabular-nums; }
+.cal99 .cal99-deadline.is-ended .cal99-countdown { color: #8b6468; }
+
+.cal99 .cal99-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 3px; padding: 4px; background: #c2c8ba; border: 2px solid; border-color: #959f90 #faf9ed #faf9ed #959f90; }
+.cal99 .cal99-weekday { text-align: center; padding: 8px 0; background: #e0e2d6; color: #39473c; border: 1px solid; border-color: #fcfbef #a4ad9d #a4ad9d #fcfbef; font-size: 13px; }
+.cal99 .cal99-day { position: relative; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; gap: 2px; height: clamp(70px, 6.8vw, 100px); padding: 10px 8px 7px; border: 1px solid #f9eee1; background: #e8cfc8; text-align: left; }
+.cal99 .cal99-day:hover { background: #efdad0; border-color: #f9eee1; }
+.cal99 .cal99-day:focus-visible { z-index: 1; }
+/* Selection: a heavier frame, an inner ring and a corner mark, in addition to the colour. */
+.cal99 .cal99-day.is-selected, .cal99 .cal99-day.is-selected:hover { background: #c6d8bf; border: 2px solid #52705c; padding: 9px 7px 6px; box-shadow: inset 0 0 0 2px #edf1db; }
+.cal99 .cal99-day.is-selected::before { content: ""; position: absolute; top: 0; left: 0; border-style: solid; border-width: 13px 13px 0 0; border-color: #52705c transparent transparent transparent; }
+.cal99 .cal99-day-number { position: absolute; top: 6px; right: 7px; font: 19px/1.1 ui-monospace, monospace; color: #384139; }
+.cal99 .cal99-day > .cal99-icon { width: 36px; height: 36px; image-rendering: pixelated; filter: drop-shadow(1px 2px 0 #39463720); }
+.cal99 .cal99-day-label { color: #586356; font-size: 10px; line-height: 1.4; }
+.cal99 .cal99-day-listed { width: 6px; height: 6px; margin: 0 0 3px 2px; background: #8a9a8c; }
+.cal99 .cal99-day-count { position: absolute; right: 5px; bottom: 5px; padding: 0 3px; border: 1px solid #b99b9c; background: #f3e6df; color: #5b4650; font: 10px/1.4 ui-monospace, monospace; }
+.cal99 .cal99-blank { background: #d0d4c6; min-height: 70px; opacity: .7; }
+.cal99 .cal99-legend { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 15px; margin-top: 13px; font-size: 11px; color: #62705f; }
+.cal99 .cal99-legend > span { display: flex; align-items: center; gap: 5px; }
+.cal99 .cal99-legend .cal99-icon { width: 17px; height: 17px; }
+.cal99 .cal99-legend-swatch { position: relative; width: 17px; height: 14px; border: 2px solid #52705c; background: #c6d8bf; box-shadow: inset 0 0 0 1px #edf1db; }
+.cal99 .cal99-legend-swatch::before { content: ""; position: absolute; top: 0; left: 0; border-style: solid; border-width: 6px 6px 0 0; border-color: #52705c transparent transparent transparent; }
+.cal99 .cal99-legend .cal99-legend-hint { margin-left: auto; font-size: 10px; color: #75816f; }
+
+.cal99 .cal99-detail { display: flex; flex-direction: column; border-left: 2px solid #abb3a3; padding: 9px 0 0 24px; }
+.cal99 .cal99-workspace.is-single .cal99-detail { border-left: 0; padding: 0; }
+.cal99 .cal99-detail-top { border: 2px solid; border-color: #a3ac9c #f6f6e9 #f6f6e9 #a3ac9c; padding: 15px 17px 13px; background: #e4e6d8; }
+.cal99 .cal99-kicker { font: 9px ui-monospace, monospace; letter-spacing: 1.5px; color: #6c7a68; }
+.cal99 .cal99-detail-top h3 { font-size: 29px; line-height: 1.3; font-weight: 600; margin: 7px 0 4px; color: #334d3c; }
+.cal99 .cal99-detail-top p { font-size: 11px; line-height: 1.6; color: #6f7d69; }
+.cal99 .cal99-action-status { margin: 12px 0 0; padding: 8px 10px; border: 1px solid #b58a8f; background: #f0dede; color: #6d3f45; font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+.cal99 .cal99-event-title { display: flex; align-items: center; gap: 9px; margin: 23px 0 15px; }
+.cal99 .cal99-event-title .cal99-icon { width: 30px; height: 30px; }
+.cal99 .cal99-event-title h4 { min-width: 0; font-size: 17px; font-weight: 650; color: #344a3c; overflow-wrap: anywhere; }
+.cal99 .cal99-event-count { margin-left: auto; flex-shrink: 0; padding: 1px 6px; border: 1px solid #a3ac9c; color: #6c7a68; font-size: 11px; }
+.cal99 .cal99-entry + .cal99-entry { margin-top: 6px; padding-top: 16px; border-top: 1px dashed #b2b9a6; }
+.cal99 .cal99-entry-title { display: flex; align-items: center; gap: 7px; margin: 0 0 12px; font-size: 13px; font-weight: 650; color: #344a3c; overflow-wrap: anywhere; }
+.cal99 .cal99-entry-title > span { min-width: 0; }
+.cal99 .cal99-entry-title .cal99-icon { width: 20px; height: 20px; }
+.cal99 .cal99-intro { font-size: 11px; line-height: 1.8; margin: 0 0 13px; color: #65725f; }
+.cal99 .cal99-rewards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; margin: 0 0 16px; }
+.cal99 .cal99-reward { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 3px; width: 100%; min-height: 85px; margin: 0; padding: 18px 78px 18px 18px; text-align: left; color: #26322e; background: #e5e7da; border: 2px solid; border-color: #f8f7eb #a1ab97 #a1ab97 #f8f7eb; }
+.cal99 .cal99-reward.is-linked:hover { background: #eceee2; border-color: #f8f7eb #a1ab97 #a1ab97 #f8f7eb; }
+.cal99 .cal99-reward-name { max-width: 100%; font-size: 14px; font-weight: 600; line-height: 1.5; color: #355b4c; overflow-wrap: anywhere; }
+.cal99 .cal99-reward-quantity { font-size: 12px; color: #6b755f; }
+.cal99 .cal99-reward-hint { font-size: 10px; color: #6b7a65; }
+.cal99 .cal99-reward-art { position: absolute; top: 50%; right: 12px; display: grid; place-items: center; width: 54px; height: 54px; transform: translateY(-50%); pointer-events: none; }
+.cal99 .cal99-reward-image { width: 100%; height: 100%; object-fit: contain; }
+.cal99 .cal99-reward-art .cal99-icon { width: 38px; height: 38px; opacity: .55; image-rendering: pixelated; }
+.cal99 .cal99-offer { padding: 16px; margin-bottom: 13px; background: #e5e7da; border: 2px solid; border-color: #f8f7eb #a1ab97 #a1ab97 #f8f7eb; }
+.cal99 .cal99-offer-index { font: 9px ui-monospace, monospace; letter-spacing: 1px; color: #6b7a65; }
+.cal99 .cal99-offer h5 { margin: 7px 0; font-size: 17px; line-height: 1.5; color: #315a50; overflow-wrap: anywhere; }
+.cal99 .cal99-offer p { font-size: 13px; line-height: 1.85; color: #525e4f; overflow-wrap: anywhere; }
+.cal99 .cal99-detail-note, .cal99 .cal99-empty { font-size: 12px; line-height: 1.9; color: #6e7965; overflow-wrap: anywhere; }
+.cal99 .cal99-detail-note { margin: 0 0 13px; }
+.cal99 .cal99-empty { padding: 16px 0; }
+.cal99 .cal99-evidence { margin: 4px 0 13px; font-size: 10px; color: #78816d; }
+.cal99 .cal99-evidence summary { cursor: pointer; }
+.cal99 .cal99-evidence-label { margin: 8px 0 4px; font-size: 10px; color: #6b7a65; }
+.cal99 .cal99-evidence-ids { margin: 0 0 8px; padding-left: 16px; font: 10px/1.7 ui-monospace, monospace; color: #5f6c59; overflow-wrap: anywhere; }
+.cal99 .cal99-evidence pre { max-height: 190px; overflow: auto; margin: 6px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font: 10px/1.6 ui-monospace, monospace; background: #e6e7d9; color: #5f6c59; padding: 12px; border: 1px solid #b7beaa; }
+.cal99 .cal99-unmapped > .cal99-entry { margin-top: 12px; }
+.cal99 .cal99-statusbar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin: 0 6px 5px; padding: 9px 12px; border: 1px solid; border-color: #a3ad99 #f8f8e9 #f8f8e9 #a3ad99; color: #6a775f; font-size: 10px; }
+
+@container (max-width: 930px) {
+  .cal99 .cal99-workspace { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 17px; }
+  .cal99 .cal99-detail { border-left: 0; border-top: 2px solid #abb3a3; padding: 18px 0 0; }
+  .cal99 .cal99-workspace.is-single .cal99-detail { border-top: 0; padding: 0; }
+  .cal99 .cal99-day { height: 82px; }
+  .cal99 .cal99-detail-top { display: flex; align-items: baseline; gap: 4px 15px; flex-wrap: wrap; }
+  .cal99 .cal99-detail-top h3 { margin: 0; }
+}
+@container (max-width: 560px) {
+  .cal99 .cal99-workspace { padding: 10px; }
+  .cal99 .cal99-heading { flex-direction: column; align-items: stretch; }
+  .cal99 .cal99-season { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px; }
+  .cal99 .cal99-season-title strong { font-size: 35px; }
+  .cal99 .cal99-season-title > span { font-size: 25px; }
+  .cal99 .cal99-ornament { gap: 2px; font-size: 12px; }
+  .cal99 .cal99-ornament .cal99-icon { width: 17px; height: 17px; }
+  .cal99 .cal99-month-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px; }
+  .cal99 .cal99-month { padding: 4px 6px; font-size: 11px; }
+  .cal99 .cal99-month .cal99-icon { display: none; }
+  .cal99 .cal99-deadline { font-size: 10px; margin-top: 0; }
+  .cal99 .cal99-weekday { font-size: 10px; }
+  .cal99 .cal99-day { height: 66px; padding: 6px; }
+  .cal99 .cal99-day.is-selected, .cal99 .cal99-day.is-selected:hover { padding: 5px; }
+  .cal99 .cal99-day > .cal99-icon { width: 27px; height: 27px; }
+  .cal99 .cal99-day-number { font-size: 14px; right: 4px; top: 4px; }
+  .cal99 .cal99-day-label { display: none; }
+  .cal99 .cal99-day-count { right: 2px; bottom: 2px; font-size: 9px; }
+  .cal99 .cal99-blank { min-height: 66px; }
+  .cal99 .cal99-legend { gap: 6px 10px; }
+  .cal99 .cal99-legend .cal99-legend-hint { margin-left: 0; }
+  .cal99 .cal99-reward { padding: 14px 64px 14px 14px; }
+  .cal99 .cal99-reward-art { right: 8px; width: 44px; height: 44px; }
+  .cal99 .cal99-app-code { font-size: 8px; margin-left: 0; }
+}

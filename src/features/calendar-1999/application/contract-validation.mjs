@@ -106,6 +106,24 @@ export function validateCalendarDocument(document) {
   return { valid: issues.length === 0, issues };
 }
 
+// Every member of CalendarCapabilities in ports.mjs, in contract order.
+const CAPABILITIES = ['close', 'openItem', 'loadArt', 'renderText', 'formatDeadline', 'now'];
+
+/**
+ * Checks that every CalendarCapabilities member is a function. Behavior cannot be checked here; the mount guards it.
+ * Extra members are allowed and ignored, because the mount hands only the listed ones to the view.
+ * @param {unknown} capabilities
+ * @returns {{valid: boolean, issues: {path: string, code: string, message: string}[]}}
+ */
+export function validateCalendarCapabilities(capabilities) {
+  const issues = [];
+  check(issues, isObject(capabilities), '$', 'INVALID_CAPABILITIES', 'Capabilities must be an object');
+  if (isObject(capabilities)) {
+    for (const name of CAPABILITIES) check(issues, typeof capabilities[name] === 'function', name, 'MISSING_CAPABILITY', `${name} must be a function`);
+  }
+  return { valid: issues.length === 0, issues };
+}
+
 /**
  * Validates a value read back from SelectionStore. A stored value is untrusted until it passes this check.
  * @param {unknown} value

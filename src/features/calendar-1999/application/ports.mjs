@@ -166,28 +166,59 @@
  */
 
 /**
- * Host-injected capabilities. All of them are required.
+ * Host-injected capabilities. All of them are required; validateCalendarCapabilities checks that each one is a function.
+ * The host composition root (src/ui/calendar-1999.js, CAL-07) builds them from the App; a standalone page uses fakes.
+ * Capabilities ship with the App build, so CALENDAR_CONTRACT_VERSION, which versions the document only, does not cover
+ * them (ADR-009). The mount hands the view a guarded copy, so the failure rules below hold even when a host breaks them.
  * @typedef {object} CalendarCapabilities
  * @property {() => void} close                                   Return to the previous page. Must not throw.
  * @property {(ref: RewardRef) => boolean} openItem               Returns false when the target is unavailable. Does not throw.
+ *           true means the host accepted the navigation; a later asynchronous failure is reported by the host.
  * @property {(ref: {libraryId: string|null, iconToken?: string|null}) => Promise<{status: 'found', src: string}|{status: 'missing'}>} loadArt
  *           Never rejects. Any failure maps to {status: 'missing'}.
  * @property {(target: Element, text: string, mode: 'name'|'description') => void} renderText
  *           Must keep unknown tokens visible as written.
  * @property {(startsAt: UtcInstant, endsAt: UtcInstant, now: number) => {text: string, ended: boolean}} formatDeadline
- *           `now` is epoch milliseconds supplied by the caller. Core code never reads the clock.
+ *           `now` is epoch milliseconds supplied by the caller. Invalid times give {text: '', ended: false}.
+ * @property {() => number} now                                   Epoch milliseconds. The only clock the feature sees: core code
+ *           never reads the clock, and presentation passes this value to formatDeadline (ADR-009). Added in CAL-07.
  */
 
 /**
  * @typedef {object} CalendarViewHandle
  * @property {() => void} update   Repaint from the current session only. It does not fetch or accept new data
- *                                 and never changes the selection.
+ *                                 and never changes the selection. Countdowns are refreshed this way (ADR-009).
  * @property {() => void} destroy  Remove listeners and generated DOM. Idempotent; update() after destroy() is a no-op.
  *
  * @typedef {(container: Element, deps: {session: CalendarOperations, capabilities: CalendarCapabilities}) => CalendarViewHandle} CalendarViewFactory
  * Mounting into a container that already has a handle destroys the previous handle first.
  * When a new snapshot arrives, the host creates a new source and session and mounts again.
  * The same contextId restores its selection from the SelectionStore; a different contextId starts isolated.
+ * The container may not be connected to a document yet when the factory runs, so a view must not rely on layout while mounting.
+ * A view creates no timers: the host clock calls update() through the mount (ADR-009).
+ */
+
+/**
+ * Lifecycle of the calendar slot. application/calendar-mount.mjs implements it (CAL-07);
+ * 文档/深入/47-1999日历App能力转接与组装入口.md lists every rule.
+ *
+ * - At most one view is mounted at a time. mount() always unmounts the current view first, whatever its container, so
+ *   opening again never adds listeners or timers. A failed mount leaves nothing mounted.
+ * - Each mount gets its own guarded copy of the capabilities. unmount() releases that copy before it destroys the view:
+ *   from then on close, openItem and renderText do nothing (openItem returns false), and a loadArt that is still pending
+ *   never settles, so no late result can reach the old view.
+ * - update() repaints the mounted view and returns true, or returns false when nothing is mounted.
+ * - unmount() is idempotent. The mount owns no timer, listener or data; the host decides when to mount, update and unmount.
+ *
+ * @typedef {object} CalendarMount
+ * @property {(container: Element, session: CalendarOperations) => void} mount
+ * @property {() => boolean} update
+ * @property {() => void} unmount
+ * @property {() => boolean} isMounted
+ *
+ * @typedef {(deps: {view: CalendarViewFactory, capabilities: CalendarCapabilities, onError?: (error: unknown, capability: string) => void}) => CalendarMount} CalendarMountFactory
+ * Throws TypeError when the view is not a function or the capabilities fail validateCalendarCapabilities.
+ * onError receives every error a guarded capability absorbed; without it those errors are dropped.
  */
 
 // 1.1.0 adds the optional RewardRef.libraryVersion, TermRef.key and TermRef.source (CAL-04). Every 1.0.0 document stays valid.

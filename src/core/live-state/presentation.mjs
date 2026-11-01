@@ -45,6 +45,15 @@ export function syndicateTasks(steps,rank=5){
   return steps.slice(level-1,level+2);
 }
 
+// Countdown text of one time window at `now` (epoch ms): to the start while upcoming, then to the end.
+// Invalid times give '' and a finished window '已结束'. The caller supplies `now`, so the 1999 calendar shares this rule.
+export function formatCountdown(start,end,now){
+  const startsAt=Date.parse(start),upcoming=startsAt>now,left=(upcoming?startsAt:Date.parse(end))-now;
+  if(!Number.isFinite(left))return '';if(left<=0)return '已结束';
+  const m=Math.floor(left/60000),h=Math.floor(m/60),d=Math.floor(h/24);
+  return (upcoming?'还有 ':'')+(d?`${d}天 ${h%24}时`:h?`${h}时 ${m%60}分`:`${m}分`)+(upcoming?'开始':'后结束');
+}
+
 // Counts use complete projected entries, independently of preview limits or UI filters.
 export function worldStatistics(modules=[]){
   const rows=id=>modules.find(m=>m.id===id)?.entries??[];

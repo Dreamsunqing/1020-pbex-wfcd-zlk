@@ -287,7 +287,7 @@ test('servers, seasons and loops keep isolated selections, and a new snapshot of
   const variant = change => {
     const view = projection();
     const module = view.modules.find(row => row.id === 'calendar');
-    change(view, module.calendarSeasons[0], module.entries);
+    change(view, view.calendarSeasons[0], module.entries);
     return view;
   };
   const store = fakeStore();
@@ -359,13 +359,59 @@ test('the session copies and freezes its snapshot, so neither the source nor cal
   session.selectDay(140);
   assert.equal(store.writes.at(-1)[0], before.contextId);
 
-  // ES modules run in strict mode, so every write to the frozen state throws.
-  for (const change of [() => state.seasons.pop(), () => { state.selection.ordinal = 1; }, () => { state.selected.entries[0].title = 'x'; },
+  // ES modules run in strict mode, so every write to the frozen state throws. The selected day is empty here (131),
+  // so entries are not asserted on this state: the next test does that on an event day.
+  for (const change of [() => state.seasons.pop(), () => { state.selection.ordinal = 1; },
     () => state.unmapped.push(entry(1, 'other')), () => { state.month.days[0].kind = 'reward'; }, () => { state.data.stale = false; }]) {
     assert.throws(change, TypeError);
   }
   // A source that hands out a frozen document works too.
   assert.equal(start(deepFreeze(springDocument())).session.read().selection.ordinal, 96);
+});
+
+test('events, rewards, terms and evidence of the shown days are frozen all the way down, on a copy of the source', () => {
+  const document = springDocument();
+  // Day 130 holds two entries, the first with nested data of every kind. Day 400 cannot be shown and stays unmapped.
+  const sourceEntry = document.seasons[0].entries.find(item => item.ordinal === 130);
+  Object.assign(sourceEntry, {
+    rewards: [{ id: '/Lotus/StoreItems/Types/Items/MiscItems/Forma', name: '佛玛', quantity: 1, libraryId: null }],
+    terms: [{ name: '近战击杀', key: '/Lotus/Types/Challenges/Calendar1999/Melee', source: null }],
+    evidence: { day: 130, events: [{ type: 'CET_REWARD', extensions: { note: 'x' } }] }
+  });
+  document.seasons[0].entries.find(item => item.ordinal === 400).evidence = { day: 400, events: [{ type: 'CET_NEW' }] };
+  const { session } = start(document);
+  session.selectMonth(1);
+  // An event day is selected on purpose. On an empty day every write below would throw because the entry does not
+  // exist, which proves nothing about freezing.
+  const state = session.selectDay(130);
+  assert.deepEqual([state.selected.ordinal, state.selected.entries.length], [130, 2]);
+  const [shown] = state.selected.entries;
+  assert.deepEqual([shown.rewards.length, shown.terms.length, shown.evidence.events.length], [1, 1, 1]);
+
+  const [unmapped] = state.unmapped;
+  const parts = {
+    state, selection: state.selection, selected: state.selected, entries: state.selected.entries, entry: shown, rewards: shown.rewards,
+    reward: shown.rewards[0], terms: shown.terms, term: shown.terms[0], evidence: shown.evidence, events: shown.evidence.events,
+    event: shown.evidence.events[0], extensions: shown.evidence.events[0].extensions, month: state.month, day: state.month.days[0],
+    unmapped: state.unmapped, unmappedEntry: unmapped, unmappedEvent: unmapped.evidence.events[0], season: state.seasons[0],
+    seasonEntry: state.seasons[0].entries[0], data: state.data
+  };
+  for (const [name, part] of Object.entries(parts)) assert.ok(Object.isFrozen(part), `${name} is frozen`);
+
+  const writes = {
+    title: () => { shown.title = 'x'; }, kind: () => { shown.kind = 'other'; }, 'reward name': () => { shown.rewards[0].name = 'x'; },
+    'reward list': () => shown.rewards.push({}), 'term name': () => { shown.terms[0].name = 'x'; }, 'evidence day': () => { shown.evidence.day = 1; },
+    'event type': () => { shown.evidence.events[0].type = 'CET_PLOT'; }, 'event list': () => shown.evidence.events.push({}),
+    'event extensions': () => { shown.evidence.events[0].extensions.note = 'y'; }, 'day entries': () => state.selected.entries.push(shown),
+    'unmapped event': () => { unmapped.evidence.events[0].type = 'x'; }
+  };
+  for (const [name, write] of Object.entries(writes)) assert.throws(write, TypeError, name);
+  assert.deepEqual(session.read(), state);
+
+  // The session froze its own copy. The object the host handed over is still the host's to change.
+  assert.equal(Object.isFrozen(sourceEntry), false);
+  assert.equal(Object.isFrozen(sourceEntry.rewards[0]), false);
+  assert.equal(shown.evidence.events[0].extensions.note, 'x');
 });
 
 test('the view model lays a month on 42 slots and carries the selection without dropping entries', () => {

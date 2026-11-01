@@ -1,0 +1,48 @@
+/* Standalone page of the 1999 calendar (CAL-09): the test banner, the controls, the frame and the logs around the slot.
+ * Host styles only. Nothing here targets the calendar itself; its look comes from presentation/calendar.css alone, and
+ * harness.css adds the App's global element rules so the calendar is seen under the same pressure as in the App. */
+.sa-banner { position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: -20px -20px 16px; padding: 10px 20px; background: repeating-linear-gradient(135deg, #fff3cd 0 16px, #ffe7a3 16px 32px); border-bottom: 2px solid #b97800; color: #4a3200; font-size: 14px; line-height: 1.6; }
+.sa-badge { padding: 2px 10px; border-radius: 999px; background: #8a5a00; color: #fff; letter-spacing: 1px; white-space: nowrap; }
+.sa-banner code, .sa-facts code, .sa-store code { font: 12px/1.6 ui-monospace, monospace; overflow-wrap: anywhere; }
+
+.sa-layout { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 16px; align-items: start; }
+.sa-controls { position: sticky; top: 72px; display: grid; gap: 12px; max-height: calc(100vh - 92px); overflow: auto; }
+.sa-stage { display: grid; gap: 12px; min-width: 0; }
+@media (max-width: 960px) {
+  .sa-layout { grid-template-columns: minmax(0, 1fr); }
+  .sa-controls { position: static; max-height: none; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+}
+
+.sa-card { display: grid; gap: 10px; padding: 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--text); }
+.sa-heading { font-size: 14px; letter-spacing: 1px; }
+.sa-title { margin: 0; font-size: 20px; }
+.sa-field { display: grid; gap: 4px; margin: 0; padding: 0; border: 0; font-size: 13px; color: var(--muted); }
+.sa-field legend { padding: 0; margin-bottom: 4px; }
+.sa-field select, .sa-field input:not([type=radio]) { width: 100%; min-width: 0; color: var(--text); }
+.sa-field input:not([type=radio]) { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; background: var(--surface); }
+.sa-choice { display: flex; align-items: center; gap: 8px; color: var(--text); font-size: 14px; }
+.sa-choice input { margin: 0; }
+.sa-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.sa-buttons button { padding: 6px 10px; }
+.sa-clock { font: 13px/1.6 ui-monospace, monospace; }
+.sa-hint { font-size: 12px; line-height: 1.6; color: var(--muted); }
+
+.sa-facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 4px 12px; margin: 0; font-size: 13px; line-height: 1.6; }
+.sa-facts dt { color: var(--muted); }
+.sa-facts dd { margin: 0; overflow-wrap: anywhere; }
+.sa-last { padding: 8px 12px; border-left: 4px solid var(--accent); border-radius: 4px; background: var(--surface-soft); font-size: 13px; overflow-wrap: anywhere; }
+
+.sa-frame { position: relative; padding: 30px 12px 12px; border: 2px dashed #b97800; border-radius: 12px; }
+.sa-frame-label { position: absolute; top: 6px; left: 12px; right: 12px; font-size: 12px; line-height: 1.6; color: #8a5a00; overflow-wrap: anywhere; }
+.sa-placeholder { display: grid; gap: 10px; justify-items: start; padding: 24px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.sa-placeholder[role=alert] { border-color: #b42318; color: #b42318; }
+.sa-placeholder ul { margin: 0; padding-left: 20px; font: 12px/1.6 ui-monospace, monospace; }
+
+.sa-panels { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
+.sa-log ol { max-height: 280px; margin: 0; padding-left: 36px; overflow: auto; font: 12px/1.7 ui-monospace, monospace; }
+.sa-log li { overflow-wrap: anywhere; }
+.sa-log li.is-error { color: #b42318; }
+.sa-log li.is-host { color: var(--muted); }
+.sa-store ul { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; font-size: 13px; }
+.sa-store li { display: grid; gap: 2px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; }
+.sa-store li.is-current { border-color: var(--accent); }

@@ -1,0 +1,18 @@
+{
+  "fixture": { "purpose": "test", "notice": "测试资料：只供 1999 日历独立测试页与浏览器检查使用，不是任何服务器的正式排程。", "description": "季度没有事件：春季窗口与列出的 4 月 1、6、11、14 日都在，但没有任何事件。" },
+  "document": {
+    "contextId": "de:quiet",
+    "data": { "server": "de", "kind": "sample", "stale": true, "sourceTime": "2026-10-29T00:00:00.000Z" },
+    "seasons": [
+      {
+        "code": "CST_SPRING",
+        "label": "春季",
+        "yearIteration": 24,
+        "startsAt": "2026-10-26T00:00:00.000Z",
+        "endsAt": "2026-11-02T00:00:00.000Z",
+        "listedDays": [91, 96, 101, 104],
+        "entries": []
+      }
+    ]
+  }
+}

@@ -2,11 +2,13 @@ import { chromium, expect as baseExpect } from '@playwright/test';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { PAGE_FILE_PREFIXES, pageFileOf } from './serve-calendar-standalone.mjs';
 
 // Browser check of the 1999 calendar view (CAL-08). It drives test/calendar/browser/harness.html in Chromium: the real
-// view, mount and session from the public entry, fake capabilities and small fixed scenarios. No Electron, App bridge,
-// upstream data, image library or network: the page is served from a fake origin that answers only for the calendar
-// feature, the harness and the calendar fixtures, and every other request fails the check.
+// view, mount and session from the public entry, fake capabilities and the fixed scenarios of scenarios.mjs (CAL-09). No
+// Electron, App bridge, upstream data, image library or network: the page is served from a fake origin that answers
+// only for the files the standalone server allows (pageFileOf: the calendar feature, the test pages and the scenario
+// fixtures), and every other request fails the check.
 //
 //   node scripts/check-calendar-ui.mjs            run the checks; screenshots and report go to artifacts/calendar-ui/
 //   node scripts/check-calendar-ui.mjs --headed   watch it in a visible browser
@@ -14,8 +16,6 @@ const expect = baseExpect.configure({ timeout: 10000 });
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = path.join(root, 'artifacts/calendar-ui');
 const ORIGIN = 'http://calendar.test';
-const ALLOWED = ['src/features/calendar-1999/', 'test/calendar/browser/', 'test/calendar/fixtures/'];
-const TYPES = { '.html': 'text/html; charset=utf-8', '.mjs': 'text/javascript', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json' };
 const checks = [], errors = [], unexpected = [], served = new Set();
 const pass = message => { checks.push(message); console.log('PASS', message); };
 
@@ -24,14 +24,13 @@ const browser = await chromium.launch({ headless: !process.argv.includes('--head
 const context = await browser.newContext({ viewport: { width: 1440, height: 1100 }, locale: 'zh-CN', deviceScaleFactor: 1 });
 await context.route('**/*', async route => {
   const url = new URL(route.request().url());
-  const relative = decodeURIComponent(url.pathname).replace(/^\//, '');
-  const type = TYPES[path.extname(relative)];
-  if (url.origin !== ORIGIN || !type || relative.includes('\\') || relative.split('/').includes('..') || !ALLOWED.some(prefix => relative.startsWith(prefix))) {
+  const file = url.origin === ORIGIN ? pageFileOf(url.pathname) : null;
+  if (!file) {
     unexpected.push(url.href);
     return route.abort();
   }
-  served.add(relative);
-  return route.fulfill({ status: 200, contentType: type, body: await fs.readFile(path.join(root, relative)) });
+  served.add(file.relative);
+  return route.fulfill({ status: 200, contentType: file.type, body: await fs.readFile(path.join(root, file.relative)) });
 });
 const page = await context.newPage();
 page.on('pageerror', error => errors.push(error.message));
@@ -520,7 +519,7 @@ try {
 
   // 16. Only the calendar's own files were requested; no page error.
   expect(unexpected).toEqual([]);
-  expect([...served].every(file => ALLOWED.some(prefix => file.startsWith(prefix)))).toBe(true);
+  expect([...served].every(file => PAGE_FILE_PREFIXES.some(prefix => file.startsWith(prefix)))).toBe(true);
   expect(errors).toEqual([]);
   pass(`只请求日历功能、夹具与测试资料（${served.size} 个文件），无其他请求、无页面错误`);
 

@@ -1,0 +1,73 @@
+{
+  "fixture": {
+    "purpose": "test",
+    "notice": "测试资料：只供 1999 日历独立测试页与浏览器检查使用，不是任何服务器的正式排程。",
+    "description": "缺图与长文字：超长季度名称；4 月 11 日一项超长名称的候选奖励与一项资料库未收录（libraryId 为 null）的奖励；4 月 14 日三项超长名称与说明的煞调变。"
+  },
+  "document": {
+    "contextId": "de:long",
+    "data": { "server": "de", "kind": "sample", "stale": true, "sourceTime": "2026-10-29T00:00:00.000Z" },
+    "seasons": [
+      {
+        "code": "CST_SPRING",
+        "label": "一个非常非常长的季度名称用来检查标题不会溢出也不会被静默截断",
+        "yearIteration": 24,
+        "startsAt": "2026-10-26T00:00:00.000Z",
+        "endsAt": "2026-11-02T00:00:00.000Z",
+        "listedDays": [91, 96, 101, 104],
+        "entries": [
+          {
+            "ordinal": 96,
+            "kind": "challenge",
+            "title": "挑战日",
+            "rewards": [],
+            "terms": [{ "name": "测试挑战", "description": "击败 10 名敌人。" }],
+            "evidence": { "season": "CST_SPRING", "yearIteration": 24, "day": 96 }
+          },
+          {
+            "ordinal": 101,
+            "kind": "reward",
+            "title": "奖励日",
+            "rewards": [
+              {
+                "id": "/Test/Long",
+                "name": "超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称Lotus/Types/Items/MiscItems/ThisIsAnUnbrokenIdentifierWithoutSpacesThatMustWrapInsteadOfOverflowing",
+                "quantity": 12345,
+                "libraryId": "/Test/Long"
+              },
+              {
+                "id": "/Test/Unlinked/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                "name": "资料库没有收录的奖励",
+                "quantity": null,
+                "libraryId": null
+              }
+            ],
+            "terms": [],
+            "evidence": { "season": "CST_SPRING", "yearIteration": 24, "day": 101 }
+          },
+          {
+            "ordinal": 104,
+            "kind": "upgrade",
+            "title": "煞调变日",
+            "rewards": [],
+            "terms": [
+              {
+                "name": "超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称Lotus/Types/Items/MiscItems/ThisIsAnUnbrokenIdentifierWithoutSpacesThatMustWrapInsteadOfOverflowing 1",
+                "description": "很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，https://example.invalid/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/"
+              },
+              {
+                "name": "超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称Lotus/Types/Items/MiscItems/ThisIsAnUnbrokenIdentifierWithoutSpacesThatMustWrapInsteadOfOverflowing 2",
+                "description": "很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，https://example.invalid/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/"
+              },
+              {
+                "name": "超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称超长名称Lotus/Types/Items/MiscItems/ThisIsAnUnbrokenIdentifierWithoutSpacesThatMustWrapInsteadOfOverflowing 3",
+                "description": "很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，很长的说明文字，https://example.invalid/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/path/"
+              }
+            ],
+            "evidence": { "season": "CST_SPRING", "yearIteration": 24, "day": 104 }
+          }
+        ]
+      }
+    ]
+  }
+}

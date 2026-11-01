@@ -16,7 +16,7 @@ function nestedCount(row){return (row.rewards?.length??0)+(row.items?.length??0)
 export function createLiveStateUI({api,guarded,notify,openLibrary,openWM}){
  const $=id=>document.getElementById(id),state={server:'de',group:'quick',query:'',data:null,detail:null,offset:0,filters:{},sequence:0,busy:false,loaded:false,scroll:0,auto:false},cache=new Map();
  let timer=null,rewardDialog=null,bountyDetail=null,newsPage=0;
- // 1999 calendar (CAL-07): show in renderDetail, hide whenever the content is replaced, tick with the clock. Without a view it keeps the legacy cards.
+ // 1999 calendar (CAL-07, CAL-08 view): show in renderDetail, hide whenever the content is replaced, tick with the clock. When the projection or the view fails it keeps the legacy cards.
  const calendar=createCalendar1999Host({api,openLibrary,guarded,back});
  const localDay=()=>new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);
  let arbDate=localDay(),arbMonth=arbDate.slice(0,7),arbCalendar=null,arbToday=null,arbSeq=0;

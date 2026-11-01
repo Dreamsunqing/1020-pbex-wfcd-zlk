@@ -272,14 +272,30 @@ function app({ view = recordingView().view, images, openLibrary, guarded, now = 
 
 const projection = (changes = {}) => ({ ...fixture('world-state/projection-de.json'), ...changes });
 
-test('the App composition root keeps the legacy cards until a view is injected, and builds nothing for them', () => {
+test('the App composition root keeps the legacy cards when the view is set to null, and builds nothing for them', () => {
   const record = [];
-  const host = createCalendar1999Host({ api: { images: requests => { record.push(requests); return Promise.resolve([]); } }, back: () => record.push('back') });
+  const host = createCalendar1999Host({ api: { images: requests => { record.push(requests); return Promise.resolve([]); } }, back: () => record.push('back'), view: null });
   assert.equal(host.show({}, projection()), false);
   assert.equal(host.tick(), false);
   assert.doesNotThrow(() => host.hide());
   assert.deepEqual(record, []);
   assert.throws(() => createCalendar1999Host({ api: {} }), TypeError, 'back is required');
+});
+
+test('by default the App composition root mounts the feature view (CAL-08), and a view that cannot mount keeps the legacy cards', () => {
+  const composition = code(fileURLToPath(new URL('src/ui/calendar-1999.js', root)));
+  assert.match(composition, /\bview = createCalendarView\b/, 'the default view is the feature presentation');
+  // A container that is not a DOM element makes the real view refuse to mount; show() reports it and answers false.
+  const errors = [];
+  const host = createCalendar1999Host({ api: {}, back: () => {}, onError: (error, where) => errors.push([where, error.constructor.name]) });
+  assert.equal(host.show({}, projection()), false);
+  assert.deepEqual(errors, [['show', 'TypeError']]);
+  assert.equal(host.tick(), false);
+  // The App page links the view's stylesheet exactly once; no other App stylesheet styles the calendar root.
+  const page = readFileSync(new URL('src/ui/index.html', root), 'utf8');
+  assert.equal(page.match(/<link rel="stylesheet" href="\.\.\/features\/calendar-1999\/presentation\/calendar\.css">/g)?.length, 1);
+  const ui = fileURLToPath(new URL('src/ui/', root));
+  for (const file of readdirSync(ui).filter(name => name.endsWith('.css'))) assert.doesNotMatch(readFileSync(path.join(ui, file), 'utf8'), /\.cal99/, file);
 });
 
 test('show builds a session from the world-state projection and mounts the view; hide unmounts it', () => {

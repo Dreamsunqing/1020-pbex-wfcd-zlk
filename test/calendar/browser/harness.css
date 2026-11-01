@@ -1,0 +1,18 @@
+/* Host stand-in for scripts/check-calendar-ui.mjs. It copies the App's global element rules (style.css, workspace.css,
+ * live-state.css) that reach inside the calendar, so the check sees the calendar under the same pressure as in the App. */
+:root { --text: #253348; --muted: #7a8699; --accent: #087f75; --line: #dce1e8; --surface: #fff; --surface-soft: #f1f8f6; --focus: #188e80; }
+body.dark { --text: #e8eef5; --muted: #9aa6b6; --accent: #48c1b3; --line: #33414f; --surface: #1b2530; --surface-soft: #22303c; background: #121a22; color: var(--text); }
+* { box-sizing: border-box; }
+body { margin: 20px; font-family: sans-serif; background: #f4f6f8; color: var(--text); }
+button, input, select { font: inherit; }
+button { cursor: pointer; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); padding: 9px 14px; min-height: 32px; transition: border-color .15s, box-shadow .15s; }
+button:hover { background: var(--surface-soft); border-color: var(--accent); }
+select { border: 1px solid var(--line); border-radius: 8px; padding: 9px 11px; background: var(--surface); color: var(--text); }
+h1, h2, p { margin: 0; }
+p { line-height: 1.8; }
+small { font-size: 10px; letter-spacing: 1.6px; color: var(--muted); }
+pre { margin: 0; font: 12px/1.8 ui-monospace, monospace; white-space: pre-wrap; }
+/* Same weight as the App's ".ws-page svg" (one class, one element). */
+.host-page svg { width: 20px; height: 20px; flex-shrink: 0; }
+.host-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+#slot { max-width: 1400px; }

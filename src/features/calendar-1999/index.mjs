@@ -4,7 +4,7 @@
 // Session, adapters and presentation are added by later CAL issues and must be imported through this file.
 export { CALENDAR_CONTRACT_VERSION } from './application/ports.mjs';
 export { EVENT_KINDS, isEventKind } from './domain/event-kind.mjs';
-export { validateCalendarDocument, validateSelectionValue } from './application/contract-validation.mjs';
+export { validateCalendarDocument, validateSelectionValue, validateCalendarCapabilities } from './application/contract-validation.mjs';
 // CAL-04: the host composition root turns its world-state projection into a CalendarSource with this adapter.
 export { createWorldStateCalendarSource } from './adapters/world-state-source.mjs';
 // CAL-03: the host composition root creates one session per snapshot from a CalendarSource and its SelectionStore.
@@ -12,3 +12,6 @@ export { createWorldStateCalendarSource } from './adapters/world-state-source.mj
 export { createCalendarSession } from './application/calendar-session.mjs';
 // CAL-05: the host keeps one store for every session, so a selection survives a new snapshot of the same context.
 export { createMemorySelectionStore } from './adapters/memory-selection-store.mjs';
+// CAL-07: the host keeps one mount for its calendar slot and injects the view and the capabilities the mount guards.
+// The App composition root is src/ui/calendar-1999.js; the presentation view factory comes with CAL-08.
+export { createCalendarMount } from './application/calendar-mount.mjs';

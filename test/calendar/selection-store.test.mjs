@@ -92,7 +92,7 @@ test('one store keeps servers, loops and season windows apart, and a new snapsho
   const variant = change => {
     const view = fixture('world-state/projection-de.json');
     const module = view.modules.find(row => row.id === 'calendar');
-    change(view, module.calendarSeasons[0], module.entries);
+    change(view, view.calendarSeasons[0], module.entries);
     return view;
   };
   const nextWindow = { startsAt: '2026-10-26T00:00:00.000Z', endsAt: '2026-11-02T00:00:00.000Z' };

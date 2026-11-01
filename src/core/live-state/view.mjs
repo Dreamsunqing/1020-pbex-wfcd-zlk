@@ -64,10 +64,10 @@ export function buildWorldView(snapshot,catalog,{now=Date.now()}={}) {
     ...windowOf(row),cardState:calendarCardState(array(day.events)),rewards:array(day.events).filter(e=>e.rewardKey).map(e=>item(e.rewardKey)),
     terms:array(day.events).filter(e=>!e.rewardKey).map(e=>catalog.weekly.calendarEvent(e)),
     reference:{season:row.season,yearIteration:row.yearIteration,day:day.day,events:day.events,localization:array(day.events).filter(e=>!e.rewardKey).map(e=>catalog.weekly.calendarEvent(e)),upgradeAvailabilityRequirements:row.upgradeAvailabilityRequirements},iconToken:'CALENDAR'
-  }))),{layout:'tiles',preview:3,showTerms:true,groupCards:true,
-    // Entries skip days without events; the 1999 calendar adapter reads windows and every listed day from here.
-    calendarSeasons:calendarSeasons.map(row=>({season:row.season,label:catalog.weekly.season(row.season).name,yearIteration:row.yearIteration,...windowOf(row),listedDays:array(row.days).map(day=>day.day)})),
-    note:'按事件分组，组内按游戏日排序；强化为三选一。强化中文为社区资料整理，来源见详情。'});
+  }))),{layout:'tiles',preview:3,showTerms:true,groupCards:true,note:'按事件分组，组内按游戏日排序；强化为三选一。强化中文为社区资料整理，来源见详情。'});
+  // Season windows and listed days are data, not a card. The card above is dropped when no day has events, and its
+  // entries skip days without events, so the 1999 calendar adapter reads the seasons from this top-level list instead.
+  const calendarWindows=calendarSeasons.map(row=>({season:row.season,label:catalog.weekly.season(row.season).name,yearIteration:row.yearIteration,...windowOf(row),listedDays:array(row.days).map(day=>day.day)}));
   add('descents','沉沦之地','weekly',rows('descents').filter(active).flatMap(row=>array(row.challenges).sort((a,b)=>a.index-b.index).map(c=>{
     const info=catalog.weekly.descent(c),known=info.detail.localized;
     return entry('第 '+c.index+' 层',info.type.name,{...windowOf(row),cardState:descentCardState(c.type,info.type.localized),terms:[info.detail,...info.auras.filter(a=>a.localized),...info.specs.filter(s=>s.localized)].filter(t=>t.name!==info.type.name||t.description),
@@ -110,7 +110,7 @@ export function buildWorldView(snapshot,catalog,{now=Date.now()}={}) {
   const covered=new Set(Object.keys(RAW_FIELD_MODULES)), extraFields=Object.keys(raw).filter(key=>!covered.has(key));
   const visible=output.filter(module=>module.entries.length || ['fissures','sortie','archonHunt','alerts','voidTraders'].includes(module.id));
   return {server,kind:snapshot.kind,source:snapshot.source,sourceTime:new Date(sourceNow).toISOString(),fetchedAt:snapshot.fetchedAt,hash:snapshot.hash,
-    stale:!networkFresh,refreshError:snapshot.refreshError ?? null,at:new Date(at).toISOString(),modules:visible,
+    stale:!networkFresh,refreshError:snapshot.refreshError ?? null,at:new Date(at).toISOString(),modules:visible,calendarSeasons:calendarWindows,
     summary:{missions:fissures.length+rows('invasions').filter(r=>!r.completed).length,weekly:visible.filter(m=>m.group==='weekly').length,trade:visible.filter(m=>m.group==='trade').reduce((s,m)=>s+m.count,0)},
     diagnostics:{normalizers:Object.keys(modules).length,rawFields:Object.keys(raw).length,knownFields:covered.size,extraFields,errors,moduleStatus:Object.fromEntries(Object.entries(modules).map(([id,value])=>[id,value.status])),unprojectedModules:['persistentEnemies','projectPct','pvpActiveTournaments','pvpAlternativeModes','hubEvents','experimentRecommended','twitchPromos','skuSales','primeAccessAvailability','temporaryConfig'],
       warnings:[...catalog.warnings,...bounties.warnings,...Object.entries(modules).flatMap(([id,m])=>(m.warnings??[]).map(w=>id+': '+w))],dictionaries:catalog.evidence,buildLabel:raw.BuildLabel,version:raw.Version}};

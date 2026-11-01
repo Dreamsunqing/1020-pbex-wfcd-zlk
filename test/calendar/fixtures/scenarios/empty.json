@@ -1,0 +1,8 @@
+{
+  "fixture": { "purpose": "test", "notice": "测试资料：只供 1999 日历独立测试页与浏览器检查使用，不是任何服务器的正式排程。", "description": "空资料：快照有效，但没有任何季度。" },
+  "document": {
+    "contextId": "de:empty",
+    "data": { "server": "de", "kind": "sample", "stale": true, "sourceTime": "2026-10-29T00:00:00.000Z" },
+    "seasons": []
+  }
+}

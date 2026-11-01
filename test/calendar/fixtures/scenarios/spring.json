@@ -1,0 +1,51 @@
+{
+  "fixture": {
+    "purpose": "test",
+    "notice": "测试资料：只供 1999 日历独立测试页与浏览器检查使用，不是任何服务器的正式排程。",
+    "description": "春季的 CalendarDocument（与契约范例 contracts/valid-document.json 相同）：4 月 6 日挑战、4 月 11 日候选奖励、4 月 14 日煞调变三选一；4 月 1 日只列出、没有事件。"
+  },
+  "document": {
+    "contextId": "de:CST_SPRING:24:2026-10-26T00:00:00.000Z",
+    "data": { "server": "de", "kind": "sample", "stale": true, "sourceTime": "2026-10-29T00:00:00.000Z" },
+    "seasons": [
+      {
+        "code": "CST_SPRING",
+        "label": "春季",
+        "yearIteration": 24,
+        "startsAt": "2026-10-26T00:00:00.000Z",
+        "endsAt": "2026-11-02T00:00:00.000Z",
+        "listedDays": [91, 96, 101, 104],
+        "entries": [
+          {
+            "ordinal": 96,
+            "kind": "challenge",
+            "title": "挑战日",
+            "rewards": [],
+            "terms": [{ "name": "测试挑战", "description": "击败 10 名敌人。" }],
+            "evidence": { "season": "CST_SPRING", "yearIteration": 24, "day": 96 }
+          },
+          {
+            "ordinal": 101,
+            "kind": "reward",
+            "title": "奖励日",
+            "rewards": [{ "id": "/Test/Reward", "name": "测试奖励", "quantity": 1, "libraryId": "/Test/Reward" }],
+            "terms": [],
+            "evidence": { "season": "CST_SPRING", "yearIteration": 24, "day": 101 }
+          },
+          {
+            "ordinal": 104,
+            "kind": "upgrade",
+            "title": "煞调变日",
+            "rewards": [],
+            "terms": [
+              { "name": "选项 1", "description": "测试效果 1" },
+              { "name": "选项 2", "description": "测试效果 2" },
+              { "name": "选项 3", "description": "测试效果 3" }
+            ],
+            "evidence": { "season": "CST_SPRING", "yearIteration": 24, "day": 104 }
+          }
+        ]
+      }
+    ]
+  }
+}

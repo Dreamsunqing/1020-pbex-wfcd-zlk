@@ -1,0 +1,39 @@
+{
+  "fixture": {
+    "purpose": "test",
+    "notice": "测试资料：只供 1999 日历独立测试页与浏览器检查使用，不是任何服务器的正式排程。",
+    "description": "未知季节：季度代码 CST_UNKNOWN 没有日期对应规则；两笔事件（原始日序 366 与缺失）按原始顺序保留为未映射事件。"
+  },
+  "document": {
+    "contextId": "de:unknown-season",
+    "data": { "server": "de", "kind": "sample", "stale": true, "sourceTime": "2026-10-29T00:00:00.000Z" },
+    "seasons": [
+      {
+        "code": "CST_UNKNOWN",
+        "label": "未知季节",
+        "yearIteration": 24,
+        "startsAt": "2026-10-26T00:00:00.000Z",
+        "endsAt": "2026-11-02T00:00:00.000Z",
+        "listedDays": [],
+        "entries": [
+          {
+            "ordinal": 366,
+            "kind": "other",
+            "title": "超出全年范围的事件",
+            "rewards": [],
+            "terms": [{ "name": "原始事件" }],
+            "evidence": { "day": 366 }
+          },
+          {
+            "ordinal": null,
+            "kind": "other",
+            "title": "缺少日序的事件",
+            "rewards": [],
+            "terms": [],
+            "evidence": { "day": null }
+          }
+        ]
+      }
+    ]
+  }
+}

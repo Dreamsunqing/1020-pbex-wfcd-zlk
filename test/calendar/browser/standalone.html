@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN" data-purpose="test" data-state="loading">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-src 'none'; form-action 'none'">
+  <title>1999 日历独立测试页（测试资料，非正式排程）</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="harness.css">
+  <link rel="stylesheet" href="standalone.css">
+  <!-- The host links the calendar stylesheet itself, as src/ui/index.html does in the App. -->
+  <link rel="stylesheet" href="../../../src/features/calendar-1999/presentation/calendar.css">
+  <script type="module" src="standalone.mjs"></script>
+</head>
+<body>
+  <header class="sa-banner" role="note" aria-label="测试页面说明">
+    <strong class="sa-badge">测试页面</strong>
+    <span>本页只使用 <code>test/calendar/fixtures/scenarios/</code> 的固定测试资料与假外部能力；日期、奖励与倒数都不是任何服务器的正式排程，也不含个人进度。</span>
+  </header>
+
+  <div class="sa-layout">
+    <aside class="sa-controls" aria-label="测试控制">
+      <section class="sa-card">
+        <h2 class="sa-heading">资料</h2>
+        <label class="sa-field">情境<select id="scenario"></select></label>
+        <fieldset class="sa-field" id="server"><legend>伺服器</legend></fieldset>
+      </section>
+
+      <section class="sa-card">
+        <h2 class="sa-heading">假外部能力</h2>
+        <label class="sa-field">图片（loadArt）<select id="art"></select></label>
+        <label class="sa-field">资料库跳转（openItem）<select id="open"></select></label>
+        <label class="sa-field">关闭（close）<select id="close"></select></label>
+      </section>
+
+      <section class="sa-card">
+        <h2 class="sa-heading">时钟（now，假）</h2>
+        <p class="sa-clock" id="clock-text" aria-live="polite"></p>
+        <label class="sa-field">设为（UTC）<input id="clock" type="datetime-local" step="60"></label>
+        <div class="sa-buttons">
+          <button type="button" data-clock="-86400000">−1 天</button>
+          <button type="button" data-clock="3600000">+1 小时</button>
+          <button type="button" data-clock="86400000">+1 天</button>
+          <button type="button" data-clock="reset">情境默认</button>
+        </div>
+      </section>
+
+      <section class="sa-card">
+        <h2 class="sa-heading">宿主</h2>
+        <label class="sa-field">主题<select id="theme"></select></label>
+        <label class="sa-field">日历容器宽度<select id="width"></select></label>
+        <div class="sa-buttons">
+          <button type="button" id="remount">重新挂载（新快照）</button>
+          <button type="button" id="update">重画 update()</button>
+          <button type="button" id="unmount">卸载</button>
+        </div>
+      </section>
+    </aside>
+
+    <main class="sa-stage">
+      <section class="sa-card sa-scenario" id="scenario-info" aria-labelledby="scenario-title">
+        <h1 class="sa-title" id="scenario-title">载入中…</h1>
+        <p id="scenario-summary"></p>
+        <dl class="sa-facts" id="scenario-facts"></dl>
+      </section>
+
+      <p class="sa-last" id="last-call" role="status">尚未有外部操作。</p>
+
+      <div class="sa-frame">
+        <p class="sa-frame-label" id="frame-label">测试资料</p>
+        <div id="slot" class="host-page"></div>
+      </div>
+
+      <div class="sa-panels">
+        <section class="sa-card sa-log" aria-labelledby="log-title">
+          <h2 class="sa-heading" id="log-title">操作纪录</h2>
+          <ol id="log"></ol>
+          <div class="sa-buttons"><button type="button" id="clear-log">清除纪录</button></div>
+        </section>
+        <section class="sa-card sa-store" aria-labelledby="store-title">
+          <h2 class="sa-heading" id="store-title">选取存储</h2>
+          <p class="sa-hint">本页持有一个内存 SelectionStore，按 contextId 隔离伺服器、季度与轮回；只存正在查看的日期，不是个人进度，重新整理即清空。</p>
+          <ul id="store"></ul>
+          <div class="sa-buttons"><button type="button" id="reset-store">清空并重新挂载</button></div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

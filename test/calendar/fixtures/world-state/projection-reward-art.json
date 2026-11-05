@@ -1,0 +1,113 @@
+{
+  "server": "de",
+  "kind": "sample",
+  "source": "fixture",
+  "sourceTime": "2026-10-22T19:32:27.000Z",
+  "fetchedAt": null,
+  "hash": "fixture-reward-art",
+  "stale": false,
+  "refreshError": null,
+  "at": "2026-10-22T19:32:27.000Z",
+  "calendarSeasons": [
+    {
+      "season": "CST_WINTER",
+      "label": "冬季",
+      "yearIteration": 24,
+      "startsAt": "2026-10-19T00:00:00.000Z",
+      "endsAt": "2026-10-26T00:00:00.000Z",
+      "listedDays": [56, 57]
+    }
+  ],
+  "modules": [
+    {
+      "id": "calendar",
+      "title": "1999 日历",
+      "group": "weekly",
+      "layout": "tiles",
+      "entries": [
+        {
+          "title": "游戏日 56",
+          "subtitle": "冬季",
+          "startsAt": "2026-10-19T00:00:00.000Z",
+          "endsAt": "2026-10-26T00:00:00.000Z",
+          "cardState": { "id": "reward", "label": "奖励日" },
+          "rewards": [
+            {
+              "id": "/Lotus/StoreItems/Types/BoosterPacks/CalendarMajorArtifactPack",
+              "name": "CalendarMajorArtifactPack",
+              "description": "",
+              "localized": false,
+              "quantity": 1
+            },
+            {
+              "id": "/Lotus/StoreItems/Types/Items/MiscItems/Forma",
+              "name": "佛玛",
+              "description": "",
+              "localized": false,
+              "quantity": 1,
+              "imageId": "/Lotus/Types/Items/MiscItems/Forma",
+              "libraryId": "/Lotus/Types/Items/MiscItems/Forma",
+              "libraryVersion": "fixture-library-v1",
+              "tradable": false,
+              "english": "Forma"
+            }
+          ],
+          "terms": [],
+          "reference": {
+            "season": "CST_WINTER",
+            "yearIteration": 24,
+            "day": 56,
+            "events": [
+              { "type": "CET_REWARD", "challengeKey": null, "rewardKey": "/Lotus/StoreItems/Types/BoosterPacks/CalendarMajorArtifactPack", "upgradeKey": null, "extensions": {} },
+              { "type": "CET_REWARD", "challengeKey": null, "rewardKey": "/Lotus/StoreItems/Types/Items/MiscItems/Forma", "upgradeKey": null, "extensions": {} }
+            ],
+            "localization": [],
+            "upgradeAvailabilityRequirements": ["/Lotus/Upgrades/Calendar/1999UpgradeApplicationRequirement"]
+          },
+          "iconToken": "CALENDAR"
+        },
+        {
+          "title": "游戏日 57",
+          "subtitle": "冬季",
+          "startsAt": "2026-10-19T00:00:00.000Z",
+          "endsAt": "2026-10-26T00:00:00.000Z",
+          "cardState": { "id": "reward", "label": "奖励日" },
+          "rewards": [
+            {
+              "id": "/Lotus/Types/BoosterPacks/CalendarMajorArtifactPack",
+              "name": "大型赋能包",
+              "description": "",
+              "localized": true,
+              "quantity": 1,
+              "imageId": "/Lotus/Types/BoosterPacks/CalendarMajorArtifactPack",
+              "libraryId": "/Lotus/Types/BoosterPacks/CalendarMajorArtifactPack",
+              "libraryVersion": "fixture-library-v1",
+              "tradable": false,
+              "english": "Major Arcane Pack"
+            },
+            {
+              "id": "/Lotus/StoreItems/Types/Gameplay/NarmerSorties/ArchonCrystalOrange",
+              "name": "ArchonCrystalOrange",
+              "description": "",
+              "localized": false,
+              "quantity": 1
+            }
+          ],
+          "terms": [],
+          "reference": {
+            "season": "CST_WINTER",
+            "yearIteration": 24,
+            "day": 57,
+            "events": [
+              { "type": "CET_REWARD", "challengeKey": null, "rewardKey": "/Lotus/Types/BoosterPacks/CalendarMajorArtifactPack", "upgradeKey": null, "extensions": {} },
+              { "type": "CET_REWARD", "challengeKey": null, "rewardKey": "/Lotus/StoreItems/Types/Gameplay/NarmerSorties/ArchonCrystalOrange", "upgradeKey": null, "extensions": {} }
+            ],
+            "localization": [],
+            "upgradeAvailabilityRequirements": ["/Lotus/Upgrades/Calendar/1999UpgradeApplicationRequirement"]
+          },
+          "iconToken": "CALENDAR"
+        }
+      ]
+    }
+  ]
+}

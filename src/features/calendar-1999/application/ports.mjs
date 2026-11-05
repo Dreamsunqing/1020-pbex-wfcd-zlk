@@ -174,8 +174,10 @@
  * @property {() => void} close                                   Return to the previous page. Must not throw.
  * @property {(ref: RewardRef) => boolean} openItem               Returns false when the target is unavailable. Does not throw.
  *           true means the host accepted the navigation; a later asynchronous failure is reported by the host.
- * @property {(ref: {libraryId: string|null, iconToken?: string|null}) => Promise<{status: 'found', src: string}|{status: 'missing'}>} loadArt
- *           Never rejects. Any failure maps to {status: 'missing'}.
+ * @property {(ref: {id?: string, libraryId: string|null, iconToken?: string|null}) => Promise<{status: 'found', src: string}|{status: 'missing'}>} loadArt
+ *           Never rejects. Any failure maps to {status: 'missing'}. The view asks for every reward with its full ID and
+ *           its library target, and the host decides where the picture comes from; a reward without libraryId may still
+ *           have one. A picture never makes a reward openable: openItem depends on libraryId alone. `id` added in CAL-10.
  * @property {(target: Element, text: string, mode: 'name'|'description') => void} renderText
  *           Must keep unknown tokens visible as written.
  * @property {(startsAt: UtcInstant, endsAt: UtcInstant, now: number) => {text: string, ended: boolean}} formatDeadline

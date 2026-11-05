@@ -12,7 +12,8 @@ function sort(value) {
 export const digest = value => sha256(stable(value));
 export const compareText = (a, b) => a < b ? -1 : a > b ? 1 : 0;
 export const pointer = key => String(key).replaceAll('~', '~0').replaceAll('/', '~1');
-export const storeItemId = value => typeof value === 'string' ? value.replace(/^\/Lotus\/StoreItems\//, '/Lotus/') : null;
+// The rule lives in a module without file access, so the renderer (the 1999 calendar's reward art) applies the same one.
+export { storeItemId } from './store-item-id.mjs';
 export function valid(value, field) {
   return (field.type === 'boolean' ? typeof value === 'boolean' : field.type === 'string' ? typeof value === 'string' && value.trim().length > 0 : typeof value === 'number' && Number.isFinite(value) && (field.type !== 'integer' || Number.isInteger(value))) && (field.min === undefined || value >= field.min) && (field.max === undefined || value <= field.max);
 }

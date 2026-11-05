@@ -6,4 +6,10 @@ const files = (await Promise.all(['src', 'scripts', 'test'].map(walk))).flat();
 for (const file of files) { const result = spawnSync(process.execPath, ['--check', file], { encoding: 'utf8' }); if (result.status !== 0) { console.error(result.stderr); process.exit(1); } }
 console.log(`语法检查通过：${files.length} 个文件`);
 
+// 1999 calendar reward art mapping (CAL-10): duplicates, invalid paths and missing pictures fail the check.
+const rewardArt = await import('./check-calendar-reward-art.mjs');
+const art = await rewardArt.checkCalendarRewardArt();
+for (const line of rewardArt.describeRewardArtCheck(art)) (art.ok ? console.log : console.error)(line);
+if (!art.ok) process.exit(1);
+
 await (await import('./prepare-inline-tokens.mjs')).prepareInlineTokens({ check: true });

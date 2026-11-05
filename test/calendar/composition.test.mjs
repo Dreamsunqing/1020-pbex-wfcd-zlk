@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
+import { access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { createCalendarMount, createCalendarSession, createMemorySelectionStore, validateCalendarCapabilities } from '../../src/features/calendar-1999/index.mjs';
@@ -254,8 +255,10 @@ test('a view that closes the calendar while mounting or repainting is destroyed 
 
 // --- App composition root -------------------------------------------------------------------------------------------
 
-function app({ view = recordingView().view, images, openLibrary, guarded, now = () => Date.parse('2026-10-22T19:32:27.000Z'), renderText } = {}) {
-  const record = { backs: 0, images: [], library: [], guarded: 0, errors: [], texts: [] };
+// readPicture stands in for the browser reading a bundled picture: by default it reads the file the URL names, so a
+// mapped path that points nowhere fails here as it would in the App.
+function app({ view = recordingView().view, images, openLibrary, guarded, now = () => Date.parse('2026-10-22T19:32:27.000Z'), renderText, rewardArt, readPicture } = {}) {
+  const record = { backs: 0, images: [], library: [], guarded: 0, errors: [], texts: [], pictures: [], problems: [], raw: [] };
   const api = { images: images ?? (requests => { record.images.push(requests); return Promise.resolve([{ dataUrl: `data:${requests[0].id}` }]); }) };
   const host = createCalendar1999Host({
     api,
@@ -265,7 +268,13 @@ function app({ view = recordingView().view, images, openLibrary, guarded, now = 
     view,
     renderText: renderText ?? ((target, text, mode) => { record.texts.push([text, mode]); target.textContent = text; }),
     now,
-    onError: (error, where) => record.errors.push([where, error.message])
+    onError: (error, where) => {
+      record.errors.push([where, error.message]);
+      record.raw.push(error);
+      if (error?.code) record.problems.push([where, error.code, error.rewardId, error.path]);
+    },
+    ...(rewardArt === undefined ? {} : { rewardArt }),
+    readPicture: readPicture ?? (src => { record.pictures.push(src); return access(fileURLToPath(src)); })
   });
   return { host, record, api };
 }
@@ -405,6 +414,125 @@ test('pictures come from the App image service by library ID, once per mount, an
   const noImages = createCalendar1999Host({ api: {}, back: () => {}, view });
   noImages.show({}, projection());
   assert.deepEqual(await loadArt()({ libraryId: FORMA }), { status: 'missing' });
+});
+
+// --- Reward art mapping (CAL-10) ----------------------------------------------------------------------------------------
+
+const PACK_STORE = '/Lotus/StoreItems/Types/BoosterPacks/CalendarMajorArtifactPack';
+const PACK = '/Lotus/Types/BoosterPacks/CalendarMajorArtifactPack';
+const PACK_FILE = 'calendar-1999/rewards/CalendarMajorArtifactPack.png';
+const artProjection = () => fixture('world-state/projection-reward-art.json');
+// The fixture's four rewards as the session hands them to the view: the pack in both spellings (day 56 without a library
+// item, day 57 with one), Forma with a library item and no mapping, and an archon crystal with neither.
+function artRewards(handle) {
+  const entries = handle.deps.session.read().seasons[0].entries;
+  const [packStore, forma] = entries.find(entry => entry.ordinal === 56).rewards;
+  const [pack, crystal] = entries.find(entry => entry.ordinal === 57).rewards;
+  return { packStore, forma, pack, crystal };
+}
+// What the view sends for a reward: its full ID and its library target.
+const askArt = (handle, reward) => handle.deps.capabilities.loadArt({ id: reward.id, libraryId: reward.libraryId });
+
+test('reward art: a valid mapping comes first, serves both ID spellings, and needs no library item', async () => {
+  const { view, log } = recordingView();
+  const { host, record } = app({ view });
+  assert.deepEqual(record.errors, [], 'the bundled mapping is valid');
+  host.show({}, artProjection());
+  const handle = log.handles[0];
+  const { packStore, forma, pack, crystal } = artRewards(handle);
+  assert.deepEqual([packStore.id, packStore.libraryId, pack.id, pack.libraryId], [PACK_STORE, null, PACK, PACK]);
+  const mapped = await askArt(handle, packStore);
+  assert.deepEqual(mapped, { status: 'found', src: new URL(`src/ui/assets/${PACK_FILE}`, root).href });
+  assert.deepEqual(await askArt(handle, pack), mapped, 'the /Lotus/ spelling finds the same picture');
+  assert.deepEqual(record.images, [], 'the mapping wins over the image service, even for a reward the service knows');
+  assert.deepEqual(record.pictures, [mapped.src, mapped.src], 'the picture was read from the App image root');
+  // Picture and jump are apart: the pack without a library item shows its picture and still has no jump.
+  const { openItem } = handle.deps.capabilities;
+  assert.equal(openItem(packStore), false);
+  assert.equal(openItem(pack), true);
+  await flush();
+  assert.deepEqual(record.library, [[PACK, 'fixture-library-v1']]);
+  // Without a mapping a library item asks the image service, and a reward with neither keeps the placeholder.
+  assert.deepEqual(await askArt(handle, forma), { status: 'found', src: `data:${FORMA}` });
+  assert.deepEqual(await askArt(handle, crystal), { status: 'missing' });
+  assert.deepEqual(record.images, [[{ id: FORMA }]], 'a reward without a library item never reaches the service');
+  await askArt(handle, packStore);
+  assert.equal(record.pictures.length, 2, 'repaints reuse the answer of this mount');
+  assert.deepEqual(record.errors, []);
+});
+
+test('reward art: without the mapping, or when its file cannot be read, the image service answers; with neither, the placeholder', async () => {
+  const { view, log } = recordingView();
+  const ask = reward => askArt(log.handles.at(-1), reward);
+  // The mapping removed.
+  const removed = app({ view, rewardArt: {} });
+  removed.host.show({}, artProjection());
+  const { packStore, pack } = artRewards(log.handles.at(-1));
+  assert.deepEqual(await ask(pack), { status: 'found', src: `data:${PACK}` });
+  assert.deepEqual(await ask(packStore), { status: 'missing' });
+  assert.deepEqual(removed.record.images, [[{ id: PACK }]]);
+  assert.deepEqual(removed.record.pictures, []);
+  // The mapped file is missing: the reason is reported with the entry, and the lookup goes on without the mapping.
+  const gone = app({ view, rewardArt: { [PACK_STORE]: 'calendar-1999/rewards/Gone.png' } });
+  assert.deepEqual(gone.record.errors, [], 'a well-formed entry is only found unreadable when it is asked for');
+  gone.host.show({}, artProjection());
+  assert.deepEqual(await ask(pack), { status: 'found', src: `data:${PACK}` });
+  assert.deepEqual(await ask(packStore), { status: 'missing' });
+  assert.deepEqual(gone.record.problems, [
+    ['loadArt', 'ART_FILE_UNREADABLE', PACK_STORE, 'calendar-1999/rewards/Gone.png'],
+    ['loadArt', 'ART_FILE_UNREADABLE', PACK_STORE, 'calendar-1999/rewards/Gone.png']
+  ]);
+  assert.match(gone.record.errors[0][1], /图档无法读取，改用 App 图片服务：\/Lotus\/StoreItems\/Types\/BoosterPacks\/CalendarMajorArtifactPack → src\/ui\/assets\/calendar-1999\/rewards\/Gone\.png$/);
+  assert.equal(gone.record.raw[0].cause.code, 'ENOENT', 'the reason keeps its cause');
+  assert.match(gone.record.raw[0].src, /src\/ui\/assets\/calendar-1999\/rewards\/Gone\.png$/);
+  assert.deepEqual(gone.record.images, [[{ id: PACK }]]);
+  // A picture the browser cannot decode is unreadable too; with no service picture either, the placeholder stays.
+  const broken = app({ view, readPicture: () => Promise.reject(new Error('decode failed')), images: () => Promise.resolve([null]) });
+  broken.host.show({}, artProjection());
+  assert.deepEqual(await ask(pack), { status: 'missing' });
+  assert.deepEqual(broken.record.problems, [['loadArt', 'ART_FILE_UNREADABLE', PACK_STORE, PACK_FILE]]);
+  assert.equal(broken.record.raw[0].cause.message, 'decode failed');
+  // A host without an image service still shows mapped pictures.
+  const offline = createCalendar1999Host({ api: {}, back: () => {}, view, readPicture: () => Promise.resolve() });
+  offline.show({}, artProjection());
+  assert.equal((await ask(pack)).status, 'found');
+  assert.deepEqual(await ask(artRewards(log.handles.at(-1)).forma), { status: 'missing' });
+});
+
+test('reward art: the mapping is read once; every refused entry is reported and left out, and the others still work', async () => {
+  const { view, log } = recordingView();
+  const { host, record } = app({ view, rewardArt: {
+    [PACK_STORE]: PACK_FILE,
+    [PACK]: PACK_FILE,
+    '/Lotus/StoreItems/Types/Items/MiscItems/Forma': '../../desktop/main.mjs',
+    Forma: 'calendar-1999/rewards/Forma.png',
+    '/Lotus/StoreItems/Types/Gameplay/NarmerSorties/ArchonCrystalOrange': 'calendar-1999/rewards/ArchonCrystalOrange.PNG'
+  } });
+  const refused = [
+    ['rewardArt', 'INVALID_PATH', '/Lotus/StoreItems/Types/Items/MiscItems/Forma', '../../desktop/main.mjs'],
+    ['rewardArt', 'INVALID_ID', 'Forma', 'calendar-1999/rewards/Forma.png'],
+    ['rewardArt', 'UNSUPPORTED_TYPE', '/Lotus/StoreItems/Types/Gameplay/NarmerSorties/ArchonCrystalOrange', 'calendar-1999/rewards/ArchonCrystalOrange.PNG'],
+    ['rewardArt', 'DUPLICATE_ID', PACK_STORE, PACK_FILE],
+    ['rewardArt', 'DUPLICATE_ID', PACK, PACK_FILE]
+  ];
+  assert.deepEqual(record.problems, refused);
+  assert.match(record.errors[3][1], /奖励图片映射有一笔无效，已略过：\/Lotus\/StoreItems\/Types\/BoosterPacks\/CalendarMajorArtifactPack：与 \/Lotus\/Types\/BoosterPacks\/CalendarMajorArtifactPack 是同一物品/);
+  host.show({}, artProjection());
+  host.show({}, artProjection());
+  const handle = log.handles.at(-1);
+  const { packStore, forma, pack, crystal } = artRewards(handle);
+  // Two spellings of one item are ambiguous, so neither is used; the refused paths never reach a picture read.
+  assert.deepEqual(await askArt(handle, pack), { status: 'found', src: `data:${PACK}` });
+  assert.deepEqual(await askArt(handle, packStore), { status: 'missing' });
+  assert.deepEqual(await askArt(handle, forma), { status: 'found', src: `data:${FORMA}` });
+  assert.deepEqual(await askArt(handle, crystal), { status: 'missing' });
+  assert.deepEqual(record.pictures, []);
+  assert.deepEqual(record.problems, refused, 'showing again reports nothing new');
+  // A table that is not an object leaves no mapping at all, and the image service still works.
+  const none = app({ view, rewardArt: null });
+  assert.deepEqual(none.record.problems, [['rewardArt', 'INVALID_TABLE', null, null]]);
+  none.host.show({}, artProjection());
+  assert.deepEqual(await askArt(log.handles.at(-1), artRewards(log.handles.at(-1)).pack), { status: 'found', src: `data:${PACK}` });
 });
 
 test('game text goes through the App renderer and stays readable when the renderer fails', () => {

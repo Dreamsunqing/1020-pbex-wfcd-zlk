@@ -299,7 +299,8 @@ try {
   await shot('calendar-empty');
   pass('未映射事件、未知季节、无事件季度、只列出无内容的日期与空快照都有明确画面，不伪造事件');
 
-  // 9. Missing, broken and late pictures; rewards without a library target.
+  // 9. Missing, broken and late pictures; rewards without a library target ask for a picture too (CAL-10), never jump.
+  const UNLINKED = '/Test/Unlinked/' + 'X'.repeat(60);
   await harness('setArt', 'missing');
   await harness('takeCalls');
   await harness('mount', 'long');
@@ -308,9 +309,17 @@ try {
   await expect(cards).toHaveCount(2);
   await expect(cards.nth(0).locator('.cal99-reward-art.is-missing svg')).toHaveCount(1);
   await expect(cards.nth(0).locator('img')).toHaveCount(0);
+  await expect(cards.nth(1).locator('.cal99-reward-art.is-missing svg')).toHaveCount(1);
   await expect(cards.nth(1)).not.toHaveAttribute('data-action', /./);
   await expect(cards.nth(1)).toContainText('资料库未收录');
-  expect((await harness('takeCalls')).filter(call => call[0] === 'loadArt').map(call => call[1])).toEqual(['/Test/Long']);
+  expect((await harness('takeCalls')).filter(call => call[0] === 'loadArt')).toEqual([['loadArt', '/Test/Long', '/Test/Long'], ['loadArt', UNLINKED, null]]);
+  await harness('setArt', 'found');
+  await harness('mount', 'long');
+  await day(101).click();
+  await expect(cards.nth(1).locator('.cal99-reward-image')).toHaveAttribute('src', /^data:image\/png/);
+  await expect(cards.nth(1)).not.toHaveAttribute('data-action', /./);
+  await expect(cards.nth(1)).toContainText('资料库未收录');
+  expect(await cards.nth(1).evaluate(node => node.tagName)).toBe('DIV');
   await harness('setArt', 'broken');
   await harness('mount', 'spring');
   await day(101).click();
@@ -321,7 +330,7 @@ try {
   await expect(detail.locator('.cal99-reward-art.is-loading svg')).toHaveCount(1);
   await harness('unmount');
   await harness('setArt', 'found');
-  pass('缺图、坏图与未完成的图片都显示代码占位图且保留名称；无资料库目标的奖励不显示跳转、不请求图片');
+  pass('缺图、坏图与未完成的图片都显示代码占位图且保留名称；无资料库目标的奖励也按完整 ID 请求图片，有图时显示图片，仍不显示跳转');
 
   // 10. Long text wraps instead of overflowing or being cut, in wide and narrow containers.
   await harness('mount', 'long');

@@ -242,25 +242,26 @@ export function createCalendarView(container, { session, capabilities } = {}) {
     if (result) slot.title = '暂无图片';
   }
 
-  function requestArt(id) {
-    asked.add(id);
+  function requestArt(key, reward) {
+    asked.add(key);
     const settle = result => {
       if (destroyed) return;
-      art.set(id, result?.status === 'found' ? result : MISSING);
-      for (const slot of root.querySelectorAll('.cal99-reward-art[data-art-id]')) if (slot.dataset.artId === id) applyArt(slot, art.get(id));
+      art.set(key, result?.status === 'found' ? result : MISSING);
+      for (const slot of root.querySelectorAll('.cal99-reward-art[data-art-id]')) if (slot.dataset.artId === key) applyArt(slot, art.get(key));
     };
     // The guarded copy never rejects; the second handler only keeps a view used without the mount from leaking a rejection.
-    capabilities.loadArt({ libraryId: id }).then(settle, () => settle(MISSING));
+    capabilities.loadArt({ id: reward.id, libraryId: linked(reward) ? reward.libraryId : null }).then(settle, () => settle(MISSING));
   }
 
   function artSlot(reward) {
     const slot = el('span', 'cal99-reward-art');
-    // A reward without a library target has no picture to ask for; it keeps the code-native placeholder (HANDOFF-01).
-    if (!linked(reward)) { applyArt(slot, MISSING); return slot; }
-    const id = reward.libraryId;
-    slot.dataset.artId = id;
-    applyArt(slot, art.get(id));
-    if (!art.has(id) && !asked.has(id)) requestArt(id);
+    // Every reward asks for its picture by its full ID and its library target, and the host decides where the picture
+    // comes from (CAL-10): a reward without a library target can still have one. The jump depends on libraryId alone.
+    // Until the answer arrives, and when there is none, the slot keeps the code-native placeholder (HANDOFF-01).
+    const key = JSON.stringify([reward.id, linked(reward) ? reward.libraryId : null]);
+    slot.dataset.artId = key;
+    applyArt(slot, art.get(key));
+    if (!art.has(key) && !asked.has(key)) requestArt(key, reward);
     return slot;
   }
 

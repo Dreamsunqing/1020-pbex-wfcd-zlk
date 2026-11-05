@@ -72,6 +72,12 @@ test('presentation uses only the capabilities it is handed, and the guarded fail
   assert.match(view, /capabilities\.formatDeadline\(season\.startsAt, season\.endsAt, capabilities\.now\(\)\)/);
   // openItem answering false is shown to the user instead of failing silently.
   assert.match(view, /if \(!capabilities\.openItem\(ref\)\) showStatus\(/);
+  // Pictures and jumps are apart (CAL-10): every reward asks for its picture with its full ID, and only the library
+  // target decides whether a reward is a jump control. A picture never turns a card into a button.
+  assert.equal(view.match(/capabilities\.loadArt\(/g).length, 1);
+  assert.match(view, /capabilities\.loadArt\(\{ id: reward\.id, libraryId: linked\(reward\) \? reward\.libraryId : null \}\)/);
+  assert.doesNotMatch(view.slice(view.indexOf('function artSlot('), view.indexOf('function rewardView(')), /if \(!linked\(reward\)\)/);
+  assert.match(view, /const card = linked\(reward\)\s*\? button\('cal99-reward is-linked'/);
 });
 
 test('the view needs a DOM container and its deps before it draws anything', () => {

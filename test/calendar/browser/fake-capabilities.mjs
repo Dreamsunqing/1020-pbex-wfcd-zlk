@@ -3,9 +3,11 @@
 //
 // - Behaviour follows `settings`, read at each call, so a page can switch a mode without building new capabilities.
 // - Every call is passed to `record` first, as an array: ['close'], ['openItem', id, libraryId, libraryVersion],
-//   ['loadArt', libraryId] or ['renderText', mode]. scripts/check-calendar-ui.mjs compares these arrays.
+//   ['loadArt', id, libraryId] or ['renderText', mode]. scripts/check-calendar-ui.mjs compares these arrays.
 // - The failing modes break the CalendarCapabilities contract of application/ports.mjs on purpose: close and openItem
 //   throw, loadArt rejects. They show what the mount's guarded copy turns such failures into (CAL-07).
+// - The art mode answers every reward alike, with or without a library target, the way a mapped picture of the App's
+//   reward art mapping does (CAL-10). Which source wins in the App is checked by test/calendar/composition.test.mjs.
 
 export const ART_MODES = Object.freeze({
   found: '找到图片',
@@ -44,7 +46,7 @@ export function createFakeCapabilities({ settings, now, record = () => {}, onClo
       return settings.openItem === 'accept';
     },
     loadArt(ref) {
-      record(['loadArt', ref.libraryId]);
+      record(['loadArt', ref.id, ref.libraryId]);
       switch (settings.art) {
         case 'found': return Promise.resolve({ status: 'found', src: PIXEL });
         case 'broken': return Promise.resolve({ status: 'found', src: 'data:image/png;base64,broken' });

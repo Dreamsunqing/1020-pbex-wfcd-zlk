@@ -144,6 +144,27 @@ try {
   await expect(page.locator('.cal99')).toHaveCount(1);
   pass('宿主重绘后经共用存储恢复选取（1 月 20 日），页面只有一个日历');
 
+  // 6b. CAL-10: the reward art mapping. On 2 月 25 日 (day 56) the DE sample offers CalendarMajorArtifactPack. World state
+  // writes it with /StoreItems/, as the mapping key does, and the App catalog may project the other spelling: either way
+  // the mapped picture comes from the App image root and really decodes in the App page. The jump depends on the library.
+  await cal.locator('[data-calendar-month]').filter({ hasText: '2月' }).click();
+  await day(56).click();
+  const pack = cal.locator('.cal99-detail .cal99-reward[data-item-id^="/Lotus/"][data-item-id$="/Types/BoosterPacks/CalendarMajorArtifactPack"]');
+  await expect(pack).toHaveCount(1);
+  facts.mappedRewardId = await pack.getAttribute('data-item-id');
+  const packImage = pack.locator('.cal99-reward-image');
+  await expect(packImage).toHaveAttribute('src', /^file:\/\/.*\/src\/ui\/assets\/calendar-1999\/rewards\/CalendarMajorArtifactPack\.png$/);
+  await expect.poll(() => packImage.evaluate(node => node.complete && node.naturalWidth > 0 ? [node.naturalWidth, node.naturalHeight] : null)).toEqual([128, 128]);
+  facts.mappedPicture = {
+    src: (await packImage.getAttribute('src')).replace(/^.*\/src\/ui\//, 'src/ui/'),
+    linked: await pack.evaluate(node => node.classList.contains('is-linked')),
+    hint: await pack.locator('.cal99-reward-hint').textContent()
+  };
+  expect(facts.mappedPicture.hint).toBe(facts.mappedPicture.linked ? '资料库 →' : '资料库未收录');
+  if (!facts.mappedPicture.linked) await expect(pack).not.toHaveAttribute('data-action', /./);
+  await shot('app-calendar-reward-art');
+  pass(`映射图片在 App 内载入：${facts.mappedRewardId} 显示 ${facts.mappedPicture.src}（128×128，映射键为 /StoreItems/ 写法）；资料库${facts.mappedPicture.linked ? '有收录，可跳转' : '未收录，维持无跳转'}`);
+
   // 7. Dark App theme and an 800px window.
   await page.locator('#theme-select').selectOption('dark');
   expect(await cal.evaluate(node => getComputedStyle(node).backgroundColor)).toBe('rgb(217, 220, 207)');

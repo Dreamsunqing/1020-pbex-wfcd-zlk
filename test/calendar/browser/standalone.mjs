@@ -72,7 +72,7 @@ const capabilities = createFakeCapabilities({
   record([name, ...args]) {
     if (name === 'close') note(`close：日历请求关闭 → ${CLOSE_MODES[settings.close]}`);
     else if (name === 'openItem') note(`openItem：${args[0]}（资料库 ${args[1] ?? '无'}${args[2] ? ` · 版本 ${args[2]}` : ''}）→ ${OPEN_MODES[settings.openItem]}`);
-    else if (name === 'loadArt') note(`loadArt：${args[0]} → ${ART_MODES[settings.art]}`);
+    else if (name === 'loadArt') note(`loadArt：${args[0]}（资料库 ${args[1] ?? '无'}）→ ${ART_MODES[settings.art]}`);
     // renderText runs for every name and description; listing it would bury the other calls.
   },
   // In the App, close() returns to the world-state page, which hides the calendar.

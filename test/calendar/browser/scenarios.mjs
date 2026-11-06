@@ -33,7 +33,8 @@ export const SCENARIO_GROUPS = freeze({
   events: '同日多事件',
   edge: '边界与空资料',
   snapshot: '快照状态',
-  capabilities: '外部操作'
+  capabilities: '外部操作',
+  birthdays: '角色生日'
 });
 
 export const SCENARIOS = freeze([
@@ -64,7 +65,15 @@ export const SCENARIOS = freeze([
   { id: 'live', group: 'snapshot', title: '实时快照', file: 'spring.json', data: { kind: 'network', stale: false },
     summary: '春季资料标为实时快照：日历内不显示快照提示，只有本页的测试横幅与框线表明这是测试资料；与春季共用选取。' },
   { id: 'failure', group: 'capabilities', title: '外部操作失败', file: 'spring.json', capabilities: { art: 'error', openItem: 'error', close: 'error' },
-    summary: '图片请求失败，奖励卡显示占位图；点奖励时跳转抛错，日历显示「资料库暂时无法打开」；点 × 时关闭抛错，日历留在原位。错误都记入操作纪录。' }
+    summary: '图片请求失败，奖励卡显示占位图；点奖励时跳转抛错，日历显示「资料库暂时无法打开」；点 × 时关闭抛错，日历留在原位。错误都记入操作纪录。' },
+  // CAL-11: birthdays of the six Hex members, through the world-state adapter and the verified birthday table.
+  { id: 'birthdays', group: 'birthdays', title: '六人组生日', file: 'birthdays.json', clock: '2026-10-22T19:32:27.000Z',
+    summary: '四个季度涵盖六人：冬季 2 月 14 日莱蒂；春季 5 月 23 日阿米尔（同日有候选奖励）；夏季 7 月 10 日碧；秋季 11 月 2 日埃莉诺、11 月 3 日亚瑟（同日有挑战）、12 月 4 日昆西。'
+      + '日期格显示蛋糕与「生日」，详情显示角色名、测试角色图与对照依据；1 月 1 日、3 月 15 日只列出，不是六人组生日；12 月 6 日的剧情事件没有指明角色，保留原事件与诊断。' },
+  { id: 'birthdayNoPortrait', group: 'birthdays', title: '生日缺角色图', file: 'birthdays.json', clock: '2026-10-22T19:32:27.000Z', capabilities: { portrait: 'missing' },
+    summary: '同「六人组生日」，但角色图预设为缺图：详情保留角色名、生日标记与代码占位图，日期格不受影响。' },
+  { id: 'birthdayConflict', group: 'birthdays', title: '生日来源冲突', file: 'birthday-conflict.json', clock: '2026-11-10T06:00:00.000Z',
+    summary: '秋季：上游剧情事件在 12 月 3 日指明昆西，与已核实的 12 月 4 日不符。昆西不显示生日；12 月 3 日以原事件呈现并附冲突诊断，12 月 4 日维持只列出；11 月 2 日埃莉诺照常显示。' }
 ]);
 
 export const findScenario = id => SCENARIOS.find(scenario => scenario.id === id) ?? null;

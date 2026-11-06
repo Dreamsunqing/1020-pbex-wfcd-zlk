@@ -94,6 +94,9 @@
 .cal99 .cal99-day-label { color: #586356; font-size: 10px; line-height: 1.4; }
 .cal99 .cal99-day-listed { width: 6px; height: 6px; margin: 0 0 3px 2px; background: #8a9a8c; }
 .cal99 .cal99-day-count { position: absolute; right: 5px; bottom: 5px; padding: 0 3px; border: 1px solid #b99b9c; background: #f3e6df; color: #5b4650; font: 10px/1.4 ui-monospace, monospace; }
+/* CAL-11: a birthday next to events is a small cake in the top-left corner, clear of the selection corner mark. */
+.cal99 .cal99-day-birthday { position: absolute; top: 5px; left: 16px; }
+.cal99 .cal99-day-birthday .cal99-icon { width: 18px; height: 18px; image-rendering: pixelated; }
 .cal99 .cal99-blank { background: #d0d4c6; min-height: 70px; opacity: .7; }
 .cal99 .cal99-legend { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 15px; margin-top: 13px; font-size: 11px; color: #62705f; }
 .cal99 .cal99-legend > span { display: flex; align-items: center; gap: 5px; }
@@ -119,14 +122,30 @@
 .cal99 .cal99-entry-title .cal99-icon { width: 20px; height: 20px; }
 .cal99 .cal99-intro { font-size: 11px; line-height: 1.8; margin: 0 0 13px; color: #65725f; }
 .cal99 .cal99-rewards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; margin: 0 0 16px; }
-.cal99 .cal99-reward { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 3px; width: 100%; min-height: 85px; margin: 0; padding: 18px 78px 18px 18px; text-align: left; color: #26322e; background: #e5e7da; border: 2px solid; border-color: #f8f7eb #a1ab97 #a1ab97 #f8f7eb; }
+/* Gift cards (CAL-11) look and load their pictures like reward cards, and are never buttons. */
+.cal99 .cal99-reward, .cal99 .cal99-gift { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 3px; width: 100%; min-height: 85px; margin: 0; padding: 18px 78px 18px 18px; text-align: left; color: #26322e; background: #e5e7da; border: 2px solid; border-color: #f8f7eb #a1ab97 #a1ab97 #f8f7eb; }
 .cal99 .cal99-reward.is-linked:hover { background: #eceee2; border-color: #f8f7eb #a1ab97 #a1ab97 #f8f7eb; }
-.cal99 .cal99-reward-name { max-width: 100%; font-size: 14px; font-weight: 600; line-height: 1.5; color: #355b4c; overflow-wrap: anywhere; }
+.cal99 .cal99-reward-name, .cal99 .cal99-gift-name { max-width: 100%; font-size: 14px; font-weight: 600; line-height: 1.5; color: #355b4c; overflow-wrap: anywhere; }
 .cal99 .cal99-reward-quantity { font-size: 12px; color: #6b755f; }
 .cal99 .cal99-reward-hint { font-size: 10px; color: #6b7a65; }
 .cal99 .cal99-reward-art { position: absolute; top: 50%; right: 12px; display: grid; place-items: center; width: 54px; height: 54px; transform: translateY(-50%); pointer-events: none; }
 .cal99 .cal99-reward-image { width: 100%; height: 100%; object-fit: contain; }
 .cal99 .cal99-reward-art .cal99-icon { width: 38px; height: 38px; opacity: .55; image-rendering: pixelated; }
+.cal99 .cal99-birthdays { margin: 0 0 16px; }
+.cal99 .cal99-birthday { display: grid; grid-template-columns: 72px minmax(0, 1fr); align-items: center; gap: 6px 14px; margin: 0 0 12px; padding: 14px; background: #efe2dd; border: 2px solid; border-color: #f8f7eb #b99b9c #b99b9c #f8f7eb; }
+.cal99 .cal99-portrait { display: grid; place-items: center; width: 72px; height: 72px; overflow: hidden; background: #e5e7da; border: 1px solid #b7beaa; }
+.cal99 .cal99-portrait-image { width: 100%; height: 100%; object-fit: cover; }
+.cal99 .cal99-portrait .cal99-icon { width: 44px; height: 44px; opacity: .6; image-rendering: pixelated; }
+.cal99 .cal99-birthday-copy { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.cal99 .cal99-birthday-name { font-size: 18px; font-weight: 650; line-height: 1.4; color: #7d4456; overflow-wrap: anywhere; }
+.cal99 .cal99-birthday-date { font-size: 12px; color: #6b5a5f; }
+.cal99 .cal99-birthday-role, .cal99 .cal99-birthday-personality { font-size: 11px; line-height: 1.7; color: #6e7965; overflow-wrap: anywhere; }
+.cal99 .cal99-birthday-role { margin-top: 2px; color: #5b4650; }
+.cal99 .cal99-gifts { margin: 0 0 12px; padding: 14px 14px 4px; background: #e4e6d8; border: 2px solid; border-color: #a3ac9c #f6f6e9 #f6f6e9 #a3ac9c; }
+.cal99 .cal99-gifts-title { margin: 0 0 10px; font-size: 13px; font-weight: 650; color: #344a3c; overflow-wrap: anywhere; }
+.cal99 .cal99-gift { min-height: 78px; margin-bottom: 10px; }
+.cal99 .cal99-gift-note { font-size: 11px; line-height: 1.6; color: #6b7a65; overflow-wrap: anywhere; }
+.cal99 .cal99-entry-note { margin: 0 0 13px; padding: 8px 10px; border: 1px solid #b89b62; background: #f1e6cd; color: #5c4a24; font-size: 12px; line-height: 1.7; overflow-wrap: anywhere; }
 .cal99 .cal99-offer { padding: 16px; margin-bottom: 13px; background: #e5e7da; border: 2px solid; border-color: #f8f7eb #a1ab97 #a1ab97 #f8f7eb; }
 .cal99 .cal99-offer-index { font: 9px ui-monospace, monospace; letter-spacing: 1px; color: #6b7a65; }
 .cal99 .cal99-offer h5 { margin: 7px 0; font-size: 17px; line-height: 1.5; color: #315a50; overflow-wrap: anywhere; }
@@ -169,10 +188,15 @@
   .cal99 .cal99-day-number { font-size: 14px; right: 4px; top: 4px; }
   .cal99 .cal99-day-label { display: none; }
   .cal99 .cal99-day-count { right: 2px; bottom: 2px; font-size: 9px; }
+  .cal99 .cal99-day-birthday { top: 3px; left: 12px; }
+  .cal99 .cal99-day-birthday .cal99-icon { width: 14px; height: 14px; }
+  .cal99 .cal99-birthday { grid-template-columns: 56px minmax(0, 1fr); padding: 10px; }
+  .cal99 .cal99-portrait { width: 56px; height: 56px; }
   .cal99 .cal99-blank { min-height: 66px; }
   .cal99 .cal99-legend { gap: 6px 10px; }
   .cal99 .cal99-legend .cal99-legend-hint { margin-left: 0; }
-  .cal99 .cal99-reward { padding: 14px 64px 14px 14px; }
+  .cal99 .cal99-reward, .cal99 .cal99-gift { padding: 14px 64px 14px 14px; }
+  .cal99 .cal99-gifts { padding: 10px 10px 0; }
   .cal99 .cal99-reward-art { right: 8px; width: 44px; height: 44px; }
   .cal99 .cal99-app-code { font-size: 8px; margin-left: 0; }
 }

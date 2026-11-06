@@ -4,8 +4,8 @@ import http from 'node:http';
 import { mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { createCalendarMount, createCalendarSession, createMemorySelectionStore, validateCalendarCapabilities, validateCalendarDocument } from '../../src/features/calendar-1999/index.mjs';
-import { ART_MODES, CLOSE_MODES, DEFAULT_SETTINGS, OPEN_MODES, createFakeCapabilities } from './browser/fake-capabilities.mjs';
+import { HEX_BIRTHDAYS, createCalendarMount, createCalendarSession, createMemorySelectionStore, validateCalendarCapabilities, validateCalendarDocument } from '../../src/features/calendar-1999/index.mjs';
+import { ART_MODES, CLOSE_MODES, DEFAULT_SETTINGS, OPEN_MODES, PORTRAIT_MODES, createFakeCapabilities } from './browser/fake-capabilities.mjs';
 import { DEFAULT_CLOCK, FIXTURE_DIR, SCENARIOS, SCENARIO_GROUPS, SERVERS, loadScenario, testFixture } from './browser/scenarios.mjs';
 import { PAGE_FILE_PREFIXES, STANDALONE_PAGE, createCalendarStandaloneServer, pageFileOf } from '../../scripts/serve-calendar-standalone.mjs';
 
@@ -49,11 +49,11 @@ test('the catalog names known groups, existing files, valid presets and clocks, 
     assert.ok(scenario.title && scenario.summary, scenario.id);
     assert.ok(Object.isFrozen(scenario));
     for (const key of Object.keys(scenario.data ?? {})) assert.ok(['kind', 'stale'].includes(key), `${scenario.id} restates ${key}`);
-    const modes = { art: ART_MODES, openItem: OPEN_MODES, close: CLOSE_MODES };
+    const modes = { art: ART_MODES, portrait: PORTRAIT_MODES, openItem: OPEN_MODES, close: CLOSE_MODES };
     for (const [key, mode] of Object.entries(scenario.capabilities ?? {})) assert.ok(Object.hasOwn(modes[key] ?? {}, mode), `${scenario.id} ${key}=${mode}`);
     assert.match(scenario.clock ?? DEFAULT_CLOCK, /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/);
   }
-  for (const key of Object.keys(DEFAULT_SETTINGS)) assert.ok(Object.hasOwn({ art: ART_MODES, openItem: OPEN_MODES, close: CLOSE_MODES }[key], DEFAULT_SETTINGS[key]));
+  for (const key of Object.keys(DEFAULT_SETTINGS)) assert.ok(Object.hasOwn({ art: ART_MODES, portrait: PORTRAIT_MODES, openItem: OPEN_MODES, close: CLOSE_MODES }[key], DEFAULT_SETTINGS[key]));
 });
 
 test('fixture files are marked as test data, hold one input written for DE, stay small and point nowhere', () => {
@@ -125,6 +125,40 @@ test('the scenarios cover every situation CAL-09 lists', async () => {
 
   // Failing external operations.
   assert.deepEqual(SCENARIOS.find(scenario => scenario.id === 'failure').capabilities, { art: 'error', openItem: 'error', close: 'error' });
+});
+
+// CAL-11: the birthday scenarios show every member of the table on the right date of the right season, through the
+// world-state adapter, next to other entries of the same day; and a conflict leaves the original event with a note.
+test('the birthday scenarios show the six Hex members on their verified dates, and the conflict scenario keeps the original event', async () => {
+  const days = document => document.seasons.flatMap(season => {
+    const { months } = createCalendarSession({ source: { read: () => ({ ...document, seasons: [season] }) }, selectionStore: createMemorySelectionStore() }).read();
+    return months.flatMap(month => month.days).map(day => ({ season: season.code, ...day }));
+  });
+  const birthdays = (await loadScenario('birthdays')).source.read();
+  const shown = days(birthdays).filter(day => day.birthdays.length);
+  assert.deepEqual(shown.map(day => [day.season, day.date, day.birthdays.map(birthday => [birthday.characterId, birthday.name, birthday.portraitKey, birthday.basis])]), [
+    ['CST_WINTER', '1999-02-14', [['hex-lettie', '莱蒂', 'hex-lettie', 'table']]],
+    ['CST_SPRING', '1999-05-23', [['hex-amir', '阿米尔', 'hex-amir', 'table']]],
+    ['CST_SUMMER', '1999-07-10', [['hex-aoi', '碧', 'hex-aoi', 'upstream']]],
+    ['CST_FALL', '1999-11-02', [['hex-eleanor', '埃莉诺', 'hex-eleanor', 'table']]],
+    ['CST_FALL', '1999-11-03', [['hex-arthur', '亚瑟', 'hex-arthur', 'upstream']]],
+    ['CST_FALL', '1999-12-04', [['hex-quincy', '昆西', 'hex-quincy', 'table']]]
+  ]);
+  assert.deepEqual(HEX_BIRTHDAYS.map(row => row.id).sort(), shown.map(day => day.birthdays[0].characterId).sort(), 'every member of the table appears once');
+  // Same day as other entries: the birthday sits next to them, and the day keeps its kind.
+  const byDate = Object.fromEntries(days(birthdays).map(day => [day.date, day]));
+  assert.deepEqual([byDate['1999-05-23'].kind, byDate['1999-05-23'].entries.length], ['reward', 1]);
+  assert.deepEqual([byDate['1999-11-03'].kind, byDate['1999-11-03'].entries.length], ['mixed', 1]);
+  // Other listed days without events stay as they were; the group-chat plot event keeps its note and no birthday.
+  for (const date of ['1999-01-01', '1999-03-15']) assert.deepEqual([byDate[date].listed, byDate[date].kind, byDate[date].birthdays], [true, null, []], date);
+  assert.deepEqual([byDate['1999-12-06'].kind, byDate['1999-12-06'].birthdays, byDate['1999-12-06'].entries[0].notes.map(note => note.code)], ['other', [], ['UNRECOGNIZED_PLOT']]);
+  assert.equal(SCENARIOS.find(scenario => scenario.id === 'birthdayNoPortrait').capabilities.portrait, 'missing');
+
+  const conflict = days((await loadScenario('birthdayConflict')).source.read());
+  const conflictBy = Object.fromEntries(conflict.map(day => [day.date, day]));
+  assert.deepEqual(conflict.filter(day => day.birthdays.length).map(day => [day.date, day.birthdays[0].characterId]), [['1999-11-02', 'hex-eleanor']]);
+  assert.deepEqual(conflictBy['1999-12-03'].entries[0].notes, [{ code: 'BIRTHDAY_CONFLICT', characterId: 'hex-quincy', name: '昆西', expectedOrdinal: 338, expectedDate: '1999-12-04' }]);
+  assert.deepEqual([conflictBy['1999-12-04'].listed, conflictBy['1999-12-04'].kind, conflictBy['1999-12-04'].birthdays], [true, null, []]);
 });
 
 test('a file that is not marked as test data is refused, and every load is a fresh copy', async () => {

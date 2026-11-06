@@ -30,6 +30,14 @@
  * @property {string|null} [key]     Upstream challenge or upgrade key. Kept for traceability, never shown as a name. Added in 1.1.0.
  * @property {string|null} [source]  Origin of the localized text, for example a community translation. null when unknown. Added in 1.1.0.
  *
+ * @typedef {object} EntryNote   Added in 1.2.0 (CAL-11).
+ * A diagnostic a source attaches to an entry it keeps as the original event. Wording belongs to presentation.
+ * @property {string} code                   BIRTHDAY_CONFLICT or UNRECOGNIZED_PLOT; any other code is valid and shown generically.
+ * @property {string|null} characterId       The character the upstream event names, when it names one of the table.
+ * @property {string|null} name              That character's display name.
+ * @property {number|null} expectedOrdinal   The verified table's annual day for that character.
+ * @property {string|null} expectedDate      The same day as YYYY-MM-DD in 1999.
+ *
  * @typedef {object} CalendarEntry
  * @property {number|null} ordinal  1999 annual day (1..365). Out-of-range or null entries are kept as unmapped.
  * @property {EventKind} kind
@@ -37,6 +45,29 @@
  * @property {RewardRef[]} rewards  Candidate rewards. Never a personal claim.
  * @property {TermRef[]} terms      Challenges, or the three upgrade choices.
  * @property {object} evidence      Raw reference kept for traceability. Never interpreted by the feature.
+ * @property {EntryNote[]} [notes]  Diagnostics about this original event. Added in 1.2.0; absent means none.
+ *
+ * @typedef {object} BirthdayRef   Added in 1.2.0 (CAL-11).
+ * A character's birthday on the calendar. It is data next to the entries: never an entry, never an event kind, and it
+ * never makes a day count as an event day. 文档/深入/51-1999日历六人组生日与角色图.md lists how a source recognises one.
+ * @property {number} ordinal               1999 annual day.
+ * @property {string} characterId           Stable character ID, such as hex-arthur. Never a display name.
+ * @property {string} name                  Display name, already localized.
+ * @property {string|null} portraitKey      Picture resource key the host resolves with loadPortrait. It is apart from every
+ *           reward ID. null means no picture is asked for and the placeholder is drawn.
+ * @property {'upstream'|'table'} basis     'upstream': an upstream event names the character on this day and agrees with the
+ *           verified table. 'table': the upstream lists this date only, and the verified table names the character.
+ * @property {string|null} [role]           The character's position in the team, already localized. Absent or null: not shown.
+ * @property {string|null} [personality]    A short personality line, already localized. Absent or null: not shown.
+ * @property {GiftRef[]} [gifts]            Items that suit the character, in order. Absent means none.
+ * @property {object} evidence              Table record with its sources, and the matched listed day or upstream events.
+ *           Never interpreted by the feature, and kept in the document for traceability.
+ *
+ * @typedef {object} GiftRef   Added in 1.2.0 (CAL-11).
+ * An item that suits a character. A suggestion only: the calendar records no gift and no progress.
+ * @property {string} id            Full item ID. The picture is asked for with it through loadArt, as for a reward.
+ * @property {string} name          Display name, already localized.
+ * @property {string|null} [note]   Why it suits the character.
  *
  * @typedef {object} CalendarSeason
  * @property {string} code          Upstream season code. Unknown codes are valid and yield unmapped entries.
@@ -46,6 +77,7 @@
  * @property {UtcInstant} endsAt    Strictly after startsAt.
  * @property {number[]} listedDays  Annual day numbers the upstream lists, without duplicates.
  * @property {CalendarEntry[]} entries
+ * @property {BirthdayRef[]} [birthdays]  Added in 1.2.0; absent means none. At most one per character in a season.
  *
  * @typedef {object} CalendarDocument
  * @property {string} contextId     Opaque key. Changes whenever server, season code, yearIteration or startsAt changes.
@@ -115,8 +147,9 @@
  * @property {string} date           YYYY-MM-DD in 1999, UTC.
  * @property {number} weekday        0 = Sunday, UTC.
  * @property {boolean} listed        The upstream lists this day, with or without events.
- * @property {EventKind|null} kind   null when the day has no entries.
+ * @property {EventKind|null} kind   null when the day has no entries. Birthdays never change it.
  * @property {CalendarEntry[]} entries  All entries of the day, in source order. Same-day entries are never merged away.
+ * @property {BirthdayRef[]} birthdays  The season's birthdays on this day, in source order. Empty for most days (1.2.0).
  *
  * @typedef {object} CalendarMonth
  * @property {number} month          1..12.
@@ -156,8 +189,8 @@
  * @property {number} activeSeasonIndex
  * @property {{code: string, label: string, yearIteration: number, startsAt: UtcInstant, endsAt: UtcInstant}|null} activeSeason
  * @property {{month: number, selected: boolean, eventDays: number}[]} monthTabs
- * @property {{month: number, cells: ({day: number, ordinal: number, date: string, weekday: number, listed: boolean, kind: EventKind|null, selected: boolean, entryCount: number}|null)[]}|null} grid
- * @property {{ordinal: number, date: string, weekday: number, kind: EventKind|null, listed: boolean, entries: CalendarEntry[]}|null} selectedDay
+ * @property {{month: number, cells: ({day: number, ordinal: number, date: string, weekday: number, listed: boolean, kind: EventKind|null, selected: boolean, entryCount: number, birthdays: BirthdayRef[]}|null)[]}|null} grid
+ * @property {{ordinal: number, date: string, weekday: number, kind: EventKind|null, listed: boolean, entries: CalendarEntry[], birthdays: BirthdayRef[]}|null} selectedDay
  * @property {CalendarEntry[]} unmapped
  * @property {{server: ServerId, sourceKind: SourceKind, stale: boolean, sourceTime: UtcInstant}} status
  *
@@ -166,7 +199,8 @@
  */
 
 /**
- * Host-injected capabilities. All of them are required; validateCalendarCapabilities checks that each one is a function.
+ * Host-injected capabilities. All of them are required except loadPortrait; validateCalendarCapabilities checks that each
+ * one present is a function.
  * The host composition root (src/ui/calendar-1999.js, CAL-07) builds them from the App; a standalone page uses fakes.
  * Capabilities ship with the App build, so CALENDAR_CONTRACT_VERSION, which versions the document only, does not cover
  * them (ADR-009). The mount hands the view a guarded copy, so the failure rules below hold even when a host breaks them.
@@ -176,8 +210,13 @@
  *           true means the host accepted the navigation; a later asynchronous failure is reported by the host.
  * @property {(ref: {id?: string, libraryId: string|null, iconToken?: string|null}) => Promise<{status: 'found', src: string}|{status: 'missing'}>} loadArt
  *           Never rejects. Any failure maps to {status: 'missing'}. The view asks for every reward with its full ID and
- *           its library target, and the host decides where the picture comes from; a reward without libraryId may still
+ *           its library target, and for every gift (CAL-11) with its full ID and no library target; the host decides
+ *           where the picture comes from; a reward without libraryId may still
  *           have one. A picture never makes a reward openable: openItem depends on libraryId alone. `id` added in CAL-10.
+ * @property {(ref: {key: string}) => Promise<{status: 'found', src: string}|{status: 'missing'}>} [loadPortrait]
+ *           Optional, added in CAL-11. A character picture by its BirthdayRef.portraitKey, never by a reward ID. Never
+ *           rejects; any failure maps to {status: 'missing'}. Without it every portrait is missing and the view draws its
+ *           placeholder, still with the name and the birthday mark.
  * @property {(target: Element, text: string, mode: 'name'|'description') => void} renderText
  *           Must keep unknown tokens visible as written.
  * @property {(startsAt: UtcInstant, endsAt: UtcInstant, now: number) => {text: string, ended: boolean}} formatDeadline
@@ -207,8 +246,8 @@
  * - At most one view is mounted at a time. mount() always unmounts the current view first, whatever its container, so
  *   opening again never adds listeners or timers. A failed mount leaves nothing mounted.
  * - Each mount gets its own guarded copy of the capabilities. unmount() releases that copy before it destroys the view:
- *   from then on close, openItem and renderText do nothing (openItem returns false), and a loadArt that is still pending
- *   never settles, so no late result can reach the old view.
+ *   from then on close, openItem and renderText do nothing (openItem returns false), and a loadArt or loadPortrait that is
+ *   still pending never settles, so no late result can reach the old view. The copy always has loadPortrait.
  * - update() repaints the mounted view and returns true, or returns false when nothing is mounted.
  * - unmount() is idempotent. The mount owns no timer, listener or data; the host decides when to mount, update and unmount.
  *
@@ -224,4 +263,5 @@
  */
 
 // 1.1.0 adds the optional RewardRef.libraryVersion, TermRef.key and TermRef.source (CAL-04). Every 1.0.0 document stays valid.
-export const CALENDAR_CONTRACT_VERSION = '1.1.0';
+// 1.2.0 adds the optional CalendarSeason.birthdays and CalendarEntry.notes (CAL-11). Every 1.1.0 document stays valid.
+export const CALENDAR_CONTRACT_VERSION = '1.2.0';

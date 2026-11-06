@@ -1,25 +1,30 @@
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { REWARD_ART_ROOT, indexRewardArt } from '../src/ui/calendar-1999-art.js';
+import { REWARD_ART_ROOT, indexPortraitArt, indexRewardArt } from '../src/ui/calendar-1999-art.js';
+import { HEX_BIRTHDAYS } from '../src/features/calendar-1999/index.mjs';
 
-// Validation of the 1999 calendar's reward art mapping (CAL-10). The App applies the same rules at runtime
-// (src/ui/calendar-1999-art.js) and skips what they refuse; this check makes the same problems fail the validation flow,
-// and adds what only the file system can tell.
+// Validation of the 1999 calendar's picture mappings: reward art (CAL-10) and character portraits (CAL-11). The App
+// applies the same rules at runtime (src/ui/calendar-1999-art.js) and skips what they refuse; this check makes the same
+// problems fail the validation flow, and adds what only the file system can tell.
 //
 //   node scripts/check-calendar-reward-art.mjs      also `npm run check:calendar-art`, and part of `npm run check`
 //
-// It fails on: an unloadable mapping file; an entry the runtime rules refuse (INVALID_TABLE, INVALID_ID, INVALID_PATH,
-// UNSUPPORTED_TYPE, DUPLICATE_ID for two spellings of one item); a key written twice (DUPLICATE_KEY, which an object
-// literal would hide by keeping the last one); a key not written as a quoted string on its own (UNCHECKED_FORMAT); a
-// missing picture (MISSING_FILE); a path whose letter case differs from the file (CASE_MISMATCH: Windows would find it,
-// the packaged app.asar would not); a file that is not the picture its extension says (NOT_PICTURE).
-// Pictures under calendar-1999/rewards/ that no entry uses are listed as unused, without failing.
+// It fails on: an unloadable mapping file; an entry the runtime rules refuse (INVALID_TABLE, INVALID_ID for a reward key,
+// INVALID_KEY for a portrait key, INVALID_PATH, UNSUPPORTED_TYPE, DUPLICATE_ID for two spellings of one item); a key
+// written twice (DUPLICATE_KEY, which an object literal would hide by keeping the last one); a key not written as a quoted
+// string on its own (UNCHECKED_FORMAT); a missing picture (MISSING_FILE); a path whose letter case differs from the file
+// (CASE_MISMATCH: Windows would find it, the packaged app.asar would not); a file that is not the picture its extension
+// says (NOT_PICTURE); a portrait key no character of the birthday table uses (UNKNOWN_PORTRAIT_KEY).
+// Pictures under the mapping's folder that no entry uses are listed as unused, and characters of the birthday table
+// without a portrait are listed as such; neither fails, because the calendar draws its placeholder for them.
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 export const MAPPING_FILE = path.join(root, 'src/ui/assets/calendar-1999/reward-art.js');
+export const PORTRAIT_MAPPING_FILE = path.join(root, 'src/ui/assets/calendar-1999/portrait-art.js');
 export const ASSET_ROOT = path.join(root, REWARD_ART_ROOT);
 const REWARDS_DIR = 'calendar-1999/rewards';
+const PORTRAITS_DIR = 'calendar-1999/portraits';
 const starts = (bytes, ...signature) => signature.every((byte, index) => bytes[index] === byte);
 const SIGNATURES = Object.freeze({
   png: bytes => starts(bytes, 0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a),
@@ -46,19 +51,16 @@ async function caseMismatch(base, parts) {
   return null;
 }
 
-/**
- * @param {{file?: string, assets?: string}} [options]  The mapping module and the App image root it is relative to.
- * @returns {Promise<{ok: boolean, entries: number, issues: {code: string, id: string|null, path: unknown, message: string}[], unused: string[]}>}
- */
-export async function checkCalendarRewardArt({ file = MAPPING_FILE, assets = ASSET_ROOT } = {}) {
+// The checks both mappings share. `index` is the runtime rule of the mapping, `dir` the folder of its pictures.
+async function checkArtMapping({ file, assets, index, dir }) {
   let source, table;
   try {
     source = await readFile(file, 'utf8');
     table = (await import(`${pathToFileURL(file).href}?check=${++loads}`)).default;
   } catch (error) {
-    return { ok: false, entries: 0, issues: [{ code: 'MAPPING_UNREADABLE', id: null, path: null, message: `映射档无法载入：${error.message}` }], unused: [] };
+    return { ok: false, entries: 0, keys: [], issues: [{ code: 'MAPPING_UNREADABLE', id: null, path: null, message: `映射档无法载入：${error.message}` }], unused: [] };
   }
-  const { entries, issues } = indexRewardArt(table);
+  const { entries, issues } = index(table);
   const counts = new Map();
   for (const key of writtenKeys(source)) counts.set(key, (counts.get(key) ?? 0) + 1);
   for (const [key, count] of counts) {
@@ -85,21 +87,53 @@ export async function checkCalendarRewardArt({ file = MAPPING_FILE, assets = ASS
     const type = entry.path.slice(entry.path.lastIndexOf('.') + 1);
     if (!SIGNATURES[type](bytes)) issues.push({ code: 'NOT_PICTURE', id: entry.id, path: entry.path, message: `图档内容不是 ${type.toUpperCase()}` });
   }
-  const pictures = await readdir(path.join(assets, REWARDS_DIR)).catch(() => []);
-  const unused = pictures.map(name => `${REWARDS_DIR}/${name}`).filter(name => !used.has(name)).sort();
-  return { ok: issues.length === 0, entries: entries.size, issues, unused };
+  const pictures = await readdir(path.join(assets, dir)).catch(() => []);
+  const unused = pictures.map(name => `${dir}/${name}`).filter(name => !used.has(name)).sort();
+  return { ok: issues.length === 0, entries: entries.size, keys: [...entries.keys()], issues, unused };
 }
 
-/** Console lines for a check result, problems first. */
-export function describeRewardArtCheck(result) {
+/**
+ * @param {{file?: string, assets?: string}} [options]  The mapping module and the App image root it is relative to.
+ * @returns {Promise<{ok: boolean, entries: number, keys: string[], issues: {code: string, id: string|null, path: unknown, message: string}[], unused: string[]}>}
+ */
+export async function checkCalendarRewardArt({ file = MAPPING_FILE, assets = ASSET_ROOT } = {}) {
+  return checkArtMapping({ file, assets, index: indexRewardArt, dir: REWARDS_DIR });
+}
+
+/**
+ * The portrait mapping (CAL-11). Beside the shared checks, a key must be a portraitKey of the birthday table, and the
+ * table's characters without a picture are listed in `withoutPicture`, without failing.
+ * @param {{file?: string, assets?: string, portraitKeys?: string[]}} [options]  portraitKeys: the table's keys, by default
+ *        those of HEX_BIRTHDAYS.
+ * @returns {Promise<{ok: boolean, entries: number, keys: string[], issues: object[], unused: string[], withoutPicture: string[]}>}
+ */
+export async function checkCalendarPortraitArt({ file = PORTRAIT_MAPPING_FILE, assets = ASSET_ROOT, portraitKeys = HEX_BIRTHDAYS.map(row => row.portraitKey) } = {}) {
+  const result = await checkArtMapping({ file, assets, index: indexPortraitArt, dir: PORTRAITS_DIR });
+  const known = new Set(portraitKeys.filter(key => typeof key === 'string'));
+  for (const key of result.keys) {
+    if (!known.has(key)) result.issues.push({ code: 'UNKNOWN_PORTRAIT_KEY', id: key, path: null, message: '生日表中没有角色使用这个角色图资源键' });
+  }
+  const mapped = new Set(result.keys);
+  return { ...result, ok: result.issues.length === 0, withoutPicture: [...known].filter(key => !mapped.has(key)) };
+}
+
+function describe(result, title) {
   const lines = result.issues.map(issue => `✗ ${issue.code} ${issue.id ?? '（整个映射）'}${typeof issue.path === 'string' ? ` → ${issue.path}` : ''}：${issue.message}`);
   for (const name of result.unused) lines.push(`… 未被映射使用的图档：${REWARD_ART_ROOT}${name}`);
-  lines.push(result.ok ? `1999 日历奖励图片映射检查通过：${result.entries} 笔` : `1999 日历奖励图片映射检查失败：${result.issues.length} 个问题`);
+  for (const key of result.withoutPicture ?? []) lines.push(`… 尚无角色图，日历显示占位图：${key}`);
+  lines.push(result.ok ? `${title}检查通过：${result.entries} 笔` : `${title}检查失败：${result.issues.length} 个问题`);
   return lines;
 }
 
+/** Console lines for a reward art check result, problems first. */
+export const describeRewardArtCheck = result => describe(result, '1999 日历奖励图片映射');
+/** Console lines for a portrait check result, problems first. */
+export const describePortraitArtCheck = result => describe(result, '1999 日历角色图映射');
+
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const result = await checkCalendarRewardArt();
-  for (const line of describeRewardArtCheck(result)) (result.ok ? console.log : console.error)(line);
-  if (!result.ok) process.exitCode = 1;
+  const art = await checkCalendarRewardArt();
+  for (const line of describeRewardArtCheck(art)) (art.ok ? console.log : console.error)(line);
+  const portraits = await checkCalendarPortraitArt();
+  for (const line of describePortraitArtCheck(portraits)) (portraits.ok ? console.log : console.error)(line);
+  if (!art.ok || !portraits.ok) process.exitCode = 1;
 }

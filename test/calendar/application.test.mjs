@@ -430,10 +430,11 @@ test('the view model lays a month on 42 slots and carries the selection without 
   assert.deepEqual(cells.slice(0, 4), [null, null, null, null]);
   assert.deepEqual(cells.slice(4, 34).map(cell => cell.day), Array.from({ length: 30 }, (_, index) => index + 1));
   assert.deepEqual(cells.slice(34), Array(8).fill(null));
-  assert.deepEqual(cells[4], { day: 1, ordinal: 91, date: '1999-04-01', weekday: 4, listed: true, kind: null, selected: false, entryCount: 0 });
-  assert.deepEqual(cells[9], { day: 6, ordinal: 96, date: '1999-04-06', weekday: 2, listed: true, kind: 'challenge', selected: true, entryCount: 1 });
+  // A 1.1.0 document has no birthdays, so every day carries an empty list (CAL-11).
+  assert.deepEqual(cells[4], { day: 1, ordinal: 91, date: '1999-04-01', weekday: 4, listed: true, kind: null, selected: false, entryCount: 0, birthdays: [] });
+  assert.deepEqual(cells[9], { day: 6, ordinal: 96, date: '1999-04-06', weekday: 2, listed: true, kind: 'challenge', selected: true, entryCount: 1, birthdays: [] });
   assert.deepEqual(cells.filter(cell => cell?.selected).map(cell => cell.ordinal), [96]);
-  assert.deepEqual(model.selectedDay, { ordinal: 96, date: '1999-04-06', weekday: 2, kind: 'challenge', listed: true, entries: session.read().selected.entries });
+  assert.deepEqual(model.selectedDay, { ordinal: 96, date: '1999-04-06', weekday: 2, kind: 'challenge', listed: true, entries: session.read().selected.entries, birthdays: [] });
 
   // Full reward IDs and evidence reach the model unchanged.
   const reward = buildCalendarViewModel(session.selectDay(101)).selectedDay.entries[0];

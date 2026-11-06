@@ -1,6 +1,7 @@
 import { validateCalendarDocument } from '../application/contract-validation.mjs';
-import { isAnnualDay } from '../domain/calendar.mjs';
+import { isAnnualDay, ordinalToDate } from '../domain/calendar.mjs';
 import { classifyDay } from '../domain/event-kind.mjs';
+import { HEX_BIRTHDAYS } from './hex-birthdays.mjs';
 
 // World-state adapter (CAL-04). This is the only module of the feature that knows the host's world-state
 // projection: the top-level `calendarSeasons` list and the `calendar` module that src/core/live-state/view.mjs builds
@@ -24,6 +25,22 @@ import { classifyDay } from '../domain/event-kind.mjs';
 // - An entry that names no season cannot be attributed to any season, and guessing one would mix loops. The conversion
 //   then fails as a whole with a TypeError that lists the issues; nothing is silently dropped or defaulted.
 // - The projection is never mutated. The document is built from copies once, and every read() returns a new deep copy.
+//
+// Birthday rules (CAL-11), also listed in 文档/深入/51-1999日历六人组生日与角色图.md:
+// - A birthday is calendar data next to the entries (season.birthdays), never an entry and never an event kind. Entries,
+//   kinds, listed days and the contextId stay exactly what they were without it.
+// - Upstream first: a CET_PLOT event whose dialogueName ends in a chat room file of the verified table names that
+//   character. When its day is the table's day, the birthday is taken from that event (basis 'upstream').
+// - Date only: when no event names a character, a day the season lists, with or without events, that is a character's
+//   birthday in the verified table gets that birthday (basis 'table'). A listed day that is no birthday in the table, and
+//   a birthday the season does not list, get nothing, so an empty day is never guessed to be a birthday.
+// - Conflict: an event that names a character on another day than the table's leaves that character out of the season.
+//   Every entry with such an event keeps its events unchanged and carries a BIRTHDAY_CONFLICT note, so it is shown as
+//   the original event with a diagnostic. A CET_PLOT event that names no one in the table (no dialogueName, the group
+//   chat, another character) is kept the same way with an UNRECOGNIZED_PLOT note, and the date rule still applies.
+// - Evidence keeps the table record with its sources, and the matched listed day or the upstream events, as copies.
+// - Each birthday carries the table's profile (role, personality) and suitable gifts as copies. They describe the
+//   character, never the day, so they change nothing above.
 
 const isObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const list = value => Array.isArray(value) ? value : [];
@@ -77,7 +94,76 @@ function toEntry(entry, reference, events) {
   };
 }
 
-function toCalendarDocument(view) {
+// The chat room file an upstream CET_PLOT event names: the last segment of its dialogueName, as written. The host's
+// normalizer keeps fields it has no schema for in `extensions`; a top-level field is read first, should it get one.
+function chatRoom(event) {
+  const value = typeof event?.dialogueName === 'string' ? event.dialogueName
+    : isObject(event?.extensions) && Object.hasOwn(event.extensions, 'dialogueName') ? event.extensions.dialogueName : null;
+  return typeof value === 'string' ? value.slice(value.lastIndexOf('/') + 1) : null;
+}
+
+function birthdayIndex(table) {
+  if (!Array.isArray(table)) throw new TypeError('Birthday table must be an array of verified records');
+  const byRoom = new Map();
+  for (const row of table) for (const room of list(row?.dialogues)) byRoom.set(room, row);
+  return { rows: table, byRoom };
+}
+
+const birthdayNote = (code, row = null) => ({
+  code, characterId: row?.id ?? null, name: row?.name ?? null,
+  expectedOrdinal: row?.ordinal ?? null, expectedDate: row ? ordinalToDate(row.ordinal)?.date ?? null : null
+});
+
+function tableEvidence(row) {
+  return { id: row.id, englishName: row.englishName ?? null, month: row.month, day: row.day, sources: structuredClone(list(row.sources)) };
+}
+
+// Applies the birthday rules above to one season. Notes go onto the season's own new entries; nothing else is changed.
+function recognizeBirthdays(entries, listedDays, index) {
+  const named = new Map(), naming = new Map(), conflicted = new Set();
+  for (const entry of entries) {
+    const notes = [];
+    for (const event of entry.evidence.events) {
+      if (event?.type !== 'CET_PLOT') continue;
+      const row = index.byRoom.get(chatRoom(event));
+      if (!row) { notes.push(birthdayNote('UNRECOGNIZED_PLOT')); continue; }
+      if (!naming.has(row.id)) naming.set(row.id, new Set());
+      naming.get(row.id).add(entry);
+      if (row.ordinal !== entry.ordinal) { notes.push(birthdayNote('BIRTHDAY_CONFLICT', row)); conflicted.add(row.id); continue; }
+      if (!named.has(row.id)) named.set(row.id, []);
+      named.get(row.id).push(event);
+    }
+    if (notes.length) entry.notes = notes;
+  }
+  // An entry that names a conflicted character on the table's day is an original event of the conflict as well.
+  for (const id of conflicted) {
+    const row = index.rows.find(value => value?.id === id);
+    for (const entry of naming.get(id)) {
+      if (!entry.notes?.some(note => note.code === 'BIRTHDAY_CONFLICT' && note.characterId === id)) (entry.notes ??= []).push(birthdayNote('BIRTHDAY_CONFLICT', row));
+    }
+  }
+  const listed = new Set(listedDays);
+  const birthdays = [];
+  for (const row of index.rows) {
+    if (conflicted.has(row.id)) continue;
+    const events = named.get(row.id);
+    const basis = events ? 'upstream' : listed.has(row.ordinal) ? 'table' : null;
+    if (!basis) continue;
+    birthdays.push({
+      ordinal: row.ordinal, characterId: row.id, name: row.name, portraitKey: row.portraitKey ?? null, basis,
+      // The profile and the suitable gifts come from the verified table, copied; a record without them has none.
+      role: filled(row.role), personality: filled(row.personality),
+      gifts: list(row.gifts).map(gift => ({ id: text(gift?.id), name: text(gift?.name), note: filled(gift?.note) })),
+      evidence: basis === 'upstream'
+        ? { rule: 'upstream-event', table: tableEvidence(row), events: structuredClone(events) }
+        : { rule: 'listed-day', table: tableEvidence(row), listedDay: row.ordinal }
+    });
+  }
+  // Day order; within one day the table order stays (Array#sort is stable).
+  return birthdays.sort((a, b) => a.ordinal - b.ordinal);
+}
+
+function toCalendarDocument(view, birthdayRules) {
   if (!isObject(view)) throw new TypeError('World-state projection must be an object');
   if (!Array.isArray(view.modules)) throw new TypeError('World-state projection needs a modules array');
   // The host leaves out modules without entries, so a missing calendar module only means there are no entries.
@@ -112,11 +198,11 @@ function toCalendarDocument(view) {
     if (season.derived) season.days.push(entry.ordinal);
     season.entries.push(entry);
   }
-  const output = [...seasons.values()].map(({ days, derived, ...season }) => ({
-    ...season,
+  const output = [...seasons.values()].map(({ days, derived, ...season }) => {
     // Days outside 1..365 cannot be shown on a 1999 date. Their events, if any, remain as unmapped entries.
-    listedDays: [...new Set(days.filter(isAnnualDay))]
-  }));
+    const listedDays = [...new Set(days.filter(isAnnualDay))];
+    return { ...season, listedDays, birthdays: recognizeBirthdays(season.entries, listedDays, birthdayRules) };
+  });
   return {
     problems,
     document: {
@@ -133,11 +219,13 @@ function toCalendarDocument(view) {
  * by enrichWorldRewardArt. One projection belongs to one server, so each server gets its own source.
  *
  * @param {object} view  {server, kind, stale, sourceTime, modules, calendarSeasons}
+ * @param {{birthdays?: readonly object[]}} [options]  birthdays: the verified birthday table, HEX_BIRTHDAYS unless a test
+ *        or a maintainer check hands in another one with the same record shape.
  * @returns {import('../application/ports.mjs').CalendarSource}
  * @throws {TypeError} When the projection does not yield a valid CalendarDocument. `error.issues` lists every problem.
  */
-export function createWorldStateCalendarSource(view) {
-  const { document, problems } = toCalendarDocument(view);
+export function createWorldStateCalendarSource(view, { birthdays = HEX_BIRTHDAYS } = {}) {
+  const { document, problems } = toCalendarDocument(view, birthdayIndex(birthdays));
   const issues = [...problems, ...validateCalendarDocument(document).issues];
   if (issues.length > 0) {
     throw Object.assign(new TypeError(`World-state projection does not form a calendar document: ${issues.map(issue => `${issue.path} ${issue.code}`).join(', ')}`), { issues });

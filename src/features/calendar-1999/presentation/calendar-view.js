@@ -21,6 +21,16 @@ import { calendarIcon } from './icons.js';
 // - The selected day is told by aria-pressed, a heavier frame and a corner mark, never by colour alone. A selection is a
 //   date being viewed: rewards are candidates and the view never suggests personal progress, a claim or a choice made.
 // - Stale, sample and imported snapshots say so above the calendar, so an old schedule never passes for the current one.
+// - Birthdays (CAL-11, 文档/深入/51-1999日历六人组生日与角色图.md) come from the model like entries and are drawn next to
+//   them, never instead of them: a cake mark and the word 生日 in the cell; in the detail a card with the character's
+//   picture, name, date, role and personality, and below it a box of gifts that suit the character. A portrait is asked
+//   for by its portraitKey through loadPortrait, never by a reward ID; a gift picture is asked for by the gift's full
+//   item ID through loadArt, as for a reward, and a gift is never a jump control. Until a picture arrives, and when there
+//   is none, the slot keeps a code-native placeholder, so the name and the mark always remain. A birthday day without
+//   events shows its birthday only, without the empty-day explanation. A birthday's basis and
+//   evidence stay in the document for traceability and are not drawn; gifts are suggestions and record nothing.
+// - Notes on an entry are diagnostics about the original event, such as a birthday conflict. The entry is still drawn as
+//   it is, and the note says why no birthday is shown.
 
 const WEEKDAYS = Object.freeze(['日', '一', '二', '三', '四', '五', '六']);
 // Display labels belong to presentation (ADR-005). "待办" and similar wording is avoided: a day is a schedule, not a task.
@@ -41,14 +51,27 @@ const ENTRY_NOTES = Object.freeze({
 const LEGEND = Object.freeze(['challenge', 'reward', 'upgrade']);
 const SERVERS = Object.freeze({ de: '国际服 DE', wg: '国服 WG' });
 const MISSING = Object.freeze({ status: 'missing' });
+// Wording of entry notes by code (EntryNote). An unknown code is still shown, as written.
+const NOTES = Object.freeze({
+  BIRTHDAY_CONFLICT: note => `生日资料冲突：上游事件指明${note.name ?? '一位角色'}的生日，已核实的生日表记在${note.expectedDate ? dateText(note.expectedDate) : '另一天'}。`
+    + '来源不一致，此处暂以原事件呈现，不显示这位角色的生日。',
+  UNRECOGNIZED_PLOT: () => '上游这笔剧情事件没有指明生日表中的角色，已原样保留；生日只依已核实的生日表对照上游列出的日期。'
+});
+// Picture slots: reward art (CAL-10) and character portraits (CAL-11) share the loading rules, not their sources.
+const PICTURES = Object.freeze({
+  reward: Object.freeze({ image: 'cal99-reward-image', placeholder: 'reward', missing: '暂无图片' }),
+  portrait: Object.freeze({ image: 'cal99-portrait-image', placeholder: 'portrait', missing: '暂无角色图' })
+});
 const views = new WeakMap();
 let instances = 0;
 
 const pad = value => String(value).padStart(2, '0');
 // The model writes dates as YYYY-MM-DD; the view only formats them.
 const dateParts = date => date.split('-').slice(1).map(Number);
+const dateText = date => { const [month, day] = dateParts(date); return `${month} 月 ${day} 日`; };
 const daySelector = ordinal => `[data-calendar-day="${ordinal}"]`;
 const linked = reward => typeof reward.libraryId === 'string' && reward.libraryId !== '';
+const noteText = note => Object.hasOwn(NOTES, note.code) ? NOTES[note.code](note) : `上游资料诊断：${note.code}`;
 
 function sourceLabel(status) {
   if (status.sourceKind === 'sample') return '离线样本';
@@ -64,7 +87,8 @@ function snapshotNotice(status) {
 
 function dayLabel(month, cell) {
   const kind = cell.kind ? KINDS[cell.kind].label : cell.listed ? '上游列出，没有事件内容' : '未列出事件';
-  return `${month}月${cell.day}日 星期${WEEKDAYS[cell.weekday]}，${kind}${cell.entryCount > 1 ? `，${cell.entryCount} 笔事件` : ''}`;
+  const birthdays = cell.birthdays.length ? `，${cell.birthdays.map(birthday => birthday.name).join('、')}生日` : '';
+  return `${month}月${cell.day}日 星期${WEEKDAYS[cell.weekday]}，${kind}${birthdays}${cell.entryCount > 1 ? `，${cell.entryCount} 笔事件` : ''}`;
 }
 
 /**
@@ -85,6 +109,8 @@ export function createCalendarView(container, { session, capabilities } = {}) {
   const open = new Set();
   const art = new Map();
   const asked = new Set();
+  const portraits = new Map();
+  const askedPortraits = new Set();
   let model = null;
   let destroyed = false;
 
@@ -197,15 +223,25 @@ export function createCalendarView(container, { session, capabilities } = {}) {
         continue;
       }
       const kind = cell.kind ? KINDS[cell.kind] : null;
-      const classes = ['cal99-day', kind && 'has-event', cell.listed && 'is-listed', cell.selected && 'is-selected'].filter(Boolean).join(' ');
+      const birthday = cell.birthdays.length > 0;
+      const classes = ['cal99-day', kind && 'has-event', birthday && 'has-birthday', cell.listed && 'is-listed', cell.selected && 'is-selected']
+        .filter(Boolean).join(' ');
       const day = button(classes, undefined, 'day', { ordinal: cell.ordinal, calendarDay: cell.ordinal, date: cell.date });
       if (cell.kind) day.dataset.eventKind = cell.kind;
+      if (birthday) day.dataset.birthdays = cell.birthdays.map(value => value.characterId).join(' ');
       day.tabIndex = cell === entry ? 0 : -1;
       day.setAttribute('aria-pressed', String(cell.selected));
       day.setAttribute('aria-label', dayLabel(month, cell));
       day.append(el('span', 'cal99-day-number', cell.day));
       if (kind) day.append(icon(kind.icon), el('span', 'cal99-day-label', kind.short));
+      else if (birthday) day.append(icon('cake'), el('span', 'cal99-day-label', '生日'));
       else if (cell.listed) day.append(el('span', 'cal99-day-listed'));
+      // A day with events keeps its event icon; the birthday then shows as a small cake in the corner.
+      if (kind && birthday) {
+        const mark = el('span', 'cal99-day-birthday');
+        mark.append(icon('cake'));
+        day.append(mark);
+      }
       if (cell.entryCount > 1) day.append(el('span', 'cal99-day-count', `×${cell.entryCount}`));
       box.append(day);
     }
@@ -219,28 +255,35 @@ export function createCalendarView(container, { session, capabilities } = {}) {
       item.append(icon(KINDS[kind].icon), el('span', '', KINDS[kind].short));
       box.append(item);
     }
+    const birthday = el('span');
+    birthday.append(icon('cake'), el('span', '', '生日'));
+    box.append(birthday);
     const selected = el('span');
     selected.append(el('span', 'cal99-legend-swatch'), el('span', '', '粗框：正在查看'));
     box.append(selected, el('span', 'cal99-legend-hint', '点选日期查看内容'));
     return box;
   }
 
-  function applyArt(slot, result) {
+  // A found picture, or the placeholder: loading while there is no answer yet, missing when the answer has no picture or
+  // the picture cannot be decoded.
+  function applyPicture(slot, result, type) {
+    const picture = PICTURES[type];
     slot.classList.remove('is-loading', 'is-missing');
     if (result?.status === 'found') {
-      const image = el('img', 'cal99-reward-image');
+      const image = el('img', picture.image);
       image.alt = '';
       image.decoding = 'async';
-      image.onerror = () => applyArt(slot, MISSING);
+      image.onerror = () => applyPicture(slot, MISSING, type);
       image.src = result.src;
       slot.replaceChildren(image);
       slot.removeAttribute('title');
       return;
     }
-    slot.replaceChildren(icon('reward'));
+    slot.replaceChildren(icon(picture.placeholder));
     slot.classList.add(result ? 'is-missing' : 'is-loading');
-    if (result) slot.title = '暂无图片';
+    if (result) slot.title = picture.missing;
   }
+  const applyArt = (slot, result) => applyPicture(slot, result, 'reward');
 
   function requestArt(key, reward) {
     asked.add(key);
@@ -263,6 +306,76 @@ export function createCalendarView(container, { session, capabilities } = {}) {
     applyArt(slot, art.get(key));
     if (!art.has(key) && !asked.has(key)) requestArt(key, reward);
     return slot;
+  }
+
+  function requestPortrait(key) {
+    askedPortraits.add(key);
+    const settle = result => {
+      if (destroyed) return;
+      portraits.set(key, result?.status === 'found' ? result : MISSING);
+      for (const slot of root.querySelectorAll('.cal99-portrait[data-portrait-key]')) if (slot.dataset.portraitKey === key) applyPicture(slot, portraits.get(key), 'portrait');
+    };
+    // The mount's guarded copy always has loadPortrait and never rejects; the checks only keep a view used without the
+    // mount, by a host that has no character pictures, drawing its placeholder.
+    const ask = typeof capabilities.loadPortrait === 'function' ? capabilities.loadPortrait({ key }) : Promise.resolve(MISSING);
+    Promise.resolve(ask).then(settle, () => settle(MISSING));
+  }
+
+  // A character picture by its own resource key (CAL-11), never by a reward ID. Without a key there is nothing to ask for.
+  function portraitSlot(birthday) {
+    const slot = el('span', 'cal99-portrait');
+    const key = birthday.portraitKey;
+    if (typeof key !== 'string' || key === '') {
+      applyPicture(slot, MISSING, 'portrait');
+      return slot;
+    }
+    slot.dataset.portraitKey = key;
+    applyPicture(slot, portraits.get(key), 'portrait');
+    if (!portraits.has(key) && !askedPortraits.has(key)) requestPortrait(key);
+    return slot;
+  }
+
+  function birthdayView(birthday, date) {
+    const card = el('article', 'cal99-birthday');
+    card.dataset.characterId = birthday.characterId;
+    card.dataset.birthdayBasis = birthday.basis;
+    const copy = el('div', 'cal99-birthday-copy');
+    copy.append(el('strong', 'cal99-birthday-name', birthday.name), el('span', 'cal99-birthday-date', `${dateText(date)}生日`));
+    if (birthday.role) copy.append(el('p', 'cal99-birthday-role', `职位：${birthday.role}`));
+    if (birthday.personality) copy.append(el('p', 'cal99-birthday-personality', `性格：${birthday.personality}`));
+    card.append(portraitSlot(birthday), copy);
+    return card;
+  }
+
+  // Gifts that suit the character. Each one asks for its picture like a reward, by its full item ID, with no library
+  // target: it is never a button, and nothing is chosen or recorded.
+  function giftsView(birthday) {
+    const box = el('section', 'cal99-gifts');
+    box.dataset.characterId = birthday.characterId;
+    const title = el('h5', 'cal99-gifts-title', `适合送给${birthday.name}的礼物`);
+    title.id = `${uid}-gifts-${birthday.characterId}`;
+    box.setAttribute('aria-labelledby', title.id);
+    box.append(title);
+    for (const gift of birthday.gifts) {
+      const card = el('div', 'cal99-gift');
+      card.dataset.itemId = gift.id;
+      card.title = gift.id;
+      card.append(el('strong', 'cal99-gift-name', gift.name || gift.id));
+      if (gift.note) card.append(el('span', 'cal99-gift-note', gift.note));
+      card.append(artSlot({ id: gift.id, libraryId: null }));
+      box.append(card);
+    }
+    return box;
+  }
+
+  function birthdaysView(day) {
+    const box = el('div', 'cal99-birthdays');
+    box.append(el('p', 'cal99-intro', day.entries.length ? '本日也是角色生日；生日与下方事件分开列出。' : '本日是角色生日。'));
+    for (const birthday of day.birthdays) {
+      box.append(birthdayView(birthday, day.date));
+      if (birthday.gifts?.length) box.append(giftsView(birthday));
+    }
+    return box;
   }
 
   function rewardView(reward, source, entryIndex, rewardIndex) {
@@ -322,6 +435,13 @@ export function createCalendarView(container, { session, capabilities } = {}) {
       title.append(icon(kind.icon), el('span', '', text));
       article.append(title);
     }
+    // Diagnostics about this original event (1.2.0). The event itself is drawn below exactly as it would be without them.
+    for (const note of entry.notes ?? []) {
+      const row = el('p', 'cal99-entry-note', noteText(note));
+      row.setAttribute('role', 'note');
+      row.dataset.noteCode = note.code;
+      article.append(row);
+    }
     if (entry.rewards.length) {
       const intro = (source === 'day' ? '本日' : '') + '公开的候选奖励' + (entry.rewards.some(linked) ? ' · 点选物品查看资料库' : '');
       const list = el('div', 'cal99-rewards');
@@ -362,11 +482,15 @@ export function createCalendarView(container, { session, capabilities } = {}) {
       dateHeading.textContent = `${month} 月 ${date} 日`;
       top.append(el('p', '', `星期${WEEKDAYS[day.weekday]} · 游戏日 ${day.ordinal}`));
       const kind = day.kind ? KINDS[day.kind] : null;
+      const birthday = day.birthdays.length > 0;
+      const heading = kind ? kind.label + (birthday ? ' · 生日' : '') : birthday ? '生日' : '没有列出的事件';
       const title = el('div', 'cal99-event-title');
-      title.append(icon(kind?.icon ?? 'mixed'), el('h4', '', kind ? kind.label : '没有列出的事件'));
+      title.append(icon(kind?.icon ?? (birthday ? 'cake' : 'mixed')), el('h4', '', heading));
       if (day.entries.length > 1) title.append(el('span', 'cal99-event-count', `${day.entries.length} 笔事件`));
       section.append(title);
-      if (!day.entries.length) {
+      if (birthday) section.append(birthdaysView(day));
+      // A birthday already says what the day is, so an empty listed day only explains itself when it has no birthday.
+      if (!day.entries.length && !birthday) {
         section.append(el('p', 'cal99-empty', day.listed ? '上游列有这个日期，但没有提供事件内容。' : '这份快照未在这一天列出事件，请选择有图示的日期查看。'));
       }
       day.entries.forEach((entry, index) => section.append(entryView(entry, index, day.entries.length, 'day', `day-${day.ordinal}-${index}`)));
@@ -530,6 +654,8 @@ export function createCalendarView(container, { session, capabilities } = {}) {
       root.remove();
       art.clear();
       asked.clear();
+      portraits.clear();
+      askedPortraits.clear();
       open.clear();
       model = null;
       if (views.get(container) === handle) views.delete(container);

@@ -119,7 +119,7 @@ try {
 
   // 2. Every scenario on both servers, through the public entry.
   const scenarios = await page.locator('#scenario option').evaluateAll(options => options.map(option => option.value));
-  baseExpect(scenarios.length).toBe(14);
+  baseExpect(scenarios.length).toBe(17);
   const expectations = {
     winter: () => expect(cal.locator('[data-calendar-month]')).toHaveText(['1月', '2月', '3月']),
     spring: () => expect(cal.locator('[data-calendar-month]')).toHaveText(['4月', '5月', '6月']),
@@ -134,7 +134,11 @@ try {
     stale: () => expect(cal.locator('.cal99-notice')).toContainText('快照已过期'),
     imported: () => expect(cal.locator('.cal99-notice')).toContainText('导入快照'),
     live: () => expect(cal.locator('.cal99-notice')).toHaveCount(0),
-    failure: async () => baseExpect([await page.locator('#art').inputValue(), await page.locator('#open').inputValue(), await page.locator('#close').inputValue()]).toEqual(['error', 'error', 'error'])
+    failure: async () => baseExpect([await page.locator('#art').inputValue(), await page.locator('#open').inputValue(), await page.locator('#close').inputValue()]).toEqual(['error', 'error', 'error']),
+    // CAL-11: four seasons with the six Hex members; the same data without portraits; and a conflict in autumn.
+    birthdays: () => expect(cal.locator('.cal99-season-picker option')).toHaveCount(4),
+    birthdayNoPortrait: async () => baseExpect(await page.locator('#portrait').inputValue()).toBe('missing'),
+    birthdayConflict: () => expect(cal.locator('[data-calendar-month]')).toHaveText(['10月', '11月', '12月'])
   };
   baseExpect(Object.keys(expectations).sort()).toEqual([...scenarios].sort());
   for (const scenario of scenarios) {
@@ -146,7 +150,7 @@ try {
       if (server === 'de') await frameShot(`scenario-${scenario}`);
     }
   }
-  pass(`${scenarios.length} 个情境 × 2 个伺服器都经公开入口挂载，状态列显示所选伺服器，各情境的关键画面成立（正常冬／春季、同日多事件、未知季节、空资料、缺图与长文字、过期快照、外部操作失败）`);
+  pass(`${scenarios.length} 个情境 × 2 个伺服器都经公开入口挂载，状态列显示所选伺服器，各情境的关键画面成立（正常冬／春季、同日多事件、未知季节、空资料、缺图与长文字、过期快照、外部操作失败、角色生日）`);
 
   // 3. Each server keeps its own selection in the page's store.
   await choose('spring', 'de');
@@ -190,6 +194,30 @@ try {
   await page.locator('#art').selectOption('found');
   await state('mounted', 'spring', 'de');
   pass('假图片能力：找到显示图片；缺图、请求失败、坏图显示占位图；延迟时先显示载入中再显示图片；一直载入保持载入中；失败记入纪录');
+
+  // 4b. Fake portraits (CAL-11): found shows the test picture of the character's key; missing, failed and broken keep the
+  // name with the placeholder; the store brings the birthday back after each remount; failures go to the log.
+  await choose('birthdays', 'de');
+  await cal.locator('[data-action="month"][data-index="1"]').click();
+  await day(45).click();
+  const lettie = detail.locator('.cal99-birthday[data-character-id="hex-lettie"]');
+  await expect(lettie.locator('.cal99-portrait-image')).toHaveAttribute('src', /^data:image\/svg\+xml,.*hex-lettie/);
+  await expect(log).toContainText('loadPortrait：hex-lettie → 找到角色图');
+  for (const mode of ['missing', 'error', 'broken']) {
+    await page.locator('#portrait').selectOption(mode);
+    await state('mounted', 'birthdays', 'de');
+    await expect(day(45)).toHaveAttribute('aria-pressed', 'true');
+    await expect(lettie.locator('.cal99-portrait.is-missing svg')).toHaveCount(1);
+    await expect(lettie.locator('.cal99-birthday-name')).toHaveText('莱蒂');
+  }
+  await expect(log).toContainText('loadPortrait 失败，已由日历的能力副本吸收：测试：角色图无法载入');
+  await page.locator('#portrait').selectOption('found');
+  await state('mounted', 'birthdays', 'de');
+  await frameShot('portrait-found');
+  pass('假角色图能力：找到时显示该资源键的测试图；缺图、请求失败、坏图保留角色名并显示占位图；重新挂载后经存储回到 2 月 14 日；失败记入纪录');
+  // The next steps continue on the spring reward day of step 4.
+  await choose('spring', 'de');
+  await day(101).click();
 
   // 5. Fake library navigation.
   await reward.click();
@@ -247,10 +275,10 @@ try {
   pass('假时钟：调整时间后宿主调用 update() 只刷新倒数（日期格未重建）；卸载后 update() 返回 false；重新挂载恢复');
 
   // 8. The URL keeps every control, and invalid values fall back and say so.
-  await page.goto(`${base}test/calendar/browser/standalone.html?scenario=long&server=wg&art=missing&width=600&theme=dark`);
+  await page.goto(`${base}test/calendar/browser/standalone.html?scenario=long&server=wg&art=missing&portrait=missing&width=600&theme=dark`);
   await state('mounted', 'long', 'wg');
-  baseExpect([await page.locator('#scenario').inputValue(), await page.locator('#art').inputValue(), await page.locator('#width').inputValue(), await page.locator('#theme').inputValue()])
-    .toEqual(['long', 'missing', '600', 'dark']);
+  baseExpect([await page.locator('#scenario').inputValue(), await page.locator('#art').inputValue(), await page.locator('#portrait').inputValue(), await page.locator('#width').inputValue(), await page.locator('#theme').inputValue()])
+    .toEqual(['long', 'missing', 'missing', '600', 'dark']);
   await expect(page.locator('body')).toHaveClass(/dark/);
   await expect(cal.locator('.cal99-statusbar')).toContainText('国服 WG');
   const layout = await page.evaluate(() => ({ slot: Math.round(document.getElementById('slot').getBoundingClientRect().width), page: document.documentElement.scrollWidth <= innerWidth }));

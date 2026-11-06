@@ -60,6 +60,49 @@ function validateEntry(entry, path, issues) {
     }
   });
   check(issues, isObject(entry.evidence), `${path}.evidence`, 'MISSING_EVIDENCE', 'evidence must be an object and is never dropped');
+  // 1.2.0: optional diagnostics about the original event. Unknown codes are valid; presentation words them generically.
+  if (entry.notes === undefined) return;
+  check(issues, Array.isArray(entry.notes), `${path}.notes`, 'INVALID_NOTE', 'notes must be an array when present');
+  (Array.isArray(entry.notes) ? entry.notes : []).forEach((note, index) => {
+    const notePath = `${path}.notes[${index}]`;
+    check(issues, isObject(note) && isNonEmptyString(note.code), notePath, 'INVALID_NOTE', 'A note needs a non-empty code');
+    if (!isObject(note)) return;
+    for (const field of ['characterId', 'name', 'expectedDate']) {
+      check(issues, note[field] === undefined || note[field] === null || typeof note[field] === 'string', `${notePath}.${field}`, 'INVALID_NOTE',
+        `${field} must be a string, null or absent`);
+    }
+    check(issues, note.expectedOrdinal === undefined || note.expectedOrdinal === null || isAnnualDay(note.expectedOrdinal),
+      `${notePath}.expectedOrdinal`, 'INVALID_NOTE', 'expectedOrdinal must be an annual day from 1 to 365, null or absent');
+  });
+}
+
+const BIRTHDAY_BASES = ['upstream', 'table'];
+
+function validateBirthday(birthday, path, issues) {
+  check(issues, isObject(birthday), path, 'INVALID_BIRTHDAY', 'Birthday must be an object');
+  if (!isObject(birthday)) return;
+  check(issues, isAnnualDay(birthday.ordinal), `${path}.ordinal`, 'INVALID_BIRTHDAY', 'A birthday needs an annual day from 1 to 365');
+  check(issues, isNonEmptyString(birthday.characterId), `${path}.characterId`, 'INVALID_BIRTHDAY', 'A birthday needs a stable character ID');
+  check(issues, isNonEmptyString(birthday.name), `${path}.name`, 'INVALID_BIRTHDAY', 'A birthday needs a display name');
+  check(issues, birthday.portraitKey === null || isNonEmptyString(birthday.portraitKey), `${path}.portraitKey`, 'INVALID_BIRTHDAY',
+    'portraitKey must be a non-empty string or null');
+  check(issues, BIRTHDAY_BASES.includes(birthday.basis), `${path}.basis`, 'INVALID_BIRTHDAY', 'basis must be upstream or table');
+  for (const field of ['role', 'personality']) {
+    check(issues, birthday[field] === undefined || birthday[field] === null || typeof birthday[field] === 'string', `${path}.${field}`, 'INVALID_BIRTHDAY',
+      `${field} must be a string, null or absent`);
+  }
+  if (birthday.gifts !== undefined) {
+    check(issues, Array.isArray(birthday.gifts), `${path}.gifts`, 'INVALID_GIFT', 'gifts must be an array when present');
+    (Array.isArray(birthday.gifts) ? birthday.gifts : []).forEach((gift, index) => {
+      const giftPath = `${path}.gifts[${index}]`;
+      check(issues, isObject(gift) && isNonEmptyString(gift.id), giftPath, 'INVALID_GIFT', 'A gift needs a full item ID');
+      if (!isObject(gift)) return;
+      check(issues, typeof gift.name === 'string', `${giftPath}.name`, 'INVALID_GIFT', 'Gift name must be a string');
+      check(issues, gift.note === undefined || gift.note === null || typeof gift.note === 'string', `${giftPath}.note`, 'INVALID_GIFT',
+        'note must be a string, null or absent');
+    });
+  }
+  check(issues, isObject(birthday.evidence), `${path}.evidence`, 'MISSING_EVIDENCE', 'evidence must be an object and is never dropped');
 }
 
 function validateSeason(season, path, issues) {
@@ -81,6 +124,13 @@ function validateSeason(season, path, issues) {
   }
   check(issues, Array.isArray(season.entries), `${path}.entries`, 'INVALID_SEASON', 'entries must be an array');
   (Array.isArray(season.entries) ? season.entries : []).forEach((entry, index) => validateEntry(entry, `${path}.entries[${index}]`, issues));
+  // 1.2.0: optional birthdays, at most one per character in a season.
+  if (season.birthdays === undefined) return;
+  check(issues, Array.isArray(season.birthdays), `${path}.birthdays`, 'INVALID_BIRTHDAY', 'birthdays must be an array when present');
+  if (!Array.isArray(season.birthdays)) return;
+  season.birthdays.forEach((birthday, index) => validateBirthday(birthday, `${path}.birthdays[${index}]`, issues));
+  const ids = season.birthdays.map(birthday => birthday?.characterId).filter(isNonEmptyString);
+  check(issues, new Set(ids).size === ids.length, `${path}.birthdays`, 'DUPLICATE_BIRTHDAY', 'A character has at most one birthday in a season');
 }
 
 /**
@@ -106,11 +156,13 @@ export function validateCalendarDocument(document) {
   return { valid: issues.length === 0, issues };
 }
 
-// Every member of CalendarCapabilities in ports.mjs, in contract order.
+// Every required member of CalendarCapabilities in ports.mjs, in contract order, then the optional ones (CAL-11).
 const CAPABILITIES = ['close', 'openItem', 'loadArt', 'renderText', 'formatDeadline', 'now'];
+const OPTIONAL_CAPABILITIES = ['loadPortrait'];
 
 /**
- * Checks that every CalendarCapabilities member is a function. Behavior cannot be checked here; the mount guards it.
+ * Checks that every required CalendarCapabilities member is a function, and that an optional one is a function when it
+ * is present. Behavior cannot be checked here; the mount guards it.
  * Extra members are allowed and ignored, because the mount hands only the listed ones to the view.
  * @param {unknown} capabilities
  * @returns {{valid: boolean, issues: {path: string, code: string, message: string}[]}}
@@ -120,6 +172,10 @@ export function validateCalendarCapabilities(capabilities) {
   check(issues, isObject(capabilities), '$', 'INVALID_CAPABILITIES', 'Capabilities must be an object');
   if (isObject(capabilities)) {
     for (const name of CAPABILITIES) check(issues, typeof capabilities[name] === 'function', name, 'MISSING_CAPABILITY', `${name} must be a function`);
+    for (const name of OPTIONAL_CAPABILITIES) {
+      check(issues, capabilities[name] === undefined || typeof capabilities[name] === 'function', name, 'INVALID_CAPABILITY',
+        `${name} must be a function when present`);
+    }
   }
   return { valid: issues.length === 0, issues };
 }

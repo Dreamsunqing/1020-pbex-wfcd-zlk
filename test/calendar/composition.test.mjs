@@ -103,10 +103,12 @@ test('mounting hands the view the session and a guarded copy of the capabilities
   assert.equal(handle.container, container);
   assert.equal(handle.deps.session, session);
   const guarded = handle.deps.capabilities;
-  // The view never receives the host object, only a frozen copy with exactly the contract members.
+  // The view never receives the host object, only a frozen copy with exactly the contract members. The optional
+  // loadPortrait (CAL-11) is always there; this host has none, so every portrait is missing.
   assert.notEqual(guarded, capabilities);
   assert.ok(Object.isFrozen(guarded));
-  assert.deepEqual(Object.keys(guarded).sort(), ['close', 'formatDeadline', 'loadArt', 'now', 'openItem', 'renderText']);
+  assert.deepEqual(Object.keys(guarded).sort(), ['close', 'formatDeadline', 'loadArt', 'loadPortrait', 'now', 'openItem', 'renderText']);
+  assert.deepEqual(await guarded.loadPortrait({ key: 'hex-arthur' }), { status: 'missing' });
   assert.equal(guarded.openItem({ libraryId: FORMA }), true);
   assert.deepEqual(await guarded.loadArt({ libraryId: FORMA }), { status: 'found', src: 'data:image/png;base64,AA' });
   assert.deepEqual(guarded.formatDeadline('2026-10-19T00:00:00Z', '2026-10-26T00:00:00Z', guarded.now()), { text: 'deadline at 1000', ended: false });

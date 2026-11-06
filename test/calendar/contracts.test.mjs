@@ -105,10 +105,11 @@ test('1.1.0 optional fields are checked when present, and 1.0.0 documents withou
 });
 
 test('public entry exposes only the contract surface, and the vocabulary is closed', () => {
-  assert.deepEqual(Object.keys(calendar).sort(), ['CALENDAR_CONTRACT_VERSION', 'EVENT_KINDS', 'createCalendarMount', 'createCalendarSession',
+  assert.deepEqual(Object.keys(calendar).sort(), ['CALENDAR_CONTRACT_VERSION', 'EVENT_KINDS', 'HEX_BIRTHDAYS', 'createCalendarMount', 'createCalendarSession',
     'createCalendarView', 'createMemorySelectionStore', 'createWorldStateCalendarSource', 'isEventKind', 'validateCalendarCapabilities',
     'validateCalendarDocument', 'validateSelectionValue']);
-  assert.equal(calendar.CALENDAR_CONTRACT_VERSION, '1.1.0');
+  assert.equal(calendar.CALENDAR_CONTRACT_VERSION, '1.2.0');
+  // Birthdays are calendar data, never a kind: the vocabulary has no birthday (CAL-11).
   assert.deepEqual([...EVENT_KINDS], ['challenge', 'reward', 'upgrade', 'mixed', 'other']);
   assert.ok(Object.isFrozen(EVENT_KINDS));
   assert.equal(calendar.isEventKind('festival'), false);

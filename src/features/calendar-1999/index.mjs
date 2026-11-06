@@ -7,6 +7,9 @@ export { EVENT_KINDS, isEventKind } from './domain/event-kind.mjs';
 export { validateCalendarDocument, validateSelectionValue, validateCalendarCapabilities } from './application/contract-validation.mjs';
 // CAL-04: the host composition root turns its world-state projection into a CalendarSource with this adapter.
 export { createWorldStateCalendarSource } from './adapters/world-state-source.mjs';
+// CAL-11: the verified birthday table the adapter recognises birthdays with. Read-only; hosts and checks read its
+// portraitKey values to map character pictures, and never change a record.
+export { HEX_BIRTHDAYS } from './adapters/hex-birthdays.mjs';
 // CAL-03: the host composition root creates one session per snapshot from a CalendarSource and its SelectionStore.
 // application/view-model.mjs stays internal; presentation inside the feature turns session state into its model.
 export { createCalendarSession } from './application/calendar-session.mjs';

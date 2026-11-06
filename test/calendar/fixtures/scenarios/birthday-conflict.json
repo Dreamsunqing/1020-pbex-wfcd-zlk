@@ -1,0 +1,95 @@
+{
+  "fixture": {
+    "purpose": "test",
+    "notice": "测试资料：只供 1999 日历独立测试页与浏览器检查使用，不是任何服务器的正式排程。",
+    "description": "生日来源冲突：秋季的宿主投影。上游剧情事件在 12 月 3 日指明昆西，已核实的生日表记在 12 月 4 日；两者冲突，昆西不显示生日，12 月 3 日以原事件呈现并附诊断，12 月 4 日维持只列出。11 月 2 日埃莉诺照常依生日表对照。"
+  },
+  "projection": {
+    "server": "de",
+    "kind": "sample",
+    "source": "fixture",
+    "sourceTime": "2026-10-22T19:32:27.000Z",
+    "fetchedAt": null,
+    "hash": "fixture",
+    "stale": true,
+    "refreshError": null,
+    "at": "2026-10-22T19:32:27.000Z",
+    "calendarSeasons": [
+      {
+        "season": "CST_FALL",
+        "label": "秋季",
+        "yearIteration": 24,
+        "startsAt": "2026-11-09T00:00:00.000Z",
+        "endsAt": "2026-11-16T00:00:00.000Z",
+        "listedDays": [
+          306,
+          337,
+          338
+        ]
+      }
+    ],
+    "modules": [
+      {
+        "id": "calendar",
+        "title": "1999 日历",
+        "group": "weekly",
+        "layout": "tiles",
+        "entries": [
+          {
+            "title": "游戏日 337",
+            "subtitle": "秋季",
+            "startsAt": "2026-11-09T00:00:00.000Z",
+            "endsAt": "2026-11-16T00:00:00.000Z",
+            "cardState": {
+              "id": "other",
+              "label": "其他事件日"
+            },
+            "rewards": [],
+            "terms": [
+              {
+                "name": "日历事件待补充",
+                "description": "",
+                "source": null,
+                "localized": false,
+                "key": null,
+                "eventType": "CET_PLOT"
+              }
+            ],
+            "reference": {
+              "season": "CST_FALL",
+              "yearIteration": 24,
+              "day": 337,
+              "events": [
+                {
+                  "type": "CET_PLOT",
+                  "challengeKey": null,
+                  "rewardKey": null,
+                  "upgradeKey": null,
+                  "extensions": {
+                    "dialogueName": "/Lotus/Types/Gameplay/1999Wf/Dialogue/QuincyDialogue_rom.dialogue",
+                    "dialogueConvo": "TestBirthdayConvo"
+                  }
+                }
+              ],
+              "localization": [
+                {
+                  "name": "日历事件待补充",
+                  "description": "",
+                  "source": null,
+                  "localized": false,
+                  "key": null,
+                  "eventType": "CET_PLOT"
+                }
+              ],
+              "upgradeAvailabilityRequirements": []
+            }
+          }
+        ],
+        "count": 1,
+        "preview": 3,
+        "showTerms": true,
+        "groupCards": true
+      }
+    ]
+  }
+}

@@ -56,9 +56,13 @@ test('update() only reads the session, and only user actions scroll', () => {
 test('entry kinds come from the model only: no type is inferred from names, text or evidence', () => {
   const view = code('calendar-view.js');
   assert.doesNotMatch(view, /CET_|\.events\b|eventType|evidence\.\w|evidence\[/);
-  // Evidence is only ever printed as written.
+  // Evidence is only ever printed as written, and only an entry's: a birthday keeps its evidence and basis in the
+  // document, and its card draws neither (CAL-11).
   assert.equal(view.match(/\.evidence\b/g).length, 1);
   assert.match(view, /JSON\.stringify\(entry\.evidence, null, 2\)/);
+  assert.doesNotMatch(view, /birthday\.evidence|生日资料来源|依据：/);
+  // Who has a birthday, and the profile and gifts, come from the model; the view never derives them from names or dates.
+  assert.doesNotMatch(view, /HEX_BIRTHDAYS|hex-birthdays|dialogue|Dialogue|HexDogTag/);
   assert.doesNotMatch(view, /\.(name|title|description)\.(includes|match|search|startsWith|endsWith|test)\b|\.test\((term|entry|reward)/);
   // The only notes after terms are keyed by the entry's own kind: a pure upgrade, or a mixed entry that may hold one.
   assert.match(view, /if \(Object\.hasOwn\(ENTRY_NOTES, entry\.kind\)\) article\.append\(el\('p', 'cal99-detail-note', ENTRY_NOTES\[entry\.kind\]\)\);/);
@@ -67,7 +71,11 @@ test('entry kinds come from the model only: no type is inferred from names, text
 test('presentation uses only the capabilities it is handed, and the guarded failure rules are respected', () => {
   const view = code('calendar-view.js');
   assert.deepEqual([...new Set(view.match(/capabilities\.\w+/g))].sort(), ['capabilities.close', 'capabilities.formatDeadline', 'capabilities.loadArt',
-    'capabilities.now', 'capabilities.openItem', 'capabilities.renderText']);
+    'capabilities.loadPortrait', 'capabilities.now', 'capabilities.openItem', 'capabilities.renderText']);
+  // Character pictures are asked for by their own resource key only (CAL-11), never by a reward ID.
+  assert.equal(view.match(/capabilities\.loadPortrait\(/g).length, 1);
+  assert.match(view, /capabilities\.loadPortrait\(\{ key \}\)/);
+  assert.doesNotMatch(view.slice(view.indexOf('function requestPortrait('), view.indexOf('function birthdayView(')), /reward|libraryId|\.id\b/);
   // The countdown is always asked with the host clock (ADR-009).
   assert.match(view, /capabilities\.formatDeadline\(season\.startsAt, season\.endsAt, capabilities\.now\(\)\)/);
   // openItem answering false is shown to the user instead of failing silently.
@@ -78,6 +86,12 @@ test('presentation uses only the capabilities it is handed, and the guarded fail
   assert.match(view, /capabilities\.loadArt\(\{ id: reward\.id, libraryId: linked\(reward\) \? reward\.libraryId : null \}\)/);
   assert.doesNotMatch(view.slice(view.indexOf('function artSlot('), view.indexOf('function rewardView(')), /if \(!linked\(reward\)\)/);
   assert.match(view, /const card = linked\(reward\)\s*\? button\('cal99-reward is-linked'/);
+  // A gift (CAL-11) asks for its picture through the same slot, by its full item ID and without a library target, so
+  // it is never a jump control and never a choice.
+  assert.equal(view.match(/artSlot\(/g).length, 3, 'its definition, rewards and gifts');
+  assert.match(view, /card\.append\(artSlot\(\{ id: gift\.id, libraryId: null \}\)\);/);
+  assert.match(view, /const card = el\('div', 'cal99-gift'\);/);
+  assert.doesNotMatch(view.slice(view.indexOf('function giftsView('), view.indexOf('function birthdaysView(')), /button\(|data-action|dataset\.action|openItem/);
 });
 
 test('the view needs a DOM container and its deps before it draws anything', () => {

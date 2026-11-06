@@ -5,7 +5,8 @@ const SVG = 'http://www.w3.org/2000/svg';
 
 /**
  * @param {Document} doc  The document of the calendar container; the view never reaches for a global document.
- * @param {'challenge'|'reward'|'upgrade'|'mixed'|'flower'} kind  Any other value draws the mixed icon.
+ * @param {'challenge'|'reward'|'upgrade'|'mixed'|'flower'|'cake'|'portrait'} kind  Any other value draws the mixed icon.
+ *        cake marks a birthday and portrait is the placeholder of a character picture (CAL-11).
  * @returns {SVGSVGElement}
  */
 export function calendarIcon(doc, kind) {
@@ -37,6 +38,16 @@ export function calendarIcon(doc, kind) {
     path.setAttribute('stroke-width', '1.2'); svg.append(path);
     rect(17, 2, 2, 6, '#d5a647'); rect(15, 4, 6, 2, '#edc568');
     rect(4, 18, 2, 2, '#c387a0');
+  } else if (kind === 'cake') {
+    rect(11, 1, 2, 3, '#f4c36a'); rect(11, 4, 2, 4, '#f8f4e6');
+    rect(4, 8, 16, 5, '#e9a2ae'); rect(4, 8, 16, 1, '#fff4ca');
+    for (const x of [6, 10, 14, 18]) rect(x, 12, 2, 2, '#e9a2ae');
+    rect(3, 13, 18, 8, '#a45d76'); rect(4, 14, 16, 6, '#d2b787');
+    rect(4, 16, 16, 1, '#e9a2ae'); rect(2, 21, 20, 2, '#556c70');
+  } else if (kind === 'portrait') {
+    rect(2, 2, 20, 20, '#557a72'); rect(3, 3, 18, 18, '#d2dfd1');
+    rect(8, 5, 8, 8, '#384740'); rect(9, 6, 6, 6, '#e8cfc8');
+    rect(5, 15, 14, 6, '#384740'); rect(6, 16, 12, 5, '#a4c0c1');
   } else if (kind === 'flower') {
     rect(9, 2, 6, 20, '#a45d76'); rect(2, 9, 20, 6, '#a45d76');
     rect(7, 5, 10, 14, '#e9a2ae'); rect(5, 7, 14, 10, '#e9a2ae');

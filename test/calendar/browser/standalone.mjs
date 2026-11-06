@@ -1,5 +1,5 @@
 import { createCalendarMount, createCalendarSession, createCalendarView, createMemorySelectionStore } from '../../../src/features/calendar-1999/index.mjs';
-import { ART_MODES, CLOSE_MODES, DEFAULT_SETTINGS, OPEN_MODES, createFakeCapabilities } from './fake-capabilities.mjs';
+import { ART_MODES, CLOSE_MODES, DEFAULT_SETTINGS, OPEN_MODES, PORTRAIT_MODES, createFakeCapabilities } from './fake-capabilities.mjs';
 import { DEFAULT_CLOCK, FIXTURE_DIR, SCENARIOS, SCENARIO_GROUPS, SERVERS, findScenario, findServer, loadScenario } from './scenarios.mjs';
 
 // Standalone page of the 1999 calendar (CAL-09), for maintainers who work on the calendar view without the App. It is a
@@ -23,7 +23,7 @@ const KIND_LABELS = Object.freeze({ sample: '离线样本', network: '网络快�
 const $ = id => document.getElementById(id);
 const slot = $('slot');
 const log = $('log');
-const controls = { scenario: $('scenario'), server: $('server'), art: $('art'), open: $('open'), close: $('close'), clock: $('clock'), theme: $('theme'), width: $('width') };
+const controls = { scenario: $('scenario'), server: $('server'), art: $('art'), portrait: $('portrait'), open: $('open'), close: $('close'), clock: $('clock'), theme: $('theme'), width: $('width') };
 
 const settings = { ...DEFAULT_SETTINGS };
 let scenario = SCENARIOS[0];
@@ -73,6 +73,7 @@ const capabilities = createFakeCapabilities({
     if (name === 'close') note(`close：日历请求关闭 → ${CLOSE_MODES[settings.close]}`);
     else if (name === 'openItem') note(`openItem：${args[0]}（资料库 ${args[1] ?? '无'}${args[2] ? ` · 版本 ${args[2]}` : ''}）→ ${OPEN_MODES[settings.openItem]}`);
     else if (name === 'loadArt') note(`loadArt：${args[0]}（资料库 ${args[1] ?? '无'}）→ ${ART_MODES[settings.art]}`);
+    else if (name === 'loadPortrait') note(`loadPortrait：${args[0]} → ${PORTRAIT_MODES[settings.portrait]}`);
     // renderText runs for every name and description; listing it would bury the other calls.
   },
   // In the App, close() returns to the world-state page, which hides the calendar.
@@ -130,7 +131,7 @@ function describe({ fixture, input }, data) {
   const file = document.createElement('dd');
   file.append(text('code', FIXTURE_DIR + scenario.file), input === 'projection' ? '（宿主投影，经 createWorldStateCalendarSource 转换）' : '（CalendarDocument）');
   const preset = Object.entries(scenario.capabilities ?? {});
-  const labels = { art: ['图片', ART_MODES], openItem: ['跳转', OPEN_MODES], close: ['关闭', CLOSE_MODES] };
+  const labels = { art: ['图片', ART_MODES], portrait: ['角色图', PORTRAIT_MODES], openItem: ['跳转', OPEN_MODES], close: ['关闭', CLOSE_MODES] };
   const facts = [
     ['测试资料', file],
     ['资料内容', fixture.description],
@@ -216,6 +217,7 @@ function renderControls() {
   controls.scenario.value = scenario.id;
   for (const input of controls.server.querySelectorAll('input')) input.checked = input.value === server.id;
   controls.art.value = settings.art;
+  controls.portrait.value = settings.portrait;
   controls.open.value = settings.openItem;
   controls.close.value = settings.close;
   controls.theme.value = theme;
@@ -226,7 +228,7 @@ function renderControls() {
 }
 
 function syncUrl() {
-  const params = new URLSearchParams({ scenario: scenario.id, server: server.id, art: settings.art, open: settings.openItem, close: settings.close, now: iso(now), theme, width });
+  const params = new URLSearchParams({ scenario: scenario.id, server: server.id, art: settings.art, portrait: settings.portrait, open: settings.openItem, close: settings.close, now: iso(now), theme, width });
   history.replaceState(null, '', `${location.pathname}?${params}`);
 }
 
@@ -244,6 +246,7 @@ function readUrl() {
   server = findServer(pick('server', findServer, SERVERS[0].id));
   applyPresets();
   settings.art = pick('art', value => Object.hasOwn(ART_MODES, value), settings.art);
+  settings.portrait = pick('portrait', value => Object.hasOwn(PORTRAIT_MODES, value), settings.portrait);
   settings.openItem = pick('open', value => Object.hasOwn(OPEN_MODES, value), settings.openItem);
   settings.close = pick('close', value => Object.hasOwn(CLOSE_MODES, value), settings.close);
   const clock = pick('now', value => /Z$/.test(value) && Number.isFinite(Date.parse(value)), null);
@@ -268,6 +271,7 @@ function buildControls() {
     controls.server.append(choice);
   }
   fill(controls.art, Object.entries(ART_MODES));
+  fill(controls.portrait, Object.entries(PORTRAIT_MODES));
   fill(controls.open, Object.entries(OPEN_MODES));
   fill(controls.close, Object.entries(CLOSE_MODES));
   fill(controls.theme, Object.entries(THEMES));
@@ -290,6 +294,11 @@ function buildControls() {
     settings.art = controls.art.value;
     syncUrl();
     open(`图片改为「${ART_MODES[settings.art]}」，重新挂载`);
+  });
+  controls.portrait.addEventListener('change', () => {
+    settings.portrait = controls.portrait.value;
+    syncUrl();
+    open(`角色图改为「${PORTRAIT_MODES[settings.portrait]}」，重新挂载`);
   });
   controls.open.addEventListener('change', () => {
     settings.openItem = controls.open.value;

@@ -1,0 +1,383 @@
+{
+  "fixture": {
+    "purpose": "test",
+    "notice": "测试资料：只供 1999 日历独立测试页与浏览器检查使用，不是任何服务器的正式排程。",
+    "description": "六人组生日：四个季度的宿主投影（buildWorldView 的输出形状）。冬季 2 月 14 日莱蒂（只列出、没有事件，依生日表对照）；1 月 1 日与 3 月 15 日只列出，不是六人组生日。春季 5 月 23 日阿米尔，同日有候选奖励。夏季 7 月 10 日碧，由上游剧情事件指明。秋季 11 月 2 日埃莉诺、12 月 4 日昆西（只列出），11 月 3 日亚瑟由上游剧情事件指明且同日有挑战；12 月 6 日的剧情事件没有指明角色（群组聊天），只保留原事件与诊断。"
+  },
+  "projection": {
+    "server": "de",
+    "kind": "sample",
+    "source": "fixture",
+    "sourceTime": "2026-10-22T19:32:27.000Z",
+    "fetchedAt": null,
+    "hash": "fixture",
+    "stale": true,
+    "refreshError": null,
+    "at": "2026-10-22T19:32:27.000Z",
+    "calendarSeasons": [
+      {
+        "season": "CST_WINTER",
+        "label": "冬季",
+        "yearIteration": 24,
+        "startsAt": "2026-10-19T00:00:00.000Z",
+        "endsAt": "2026-10-26T00:00:00.000Z",
+        "listedDays": [
+          1,
+          3,
+          45,
+          74
+        ]
+      },
+      {
+        "season": "CST_SPRING",
+        "label": "春季",
+        "yearIteration": 24,
+        "startsAt": "2026-10-26T00:00:00.000Z",
+        "endsAt": "2026-11-02T00:00:00.000Z",
+        "listedDays": [
+          96,
+          143
+        ]
+      },
+      {
+        "season": "CST_SUMMER",
+        "label": "夏季",
+        "yearIteration": 24,
+        "startsAt": "2026-11-02T00:00:00.000Z",
+        "endsAt": "2026-11-09T00:00:00.000Z",
+        "listedDays": [
+          191
+        ]
+      },
+      {
+        "season": "CST_FALL",
+        "label": "秋季",
+        "yearIteration": 24,
+        "startsAt": "2026-11-09T00:00:00.000Z",
+        "endsAt": "2026-11-16T00:00:00.000Z",
+        "listedDays": [
+          306,
+          307,
+          338,
+          340
+        ]
+      }
+    ],
+    "modules": [
+      {
+        "id": "calendar",
+        "title": "1999 日历",
+        "group": "weekly",
+        "layout": "tiles",
+        "entries": [
+          {
+            "title": "游戏日 3",
+            "subtitle": "冬季",
+            "startsAt": "2026-10-19T00:00:00.000Z",
+            "endsAt": "2026-10-26T00:00:00.000Z",
+            "cardState": {
+              "id": "challenge",
+              "label": "挑战日"
+            },
+            "rewards": [],
+            "terms": [
+              {
+                "id": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+                "name": "近战击杀",
+                "description": "使用近战武器击杀 150 名敌人",
+                "localized": true,
+                "source": "plus/dict.zh",
+                "key": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+                "eventType": "挑战"
+              }
+            ],
+            "reference": {
+              "season": "CST_WINTER",
+              "yearIteration": 24,
+              "day": 3,
+              "events": [
+                {
+                  "type": "CET_CHALLENGE",
+                  "challengeKey": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+                  "rewardKey": null,
+                  "upgradeKey": null,
+                  "extensions": {}
+                }
+              ],
+              "localization": [
+                {
+                  "key": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+                  "name": "近战击杀",
+                  "source": "plus/dict.zh",
+                  "localized": true,
+                  "eventType": "挑战"
+                }
+              ],
+              "upgradeAvailabilityRequirements": []
+            }
+          },
+          {
+            "title": "游戏日 96",
+            "subtitle": "春季",
+            "startsAt": "2026-10-26T00:00:00.000Z",
+            "endsAt": "2026-11-02T00:00:00.000Z",
+            "cardState": {
+              "id": "challenge",
+              "label": "挑战日"
+            },
+            "rewards": [],
+            "terms": [
+              {
+                "id": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+                "name": "近战击杀",
+                "description": "使用近战武器击杀 150 名敌人",
+                "localized": true,
+                "source": "plus/dict.zh",
+                "key": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+                "eventType": "挑战"
+              }
+            ],
+            "reference": {
+              "season": "CST_SPRING",
+              "yearIteration": 24,
+              "day": 96,
+              "events": [
+                {
+                  "type": "CET_CHALLENGE",
+                  "challengeKey": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+                  "rewardKey": null,
+                  "upgradeKey": null,
+                  "extensions": {}
+                }
+              ],
+              "localization": [
+                {
+                  "key": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+                  "name": "近战击杀",
+                  "source": "plus/dict.zh",
+                  "localized": true,
+                  "eventType": "挑战"
+                }
+              ],
+              "upgradeAvailabilityRequirements": []
+            }
+          },
+          {
+            "title": "游戏日 143",
+            "subtitle": "春季",
+            "startsAt": "2026-10-26T00:00:00.000Z",
+            "endsAt": "2026-11-02T00:00:00.000Z",
+            "cardState": {
+              "id": "reward",
+              "label": "奖励日"
+            },
+            "rewards": [
+              {
+                "id": "/Lotus/StoreItems/Types/Items/MiscItems/Forma",
+                "name": "Forma",
+                "description": "",
+                "blueprint": false,
+                "localized": false,
+                "source": null,
+                "nameSource": null,
+                "descriptionSource": null,
+                "quantity": 1
+              }
+            ],
+            "terms": [],
+            "reference": {
+              "season": "CST_SPRING",
+              "yearIteration": 24,
+              "day": 143,
+              "events": [
+                {
+                  "type": "CET_REWARD",
+                  "challengeKey": null,
+                  "rewardKey": "/Lotus/StoreItems/Types/Items/MiscItems/Forma",
+                  "upgradeKey": null,
+                  "extensions": {}
+                }
+              ],
+              "localization": [],
+              "upgradeAvailabilityRequirements": []
+            }
+          },
+          {
+            "title": "游戏日 191",
+            "subtitle": "夏季",
+            "startsAt": "2026-11-02T00:00:00.000Z",
+            "endsAt": "2026-11-09T00:00:00.000Z",
+            "cardState": {
+              "id": "other",
+              "label": "其他事件日"
+            },
+            "rewards": [],
+            "terms": [
+              {
+                "name": "日历事件待补充",
+                "description": "",
+                "source": null,
+                "localized": false,
+                "key": null,
+                "eventType": "CET_PLOT"
+              }
+            ],
+            "reference": {
+              "season": "CST_SUMMER",
+              "yearIteration": 24,
+              "day": 191,
+              "events": [
+                {
+                  "type": "CET_PLOT",
+                  "challengeKey": null,
+                  "rewardKey": null,
+                  "upgradeKey": null,
+                  "extensions": {
+                    "dialogueName": "/Lotus/Types/Gameplay/1999Wf/Dialogue/AoiDialogue_rom.dialogue",
+                    "dialogueConvo": "TestBirthdayConvo"
+                  }
+                }
+              ],
+              "localization": [
+                {
+                  "name": "日历事件待补充",
+                  "description": "",
+                  "source": null,
+                  "localized": false,
+                  "key": null,
+                  "eventType": "CET_PLOT"
+                }
+              ],
+              "upgradeAvailabilityRequirements": []
+            }
+          },
+          {
+            "title": "游戏日 307",
+            "subtitle": "秋季",
+            "startsAt": "2026-11-09T00:00:00.000Z",
+            "endsAt": "2026-11-16T00:00:00.000Z",
+            "cardState": {
+              "id": "mixed",
+              "label": "综合事件日"
+            },
+            "rewards": [],
+            "terms": [
+              {
+                "name": "日历事件待补充",
+                "description": "",
+                "source": null,
+                "localized": false,
+                "key": null,
+                "eventType": "CET_PLOT"
+              },
+              {
+                "id": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+                "name": "近战击杀",
+                "description": "使用近战武器击杀 150 名敌人",
+                "localized": true,
+                "source": "plus/dict.zh",
+                "key": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+                "eventType": "挑战"
+              }
+            ],
+            "reference": {
+              "season": "CST_FALL",
+              "yearIteration": 24,
+              "day": 307,
+              "events": [
+                {
+                  "type": "CET_PLOT",
+                  "challengeKey": null,
+                  "rewardKey": null,
+                  "upgradeKey": null,
+                  "extensions": {
+                    "dialogueName": "/Lotus/Types/Gameplay/1999Wf/Dialogue/ArthurDialogue_rom.dialogue",
+                    "dialogueConvo": "TestBirthdayConvo"
+                  }
+                },
+                {
+                  "type": "CET_CHALLENGE",
+                  "challengeKey": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+                  "rewardKey": null,
+                  "upgradeKey": null,
+                  "extensions": {}
+                }
+              ],
+              "localization": [
+                {
+                  "name": "日历事件待补充",
+                  "description": "",
+                  "source": null,
+                  "localized": false,
+                  "key": null,
+                  "eventType": "CET_PLOT"
+                },
+                {
+                  "key": "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium",
+                  "name": "近战击杀",
+                  "source": "plus/dict.zh",
+                  "localized": true,
+                  "eventType": "挑战"
+                }
+              ],
+              "upgradeAvailabilityRequirements": []
+            }
+          },
+          {
+            "title": "游戏日 340",
+            "subtitle": "秋季",
+            "startsAt": "2026-11-09T00:00:00.000Z",
+            "endsAt": "2026-11-16T00:00:00.000Z",
+            "cardState": {
+              "id": "other",
+              "label": "其他事件日"
+            },
+            "rewards": [],
+            "terms": [
+              {
+                "name": "日历事件待补充",
+                "description": "",
+                "source": null,
+                "localized": false,
+                "key": null,
+                "eventType": "CET_PLOT"
+              }
+            ],
+            "reference": {
+              "season": "CST_FALL",
+              "yearIteration": 24,
+              "day": 340,
+              "events": [
+                {
+                  "type": "CET_PLOT",
+                  "challengeKey": null,
+                  "rewardKey": null,
+                  "upgradeKey": null,
+                  "extensions": {
+                    "dialogueName": "/Lotus/Types/Gameplay/1999Wf/Dialogue/HexDialogue_rom.dialogue",
+                    "dialogueConvo": "TestBirthdayConvo"
+                  }
+                }
+              ],
+              "localization": [
+                {
+                  "name": "日历事件待补充",
+                  "description": "",
+                  "source": null,
+                  "localized": false,
+                  "key": null,
+                  "eventType": "CET_PLOT"
+                }
+              ],
+              "upgradeAvailabilityRequirements": []
+            }
+          }
+        ],
+        "count": 6,
+        "preview": 3,
+        "showTerms": true,
+        "groupCards": true
+      }
+    ]
+  }
+}

@@ -95,32 +95,52 @@ export function monthDates(month) {
  *   falls outside the season's months, or when the season code is unknown. No entry is ever dropped.
  * - A listed day without entries stays listed with kind null. Listed days outside the season's months
  *   are not shown and remain only on season.listedDays.
+ * - Birthdays (CAL-11) go to the day of their ordinal, in source order, next to that day's entries. They never change the
+ *   day's kind and never count as an event day. A birthday outside the displayed months is not shown and remains only on
+ *   season.birthdays; the domain never decides who has a birthday.
  * - The season, its arrays and its entries are never mutated. Each call returns new months and arrays.
  *
  * @template {{ordinal?: unknown, kind?: unknown}} Entry
- * @param {{code: unknown, listedDays?: unknown[], entries?: Entry[]}} season
+ * @template {{ordinal?: unknown}} Birthday
+ * @param {{code: unknown, listedDays?: unknown[], entries?: Entry[], birthdays?: Birthday[]}} season
  * @returns {{months: {month: number, days: {day: number, ordinal: number, date: string, weekday: number, listed: boolean,
- *   kind: string|null, entries: Entry[]}[], eventDays: number}[], unmapped: Entry[]}}
+ *   kind: string|null, entries: Entry[], birthdays: Birthday[]}[], eventDays: number}[], unmapped: Entry[]}}
  */
 export function buildSeasonMonths(season) {
   if (season === null || typeof season !== 'object') throw new TypeError('Calendar season must be an object');
-  const { entries = [], listedDays = [] } = season;
-  if (!Array.isArray(entries) || !Array.isArray(listedDays)) throw new TypeError('Season entries and listedDays must be arrays');
+  const { entries = [], listedDays = [], birthdays = [] } = season;
+  if (!Array.isArray(entries) || !Array.isArray(listedDays) || !Array.isArray(birthdays)) {
+    throw new TypeError('Season entries, listedDays and birthdays must be arrays');
+  }
   const months = seasonMonths(season.code);
+  const shown = value => {
+    const date = ordinalToDate(value?.ordinal);
+    return date && months.includes(date.month) ? date.ordinal : null;
+  };
   const byOrdinal = new Map();
   const unmapped = [];
   for (const entry of entries) {
-    const date = ordinalToDate(entry?.ordinal);
-    if (!date || !months.includes(date.month)) { unmapped.push(entry); continue; }
-    if (!byOrdinal.has(date.ordinal)) byOrdinal.set(date.ordinal, []);
-    byOrdinal.get(date.ordinal).push(entry);
+    const ordinal = shown(entry);
+    if (ordinal === null) { unmapped.push(entry); continue; }
+    if (!byOrdinal.has(ordinal)) byOrdinal.set(ordinal, []);
+    byOrdinal.get(ordinal).push(entry);
+  }
+  const birthdaysByOrdinal = new Map();
+  for (const birthday of birthdays) {
+    const ordinal = shown(birthday);
+    if (ordinal === null) continue;
+    if (!birthdaysByOrdinal.has(ordinal)) birthdaysByOrdinal.set(ordinal, []);
+    birthdaysByOrdinal.get(ordinal).push(birthday);
   }
   const listed = new Set(listedDays);
   return {
     months: months.map(month => {
       const days = monthDates(month).map(({ day, ordinal, date, weekday }) => {
         const dayEntries = byOrdinal.get(ordinal) ?? [];
-        return { day, ordinal, date, weekday, listed: listed.has(ordinal), kind: classifyDay(dayEntries), entries: dayEntries };
+        return {
+          day, ordinal, date, weekday, listed: listed.has(ordinal), kind: classifyDay(dayEntries), entries: dayEntries,
+          birthdays: birthdaysByOrdinal.get(ordinal) ?? []
+        };
       });
       return { month, days, eventDays: days.filter(day => day.entries.length).length };
     }),

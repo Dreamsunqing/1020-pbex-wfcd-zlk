@@ -9,8 +9,9 @@ import { validateCalendarCapabilities } from './contract-validation.mjs';
 // - Each mount gets its own guarded copy of the capabilities, a lease. unmount() releases the lease before it destroys the
 //   view, so nothing the old view started can reach the host or the old DOM: close, openItem and renderText do nothing,
 //   and a pending loadArt never settles.
-// - The guarded copy also enforces the failure rules of CalendarCapabilities: openItem answers a boolean, loadArt never
-//   rejects and answers found or missing, formatDeadline answers text and ended. Absorbed errors go to onError.
+// - The guarded copy also enforces the failure rules of CalendarCapabilities: openItem answers a boolean, loadArt and
+//   loadPortrait never reject and answer found or missing, formatDeadline answers text and ended. Absorbed errors go to
+//   onError. loadPortrait is optional for a host (CAL-11); the copy always has it and answers missing without it.
 // - The mount owns no timer, listener, clock or data. Countdowns are repainted by the host calling update() (ADR-009).
 
 // A fresh promise every time: nothing keeps it, so the continuation of a released view is collected instead of piling up.
@@ -24,6 +25,10 @@ function lease(capabilities, report) {
   const attempt = (name, run, fallback) => {
     try { return run(); } catch (error) { report(error, name); return fallback; }
   };
+  // The executor also turns a synchronous throw into a rejection, which then maps to missing like any other failure.
+  const picture = (name, ask) => new Promise(resolve => resolve(ask()))
+    .then(artResult, error => { report(error, name); return { status: 'missing' }; })
+    .then(result => alive ? result : never());
   return {
     release() { alive = false; },
     capabilities: Object.freeze({
@@ -34,11 +39,11 @@ function lease(capabilities, report) {
         return alive && attempt('openItem', () => capabilities.openItem(ref) === true, false);
       },
       loadArt(ref) {
+        return alive ? picture('loadArt', () => capabilities.loadArt(ref)) : never();
+      },
+      loadPortrait(ref) {
         if (!alive) return never();
-        // The executor also turns a synchronous throw into a rejection, which then maps to missing like any other failure.
-        return new Promise(resolve => resolve(capabilities.loadArt(ref)))
-          .then(artResult, error => { report(error, 'loadArt'); return { status: 'missing' }; })
-          .then(result => alive ? result : never());
+        return typeof capabilities.loadPortrait === 'function' ? picture('loadPortrait', () => capabilities.loadPortrait(ref)) : Promise.resolve({ status: 'missing' });
       },
       renderText(target, text, mode) {
         if (alive) attempt('renderText', () => { capabilities.renderText(target, text, mode); });

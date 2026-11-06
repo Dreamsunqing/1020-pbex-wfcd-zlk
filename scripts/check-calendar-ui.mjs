@@ -332,6 +332,122 @@ try {
   await harness('setArt', 'found');
   pass('缺图、坏图与未完成的图片都显示代码占位图且保留名称；无资料库目标的奖励也按完整 ID 请求图片，有图时显示图片，仍不显示跳转');
 
+  // 9b. Birthdays (CAL-11): the six Hex members on their verified dates in their seasons, next to the day's events; each
+  // portrait is asked for by its own key; a missing or broken portrait keeps the name and the mark; other listed days stay
+  // as they were; a plot event that names no one, and a conflict, keep the original event with a note.
+  await harness('takeCalls');
+  await harness('mount', 'birthdays');
+  const picker = cal.locator('.cal99-season-picker');
+  const monthTab = index => cal.locator(`[data-action="month"][data-index="${index}"]`);
+  const birthdayCard = id => detail.locator(`.cal99-birthday[data-character-id="${id}"]`);
+  const visit = async (season, monthIndex) => {
+    if (await picker.inputValue() !== String(season)) await picker.selectOption(String(season));
+    await monthTab(monthIndex).click();
+  };
+  const TREASURE = name => `/Lotus/Types/Gameplay/1999Wf/Resources/HexDogTag${name}`;
+  for (const [season, monthIndex, ordinal, id, name, date, kind, basis, protoframe, gift, giftId] of [
+    [0, 1, 45, 'hex-lettie', '莱蒂', '2 月 14 日', null, 'table', 'Trinity', '切达芝士皇冠麦片', TREASURE('Lettie')],
+    [1, 1, 143, 'hex-amir', '阿米尔', '5 月 23 日', 'reward', 'table', 'Volt', '女伯爵漫画', TREASURE('Amir')],
+    [2, 0, 191, 'hex-aoi', '碧', '7 月 10 日', 'other', 'upstream', 'Mag', '线上时代 CD', TREASURE('Aoi')],
+    [3, 1, 306, 'hex-eleanor', '埃莉诺', '11 月 2 日', null, 'table', 'Nyx', '心情水晶', TREASURE('Eleanor')],
+    [3, 1, 307, 'hex-arthur', '亚瑟', '11 月 3 日', 'mixed', 'upstream', 'Excalibur', '酌趣六瓶装啤酒', TREASURE('Arthur')],
+    [3, 2, 338, 'hex-quincy', '昆西', '12 月 4 日', null, 'table', 'Cyte-09', '35 毫米胶片', TREASURE('Quincy')]
+  ]) {
+    await visit(season, monthIndex);
+    const cell = day(ordinal);
+    await expect(cell).toHaveAttribute('data-birthdays', id);
+    await expect(cell).toHaveAttribute('aria-label', new RegExp(`${name}生日`));
+    if (kind) {
+      // The day keeps its event icon and kind; the birthday is the small cake in the corner.
+      await expect(cell).toHaveAttribute('data-event-kind', kind);
+      await expect(cell.locator('.cal99-day-birthday svg')).toHaveCount(1);
+    } else {
+      await expect(cell).not.toHaveAttribute('data-event-kind', /./);
+      await expect(cell.locator('.cal99-day-label')).toHaveText('生日');
+    }
+    await cell.click();
+    await expect(birthdayCard(id).locator('.cal99-birthday-name')).toHaveText(name);
+    await expect(birthdayCard(id).locator('.cal99-birthday-date')).toHaveText(`${date}生日`);
+    await expect(birthdayCard(id)).toHaveAttribute('data-birthday-basis', basis);
+    await expect(birthdayCard(id).locator('.cal99-portrait-image')).toHaveAttribute('src', new RegExp(`^data:image/svg\\+xml,.*${id}`));
+    // The card shows the role and the personality; its basis and sources stay in the data and are not drawn.
+    await expect(birthdayCard(id).locator('.cal99-birthday-role')).toHaveText(new RegExp(`^职位：.*（${protoframe} 原型战甲）$`));
+    await expect(birthdayCard(id).locator('.cal99-birthday-personality')).toHaveText(/^性格：.+。$/);
+    await expect(birthdayCard(id).locator('details, .cal99-evidence')).toHaveCount(0);
+    await expect(birthdayCard(id)).not.toContainText('依据');
+    // Below the card, a box of the gifts that suit the character: a reward-like card that asks for its picture by the
+    // gift's full ID, never a button.
+    const gifts = detail.locator(`.cal99-gifts[data-character-id="${id}"]`);
+    await expect(gifts.locator('.cal99-gifts-title')).toHaveText(`适合送给${name}的礼物`);
+    await expect(gifts.locator('.cal99-gift')).toHaveCount(1);
+    await expect(gifts.locator('.cal99-gift-name')).toHaveText(gift);
+    await expect(gifts.locator('.cal99-gift')).toHaveAttribute('data-item-id', giftId);
+    await expect(gifts.locator('.cal99-gift .cal99-reward-image')).toHaveAttribute('src', /^data:image\/png/);
+    expect(await gifts.locator('.cal99-gift').evaluate(node => [node.tagName, node.dataset.action ?? null])).toEqual(['DIV', null]);
+    // No explanation under the gifts, and a birthday day without events shows no empty-day explanation either.
+    await expect(gifts.locator('.cal99-detail-note')).toHaveCount(0);
+    await expect(detail.locator('.cal99-empty')).toHaveCount(0);
+    expect(await page.evaluate(([card, box]) => document.querySelector(box).getBoundingClientRect().top >= document.querySelector(card).getBoundingClientRect().bottom,
+      [`#slot .cal99-birthday[data-character-id="${id}"]`, `#slot .cal99-gifts[data-character-id="${id}"]`])).toBe(true);
+    await expect(detail.locator('.cal99-entry')).toHaveCount(kind ? 1 : 0);
+    if (ordinal === 143) await shot('calendar-birthday-with-reward');
+  }
+  const birthdayCalls = await harness('takeCalls');
+  expect(birthdayCalls.filter(call => call[0] === 'loadPortrait')).toEqual(
+    ['hex-lettie', 'hex-amir', 'hex-aoi', 'hex-eleanor', 'hex-arthur', 'hex-quincy'].map(key => ['loadPortrait', key]));
+  // Gift pictures go through loadArt by full ID and without a library target, once each.
+  expect(birthdayCalls.filter(call => call[0] === 'loadArt' && call[1].includes('/1999Wf/Resources/'))).toEqual(
+    ['Lettie', 'Amir', 'Aoi', 'Eleanor', 'Arthur', 'Quincy'].map(name => ['loadArt', TREASURE(name), null]));
+  // Other listed days without events keep their meaning; the group-chat plot event keeps its note and shows no birthday.
+  await visit(0, 0);
+  await expect(day(1)).not.toHaveAttribute('data-birthdays', /./);
+  await expect(day(1).locator('.cal99-day-listed')).toHaveCount(1);
+  await visit(0, 2);
+  await expect(day(74)).not.toHaveAttribute('data-birthdays', /./);
+  await visit(3, 2);
+  await expect(day(340)).not.toHaveAttribute('data-birthdays', /./);
+  await day(340).click();
+  await expect(detail.locator('.cal99-entry-note[data-note-code="UNRECOGNIZED_PLOT"]')).toContainText('没有指明生日表中的角色');
+  await expect(detail.locator('.cal99-birthday')).toHaveCount(0);
+  // Missing and broken portraits keep the name, the date and the cell mark, with the code-native placeholder.
+  for (const mode of ['missing', 'broken']) {
+    await harness('setPortrait', mode);
+    await harness('mount', 'birthdays');
+    await visit(0, 1);
+    await expect(day(45).locator('.cal99-day-label')).toHaveText('生日');
+    await day(45).click();
+    await expect(birthdayCard('hex-lettie').locator('.cal99-portrait.is-missing svg')).toHaveCount(1);
+    await expect(birthdayCard('hex-lettie').locator('.cal99-portrait')).toHaveAttribute('title', '暂无角色图');
+    await expect(birthdayCard('hex-lettie').locator('.cal99-birthday-name')).toHaveText('莱蒂');
+    await expect(detail.locator('.cal99-event-title h4')).toHaveText('生日');
+    if (mode === 'missing') await shot('calendar-birthday-no-portrait');
+  }
+  await harness('setPortrait', 'found');
+  // A conflict: no birthday for Quincy on either day, and the original event carries the diagnostic.
+  await harness('mount', 'birthdayConflict');
+  await monthTab(2).click();
+  await expect(day(337)).not.toHaveAttribute('data-birthdays', /./);
+  await expect(day(338)).not.toHaveAttribute('data-birthdays', /./);
+  await expect(day(338).locator('.cal99-day-listed')).toHaveCount(1);
+  await day(337).click();
+  const conflictNote = detail.locator('.cal99-entry-note[data-note-code="BIRTHDAY_CONFLICT"]');
+  await expect(conflictNote).toContainText('昆西');
+  await expect(conflictNote).toContainText('12 月 4 日');
+  await expect(conflictNote).toHaveAttribute('role', 'note');
+  await expect(detail.locator('.cal99-event-title h4')).toHaveText('其他事件');
+  await expect(detail.locator('.cal99-birthday')).toHaveCount(0);
+  await shot('calendar-birthday-conflict');
+  // A narrow container keeps the birthday card inside the calendar.
+  await harness('mount', 'birthdays');
+  await visit(3, 1);
+  await day(307).click();
+  await page.evaluate(() => { document.getElementById('slot').style.width = '480px'; });
+  expect(await overflowFree()).toEqual({ offenders: [], page: true });
+  await shot('calendar-birthday-narrow');
+  await page.evaluate(() => { document.getElementById('slot').style.width = ''; });
+  await harness('unmount');
+  pass('六人生日：各季度正确日期显示蛋糕标记；角色卡显示角色图、名称、职位与性格，不显示来源面板；下方礼物框按完整 ID 取图且不可跳转；同日事件并存；缺图与坏图保留名称与占位图；其他空事件日不变；未识别剧情事件与来源冲突保留原事件并附诊断；窄容器无溢出');
+
   // 10. Long text wraps instead of overflowing or being cut, in wide and narrow containers.
   await harness('mount', 'long');
   await day(101).click();

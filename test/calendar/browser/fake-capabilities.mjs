@@ -3,7 +3,9 @@
 //
 // - Behaviour follows `settings`, read at each call, so a page can switch a mode without building new capabilities.
 // - Every call is passed to `record` first, as an array: ['close'], ['openItem', id, libraryId, libraryVersion],
-//   ['loadArt', id, libraryId] or ['renderText', mode]. scripts/check-calendar-ui.mjs compares these arrays.
+//   ['loadArt', id, libraryId], ['loadPortrait', key] or ['renderText', mode]. scripts/check-calendar-ui.mjs compares these.
+// - Character portraits (CAL-11) follow their own mode. A found portrait is a small test picture that writes its key, so
+//   a page shows which picture each character asked for; it is never a real character picture.
 // - The failing modes break the CalendarCapabilities contract of application/ports.mjs on purpose: close and openItem
 //   throw, loadArt rejects. They show what the mount's guarded copy turns such failures into (CAL-07).
 // - The art mode answers every reward alike, with or without a library target, the way a mapped picture of the App's
@@ -17,17 +19,22 @@ export const ART_MODES = Object.freeze({
   slow: '1.5 秒后找到',
   error: '请求失败'
 });
+export const PORTRAIT_MODES = Object.freeze({ found: '找到角色图', missing: '缺图', broken: '坏图（无法解码）', error: '请求失败' });
 export const OPEN_MODES = Object.freeze({ accept: '接受跳转', unavailable: '跳转不可用', error: '跳转抛错' });
 export const CLOSE_MODES = Object.freeze({ accept: '正常关闭', error: '关闭抛错' });
-export const DEFAULT_SETTINGS = Object.freeze({ art: 'found', openItem: 'accept', close: 'accept' });
+export const DEFAULT_SETTINGS = Object.freeze({ art: 'found', portrait: 'found', openItem: 'accept', close: 'accept' });
 
 // A 1×1 PNG: enough for the view to show a picture instead of its placeholder.
 const PIXEL = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==';
 const SLOW_MS = 1500;
+// A test portrait that names its key; keys are lower-case letters, digits and hyphens, so they need no escaping.
+const testPortrait = key => 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">'
+  + '<rect width="48" height="48" fill="#3888b2"/><rect x="15" y="7" width="18" height="18" fill="#f3e6df"/><rect x="8" y="28" width="32" height="20" fill="#26384d"/>'
+  + `<text x="24" y="43" font-family="monospace" font-size="7" text-anchor="middle" fill="#fff">${String(key).replace(/[^a-z0-9-]/g, '')}</text></svg>`);
 
 /**
  * @param {object} deps
- * @param {{art: string, openItem: string, close: string}} deps.settings  Read at each call.
+ * @param {{art: string, portrait?: string, openItem: string, close: string}} deps.settings  Read at each call.
  * @param {() => number} deps.now  The page's fake clock, epoch milliseconds.
  * @param {(call: unknown[]) => void} [deps.record]
  * @param {() => void} [deps.onClose]  What the host does when the calendar asks to close.
@@ -53,6 +60,15 @@ export function createFakeCapabilities({ settings, now, record = () => {}, onClo
         case 'pending': return new Promise(() => {});
         case 'slow': return new Promise(resolve => setTimeout(() => resolve({ status: 'found', src: PIXEL }), SLOW_MS));
         case 'error': return Promise.reject(new Error('测试：图片服务无法连线'));
+        default: return Promise.resolve({ status: 'missing' });
+      }
+    },
+    loadPortrait(ref) {
+      record(['loadPortrait', ref.key]);
+      switch (settings.portrait ?? DEFAULT_SETTINGS.portrait) {
+        case 'found': return Promise.resolve({ status: 'found', src: testPortrait(ref.key) });
+        case 'broken': return Promise.resolve({ status: 'found', src: 'data:image/png;base64,broken' });
+        case 'error': return Promise.reject(new Error('测试：角色图无法载入'));
         default: return Promise.resolve({ status: 'missing' });
       }
     },

@@ -73,6 +73,8 @@ window.calendarHarness = Object.freeze({
   setNow: value => { now = value; },
   // found, missing, broken or pending; fake-capabilities.mjs lists every mode.
   setArt: mode => { settings.art = mode; },
+  // found, missing, broken or error for character portraits (CAL-11).
+  setPortrait: mode => { settings.portrait = mode; },
   setOpenItem: value => { settings.openItem = value ? 'accept' : 'unavailable'; },
   takeCalls: () => calls.splice(0),
   takeOperations: () => operations.splice(0),

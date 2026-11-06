@@ -20,7 +20,7 @@ test('a projection becomes a valid document with season windows and annual days,
   assert.deepEqual(validateCalendarDocument(document).issues, []);
   assert.deepEqual(document.data, { server: 'de', kind: 'sample', stale: true, sourceTime: '2026-10-22T19:32:27.000Z' });
   assert.equal(document.seasons.length, 1);
-  const { entries, ...season } = document.seasons[0];
+  const { entries, birthdays, ...season } = document.seasons[0];
   assert.deepEqual(season, {
     code: 'CST_WINTER', label: '冬季', yearIteration: 24,
     startsAt: '2026-10-19T00:00:00.000Z', endsAt: '2026-10-26T00:00:00.000Z', listedDays: [1, 3, 19, 20, 45]
@@ -28,13 +28,18 @@ test('a projection becomes a valid document with season windows and annual days,
   assert.deepEqual(entries.map(entry => [entry.ordinal, entry.kind, entry.title]), [[3, 'challenge', '游戏日 3'], [19, 'reward', '游戏日 19'], [20, 'upgrade', '游戏日 20']]);
   // Days 1 and 45 are listed without events: they stay listed, and no entry is invented for them.
   assert.ok(!entries.some(entry => [1, 45].includes(entry.ordinal)));
+  // Day 45 (February 14) is Lettie's birthday in the verified table (CAL-11); day 1 is no birthday of the six.
+  assert.deepEqual(birthdays.map(birthday => [birthday.ordinal, birthday.characterId, birthday.basis]), [[45, 'hex-lettie', 'table']]);
   assert.ok(!JSON.stringify(document).includes('不应进入日历'));
 });
 
 test('the document carries contract fields only, so inner layers never read world-state fields', () => {
   const document = read(projection());
   assert.deepEqual(Object.keys(document).sort(), ['contextId', 'data', 'seasons']);
-  assert.deepEqual(Object.keys(document.seasons[0]).sort(), ['code', 'endsAt', 'entries', 'label', 'listedDays', 'startsAt', 'yearIteration']);
+  assert.deepEqual(Object.keys(document.seasons[0]).sort(), ['birthdays', 'code', 'endsAt', 'entries', 'label', 'listedDays', 'startsAt', 'yearIteration']);
+  for (const birthday of document.seasons[0].birthdays) {
+    assert.deepEqual(Object.keys(birthday).sort(), ['basis', 'characterId', 'evidence', 'gifts', 'name', 'ordinal', 'personality', 'portraitKey', 'role']);
+  }
   for (const entry of document.seasons[0].entries) {
     assert.deepEqual(Object.keys(entry).sort(), ['evidence', 'kind', 'ordinal', 'rewards', 'terms', 'title']);
     for (const reward of entry.rewards) assert.deepEqual(Object.keys(reward).sort(), ['id', 'libraryId', 'libraryVersion', 'name', 'quantity']);

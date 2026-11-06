@@ -1,8 +1,9 @@
 import { createCalendarMount, createCalendarSession, createCalendarView, createMemorySelectionStore, createWorldStateCalendarSource } from '../features/calendar-1999/index.mjs';
 import { formatCountdown } from '../core/live-state/presentation.mjs';
 import { renderGameText } from './game-text.js';
-import { REWARD_ART_ROOT, indexRewardArt, rewardArtKey } from './calendar-1999-art.js';
+import { REWARD_ART_ROOT, indexPortraitArt, indexRewardArt, portraitArtKey, rewardArtKey } from './calendar-1999-art.js';
 import REWARD_ART from './assets/calendar-1999/reward-art.js';
+import PORTRAIT_ART from './assets/calendar-1999/portrait-art.js';
 
 // Composition root of the 1999 calendar (CAL-07). It is the only App module that imports the calendar feature, and the
 // feature never reaches back: it sees the App only through the capabilities built here.
@@ -25,6 +26,10 @@ import REWARD_ART from './assets/calendar-1999/reward-art.js';
 //   mapped reward without a library target still shows its picture, and openItem still depends on libraryId only.
 // - The mapping is read once, when the host is created; each entry it refuses is reported to onError and left out. A
 //   mapped file that cannot be read is reported with its reason, and the lookup goes on to the image service.
+// - Character portraits (CAL-11, 文档/深入/51-1999日历六人组生日与角色图.md) come from their own mapping,
+//   assets/calendar-1999/portrait-art.js, keyed by the birthday table's portraitKey and never by a reward ID. There is no
+//   second source: a key without a valid, readable picture is missing, which the view draws as its placeholder next to
+//   the name. Refused entries go to onError as 'portraitArt', unreadable files as 'loadPortrait'.
 
 const MISSING = Object.freeze({ status: 'missing' });
 const RETRY = Symbol('retry');
@@ -49,6 +54,16 @@ function mappingProblem(problem) {
 function unreadablePicture(entry, cause) {
   const error = new Error(`奖励图片映射的图档无法读取，改用 App 图片服务：${entry.id} → ${REWARD_ART_ROOT}${entry.path}`, { cause });
   return Object.assign(error, { code: 'ART_FILE_UNREADABLE', rewardId: entry.id, path: entry.path, src: entry.src });
+}
+
+function portraitProblem(problem) {
+  const error = new Error(`角色图映射有一笔无效，已略过：${problem.id ?? '整个映射'}：${problem.message}`);
+  return Object.assign(error, { code: problem.code, portraitKey: problem.id, path: problem.path });
+}
+
+function unreadablePortrait(entry, cause) {
+  const error = new Error(`角色图映射的图档无法读取，改为显示占位图：${entry.id} → ${REWARD_ART_ROOT}${entry.path}`, { cause });
+  return Object.assign(error, { code: 'PORTRAIT_FILE_UNREADABLE', portraitKey: entry.id, path: entry.path, src: entry.src });
 }
 
 // The image request the legacy cards send for each calendar reward, by library ID. RewardRef keeps only identity and
@@ -92,16 +107,21 @@ function pictureOf(image) {
  *        code, rewardId and path.
  * @param {object} [deps.rewardArt]  The reward art mapping, {[rewardId]: path relative to src/ui/assets/}. Defaults to
  *        assets/calendar-1999/reward-art.js.
+ * @param {object} [deps.portraitArt]  The portrait mapping, {[portraitKey]: path relative to src/ui/assets/}. Defaults to
+ *        assets/calendar-1999/portrait-art.js (CAL-11).
  * @param {(src: string) => Promise<void>} [deps.readPicture]  Resolves when a mapped picture can be shown, rejects otherwise.
  */
-export function createCalendar1999Host({ api, back, openLibrary, guarded, view = createCalendarView, renderText = renderGameText, now = Date.now, onError = reportError, rewardArt = REWARD_ART, readPicture = loadPicture } = {}) {
+export function createCalendar1999Host({ api, back, openLibrary, guarded, view = createCalendarView, renderText = renderGameText, now = Date.now, onError = reportError, rewardArt = REWARD_ART, portraitArt = PORTRAIT_ART, readPicture = loadPicture } = {}) {
   if (typeof back !== 'function') throw new TypeError('Calendar host needs back() to return to the world-state page');
   const run = typeof guarded === 'function' ? guarded : work => Promise.resolve().then(work).catch(error => onError(error, 'openItem'));
   const selectionStore = createMemorySelectionStore();
   const mapping = indexRewardArt(rewardArt);
   for (const problem of mapping.issues) onError(mappingProblem(problem), 'rewardArt');
+  const portraitMapping = indexPortraitArt(portraitArt);
+  for (const problem of portraitMapping.issues) onError(portraitProblem(problem), 'portraitArt');
   // Art of the current mount only: repaints reuse it, and the next mount asks again, so a newly chosen gallery is seen.
   const art = new Map();
+  const portraits = new Map();
   let requests = new Map();
 
   // A mapped picture, or null when the file cannot be read; the reason goes to onError.
@@ -137,6 +157,16 @@ export function createCalendar1999Host({ api, back, openLibrary, guarded, view =
       }
       return art.get(key);
     },
+    loadPortrait(ref) {
+      const entry = portraitMapping.entries.get(portraitArtKey(ref?.key));
+      if (!entry) return Promise.resolve(MISSING);
+      // One answer per portrait for this mount, like reward art.
+      if (!portraits.has(entry.key)) {
+        portraits.set(entry.key, Promise.resolve().then(() => readPicture(entry.src))
+          .then(() => found(entry.src), error => { onError(unreadablePortrait(entry, error), 'loadPortrait'); return MISSING; }));
+      }
+      return portraits.get(entry.key);
+    },
     renderText(target, text, mode) {
       // Game text must stay readable even when a token cannot be drawn.
       try { renderText(target, text, mode); } catch (error) { onError(error, 'renderText'); target.textContent = String(text ?? ''); }
@@ -154,6 +184,7 @@ export function createCalendar1999Host({ api, back, openLibrary, guarded, view =
   function hide() {
     shown = null;
     art.clear();
+    portraits.clear();
     requests = new Map();
     mount?.unmount();
   }

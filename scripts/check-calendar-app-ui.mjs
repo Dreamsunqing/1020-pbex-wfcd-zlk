@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import PORTRAIT_ART from '../src/ui/assets/calendar-1999/portrait-art.js';
 
 // Electron integration check of the 1999 calendar (CAL-08) in the real App, with its built-in offline samples. It covers
 // what the browser check (check-calendar-ui.mjs) cannot: the App composition root, the real live-state call sites,
@@ -165,6 +166,43 @@ try {
   await shot('app-calendar-reward-art');
   pass(`映射图片在 App 内载入：${facts.mappedRewardId} 显示 ${facts.mappedPicture.src}（128×128，映射键为 /StoreItems/ 写法）；资料库${facts.mappedPicture.linked ? '有收录，可跳转' : '未收录，维持无跳转'}`);
 
+  // 6c. CAL-11: a birthday in the real App. The DE sample lists 2 月 14 日 (day 45) without events, and the verified table
+  // makes it Lettie's birthday. Her portrait comes from the portrait mapping by its own key and really decodes in the App
+  // page; while the mapping has no picture for her, the card keeps her name with the placeholder, and the report says so.
+  await expect(day(45)).toHaveAttribute('data-birthdays', 'hex-lettie');
+  await expect(day(45)).not.toHaveAttribute('data-event-kind', /./);
+  await day(45).click();
+  const lettie = cal.locator('.cal99-detail .cal99-birthday[data-character-id="hex-lettie"]');
+  await expect(lettie.locator('.cal99-birthday-name')).toHaveText('莱蒂');
+  await expect(lettie.locator('.cal99-birthday-date')).toHaveText('2 月 14 日生日');
+  await expect(lettie).toHaveAttribute('data-birthday-basis', 'table');
+  await expect(lettie.locator('.cal99-birthday-role')).toHaveText(/^职位：.*（Trinity 原型战甲）$/);
+  await expect(lettie.locator('.cal99-birthday-personality')).toHaveText(/^性格：/);
+  await expect(lettie.locator('details')).toHaveCount(0);
+  // Below the card, the Hex Treasure themed after her; its picture goes through the App's loadArt like a reward's.
+  const lettieGifts = cal.locator('.cal99-detail .cal99-gifts[data-character-id="hex-lettie"]');
+  await expect(lettieGifts.locator('.cal99-gift-name')).toHaveText('切达芝士皇冠麦片');
+  await expect(lettieGifts.locator('.cal99-gift')).toHaveAttribute('data-item-id', '/Lotus/Types/Gameplay/1999Wf/Resources/HexDogTagLettie');
+  await expect(lettieGifts.locator('.cal99-gift .cal99-reward-art.is-missing, .cal99-gift .cal99-reward-image')).toHaveCount(1);
+  facts.giftPicture = await lettieGifts.locator('.cal99-gift .cal99-reward-image').count() ? 'found' : 'missing';
+  await expect(cal.locator('.cal99-detail .cal99-entry')).toHaveCount(0);
+  await expect(cal.locator('.cal99-detail .cal99-empty, .cal99-detail .cal99-gifts .cal99-detail-note')).toHaveCount(0);
+  const portraitPath = PORTRAIT_ART['hex-lettie'];
+  if (portraitPath) {
+    const portrait = lettie.locator('.cal99-portrait-image');
+    await expect(portrait).toHaveAttribute('src', new RegExp(`^file://.*/src/ui/assets/${portraitPath.replaceAll('.', '\\.')}$`));
+    await expect.poll(() => portrait.evaluate(node => node.complete && node.naturalWidth > 0)).toBe(true);
+    facts.portrait = { src: `src/ui/assets/${portraitPath}`, size: await portrait.evaluate(node => [node.naturalWidth, node.naturalHeight]) };
+  } else {
+    await expect(lettie.locator('.cal99-portrait.is-missing svg')).toHaveCount(1);
+    facts.portrait = null;
+  }
+  await shot('app-calendar-birthday');
+  const giftText = `；职位、性格与礼物框（切达芝士皇冠麦片，图片 ${facts.giftPicture}）`;
+  pass(facts.portrait
+    ? `生日在 App 内显示：2 月 14 日莱蒂（依生日表对照只列出的日期），角色图 ${facts.portrait.src}（${facts.portrait.size.join('×')}）实际载入${giftText}`
+    : `生日在 App 内显示：2 月 14 日莱蒂（依生日表对照只列出的日期）；角色图映射尚无 hex-lettie，显示占位图与角色名${giftText}`);
+
   // 7. Dark App theme and an 800px window.
   await page.locator('#theme-select').selectOption('dark');
   expect(await cal.evaluate(node => getComputedStyle(node).backgroundColor)).toBe('rgb(217, 220, 207)');
@@ -202,8 +240,11 @@ try {
   await page.locator('[data-quick=calendar]').click();
   await expect(cal).toBeVisible();
   await expect(cal.locator('.cal99-statusbar')).toContainText('国服 WG');
+  // The birthday follows the server's own data (CAL-11): the WG sample lists 2 月 14 日 too.
+  await cal.locator('[data-calendar-month]').filter({ hasText: '2月' }).click();
+  await expect(day(45)).toHaveAttribute('data-birthdays', 'hex-lettie');
   await shot('app-calendar-wg');
-  pass('国服显示自己的日历与状态列');
+  pass('国服显示自己的日历与状态列；生日标记跟随国服资料');
 
   expect(errors).toEqual([]);
   expect(network).toEqual([]);

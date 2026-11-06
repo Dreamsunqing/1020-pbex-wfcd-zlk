@@ -17,7 +17,10 @@ export function buildCalendarViewModel(state) {
     activeSeason: season && { code: season.code, label: season.label, yearIteration: season.yearIteration, startsAt: season.startsAt, endsAt: season.endsAt },
     monthTabs: months.map((value, index) => ({ month: value.month, selected: index === selection.monthIndex, eventDays: value.eventDays })),
     grid: month && { month: month.month, cells: gridCells(month, selected) },
-    selectedDay: selected && { ordinal: selected.ordinal, date: selected.date, weekday: selected.weekday, kind: selected.kind, listed: selected.listed, entries: selected.entries },
+    selectedDay: selected && {
+      ordinal: selected.ordinal, date: selected.date, weekday: selected.weekday, kind: selected.kind, listed: selected.listed,
+      entries: selected.entries, birthdays: selected.birthdays
+    },
     // Entries stay the session's frozen objects, so full reward IDs and evidence reach presentation unchanged.
     unmapped,
     status: { server: data.server, sourceKind: data.kind, stale: data.stale, sourceTime: data.sourceTime }
@@ -31,7 +34,7 @@ function gridCells(month, selected) {
     const day = month.days[slot - leading];
     return day ? {
       day: day.day, ordinal: day.ordinal, date: day.date, weekday: day.weekday, listed: day.listed, kind: day.kind,
-      selected: day.ordinal === selected?.ordinal, entryCount: day.entries.length
+      selected: day.ordinal === selected?.ordinal, entryCount: day.entries.length, birthdays: day.birthdays
     } : null;
   });
 }
